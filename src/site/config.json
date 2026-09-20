@@ -1,0 +1,5 @@
+{
+  "$comment": "Settings for the GitHub Pages site. Set repo to your repository's URL.",
+  "repo": "https://github.com/shythulu/darkberry",
+  "branch": "main"
+}
