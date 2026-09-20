@@ -211,16 +211,16 @@
     "expr": "{ui.on.tab.indicator}",
     "roles": [
       "ui.on.tab.indicator",
-      "ui.on.fill"
+      "ui.on.accent"
     ],
     "palette": [
-      "onjam"
+      "base"
     ],
     "hex": {
-      "wisp": "#ffffff",
-      "fen": "#ffffff",
-      "mire": "#ffffff",
-      "blackwater": "#ffffff"
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
     }
   },
   {
@@ -231,13 +231,13 @@
       "ui.tab.indicator"
     ],
     "palette": [
-      "jam"
+      "tint"
     ],
     "hex": {
-      "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
     }
   },
   {
@@ -1189,13 +1189,13 @@
       "ui.tab.indicator"
     ],
     "palette": [
-      "jam"
+      "tint"
     ],
     "hex": {
-      "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
     }
   },
   {
@@ -3812,13 +3812,13 @@
       "ui.tab.indicator"
     ],
     "palette": [
-      "jam"
+      "tint"
     ],
     "hex": {
-      "wisp": "#b9488b00",
-      "fen": "#ba488900",
-      "mire": "#ba488900",
-      "blackwater": "#ba488900"
+      "wisp": "#d2157000",
+      "fen": "#fa99b400",
+      "mire": "#fd7ca500",
+      "blackwater": "#fd7ca500"
     }
   },
   {
@@ -3829,13 +3829,13 @@
       "ui.tab.indicator"
     ],
     "palette": [
-      "jam"
+      "tint"
     ],
     "hex": {
-      "wisp": "#b9488b00",
-      "fen": "#ba488900",
-      "mire": "#ba488900",
-      "blackwater": "#ba488900"
+      "wisp": "#d2157000",
+      "fen": "#fa99b400",
+      "mire": "#fd7ca500",
+      "blackwater": "#fd7ca500"
     }
   },
   {

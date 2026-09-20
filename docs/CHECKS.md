@@ -31,7 +31,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | ui.text.muted | 4.5 | 6.79 | 6.15 | 8.79 | 9.48 |
 | ui.link | 4.5 | 4.77 | 6.76 | 7.95 | 9.04 |
 | ui.on.fill on ui.fill | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
-| ui.on.tab.indicator on ui.tab.indicator | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
+| ui.on.tab.indicator on ui.tab.indicator | 4.5 | 4.75 | 5.55 | 6.56 | 7.46 |
 | ui.on.badge on ui.badge | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
 
 ## Distinctness of key syntax roles

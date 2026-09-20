@@ -123,15 +123,15 @@
       "value": "ui.pane.secondary"
     },
     "tab.indicator": {
-      "value": "jam",
+      "value": "tint",
       "minContrastWith": [
         "ui.on.tab.indicator",
         4.5
       ],
-      "note": "Follows ui.fill, so the active tab reads as the same jam chip as buttons and badges."
+      "note": "Follows the theme's tint: berry in Darkberry, each berry's own colour in the nature tints."
     },
     "on.tab.indicator": {
-      "value": "ui.on.fill"
+      "value": "ui.on.accent"
     },
     "badge": {
       "value": "ui.fill",

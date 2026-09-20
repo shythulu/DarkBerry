@@ -32,8 +32,8 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.mark.text` | `ui.cursor.text` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
 | `ui.tab.active` | `ui.background` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` |  |
 | `ui.tab.inactive` | `ui.pane.secondary` | `#f3e6ef` | `#402838` | `#23161f` | `#170d13` |  |
-| `ui.tab.indicator` | `jam` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` |  |
-| `ui.on.tab.indicator` | `ui.on.fill` | `#ffffff` | `#ffffff` | `#ffffff` | `#ffffff` |  |
+| `ui.tab.indicator` | `tint` | `#d21570` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` |  |
+| `ui.on.tab.indicator` | `ui.on.accent` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` |  |
 | `ui.badge` | `ui.fill` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` |  |
 | `ui.on.badge` | `ui.on.fill` | `#ffffff` | `#ffffff` | `#ffffff` | `#ffffff` |  |
 | `terminal.color16` | `apricot` | `#b15423` | `#f7bf9e` | `#f2ad8a` | `#f2ad8a` | same |
