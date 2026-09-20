@@ -1,0 +1,106 @@
+# Packages every port and attaches the files to a GitHub Release.
+# Push a version tag (v0.3.0) to cut a release. Running it by hand from the Actions tab
+# packages without releasing and leaves the files as build artifacts, which is the way to
+# check a packaging change before tagging.
+#
+# The Firefox .xpi files are unsigned, so they install only through about:debugging or on
+# an unbranded build. Add AMO_JWT_ISSUER and AMO_JWT_SECRET as repository secrets and the
+# signing step starts replacing them with signed ones that install anywhere; nothing else
+# about this file has to change.
+name: Release
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: release-${{ github.ref }}
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    env:
+      AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
+      AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Read the version
+        id: meta
+        run: echo "version=$(node -p "require('./src/palette.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Check the tag matches src/palette.json
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          want='${{ steps.meta.outputs.version }}'
+          got="${GITHUB_REF_NAME#v}"
+          test "$got" = "$want" ||
+            { echo "::error::tag $GITHUB_REF_NAME does not match version $want in src/palette.json"; exit 1; }
+
+      - name: Check the committed ports are current
+        run: |
+          node build.mjs
+          git diff --exit-code -- ports ||
+            { echo "::error::ports/ is stale; run node build.mjs and commit the result"; exit 1; }
+
+      - name: Package
+        run: ./package.sh
+
+      - name: Sign the Firefox themes
+        id: sign
+        if: env.AMO_JWT_ISSUER != ''
+        run: |
+          version='${{ steps.meta.outputs.version }}'
+          for dir in ports/firefox/*/; do
+            flavour=$(basename "$dir")
+            npx --yes web-ext sign --source-dir "$dir" --channel unlisted \
+              --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET" \
+              --artifacts-dir "signed/$flavour"
+            xpi=$(find "signed/$flavour" -name '*.xpi' | head -1)
+            test -n "$xpi" || { echo "::error::no signed .xpi came back for $flavour"; exit 1; }
+            mv "$xpi" "dist/darkberry-$flavour-$version.xpi"
+          done
+          echo "signed=yes" >> "$GITHUB_OUTPUT"
+
+      - name: Write the release notes
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          version='${{ steps.meta.outputs.version }}'
+          {
+            echo "### Install"
+            echo
+            echo "**VS Code** (and Cursor, VSCodium, Windsurf) — \`code --install-extension darkberry-theme-$version.vsix\`, or Extensions > ... > Install from VSIX. Pick a flavour with Ctrl+K Ctrl+T."
+            echo
+            echo "**kitty** — unzip \`darkberry-kitty-$version.zip\` into \`~/.config/kitty/themes/\`, then \`kitty +kitten themes\`."
+            echo
+            echo "**Ghostty** — unzip \`darkberry-ghostty-$version.zip\` into \`~/.config/ghostty/themes/\`, keeping the file names, then set \`theme = light:Darkberry Wisp,dark:Darkberry Mire\`."
+            echo
+            if [ '${{ steps.sign.outputs.signed }}' = 'yes' ]; then
+              echo "**Firefox** — open the \`.xpi\` for the flavour you want. These are signed by Mozilla for self-distribution."
+            else
+              echo "**Firefox** — these \`.xpi\` files are unsigned, so release Firefox will refuse them. Load one temporarily through \`about:debugging\` > This Firefox > Load Temporary Add-on, or install it permanently on Developer Edition or Nightly with \`xpinstall.signatures.required\` set to \`false\`."
+            fi
+          } > notes.md
+
+      - name: Create the release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "Darkberry $GITHUB_REF_NAME" \
+            --notes-file notes.md \
+            dist/*.vsix dist/*.xpi dist/*.zip dist/palette.json
+
+      - name: Upload the files as artifacts
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: darkberry-${{ steps.meta.outputs.version }}
+          path: |
+            dist/*.vsix
+            dist/*.xpi
+            dist/*.zip
