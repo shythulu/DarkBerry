@@ -50,6 +50,7 @@ const meta = (ctx) => ({
   FULL: `${P.name} ${ctx.f.name}`, NAME: P.name, NOTE: ctx.f.note, VERSION: P.version,
   SLUG: `${P.id}-${ctx.id}`, ID: P.id, SCHEME: ctx.f.dark ? "dark" : "light",
   HOMEPAGE: P.homepage,
+  ISDARK: ctx.f.dark ? "true" : "false",
   ...accentHsl(ctx),
 });
 // Obsidian builds --color-accent and its hover shades out of these three, so a hex is not enough.
@@ -86,7 +87,12 @@ function applyOverrides(port, kind, content, ctx) {
 const kittyT = read("src/ports/kitty.conf"), ghosttyT = read("src/ports/ghostty"), firefoxT = read("src/ports/firefox.json");
 const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/ports/obsidian.json");
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
+const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
+const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
+const nppT = read("src/ports/notepadpp.xml");
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
+const toBareHex = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => `"${h.toUpperCase()}"`);
+const toRgbArrays = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => "[" + rgb("#" + h).map((v) => Math.round(v * 255)).join(", ") + "]");
 const toTriplets = (text) => text.replace(/#([0-9a-f]{6})/g, (_, h) => rgb("#" + h).map((v) => Math.round(v * 255)).join(","));
 const vscodeT = read("src/vscode/template.json");
 
@@ -106,6 +112,15 @@ for (const ctx of ctxs) {
   const ff = JSON.parse(fill(ctx, firefoxT, "firefox"));
   ff.theme.colors = applyOverrides("firefox", "json", ff.theme.colors, ctx);
   out(`ports/firefox/${ctx.id}/manifest.json`, ff);
+  const nb = JSON.parse(fill(ctx, nimbalystT, "nimbalyst"));
+  nb.colors = applyOverrides("nimbalyst", "json", nb.colors, ctx);
+  out(`ports/nimbalyst/${full}/theme.json`, nb);
+  out(`ports/micro/${slug}.micro`, applyOverrides("micro", "lines", fill(ctx, microT, "micro"), ctx));
+  const kt = JSON.parse(fill(ctx, kateT, "kate"));
+  kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
+  out(`ports/kate/${slug}.theme`, kt);
+  out(`ports/chrome/${full}/manifest.json`, toRgbArrays(fill(ctx, chromeT, "chrome")));
+  out(`ports/notepadpp/${full}.xml`, toBareHex(applyOverrides("notepadpp", "lines", fill(ctx, nppT, "notepadpp"), ctx)));
   out(`ports/kde/${full}.colors`, toTriplets(applyOverrides("kde", "lines", fill(ctx, kdeT, "kde"), ctx)));
   out(`ports/konsole/${full}.colorscheme`, toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
   out(`ports/obsidian/${full}/theme.css`, applyOverrides("obsidian", "lines", fill(ctx, obsidianT, "obsidian"), ctx));
@@ -134,12 +149,15 @@ const traceExpr = (port, key, raw) => {
 const walk = (port, o, pre = "") => { if (typeof o === "string") return traceExpr(port, pre, o);
   if (Array.isArray(o)) return o.forEach((v, i) => walk(port, v, `${pre}[${v?.name ? JSON.stringify(v.name) : i}]`));
   if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) walk(port, v, pre ? (pre === "colors" || pre.endsWith("colors") ? `${k}` : `${pre}.${k}`) : k); };
-for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT]])
+for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT]])
   for (const line of text.split("\n")) { const m = /^([\w.-]+(?:\s*=\s*\d+)?)\s*=?\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("#")) traceExpr(port, m[1].replace(/\s+/g, " "), m[2]); }
 walk("firefox", JSON.parse(firefoxT).theme.colors, "colors");
+walk("chrome", JSON.parse(chromeT).theme.colors, "colors");
+walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "colors");
+walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
-for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 out("dist/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
@@ -209,10 +227,10 @@ rolesMd += `\nAligned with Catppuccin: ANSI mapping and bright formula, all back
 out("docs/ROLES.md", rolesMd);
 
 // ---------- docs/USAGE.md (blast radius of each palette colour) ----------
-let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | VS Code | Firefox | Obsidian | KDE | Konsole |\n|---|---|---:|---:|---:|---:|---:|---:|\n`;
+let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
 for (const k of order) {
   const u = usage[k];
-  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "vscode", "firefox", "obsidian", "kde", "konsole"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
+  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
 }
 usageMd += `\nANSI colours (\`ansi.0\` to \`ansi.15\`) come from the palette via \`roles.json\` → \`ansi\`, the same way for every terminal.\n`;
 out("docs/USAGE.md", usageMd);

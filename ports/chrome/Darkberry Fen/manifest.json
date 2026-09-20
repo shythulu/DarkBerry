@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Darkberry Fen",
+  "version": "0.3.0",
+  "description": "Darkberry for Chrome and Edge. Soft dark. The background (#4c3342) is within a shade of the paint colour.",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [53, 33, 46],
+      "frame_inactive": [53, 33, 46],
+      "frame_incognito": [53, 33, 46],
+      "frame_incognito_inactive": [53, 33, 46],
+      "toolbar": [79, 49, 67],
+      "tab_text": [242, 230, 238],
+      "tab_background_text": [204, 186, 197],
+      "tab_background_text_inactive": [162, 130, 151],
+      "bookmark_text": [242, 230, 238],
+      "toolbar_button_icon": [204, 186, 197],
+      "omnibox_background": [93, 62, 81],
+      "omnibox_text": [242, 230, 238],
+      "ntp_background": [79, 49, 67],
+      "ntp_text": [242, 230, 238],
+      "ntp_link": [160, 208, 218],
+      "button_background": [108, 76, 96]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

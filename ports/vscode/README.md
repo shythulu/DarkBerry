@@ -77,6 +77,35 @@ Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping the
 theme = light:Darkberry Wisp,dark:Darkberry Mire
 ```
 
+### Notepad++
+
+Copy a `.xml` file from `ports/notepadpp/` into `%APPDATA%\\Notepad++\\themes\\`, restart
+Notepad++, then Settings > Style Configurator and pick the flavour. Fonts are left blank so
+your own choice survives.
+
+### micro
+
+Copy a `.micro` file from `ports/micro/` into `~/.config/micro/colorschemes/`, then
+`set colorscheme darkberry-mire`.
+
+### Kate
+
+Copy a `.theme` file from `ports/kate/` into
+`~/.local/share/org.kde.syntax-highlighting/themes/`, then Settings > Configure Kate >
+Fonts & Colors. The surrounding window chrome comes from the KDE colour scheme below.
+
+### Chrome and Edge
+
+Unzip `ports/chrome/` somewhere permanent, open `chrome://extensions`, turn on Developer
+mode and use *Load unpacked* on a flavour's folder. Chromium themes install like extensions,
+so a folder loaded this way stays until you remove it.
+
+### Nimbalyst
+
+Copy a flavour's folder from `ports/nimbalyst/` into Nimbalyst's themes directory, then pick
+it under Settings > Themes. Each folder holds a `theme.json`, which is how Nimbalyst
+discovers a theme.
+
 ### KDE Plasma
 
 Copy the `.colors` files from `ports/kde/` into `~/.local/share/color-schemes/`, then pick a

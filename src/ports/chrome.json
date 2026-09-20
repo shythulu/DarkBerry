@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "%FULL%",
+  "version": "%VERSION%",
+  "description": "%NAME% for Chrome and Edge. %NOTE%",
+  "homepage_url": "%HOMEPAGE%",
+  "theme": {
+    "colors": {
+      "frame": "{ui.pane.tertiary}",
+      "frame_inactive": "{ui.pane.tertiary}",
+      "frame_incognito": "{ui.pane.tertiary}",
+      "frame_incognito_inactive": "{ui.pane.tertiary}",
+      "toolbar": "{ui.background}",
+      "tab_text": "{ui.text}",
+      "tab_background_text": "{ui.text.muted}",
+      "tab_background_text_inactive": "{ui.text.subtle}",
+      "bookmark_text": "{ui.text}",
+      "toolbar_button_icon": "{ui.text.muted}",
+      "omnibox_background": "{surface0}",
+      "omnibox_text": "{ui.text}",
+      "ntp_background": "{ui.background}",
+      "ntp_text": "{ui.text}",
+      "ntp_link": "{ui.link}",
+      "button_background": "{surface1}"
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

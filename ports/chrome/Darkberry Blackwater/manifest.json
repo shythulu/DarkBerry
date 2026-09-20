@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Darkberry Blackwater",
+  "version": "0.3.0",
+  "description": "Darkberry for Chrome and Edge. Darkest. Deeper wine surfaces, same accents as Mire.",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [18, 9, 15],
+      "frame_inactive": [18, 9, 15],
+      "frame_incognito": [18, 9, 15],
+      "frame_incognito_inactive": [18, 9, 15],
+      "toolbar": [29, 18, 26],
+      "tab_text": [237, 225, 233],
+      "tab_background_text": [198, 183, 192],
+      "tab_background_text_inactive": [136, 120, 130],
+      "bookmark_text": [237, 225, 233],
+      "toolbar_button_icon": [198, 183, 192],
+      "omnibox_background": [39, 26, 35],
+      "omnibox_text": [237, 225, 233],
+      "ntp_background": [29, 18, 26],
+      "ntp_text": [237, 225, 233],
+      "ntp_link": [134, 192, 204],
+      "button_background": [52, 34, 46]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

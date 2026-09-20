@@ -4388,6 +4388,925 @@
     }
   },
   {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.link}",
+    "roles": [
+      "syntax.link",
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#ffffff",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#ffffff",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#ffffff",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "micro",
+    "key": "color-link",
+    "expr": "{syntax.diff.removed}",
+    "roles": [
+      "syntax.diff.removed"
+    ],
+    "palette": [
+      "cranberry",
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#bf414b",
+      "fen": "#f39aa0",
+      "mire": "#e27e83",
+      "blackwater": "#e27e83"
+    }
+  },
+  {
     "port": "firefox",
     "key": "frame",
     "expr": "{ui.pane.tertiary}",
@@ -5000,6 +5919,2000 @@
       "fen": "#6c4c60",
       "mire": "#3e2936",
       "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "frame",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "frame_inactive",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "frame_incognito",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "frame_incognito_inactive",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "toolbar",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "tab_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "tab_background_text",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "tab_background_text_inactive",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "bookmark_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "toolbar_button_icon",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "omnibox_background",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "omnibox_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "ntp_background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "ntp_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "ntp_link",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "chrome",
+    "key": "button_background",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "bg",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "bg-secondary",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "bg-tertiary",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "text-muted",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "border",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "primary",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "link",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "success",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "warning",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "error",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "nimbalyst",
+    "key": "info",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Normal.text-color",
+    "expr": "{syntax.text}",
+    "roles": [
+      "syntax.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Normal.selected-text-color",
+    "expr": "{syntax.text}",
+    "roles": [
+      "syntax.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Keyword.text-color",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Keyword.selected-text-color",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Function.text-color",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Function.selected-text-color",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Variable.text-color",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Variable.selected-text-color",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.ControlFlow.text-color",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.ControlFlow.selected-text-color",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Operator.text-color",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Operator.selected-text-color",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.BuiltIn.text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.BuiltIn.selected-text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Extension.text-color",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Extension.selected-text-color",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Preprocessor.text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Preprocessor.selected-text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Attribute.text-color",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Attribute.selected-text-color",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Char.text-color",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Char.selected-text-color",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.SpecialChar.text-color",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.SpecialChar.selected-text-color",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.String.text-color",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.String.selected-text-color",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.VerbatimString.text-color",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.VerbatimString.selected-text-color",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.SpecialString.text-color",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.SpecialString.selected-text-color",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Import.text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Import.selected-text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.DataType.text-color",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.DataType.selected-text-color",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.DecVal.text-color",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.DecVal.selected-text-color",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.BaseN.text-color",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.BaseN.selected-text-color",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Float.text-color",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Float.selected-text-color",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Constant.text-color",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Constant.selected-text-color",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Comment.text-color",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Comment.selected-text-color",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Documentation.text-color",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Documentation.selected-text-color",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Annotation.text-color",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Annotation.selected-text-color",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.CommentVar.text-color",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.CommentVar.selected-text-color",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.RegionMarker.text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.RegionMarker.selected-text-color",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Information.text-color",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Information.selected-text-color",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Warning.text-color",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Warning.selected-text-color",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Alert.text-color",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Alert.selected-text-color",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Error.text-color",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Error.selected-text-color",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Others.text-color",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "text-styles.Others.selected-text-color",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "BackgroundColor",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "CodeFolding",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "BracketMatching",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "CurrentLine",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "IconBorder",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "IndentationLine",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "LineNumbers",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "CurrentLineNumber",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "MarkBookmark",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "MarkBreakpointActive",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "MarkBreakpointReached",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "MarkBreakpointDisabled",
+    "expr": "{overlay0}",
+    "roles": [],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "MarkExecution",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "MarkWarning",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "MarkError",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "ModifiedLines",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "ReplaceHighlight",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "SavedLines",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "SearchHighlight",
+    "expr": "{ui.mark1}",
+    "roles": [
+      "ui.mark1"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "TextSelection",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "Separator",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "SpellChecking",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "TabMarker",
+    "expr": "{overlay0}",
+    "roles": [],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "TemplateBackground",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "TemplatePlaceholder",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "TemplateFocusedPlaceholder",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "TemplateReadOnlyPlaceholder",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "kate",
+    "key": "WordWrapMarker",
+    "expr": "{overlay0}",
+    "roles": [],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
     }
   },
   {

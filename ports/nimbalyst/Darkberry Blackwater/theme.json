@@ -1,0 +1,26 @@
+{
+  "id": "darkberry-blackwater",
+  "name": "Darkberry Blackwater",
+  "version": "0.3.0",
+  "author": "Darkberry",
+  "description": "Darkest. Deeper wine surfaces, same accents as Mire.",
+  "isDark": true,
+  "colors": {
+    "bg": "#1d121a",
+    "bg-secondary": "#170d13",
+    "bg-tertiary": "#12090f",
+    "text": "#ede1e9",
+    "text-muted": "#c6b7c0",
+    "border": "#6b5764",
+    "primary": "#ba4889",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

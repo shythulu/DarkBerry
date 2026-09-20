@@ -1,0 +1,23 @@
+{
+  "id": "%SLUG%",
+  "name": "%FULL%",
+  "version": "%VERSION%",
+  "author": "%NAME%",
+  "description": "%NOTE%",
+  "isDark": %ISDARK%,
+  "colors": {
+    "bg": "{ui.background}",
+    "bg-secondary": "{ui.pane.secondary}",
+    "bg-tertiary": "{ui.pane.tertiary}",
+    "text": "{ui.text}",
+    "text-muted": "{ui.text.muted}",
+    "border": "{ui.border.inactive}",
+    "primary": "{ui.accent}",
+    "link": "{ui.link}",
+    "success": "{ui.success}",
+    "warning": "{ui.warning}",
+    "error": "{ui.error}",
+    "info": "{ui.info}"
+  },
+  "tags": ["darkberry", "%SCHEME%"]
+}
