@@ -8,6 +8,11 @@
   "engines": {
     "vscode": "^1.70.0"
   },
+  "homepage": "https://shythulu.github.io/DarkBerry/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shythulu/DarkBerry"
+  },
   "categories": [
     "Themes"
   ],

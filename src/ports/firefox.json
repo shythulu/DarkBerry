@@ -3,6 +3,7 @@
   "name": "%FULL%",
   "version": "%VERSION%",
   "description": "%NAME% for Firefox. %NOTE%",
+  "homepage_url": "%HOMEPAGE%",
   "browser_specific_settings": { "gecko": { "id": "%SLUG%@%ID%-theme" } },
   "theme": {
     "colors": {

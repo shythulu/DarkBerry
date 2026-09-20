@@ -101,10 +101,15 @@ Install `darkberry-theme-<version>.vsix` via Extensions > `...` > Install from V
 
 ### Firefox
 
-Unsigned themes load in two ways:
+Install from [addons.mozilla.org](https://addons.mozilla.org/firefox/search/?q=darkberry).
+Each flavour is its own theme there, and updates arrive automatically.
 
-- Temporarily in any Firefox: `about:debugging` > This Firefox > Load Temporary Add-on > choose `ports/firefox/<flavour>/manifest.json`. It's removed when Firefox restarts.
-- Permanently: submit the `.xpi` from `dist/` to addons.mozilla.org as a self-distributed (unlisted) add-on to get it signed. Developer Edition and Nightly can also install unsigned files with `xpinstall.signatures.required` set to `false`.
+The `.xpi` files attached to a release are the unsigned build output, kept for archival.
+Firefox refuses unsigned add-ons on release and beta — themes included — so those install
+only through `about:debugging` > This Firefox > Load Temporary Add-on, or permanently on
+Developer Edition, Nightly or an unbranded Release/Beta build with
+`xpinstall.signatures.required` set to `false`. See [docs/AMO.md](docs/AMO.md) for how the
+listing is maintained.
 
 ## Credits
 
