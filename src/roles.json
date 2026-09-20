@@ -26,9 +26,9 @@
       "catppuccin": "="
     },
     "accent": {
-      "value": "berry",
+      "value": "jam",
       "catppuccin": "lavender (terminal borders), blue (tags)",
-      "why": "Berry pink is Darkberry's signature for focus and activity: the one accent the whole theme is recognised by."
+      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges."
     },
     "on.accent": {
       "value": "base",

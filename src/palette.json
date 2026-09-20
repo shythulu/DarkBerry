@@ -70,7 +70,7 @@
         "lavender": "#7a58b0",
         "jam": "#b9488b",
         "onjam": "#ffffff",
-        "tint": "#a82590"
+        "tint": "#d21570"
       },
       "emoji": "🕯️"
     },
@@ -107,7 +107,7 @@
         "lavender": "#cebede",
         "jam": "#ba4889",
         "onjam": "#ffffff",
-        "tint": "#d690c3"
+        "tint": "#fa99b4"
       },
       "emoji": "🌾"
     },
@@ -144,9 +144,9 @@
         "lavender": "#baa8dc",
         "jam": "#ba4889",
         "onjam": "#ffffff",
-        "tint": "#d577be"
+        "tint": "#fd7ca5"
       },
-      "emoji": "🌫️"
+      "emoji": "🪦"
     },
     "blackwater": {
       "name": "Blackwater",
@@ -181,7 +181,7 @@
         "lavender": "#baa8dc",
         "jam": "#ba4889",
         "onjam": "#ffffff",
-        "tint": "#d577be"
+        "tint": "#fd7ca5"
       },
       "emoji": "🌑"
     }

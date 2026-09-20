@@ -10,12 +10,12 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.text` | `text` | `#4f3143` | `#f2e6ee` | `#efe3eb` | `#ede1e9` | same |
 | `ui.text.muted` | `subtext0` | `#694e5f` | `#ccbac5` | `#cbbcc5` | `#c6b7c0` | same |
 | `ui.text.subtle` | `overlay1` | `#967d8c` | `#a28297` | `#91828b` | `#887882` | same |
-| `ui.accent` | `berry` | `#d21570` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` | lavender (terminal borders), blue (tags) |
+| `ui.accent` | `jam` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` | lavender (terminal borders), blue (tags) |
 | `ui.on.accent` | `base` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` | same |
 | `ui.fill` | `jam` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` | no equivalent (accents are used as fills directly) |
 | `ui.on.fill` | `onjam` | `#ffffff` | `#ffffff` | `#ffffff` | `#ffffff` | base (text on accent) |
 | `ui.focus` | `mix(cherry,overlay1,0.5)` | `#a36475` | `#c496a6` | `#b28a93` | `#ae848f` | lavender |
-| `ui.border.active` | `ui.accent` | `#d21570` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` | lavender |
+| `ui.border.active` | `ui.accent` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` | lavender |
 | `ui.border.inactive` | `overlay0` | `#ac93a2` | `#8f6e82` | `#7d6976` | `#6b5764` | same |
 | `ui.cursor` | `petal` | `#b7437d` | `#ffc4dd` | `#feafd4` | `#feafd4` | rosewater |
 | `ui.cursor.text` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
@@ -32,7 +32,7 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.mark.text` | `ui.cursor.text` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
 | `ui.tab.active` | `ui.background` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` |  |
 | `ui.tab.inactive` | `ui.pane.secondary` | `#f3e6ef` | `#402838` | `#23161f` | `#170d13` |  |
-| `ui.tab.indicator` | `tint` | `#a82590` | `#d690c3` | `#d577be` | `#d577be` |  |
+| `ui.tab.indicator` | `tint` | `#d21570` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` |  |
 | `ui.on.tab.indicator` | `ui.on.accent` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` |  |
 | `ui.badge` | `ui.fill` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` |  |
 | `ui.on.badge` | `ui.on.fill` | `#ffffff` | `#ffffff` | `#ffffff` | `#ffffff` |  |
@@ -62,7 +62,7 @@ Generated from `src/roles.json`. Every port references these names.
 
 | Role | Darkberry | Catppuccin | Why |
 |---|---|---|---|
-| `ui.accent` | `berry` | lavender (terminal borders), blue (tags) | Berry pink is Darkberry's signature for focus and activity: the one accent the whole theme is recognised by. |
+| `ui.accent` | `jam` | lavender (terminal borders), blue (tags) | Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. |
 | `ui.fill` | `jam` | no equivalent (accents are used as fills directly) | A deeper jam colour is kept for buttons, badges and progress bars, so saturated pink never covers large areas. |
 | `ui.on.fill` | `onjam` | base (text on accent) | Base on jam fails contrast in every flavour (about 3:1). White passes at 4.8:1. |
 | `ui.focus` | `mix(cherry,overlay1,0.5)` | lavender | A soft berry focus ring stays visible without competing with the berry accent. |
