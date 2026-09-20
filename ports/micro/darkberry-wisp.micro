@@ -32,7 +32,11 @@ color-link current-line-number "#b9488b,#f3e6ef"
 color-link gutter-error "#cc3838"
 color-link gutter-warning "#90670a"
 color-link divider "#ac93a2,#fbf4f8"
-color-link cursor-line "#4f3143,#dfcbd8"
+# micro takes this group's FOREGROUND and uses it as the line's background,
+# discarding any background given (internal/display/bufwindow.go). So this is
+# one colour, and it has to be a background: naming ui.text here painted the
+# cursor line near-white and left the text on it invisible.
+color-link cursor-line "#dfcbd8"
 color-link color-column "#dfcbd8"
 color-link selection "#4f3143,#d191b2"
 color-link match-brace "#b9488b,#d0bac8"
