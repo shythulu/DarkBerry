@@ -8,13 +8,14 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫐</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,50..100,0..1;1,9..144,300..700,50..100,0..1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,50..100,0..1;1,9..144,300..700,50..100,0..1&family=JetBrains+Mono:wght@400;600&family=Manufacturing+Consent&display=swap" rel="stylesheet">
 <style>
 :root{
   --ui-pane-tertiary:#1c1119;--ui-pane-secondary:#23161f;--ui-background:#2a1e26;--c-surface0:#32222c;--c-surface1:#3e2936;--c-surface2:#4f3143;
   --c-overlay0:#7d6976;--c-overlay1:#91828b;--c-overlay2:#ad8da2;--c-subtext0:#cbbcc5;--c-subtext1:#ddd0d9;--ui-text:#efe3eb;
   --ui-accent:#fd7ca5;--ui-tab-indicator:#d577be;--ui-link:#86c0cc;--ui-fill:#ba4889;--ui-on-fill:#ffffff;--ui-on-accent:#2a1e26;--ui-focus:#b28a93;
   --serif:"Fraunces",ui-serif,Georgia,"Times New Roman",serif;
+  --display:"Manufacturing Consent","Fraunces",ui-serif,Georgia,serif;
   --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
   color-scheme:dark;
@@ -43,7 +44,7 @@ nav.links a{color:var(--c-subtext1);text-decoration:none}
 nav.links a:hover{color:var(--ui-text)}
 .hero{padding:64px 0 40px}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
-h1{font-size:clamp(56px,9vw,112px);line-height:.92;margin:0 0 18px;font-weight:600;letter-spacing:-.02em;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+h1{font-family:var(--display);font-size:clamp(64px,10.5vw,132px);line-height:.95;margin:0 0 18px;font-weight:400;letter-spacing:.01em;font-variation-settings:normal}
 h1 span{color:var(--ui-accent)}
 .lede{font-size:21px;line-height:1.5;color:var(--c-subtext1);margin:0 0 26px;max-width:32ch}
 .pick{margin:0 0 14px}
