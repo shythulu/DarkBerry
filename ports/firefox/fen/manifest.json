@@ -3,6 +3,7 @@
   "name": "Darkberry Fen",
   "version": "0.3.0",
   "description": "Darkberry for Firefox. Soft dark. The background (#4c3342) is within a shade of the paint colour.",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
   "browser_specific_settings": {
     "gecko": {
       "id": "darkberry-fen@darkberry-theme"

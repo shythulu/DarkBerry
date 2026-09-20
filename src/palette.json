@@ -3,6 +3,8 @@
   "id": "darkberry",
   "version": "0.3.0",
   "description": "Darkberry: a four-flavour bog-witch berry theme, from Benjamin Moore Dark Purple (2073-10, #4B3540).",
+  "homepage": "https://shythulu.github.io/DarkBerry/",
+  "repository": "https://github.com/shythulu/DarkBerry",
   "neutralOrder": [
     "text",
     "subtext1",
