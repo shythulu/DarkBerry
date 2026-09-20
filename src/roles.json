@@ -26,9 +26,9 @@
       "catppuccin": "="
     },
     "accent": {
-      "value": "berry",
+      "value": "jam",
       "catppuccin": "lavender (terminal borders), blue (tags)",
-      "why": "Berry pink is Darkberry's signature for focus and activity: the one accent the whole theme is recognised by."
+      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges."
     },
     "on.accent": {
       "value": "base",
@@ -123,15 +123,15 @@
       "value": "ui.pane.secondary"
     },
     "tab.indicator": {
-      "value": "tint",
+      "value": "jam",
       "minContrastWith": [
         "ui.on.tab.indicator",
         4.5
       ],
-      "note": "Follows the theme's tint: berry in Darkberry, each berry's own colour in the nature tints."
+      "note": "Follows ui.fill, so the active tab reads as the same jam chip as buttons and badges."
     },
     "on.tab.indicator": {
-      "value": "ui.on.accent"
+      "value": "ui.on.fill"
     },
     "badge": {
       "value": "ui.fill",
