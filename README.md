@@ -77,6 +77,24 @@ Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping the
 theme = light:Darkberry Wisp,dark:Darkberry Mire
 ```
 
+### KDE Plasma
+
+Copy the `.colors` files from `ports/kde/` into `~/.local/share/color-schemes/`, then pick a
+flavour in System Settings > Colors. The scheme covers every Qt and KDE application; the
+Plasma Style and window decorations are artwork rather than colour, so they stay as they are.
+
+### Konsole
+
+Copy the `.colorscheme` files from `ports/konsole/` into `~/.local/share/konsole/`, then
+Settings > Edit Current Profile > Appearance.
+
+### Obsidian
+
+Copy a flavour's folder from `ports/obsidian/` into your vault's `.obsidian/themes/`, keeping the
+folder name, then pick it under Settings > Appearance > Themes. Each flavour is its own theme
+and paints both of Obsidian's colour schemes, so the Appearance light/dark switch leaves the
+flavour alone.
+
 ### VS Code (and Cursor, VSCodium, Windsurf)
 
 Install `darkberry-theme-<version>.vsix` via Extensions > `...` > Install from VSIX, or `code --install-extension darkberry-theme-<version>.vsix`. Then pick a flavour with Ctrl+K Ctrl+T. To publish, set your own `publisher` in `build.mjs`.

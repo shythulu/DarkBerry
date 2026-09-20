@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # Build everything, then package each port into dist/: the VS Code .vsix, a Firefox .xpi
-# per flavour, and zips of the kitty and Ghostty config files.
+# per flavour, and zips of the kitty, Ghostty, Obsidian, KDE and Konsole theme files.
 set -e
 cd "$(dirname "$0")"
 rm -f dist/*.vsix dist/*.xpi dist/*.zip
@@ -15,4 +15,7 @@ for dir in ports/firefox/*/; do
 done
 (cd ports/kitty && zip -qr "../../dist/darkberry-kitty-$VERSION.zip" .)
 (cd ports/ghostty && zip -qr "../../dist/darkberry-ghostty-$VERSION.zip" .)
+(cd ports/obsidian && zip -qr "../../dist/darkberry-obsidian-$VERSION.zip" .)
+(cd ports/kde && zip -qr "../../dist/darkberry-kde-$VERSION.zip" .)
+(cd ports/konsole && zip -qr "../../dist/darkberry-konsole-$VERSION.zip" .)
 ls dist
