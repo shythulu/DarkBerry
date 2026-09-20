@@ -1957,7 +1957,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Brace highlight style" styleID="34" fgColor="B9488B" bgColor="D0BAC8" fontName="" fontStyle="1" fontSize="" />
         <WidgetStyle name="Bad brace colour" styleID="35" fgColor="CC3838" bgColor="FBF4F8" fontName="" fontStyle="0" fontSize="" />
         <WidgetStyle name="Current line background colour" styleID="0" bgColor="DFCBD8" />
-        <WidgetStyle name="Selected text colour" styleID="0" bgColor="D191B2" fgColor="4F3143" />
+        <WidgetStyle name="Selected text colour" styleID="0" bgColor="F4CCE0" fgColor="4F3143" />
         <WidgetStyle name="Multi-selected text color" styleID="0" bgColor="C3ABB9" />
         <WidgetStyle name="Caret colour" styleID="0" fgColor="B7437D" />
         <WidgetStyle name="Multi-edit carets color" styleID="0" fgColor="B7437D" />
@@ -1973,16 +1973,16 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Fold active" styleID="0" fgColor="B9488B" />
         <WidgetStyle name="Fold margin" styleID="0" fgColor="EBDAE5" bgColor="F3E6EF" />
         <WidgetStyle name="White space symbol" styleID="0" fgColor="AC93A2" />
-        <WidgetStyle name="Smart Highlighting" styleID="29" bgColor="7A58B0" />
-        <WidgetStyle name="Find Mark Style" styleID="31" bgColor="9A4CC0" />
+        <WidgetStyle name="Smart Highlighting" styleID="29" fgColor="FBF4F8" bgColor="7A58B0" />
+        <WidgetStyle name="Find Mark Style" styleID="31" fgColor="FBF4F8" bgColor="9A4CC0" />
         <WidgetStyle name="Find status: Not found" styleID="0" fgColor="CC3838" />
         <WidgetStyle name="Find status: Message" styleID="0" fgColor="1D7D6C" />
         <WidgetStyle name="Find status: Search end reached" styleID="0" fgColor="377A37" />
-        <WidgetStyle name="Mark Style 1" styleID="25" bgColor="7A58B0" />
-        <WidgetStyle name="Mark Style 2" styleID="24" bgColor="9A4CC0" />
-        <WidgetStyle name="Mark Style 3" styleID="23" bgColor="2A6FB0" />
-        <WidgetStyle name="Mark Style 4" styleID="22" bgColor="7A58B0" />
-        <WidgetStyle name="Mark Style 5" styleID="21" bgColor="9A4CC0" />
+        <WidgetStyle name="Mark Style 1" styleID="25" fgColor="FBF4F8" bgColor="7A58B0" />
+        <WidgetStyle name="Mark Style 2" styleID="24" fgColor="FBF4F8" bgColor="9A4CC0" />
+        <WidgetStyle name="Mark Style 3" styleID="23" fgColor="FBF4F8" bgColor="2A6FB0" />
+        <WidgetStyle name="Mark Style 4" styleID="22" fgColor="FBF4F8" bgColor="7A58B0" />
+        <WidgetStyle name="Mark Style 5" styleID="21" fgColor="FBF4F8" bgColor="9A4CC0" />
         <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="B9488B" />
         <WidgetStyle name="Tags match highlighting" styleID="27" bgColor="C3ABB9" />
         <WidgetStyle name="Tags attribute" styleID="26" fgColor="725388" />

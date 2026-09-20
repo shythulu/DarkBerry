@@ -55,17 +55,18 @@
     "key": "selection_background",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -1048,17 +1049,18 @@
     "key": "selection-background",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -1797,34 +1799,33 @@
     "key": "--text-selection",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
     "port": "obsidian",
     "key": "--text-highlight-bg",
-    "expr": "{ui.mark1}",
-    "roles": [
-      "ui.mark1"
-    ],
+    "expr": "{surface1}",
+    "roles": [],
     "palette": [
-      "lavender"
+      "surface1"
     ],
     "hex": {
-      "wisp": "#7a58b0",
-      "fen": "#cebede",
-      "mire": "#baa8dc",
-      "blackwater": "#baa8dc"
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
     }
   },
   {
@@ -4973,16 +4974,20 @@
   {
     "port": "micro",
     "key": "color-link",
-    "expr": "{surface0}",
-    "roles": [],
+    "expr": "{ui.line.current}",
+    "roles": [
+      "ui.line.current",
+      "ui.background"
+    ],
     "palette": [
+      "base",
       "surface0"
     ],
     "hex": {
-      "wisp": "#dfcbd8",
-      "fen": "#5d3e51",
-      "mire": "#32222c",
-      "blackwater": "#271a23"
+      "wisp": "#f1e6ed",
+      "fen": "#543648",
+      "mire": "#2d1f28",
+      "blackwater": "#21151d"
     }
   },
   {
@@ -5022,17 +5027,18 @@
     "key": "color-link",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -6345,17 +6351,18 @@
     "key": "background-color",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -6729,17 +6736,18 @@
     "key": "toolbar_field_highlight",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -6860,17 +6868,18 @@
     "key": "popup_highlight",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -6944,17 +6953,18 @@
     "key": "sidebar_highlight",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -8594,17 +8604,18 @@
     "key": "CodeFolding",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -8874,18 +8885,16 @@
   {
     "port": "kate",
     "key": "SearchHighlight",
-    "expr": "{ui.mark1}",
-    "roles": [
-      "ui.mark1"
-    ],
+    "expr": "{surface1}",
+    "roles": [],
     "palette": [
-      "lavender"
+      "surface1"
     ],
     "hex": {
-      "wisp": "#7a58b0",
-      "fen": "#cebede",
-      "mire": "#baa8dc",
-      "blackwater": "#baa8dc"
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
     }
   },
   {
@@ -8893,17 +8902,18 @@
     "key": "TextSelection",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -12993,17 +13003,18 @@
     "key": "terminal.selectionBackground",
     "expr": "{ui.selection}",
     "roles": [
-      "ui.selection"
+      "ui.selection",
+      "ui.background"
     ],
     "palette": [
-      "surface1",
+      "base",
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
-      "fen": "#905f75",
-      "mire": "#6e3e52",
-      "blackwater": "#66394c"
+      "wisp": "#f4cce0",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {

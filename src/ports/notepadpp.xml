@@ -1973,16 +1973,16 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Fold active" styleID="0" fgColor="{ui.accent}" />
         <WidgetStyle name="Fold margin" styleID="0" fgColor="{ui.pane.tertiary}" bgColor="{ui.pane.secondary}" />
         <WidgetStyle name="White space symbol" styleID="0" fgColor="{overlay0}" />
-        <WidgetStyle name="Smart Highlighting" styleID="29" bgColor="{ui.mark1}" />
-        <WidgetStyle name="Find Mark Style" styleID="31" bgColor="{ui.mark2}" />
+        <WidgetStyle name="Smart Highlighting" styleID="29" fgColor="{ui.mark.text}" bgColor="{ui.mark1}" />
+        <WidgetStyle name="Find Mark Style" styleID="31" fgColor="{ui.mark.text}" bgColor="{ui.mark2}" />
         <WidgetStyle name="Find status: Not found" styleID="0" fgColor="{ui.error}" />
         <WidgetStyle name="Find status: Message" styleID="0" fgColor="{ui.info}" />
         <WidgetStyle name="Find status: Search end reached" styleID="0" fgColor="{ui.success}" />
-        <WidgetStyle name="Mark Style 1" styleID="25" bgColor="{ui.mark1}" />
-        <WidgetStyle name="Mark Style 2" styleID="24" bgColor="{ui.mark2}" />
-        <WidgetStyle name="Mark Style 3" styleID="23" bgColor="{ui.mark3}" />
-        <WidgetStyle name="Mark Style 4" styleID="22" bgColor="{ui.mark1}" />
-        <WidgetStyle name="Mark Style 5" styleID="21" bgColor="{ui.mark2}" />
+        <WidgetStyle name="Mark Style 1" styleID="25" fgColor="{ui.mark.text}" bgColor="{ui.mark1}" />
+        <WidgetStyle name="Mark Style 2" styleID="24" fgColor="{ui.mark.text}" bgColor="{ui.mark2}" />
+        <WidgetStyle name="Mark Style 3" styleID="23" fgColor="{ui.mark.text}" bgColor="{ui.mark3}" />
+        <WidgetStyle name="Mark Style 4" styleID="22" fgColor="{ui.mark.text}" bgColor="{ui.mark1}" />
+        <WidgetStyle name="Mark Style 5" styleID="21" fgColor="{ui.mark.text}" bgColor="{ui.mark2}" />
         <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="{ui.fill}" />
         <WidgetStyle name="Tags match highlighting" styleID="27" bgColor="{surface2}" />
         <WidgetStyle name="Tags attribute" styleID="26" fgColor="{syntax.property}" />

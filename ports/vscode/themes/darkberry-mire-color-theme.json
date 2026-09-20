@@ -2083,7 +2083,7 @@
     "editor.wordHighlightBackground": "#4f314399",
     "editor.wordHighlightStrongBackground": "#524b65b8",
     "sideBar.dropBackground": "#3e293699",
-    "terminal.selectionBackground": "#6e3e52",
+    "terminal.selectionBackground": "#502f3d",
     "terminal.foreground": "#efe3eb",
     "terminal.background": "#2a1e26",
     "editorLink.activeForeground": "#86c0cc",

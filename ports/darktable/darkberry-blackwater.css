@@ -19,7 +19,7 @@
 @import url("chunk-fonts.css");
 
 /* General */
-@define-color selected_bg_color      #66394c;
+@define-color selected_bg_color      #452533;
 @define-color border_color           #6b5764;
 @define-color bg_color               #1d121a;
 @define-color fg_color               #ede1e9;
@@ -55,7 +55,7 @@
 @define-color field_bg          #271a23;
 @define-color field_active_bg   #34222e;
 @define-color field_active_fg   #ede1e9;
-@define-color field_selected_bg #66394c;
+@define-color field_selected_bg #452533;
 @define-color field_selected_fg #ede1e9;
 @define-color field_hover_bg    #34222e;
 @define-color field_hover_fg    #ede1e9;
