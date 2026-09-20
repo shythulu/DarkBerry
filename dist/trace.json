@@ -1979,18 +1979,18 @@
   {
     "port": "obsidian",
     "key": "--code-important",
-    "expr": "{syntax.constant}",
+    "expr": "{syntax.regex}",
     "roles": [
-      "syntax.constant"
+      "syntax.regex"
     ],
     "palette": [
-      "blueberry"
+      "juniper"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
-      "fen": "#a4c3f6",
-      "mire": "#8fb0f2",
-      "blackwater": "#8fb0f2"
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
     }
   },
   {

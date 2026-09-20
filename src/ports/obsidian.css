@@ -72,7 +72,7 @@
   --code-normal: {syntax.text};
   --code-comment: {syntax.comment};
   --code-function: {syntax.function};
-  --code-important: {syntax.constant};
+  --code-important: {syntax.regex};
   --code-keyword: {syntax.keyword};
   --code-operator: {syntax.operator};
   --code-property: {syntax.property};
