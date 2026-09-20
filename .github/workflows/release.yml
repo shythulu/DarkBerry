@@ -80,6 +80,10 @@ jobs:
             echo
             echo "**Obsidian** — unzip \`darkberry-obsidian-$version.zip\` into your vault's \`.obsidian/themes/\`, then pick a flavour under Settings > Appearance > Themes."
             echo
+            echo "**KDE Plasma** — unzip \`darkberry-kde-$version.zip\` into \`~/.local/share/color-schemes/\`, then pick a flavour in System Settings > Colors."
+            echo
+            echo "**Konsole** — unzip \`darkberry-konsole-$version.zip\` into \`~/.local/share/konsole/\`, then Settings > Edit Current Profile > Appearance."
+            echo
             if [ '${{ steps.sign.outputs.signed }}' = 'yes' ]; then
               echo "**Firefox** — open the \`.xpi\` for the flavour you want. These are signed by Mozilla for self-distribution."
             else

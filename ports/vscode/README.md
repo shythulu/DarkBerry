@@ -77,6 +77,17 @@ Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping the
 theme = light:Darkberry Wisp,dark:Darkberry Mire
 ```
 
+### KDE Plasma
+
+Copy the `.colors` files from `ports/kde/` into `~/.local/share/color-schemes/`, then pick a
+flavour in System Settings > Colors. The scheme covers every Qt and KDE application; the
+Plasma Style and window decorations are artwork rather than colour, so they stay as they are.
+
+### Konsole
+
+Copy the `.colorscheme` files from `ports/konsole/` into `~/.local/share/konsole/`, then
+Settings > Edit Current Profile > Appearance.
+
 ### Obsidian
 
 Copy a flavour's folder from `ports/obsidian/` into your vault's `.obsidian/themes/`, keeping the
