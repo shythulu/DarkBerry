@@ -104,7 +104,11 @@ const WIDGETS = {
   "Find status: Invalid regular expression": ["ui.error", null],
 };
 
-let xml = fs.readFileSync(src, "utf8");
+// stylers.model.xml ships with CRLF. Keeping it would make the generated themes
+// differ by line ending between platforms, and the release workflow checks that the
+// committed ports match a fresh build — on a Linux runner that check would fail
+// forever. XML does not care, so normalise to LF.
+let xml = fs.readFileSync(src, "utf8").replace(/\r\n/g, "\n");
 
 // Drop the upstream header, and state where this file came from.
 xml = xml.replace(/^<\?xml[^>]*\?>\s*/, "");
