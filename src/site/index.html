@@ -8,14 +8,14 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫐</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,50..100,0..1;1,9..144,300..700,50..100,0..1&family=JetBrains+Mono:wght@400;600&family=Manufacturing+Consent&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gabriela&family=JetBrains+Mono:wght@400;600&family=Manufacturing+Consent&display=swap" rel="stylesheet">
 <style>
 :root{
   --ui-pane-tertiary:#1c1119;--ui-pane-secondary:#23161f;--ui-background:#2a1e26;--c-surface0:#32222c;--c-surface1:#3e2936;--c-surface2:#4f3143;
   --c-overlay0:#7d6976;--c-overlay1:#91828b;--c-overlay2:#ad8da2;--c-subtext0:#cbbcc5;--c-subtext1:#ddd0d9;--ui-text:#efe3eb;
   --ui-accent:#fd7ca5;--ui-tab-indicator:#d577be;--ui-link:#86c0cc;--ui-fill:#ba4889;--ui-on-fill:#ffffff;--ui-on-accent:#2a1e26;--ui-focus:#b28a93;
-  --serif:"Fraunces",ui-serif,Georgia,"Times New Roman",serif;
-  --display:"Manufacturing Consent","Fraunces",ui-serif,Georgia,serif;
+  --serif:"Gabriela",ui-serif,Georgia,"Times New Roman",serif;
+  --display:"Manufacturing Consent","Gabriela",ui-serif,Georgia,serif;
   --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
   color-scheme:dark;
@@ -28,7 +28,7 @@
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--ui-background);color:var(--ui-text);font:18px/1.6 var(--serif);font-variation-settings:"opsz" 18,"SOFT" 60}
+body{margin:0;background:var(--ui-background);color:var(--ui-text);font:18px/1.6 var(--serif)}
 @media (prefers-reduced-motion:no-preference){body,.steep{transition:background-color .5s ease,color .5s ease,border-color .5s ease}}
 a{color:var(--ui-link);text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
@@ -38,13 +38,14 @@ code,.mono{font-family:var(--mono);font-size:.84em}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 header.top{border-bottom:1px solid var(--c-surface1);background:var(--ui-pane-secondary)}
 header.top .wrap{display:flex;align-items:center;gap:20px;min-height:56px;flex-wrap:wrap}
-.brand{font-size:20px;font-weight:600;font-variation-settings:"opsz" 30,"SOFT" 100,"WONK" 1;color:var(--ui-text);text-decoration:none}
+.brand{font-size:20px;font-weight:600;color:var(--ui-text);text-decoration:none}
 nav.links{display:flex;gap:18px;font-size:15px;margin-left:auto;flex-wrap:wrap}
 nav.links a{color:var(--c-subtext1);text-decoration:none}
 nav.links a:hover{color:var(--ui-text)}
 .hero{padding:64px 0 40px}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px;align-items:center}
-h1{font-family:var(--display);font-size:clamp(64px,10.5vw,132px);line-height:.95;margin:0 0 18px;font-weight:400;letter-spacing:.01em;font-variation-settings:normal}
+.hero .hcopy{container-type:inline-size}
+h1{font-family:var(--display);font-size:clamp(56px,25cqi,132px);line-height:.95;margin:0 0 18px;font-weight:400;letter-spacing:.01em}
 h1 span{color:var(--ui-accent)}
 .lede{font-size:21px;line-height:1.5;color:var(--c-subtext1);margin:0 0 26px;max-width:32ch}
 .pick{margin:0 0 14px}
@@ -67,7 +68,7 @@ pre.code .hl{background:color-mix(in srgb,var(--c-surface1) 40%,transparent);dis
 .k{color:var(--syntax-keyword)}.fn{color:var(--syntax-function)}.ty{color:var(--syntax-type)}.ns{color:var(--syntax-namespace)}.co{color:var(--syntax-constant)}.nu{color:var(--syntax-number)}.st{color:var(--syntax-string)}.re{color:var(--syntax-regex)}.va{color:var(--syntax-variable)}.pr{color:var(--syntax-property)}.op{color:var(--syntax-operator)}.pu{color:var(--syntax-punctuation)}.cm{color:var(--syntax-comment);font-style:italic}.er{color:var(--syntax-error)}.lk{color:var(--syntax-link);text-decoration:underline}
 .cur{display:inline-block;width:2px;height:1.15em;vertical-align:-.22em;background:var(--ui-cursor)}
 section{padding:56px 0;border-top:1px solid var(--c-surface0)}
-h2{font-size:clamp(32px,4.5vw,46px);line-height:1.05;margin:0 0 12px;font-weight:600;font-variation-settings:"opsz" 96,"SOFT" 80,"WONK" 1;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.5vw,46px);line-height:1.05;margin:0 0 12px;font-weight:600;letter-spacing:-.01em}
 .intro{color:var(--c-subtext1);max-width:60ch;margin:0 0 28px}
 table.pal{width:100%;border-collapse:collapse;font-size:15px}
 table.pal th{text-align:left;font-weight:500;color:var(--c-subtext0);padding:8px 10px;border-bottom:1px solid var(--c-surface1);font-size:14px}
@@ -93,7 +94,7 @@ table.pal tr.copied td{background:color-mix(in srgb,var(--ui-accent) 14%,transpa
 .badge{display:inline-block;background:var(--ui-fill);color:var(--ui-on-fill);border-radius:999px;padding:1px 9px;font:12px var(--mono)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
 .card{background:var(--ui-pane-secondary);border:1px solid var(--c-surface1);border-radius:14px;padding:20px 22px}
-.card h3{margin:0 0 8px;font-size:23px;font-weight:600;font-variation-settings:"opsz" 48,"SOFT" 80}
+.card h3{margin:0 0 8px;font-size:23px;font-weight:600}
 .card p{margin:0 0 10px;font-size:16px;color:var(--c-subtext1)}
 .card pre{margin:0 0 10px;background:var(--ui-pane-tertiary);border-radius:8px;padding:9px 12px;font:12.5px/1.6 var(--mono);white-space:pre-wrap;word-break:break-all;color:var(--ui-text)}
 .card a{font-size:16px}
@@ -122,7 +123,7 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 
 <main id="top">
 <div class="hero"><div class="wrap">
-  <div>
+  <div class="hcopy">
     <h1>Dark<span>berry</span></h1>
     <p class="lede">A bog-witch berry theme for editors, terminals and browsers, steeped from a single can of dark purple paint.</p>
     <div class="pick"><p id="flabel">Flavour</p><div class="seg" id="flavours" role="group" aria-labelledby="flabel"></div></div>
@@ -145,7 +146,7 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 
 <section id="palette"><div class="wrap">
   <h2>The palette</h2>
-  <p class="intro">Fourteen accents, twelve neutrals, a jam for buttons and a tint for the active tab. The names follow Catppuccin's slots, so ports feel familiar. Click any colour to copy its hex.</p>
+  <p class="intro">Fourteen accents, twelve neutrals, a jam for buttons and a tint for the active tab. Click any colour to copy its hex.</p>
   <div class="scroll"><table class="pal" id="pal"></table></div>
 </div></section>
 
@@ -189,7 +190,6 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 <script>
 const D = __DATA__;
 const JOB = {blossom:"variables",petal:"functions, cursor",berry:"keywords, accent",plum:"types",cranberry:"errors",cherry:"soft emphasis",apricot:"peach highlights",honey:"numbers, warnings",gooseberry:"strings, success",juniper:"regex, info",frost:"links",bilberry:"marks",blueberry:"constants",lavender:"namespaces",jam:"buttons, badges",onjam:"text on buttons",tint:"active tab",text:"body text",subtext1:"secondary text",subtext0:"labels",overlay2:"comments",overlay1:"line numbers",overlay0:"inactive borders",surface2:"strong borders",surface1:"borders",surface0:"inputs",base:"background",mantle:"sidebars",crust:"title bars"};
-const CTP = {blossom:"Rosewater",petal:"Flamingo",berry:"Pink",plum:"Mauve",cranberry:"Red",cherry:"Maroon",apricot:"Peach",honey:"Yellow",gooseberry:"Green",juniper:"Teal",frost:"Sky",bilberry:"Sapphire",blueberry:"Blue",lavender:"Lavender",jam:"",onjam:"",tint:"",text:"Text",subtext1:"Subtext 1",subtext0:"Subtext 0",overlay2:"Overlay 2",overlay1:"Overlay 1",overlay0:"Overlay 0",surface2:"Surface 2",surface1:"Surface 1",surface0:"Surface 0",base:"Base",mantle:"Mantle",crust:"Crust"};
 const $ = (id) => document.getElementById(id);
 const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
 const prefersLight = matchMedia("(prefers-color-scheme: light)").matches;
@@ -218,7 +218,7 @@ function palette() {
   const rows = D.order.map((k, i) => {
     const h = cols[i], [r, g, b] = rgb(h), [H, S, L] = hsl(h);
     const head = i === 0 ? `<tr class="grp"><td colspan="6">Accents</td></tr>` : k === "jam" ? `<tr class="grp"><td colspan="6">Darkberry's own</td></tr>` : k === "text" ? `<tr class="grp"><td colspan="6">Neutrals</td></tr>` : "";
-    return head + `<tr><td><button class="sw" style="background:${h}" data-hex="${h}" aria-label="Copy ${k} ${h}"></button></td><td>${k[0].toUpperCase() + k.slice(1)}</td><td class="m">${h}</td><td class="m hide-s">rgb(${r}, ${g}, ${b})</td><td class="m hide-s">hsl(${H}, ${S}%, ${L}%)</td><td class="job">${JOB[k]}${CTP[k] ? `<span class="hide-s">, Catppuccin ${CTP[k]}</span>` : ""}</td></tr>`;
+    return head + `<tr><td><button class="sw" style="background:${h}" data-hex="${h}" aria-label="Copy ${k} ${h}"></button></td><td>${k[0].toUpperCase() + k.slice(1)}</td><td class="m">${h}</td><td class="m hide-s">rgb(${r}, ${g}, ${b})</td><td class="m hide-s">hsl(${H}, ${S}%, ${L}%)</td><td class="job">${JOB[k]}</td></tr>`;
   }).join("");
   $("pal").innerHTML = `<thead><tr><th><span class="sr" style="position:absolute;left:-9999px">Swatch</span></th><th>${D.flavours[fl].emoji} ${D.tints[tn].name} ${D.flavours[fl].name}</th><th>Hex</th><th class="hide-s">RGB</th><th class="hide-s">HSL</th><th>Used for</th></tr></thead><tbody>${rows}</tbody>`;
   $("pal").querySelectorAll("button.sw").forEach((b) => b.onclick = () => copy(b.dataset.hex, b.closest("tr")));
