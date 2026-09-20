@@ -4973,23 +4973,6 @@
   {
     "port": "micro",
     "key": "color-link",
-    "expr": "{ui.text}",
-    "roles": [
-      "ui.text"
-    ],
-    "palette": [
-      "text"
-    ],
-    "hex": {
-      "wisp": "#4f3143",
-      "fen": "#f2e6ee",
-      "mire": "#efe3eb",
-      "blackwater": "#ede1e9"
-    }
-  },
-  {
-    "port": "micro",
-    "key": "color-link",
     "expr": "{surface0}",
     "roles": [],
     "palette": [
