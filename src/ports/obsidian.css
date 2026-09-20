@@ -60,7 +60,7 @@
   --text-accent: {ui.accent};
   --text-accent-hover: {petal};
   --text-selection: {ui.selection};
-  --text-highlight-bg: {ui.mark1};
+  --text-highlight-bg: {surface1};
   --caret-color: {ui.cursor};
 
   --interactive-normal: {surface0};

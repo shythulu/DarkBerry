@@ -19,7 +19,8 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.border.inactive` | `overlay0` | `#ac93a2` | `#8f6e82` | `#7d6976` | `#6b5764` | same |
 | `ui.cursor` | `petal` | `#b7437d` | `#ffc4dd` | `#feafd4` | `#feafd4` | rosewater |
 | `ui.cursor.text` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
-| `ui.selection` | `mix(surface1,berry,0.25)` | `#d191b2` | `#905f75` | `#6e3e52` | `#66394c` | overlay2 at 20-30% opacity |
+| `ui.selection` | `mix(ui.background,berry,0.18)` | `#f4cce0` | `#6e4457` | `#502f3d` | `#452533` | overlay2 at 20-30% opacity |
+| `ui.line.current` | `mix(ui.background,surface0,0.35)` | `#f1e6ed` | `#543648` | `#2d1f28` | `#21151d` | no equivalent (editors tint the line themselves) |
 | `ui.link` | `frost` | `#1b778c` | `#a0d0da` | `#86c0cc` | `#86c0cc` | blue |
 | `ui.success` | `gooseberry` | `#377a37` | `#b7e6b7` | `#a3daa3` | `#a3daa3` | same |
 | `ui.warning` | `honey` | `#90670a` | `#f0d6a0` | `#e8c98a` | `#e8c98a` | same |
@@ -68,7 +69,8 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.focus` | `mix(cherry,overlay1,0.5)` | lavender | A soft berry focus ring stays visible without competing with the berry accent. |
 | `ui.border.active` | `ui.accent` | lavender | Follows ui.accent. |
 | `ui.cursor` | `petal` | rosewater | A bright rose cursor is easy to find on dark, wine-tinted backgrounds; blossom, the rosewater slot, is too dusty for that. |
-| `ui.selection` | `mix(surface1,berry,0.25)` | overlay2 at 20-30% opacity | Selections are tinted with berry so they read as part of the theme rather than as grey. |
+| `ui.selection` | `mix(ui.background,berry,0.18)` | overlay2 at 20-30% opacity | Selections are tinted with berry so they read as part of the theme rather than as grey. Mixed from the background rather than a surface step, so syntax colours on selected text keep most of their contrast. |
+| `ui.line.current` | `mix(ui.background,surface0,0.35)` | no equivalent (editors tint the line themselves) | The cursor line is a tint of the background rather than a surface step, so syntax colours on the highlighted row keep most of their contrast. |
 | `ui.link` | `frost` | blue | Links are teal-blue frost because blueberry already carries constants. |
 | `syntax.keyword` | `berry` | mauve | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.function` | `petal` | blue | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |

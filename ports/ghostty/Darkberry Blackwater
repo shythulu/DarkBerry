@@ -18,6 +18,6 @@ background = #1d121a
 foreground = #ede1e9
 cursor-color = #feafd4
 cursor-text = #12090f
-selection-background = #66394c
+selection-background = #452533
 selection-foreground = #ede1e9
 split-divider-color = #6b5764

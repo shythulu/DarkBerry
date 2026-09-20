@@ -36,9 +36,9 @@ color-link divider "#6b5764,#1d121a"
 # discarding any background given (internal/display/bufwindow.go). So this is
 # one colour, and it has to be a background: naming ui.text here painted the
 # cursor line near-white and left the text on it invisible.
-color-link cursor-line "#271a23"
+color-link cursor-line "#21151d"
 color-link color-column "#271a23"
-color-link selection "#ede1e9,#66394c"
+color-link selection "#ede1e9,#452533"
 color-link match-brace "#ba4889,#34222e"
 color-link hlsearch "#ffffff,#ba4889"
 color-link statusline "#ede1e9,#170d13"

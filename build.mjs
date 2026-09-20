@@ -206,6 +206,25 @@ for (const [role, min] of cRows) {
   checks += `| ${role} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(role)[0], x.resolve("ui.background")[0]); if (v < min) errors.push(`${x.f.name}: ${role} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
 }
 checks += `| ui.on.fill on ui.fill | 4.5 | ` + ctxs.map((x) => { const v = contrast(x.resolve("ui.on.fill")[0], x.resolve("ui.fill")[0]); if (v < 4.5) errors.push(`${x.f.name}: on.fill contrast ${v.toFixed(2)}`); return v.toFixed(2) + (v < 4.5 ? " ✗" : ""); }).join(" | ") + " |\n";
+// Backgrounds that code is drawn on. Syntax colours keep their own foreground on
+// these, so each one has to preserve a share of every syntax role's declared minimum.
+// A flat number cannot work here: in the light flavours syntax already sits near its
+// 4.5 on the plain background, so any tint pushes something under.
+for (const [name, r] of Object.entries(roleIndex)) if (r.carriesCode) {
+  const share = r.carriesCode;
+  checks += `| syntax on ${name} | ${(share * 100).toFixed(0)}% of each role\u2019s own minimum | ` + ctxs.map((x) => {
+    const bg = x.resolve(name)[0];
+    let worst = Infinity, who = "";
+    for (const [k, sr] of syntaxRoles) {
+      const need = (sr.minContrast ?? 4.5) * share;
+      const v = contrast(x.resolve(`syntax.${k}`)[0], bg);
+      if (v / need < worst / (worst === Infinity ? 1 : need)) {}
+      if (v < need && (worst === Infinity || v / need < worst)) { worst = v / need; who = k; }
+    }
+    if (worst !== Infinity) errors.push(`${x.f.name}: syntax.${who} on ${name} is ${(worst * 100).toFixed(0)}% of its minimum`);
+    return worst === Infinity ? "ok" : `${who} ${(worst * 100).toFixed(0)}% \u2717`;
+  }).join(" | ") + " |\n";
+}
 for (const [name, r] of Object.entries(roleIndex)) if (r.minContrastWith) {
   const [fg, min] = r.minContrastWith;
   checks += `| ${fg} on ${name} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(fg)[0], x.resolve(name)[0]); if (v < min) errors.push(`${x.f.name}: ${fg} on ${name} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";

@@ -31,6 +31,11 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | ui.text.muted | 4.5 | 6.79 | 6.15 | 8.79 | 9.48 |
 | ui.link | 4.5 | 4.77 | 6.76 | 7.95 | 9.04 |
 | ui.on.fill on ui.fill | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
+| syntax on ui.selection | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.line.current | 85% of each role’s own minimum | ok | ok | ok | ok |
+| ui.mark.text on ui.mark1 | 4.5 | 5.04 | 8.55 | 8.50 | 9.07 |
+| ui.mark.text on ui.mark2 | 4.5 | 4.65 | 9.35 | 10.05 | 10.73 |
+| ui.mark.text on ui.mark3 | 4.5 | 4.85 | 8.29 | 8.31 | 8.87 |
 | ui.on.tab.indicator on ui.tab.indicator | 4.5 | 4.75 | 5.55 | 6.56 | 7.46 |
 | ui.on.badge on ui.badge | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
 

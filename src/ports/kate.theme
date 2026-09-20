@@ -157,7 +157,7 @@
         "ModifiedLines": "{ui.warning}",
         "ReplaceHighlight": "{ui.fill}",
         "SavedLines": "{ui.success}",
-        "SearchHighlight": "{ui.mark1}",
+        "SearchHighlight": "{surface1}",
         "TextSelection": "{ui.selection}",
         "Separator": "{ui.border.inactive}",
         "SpellChecking": "{ui.error}",
