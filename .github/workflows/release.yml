@@ -71,6 +71,10 @@ jobs:
             echo
             echo "**Notepad++** — unzip \`darkberry-notepadpp-$version.zip\` into \`%APPDATA%\\\\Notepad++\\\\themes\\\\\`, restart, then Settings > Style Configurator."
             echo
+            echo "**lsd** — unzip \`darkberry-lsd-$version.zip\` and copy a flavour to \`~/.config/lsd/colors.yaml\`, with \`color: {theme: custom}\` in config.yaml."
+            echo
+            echo "**starship** — unzip \`darkberry-starship-$version.zip\` and copy a flavour over \`~/.config/starship.toml\`."
+            echo
             echo "**micro** — unzip \`darkberry-micro-$version.zip\` into \`~/.config/micro/colorschemes/\`, then \`set colorscheme darkberry-mire\`."
             echo
             echo "**Kate** — unzip \`darkberry-kate-$version.zip\` into \`~/.local/share/org.kde.syntax-highlighting/themes/\`, then Settings > Configure Kate > Fonts & Colors."

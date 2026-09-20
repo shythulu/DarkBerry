@@ -24,4 +24,9 @@ done
 (cd ports/kate && zip -qr "../../dist/darkberry-kate-$VERSION.zip" .)
 (cd ports/chrome && zip -qr "../../dist/darkberry-chrome-$VERSION.zip" .)
 (cd ports/notepadpp && zip -qr "../../dist/darkberry-notepadpp-$VERSION.zip" .)
+(cd ports/gtk && zip -qr "../../dist/darkberry-gtk-$VERSION.zip" .)
+(cd ports/darktable && zip -qr "../../dist/darkberry-darktable-$VERSION.zip" .)
+(cd ports/gimp && zip -qr "../../dist/darkberry-gimp-$VERSION.zip" .)
+(cd ports/starship && zip -qr "../../dist/darkberry-starship-$VERSION.zip" .)
+(cd ports/lsd && zip -qr "../../dist/darkberry-lsd-$VERSION.zip" .)
 ls dist
