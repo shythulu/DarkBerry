@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Darkberry Mire",
+  "version": "0.3.0",
+  "description": "Darkberry for Chrome and Edge. The main dark flavour: wine-dark mire with berry accents.",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [28, 17, 25],
+      "frame_inactive": [28, 17, 25],
+      "frame_incognito": [28, 17, 25],
+      "frame_incognito_inactive": [28, 17, 25],
+      "toolbar": [42, 30, 38],
+      "tab_text": [239, 227, 235],
+      "tab_background_text": [203, 188, 197],
+      "tab_background_text_inactive": [145, 130, 139],
+      "bookmark_text": [239, 227, 235],
+      "toolbar_button_icon": [203, 188, 197],
+      "omnibox_background": [50, 34, 44],
+      "omnibox_text": [239, 227, 235],
+      "ntp_background": [42, 30, 38],
+      "ntp_text": [239, 227, 235],
+      "ntp_link": [134, 192, 204],
+      "button_background": [62, 41, 54]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

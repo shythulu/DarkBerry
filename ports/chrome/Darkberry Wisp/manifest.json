@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Darkberry Wisp",
+  "version": "0.3.0",
+  "description": "Darkberry for Chrome and Edge. Light. Text is a violet-leaning cousin of the paint colour.",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [235, 218, 229],
+      "frame_inactive": [235, 218, 229],
+      "frame_incognito": [235, 218, 229],
+      "frame_incognito_inactive": [235, 218, 229],
+      "toolbar": [251, 244, 248],
+      "tab_text": [79, 49, 67],
+      "tab_background_text": [105, 78, 95],
+      "tab_background_text_inactive": [150, 125, 140],
+      "bookmark_text": [79, 49, 67],
+      "toolbar_button_icon": [105, 78, 95],
+      "omnibox_background": [223, 203, 216],
+      "omnibox_text": [79, 49, 67],
+      "ntp_background": [251, 244, 248],
+      "ntp_text": [79, 49, 67],
+      "ntp_link": [27, 119, 140],
+      "button_background": [208, 186, 200]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

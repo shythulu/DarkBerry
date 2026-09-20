@@ -1,0 +1,26 @@
+{
+  "id": "darkberry-mire",
+  "name": "Darkberry Mire",
+  "version": "0.3.0",
+  "author": "Darkberry",
+  "description": "The main dark flavour: wine-dark mire with berry accents.",
+  "isDark": true,
+  "colors": {
+    "bg": "#2a1e26",
+    "bg-secondary": "#23161f",
+    "bg-tertiary": "#1c1119",
+    "text": "#efe3eb",
+    "text-muted": "#cbbcc5",
+    "border": "#7d6976",
+    "primary": "#ba4889",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

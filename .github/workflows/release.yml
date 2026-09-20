@@ -69,6 +69,20 @@ jobs:
             echo
             echo "**Konsole** — unzip \`darkberry-konsole-$version.zip\` into \`~/.local/share/konsole/\`, then Settings > Edit Current Profile > Appearance."
             echo
+            echo "**Notepad++** — unzip \`darkberry-notepadpp-$version.zip\` into \`%APPDATA%\\\\Notepad++\\\\themes\\\\\`, restart, then Settings > Style Configurator."
+            echo
+            echo "**lsd** — unzip \`darkberry-lsd-$version.zip\` and copy a flavour to \`~/.config/lsd/colors.yaml\`, with \`color: {theme: custom}\` in config.yaml."
+            echo
+            echo "**starship** — unzip \`darkberry-starship-$version.zip\` and copy a flavour over \`~/.config/starship.toml\`."
+            echo
+            echo "**micro** — unzip \`darkberry-micro-$version.zip\` into \`~/.config/micro/colorschemes/\`, then \`set colorscheme darkberry-mire\`."
+            echo
+            echo "**Kate** — unzip \`darkberry-kate-$version.zip\` into \`~/.local/share/org.kde.syntax-highlighting/themes/\`, then Settings > Configure Kate > Fonts & Colors."
+            echo
+            echo "**Chrome and Edge** — unzip \`darkberry-chrome-$version.zip\`, then load a flavour folder via Developer mode at \`chrome://extensions\`."
+            echo
+            echo "**Nimbalyst** — unzip \`darkberry-nimbalyst-$version.zip\` into Nimbalyst's themes directory, then pick a flavour under Settings > Themes."
+            echo
             echo "**Firefox** — install from [addons.mozilla.org](https://addons.mozilla.org/firefox/search/?q=darkberry), which is where updates come from. The \`.xpi\` files attached here are the unsigned build output, kept for archival: release Firefox refuses unsigned add-ons, so they install only through \`about:debugging\` > Load Temporary Add-on, or on Developer Edition, Nightly or an unbranded Release/Beta build with \`xpinstall.signatures.required\` set to \`false\`."
           } > notes.md
 

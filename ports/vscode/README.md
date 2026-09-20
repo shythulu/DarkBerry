@@ -77,6 +77,73 @@ Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping the
 theme = light:Darkberry Wisp,dark:Darkberry Mire
 ```
 
+### GIMP, Inkscape and darktable
+
+These are GTK 3 applications, and each theme covers a different layer.
+
+`ports/gtk/` is a GTK 3 theme: copy a flavour folder into `~/.themes/` and select it as
+your GTK theme. That reaches Inkscape and any other GTK 3 application that follows the
+system theme. It recolours Adwaita rather than replacing it, so a few surfaces Adwaita
+hardcodes stay grey.
+
+`ports/darktable/` and `ports/gimp/` exist because those two ignore the system theme and
+use their own. Each file's header has its install path, both of which involve sitting the
+file beside the application's own CSS so the `@import` resolves.
+
+For colour work, keep the image surround neutral. A saturated frame shifts how you judge
+colour in the picture, which is why both applications ship greys. Darkberry uses its least
+saturated colours there, but a grey theme is still the right tool for grading.
+
+### Notepad++
+
+Copy a `.xml` file from `ports/notepadpp/` into `%APPDATA%\\Notepad++\\themes\\`, restart
+Notepad++, then Settings > Style Configurator and pick the flavour. Fonts are left blank so
+your own choice survives.
+
+### lsd
+
+Copy a flavour from `ports/lsd/` to `~/.config/lsd/colors.yaml`, and set
+`color: {theme: custom}` in `~/.config/lsd/config.yaml`.
+
+Written against lsd 1.2.0, whose theme struct rejects unknown keys. Notably `file-type` is
+skipped in that version, so a theme carrying it is discarded whole and lsd falls back to its
+defaults without saying so. Every key here is one lsd 1.2.0 accepts.
+
+### starship
+
+Copy a flavour from `ports/starship/` over `~/.config/starship.toml`. A two-line
+box-drawing prompt: row one is where you are, row two is the caret with the last command's
+result on the right margin. The frame is plain Unicode, so it survives without a Nerd Font;
+only the module icons need one.
+
+The palette inside each file is split on purpose. Entries named after a role take their
+colour from `src/roles.json`, so anything meaning "this failed" follows `ui.error`. Entries
+named after a palette colour cover what no role describes: a language's brand colour, or a
+git state that only needs to be distinguishable.
+
+### micro
+
+Copy a `.micro` file from `ports/micro/` into `~/.config/micro/colorschemes/`, then
+`set colorscheme darkberry-mire`.
+
+### Kate
+
+Copy a `.theme` file from `ports/kate/` into
+`~/.local/share/org.kde.syntax-highlighting/themes/`, then Settings > Configure Kate >
+Fonts & Colors. The surrounding window chrome comes from the KDE colour scheme below.
+
+### Chrome and Edge
+
+Unzip `ports/chrome/` somewhere permanent, open `chrome://extensions`, turn on Developer
+mode and use *Load unpacked* on a flavour's folder. Chromium themes install like extensions,
+so a folder loaded this way stays until you remove it.
+
+### Nimbalyst
+
+Copy a flavour's folder from `ports/nimbalyst/` into Nimbalyst's themes directory, then pick
+it under Settings > Themes. Each folder holds a `theme.json`, which is how Nimbalyst
+discovers a theme.
+
 ### KDE Plasma
 
 Copy the `.colors` files from `ports/kde/` into `~/.local/share/color-schemes/`, then pick a

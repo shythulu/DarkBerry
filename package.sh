@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 # Build everything, then package each port into dist/: the VS Code .vsix, a Firefox .xpi
-# per flavour, and zips of the kitty, Ghostty, Obsidian, KDE and Konsole theme files.
+# per flavour, and zips of the kitty, Ghostty, Obsidian, KDE, Konsole, Nimbalyst, micro, Kate,
+# Chrome and Notepad++ theme files.
 set -e
 cd "$(dirname "$0")"
 rm -f dist/*.vsix dist/*.xpi dist/*.zip
@@ -18,4 +19,14 @@ done
 (cd ports/obsidian && zip -qr "../../dist/darkberry-obsidian-$VERSION.zip" .)
 (cd ports/kde && zip -qr "../../dist/darkberry-kde-$VERSION.zip" .)
 (cd ports/konsole && zip -qr "../../dist/darkberry-konsole-$VERSION.zip" .)
+(cd ports/nimbalyst && zip -qr "../../dist/darkberry-nimbalyst-$VERSION.zip" .)
+(cd ports/micro && zip -qr "../../dist/darkberry-micro-$VERSION.zip" .)
+(cd ports/kate && zip -qr "../../dist/darkberry-kate-$VERSION.zip" .)
+(cd ports/chrome && zip -qr "../../dist/darkberry-chrome-$VERSION.zip" .)
+(cd ports/notepadpp && zip -qr "../../dist/darkberry-notepadpp-$VERSION.zip" .)
+(cd ports/gtk && zip -qr "../../dist/darkberry-gtk-$VERSION.zip" .)
+(cd ports/darktable && zip -qr "../../dist/darkberry-darktable-$VERSION.zip" .)
+(cd ports/gimp && zip -qr "../../dist/darkberry-gimp-$VERSION.zip" .)
+(cd ports/starship && zip -qr "../../dist/darkberry-starship-$VERSION.zip" .)
+(cd ports/lsd && zip -qr "../../dist/darkberry-lsd-$VERSION.zip" .)
 ls dist
