@@ -78,6 +78,8 @@ jobs:
             echo
             echo "**Ghostty** — unzip \`darkberry-ghostty-$version.zip\` into \`~/.config/ghostty/themes/\`, keeping the file names, then set \`theme = light:Darkberry Wisp,dark:Darkberry Mire\`."
             echo
+            echo "**Obsidian** — unzip \`darkberry-obsidian-$version.zip\` into your vault's \`.obsidian/themes/\`, then pick a flavour under Settings > Appearance > Themes."
+            echo
             if [ '${{ steps.sign.outputs.signed }}' = 'yes' ]; then
               echo "**Firefox** — open the \`.xpi\` for the flavour you want. These are signed by Mozilla for self-distribution."
             else

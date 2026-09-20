@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Darkberry, a bog-witch berry theme</title>
-<meta name="description" content="Darkberry is a berry colour theme in four flavours for VS Code, kitty, Ghostty and Firefox, rooted in Benjamin Moore Dark Purple.">
+<meta name="description" content="Darkberry is a berry colour theme in four flavours for VS Code, kitty, Ghostty, Firefox and Obsidian, rooted in Benjamin Moore Dark Purple.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫐</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,6 +245,7 @@ $("cards").innerHTML = [
   ["Ghostty", `Copy the theme files into <code>~/.config/ghostty/themes/</code> and follow your system's light and dark mode:`, `theme = light:${title("wisp")},dark:${title("mire")}`, `${tree}/ports/ghostty`],
   ["VS Code", `Install the <code>.vsix</code> through Extensions, then pick a flavour with the theme picker:`, `code --install-extension darkberry-theme.vsix`, `${tree}/ports/vscode`],
   ["Firefox", `Load a flavour's <code>manifest.json</code> from <code>about:debugging</code> to try it, or sign it through addons.mozilla.org to keep it.`, `about:debugging#/runtime/this-firefox`, `${tree}/ports/firefox`],
+  ["Obsidian", `Copy a flavour's folder into your vault's <code>.obsidian/themes/</code>, then pick it under Appearance:`, `.obsidian/themes/${title("mire")}/`, `${tree}/ports/obsidian`],
 ].map(([n, p, c, href]) => `<div class="card"><h3>${n}</h3><p>${p}</p><pre>${c}</pre><a href="${href}">${n} files on GitHub</a></div>`).join("");
 
 $("flavours").innerHTML = FLS.map((f) => `<button data-f="${f}" aria-pressed="false">${D.flavours[f].emoji} ${D.flavours[f].name}</button>`).join("");

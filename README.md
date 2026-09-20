@@ -77,6 +77,13 @@ Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping the
 theme = light:Darkberry Wisp,dark:Darkberry Mire
 ```
 
+### Obsidian
+
+Copy a flavour's folder from `ports/obsidian/` into your vault's `.obsidian/themes/`, keeping the
+folder name, then pick it under Settings > Appearance > Themes. Each flavour is its own theme
+and paints both of Obsidian's colour schemes, so the Appearance light/dark switch leaves the
+flavour alone.
+
 ### VS Code (and Cursor, VSCodium, Windsurf)
 
 Install `darkberry-theme-<version>.vsix` via Extensions > `...` > Install from VSIX, or `code --install-extension darkberry-theme-<version>.vsix`. Then pick a flavour with Ctrl+K Ctrl+T. To publish, set your own `publisher` in `build.mjs`.

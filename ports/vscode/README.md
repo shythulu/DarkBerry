@@ -54,6 +54,11 @@ Open `docs/studio.html` (regenerated on every build, so it always starts from th
 
 ## Install
 
+Every tagged release carries the packaged files for each app: a `.vsix` for VS Code, an
+`.xpi` per flavour for Firefox, and zips of the kitty and Ghostty configs. Download them
+from [Releases](https://github.com/shythulu/DarkBerry/releases), or build them yourself
+with `./package.sh`, which writes the same set into `dist/`.
+
 ### kitty
 
 Copy a file from `ports/kitty/` to `~/.config/kitty/themes/`, then run `kitty +kitten themes` and pick it. Or add to `kitty.conf`:
@@ -72,9 +77,16 @@ Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping the
 theme = light:Darkberry Wisp,dark:Darkberry Mire
 ```
 
+### Obsidian
+
+Copy a flavour's folder from `ports/obsidian/` into your vault's `.obsidian/themes/`, keeping the
+folder name, then pick it under Settings > Appearance > Themes. Each flavour is its own theme
+and paints both of Obsidian's colour schemes, so the Appearance light/dark switch leaves the
+flavour alone.
+
 ### VS Code (and Cursor, VSCodium, Windsurf)
 
-Install `dist/darkberry-theme-<version>.vsix` via Extensions > `...` > Install from VSIX, or `code --install-extension dist/darkberry-theme-<version>.vsix`. Then pick a flavour with Ctrl+K Ctrl+T. To publish, set your own `publisher` in `build.mjs`.
+Install `darkberry-theme-<version>.vsix` via Extensions > `...` > Install from VSIX, or `code --install-extension darkberry-theme-<version>.vsix`. Then pick a flavour with Ctrl+K Ctrl+T. To publish, set your own `publisher` in `build.mjs`.
 
 ### Firefox
 

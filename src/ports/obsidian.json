@@ -1,0 +1,7 @@
+{
+  "name": "%FULL%",
+  "version": "%VERSION%",
+  "minAppVersion": "1.0.0",
+  "author": "Darkberry",
+  "authorUrl": "https://github.com/shythulu/DarkBerry"
+}
