@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Darkberry Fen",
+  "version": "0.3.0",
+  "description": "Darkberry for Firefox. Soft dark. The background (#4c3342) is within a shade of the paint colour.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "darkberry-fen@darkberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#35212e",
+      "frame_inactive": "#35212e",
+      "tab_selected": "#4f3143",
+      "tab_text": "#f2e6ee",
+      "tab_background_text": "#ccbac5",
+      "tab_line": "#d690c3",
+      "tab_loading": "#fa99b4",
+      "toolbar": "#4f3143",
+      "toolbar_text": "#f2e6ee",
+      "bookmark_text": "#f2e6ee",
+      "icons": "#ccbac5",
+      "icons_attention": "#fa99b4",
+      "toolbar_field": "#5d3e51",
+      "toolbar_field_text": "#f2e6ee",
+      "toolbar_field_border": "#6c4c60",
+      "toolbar_field_focus": "#5d3e51",
+      "toolbar_field_text_focus": "#f2e6ee",
+      "toolbar_field_border_focus": "#fa99b4",
+      "toolbar_field_highlight": "#905f75",
+      "toolbar_field_highlight_text": "#f2e6ee",
+      "toolbar_top_separator": "#35212e",
+      "toolbar_bottom_separator": "#5d3e51",
+      "toolbar_vertical_separator": "#6c4c60",
+      "popup": "#402838",
+      "popup_text": "#f2e6ee",
+      "popup_border": "#6c4c60",
+      "popup_highlight": "#905f75",
+      "popup_highlight_text": "#f2e6ee",
+      "sidebar": "#402838",
+      "sidebar_text": "#f2e6ee",
+      "sidebar_border": "#5d3e51",
+      "sidebar_highlight": "#905f75",
+      "sidebar_highlight_text": "#f2e6ee",
+      "ntp_background": "#4f3143",
+      "ntp_text": "#f2e6ee",
+      "button_background_hover": "#5d3e51",
+      "button_background_active": "#6c4c60"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

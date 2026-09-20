@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Darkberry Blackwater",
+  "version": "0.3.0",
+  "description": "Darkberry for Firefox. Darkest. Deeper wine surfaces, same accents as Mire.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "darkberry-blackwater@darkberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#12090f",
+      "frame_inactive": "#12090f",
+      "tab_selected": "#1d121a",
+      "tab_text": "#ede1e9",
+      "tab_background_text": "#c6b7c0",
+      "tab_line": "#d577be",
+      "tab_loading": "#fd7ca5",
+      "toolbar": "#1d121a",
+      "toolbar_text": "#ede1e9",
+      "bookmark_text": "#ede1e9",
+      "icons": "#c6b7c0",
+      "icons_attention": "#fd7ca5",
+      "toolbar_field": "#271a23",
+      "toolbar_field_text": "#ede1e9",
+      "toolbar_field_border": "#34222e",
+      "toolbar_field_focus": "#271a23",
+      "toolbar_field_text_focus": "#ede1e9",
+      "toolbar_field_border_focus": "#fd7ca5",
+      "toolbar_field_highlight": "#66394c",
+      "toolbar_field_highlight_text": "#ede1e9",
+      "toolbar_top_separator": "#12090f",
+      "toolbar_bottom_separator": "#271a23",
+      "toolbar_vertical_separator": "#34222e",
+      "popup": "#170d13",
+      "popup_text": "#ede1e9",
+      "popup_border": "#34222e",
+      "popup_highlight": "#66394c",
+      "popup_highlight_text": "#ede1e9",
+      "sidebar": "#170d13",
+      "sidebar_text": "#ede1e9",
+      "sidebar_border": "#271a23",
+      "sidebar_highlight": "#66394c",
+      "sidebar_highlight_text": "#ede1e9",
+      "ntp_background": "#1d121a",
+      "ntp_text": "#ede1e9",
+      "button_background_hover": "#271a23",
+      "button_background_active": "#34222e"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

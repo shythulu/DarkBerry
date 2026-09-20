@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Darkberry Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2e7ee;--panel:#faf4f8;--sunk:#e9dbe4;--line:#cebbc7;--text:#4c3342;--muted:#66505e;--subtle:#937e8b;--accent:#d21570;--fill:#c34567;--onfill:#ffffff;--warn:#90670a;--bad:#cc3838;
+  --ui:"Recursive",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Recursive",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#22171e;--panel:#291f25;--sunk:#1b1218;--line:#3c2a35;--text:#eee4ea;--muted:#c9bdc4;--subtle:#8f838a;--accent:#fd7bb0;--fill:#c34567;--onfill:#ffffff;--warn:#e8c98a;--bad:#f06a6a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#22171e;--panel:#291f25;--sunk:#1b1218;--line:#3c2a35;--text:#eee4ea;--muted:#c9bdc4;--subtle:#8f838a;--accent:#fd7bb0;--fill:#c34567;--onfill:#ffffff;--warn:#e8c98a;--bad:#f06a6a;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 var(--ui);font-variation-settings:"CASL" .35}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:5px 11px;cursor:pointer}
+button:hover{border-color:var(--subtle)}
+button.primary{background:var(--fill);color:var(--onfill);border-color:var(--fill)}
+button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=range]{accent-color:var(--accent);width:100%}
+select,input[type=text],textarea{background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:5px 8px;width:100%}
+.mono{font-family:var(--mono);font-variation-settings:"MONO" 1,"CASL" 0}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:14px 20px;border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:21px;font-weight:650;font-variation-settings:"CASL" 1;letter-spacing:-.01em}
+header h1 small{font-weight:400;font-size:14px;color:var(--muted);margin-left:8px;font-variation-settings:"CASL" .35}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.spacer{flex:1}
+main{display:grid;grid-template-columns:250px minmax(0,1fr) 330px;min-height:calc(100vh - 66px)}
+aside,section.insp{padding:16px;overflow:auto}
+aside{border-right:1px solid var(--line)}
+section.insp{border-left:1px solid var(--line);background:var(--panel)}
+.stage{padding:18px;min-width:0}
+h2{font-size:14px;font-weight:600;margin:18px 0 8px;color:var(--muted);font-variation-settings:"CASL" .6}
+h2:first-child{margin-top:0}
+.chips{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.chip{aspect-ratio:1;border-radius:8px;border:1px solid var(--line);padding:0;position:relative}
+.chip[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:2px;box-shadow:none}
+.chip.mod::after,.rl.mod::after{content:"";position:absolute;top:3px;right:3px;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1.5px var(--panel)}
+.roles{display:flex;flex-direction:column;gap:2px}
+.rl{display:flex;align-items:center;gap:8px;border:0;background:none;padding:4px 6px;border-radius:6px;text-align:left;font-size:13px;position:relative}
+.rl:hover{background:var(--sunk)}
+.rl[aria-pressed="true"]{background:var(--sunk);box-shadow:inset 3px 0 0 var(--accent)}
+.rl i{width:14px;height:14px;border-radius:4px;flex:none;border:1px solid var(--line)}
+.rl span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hint{font-size:13px;color:var(--muted);margin:0 0 12px}
+.win{border-radius:10px;overflow:hidden;margin:0 0 16px;border:1px solid var(--line)}
+.lbl{font-size:12px;color:var(--muted);margin:0 0 5px}
+[data-src]{cursor:pointer}
+[data-src]:hover{outline:1.5px dashed var(--accent);outline-offset:-1.5px}
+.big{height:72px;border-radius:10px;border:1px solid var(--line);margin:0 0 10px}
+.dial{display:grid;grid-template-columns:78px 1fr 58px;gap:8px;align-items:center;font-size:13px;margin:0 0 6px}
+.dial output{text-align:right}
+.row{display:flex;gap:8px;align-items:center;margin:0 0 8px;flex-wrap:wrap}
+.fl4{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:0 0 12px}
+.fl4 div{border-radius:7px;height:34px;border:1px solid var(--line);font-size:11px;padding:2px 5px;display:flex;align-items:flex-end}
+.use{font-size:13px;margin:0;padding:0;list-style:none}
+.use li{padding:3px 0;border-bottom:1px solid var(--line)}
+.use details summary{cursor:pointer}
+.use .keys{font-size:12px;color:var(--muted);max-height:160px;overflow:auto;padding:4px 0 4px 12px}
+.checks li{font-size:13px;padding:4px 6px;border-radius:6px;margin:0 0 3px;list-style:none;cursor:pointer}
+.checks{padding:0;margin:0}
+.checks .bad{background:color-mix(in srgb,var(--bad) 16%,transparent)}
+.checks .warn{background:color-mix(in srgb,var(--warn) 16%,transparent)}
+.ok{font-size:13px;color:var(--muted)}
+.err{color:var(--bad);font-size:13px;margin:4px 0 8px}
+.export{margin:0 18px 18px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.export pre{background:var(--sunk);padding:12px;border-radius:8px;max-height:280px;overflow:auto;font-size:12.5px;margin:10px 0}
+.export ol{font-size:14px;padding-left:20px;margin:6px 0}
+code{font-family:var(--mono);font-variation-settings:"MONO" 1;font-size:.92em}
+@media (max-width:1150px){main{grid-template-columns:230px minmax(0,1fr)}section.insp{grid-column:1/-1;border-left:0;border-top:1px solid var(--line)}}
+@media (max-width:760px){main{grid-template-columns:minmax(0,1fr)}aside{border-right:0;border-bottom:1px solid var(--line)}.chips{grid-template-columns:repeat(9,1fr)}}
+@media (prefers-reduced-motion:no-preference){.chip,.rl{transition:background .12s}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Darkberry Studio <small id="ver"></small></h1>
+  <div class="seg" role="group" aria-label="Flavour" id="flavours"></div>
+  <div class="seg" role="group" aria-label="Palette edits apply to">
+    <button id="scopeOne" aria-pressed="true">Edit this flavour</button>
+    <button id="scopeAll" aria-pressed="false">Edit all flavours</button>
+  </div>
+  <div class="spacer"></div>
+  <button id="undoAll">Discard changes</button>
+  <button id="exportBtn" class="primary">Export patch</button>
+</header>
+<main>
+  <aside>
+    <h2>Palette</h2>
+    <p class="lbl">Neutrals</p><div class="chips" id="neutrals"></div>
+    <p class="lbl" style="margin-top:10px">Accents</p><div class="chips" id="accents"></div>
+    <h2>Roles</h2>
+    <input type="text" id="roleFilter" placeholder="Filter roles, e.g. tab" aria-label="Filter roles">
+    <div class="roles" id="roles" style="margin-top:8px"></div>
+  </aside>
+  <div class="stage">
+    <p class="hint">Click anything in the previews to see which role and palette colour it comes from.</p>
+    <div id="specimen"></div>
+  </div>
+  <section class="insp" aria-live="polite">
+    <div id="inspector"></div>
+    <h2>Checks</h2>
+    <ul class="checks" id="checks"></ul>
+  </section>
+</main>
+<div class="export" id="exportPanel" hidden></div>
+<script>
+window.DARKBERRY = __DATA__;
+</script>
+<script>
+__COLOR_LIB__
+</script>
+<script>
+(() => {
+const D = window.DARKBERRY;
+const FL = Object.keys(D.palette.flavours);
+const ORIG = JSON.parse(JSON.stringify(D.palette.flavours));
+const NEUT = D.palette.neutralOrder.slice().reverse();
+const ACC = D.palette.accentOrder;
+const ROLE_GROUPS = ["ui", "syntax", "terminal"];
+const roleIndex = {};
+for (const g of ROLE_GROUPS) for (const [k, v] of Object.entries(D.roles[g])) if (!k.startsWith("$")) roleIndex[`${g}.${k}`] = v;
+const ORIG_ROLES = Object.fromEntries(Object.entries(roleIndex).map(([k, v]) => [k, JSON.stringify(v.value)]));
+const DEFAULT_TABLINE = D.tabLine || "none";
+
+let S = { flavour: FL.includes("mire") ? "mire" : FL[0], scope: "one", sel: { kind: "role", name: "ui.tab.indicator" }, palette: {}, roles: {}, why: {}, tabLine: DEFAULT_TABLINE, filter: "" };
+try { const saved = JSON.parse(localStorage.getItem("darkberry-studio") || "null"); if (saved && saved.v === D.version) S = { ...S, ...saved.s }; } catch (e) {}
+const save = () => { try { localStorage.setItem("darkberry-studio", JSON.stringify({ v: D.version, s: S })); } catch (e) {} };
+
+const col = (fl, name) => (S.palette[fl] && S.palette[fl][name]) || ORIG[fl].colors[name];
+const roleVal = (name) => (name in S.roles ? S.roles[name] : roleIndex[name].value);
+
+function ansiFor(fl) {
+  const dark = ORIG[fl].dark, A = D.roles.ansi, src = [];
+  src[0] = dark ? "surface1" : "subtext1"; src[8] = dark ? "surface2" : "subtext0";
+  src[7] = dark ? "subtext0" : "surface2"; src[15] = dark ? "subtext1" : "surface1";
+  ["red", "green", "yellow", "blue", "magenta", "cyan"].forEach((n, i) => { src[i + 1] = A[n]; src[i + 9] = A[n]; });
+  return src.map((n, i) => ({ src: n, hex: i >= 9 && i <= 14 ? ansiBright(col(fl, n), dark) : col(fl, n) }));
+}
+function resolve(expr, fl, tr = { roles: [], palette: new Set() }, depth = 0) {
+  if (depth > 14) throw new Error("cycle");
+  const m = /^mix\(([\w.]+),([\w.]+),([\d.]+)\)$/.exec(expr);
+  if (m) return [mix(resolve(m[1], fl, tr, depth + 1)[0], resolve(m[2], fl, tr, depth + 1)[0], +m[3]), tr];
+  if (/^ansi\.\d+$/.test(expr)) { const a = ansiFor(fl)[+expr.split(".")[1]]; tr.roles.push(expr); tr.palette.add(a.src); return [a.hex, tr]; }
+  if (roleIndex[expr]) { tr.roles.push(expr); let v = roleVal(expr); if (v && typeof v === "object") v = ORIG[fl].dark ? v.dark : v.light; return resolve(v, fl, tr, depth + 1); }
+  if (expr in ORIG[fl].colors) { tr.palette.add(expr); return [col(fl, expr), tr]; }
+  throw new Error(`unknown ${expr}`);
+}
+const R = (expr, fl = S.flavour) => { try { return resolve(expr, fl)[0]; } catch (e) { return "#ff00ff"; } };
+
+// bindings: [port, key, expr]
+const bind = {};
+for (const [port, key, expr] of D.bindings) { (bind[port] ??= {})[key] = expr; }
+function keyExpr(port, key) {
+  if (port === "vscode" && S.tabLine !== "none") {
+    const on = S.tabLine === "top" ? "tab.activeBorderTop" : "tab.activeBorder";
+    if (key === on) return "{ui.tab.indicator}";
+    if (key === "tab.activeBorderTop" || key === "tab.activeBorder") return "{ui.tab.indicator}00";
+  }
+  return (bind[port] && (bind[port][`${key} (override)`] || bind[port][key])) || null;
+}
+function K(port, key, fl = S.flavour) {
+  const e = keyExpr(port, key); if (!e) return "transparent";
+  const m = /^\{([^}]+)\}([0-9a-f]{2})?$/.exec(e); if (!m) return "transparent";
+  return R(m[1], fl) + (m[2] || "");
+}
+const srcOf = (port, key) => { const e = keyExpr(port, key); const m = e && /^\{([^}]+)\}/.exec(e); return m ? m[1] : ""; };
+const attr = (port, key) => `data-src="${srcOf(port, key)}" title="${port}: ${key}"`;
+const tok = (role, text, st = "") => `<span data-src="${role}" title="${role}" style="color:${R(role)};${st}">${text}</span>`;
+
+// ---------- chrome follows the theme it's editing ----------
+function chrome() {
+  const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  const fl = dark ? (FL.includes("mire") ? "mire" : FL.find((f) => ORIG[f].dark)) : (FL.find((f) => !ORIG[f].dark) || FL[0]);
+  const s = document.documentElement.style, c = (n) => col(fl, n);
+  s.setProperty("--bg", c("mantle")); s.setProperty("--panel", c("base")); s.setProperty("--sunk", c("crust"));
+  s.setProperty("--line", c("surface1")); s.setProperty("--text", c("text")); s.setProperty("--muted", c("subtext0"));
+  s.setProperty("--subtle", c("overlay1")); s.setProperty("--accent", R("ui.accent", fl)); s.setProperty("--fill", R("ui.fill", fl));
+  s.setProperty("--onfill", R("ui.on.fill", fl)); s.setProperty("--warn", R("ui.warning", fl)); s.setProperty("--bad", R("ui.error", fl));
+}
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => { chrome(); });
+
+// ---------- specimen ----------
+function specimen() {
+  const V = (k) => K("vscode", k), a = ansiFor(S.flavour).map((x) => x.hex);
+  const tabs = ["jam.ts", "pantry.ts", "lid.ts"].map((t, i) => {
+    const act = i === 0, bt = act && S.tabLine === "top" ? `border-top:2px solid ${V("tab.activeBorderTop")};` : "", bb = act && S.tabLine === "bottom" ? `border-bottom:2px solid ${V("tab.activeBorder")};` : "";
+    return `<span ${attr("vscode", act ? "tab.activeBackground" : "tab.inactiveBackground")} style="padding:7px 14px;font-size:12.5px;background:${V(act ? "tab.activeBackground" : "tab.inactiveBackground")};color:${V(act ? "tab.activeForeground" : "tab.inactiveForeground")};border-right:1px solid ${V("tab.border")};${bt}${bb}" class="mono">${t}</span>`;
+  }).join("");
+  const badge = (n) => `<span ${attr("vscode", "activityBarBadge.background")} style="position:absolute;right:-7px;bottom:-5px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;font-size:10.5px;display:flex;align-items:center;justify-content:center;background:${V("activityBarBadge.background")};color:${V("activityBarBadge.foreground")}" class="mono">${n}</span>`;
+  const ico = (on, n) => `<span ${attr("vscode", on ? "activityBar.foreground" : "activityBar.inactiveForeground")} style="position:relative;display:block;width:22px;height:22px;border-radius:5px;border:2px solid ${V(on ? "activityBar.foreground" : "activityBar.inactiveForeground")}">${n ? badge(n) : ""}</span>`;
+  const ln = (n, act) => `<span ${attr("vscode", act ? "editorLineNumber.activeForeground" : "editorLineNumber.foreground")} style="color:${V(act ? "editorLineNumber.activeForeground" : "editorLineNumber.foreground")};display:inline-block;width:2.4em;text-align:right;margin-right:1.2em">${n}</span>`;
+  const p = (t) => tok("syntax.punctuation", t);
+  const lines = [
+    tok("syntax.comment", "// seal a jar of whatever is ripe", "font-style:italic"),
+    `${tok("syntax.keyword", "import")} ${p("*")} ${tok("syntax.keyword", "as")} ${tok("syntax.namespace", "Orchard")} ${tok("syntax.keyword", "from")} ${tok("syntax.string", '"orchard"')}${p(";")}`,
+    `${tok("syntax.keyword", "export function")} ${tok("syntax.function", "sealJar")}${p("(")}${tok("syntax.variable", "jam")}${p(":")} ${tok("syntax.type", "Preserve")}${p("):")} ${tok("syntax.type", "Jar")} ${p("{")}`,
+    `  ${tok("syntax.keyword", "const")} ${tok("syntax.variable", "lid")} ${tok("syntax.operator", "=")} ${tok("syntax.namespace", "Orchard")}${p(".")}${tok("syntax.function", "findLid")}${p("(")}${tok("syntax.variable", "jam")}${p(".")}${tok("syntax.property", "size")}${p(");")}`,
+    `  ${tok("syntax.keyword", "if")} ${p("(!")}${tok("syntax.variable", "lid")}${p(")")} ${tok("syntax.error", "throw")} ${tok("syntax.keyword", "new")} ${tok("syntax.type", "PantryError")}${p("(")}${tok("syntax.string", '"no lid"')}${p(");")}`,
+    `  ${tok("syntax.keyword", "return")} ${tok("syntax.variable", "jam")}${p(".")}${tok("syntax.function", "replace")}${p("(")}${tok("syntax.regex", "/ber+y/g")}${p(",")} ${tok("syntax.constant", "MAX_SUGAR")}${p(",")} ${tok("syntax.number", "0.72")}${p(");")}`,
+    `${p("}")}  ${tok("syntax.comment", "// docs:", "font-style:italic")} ${tok("syntax.link", "https://jam.dev", "text-decoration:underline")}`,
+  ];
+  const code = lines.map((l, i) => `<div ${i === 3 ? `${attr("vscode", "editor.lineHighlightBackground")} style="background:${V("editor.lineHighlightBackground")}"` : ""}>${ln(i + 1, i === 3)}${l}${i === 3 ? `<span ${attr("vscode", "editorCursor.foreground")} style="display:inline-block;width:2px;height:1.15em;vertical-align:-.2em;background:${V("editorCursor.foreground")};margin-left:1px"></span>` : ""}</div>`).join("");
+  const vscode = `<p class="lbl">VS Code</p><div class="win" style="background:${V("titleBar.activeBackground")}">
+  <div ${attr("vscode", "titleBar.activeBackground")} style="height:26px;font-size:12px;display:flex;align-items:center;justify-content:center;color:${V("titleBar.activeForeground")}">darkberry — jam.ts</div>
+  <div style="display:grid;grid-template-columns:46px 170px minmax(0,1fr)">
+   <div ${attr("vscode", "activityBar.background")} style="background:${V("activityBar.background")};display:flex;flex-direction:column;align-items:center;gap:18px;padding:12px 0;border-right:1px solid ${V("activityBar.border")}">${ico(true, 3)}${ico(false)}${ico(false, 12)}</div>
+   <div ${attr("vscode", "sideBar.background")} style="background:${V("sideBar.background")};color:${V("sideBar.foreground")};font-size:12.5px;padding:8px 0">
+    <div style="padding:0 12px 6px;color:${V("sideBarSectionHeader.foreground")}">pantry</div>
+    <div ${attr("vscode", "list.activeSelectionBackground")} style="padding:3px 14px;background:${V("list.activeSelectionBackground")};color:${V("list.activeSelectionForeground")}">jam.ts</div>
+    <div ${attr("vscode", "list.hoverBackground")} style="padding:3px 14px;background:${V("list.hoverBackground")}">pantry.ts</div>
+    <div style="padding:3px 14px"><span ${attr("vscode", "gitDecoration.modifiedResourceForeground")} style="color:${V("gitDecoration.modifiedResourceForeground")}">lid.ts M</span></div>
+    <div style="padding:3px 14px"><span ${attr("vscode", "gitDecoration.untrackedResourceForeground")} style="color:${V("gitDecoration.untrackedResourceForeground")}">notes.md U</span></div>
+    <div style="padding:10px 12px 0"><span ${attr("vscode", "button.background")} style="display:inline-block;padding:4px 10px;border-radius:4px;background:${V("button.background")};color:${V("button.foreground")}">Commit</span></div>
+   </div>
+   <div style="min-width:0">
+    <div ${attr("vscode", "editorGroupHeader.tabsBackground")} style="display:flex;background:${V("editorGroupHeader.tabsBackground")};overflow:hidden">${tabs}</div>
+    <div ${attr("vscode", "editor.background")} class="mono" style="background:${V("editor.background")};color:${V("editor.foreground")};font-size:12.5px;line-height:1.7;padding:8px 0;white-space:pre;overflow-x:auto">${code}</div>
+   </div>
+  </div>
+  <div ${attr("vscode", "statusBar.background")} style="display:flex;font-size:11.5px;background:${V("statusBar.background")};color:${V("statusBar.foreground")}"><span ${attr("vscode", "statusBarItem.remoteBackground")} style="padding:3px 10px;background:${V("statusBarItem.remoteBackground")};color:${V("statusBarItem.remoteForeground")}">WSL</span><span style="padding:3px 10px">main</span><span style="padding:3px 10px"><span ${attr("vscode", "editorError.foreground")} style="color:${V("editorError.foreground")}">⊗ 1</span> <span ${attr("vscode", "editorWarning.foreground")} style="color:${V("editorWarning.foreground")}">⚠ 2</span></span></div>
+ </div>`;
+  const kk = (k) => K("kitty", k);
+  const term = `<p class="lbl">kitty and Ghostty</p><div class="win" style="background:${kk("background")}">
+  <div ${attr("kitty", "tab_bar_background")} class="mono" style="display:flex;font-size:12px;background:${kk("tab_bar_background")}"><span ${attr("kitty", "active_tab_background")} style="padding:3px 12px;background:${kk("active_tab_background")};color:${kk("active_tab_foreground")}">1 jam</span><span ${attr("kitty", "inactive_tab_background")} style="padding:3px 12px;background:${kk("inactive_tab_background")};color:${kk("inactive_tab_foreground")}">2 pantry</span><span ${attr("kitty", "inactive_tab_background")} style="padding:3px 12px;background:${kk("inactive_tab_background")};color:${kk("inactive_tab_foreground")}">3 logs</span></div>
+  <div ${attr("kitty", "background")} class="mono" style="padding:10px 14px;font-size:12.5px;line-height:1.7;color:${kk("foreground")};white-space:pre;overflow-x:auto"><span data-src="ansi.2" style="color:${a[2]}">➜</span> <span data-src="ansi.4" style="color:${a[4]}">~/jam</span> <span data-src="ansi.5" style="color:${a[5]}">git:(main)</span> ls -la
+<span data-src="ansi.12" style="color:${a[12]}">recipes/</span>  <span data-src="ansi.10" style="color:${a[10]}">seal.sh</span>  notes.md  <span data-src="ansi.1" style="color:${a[1]}">broken.lnk</span>  <span data-src="ansi.3" style="color:${a[3]}">TODO</span>  <span data-src="ansi.6" style="color:${a[6]}">.cache</span>
+<span ${attr("kitty", "url_color")} style="color:${kk("url_color")};text-decoration:underline">https://jam.dev</span>  <span ${attr("kitty", "selection_background")} style="background:${kk("selection_background")};color:${kk("selection_foreground")}">selected text</span>  <span ${attr("kitty", "cursor")} style="background:${kk("cursor")};color:${kk("cursor_text_color")}">█</span>
+<span style="display:inline-flex;gap:3px">${a.slice(0, 8).map((c, i) => `<i data-src="ansi.${i}" title="ansi ${i}" style="display:inline-block;width:24px;height:14px;border-radius:3px;background:${c}"></i>`).join("")}</span>
+<span style="display:inline-flex;gap:3px">${a.slice(8, 16).map((c, i) => `<i data-src="ansi.${i + 8}" title="ansi ${i + 8}" style="display:inline-block;width:24px;height:14px;border-radius:3px;background:${c}"></i>`).join("")}</span></div></div>`;
+  const F = (k) => K("firefox", k);
+  const fx = `<p class="lbl">Firefox</p><div class="win" ${attr("firefox", "frame")} style="background:${F("frame")}">
+  <div style="display:flex;gap:2px;padding:6px 8px 0"><span ${attr("firefox", "tab_selected")} style="padding:7px 16px;font-size:12.5px;border-radius:7px 7px 0 0;background:${F("tab_selected")};color:${F("tab_text")};box-shadow:inset 0 2px 0 ${F("tab_line")}">Jam recipes</span><span ${attr("firefox", "tab_background_text")} style="padding:7px 16px;font-size:12.5px;color:${F("tab_background_text")}">Pantry</span><span style="padding:7px 16px;font-size:12.5px;color:${F("tab_background_text")}">Orchard</span></div>
+  <div ${attr("firefox", "toolbar")} style="display:flex;align-items:center;gap:10px;padding:7px 10px;background:${F("toolbar")}"><span ${attr("firefox", "icons")} style="color:${F("icons")}">◀ ▶</span><span ${attr("firefox", "toolbar_field_focus")} style="flex:1;font-size:12.5px;padding:4px 10px;border-radius:7px;background:${F("toolbar_field_focus")};color:${F("toolbar_field_text_focus")};border:1.5px solid ${F("toolbar_field_border_focus")}">https://jam.dev/<span ${attr("firefox", "toolbar_field_highlight")} style="background:${F("toolbar_field_highlight")};color:${F("toolbar_field_highlight_text")}">recipes</span></span><span ${attr("firefox", "icons_attention")} style="color:${F("icons_attention")}">★</span></div>
+  <div ${attr("firefox", "ntp_background")} style="background:${F("ntp_background")};color:${F("ntp_text")};padding:12px 14px;font-size:13px;display:flex;gap:14px"><div ${attr("firefox", "popup")} style="background:${F("popup")};color:${F("popup_text")};border:1px solid ${F("popup_border")};border-radius:8px;padding:4px;min-width:170px"><div style="padding:4px 8px">Open in new tab</div><div ${attr("firefox", "popup_highlight")} style="padding:4px 8px;border-radius:5px;background:${F("popup_highlight")};color:${F("popup_highlight_text")}">Bookmark page</div><div style="padding:4px 8px">Copy link</div></div><div style="align-self:center;color:${F("ntp_text")}">New tab page</div></div></div>`;
+  const el = document.getElementById("specimen");
+  el.innerHTML = vscode + term + fx;
+  el.querySelectorAll("[data-src]").forEach((n) => n.addEventListener("click", (e) => {
+    e.stopPropagation(); const s = n.dataset.src; if (!s) return;
+    if (roleIndex[s] || s.startsWith("ansi.")) select(s.startsWith("ansi.") ? { kind: "palette", name: ansiFor(S.flavour)[+s.split(".")[1]].src, via: s } : { kind: "role", name: s });
+    else if (/^mix\(/.test(s)) select({ kind: "mix", name: s });
+    else select({ kind: "palette", name: s });
+  }));
+}
+
+// ---------- sidebar ----------
+function sidebar() {
+  const chip = (n) => `<button class="chip${isModPal(n) ? " mod" : ""}" aria-pressed="${S.sel.kind === "palette" && S.sel.name === n}" data-p="${n}" title="${n} ${col(S.flavour, n)}" aria-label="${n}" style="background:${col(S.flavour, n)}"></button>`;
+  document.getElementById("neutrals").innerHTML = NEUT.map(chip).join("");
+  document.getElementById("accents").innerHTML = ACC.map(chip).join("");
+  document.querySelectorAll("[data-p]").forEach((b) => b.onclick = () => select({ kind: "palette", name: b.dataset.p }));
+  const f = S.filter.toLowerCase();
+  document.getElementById("roles").innerHTML = Object.keys(roleIndex).filter((r) => !f || r.toLowerCase().includes(f)).map((r) =>
+    `<button class="rl${r in S.roles && JSON.stringify(S.roles[r]) !== ORIG_ROLES[r] ? " mod" : ""}" aria-pressed="${S.sel.kind === "role" && S.sel.name === r}" data-r="${r}"><i style="background:${R(r)}"></i><span>${r}</span></button>`).join("");
+  document.querySelectorAll("[data-r]").forEach((b) => b.onclick = () => select({ kind: "role", name: b.dataset.r }));
+}
+const isModPal = (n) => FL.some((fl) => S.palette[fl] && S.palette[fl][n] && S.palette[fl][n] !== ORIG[fl].colors[n]);
+
+// ---------- usage ----------
+function usageOf(target, isPalette) {
+  const ports = {};
+  for (const [port, keys] of Object.entries(bind)) for (const key of Object.keys(keys)) {
+    const e = keyExpr(port, key.replace(" (override)", "")); if (!e) continue;
+    const m = /^\{([^}]+)\}/.exec(e); if (!m) continue;
+    let tr; try { tr = resolve(m[1], S.flavour)[1]; } catch (x) { continue; }
+    if (isPalette ? tr.palette.has(target) : tr.roles.includes(target)) (ports[port] ??= new Set()).add(key.replace(" (override)", ""));
+  }
+  const viaRoles = Object.keys(roleIndex).filter((r) => { try { const tr = resolve(r, S.flavour)[1]; return isPalette ? tr.palette.has(target) : tr.roles.includes(target) && r !== target; } catch (x) { return false; } });
+  return { ports, viaRoles };
+}
+const NAMES = { vscode: "VS Code", kitty: "kitty", ghostty: "Ghostty", firefox: "Firefox" };
+function usageHTML(u) {
+  const rows = Object.entries(u.ports).map(([p, keys]) => `<li><details><summary>${NAMES[p]}: ${keys.size} setting${keys.size === 1 ? "" : "s"}</summary><div class="keys mono">${[...keys].sort().join("<br>")}</div></details></li>`).join("");
+  return `<ul class="use">${rows || "<li>Not used directly by any app.</li>"}</ul>${u.viaRoles.length ? `<p class="lbl" style="margin-top:8px">Also feeds: ${u.viaRoles.map((r) => `<a href="#" data-go="${r}">${r}</a>`).join(", ")}</p>` : ""}`;
+}
+
+// ---------- inspector ----------
+const fl4 = (fn) => `<div class="fl4">${FL.map((f) => { const h = fn(f); return `<div style="background:${h};color:${contrast(h, "#000000") > contrast(h, "#ffffff") ? "#000" : "#fff"}" title="${ORIG[f].name} ${h}"><span class="mono">${ORIG[f].name.slice(0, 4)}</span></div>`; }).join("")}</div>`;
+function inspector() {
+  const el = document.getElementById("inspector"), sel = S.sel;
+  if (sel.kind === "mix") { el.innerHTML = `<h2>Mixed colour</h2><p class="hint">This setting uses <code>${sel.name}</code> directly in the app template, not a shared role. Change it by editing the palette colours it mixes.</p>`; return; }
+  if (sel.kind === "palette") {
+    const n = sel.name, hex = col(S.flavour, n), [L, C, H] = toOklch(hex), hdeg = ((H * 180 / Math.PI) + 360) % 360;
+    el.innerHTML = `<h2>${n}${sel.via ? ` <span class="lbl">(${sel.via})</span>` : ""}</h2>
+      <div class="big" style="background:${hex}"></div>
+      <div class="row"><input type="text" id="hex" class="mono" value="${hex}" aria-label="Hex value" style="width:110px"><button id="revertP">Revert</button></div>
+      <p class="lbl">${S.scope === "all" ? "Editing every flavour together. Lightness moves away from each flavour's background, so Wisp darkens while the dark flavours lighten." : `Editing ${ORIG[S.flavour].name} only.`}</p>
+      <div class="dial"><label for="dL">Lightness</label><input type="range" id="dL" min="0" max="1" step="0.005" value="${L.toFixed(3)}"><output class="mono">${(L * 100).toFixed(1)}</output></div>
+      <div class="dial"><label for="dC">Chroma</label><input type="range" id="dC" min="0" max="0.37" step="0.002" value="${C.toFixed(3)}"><output class="mono">${C.toFixed(3)}</output></div>
+      <div class="dial"><label for="dH">Hue</label><input type="range" id="dH" min="0" max="360" step="1" value="${hdeg.toFixed(0)}"><output class="mono">${hdeg.toFixed(0)}°</output></div>
+      <p class="lbl">All flavours</p>${fl4((f) => col(f, n))}
+      <h2>Used by</h2>${usageHTML(usageOf(n, true))}`;
+    const apply = () => setPalette(n, fromOklch(+dL.value, +dC.value, (+dH.value) * Math.PI / 180));
+    ["dL", "dC", "dH"].forEach((id) => document.getElementById(id).oninput = apply);
+    document.getElementById("hex").onchange = (e) => { const v = e.target.value.trim(); if (/^#[0-9a-f]{6}$/i.test(v)) { e.target.setCustomValidity(""); setPalette(n, v.toLowerCase(), true); } else { e.target.setCustomValidity("Use #rrggbb"); e.target.reportValidity(); } };
+    document.getElementById("revertP").onclick = () => { for (const f of FL) if (S.palette[f]) delete S.palette[f][n]; changed(); };
+  } else {
+    const r = sel.name, def = roleIndex[r], cur = roleVal(r), str = typeof cur === "string" ? cur : null;
+    const mm = str && /^mix\(([\w.]+),([\w.]+),([\d.]+)\)$/.exec(str);
+    const A = mm ? mm[1] : str, B = mm ? mm[2] : "", T = mm ? +mm[3] : 0.5;
+    const opts = (v) => `<optgroup label="Palette">${[...ACC, ...NEUT].map((p) => `<option ${p === v ? "selected" : ""}>${p}</option>`).join("")}</optgroup><optgroup label="Roles">${Object.keys(roleIndex).filter((x) => x !== r).map((x) => `<option ${x === v ? "selected" : ""}>${x}</option>`).join("")}</optgroup>`;
+    const aligned = def.catppuccin === "=";
+    const deviates = aligned && JSON.stringify(cur) !== ORIG_ROLES[r];
+    el.innerHTML = `<h2>${r}</h2>
+      <div class="big" style="background:${R(r)}"></div>
+      ${str === null ? `<p class="hint">This role uses different colours for dark and light flavours (<code>${JSON.stringify(cur)}</code>).</p>` : `
+      <label class="lbl" for="rA">Colour</label><select id="rA">${opts(A)}</select>
+      <div class="row" style="margin-top:8px"><label style="font-size:13px"><input type="checkbox" id="rMix" ${mm ? "checked" : ""}> Mix with another colour</label></div>
+      <div id="mixBox" ${mm ? "" : "hidden"}><select id="rB">${opts(B || "base")}</select>
+      <div class="dial" style="margin-top:8px"><label for="rT">Amount</label><input type="range" id="rT" min="0.05" max="0.95" step="0.05" value="${T}"><output class="mono">${Math.round(T * 100)}%</output></div></div>
+      <p class="lbl">Value: <code>${str}</code></p>`}
+      ${r === "ui.tab.indicator" ? `<label class="lbl" for="tabLine">VS Code tab line</label><select id="tabLine">${[["none", "None"], ["top", "Top edge"], ["bottom", "Bottom edge"]].map(([v, l]) => `<option value="${v}" ${S.tabLine === v ? "selected" : ""}>${l}</option>`).join("")}</select>` : ""}
+      <p class="lbl" style="margin-top:10px">All flavours</p>${fl4((f) => R(r, f))}
+      <p class="lbl">Catppuccin: ${aligned ? "same as Darkberry" : def.catppuccin || "not specified"}${def.why && !deviates ? `. ${def.why.includes(".$why") ? D.roles.syntax.$why : def.why}` : ""}</p>
+      ${deviates || (!aligned && def.catppuccin && JSON.stringify(cur) !== ORIG_ROLES[r]) ? `<label class="lbl" for="why">${deviates ? "This role matched Catppuccin. Say why it should differ (required to export)." : "Update the reason if it changed (optional)."}</label><textarea id="why" rows="2">${S.why[r] || ""}</textarea>${deviates && !S.why[r] ? `<p class="err">A reason is needed before this can be exported.</p>` : ""}` : ""}
+      <div class="row" style="margin-top:8px"><button id="revertR">Revert role</button></div>
+      <h2>Used by</h2>${usageHTML(usageOf(r, false))}`;
+    if (str !== null) {
+      const set = () => { const a = rA.value; setRole(r, rMix.checked ? `mix(${a},${rB.value},${(+rT.value).toFixed(2)})` : a); };
+      rA.onchange = set; rMix.onchange = () => { mixBox.hidden = !rMix.checked; set(); };
+      rB.onchange = set; rT.oninput = set;
+    }
+    const tl = document.getElementById("tabLine"); if (tl) tl.onchange = () => { S.tabLine = tl.value; changed(); };
+    const w = document.getElementById("why"); if (w) w.oninput = () => { S.why[r] = w.value; save(); };
+    document.getElementById("revertR").onclick = () => { delete S.roles[r]; delete S.why[r]; changed(); };
+  }
+  el.querySelectorAll("[data-go]").forEach((a) => a.onclick = (e) => { e.preventDefault(); select({ kind: "role", name: a.dataset.go }); });
+}
+function setPalette(n, hex, fromHex) {
+  if (S.scope === "one") { (S.palette[S.flavour] ??= {})[n] = hex; return changed(!fromHex); }
+  const [L0, C0, H0] = toOklch(ORIG[S.flavour].colors[n]), [L1, C1, H1] = toOklch(hex);
+  const sign = ORIG[S.flavour].dark ? 1 : -1;
+  for (const f of FL) {
+    if (f === S.flavour) { (S.palette[f] ??= {})[n] = hex; continue; }
+    const [l, c, h] = toOklch(ORIG[f].colors[n]), s2 = ORIG[f].dark ? 1 : -1;
+    (S.palette[f] ??= {})[n] = fromOklch(l + (L1 - L0) * sign * s2, Math.max(0, c + (C1 - C0)), h + (H1 - H0));
+  }
+  changed(!fromHex);
+}
+function setRole(r, v) {
+  const prev = S.roles[r];
+  try { S.roles[r] = v; resolve(r, S.flavour); } catch (e) { if (prev === undefined) delete S.roles[r]; else S.roles[r] = prev; render(); const box = document.getElementById("inspector"); box.insertAdjacentHTML("afterbegin", `<p class="err">That would make ${r} refer to itself, so it wasn't changed.</p>`); return; }
+  changed();
+}
+
+// ---------- checks ----------
+function checks() {
+  const out = [];
+  for (const f of FL) {
+    const bg = R("ui.background", f), name = ORIG[f].name;
+    for (const [k, r] of Object.entries(D.roles.syntax)) { if (k.startsWith("$")) continue;
+      const v = contrast(R(`syntax.${k}`, f), bg), min = r.minContrast ?? 4.5; if (v < min) out.push(["bad", `syntax.${k}`, `${name}: syntax.${k} contrast ${v.toFixed(2)}, needs ${min}`]); }
+    for (const k of ["ui.text", "ui.text.muted", "ui.link"]) { const v = contrast(R(k, f), bg); if (v < 4.5) out.push(["bad", k, `${name}: ${k} contrast ${v.toFixed(2)}, needs 4.5`]); }
+    const pairs = [["ui.on.fill", "ui.fill", 4.5], ...Object.entries(roleIndex).filter(([, r]) => r.minContrastWith).map(([n, r]) => [r.minContrastWith[0], n, r.minContrastWith[1]])];
+    for (const [fg, b, min] of pairs) { const v = contrast(R(fg, f), R(b, f)); if (v < min) out.push(["bad", b, `${name}: ${fg} on ${b} contrast ${v.toFixed(2)}, needs ${min}`]); }
+    const key = Object.entries(D.roles.syntax).filter(([, r]) => r.key).map(([k]) => k);
+    for (let i = 0; i < key.length; i++) for (let j = i + 1; j < key.length; j++) {
+      const d = deltaE(R(`syntax.${key[i]}`, f), R(`syntax.${key[j]}`, f));
+      if (d < 5) out.push(["bad", `syntax.${key[i]}`, `${name}: ${key[i]} and ${key[j]} look alike (${d.toFixed(1)}, needs 5)`]);
+      else if (d < 7) out.push(["warn", `syntax.${key[i]}`, `${name}: ${key[i]} and ${key[j]} are close (${d.toFixed(1)})`]);
+    }
+  }
+  const bad = out.filter((o) => o[0] === "bad"), warn = out.filter((o) => o[0] === "warn");
+  const el = document.getElementById("checks");
+  el.innerHTML = bad.length || warn.length ? [...bad, ...warn.slice(0, 8)].map(([c, role, t]) => `<li class="${c}" data-go="${role}">${t}</li>`).join("") + (warn.length > 8 ? `<li class="ok">${warn.length - 8} more close pairs, same as the current build</li>` : "") : `<li class="ok">Everything passes, in every flavour.</li>`;
+  el.querySelectorAll("[data-go]").forEach((li) => li.onclick = () => select({ kind: "role", name: li.dataset.go }));
+  return bad;
+}
+
+// ---------- export ----------
+function buildPatch() {
+  const patch = { "darkberry-patch": 1, palette: {}, roles: {} };
+  for (const f of FL) for (const [n, h] of Object.entries(S.palette[f] || {})) if (h !== ORIG[f].colors[n]) (patch.palette[f] ??= {})[n] = h;
+  for (const [r, v] of Object.entries(S.roles)) if (JSON.stringify(v) !== ORIG_ROLES[r]) patch.roles[r] = { value: v, ...(S.why[r] ? { why: S.why[r] } : {}) };
+  if (S.tabLine !== DEFAULT_TABLINE) patch.vscodeTabLine = S.tabLine;
+  return patch;
+}
+function exportPanel() {
+  const p = buildPatch(), panel = document.getElementById("exportPanel");
+  const empty = !Object.keys(p.palette).length && !Object.keys(p.roles).length && !p.vscodeTabLine;
+  const missing = Object.keys(p.roles).filter((r) => roleIndex[r].catppuccin === "=" && !p.roles[r].why);
+  const bad = checks();
+  panel.hidden = false;
+  panel.innerHTML = empty ? `<h2>Nothing to export yet</h2><p class="hint">Change a palette colour or a role first. Your edits are kept in this browser until you discard them.</p>` :
+    `<h2>Your patch</h2>${missing.length ? `<p class="err">Add a reason for: ${missing.join(", ")}. These roles matched Catppuccin, and the repo requires a reason to change them.</p>` : ""}${bad.length ? `<p class="err">${bad.length} check${bad.length === 1 ? "" : "s"} fail. The build will refuse this patch until they pass.</p>` : ""}
+    <pre class="mono" id="patchText">${JSON.stringify(p, null, 2)}</pre>
+    <div class="row"><button class="primary" id="copyPatch">Copy patch</button><span class="lbl" id="copied" aria-live="polite"></span></div>
+    <ol><li>Save it in the repo as <code>patch.json</code>.</li><li>Run <code>node tools/apply-patch.mjs patch.json</code>. It updates the palette and roles, then rebuilds every port.</li><li>Or paste it into your chat with Claude.</li></ol>`;
+  const cp = document.getElementById("copyPatch");
+  if (cp) cp.onclick = async () => { try { await navigator.clipboard.writeText(JSON.stringify(p, null, 2)); document.getElementById("copied").textContent = "Copied"; } catch (e) { const r = document.createRange(); r.selectNodeContents(document.getElementById("patchText")); getSelection().removeAllRanges(); getSelection().addRange(r); document.getElementById("copied").textContent = "Selected. Press Ctrl+C or Cmd+C to copy."; } };
+  panel.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+
+// ---------- wiring ----------
+function select(sel) { S.sel = sel; save(); render(); }
+function changed(keepInputs) { save(); if (keepInputs && S.sel.kind === "palette") { specimen(); sidebar(); checks(); chrome(); document.querySelector(".big").style.background = col(S.flavour, S.sel.name); document.getElementById("hex").value = col(S.flavour, S.sel.name); document.querySelectorAll(".dial output")[0].textContent = (+dL.value * 100).toFixed(1); document.querySelectorAll(".dial output")[1].textContent = (+dC.value).toFixed(3); document.querySelectorAll(".dial output")[2].textContent = (+dH.value) + "°"; const fl = document.querySelector(".fl4"); if (fl) fl.outerHTML = fl4((f) => col(f, S.sel.name)); return; } render(); }
+function render() {
+  document.querySelectorAll("#flavours button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === S.flavour));
+  scopeOne.setAttribute("aria-pressed", S.scope === "one"); scopeAll.setAttribute("aria-pressed", S.scope === "all");
+  chrome(); sidebar(); specimen(); inspector(); checks();
+  if (!document.getElementById("exportPanel").hidden) exportPanel();
+}
+document.getElementById("ver").textContent = `v${D.version}`;
+document.getElementById("flavours").innerHTML = FL.map((f) => `<button data-f="${f}">${ORIG[f].emoji || ""} ${ORIG[f].name}</button>`).join("");
+document.querySelectorAll("#flavours button").forEach((b) => b.onclick = () => { S.flavour = b.dataset.f; save(); render(); });
+scopeOne.onclick = () => { S.scope = "one"; save(); render(); };
+scopeAll.onclick = () => { S.scope = "all"; save(); render(); };
+let armed = null;
+undoAll.onclick = () => {
+  if (!armed) { undoAll.textContent = "Click again to discard everything"; armed = setTimeout(() => { armed = null; undoAll.textContent = "Discard changes"; }, 4000); return; }
+  clearTimeout(armed); armed = null; undoAll.textContent = "Discard changes";
+  S.palette = {}; S.roles = {}; S.why = {}; S.tabLine = DEFAULT_TABLINE; document.getElementById("exportPanel").hidden = true; changed();
+};
+exportBtn.onclick = exportPanel;
+roleFilter.value = S.filter; roleFilter.oninput = () => { S.filter = roleFilter.value; save(); sidebar(); };
+render();
+})();
+</script>
+</body>
+</html>

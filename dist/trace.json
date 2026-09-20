@@ -1,0 +1,10099 @@
+[
+  {
+    "port": "kitty",
+    "key": "foreground",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "selection_foreground",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "selection_background",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "cursor",
+    "expr": "{ui.cursor}",
+    "roles": [
+      "ui.cursor"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "cursor_text_color",
+    "expr": "{ui.cursor.text}",
+    "roles": [
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "url_color",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "active_border_color",
+    "expr": "{ui.border.active}",
+    "roles": [
+      "ui.border.active",
+      "ui.accent"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "inactive_border_color",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "bell_border_color",
+    "expr": "{ui.bell}",
+    "roles": [
+      "ui.bell"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "wayland_titlebar_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "macos_titlebar_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "active_tab_foreground",
+    "expr": "{ui.on.tab.indicator}",
+    "roles": [
+      "ui.on.tab.indicator",
+      "ui.on.accent"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "active_tab_background",
+    "expr": "{ui.tab.indicator}",
+    "roles": [
+      "ui.tab.indicator"
+    ],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#a82590",
+      "fen": "#d690c3",
+      "mire": "#d577be",
+      "blackwater": "#d577be"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "inactive_tab_foreground",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "inactive_tab_background",
+    "expr": "{ui.tab.inactive}",
+    "roles": [
+      "ui.tab.inactive",
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "tab_bar_background",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "mark1_foreground",
+    "expr": "{ui.mark.text}",
+    "roles": [
+      "ui.mark.text",
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "mark1_background",
+    "expr": "{ui.mark1}",
+    "roles": [
+      "ui.mark1"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "mark2_foreground",
+    "expr": "{ui.mark.text}",
+    "roles": [
+      "ui.mark.text",
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "mark2_background",
+    "expr": "{ui.mark2}",
+    "roles": [
+      "ui.mark2"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "mark3_foreground",
+    "expr": "{ui.mark.text}",
+    "roles": [
+      "ui.mark.text",
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "mark3_background",
+    "expr": "{ui.mark3}",
+    "roles": [
+      "ui.mark3"
+    ],
+    "palette": [
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#2a6fb0",
+      "fen": "#9cc6ea",
+      "mire": "#7fb4e0",
+      "blackwater": "#7fb4e0"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color0",
+    "expr": "{ansi.0}",
+    "roles": [
+      "ansi.0"
+    ],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#5a4050",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color8",
+    "expr": "{ansi.8}",
+    "roles": [
+      "ansi.8"
+    ],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color1",
+    "expr": "{ansi.1}",
+    "roles": [
+      "ansi.1"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color9",
+    "expr": "{ansi.9}",
+    "roles": [
+      "ansi.9"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#d8473e",
+      "fen": "#fc7776",
+      "mire": "#ed5858",
+      "blackwater": "#ed5858"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color2",
+    "expr": "{ansi.2}",
+    "roles": [
+      "ansi.2"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color10",
+    "expr": "{ansi.10}",
+    "roles": [
+      "ansi.10"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#3e8543",
+      "fen": "#9bdba1",
+      "mire": "#87cf8e",
+      "blackwater": "#87cf8e"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color3",
+    "expr": "{ansi.3}",
+    "roles": [
+      "ansi.3"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color11",
+    "expr": "{ansi.11}",
+    "roles": [
+      "ansi.11"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#997317",
+      "fen": "#e3c782",
+      "mire": "#dcbb6d",
+      "blackwater": "#dcbb6d"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color4",
+    "expr": "{ansi.4}",
+    "roles": [
+      "ansi.4"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color12",
+    "expr": "{ansi.12}",
+    "roles": [
+      "ansi.12"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#5067da",
+      "fen": "#8fb6f7",
+      "mire": "#7da4f4",
+      "blackwater": "#7da4f4"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color5",
+    "expr": "{ansi.5}",
+    "roles": [
+      "ansi.5"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color13",
+    "expr": "{ansi.13}",
+    "roles": [
+      "ansi.13"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#df2a76",
+      "fen": "#f985a5",
+      "mire": "#fc6796",
+      "blackwater": "#fc6796"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color6",
+    "expr": "{ansi.6}",
+    "roles": [
+      "ansi.6"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color14",
+    "expr": "{ansi.14}",
+    "roles": [
+      "ansi.14"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#298878",
+      "fen": "#99cfc8",
+      "mire": "#7cc7b8",
+      "blackwater": "#7cc7b8"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color7",
+    "expr": "{ansi.7}",
+    "roles": [
+      "ansi.7"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color15",
+    "expr": "{ansi.15}",
+    "roles": [
+      "ansi.15"
+    ],
+    "palette": [
+      "subtext1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#dfced9",
+      "mire": "#ddd0d9",
+      "blackwater": "#d8cbd4"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color16",
+    "expr": "{terminal.color16}",
+    "roles": [
+      "terminal.color16"
+    ],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#b15423",
+      "fen": "#f7bf9e",
+      "mire": "#f2ad8a",
+      "blackwater": "#f2ad8a"
+    }
+  },
+  {
+    "port": "kitty",
+    "key": "color17",
+    "expr": "{terminal.color17}",
+    "roles": [
+      "terminal.color17"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 0",
+    "expr": "{ansi.0}",
+    "roles": [
+      "ansi.0"
+    ],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#5a4050",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 1",
+    "expr": "{ansi.1}",
+    "roles": [
+      "ansi.1"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 2",
+    "expr": "{ansi.2}",
+    "roles": [
+      "ansi.2"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 3",
+    "expr": "{ansi.3}",
+    "roles": [
+      "ansi.3"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 4",
+    "expr": "{ansi.4}",
+    "roles": [
+      "ansi.4"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 5",
+    "expr": "{ansi.5}",
+    "roles": [
+      "ansi.5"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 6",
+    "expr": "{ansi.6}",
+    "roles": [
+      "ansi.6"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 7",
+    "expr": "{ansi.7}",
+    "roles": [
+      "ansi.7"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 8",
+    "expr": "{ansi.8}",
+    "roles": [
+      "ansi.8"
+    ],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 9",
+    "expr": "{ansi.9}",
+    "roles": [
+      "ansi.9"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#d8473e",
+      "fen": "#fc7776",
+      "mire": "#ed5858",
+      "blackwater": "#ed5858"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 10",
+    "expr": "{ansi.10}",
+    "roles": [
+      "ansi.10"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#3e8543",
+      "fen": "#9bdba1",
+      "mire": "#87cf8e",
+      "blackwater": "#87cf8e"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 11",
+    "expr": "{ansi.11}",
+    "roles": [
+      "ansi.11"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#997317",
+      "fen": "#e3c782",
+      "mire": "#dcbb6d",
+      "blackwater": "#dcbb6d"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 12",
+    "expr": "{ansi.12}",
+    "roles": [
+      "ansi.12"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#5067da",
+      "fen": "#8fb6f7",
+      "mire": "#7da4f4",
+      "blackwater": "#7da4f4"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 13",
+    "expr": "{ansi.13}",
+    "roles": [
+      "ansi.13"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#df2a76",
+      "fen": "#f985a5",
+      "mire": "#fc6796",
+      "blackwater": "#fc6796"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 14",
+    "expr": "{ansi.14}",
+    "roles": [
+      "ansi.14"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#298878",
+      "fen": "#99cfc8",
+      "mire": "#7cc7b8",
+      "blackwater": "#7cc7b8"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "palette = 15",
+    "expr": "{ansi.15}",
+    "roles": [
+      "ansi.15"
+    ],
+    "palette": [
+      "subtext1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#dfced9",
+      "mire": "#ddd0d9",
+      "blackwater": "#d8cbd4"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "foreground",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "cursor-color",
+    "expr": "{ui.cursor}",
+    "roles": [
+      "ui.cursor"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "cursor-text",
+    "expr": "{ui.cursor.text}",
+    "roles": [
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "selection-background",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "selection-foreground",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "ghostty",
+    "key": "split-divider-color",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "frame",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "frame_inactive",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "tab_selected",
+    "expr": "{ui.tab.active}",
+    "roles": [
+      "ui.tab.active",
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "tab_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "tab_background_text",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "tab_line",
+    "expr": "{ui.tab.indicator}",
+    "roles": [
+      "ui.tab.indicator"
+    ],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#a82590",
+      "fen": "#d690c3",
+      "mire": "#d577be",
+      "blackwater": "#d577be"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "tab_loading",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "bookmark_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "icons",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "icons_attention",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field_border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field_focus",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field_text_focus",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field_border_focus",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field_highlight",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_field_highlight_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_top_separator",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_bottom_separator",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "toolbar_vertical_separator",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "popup",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "popup_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "popup_border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "popup_highlight",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "popup_highlight_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "sidebar",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "sidebar_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "sidebar_border",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "sidebar_highlight",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "sidebar_highlight_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "ntp_background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "ntp_text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "button_background_hover",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "firefox",
+    "key": "button_background_active",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "foreground",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "focusBorder",
+    "expr": "{ui.focus}",
+    "roles": [
+      "ui.focus"
+    ],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#a36475",
+      "fen": "#c496a6",
+      "mire": "#b28a93",
+      "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "selection.background",
+    "expr": "{mix(surface1,plum,0.2)}58",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#c5a4c658",
+      "fen": "#86627f58",
+      "mire": "#5e445a58",
+      "blackwater": "#563e5458"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "scrollbar.shadow",
+    "expr": "{crust}",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "activityBar.foreground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "activityBar.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "activityBar.inactiveForeground",
+    "expr": "{text}66",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314366",
+      "fen": "#f2e6ee66",
+      "mire": "#efe3eb66",
+      "blackwater": "#ede1e966"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "activityBarBadge.background",
+    "expr": "{ui.badge}",
+    "roles": [
+      "ui.badge",
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "activityBar.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "activityBar.activeBackground",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "sideBar.background",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "sideBar.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "sideBarSectionHeader.background",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "sideBarSectionHeader.foreground",
+    "expr": "{cherry}",
+    "roles": [],
+    "palette": [
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#b14a5e",
+      "fen": "#e7aab5",
+      "mire": "#d3919c",
+      "blackwater": "#d3919c"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "sideBarSectionHeader.border",
+    "expr": "{base}00",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f800",
+      "fen": "#4f314300",
+      "mire": "#2a1e2600",
+      "blackwater": "#1d121a00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "sideBarTitle.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.inactiveSelectionBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.inactiveSelectionForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.hoverBackground",
+    "expr": "{mix(base,surface0,0.6)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#eadbe5",
+      "fen": "#57394b",
+      "mire": "#2f202a",
+      "blackwater": "#23171f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.hoverForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.activeSelectionBackground",
+    "expr": "{mix(surface1,berry,0.25)}",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.activeSelectionForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tree.indentGuidesStroke",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.dropBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.highlightForeground",
+    "expr": "{petal}",
+    "roles": [],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.focusOutline",
+    "expr": "{mix(cherry,overlay1,0.5)}80",
+    "roles": [],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#a3647580",
+      "fen": "#c496a680",
+      "mire": "#b28a9380",
+      "blackwater": "#ae848f80"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.focusAndSelectionOutline",
+    "expr": "{ui.focus}",
+    "roles": [
+      "ui.focus"
+    ],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#a36475",
+      "fen": "#c496a6",
+      "mire": "#b28a93",
+      "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.focusBackground",
+    "expr": "{mix(surface1,berry,0.15)}",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d0a1bb",
+      "fen": "#81586d",
+      "mire": "#5b3547",
+      "blackwater": "#523040"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "list.focusForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "listFilterWidget.background",
+    "expr": "{mix(surface1,berry,0.15)}",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d0a1bb",
+      "fen": "#81586d",
+      "mire": "#5b3547",
+      "blackwater": "#523040"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "listFilterWidget.outline",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "listFilterWidget.noMatchesOutline",
+    "expr": "{cherry}",
+    "roles": [],
+    "palette": [
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#b14a5e",
+      "fen": "#e7aab5",
+      "mire": "#d3919c",
+      "blackwater": "#d3919c"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBar.foreground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBar.background",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.hoverBackground",
+    "expr": "{mix(base,surface0,0.6)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#eadbe5",
+      "fen": "#57394b",
+      "mire": "#2f202a",
+      "blackwater": "#23171f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.hoverForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBar.debuggingBackground",
+    "expr": "{mix(surface1,berry,0.2)}",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d099b6",
+      "fen": "#885b71",
+      "mire": "#643a4c",
+      "blackwater": "#5c3446"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBar.debuggingForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBar.noFolderBackground",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBar.noFolderForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.remoteBackground",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "titleBar.activeBackground",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "titleBar.activeForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "titleBar.inactiveBackground",
+    "expr": "{crust}",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "titleBar.inactiveForeground",
+    "expr": "{overlay1}",
+    "roles": [],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "titleBar.border",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menubar.selectionForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menubar.selectionBackground",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menu.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menu.background",
+    "expr": "{mix(mantle,base,0.4)}",
+    "roles": [],
+    "palette": [
+      "mantle",
+      "base"
+    ],
+    "hex": {
+      "wisp": "#f6ecf3",
+      "fen": "#462c3c",
+      "mire": "#261922",
+      "blackwater": "#190f16"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menu.selectionForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menu.selectionBackground",
+    "expr": "{mix(surface1,berry,0.15)}",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d0a1bb",
+      "fen": "#81586d",
+      "mire": "#5b3547",
+      "blackwater": "#523040"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menu.selectionBorder",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menu.separatorBackground",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "menu.border",
+    "expr": "{surface1}85",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac885",
+      "fen": "#6c4c6085",
+      "mire": "#3e293685",
+      "blackwater": "#34222e85"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "commandCenter.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "commandCenter.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "commandCenter.border",
+    "expr": "{surface1}80",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac880",
+      "fen": "#6c4c6080",
+      "mire": "#3e293680",
+      "blackwater": "#34222e80"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "commandCenter.activeBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "commandCenter.activeForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "commandCenter.inactiveForeground",
+    "expr": "{overlay1}",
+    "roles": [],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "button.background",
+    "expr": "{mix(jam,crust,0.2)}",
+    "roles": [],
+    "palette": [
+      "jam",
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#c3659d",
+      "fen": "#9f4077",
+      "mire": "#9a3d73",
+      "blackwater": "#983b71"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "button.hoverBackground",
+    "expr": "{mix(jam,cherry,0.4)}",
+    "roles": [],
+    "palette": [
+      "jam",
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#b64979",
+      "fen": "#cc6f9b",
+      "mire": "#c46591",
+      "blackwater": "#c46591"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "button.border",
+    "expr": "{text}1f",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f31431f",
+      "fen": "#f2e6ee1f",
+      "mire": "#efe3eb1f",
+      "blackwater": "#ede1e91f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "button.secondaryForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "button.secondaryBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "button.secondaryHoverBackground",
+    "expr": "{mix(surface1,surface2,0.7)}",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c7b0be",
+      "fen": "#77566a",
+      "mire": "#4a2f3f",
+      "blackwater": "#3f2937"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "input.background",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "input.border",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "input.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "inputOption.activeBackground",
+    "expr": "{cherry}66",
+    "roles": [],
+    "palette": [
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#b14a5e66",
+      "fen": "#e7aab566",
+      "mire": "#d3919c66",
+      "blackwater": "#d3919c66"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "inputOption.activeBorder",
+    "expr": "{berry}00",
+    "roles": [],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d2157000",
+      "fen": "#fa99b400",
+      "mire": "#fd7ca500",
+      "blackwater": "#fd7ca500"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "input.placeholderForeground",
+    "expr": "{overlay2}",
+    "roles": [],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "textLink.foreground",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "textLink.activeForeground",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.foreground",
+    "expr": "{syntax.text}",
+    "roles": [
+      "syntax.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorLineNumber.foreground",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorCursor.foreground",
+    "expr": "{ui.cursor}",
+    "roles": [
+      "ui.cursor"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.selectionBackground",
+    "expr": "{mix(surface0,plum,0.18)}80",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#d3b4d480",
+      "fen": "#77557080",
+      "mire": "#513c4f80",
+      "blackwater": "#48354780"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.inactiveSelectionBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorWhitespace.foreground",
+    "expr": "{text}29",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314329",
+      "fen": "#f2e6ee29",
+      "mire": "#efe3eb29",
+      "blackwater": "#ede1e929"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.selectionHighlightBackground",
+    "expr": "{mix(cherry,overlay1,0.5)}20",
+    "roles": [],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#a3647520",
+      "fen": "#c496a620",
+      "mire": "#b28a9320",
+      "blackwater": "#ae848f20"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.selectionHighlightBorder",
+    "expr": "{mix(cherry,overlay1,0.5)}60",
+    "roles": [],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#a3647560",
+      "fen": "#c496a660",
+      "mire": "#b28a9360",
+      "blackwater": "#ae848f60"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.findMatchBackground",
+    "expr": "{mix(surface1,berry,0.15)}80",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d0a1bb80",
+      "fen": "#81586d80",
+      "mire": "#5b354780",
+      "blackwater": "#52304080"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.findMatchBorder",
+    "expr": "{ui.focus}",
+    "roles": [
+      "ui.focus"
+    ],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#a36475",
+      "fen": "#c496a6",
+      "mire": "#b28a93",
+      "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.findMatchHighlightBackground",
+    "expr": "{jam}40",
+    "roles": [],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b40",
+      "fen": "#ba488940",
+      "mire": "#ba488940",
+      "blackwater": "#ba488940"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.findMatchHighlightBorder",
+    "expr": "{text}00",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314300",
+      "fen": "#f2e6ee00",
+      "mire": "#efe3eb00",
+      "blackwater": "#ede1e900"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.findRangeHighlightBackground",
+    "expr": "{mix(surface0,surface1,0.6)}66",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce66",
+      "fen": "#66465a66",
+      "mire": "#39263266",
+      "blackwater": "#2f1f2a66"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.findRangeHighlightBorder",
+    "expr": "{text}00",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314300",
+      "fen": "#f2e6ee00",
+      "mire": "#efe3eb00",
+      "blackwater": "#ede1e900"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.rangeHighlightBackground",
+    "expr": "{text}0b",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f31430b",
+      "fen": "#f2e6ee0b",
+      "mire": "#efe3eb0b",
+      "blackwater": "#ede1e90b"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.rangeHighlightBorder",
+    "expr": "{text}00",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314300",
+      "fen": "#f2e6ee00",
+      "mire": "#efe3eb00",
+      "blackwater": "#ede1e900"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.hoverHighlightBackground",
+    "expr": "{surface2}40",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb940",
+      "fen": "#7b5a6e40",
+      "mire": "#4f314340",
+      "blackwater": "#432c3b40"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.lineHighlightBackground",
+    "expr": "{mix(surface0,surface1,0.6)}38",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce38",
+      "fen": "#66465a38",
+      "mire": "#39263238",
+      "blackwater": "#2f1f2a38"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.lineHighlightBorder",
+    "expr": "{mix(base,surface0,0.6)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#eadbe5",
+      "fen": "#57394b",
+      "mire": "#2f202a",
+      "blackwater": "#23171f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorLineNumber.activeForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorIndentGuide.background",
+    "expr": "{mix(base,surface1,0.4)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#eadde5",
+      "fen": "#5b3c4f",
+      "mire": "#32222c",
+      "blackwater": "#261822"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorIndentGuide.activeBackground",
+    "expr": "{mix(surface2,overlay0,0.3)}",
+    "roles": [],
+    "palette": [
+      "surface2",
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#bca4b2",
+      "fen": "#816074",
+      "mire": "#5d4252",
+      "blackwater": "#4f3947"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorRuler.foreground",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.foldBackground",
+    "expr": "{surface2}4d",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb94d",
+      "fen": "#7b5a6e4d",
+      "mire": "#4f31434d",
+      "blackwater": "#432c3b4d"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorOverviewRuler.background",
+    "expr": "{base}00",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f800",
+      "fen": "#4f314300",
+      "mire": "#2a1e2600",
+      "blackwater": "#1d121a00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorOverviewRuler.border",
+    "expr": "{surface1}4d",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac84d",
+      "fen": "#6c4c604d",
+      "mire": "#3e29364d",
+      "blackwater": "#34222e4d"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorError.foreground",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorError.background",
+    "expr": "{cranberry}00",
+    "roles": [],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc383800",
+      "fen": "#ff8a8a00",
+      "mire": "#f06a6a00",
+      "blackwater": "#f06a6a00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorError.border",
+    "expr": "{text}00",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314300",
+      "fen": "#f2e6ee00",
+      "mire": "#efe3eb00",
+      "blackwater": "#ede1e900"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorWarning.foreground",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorWarning.background",
+    "expr": "{honey}00",
+    "roles": [],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a00",
+      "fen": "#f0d6a000",
+      "mire": "#e8c98a00",
+      "blackwater": "#e8c98a00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorWarning.border",
+    "expr": "{text}00",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314300",
+      "fen": "#f2e6ee00",
+      "mire": "#efe3eb00",
+      "blackwater": "#ede1e900"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorInfo.foreground",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorInfo.background",
+    "expr": "{bilberry}00",
+    "roles": [],
+    "palette": [
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#2a6fb000",
+      "fen": "#9cc6ea00",
+      "mire": "#7fb4e000",
+      "blackwater": "#7fb4e000"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorInfo.border",
+    "expr": "{bilberry}00",
+    "roles": [],
+    "palette": [
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#2a6fb000",
+      "fen": "#9cc6ea00",
+      "mire": "#7fb4e000",
+      "blackwater": "#7fb4e000"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGutter.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGutter.modifiedBackground",
+    "expr": "{honey}",
+    "roles": [],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGutter.addedBackground",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGutter.deletedBackground",
+    "expr": "{cranberry}",
+    "roles": [],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGutter.foldingControlForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorCodeLens.foreground",
+    "expr": "{overlay2}",
+    "roles": [],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGroup.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "diffEditor.insertedTextBackground",
+    "expr": "{gooseberry}33",
+    "roles": [],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a3733",
+      "fen": "#b7e6b733",
+      "mire": "#a3daa333",
+      "blackwater": "#a3daa333"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "diffEditor.removedTextBackground",
+    "expr": "{cranberry}33",
+    "roles": [],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc383833",
+      "fen": "#ff8a8a33",
+      "mire": "#f06a6a33",
+      "blackwater": "#f06a6a33"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "diffEditor.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "panel.background",
+    "expr": "{crust}",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "panel.border",
+    "expr": "{surface1}80",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac880",
+      "fen": "#6c4c6080",
+      "mire": "#3e293680",
+      "blackwater": "#34222e80"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "panelTitle.activeBorder",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "panelTitle.activeForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "panelTitle.inactiveForeground",
+    "expr": "{text}99",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314399",
+      "fen": "#f2e6ee99",
+      "mire": "#efe3eb99",
+      "blackwater": "#ede1e999"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "badge.background",
+    "expr": "{ui.badge}",
+    "roles": [
+      "ui.badge",
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.border",
+    "expr": "{surface1}80",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac880",
+      "fen": "#6c4c6080",
+      "mire": "#3e293680",
+      "blackwater": "#34222e80"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "breadcrumb.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "breadcrumb.foreground",
+    "expr": "{subtext0}cc",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5fcc",
+      "fen": "#ccbac5cc",
+      "mire": "#cbbcc5cc",
+      "blackwater": "#c6b7c0cc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "breadcrumb.focusForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGroupHeader.tabsBackground",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.activeForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.activeBackground",
+    "expr": "{ui.tab.active}",
+    "roles": [
+      "ui.tab.active",
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.activeBorder",
+    "expr": "{ui.tab.indicator}00",
+    "roles": [
+      "ui.tab.indicator"
+    ],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#a8259000",
+      "fen": "#d690c300",
+      "mire": "#d577be00",
+      "blackwater": "#d577be00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.activeBorderTop",
+    "expr": "{ui.tab.indicator}00",
+    "roles": [
+      "ui.tab.indicator"
+    ],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#a8259000",
+      "fen": "#d690c300",
+      "mire": "#d577be00",
+      "blackwater": "#d577be00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.inactiveBackground",
+    "expr": "{ui.tab.inactive}",
+    "roles": [
+      "ui.tab.inactive",
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.inactiveForeground",
+    "expr": "{text}80",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314380",
+      "fen": "#f2e6ee80",
+      "mire": "#efe3eb80",
+      "blackwater": "#ede1e980"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.hoverBackground",
+    "expr": "{mix(base,surface0,0.6)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#eadbe5",
+      "fen": "#57394b",
+      "mire": "#2f202a",
+      "blackwater": "#23171f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.hoverForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.hoverBorder",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.unfocusedActiveForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.unfocusedInactiveForeground",
+    "expr": "{text}60",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314360",
+      "fen": "#f2e6ee60",
+      "mire": "#efe3eb60",
+      "blackwater": "#ede1e960"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.unfocusedHoverBackground",
+    "expr": "{mix(base,surface0,0.6)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#eadbe5",
+      "fen": "#57394b",
+      "mire": "#2f202a",
+      "blackwater": "#23171f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tab.unfocusedHoverForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "scrollbarSlider.background",
+    "expr": "{overlay0}66",
+    "roles": [],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a266",
+      "fen": "#8f6e8266",
+      "mire": "#7d697666",
+      "blackwater": "#6b576466"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "scrollbarSlider.hoverBackground",
+    "expr": "{overlay0}b3",
+    "roles": [],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2b3",
+      "fen": "#8f6e82b3",
+      "mire": "#7d6976b3",
+      "blackwater": "#6b5764b3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "scrollbarSlider.activeBackground",
+    "expr": "{overlay2}66",
+    "roles": [],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#80677666",
+      "fen": "#bd9fb166",
+      "mire": "#ad8da266",
+      "blackwater": "#a5879966"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "progressBar.background",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "widget.shadow",
+    "expr": "{crust}5c",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae55c",
+      "fen": "#35212e5c",
+      "mire": "#1c11195c",
+      "blackwater": "#12090f5c"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorWidget.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorWidget.background",
+    "expr": "{mix(mantle,base,0.4)}",
+    "roles": [],
+    "palette": [
+      "mantle",
+      "base"
+    ],
+    "hex": {
+      "wisp": "#f6ecf3",
+      "fen": "#462c3c",
+      "mire": "#261922",
+      "blackwater": "#190f16"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorWidget.resizeBorder",
+    "expr": "{mix(surface2,overlay0,0.3)}",
+    "roles": [],
+    "palette": [
+      "surface2",
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#bca4b2",
+      "fen": "#816074",
+      "mire": "#5d4252",
+      "blackwater": "#4f3947"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "pickerGroup.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "pickerGroup.foreground",
+    "expr": "{cherry}",
+    "roles": [],
+    "palette": [
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#b14a5e",
+      "fen": "#e7aab5",
+      "mire": "#d3919c",
+      "blackwater": "#d3919c"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "debugToolBar.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "debugToolBar.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notifications.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notifications.background",
+    "expr": "{mix(mantle,base,0.4)}",
+    "roles": [],
+    "palette": [
+      "mantle",
+      "base"
+    ],
+    "hex": {
+      "wisp": "#f6ecf3",
+      "fen": "#462c3c",
+      "mire": "#261922",
+      "blackwater": "#190f16"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notificationToast.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notificationsErrorIcon.foreground",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notificationsWarningIcon.foreground",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notificationsInfoIcon.foreground",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notificationCenter.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notificationCenterHeader.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notificationCenterHeader.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "notifications.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.addedResourceForeground",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.conflictingResourceForeground",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.deletedResourceForeground",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.ignoredResourceForeground",
+    "expr": "{overlay1}",
+    "roles": [],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.modifiedResourceForeground",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.stageDeletedResourceForeground",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.stageModifiedResourceForeground",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.submoduleResourceForeground",
+    "expr": "{bilberry}",
+    "roles": [],
+    "palette": [
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#2a6fb0",
+      "fen": "#9cc6ea",
+      "mire": "#7fb4e0",
+      "blackwater": "#7fb4e0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "gitDecoration.untrackedResourceForeground",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorMarkerNavigation.background",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorMarkerNavigationError.background",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorMarkerNavigationWarning.background",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorMarkerNavigationInfo.background",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "merge.currentHeaderBackground",
+    "expr": "{mix(base,gooseberry,0.45)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#a3bda1",
+      "fen": "#7e8277",
+      "mire": "#60735e",
+      "blackwater": "#596c58"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "merge.currentContentBackground",
+    "expr": "{mix(base,gooseberry,0.2)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#d4dcd1",
+      "fen": "#64555a",
+      "mire": "#42443f",
+      "blackwater": "#383a35"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "merge.incomingHeaderBackground",
+    "expr": "{mix(base,bilberry,0.45)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#9db8d8",
+      "fen": "#72748e",
+      "mire": "#50627a",
+      "blackwater": "#495b73"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "merge.incomingContentBackground",
+    "expr": "{mix(base,bilberry,0.2)}",
+    "roles": [],
+    "palette": [
+      "base",
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#d1d9ea",
+      "fen": "#5e4f64",
+      "mire": "#3b3c4b",
+      "blackwater": "#313242"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "merge.commonHeaderBackground",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "merge.commonContentBackground",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorSuggestWidget.background",
+    "expr": "{mix(mantle,base,0.4)}",
+    "roles": [],
+    "palette": [
+      "mantle",
+      "base"
+    ],
+    "hex": {
+      "wisp": "#f6ecf3",
+      "fen": "#462c3c",
+      "mire": "#261922",
+      "blackwater": "#190f16"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorSuggestWidget.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorSuggestWidget.foreground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorSuggestWidget.highlightForeground",
+    "expr": "{cherry}",
+    "roles": [],
+    "palette": [
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#b14a5e",
+      "fen": "#e7aab5",
+      "mire": "#d3919c",
+      "blackwater": "#d3919c"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorSuggestWidget.selectedBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorHoverWidget.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorHoverWidget.background",
+    "expr": "{mix(mantle,base,0.4)}",
+    "roles": [],
+    "palette": [
+      "mantle",
+      "base"
+    ],
+    "hex": {
+      "wisp": "#f6ecf3",
+      "fen": "#462c3c",
+      "mire": "#261922",
+      "blackwater": "#190f16"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorHoverWidget.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekView.border",
+    "expr": "{berry}",
+    "roles": [],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewEditor.background",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewEditorGutter.background",
+    "expr": "{mantle}",
+    "roles": [],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewEditor.matchHighlightBackground",
+    "expr": "{apricot}99",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#b1542399",
+      "fen": "#f7bf9e99",
+      "mire": "#f2ad8a99",
+      "blackwater": "#f2ad8a99"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewEditor.matchHighlightBorder",
+    "expr": "{apricot}",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#b15423",
+      "fen": "#f7bf9e",
+      "mire": "#f2ad8a",
+      "blackwater": "#f2ad8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewResult.background",
+    "expr": "{mix(mantle,base,0.4)}",
+    "roles": [],
+    "palette": [
+      "mantle",
+      "base"
+    ],
+    "hex": {
+      "wisp": "#f6ecf3",
+      "fen": "#462c3c",
+      "mire": "#261922",
+      "blackwater": "#190f16"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewResult.fileForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewResult.lineForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewResult.matchHighlightBackground",
+    "expr": "{apricot}4d",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#b154234d",
+      "fen": "#f7bf9e4d",
+      "mire": "#f2ad8a4d",
+      "blackwater": "#f2ad8a4d"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewResult.selectionBackground",
+    "expr": "{blueberry}33",
+    "roles": [],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd033",
+      "fen": "#a4c3f633",
+      "mire": "#8fb0f233",
+      "blackwater": "#8fb0f233"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewResult.selectionForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewTitle.background",
+    "expr": "{crust}",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewTitleDescription.foreground",
+    "expr": "{subtext0}b3",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5fb3",
+      "fen": "#ccbac5b3",
+      "mire": "#cbbcc5b3",
+      "blackwater": "#c6b7c0b3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "peekViewTitleLabel.foreground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "icon.foreground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "checkbox.background",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "checkbox.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "checkbox.border",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "dropdown.background",
+    "expr": "{surface0}",
+    "roles": [],
+    "palette": [
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#dfcbd8",
+      "fen": "#5d3e51",
+      "mire": "#32222c",
+      "blackwater": "#271a23"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "dropdown.foreground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "dropdown.border",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimapGutter.addedBackground",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimapGutter.modifiedBackground",
+    "expr": "{honey}",
+    "roles": [],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimapGutter.deletedBackground",
+    "expr": "{cranberry}",
+    "roles": [],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimap.findMatchHighlight",
+    "expr": "{mix(surface1,berry,0.15)}80",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d0a1bb80",
+      "fen": "#81586d80",
+      "mire": "#5b354780",
+      "blackwater": "#52304080"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimap.selectionHighlight",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimap.errorHighlight",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimap.warningHighlight",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "minimap.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGroup.emptyBackground",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "panelSection.border",
+    "expr": "{surface1}80",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac880",
+      "fen": "#6c4c6080",
+      "mire": "#3e293680",
+      "blackwater": "#34222e80"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.activeBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.errorBackground",
+    "expr": "{mix(crust,cranberry,0.45)}",
+    "roles": [],
+    "palette": [
+      "crust",
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#dd9197",
+      "fen": "#905057",
+      "mire": "#7b393d",
+      "blackwater": "#763538"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.errorForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.warningBackground",
+    "expr": "{mix(crust,honey,0.4)}",
+    "roles": [],
+    "palette": [
+      "crust",
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#c7ac8d",
+      "fen": "#80695c",
+      "mire": "#6e5b46",
+      "blackwater": "#685640"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.warningForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.prominentBackground",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.prominentHoverBackground",
+    "expr": "{mix(surface0,surface1,0.6)}",
+    "roles": [],
+    "palette": [
+      "surface0",
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d6c1ce",
+      "fen": "#66465a",
+      "mire": "#392632",
+      "blackwater": "#2f1f2a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "settings.headerForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "settings.focusedRowBackground",
+    "expr": "{text}07",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f314307",
+      "fen": "#f2e6ee07",
+      "mire": "#efe3eb07",
+      "blackwater": "#ede1e907"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "walkThrough.embeddedEditorBackground",
+    "expr": "{crust}50",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae550",
+      "fen": "#35212e50",
+      "mire": "#1c111950",
+      "blackwater": "#12090f50"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "breadcrumb.activeSelectionForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorGutter.commentRangeForeground",
+    "expr": "{subtext0}",
+    "roles": [],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "debugExceptionWidget.background",
+    "expr": "{base}",
+    "roles": [],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "debugExceptionWidget.border",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "toolbar.hoverBackground",
+    "expr": "{mix(surface1,berry,0.15)}58",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d0a1bb58",
+      "fen": "#81586d58",
+      "mire": "#5b354758",
+      "blackwater": "#52304058"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "toolbar.activeBackground",
+    "expr": "{mix(surface1,berry,0.15)}80",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d0a1bb80",
+      "fen": "#81586d80",
+      "mire": "#5b354780",
+      "blackwater": "#52304080"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "toolbar.hoverOutline",
+    "expr": "{crust}00",
+    "roles": [],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae500",
+      "fen": "#35212e00",
+      "mire": "#1c111900",
+      "blackwater": "#12090f00"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "activityBarBadge.foreground",
+    "expr": "{ui.on.badge}",
+    "roles": [
+      "ui.on.badge",
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#ffffff",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "badge.foreground",
+    "expr": "{ui.on.badge}",
+    "roles": [
+      "ui.on.badge",
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#ffffff",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "button.foreground",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#ffffff",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "statusBarItem.remoteForeground",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#ffffff",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "inputOption.activeForeground",
+    "expr": "{text}",
+    "roles": [],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminalCursor.foreground",
+    "expr": "{ui.cursor}",
+    "roles": [
+      "ui.cursor"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminalCursor.background",
+    "expr": "{ui.cursor.text}",
+    "roles": [
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorCursor.background",
+    "expr": "{ui.cursor.text}",
+    "roles": [
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.wordHighlightBackground",
+    "expr": "{surface2}99",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb999",
+      "fen": "#7b5a6e99",
+      "mire": "#4f314399",
+      "blackwater": "#432c3b99"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editor.wordHighlightStrongBackground",
+    "expr": "{mix(surface1,blueberry,0.25)}b8",
+    "roles": [],
+    "palette": [
+      "surface1",
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#aba3cab8",
+      "fen": "#7a6a86b8",
+      "mire": "#524b65b8",
+      "blackwater": "#4b465fb8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "sideBar.dropBackground",
+    "expr": "{surface1}99",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac899",
+      "fen": "#6c4c6099",
+      "mire": "#3e293699",
+      "blackwater": "#34222e99"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.selectionBackground",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection"
+    ],
+    "palette": [
+      "surface1",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d191b2",
+      "fen": "#905f75",
+      "mire": "#6e3e52",
+      "blackwater": "#66394c"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.foreground",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorLink.activeForeground",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorBracketMatch.background",
+    "expr": "{gooseberry}1a",
+    "roles": [],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a371a",
+      "fen": "#b7e6b71a",
+      "mire": "#a3daa31a",
+      "blackwater": "#a3daa31a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "editorBracketMatch.border",
+    "expr": "{overlay1}",
+    "roles": [],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBlack",
+    "expr": "{ansi.0}",
+    "roles": [
+      "ansi.0"
+    ],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#5a4050",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightBlack",
+    "expr": "{ansi.8}",
+    "roles": [
+      "ansi.8"
+    ],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiRed",
+    "expr": "{ansi.1}",
+    "roles": [
+      "ansi.1"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightRed",
+    "expr": "{ansi.9}",
+    "roles": [
+      "ansi.9"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#d8473e",
+      "fen": "#fc7776",
+      "mire": "#ed5858",
+      "blackwater": "#ed5858"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiGreen",
+    "expr": "{ansi.2}",
+    "roles": [
+      "ansi.2"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightGreen",
+    "expr": "{ansi.10}",
+    "roles": [
+      "ansi.10"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#3e8543",
+      "fen": "#9bdba1",
+      "mire": "#87cf8e",
+      "blackwater": "#87cf8e"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiYellow",
+    "expr": "{ansi.3}",
+    "roles": [
+      "ansi.3"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightYellow",
+    "expr": "{ansi.11}",
+    "roles": [
+      "ansi.11"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#997317",
+      "fen": "#e3c782",
+      "mire": "#dcbb6d",
+      "blackwater": "#dcbb6d"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBlue",
+    "expr": "{ansi.4}",
+    "roles": [
+      "ansi.4"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightBlue",
+    "expr": "{ansi.12}",
+    "roles": [
+      "ansi.12"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#5067da",
+      "fen": "#8fb6f7",
+      "mire": "#7da4f4",
+      "blackwater": "#7da4f4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiMagenta",
+    "expr": "{ansi.5}",
+    "roles": [
+      "ansi.5"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightMagenta",
+    "expr": "{ansi.13}",
+    "roles": [
+      "ansi.13"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#df2a76",
+      "fen": "#f985a5",
+      "mire": "#fc6796",
+      "blackwater": "#fc6796"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiCyan",
+    "expr": "{ansi.6}",
+    "roles": [
+      "ansi.6"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightCyan",
+    "expr": "{ansi.14}",
+    "roles": [
+      "ansi.14"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#298878",
+      "fen": "#99cfc8",
+      "mire": "#7cc7b8",
+      "blackwater": "#7cc7b8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiWhite",
+    "expr": "{ansi.7}",
+    "roles": [
+      "ansi.7"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "terminal.ansiBrightWhite",
+    "expr": "{ansi.15}",
+    "roles": [
+      "ansi.15"
+    ],
+    "palette": [
+      "subtext1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#dfced9",
+      "mire": "#ddd0d9",
+      "blackwater": "#d8cbd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"unison punctuation\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"haskell variable generic-type\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"haskell storage type\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"support.variable.magic.python\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"punctuation.separator.parameters.python\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"variable.parameter.function.language.special.self.python\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"storage.modifier.lifetime.rust\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"support.function.std.rust\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"entity.name.lifetime.rust\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"variable.language.rust\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"support.constant.edge\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"regexp constant character-class\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"regexp operator.quantifier\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"punctuation.definition\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Text\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Comment Markup Link\"].foreground",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"markup diff\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"diff\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"inserted.diff\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"deleted.diff\"].foreground",
+    "expr": "{syntax.diff.removed}",
+    "roles": [
+      "syntax.diff.removed"
+    ],
+    "palette": [
+      "cranberry",
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#bf414b",
+      "fen": "#f39aa0",
+      "mire": "#e27e83",
+      "blackwater": "#e27e83"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"c++ function\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"c++ block\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts punctuation separator key-value\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts import keyword\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"math js/ts\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"math property js/ts\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts variable.other.constant\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"java source\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"java method/annotation\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"java punctuation\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"java types\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"java import/package path\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"java instanceof\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"java variable.name\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"operator logical\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"operator bitwise\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"operator channel\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"support.constant.property-value.scss\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"CSS/SCSS/LESS Operators\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"css color standard name\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"css comma\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"css attribute-name.id\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"css property-name\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts module\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"entity.name.type.module\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js variable readwrite\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts json\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts Keyword\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts console\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js/ts support.variable.property.process\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js console function\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"keyword.operator.misc.rust\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"keyword.operator.sigil.rust\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"operator\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js dom\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js dom variable\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"keyword.operator\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"C operator assignment\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Punctuation\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Other punctuation .c\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"C type posix-reserved\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"keyword.operator.sizeof.c\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python parameter\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python type\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python logical\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"pyCs\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python block\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python function-call.generic\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python placeholder reset to normal string\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Operators\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Compound Assignment Operators\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Compound Assignment Operators js/ts\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Keywords\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Namespaces\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Variables\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Variables\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Language variables\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Java Variables\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Functions\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Classes\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Classes\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Class name\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Class name\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Class name php\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Type Name\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Keyword Control\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Control Elements\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Methods\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Storage\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Storage JS TS\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Source Js Keyword Operator Delete,source Js Keyword Operator In,source Js Keyword Operator Of,source Js Keyword Operator Instanceof,source Js Keyword Operator New,source Js Keyword Operator Typeof,source Js Keyword Operator Void\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Support\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Support type\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Support type\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Support type\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Meta tag\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Strings\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Inherited Class\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Constant other symbol\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Integers\"].foreground",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Booleans / language constants\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Constants\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Constants\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Tags\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Attributes\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Attribute IDs\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Attribute class\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Selector\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Headings\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Headings\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Units\"].foreground",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Bold\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Bold\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"markup Italic\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"emphasis md\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown headings\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown heading Punctuation Definition\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"punctuation.definition.list.begin.markdown\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown heading setext\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Punctuation Definition Bold\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Inline Raw\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Inline Raw\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown List Punctuation Definition\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Punctuation Definition String\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"beginning.punctuation.definition.list.markdown\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Punctuation Definition Link\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Underline Link/Image\"].foreground",
+    "expr": "{syntax.link}",
+    "roles": [
+      "syntax.link",
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Link Title/Description\"].foreground",
+    "expr": "{syntax.link}",
+    "roles": [
+      "syntax.link",
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Regular Expressions\"].foreground",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Escape Characters\"].foreground",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Embedded\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Embedded\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"illegal\"].foreground",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"illegal\"].foreground",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Broken\"].foreground",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Deprecated\"].foreground",
+    "expr": "{syntax.deprecated}",
+    "roles": [
+      "syntax.deprecated"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#89707f",
+      "fen": "#b293a7",
+      "mire": "#a28999",
+      "blackwater": "#998190"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Unimplemented\"].foreground",
+    "expr": "{syntax.unimplemented}",
+    "roles": [
+      "syntax.unimplemented"
+    ],
+    "palette": [
+      "overlay1",
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#907693",
+      "fen": "#ab8ea5",
+      "mire": "#998a9b",
+      "blackwater": "#928294"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Source Json Meta Structure Dictionary Json > String Quoted Json\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Source Json Meta Structure Dictionary Json > String Quoted Json > Punctuation String\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Source Json Meta Structure Dictionary Json > Value Json > String Quoted Json,source Json Meta Structure Array Json > Value Json > String Quoted Json,source Json Meta Structure Dictionary Json > Value Json > String Quoted Json > Punctuation,source Json Meta Structure Array Json > Value Json > String Quoted Json > Punctuation\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Source Json Meta Structure Dictionary Json > Constant Language Json,source Json Meta Structure Array Json > Constant Language Json\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] JSON Property Name\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] JSON Punctuation for Property Name\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"laravel blade tag\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"laravel blade @\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"use statement for other classes\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php namespace declaration\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"error suppression\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php instanceof\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"style double quoted array index normal begin\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"style double quoted array index normal end\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php illegal.non-null-typehinted\"].foreground",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php types\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php call-function\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php function-resets\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"support php constants\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"support php constants\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php goto\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php logical/bitwise operator\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php regexp operator\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php comparison\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"php heredoc/nowdoc\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python function decorator @\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"python function support\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"parameter function js/ts\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"brace function\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"parameter function ruby cs\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"constant.language.symbol.ruby\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"rgb-value\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"rgb value\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"rgb value less\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"sass selector\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"ts primitive/builtin types\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"block scope\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"cs storage type\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"cs local variable\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[176].foreground",
+    "expr": "{syntax.link}",
+    "roles": [
+      "syntax.link",
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[177].foreground",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[178].foreground",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[179].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"String interpolation\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Reset JavaScript string interpolation expression\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Import module JS\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js Flowtype\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js Flow\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js class prop\"].foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "lavender",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#725388",
+      "fen": "#cdbcd2",
+      "mire": "#c3b2d1",
+      "blackwater": "#c0b0ce"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js func parameter\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js template literals begin\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js template literals end\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js template literals variable braces begin\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js template literals variable braces end\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"js operator.assignment\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"go operator\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"go operator\"].foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "overlay2",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#775d6d",
+      "fen": "#c3aab9",
+      "mire": "#b9a0b0",
+      "blackwater": "#b29aa9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Go package name\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"elm prelude\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"elm constant\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"template literal\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"html/pug (jade) escaped characters and entities\"].foreground",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"styling css pseudo-elements/classes to be able to differentiate from classes which are the same colour\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Clojure globals\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Clojure symbols\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Clojure constants\"].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"CoffeeScript Function Argument\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Ini Default Text\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Makefile prerequisities\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Makefile text colour\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Groovy import names\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Groovy Methods\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Groovy Variables\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Groovy Inheritance\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"HLSL Semantic\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"HLSL Types\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"SQL Variables\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"types\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"heading 1, keyword\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"heading 2, callable\"].foreground",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"heading 3, property\"].foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#a15873",
+      "fen": "#eedce5",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"heading 4, type, class, interface\"].foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"heading 5, enums, preprocessor, constant, decorator\"].foreground",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"heading 6, number\"].foreground",
+    "expr": "{syntax.text}",
+    "roles": [
+      "syntax.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"string\"].foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"comments\"].foreground",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"link\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"accent\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"wikiword\"].foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"language operators like '+', '-' etc\"].foreground",
+    "expr": "{syntax.text}",
+    "roles": [
+      "syntax.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"elements to dim\"].foreground",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"C++/C#\"].foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Markdown underscore-style headers\"].foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"meta.brace.square\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"Comments\"].foreground",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"[VSCODE-CUSTOM] Markdown Quote\"].foreground",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#806776",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[\"punctuation.definition.block.sequence.item.yaml\"].foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1",
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#8e7584",
+      "fen": "#ab8ca0",
+      "mire": "#9b8693",
+      "blackwater": "#927d8a"
+    }
+  },
+  {
+    "port": "vscode",
+    "key": "tokenColors[234].foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3b5fd0",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  }
+]

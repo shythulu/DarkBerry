@@ -1,0 +1,46 @@
+{
+  "name": "darkberry-theme",
+  "displayName": "Darkberry",
+  "description": "Darkberry: a four-flavour bog-witch berry theme, from Benjamin Moore Dark Purple (2073-10, #4B3540).",
+  "version": "0.3.0",
+  "publisher": "your-publisher-id",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "light",
+    "berry",
+    "plum",
+    "wine"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Darkberry Wisp",
+        "uiTheme": "vs",
+        "path": "./themes/darkberry-wisp-color-theme.json"
+      },
+      {
+        "label": "Darkberry Fen",
+        "uiTheme": "vs-dark",
+        "path": "./themes/darkberry-fen-color-theme.json"
+      },
+      {
+        "label": "Darkberry Mire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/darkberry-mire-color-theme.json"
+      },
+      {
+        "label": "Darkberry Blackwater",
+        "uiTheme": "vs-dark",
+        "path": "./themes/darkberry-blackwater-color-theme.json"
+      }
+    ]
+  }
+}

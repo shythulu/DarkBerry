@@ -1,0 +1,235 @@
+// Darkberry build.
+//   node build.mjs [path/to/palette.json]
+// Layer 1  src/palette.json            what each colour is
+// Layer 2  src/roles.json              what each colour means (shared by every port)
+// Layer 3  src/overrides/<port>.json   rare, logged, port-only exceptions
+// Templates in src/ports/ and src/vscode/ reference roles (or palette names for
+// structural chrome) inside {braces}. Literal hex values are a build error.
+import fs from "node:fs";
+import path from "node:path";
+import { rgb, mix, toHsl, toOklch, contrast, deltaE } from "./lib/color.mjs";
+import { indexRoles, flavourContext } from "./lib/resolve.mjs";
+
+const root = path.dirname(new URL(import.meta.url).pathname);
+const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
+const readJson = (rel) => JSON.parse(read(rel));
+const out = (rel, data) => {
+  const f = path.join(root, rel);
+  fs.mkdirSync(path.dirname(f), { recursive: true });
+  fs.writeFileSync(f, typeof data === "string" ? data : JSON.stringify(data, null, 2) + "\n");
+};
+
+const P = readJson(process.argv[2] || "src/palette.json");
+const ROLES = readJson("src/roles.json");
+const NON_ACCENT = ["jam", "onjam", "tint"];
+const errors = [], warnings = [];
+const HEX_LITERAL = /#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/;
+
+// ---------- roles ----------
+const roleIndex = indexRoles(ROLES);
+const whyOf = (r) => { const w = r.why; return w && w.includes(".$why") ? ROLES[w.split(".")[0]]["$why"] : w; };
+for (const [name, r] of Object.entries(roleIndex)) {
+  if (r.catppuccin && r.catppuccin !== "=" && !whyOf(r)) errors.push(`role ${name} deviates from Catppuccin without a 'why'`);
+  if (HEX_LITERAL.test(JSON.stringify(r.value))) errors.push(`role ${name} uses a literal hex value`);
+}
+
+// ---------- per-flavour resolution (lib/resolve.mjs) ----------
+const ctxs = Object.entries(P.flavours).map(([id, f]) => flavourContext(id, f, ROLES, roleIndex));
+const usageRef = ctxs.find((x) => x.id === "mire") || ctxs.find((x) => x.f.dark) || ctxs[0];
+
+// ---------- template filling ----------
+const usage = {}; // palette colour -> { roles:Set, ports:{port:count} }
+const note = (port, trace) => {
+  for (const p of trace.palette) {
+    usage[p] ??= { roles: new Set(), ports: {} };
+    trace.roles.forEach((r) => usage[p].roles.add(r));
+    usage[p].ports[port] = (usage[p].ports[port] || 0) + 1;
+  }
+};
+const meta = (ctx) => ({
+  FULL: `${P.name} ${ctx.f.name}`, NAME: P.name, NOTE: ctx.f.note, VERSION: P.version,
+  SLUG: `${P.id}-${ctx.id}`, ID: P.id, SCHEME: ctx.f.dark ? "dark" : "light",
+});
+function fill(ctx, text, port) {
+  if (HEX_LITERAL.test(text.replace(/%\w+%/g, ""))) errors.push(`${port}: template contains a literal hex value`);
+  const M = meta(ctx);
+  return text
+    .replace(/%(\w+)%/g, (_, k) => M[k] ?? `%${k}%`)
+    .replace(/\{([^{}"\s]+)\}([0-9a-f]{2})?/g, (_, expr, alpha) => {
+      try { const [hex, trace] = ctx.resolve(expr); if (ctx.id === usageRef.id) note(port, trace); return hex + (alpha || ""); }
+      catch (e) { errors.push(`${port}: ${e.message}`); return "#000000"; }
+    });
+}
+function applyOverrides(port, kind, content, ctx) {
+  const list = readJson(`src/overrides/${port}.json`).overrides || [];
+  for (const o of list) {
+    if (!o.why) errors.push(`override ${port}/${o.key} has no 'why'`);
+    if (HEX_LITERAL.test(o.value)) errors.push(`override ${port}/${o.key} uses a literal hex value`);
+    const v = fill(ctx, o.value, port);
+    if (kind === "lines") {
+      const re = new RegExp(`^(${o.key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*=?\\s*).*$`, "m");
+      if (!re.test(content)) errors.push(`override ${port}/${o.key}: key not found`);
+      content = content.replace(re, (_, lead) => lead + v);
+    } else content[o.key] = v;
+  }
+  return content;
+}
+
+// ---------- ports ----------
+const kittyT = read("src/ports/kitty.conf"), ghosttyT = read("src/ports/ghostty"), firefoxT = read("src/ports/firefox.json");
+const vscodeT = read("src/vscode/template.json");
+
+// VS Code lint: syntax colours and key UI colours must go through roles
+const VS = JSON.parse(vscodeT);
+const mustBeRole = ["editor.background", "editorCursor.foreground", "terminalCursor.foreground", "focusBorder", "textLink.foreground",
+  "badge.background", "badge.foreground", "button.foreground", "editorError.foreground", "editorWarning.foreground", "editorInfo.foreground",
+  "gitDecoration.addedResourceForeground", "terminal.background", "terminal.selectionBackground", ...Object.keys(VS.colors).filter((k) => k.startsWith("terminal.ansi"))];
+for (const k of mustBeRole) if (!/^\{(ui|syntax|ansi)\./.test(VS.colors[k] || "")) errors.push(`vscode: ${k} must reference a role`);
+for (const t of VS.tokenColors) for (const v of [t.settings.foreground, t.settings.background].filter(Boolean))
+  if (!/^\{syntax\./.test(v)) errors.push(`vscode: token rule "${t.name}" must use a syntax.* role (found ${v})`);
+
+for (const ctx of ctxs) {
+  const slug = `${P.id}-${ctx.id}`, full = `${P.name} ${ctx.f.name}`;
+  out(`ports/kitty/${slug}.conf`, applyOverrides("kitty", "lines", fill(ctx, kittyT, "kitty"), ctx));
+  out(`ports/ghostty/${full}`, applyOverrides("ghostty", "lines", fill(ctx, ghosttyT, "ghostty"), ctx));
+  const ff = JSON.parse(fill(ctx, firefoxT, "firefox"));
+  ff.theme.colors = applyOverrides("firefox", "json", ff.theme.colors, ctx);
+  out(`ports/firefox/${ctx.id}/manifest.json`, ff);
+  const vs = JSON.parse(fill(ctx, vscodeT, "vscode"));
+  vs.colors = applyOverrides("vscode", "json", vs.colors, ctx);
+  out(`ports/vscode/themes/${slug}-color-theme.json`, { name: full, type: ctx.f.dark ? "dark" : "light", ...vs });
+}
+out("ports/vscode/package.json", {
+  name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
+  publisher: "your-publisher-id", license: "MIT", engines: { vscode: "^1.70.0" },
+  categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
+  contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
+});
+
+// ---------- dist/trace.json (what drives every themed key) ----------
+const trace = [];
+const traceExpr = (port, key, raw) => {
+  for (const m of String(raw).matchAll(/\{([^{}"\s]+)\}([0-9a-f]{2})?/g)) {
+    const [, chain] = usageRef.resolve(m[1]);
+    trace.push({ port, key, expr: m[0], roles: chain.roles.filter((r) => !r.startsWith("ansi.")).concat(chain.roles.filter((r) => r.startsWith("ansi."))), palette: [...chain.palette],
+      hex: Object.fromEntries(ctxs.map((x) => [x.id, x.resolve(m[1])[0] + (m[2] || "")])) });
+  }
+};
+const walk = (port, o, pre = "") => { if (typeof o === "string") return traceExpr(port, pre, o);
+  if (Array.isArray(o)) return o.forEach((v, i) => walk(port, v, `${pre}[${v?.name ? JSON.stringify(v.name) : i}]`));
+  if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) walk(port, v, pre ? (pre === "colors" || pre.endsWith("colors") ? `${k}` : `${pre}.${k}`) : k); };
+for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT]])
+  for (const line of text.split("\n")) { const m = /^([\w.-]+(?:\s*=\s*\d+)?)\s*=?\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("#")) traceExpr(port, m[1].replace(/\s+/g, " "), m[2]); }
+walk("firefox", JSON.parse(firefoxT).theme.colors, "colors");
+walk("vscode", VS.colors, "colors");
+walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
+for (const port of ["kitty", "ghostty", "firefox", "vscode"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+out("dist/trace.json", trace);
+
+// ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
+{
+  const vo = readJson("src/overrides/vscode.json").overrides || [];
+  const tl = vo.find((o) => o.key === "tab.activeBorderTop" && !/\}00$/.test(o.value)) ? "top" : vo.find((o) => o.key === "tab.activeBorder" && !/\}00$/.test(o.value)) ? "bottom" : "none";
+  const data = { version: P.version, palette: P, roles: ROLES, tabLine: tl, bindings: trace.map((t) => [t.port, t.key, t.expr]) };
+  const lib = read("lib/color.mjs").replace(/^export /gm, "");
+  out("docs/studio.html", read("src/studio/studio.html").replace("__DATA__", () => JSON.stringify(data)).replace("__COLOR_LIB__", () => lib));
+}
+
+// ---------- dist/palette.json (Catppuccin palette schema, plus jam and onjam) ----------
+const entry = (name, hex, extra) => {
+  const [r, g, b] = rgb(hex).map((v) => Math.round(v * 255)); const [h, s, l] = toHsl(hex); const [L, C, H] = toOklch(hex);
+  return { name, ...extra, hex, rgb: { r, g, b }, hsl: { h, s, l }, oklch: { l: L, c: C, h: ((H * 180) / Math.PI + 360) % 360 } };
+};
+const order = [...P.accentOrder, ...P.neutralOrder];
+const ansiNames = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"];
+out("dist/palette.json", {
+  version: P.version,
+  ...Object.fromEntries(ctxs.map((x, fi) => [x.id, {
+    name: x.f.name, emoji: x.f.emoji, order: fi, dark: x.f.dark,
+    colors: Object.fromEntries(order.map((k, i) => [k, entry(k[0].toUpperCase() + k.slice(1), x.c[k], { order: i, accent: P.accentOrder.includes(k) && !NON_ACCENT.includes(k) })])),
+    ansiColors: Object.fromEntries(ansiNames.map((n, i) => { const N = n[0].toUpperCase() + n.slice(1); return [n, {
+      name: N, order: i,
+      normal: { ...entry(N, x.ansi[i]), code: i },
+      bright: { ...entry(`Bright ${N}`, x.ansi[i + 8]), code: i + 8 },
+    }]; })),
+  }])),
+});
+
+// ---------- checks ----------
+const syntaxRoles = Object.entries(ROLES.syntax).filter(([k]) => !k.startsWith("$"));
+const keyRoles = syntaxRoles.filter(([, r]) => r.key).map(([k]) => k);
+let checks = `# Checks\n\nGenerated by \`build.mjs\`. The build fails on any ✗.\n\n## Contrast on \`ui.background\`\n\nEach role's minimum is set in \`src/roles.json\` (4.5 for text you read, 3.0 for structural glue).\n\n`;
+checks += `| Role | Min | ${ctxs.map((x) => x.f.name).join(" | ")} |\n|---|---:|${ctxs.map(() => "---:").join("|")}|\n`;
+const cRows = [...syntaxRoles.map(([k, r]) => [`syntax.${k}`, r.minContrast ?? 4.5]), ["ui.text", 4.5], ["ui.text.muted", 4.5], ["ui.link", 4.5]];
+for (const [role, min] of cRows) {
+  checks += `| ${role} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(role)[0], x.resolve("ui.background")[0]); if (v < min) errors.push(`${x.f.name}: ${role} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
+}
+checks += `| ui.on.fill on ui.fill | 4.5 | ` + ctxs.map((x) => { const v = contrast(x.resolve("ui.on.fill")[0], x.resolve("ui.fill")[0]); if (v < 4.5) errors.push(`${x.f.name}: on.fill contrast ${v.toFixed(2)}`); return v.toFixed(2) + (v < 4.5 ? " ✗" : ""); }).join(" | ") + " |\n";
+for (const [name, r] of Object.entries(roleIndex)) if (r.minContrastWith) {
+  const [fg, min] = r.minContrastWith;
+  checks += `| ${fg} on ${name} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(fg)[0], x.resolve(name)[0]); if (v < min) errors.push(`${x.f.name}: ${fg} on ${name} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
+}
+checks += `\n## Distinctness of key syntax roles\n\nOKLab distance ×100 between every pair of key syntax roles. Calibrated against Catppuccin, whose closest core pair is 5.7 (Frappé). Under 7 is a warning, under 5 fails. Closest pairs per flavour:\n\n`;
+for (const x of ctxs) {
+  const pairs = [];
+  for (let i = 0; i < keyRoles.length; i++) for (let j = i + 1; j < keyRoles.length; j++)
+    pairs.push([keyRoles[i], keyRoles[j], deltaE(x.resolve(`syntax.${keyRoles[i]}`)[0], x.resolve(`syntax.${keyRoles[j]}`)[0])]);
+  pairs.sort((a, b) => a[2] - b[2]);
+  for (const [a, b, d] of pairs) { if (d < 5) errors.push(`${x.f.name}: syntax.${a} and syntax.${b} too close (${d.toFixed(1)})`); else if (d < 7) warnings.push(`${x.f.name}: syntax.${a} / syntax.${b} ${d.toFixed(1)}`); }
+  checks += `- **${x.f.name}:** ` + pairs.slice(0, 4).map(([a, b, d]) => `${a}/${b} ${d.toFixed(1)}${d < 5 ? " ✗" : d < 7 ? " ~" : ""}`).join(", ") + "\n";
+}
+out("docs/CHECKS.md", checks);
+
+// ---------- docs/ROLES.md (roles, values, Catppuccin comparison) ----------
+let rolesMd = `# Roles\n\nGenerated from \`src/roles.json\`. Every port references these names.\n\n| Role | Value | ${ctxs.map((x) => x.f.name).join(" | ")} | Catppuccin |\n|---|---|${ctxs.map(() => "---").join("|")}|---|\n`;
+for (const [name, r] of Object.entries(roleIndex)) {
+  const v = typeof r.value === "object" ? `dark: ${r.value.dark}, light: ${r.value.light}` : r.value;
+  rolesMd += `| \`${name}\` | \`${v}\` | ${ctxs.map((x) => `\`${x.resolve(name)[0]}\``).join(" | ")} | ${r.catppuccin === "=" ? "same" : r.catppuccin || ""} |\n`;
+}
+rolesMd += `\n## Deviations from Catppuccin\n\n| Role | Darkberry | Catppuccin | Why |\n|---|---|---|---|\n`;
+for (const [name, r] of Object.entries(roleIndex)) if (r.catppuccin && r.catppuccin !== "=")
+  rolesMd += `| \`${name}\` | \`${typeof r.value === "object" ? JSON.stringify(r.value) : r.value}\` | ${r.catppuccin} | ${whyOf(r)} |\n`;
+rolesMd += `\nAligned with Catppuccin: ANSI mapping and bright formula, all background, text and status roles, cursor text, inactive borders, marks, and extended terminal colours 16 and 17.\n`;
+out("docs/ROLES.md", rolesMd);
+
+// ---------- docs/USAGE.md (blast radius of each palette colour) ----------
+let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | VS Code | Firefox |\n|---|---|---:|---:|---:|---:|\n`;
+for (const k of order) {
+  const u = usage[k];
+  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "vscode", "firefox"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
+}
+usageMd += `\nANSI colours (\`ansi.0\` to \`ansi.15\`) come from the palette via \`roles.json\` → \`ansi\`, the same way for every terminal.\n`;
+out("docs/USAGE.md", usageMd);
+
+// ---------- docs/specimen.html (all ports, all flavours, one page) ----------
+const card = (x) => {
+  const R = (e) => x.resolve(e)[0], a = x.ansi, s = (role, t, st = "") => `<span style="color:${R(role)};${st}">${t}</span>`;
+  const code = [
+    s("syntax.comment", "// every role in one place", "font-style:italic"),
+    `${s("syntax.keyword", "import")} ${s("syntax.punctuation", "*")} ${s("syntax.keyword", "as")} ${s("syntax.namespace", "Orchard")} ${s("syntax.keyword", "from")} ${s("syntax.string", '"orchard"')}${s("syntax.punctuation", ";")}`,
+    `${s("syntax.keyword", "export function")} ${s("syntax.function", "sealJar")}${s("syntax.punctuation", "(")}${s("syntax.variable", "jam")}${s("syntax.punctuation", ":")} ${s("syntax.type", "Preserve")}${s("syntax.punctuation", "):")} ${s("syntax.type", "Jar")} ${s("syntax.punctuation", "{")}`,
+    `  ${s("syntax.keyword", "const")} ${s("syntax.variable", "lid")} ${s("syntax.operator", "=")} ${s("syntax.namespace", "Orchard")}${s("syntax.punctuation", ".")}${s("syntax.function", "findLid")}${s("syntax.punctuation", "(")}${s("syntax.variable", "jam")}${s("syntax.punctuation", ".")}${s("syntax.property", "size")}${s("syntax.punctuation", ");")}`,
+    `  ${s("syntax.keyword", "if")} ${s("syntax.punctuation", "(!")}${s("syntax.variable", "lid")}${s("syntax.punctuation", ")")} ${s("syntax.error", "throw")} ${s("syntax.type", "PantryError")}${s("syntax.punctuation", "(")}${s("syntax.string", '"no lid"')}${s("syntax.punctuation", ");")}`,
+    `  ${s("syntax.keyword", "return")} ${s("syntax.variable", "jam")}${s("syntax.punctuation", ".")}${s("syntax.function", "replace")}${s("syntax.punctuation", "(")}${s("syntax.regex", "/ber+y/g")}${s("syntax.punctuation", ",")} ${s("syntax.constant", "MAX")}${s("syntax.punctuation", ",")} ${s("syntax.number", "0.72")}${s("syntax.punctuation", ");")}`,
+    `${s("syntax.punctuation", "}")}  ${s("syntax.link", "https://jam.dev")}`,
+  ].join("\n");
+  const ansiRow = (from) => a.slice(from, from + 8).map((c) => `<i style="background:${c}"></i>`).join("");
+  return `<section style="background:${R("ui.pane.tertiary")};color:${R("ui.text")}">
+<h2>${x.f.emoji} ${P.name} ${x.f.name}</h2>
+<div class="ff" style="background:${R("ui.pane.tertiary")}"><span class="tab" style="background:${R("ui.background")};border-top:2px solid ${R("ui.accent")}">Jam recipes</span><span class="tab" style="color:${R("ui.text.muted")}">Pantry</span></div>
+<div class="bar" style="background:${R("ui.background")}"><span class="url" style="background:${R("surface0")};border:1px solid ${R("ui.accent")};color:${R("ui.text")}">https://jam.dev/<span style="background:${R("ui.selection")}">recipes</span></span><span class="badge" style="background:${R("ui.fill")};color:${R("ui.on.fill")}">3</span></div>
+<pre class="ed" style="background:${R("ui.background")};color:${R("syntax.text")}">${code}<span class="cur" style="background:${R("ui.cursor")}"> </span></pre>
+<pre class="term" style="background:${R("ui.background")};color:${R("ui.text")};border:1px solid ${R("ui.border.active")}"><span style="color:${a[2]}">➜</span> <span style="color:${a[4]}">~/jam</span> <span style="color:${a[5]}">git:(main)</span> ls\n<span style="color:${a[12]}">recipes</span>  <span style="color:${a[10]}">seal.sh</span>  notes.md  <span style="color:${a[1]}">broken.lnk</span>  <span style="color:${a[3]}">todo</span>\n<span style="color:${R("ui.link")};text-decoration:underline">https://jam.dev</span>  <span style="background:${R("ui.selection")}">selected text</span>\n<span class="ansi">${ansiRow(0)}</span>\n<span class="ansi">${ansiRow(8)}</span></pre>
+</section>`;
+};
+out("docs/specimen.html", `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${P.name} specimen</title>
+<style>body{margin:0;font-family:system-ui,sans-serif;background:#111}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr))}section{padding:18px}h2{font-size:15px;font-weight:500;margin:0 0 10px}
+.ff{display:flex;gap:2px;padding:6px 6px 0}.tab{padding:6px 14px;font-size:12px;border-radius:6px 6px 0 0}.bar{display:flex;gap:8px;align-items:center;padding:6px}.url{flex:1;padding:4px 10px;border-radius:6px;font-size:12px}.badge{font-size:11px;padding:2px 7px;border-radius:9px}
+pre{margin:10px 0 0;padding:10px 12px;border-radius:8px;font:12.5px/1.6 ui-monospace,monospace;overflow-x:auto}.cur{display:inline-block;width:.6em}.ansi{display:flex;gap:3px;margin-top:4px}.ansi i{display:block;width:22px;height:14px;border-radius:3px}</style></head>
+<body><main>${ctxs.map(card).join("\n")}</main></body></html>\n`);
+
+// ---------- result ----------
+for (const w of new Set(warnings)) console.warn("warning:", w);
+const uniq = [...new Set(errors)];
+if (uniq.length) { for (const e of uniq) console.error("error:", e); console.error(`Build failed with ${uniq.length} error(s).`); process.exit(1); }
+console.log(`Built ${ctxs.length} flavours. ${warnings.length} warning(s). See docs/CHECKS.md, docs/ROLES.md, docs/USAGE.md, docs/specimen.html.`);

@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Darkberry Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2e7ee;--panel:#faf4f8;--sunk:#e9dbe4;--line:#cebbc7;--text:#4c3342;--muted:#66505e;--subtle:#937e8b;--accent:#d21570;--fill:#c34567;--onfill:#ffffff;--warn:#90670a;--bad:#cc3838;
+  --ui:"Recursive",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Recursive",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#22171e;--panel:#291f25;--sunk:#1b1218;--line:#3c2a35;--text:#eee4ea;--muted:#c9bdc4;--subtle:#8f838a;--accent:#fd7bb0;--fill:#c34567;--onfill:#ffffff;--warn:#e8c98a;--bad:#f06a6a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#22171e;--panel:#291f25;--sunk:#1b1218;--line:#3c2a35;--text:#eee4ea;--muted:#c9bdc4;--subtle:#8f838a;--accent:#fd7bb0;--fill:#c34567;--onfill:#ffffff;--warn:#e8c98a;--bad:#f06a6a;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 var(--ui);font-variation-settings:"CASL" .35}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:5px 11px;cursor:pointer}
+button:hover{border-color:var(--subtle)}
+button.primary{background:var(--fill);color:var(--onfill);border-color:var(--fill)}
+button[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 -2px 0 var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=range]{accent-color:var(--accent);width:100%}
+select,input[type=text],textarea{background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:5px 8px;width:100%}
+.mono{font-family:var(--mono);font-variation-settings:"MONO" 1,"CASL" 0}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:14px 20px;border-bottom:1px solid var(--line)}
+header h1{margin:0;font-size:21px;font-weight:650;font-variation-settings:"CASL" 1;letter-spacing:-.01em}
+header h1 small{font-weight:400;font-size:14px;color:var(--muted);margin-left:8px;font-variation-settings:"CASL" .35}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.spacer{flex:1}
+main{display:grid;grid-template-columns:250px minmax(0,1fr) 330px;min-height:calc(100vh - 66px)}
+aside,section.insp{padding:16px;overflow:auto}
+aside{border-right:1px solid var(--line)}
+section.insp{border-left:1px solid var(--line);background:var(--panel)}
+.stage{padding:18px;min-width:0}
+h2{font-size:14px;font-weight:600;margin:18px 0 8px;color:var(--muted);font-variation-settings:"CASL" .6}
+h2:first-child{margin-top:0}
+.chips{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.chip{aspect-ratio:1;border-radius:8px;border:1px solid var(--line);padding:0;position:relative}
+.chip[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:2px;box-shadow:none}
+.chip.mod::after,.rl.mod::after{content:"";position:absolute;top:3px;right:3px;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1.5px var(--panel)}
+.roles{display:flex;flex-direction:column;gap:2px}
+.rl{display:flex;align-items:center;gap:8px;border:0;background:none;padding:4px 6px;border-radius:6px;text-align:left;font-size:13px;position:relative}
+.rl:hover{background:var(--sunk)}
+.rl[aria-pressed="true"]{background:var(--sunk);box-shadow:inset 3px 0 0 var(--accent)}
+.rl i{width:14px;height:14px;border-radius:4px;flex:none;border:1px solid var(--line)}
+.rl span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hint{font-size:13px;color:var(--muted);margin:0 0 12px}
+.win{border-radius:10px;overflow:hidden;margin:0 0 16px;border:1px solid var(--line)}
+.lbl{font-size:12px;color:var(--muted);margin:0 0 5px}
+[data-src]{cursor:pointer}
+[data-src]:hover{outline:1.5px dashed var(--accent);outline-offset:-1.5px}
+.big{height:72px;border-radius:10px;border:1px solid var(--line);margin:0 0 10px}
+.dial{display:grid;grid-template-columns:78px 1fr 58px;gap:8px;align-items:center;font-size:13px;margin:0 0 6px}
+.dial output{text-align:right}
+.row{display:flex;gap:8px;align-items:center;margin:0 0 8px;flex-wrap:wrap}
+.fl4{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:0 0 12px}
+.fl4 div{border-radius:7px;height:34px;border:1px solid var(--line);font-size:11px;padding:2px 5px;display:flex;align-items:flex-end}
+.use{font-size:13px;margin:0;padding:0;list-style:none}
+.use li{padding:3px 0;border-bottom:1px solid var(--line)}
+.use details summary{cursor:pointer}
+.use .keys{font-size:12px;color:var(--muted);max-height:160px;overflow:auto;padding:4px 0 4px 12px}
+.checks li{font-size:13px;padding:4px 6px;border-radius:6px;margin:0 0 3px;list-style:none;cursor:pointer}
+.checks{padding:0;margin:0}
+.checks .bad{background:color-mix(in srgb,var(--bad) 16%,transparent)}
+.checks .warn{background:color-mix(in srgb,var(--warn) 16%,transparent)}
+.ok{font-size:13px;color:var(--muted)}
+.err{color:var(--bad);font-size:13px;margin:4px 0 8px}
+.export{margin:0 18px 18px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.export pre{background:var(--sunk);padding:12px;border-radius:8px;max-height:280px;overflow:auto;font-size:12.5px;margin:10px 0}
+.export ol{font-size:14px;padding-left:20px;margin:6px 0}
+code{font-family:var(--mono);font-variation-settings:"MONO" 1;font-size:.92em}
+@media (max-width:1150px){main{grid-template-columns:230px minmax(0,1fr)}section.insp{grid-column:1/-1;border-left:0;border-top:1px solid var(--line)}}
+@media (max-width:760px){main{grid-template-columns:minmax(0,1fr)}aside{border-right:0;border-bottom:1px solid var(--line)}.chips{grid-template-columns:repeat(9,1fr)}}
+@media (prefers-reduced-motion:no-preference){.chip,.rl{transition:background .12s}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Darkberry Studio <small id="ver"></small></h1>
+  <div class="seg" role="group" aria-label="Flavour" id="flavours"></div>
+  <div class="seg" role="group" aria-label="Palette edits apply to">
+    <button id="scopeOne" aria-pressed="true">Edit this flavour</button>
+    <button id="scopeAll" aria-pressed="false">Edit all flavours</button>
+  </div>
+  <div class="spacer"></div>
+  <button id="undoAll">Discard changes</button>
+  <button id="exportBtn" class="primary">Export patch</button>
+</header>
+<main>
+  <aside>
+    <h2>Palette</h2>
+    <p class="lbl">Neutrals</p><div class="chips" id="neutrals"></div>
+    <p class="lbl" style="margin-top:10px">Accents</p><div class="chips" id="accents"></div>
+    <h2>Roles</h2>
+    <input type="text" id="roleFilter" placeholder="Filter roles, e.g. tab" aria-label="Filter roles">
+    <div class="roles" id="roles" style="margin-top:8px"></div>
+  </aside>
+  <div class="stage">
+    <p class="hint">Click anything in the previews to see which role and palette colour it comes from.</p>
+    <div id="specimen"></div>
+  </div>
+  <section class="insp" aria-live="polite">
+    <div id="inspector"></div>
+    <h2>Checks</h2>
+    <ul class="checks" id="checks"></ul>
+  </section>
+</main>
+<div class="export" id="exportPanel" hidden></div>
+<script>
+window.DARKBERRY = {"version":"0.3.0","palette":{"name":"Darkberry","id":"darkberry","version":"0.3.0","description":"Darkberry: a four-flavour bog-witch berry theme, from Benjamin Moore Dark Purple (2073-10, #4B3540).","neutralOrder":["text","subtext1","subtext0","overlay2","overlay1","overlay0","surface2","surface1","surface0","base","mantle","crust"],"accentOrder":["blossom","petal","berry","plum","cranberry","cherry","apricot","honey","gooseberry","juniper","frost","bilberry","blueberry","lavender","jam","onjam","tint"],"flavours":{"wisp":{"name":"Wisp","dark":false,"note":"Light. Text is a violet-leaning cousin of the paint colour.","colors":{"text":"#4f3143","subtext1":"#5a4050","subtext0":"#694e5f","overlay2":"#806776","overlay1":"#967d8c","overlay0":"#ac93a2","surface2":"#c3abb9","surface1":"#d0bac8","surface0":"#dfcbd8","base":"#fbf4f8","mantle":"#f3e6ef","crust":"#ebdae5","blossom":"#a15873","petal":"#b7437d","berry":"#d21570","plum":"#9a4cc0","cranberry":"#cc3838","cherry":"#b14a5e","apricot":"#b15423","honey":"#90670a","gooseberry":"#377a37","juniper":"#1d7d6c","frost":"#1b778c","bilberry":"#2a6fb0","blueberry":"#3b5fd0","lavender":"#7a58b0","jam":"#b9488b","onjam":"#ffffff","tint":"#a82590"},"emoji":"🕯️"},"fen":{"name":"Fen","dark":true,"note":"Soft dark. The background (#4c3342) is within a shade of the paint colour.","colors":{"text":"#f2e6ee","subtext1":"#dfced9","subtext0":"#ccbac5","overlay2":"#bd9fb1","overlay1":"#a28297","overlay0":"#8f6e82","surface2":"#7b5a6e","surface1":"#6c4c60","surface0":"#5d3e51","base":"#4f3143","mantle":"#402838","crust":"#35212e","blossom":"#eedce5","petal":"#ffc4dd","berry":"#fa99b4","plum":"#ecbcfc","cranberry":"#ff8a8a","cherry":"#e7aab5","apricot":"#f7bf9e","honey":"#f0d6a0","gooseberry":"#b7e6b7","juniper":"#bad9d4","frost":"#a0d0da","bilberry":"#9cc6ea","blueberry":"#a4c3f6","lavender":"#cebede","jam":"#ba4889","onjam":"#ffffff","tint":"#d690c3"},"emoji":"🌾"},"mire":{"name":"Mire","dark":true,"note":"The main dark flavour: wine-dark mire with berry accents.","colors":{"text":"#efe3eb","subtext1":"#ddd0d9","subtext0":"#cbbcc5","overlay2":"#ad8da2","overlay1":"#91828b","overlay0":"#7d6976","surface2":"#4f3143","surface1":"#3e2936","surface0":"#32222c","base":"#2a1e26","mantle":"#23161f","crust":"#1c1119","blossom":"#e7c5d8","petal":"#feafd4","berry":"#fd7ca5","plum":"#ddb0ec","cranberry":"#f06a6a","cherry":"#d3919c","apricot":"#f2ad8a","honey":"#e8c98a","gooseberry":"#a3daa3","juniper":"#9ed0c4","frost":"#86c0cc","bilberry":"#7fb4e0","blueberry":"#8fb0f2","lavender":"#baa8dc","jam":"#ba4889","onjam":"#ffffff","tint":"#d577be"},"emoji":"🌫️"},"blackwater":{"name":"Blackwater","dark":true,"note":"Darkest. Deeper wine surfaces, same accents as Mire.","colors":{"text":"#ede1e9","subtext1":"#d8cbd4","subtext0":"#c6b7c0","overlay2":"#a58799","overlay1":"#887882","overlay0":"#6b5764","surface2":"#432c3b","surface1":"#34222e","surface0":"#271a23","base":"#1d121a","mantle":"#170d13","crust":"#12090f","blossom":"#e7c5d8","petal":"#feafd4","berry":"#fd7ca5","plum":"#ddb0ec","cranberry":"#f06a6a","cherry":"#d3919c","apricot":"#f2ad8a","honey":"#e8c98a","gooseberry":"#a3daa3","juniper":"#9ed0c4","frost":"#86c0cc","bilberry":"#7fb4e0","blueberry":"#8fb0f2","lavender":"#baa8dc","jam":"#ba4889","onjam":"#ffffff","tint":"#d577be"},"emoji":"🌑"}},"defaultVariant":"darkberry"},"roles":{"$comment":"Layer 2: semantic roles. Every port references these names. A value is a palette colour, another role, mix(a,b,t), or {dark,light}. 'catppuccin' records Catppuccin's choice for the same role; '=' means aligned. A deviation must carry a 'why'.","ui":{"background":{"value":"base","catppuccin":"="},"pane.secondary":{"value":"mantle","catppuccin":"="},"pane.tertiary":{"value":"crust","catppuccin":"="},"text":{"value":"text","catppuccin":"="},"text.muted":{"value":"subtext0","catppuccin":"="},"text.subtle":{"value":"overlay1","catppuccin":"="},"accent":{"value":"berry","catppuccin":"lavender (terminal borders), blue (tags)","why":"Berry pink is Darkberry's signature for focus and activity: the one accent the whole theme is recognised by."},"on.accent":{"value":"base","catppuccin":"="},"fill":{"value":"jam","catppuccin":"no equivalent (accents are used as fills directly)","why":"A deeper jam colour is kept for buttons, badges and progress bars, so saturated pink never covers large areas."},"on.fill":{"value":"onjam","catppuccin":"base (text on accent)","why":"Base on jam fails contrast in every flavour (about 3:1). White passes at 4.8:1."},"focus":{"value":"mix(cherry,overlay1,0.5)","catppuccin":"lavender","why":"A soft berry focus ring stays visible without competing with the berry accent."},"border.active":{"value":"ui.accent","catppuccin":"lavender","why":"Follows ui.accent."},"border.inactive":{"value":"overlay0","catppuccin":"="},"cursor":{"value":"petal","catppuccin":"rosewater","why":"A bright rose cursor is easy to find on dark, wine-tinted backgrounds; blossom, the rosewater slot, is too dusty for that."},"cursor.text":{"value":{"dark":"crust","light":"base"},"catppuccin":"="},"selection":{"value":"mix(surface1,berry,0.25)","catppuccin":"overlay2 at 20-30% opacity","why":"Selections are tinted with berry so they read as part of the theme rather than as grey."},"link":{"value":"frost","catppuccin":"blue","why":"Links are teal-blue frost because blueberry already carries constants."},"success":{"value":"gooseberry","catppuccin":"="},"warning":{"value":"honey","catppuccin":"="},"error":{"value":"cranberry","catppuccin":"="},"info":{"value":"juniper","catppuccin":"="},"bell":{"value":"honey","catppuccin":"="},"mark1":{"value":"lavender","catppuccin":"="},"mark2":{"value":"plum","catppuccin":"="},"mark3":{"value":"bilberry","catppuccin":"="},"mark.text":{"value":"ui.cursor.text","catppuccin":"="},"tab.active":{"value":"ui.background"},"tab.inactive":{"value":"ui.pane.secondary"},"tab.indicator":{"value":"tint","minContrastWith":["ui.on.tab.indicator",4.5],"note":"Follows the theme's tint: berry in Darkberry, each berry's own colour in the nature tints."},"on.tab.indicator":{"value":"ui.on.accent"},"badge":{"value":"ui.fill","minContrastWith":["ui.on.badge",4.5]},"on.badge":{"value":"ui.on.fill"}},"terminal":{"color16":{"value":"apricot","catppuccin":"="},"color17":{"value":"blossom","catppuccin":"="}},"syntax":{"$why":"Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex).","text":{"value":"text","catppuccin":"="},"keyword":{"value":"berry","catppuccin":"mauve","why":"syntax.$why","minContrast":4.5,"key":true},"function":{"value":"petal","catppuccin":"blue","why":"syntax.$why","minContrast":4.5,"key":true},"type":{"value":"plum","catppuccin":"yellow","why":"syntax.$why","minContrast":4.5,"key":true},"namespace":{"value":"lavender","catppuccin":"yellow (as types)","why":"Namespaces get their own cooler lilac so module names stay distinct from types.","minContrast":4.5,"key":true},"constant":{"value":"blueberry","catppuccin":"peach","why":"syntax.$why","minContrast":4.5,"key":true},"number":{"value":"honey","catppuccin":"peach","why":"syntax.$why","minContrast":4.5,"key":true},"string":{"value":"gooseberry","catppuccin":"=","minContrast":4.5,"key":true},"regex":{"value":"juniper","catppuccin":"pink","why":"syntax.$why","minContrast":4.5,"key":true},"variable":{"value":"blossom","catppuccin":"text (maroon for parameters)","why":"Identifiers take a muted rose so code keeps a berry cast without shouting.","minContrast":4.5,"key":true},"property":{"value":"mix(lavender,subtext0,0.5)","catppuccin":"blue","why":"A mauve-grey keeps object keys quieter than functions.","minContrast":4.5},"operator":{"value":"mix(overlay2,subtext0,0.4)","catppuccin":"sky","why":"Structural glue recedes instead of being coloured.","minContrast":3},"punctuation":{"value":"mix(overlay1,overlay2,0.35)","catppuccin":"overlay2","why":"Slightly quieter than comments, so brackets fade behind code.","minContrast":3},"comment":{"value":"overlay2","catppuccin":"=","minContrast":4.5},"link":{"value":"ui.link","catppuccin":"blue","why":"Follows ui.link.","minContrast":4.5},"error":{"value":"ui.error","catppuccin":"=","minContrast":4.5,"key":true},"deprecated":{"value":"mix(overlay1,overlay2,0.6)","catppuccin":"no equivalent","why":"A dimmed grey marks code on its way out.","minContrast":3},"unimplemented":{"value":"mix(overlay1,lavender,0.2)","catppuccin":"no equivalent","why":"A faint lilac-grey marks stubs and placeholders.","minContrast":3},"diff.removed":{"value":"mix(cranberry,cherry,0.5)","catppuccin":"red","why":"A softer red for removed lines, so diffs don't read as errors.","minContrast":4.5}},"ansi":{"$comment":"ANSI colours are palette-level, as in Catppuccin, and follow its mapping and bright formula exactly.","red":"cranberry","green":"gooseberry","yellow":"honey","blue":"blueberry","magenta":"berry","cyan":"juniper"}},"tabLine":"none","bindings":[["kitty","foreground","{ui.text}"],["kitty","background","{ui.background}"],["kitty","selection_foreground","{ui.text}"],["kitty","selection_background","{ui.selection}"],["kitty","cursor","{ui.cursor}"],["kitty","cursor_text_color","{ui.cursor.text}"],["kitty","url_color","{ui.link}"],["kitty","active_border_color","{ui.border.active}"],["kitty","inactive_border_color","{ui.border.inactive}"],["kitty","bell_border_color","{ui.bell}"],["kitty","wayland_titlebar_color","{ui.pane.secondary}"],["kitty","macos_titlebar_color","{ui.pane.secondary}"],["kitty","active_tab_foreground","{ui.on.tab.indicator}"],["kitty","active_tab_background","{ui.tab.indicator}"],["kitty","inactive_tab_foreground","{ui.text.muted}"],["kitty","inactive_tab_background","{ui.tab.inactive}"],["kitty","tab_bar_background","{ui.pane.tertiary}"],["kitty","mark1_foreground","{ui.mark.text}"],["kitty","mark1_background","{ui.mark1}"],["kitty","mark2_foreground","{ui.mark.text}"],["kitty","mark2_background","{ui.mark2}"],["kitty","mark3_foreground","{ui.mark.text}"],["kitty","mark3_background","{ui.mark3}"],["kitty","color0","{ansi.0}"],["kitty","color8","{ansi.8}"],["kitty","color1","{ansi.1}"],["kitty","color9","{ansi.9}"],["kitty","color2","{ansi.2}"],["kitty","color10","{ansi.10}"],["kitty","color3","{ansi.3}"],["kitty","color11","{ansi.11}"],["kitty","color4","{ansi.4}"],["kitty","color12","{ansi.12}"],["kitty","color5","{ansi.5}"],["kitty","color13","{ansi.13}"],["kitty","color6","{ansi.6}"],["kitty","color14","{ansi.14}"],["kitty","color7","{ansi.7}"],["kitty","color15","{ansi.15}"],["kitty","color16","{terminal.color16}"],["kitty","color17","{terminal.color17}"],["ghostty","palette = 0","{ansi.0}"],["ghostty","palette = 1","{ansi.1}"],["ghostty","palette = 2","{ansi.2}"],["ghostty","palette = 3","{ansi.3}"],["ghostty","palette = 4","{ansi.4}"],["ghostty","palette = 5","{ansi.5}"],["ghostty","palette = 6","{ansi.6}"],["ghostty","palette = 7","{ansi.7}"],["ghostty","palette = 8","{ansi.8}"],["ghostty","palette = 9","{ansi.9}"],["ghostty","palette = 10","{ansi.10}"],["ghostty","palette = 11","{ansi.11}"],["ghostty","palette = 12","{ansi.12}"],["ghostty","palette = 13","{ansi.13}"],["ghostty","palette = 14","{ansi.14}"],["ghostty","palette = 15","{ansi.15}"],["ghostty","background","{ui.background}"],["ghostty","foreground","{ui.text}"],["ghostty","cursor-color","{ui.cursor}"],["ghostty","cursor-text","{ui.cursor.text}"],["ghostty","selection-background","{ui.selection}"],["ghostty","selection-foreground","{ui.text}"],["ghostty","split-divider-color","{ui.border.inactive}"],["firefox","frame","{ui.pane.tertiary}"],["firefox","frame_inactive","{ui.pane.tertiary}"],["firefox","tab_selected","{ui.tab.active}"],["firefox","tab_text","{ui.text}"],["firefox","tab_background_text","{ui.text.muted}"],["firefox","tab_line","{ui.tab.indicator}"],["firefox","tab_loading","{ui.accent}"],["firefox","toolbar","{ui.background}"],["firefox","toolbar_text","{ui.text}"],["firefox","bookmark_text","{ui.text}"],["firefox","icons","{ui.text.muted}"],["firefox","icons_attention","{ui.accent}"],["firefox","toolbar_field","{surface0}"],["firefox","toolbar_field_text","{ui.text}"],["firefox","toolbar_field_border","{surface1}"],["firefox","toolbar_field_focus","{surface0}"],["firefox","toolbar_field_text_focus","{ui.text}"],["firefox","toolbar_field_border_focus","{ui.accent}"],["firefox","toolbar_field_highlight","{ui.selection}"],["firefox","toolbar_field_highlight_text","{ui.text}"],["firefox","toolbar_top_separator","{ui.pane.tertiary}"],["firefox","toolbar_bottom_separator","{surface0}"],["firefox","toolbar_vertical_separator","{surface1}"],["firefox","popup","{ui.pane.secondary}"],["firefox","popup_text","{ui.text}"],["firefox","popup_border","{surface1}"],["firefox","popup_highlight","{ui.selection}"],["firefox","popup_highlight_text","{ui.text}"],["firefox","sidebar","{ui.pane.secondary}"],["firefox","sidebar_text","{ui.text}"],["firefox","sidebar_border","{surface0}"],["firefox","sidebar_highlight","{ui.selection}"],["firefox","sidebar_highlight_text","{ui.text}"],["firefox","ntp_background","{ui.background}"],["firefox","ntp_text","{ui.text}"],["firefox","button_background_hover","{surface0}"],["firefox","button_background_active","{surface1}"],["vscode","foreground","{ui.text}"],["vscode","focusBorder","{ui.focus}"],["vscode","selection.background","{mix(surface1,plum,0.2)}58"],["vscode","scrollbar.shadow","{crust}"],["vscode","activityBar.foreground","{text}"],["vscode","activityBar.background","{base}"],["vscode","activityBar.inactiveForeground","{text}66"],["vscode","activityBarBadge.background","{ui.badge}"],["vscode","activityBar.border","{surface1}"],["vscode","activityBar.activeBackground","{mantle}"],["vscode","sideBar.background","{mantle}"],["vscode","sideBar.foreground","{subtext0}"],["vscode","sideBarSectionHeader.background","{mantle}"],["vscode","sideBarSectionHeader.foreground","{cherry}"],["vscode","sideBarSectionHeader.border","{base}00"],["vscode","sideBarTitle.foreground","{subtext0}"],["vscode","list.inactiveSelectionBackground","{mix(surface0,surface1,0.6)}"],["vscode","list.inactiveSelectionForeground","{subtext0}"],["vscode","list.hoverBackground","{mix(base,surface0,0.6)}"],["vscode","list.hoverForeground","{subtext0}"],["vscode","list.activeSelectionBackground","{mix(surface1,berry,0.25)}"],["vscode","list.activeSelectionForeground","{text}"],["vscode","tree.indentGuidesStroke","{surface2}"],["vscode","list.dropBackground","{mix(surface0,surface1,0.6)}"],["vscode","list.highlightForeground","{petal}"],["vscode","list.focusOutline","{mix(cherry,overlay1,0.5)}80"],["vscode","list.focusAndSelectionOutline","{ui.focus}"],["vscode","list.focusBackground","{mix(surface1,berry,0.15)}"],["vscode","list.focusForeground","{text}"],["vscode","listFilterWidget.background","{mix(surface1,berry,0.15)}"],["vscode","listFilterWidget.outline","{crust}00"],["vscode","listFilterWidget.noMatchesOutline","{cherry}"],["vscode","statusBar.foreground","{text}"],["vscode","statusBar.background","{mantle}"],["vscode","statusBarItem.hoverBackground","{mix(base,surface0,0.6)}"],["vscode","statusBarItem.hoverForeground","{text}"],["vscode","statusBar.debuggingBackground","{mix(surface1,berry,0.2)}"],["vscode","statusBar.debuggingForeground","{text}"],["vscode","statusBar.noFolderBackground","{base}"],["vscode","statusBar.noFolderForeground","{text}"],["vscode","statusBarItem.remoteBackground","{ui.fill}"],["vscode","titleBar.activeBackground","{mantle}"],["vscode","titleBar.activeForeground","{text}"],["vscode","titleBar.inactiveBackground","{crust}"],["vscode","titleBar.inactiveForeground","{overlay1}"],["vscode","titleBar.border","{crust}00"],["vscode","menubar.selectionForeground","{text}"],["vscode","menubar.selectionBackground","{base}"],["vscode","menu.foreground","{subtext0}"],["vscode","menu.background","{mix(mantle,base,0.4)}"],["vscode","menu.selectionForeground","{text}"],["vscode","menu.selectionBackground","{mix(surface1,berry,0.15)}"],["vscode","menu.selectionBorder","{crust}00"],["vscode","menu.separatorBackground","{surface1}"],["vscode","menu.border","{surface1}85"],["vscode","commandCenter.foreground","{subtext0}"],["vscode","commandCenter.background","{base}"],["vscode","commandCenter.border","{surface1}80"],["vscode","commandCenter.activeBackground","{mix(surface0,surface1,0.6)}"],["vscode","commandCenter.activeForeground","{text}"],["vscode","commandCenter.inactiveForeground","{overlay1}"],["vscode","button.background","{mix(jam,crust,0.2)}"],["vscode","button.hoverBackground","{mix(jam,cherry,0.4)}"],["vscode","button.border","{text}1f"],["vscode","button.secondaryForeground","{text}"],["vscode","button.secondaryBackground","{mix(surface0,surface1,0.6)}"],["vscode","button.secondaryHoverBackground","{mix(surface1,surface2,0.7)}"],["vscode","input.background","{surface0}"],["vscode","input.border","{crust}00"],["vscode","input.foreground","{subtext0}"],["vscode","inputOption.activeBackground","{cherry}66"],["vscode","inputOption.activeBorder","{berry}00"],["vscode","input.placeholderForeground","{overlay2}"],["vscode","textLink.foreground","{ui.link}"],["vscode","textLink.activeForeground","{ui.link}"],["vscode","editor.background","{ui.background}"],["vscode","editor.foreground","{syntax.text}"],["vscode","editorLineNumber.foreground","{ui.text.subtle}"],["vscode","editorCursor.foreground","{ui.cursor}"],["vscode","editor.selectionBackground","{mix(surface0,plum,0.18)}80"],["vscode","editor.inactiveSelectionBackground","{mix(surface0,surface1,0.6)}"],["vscode","editorWhitespace.foreground","{text}29"],["vscode","editor.selectionHighlightBackground","{mix(cherry,overlay1,0.5)}20"],["vscode","editor.selectionHighlightBorder","{mix(cherry,overlay1,0.5)}60"],["vscode","editor.findMatchBackground","{mix(surface1,berry,0.15)}80"],["vscode","editor.findMatchBorder","{ui.focus}"],["vscode","editor.findMatchHighlightBackground","{jam}40"],["vscode","editor.findMatchHighlightBorder","{text}00"],["vscode","editor.findRangeHighlightBackground","{mix(surface0,surface1,0.6)}66"],["vscode","editor.findRangeHighlightBorder","{text}00"],["vscode","editor.rangeHighlightBackground","{text}0b"],["vscode","editor.rangeHighlightBorder","{text}00"],["vscode","editor.hoverHighlightBackground","{surface2}40"],["vscode","editor.lineHighlightBackground","{mix(surface0,surface1,0.6)}38"],["vscode","editor.lineHighlightBorder","{mix(base,surface0,0.6)}"],["vscode","editorLineNumber.activeForeground","{subtext0}"],["vscode","editorIndentGuide.background","{mix(base,surface1,0.4)}"],["vscode","editorIndentGuide.activeBackground","{mix(surface2,overlay0,0.3)}"],["vscode","editorRuler.foreground","{surface2}"],["vscode","editor.foldBackground","{surface2}4d"],["vscode","editorOverviewRuler.background","{base}00"],["vscode","editorOverviewRuler.border","{surface1}4d"],["vscode","editorError.foreground","{ui.error}"],["vscode","editorError.background","{cranberry}00"],["vscode","editorError.border","{text}00"],["vscode","editorWarning.foreground","{ui.warning}"],["vscode","editorWarning.background","{honey}00"],["vscode","editorWarning.border","{text}00"],["vscode","editorInfo.foreground","{ui.info}"],["vscode","editorInfo.background","{bilberry}00"],["vscode","editorInfo.border","{bilberry}00"],["vscode","editorGutter.background","{base}"],["vscode","editorGutter.modifiedBackground","{honey}"],["vscode","editorGutter.addedBackground","{ui.success}"],["vscode","editorGutter.deletedBackground","{cranberry}"],["vscode","editorGutter.foldingControlForeground","{subtext0}"],["vscode","editorCodeLens.foreground","{overlay2}"],["vscode","editorGroup.border","{surface1}"],["vscode","diffEditor.insertedTextBackground","{gooseberry}33"],["vscode","diffEditor.removedTextBackground","{cranberry}33"],["vscode","diffEditor.border","{surface1}"],["vscode","panel.background","{crust}"],["vscode","panel.border","{surface1}80"],["vscode","panelTitle.activeBorder","{text}"],["vscode","panelTitle.activeForeground","{text}"],["vscode","panelTitle.inactiveForeground","{text}99"],["vscode","badge.background","{ui.badge}"],["vscode","terminal.border","{surface1}80"],["vscode","breadcrumb.background","{base}"],["vscode","breadcrumb.foreground","{subtext0}cc"],["vscode","breadcrumb.focusForeground","{text}"],["vscode","editorGroupHeader.tabsBackground","{mantle}"],["vscode","tab.activeForeground","{text}"],["vscode","tab.border","{surface1}"],["vscode","tab.activeBackground","{ui.tab.active}"],["vscode","tab.activeBorder","{ui.tab.indicator}00"],["vscode","tab.activeBorderTop","{ui.tab.indicator}00"],["vscode","tab.inactiveBackground","{ui.tab.inactive}"],["vscode","tab.inactiveForeground","{text}80"],["vscode","tab.hoverBackground","{mix(base,surface0,0.6)}"],["vscode","tab.hoverForeground","{text}"],["vscode","tab.hoverBorder","{crust}00"],["vscode","tab.unfocusedActiveForeground","{subtext0}"],["vscode","tab.unfocusedInactiveForeground","{text}60"],["vscode","tab.unfocusedHoverBackground","{mix(base,surface0,0.6)}"],["vscode","tab.unfocusedHoverForeground","{subtext0}"],["vscode","scrollbarSlider.background","{overlay0}66"],["vscode","scrollbarSlider.hoverBackground","{overlay0}b3"],["vscode","scrollbarSlider.activeBackground","{overlay2}66"],["vscode","progressBar.background","{ui.fill}"],["vscode","widget.shadow","{crust}5c"],["vscode","editorWidget.foreground","{subtext0}"],["vscode","editorWidget.background","{mix(mantle,base,0.4)}"],["vscode","editorWidget.resizeBorder","{mix(surface2,overlay0,0.3)}"],["vscode","pickerGroup.border","{surface1}"],["vscode","pickerGroup.foreground","{cherry}"],["vscode","debugToolBar.background","{base}"],["vscode","debugToolBar.border","{surface1}"],["vscode","notifications.foreground","{subtext0}"],["vscode","notifications.background","{mix(mantle,base,0.4)}"],["vscode","notificationToast.border","{surface1}"],["vscode","notificationsErrorIcon.foreground","{ui.error}"],["vscode","notificationsWarningIcon.foreground","{ui.warning}"],["vscode","notificationsInfoIcon.foreground","{ui.info}"],["vscode","notificationCenter.border","{surface1}"],["vscode","notificationCenterHeader.foreground","{subtext0}"],["vscode","notificationCenterHeader.background","{base}"],["vscode","notifications.border","{surface1}"],["vscode","gitDecoration.addedResourceForeground","{ui.success}"],["vscode","gitDecoration.conflictingResourceForeground","{plum}"],["vscode","gitDecoration.deletedResourceForeground","{ui.error}"],["vscode","gitDecoration.ignoredResourceForeground","{overlay1}"],["vscode","gitDecoration.modifiedResourceForeground","{ui.warning}"],["vscode","gitDecoration.stageDeletedResourceForeground","{ui.error}"],["vscode","gitDecoration.stageModifiedResourceForeground","{ui.warning}"],["vscode","gitDecoration.submoduleResourceForeground","{bilberry}"],["vscode","gitDecoration.untrackedResourceForeground","{ui.success}"],["vscode","editorMarkerNavigation.background","{surface0}"],["vscode","editorMarkerNavigationError.background","{ui.error}"],["vscode","editorMarkerNavigationWarning.background","{ui.warning}"],["vscode","editorMarkerNavigationInfo.background","{ui.info}"],["vscode","merge.currentHeaderBackground","{mix(base,gooseberry,0.45)}"],["vscode","merge.currentContentBackground","{mix(base,gooseberry,0.2)}"],["vscode","merge.incomingHeaderBackground","{mix(base,bilberry,0.45)}"],["vscode","merge.incomingContentBackground","{mix(base,bilberry,0.2)}"],["vscode","merge.commonHeaderBackground","{surface1}"],["vscode","merge.commonContentBackground","{surface0}"],["vscode","editorSuggestWidget.background","{mix(mantle,base,0.4)}"],["vscode","editorSuggestWidget.border","{surface1}"],["vscode","editorSuggestWidget.foreground","{text}"],["vscode","editorSuggestWidget.highlightForeground","{cherry}"],["vscode","editorSuggestWidget.selectedBackground","{mix(surface0,surface1,0.6)}"],["vscode","editorHoverWidget.foreground","{subtext0}"],["vscode","editorHoverWidget.background","{mix(mantle,base,0.4)}"],["vscode","editorHoverWidget.border","{surface1}"],["vscode","peekView.border","{berry}"],["vscode","peekViewEditor.background","{mantle}"],["vscode","peekViewEditorGutter.background","{mantle}"],["vscode","peekViewEditor.matchHighlightBackground","{apricot}99"],["vscode","peekViewEditor.matchHighlightBorder","{apricot}"],["vscode","peekViewResult.background","{mix(mantle,base,0.4)}"],["vscode","peekViewResult.fileForeground","{text}"],["vscode","peekViewResult.lineForeground","{subtext0}"],["vscode","peekViewResult.matchHighlightBackground","{apricot}4d"],["vscode","peekViewResult.selectionBackground","{blueberry}33"],["vscode","peekViewResult.selectionForeground","{text}"],["vscode","peekViewTitle.background","{crust}"],["vscode","peekViewTitleDescription.foreground","{subtext0}b3"],["vscode","peekViewTitleLabel.foreground","{text}"],["vscode","icon.foreground","{text}"],["vscode","checkbox.background","{surface0}"],["vscode","checkbox.foreground","{subtext0}"],["vscode","checkbox.border","{crust}00"],["vscode","dropdown.background","{surface0}"],["vscode","dropdown.foreground","{subtext0}"],["vscode","dropdown.border","{crust}00"],["vscode","minimapGutter.addedBackground","{ui.success}"],["vscode","minimapGutter.modifiedBackground","{honey}"],["vscode","minimapGutter.deletedBackground","{cranberry}"],["vscode","minimap.findMatchHighlight","{mix(surface1,berry,0.15)}80"],["vscode","minimap.selectionHighlight","{mix(surface0,surface1,0.6)}"],["vscode","minimap.errorHighlight","{ui.error}"],["vscode","minimap.warningHighlight","{ui.warning}"],["vscode","minimap.background","{base}"],["vscode","editorGroup.emptyBackground","{base}"],["vscode","panelSection.border","{surface1}80"],["vscode","statusBarItem.activeBackground","{mix(surface0,surface1,0.6)}"],["vscode","statusBarItem.errorBackground","{mix(crust,cranberry,0.45)}"],["vscode","statusBarItem.errorForeground","{text}"],["vscode","statusBarItem.warningBackground","{mix(crust,honey,0.4)}"],["vscode","statusBarItem.warningForeground","{text}"],["vscode","statusBarItem.prominentBackground","{base}"],["vscode","statusBarItem.prominentHoverBackground","{mix(surface0,surface1,0.6)}"],["vscode","settings.headerForeground","{text}"],["vscode","settings.focusedRowBackground","{text}07"],["vscode","walkThrough.embeddedEditorBackground","{crust}50"],["vscode","breadcrumb.activeSelectionForeground","{text}"],["vscode","editorGutter.commentRangeForeground","{subtext0}"],["vscode","debugExceptionWidget.background","{base}"],["vscode","debugExceptionWidget.border","{surface1}"],["vscode","toolbar.hoverBackground","{mix(surface1,berry,0.15)}58"],["vscode","toolbar.activeBackground","{mix(surface1,berry,0.15)}80"],["vscode","toolbar.hoverOutline","{crust}00"],["vscode","activityBarBadge.foreground","{ui.on.badge}"],["vscode","badge.foreground","{ui.on.badge}"],["vscode","button.foreground","{ui.on.fill}"],["vscode","statusBarItem.remoteForeground","{ui.on.fill}"],["vscode","inputOption.activeForeground","{text}"],["vscode","terminalCursor.foreground","{ui.cursor}"],["vscode","terminalCursor.background","{ui.cursor.text}"],["vscode","editorCursor.background","{ui.cursor.text}"],["vscode","editor.wordHighlightBackground","{surface2}99"],["vscode","editor.wordHighlightStrongBackground","{mix(surface1,blueberry,0.25)}b8"],["vscode","sideBar.dropBackground","{surface1}99"],["vscode","terminal.selectionBackground","{ui.selection}"],["vscode","terminal.foreground","{ui.text}"],["vscode","terminal.background","{ui.background}"],["vscode","editorLink.activeForeground","{ui.link}"],["vscode","editorBracketMatch.background","{gooseberry}1a"],["vscode","editorBracketMatch.border","{overlay1}"],["vscode","terminal.ansiBlack","{ansi.0}"],["vscode","terminal.ansiBrightBlack","{ansi.8}"],["vscode","terminal.ansiRed","{ansi.1}"],["vscode","terminal.ansiBrightRed","{ansi.9}"],["vscode","terminal.ansiGreen","{ansi.2}"],["vscode","terminal.ansiBrightGreen","{ansi.10}"],["vscode","terminal.ansiYellow","{ansi.3}"],["vscode","terminal.ansiBrightYellow","{ansi.11}"],["vscode","terminal.ansiBlue","{ansi.4}"],["vscode","terminal.ansiBrightBlue","{ansi.12}"],["vscode","terminal.ansiMagenta","{ansi.5}"],["vscode","terminal.ansiBrightMagenta","{ansi.13}"],["vscode","terminal.ansiCyan","{ansi.6}"],["vscode","terminal.ansiBrightCyan","{ansi.14}"],["vscode","terminal.ansiWhite","{ansi.7}"],["vscode","terminal.ansiBrightWhite","{ansi.15}"],["vscode","tokenColors[\"unison punctuation\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"haskell variable generic-type\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"haskell storage type\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"support.variable.magic.python\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"punctuation.separator.parameters.python\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"variable.parameter.function.language.special.self.python\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"storage.modifier.lifetime.rust\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"support.function.std.rust\"].foreground","{syntax.function}"],["vscode","tokenColors[\"entity.name.lifetime.rust\"].foreground","{syntax.type}"],["vscode","tokenColors[\"variable.language.rust\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"support.constant.edge\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"regexp constant character-class\"].foreground","{syntax.type}"],["vscode","tokenColors[\"regexp operator.quantifier\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"punctuation.definition\"].foreground","{syntax.string}"],["vscode","tokenColors[\"Text\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Comment Markup Link\"].foreground","{syntax.comment}"],["vscode","tokenColors[\"markup diff\"].foreground","{syntax.type}"],["vscode","tokenColors[\"diff\"].foreground","{syntax.function}"],["vscode","tokenColors[\"inserted.diff\"].foreground","{syntax.string}"],["vscode","tokenColors[\"deleted.diff\"].foreground","{syntax.diff.removed}"],["vscode","tokenColors[\"c++ function\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"c++ block\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"js/ts punctuation separator key-value\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"js/ts import keyword\"].foreground","{syntax.function}"],["vscode","tokenColors[\"math js/ts\"].foreground","{syntax.type}"],["vscode","tokenColors[\"math property js/ts\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"js/ts variable.other.constant\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"java source\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"java method/annotation\"].foreground","{syntax.function}"],["vscode","tokenColors[\"java punctuation\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"java types\"].foreground","{syntax.type}"],["vscode","tokenColors[\"java import/package path\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"java instanceof\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"java variable.name\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"operator logical\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"operator bitwise\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"operator channel\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"support.constant.property-value.scss\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"CSS/SCSS/LESS Operators\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"css color standard name\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"css comma\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"css attribute-name.id\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"css property-name\"].foreground","{syntax.property}"],["vscode","tokenColors[\"js/ts module\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"entity.name.type.module\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"js variable readwrite\"].foreground","{syntax.property}"],["vscode","tokenColors[\"js/ts json\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"js/ts Keyword\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"js/ts console\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"js/ts support.variable.property.process\"].foreground","{syntax.property}"],["vscode","tokenColors[\"js console function\"].foreground","{syntax.function}"],["vscode","tokenColors[\"keyword.operator.misc.rust\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"keyword.operator.sigil.rust\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"operator\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"js dom\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"js dom variable\"].foreground","{syntax.property}"],["vscode","tokenColors[\"keyword.operator\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"C operator assignment\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"Punctuation\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"Other punctuation .c\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"C type posix-reserved\"].foreground","{syntax.type}"],["vscode","tokenColors[\"keyword.operator.sizeof.c\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"python parameter\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"python type\"].foreground","{syntax.type}"],["vscode","tokenColors[\"python logical\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"pyCs\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"python block\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"python function-call.generic\"].foreground","{syntax.function}"],["vscode","tokenColors[\"python placeholder reset to normal string\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Operators\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"Compound Assignment Operators\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"Compound Assignment Operators js/ts\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"Keywords\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Namespaces\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"Variables\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Variables\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Language variables\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Java Variables\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Functions\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Classes\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Classes\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Class name\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Class name\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Class name php\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Type Name\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Keyword Control\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Control Elements\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"Methods\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Storage\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Storage JS TS\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Source Js Keyword Operator Delete,source Js Keyword Operator In,source Js Keyword Operator Of,source Js Keyword Operator Instanceof,source Js Keyword Operator New,source Js Keyword Operator Typeof,source Js Keyword Operator Void\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Support\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Support type\"].foreground","{syntax.property}"],["vscode","tokenColors[\"Support type\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Support type\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Meta tag\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"Strings\"].foreground","{syntax.string}"],["vscode","tokenColors[\"Inherited Class\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Constant other symbol\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Integers\"].foreground","{syntax.number}"],["vscode","tokenColors[\"Booleans / language constants\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Constants\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Constants\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Tags\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Attributes\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Attribute IDs\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Attribute class\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Selector\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Headings\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Headings\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Units\"].foreground","{syntax.number}"],["vscode","tokenColors[\"Bold\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Bold\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"markup Italic\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"emphasis md\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown headings\"].foreground","{syntax.function}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown heading Punctuation Definition\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"punctuation.definition.list.begin.markdown\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown heading setext\"].foreground","{syntax.function}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Punctuation Definition Bold\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Inline Raw\"].foreground","{syntax.string}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Inline Raw\"].foreground","{syntax.string}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown List Punctuation Definition\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Punctuation Definition String\"].foreground","{syntax.string}"],["vscode","tokenColors[\"beginning.punctuation.definition.list.markdown\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Punctuation Definition Link\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Underline Link/Image\"].foreground","{syntax.link}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Link Title/Description\"].foreground","{syntax.link}"],["vscode","tokenColors[\"Regular Expressions\"].foreground","{syntax.regex}"],["vscode","tokenColors[\"Escape Characters\"].foreground","{syntax.number}"],["vscode","tokenColors[\"Embedded\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Embedded\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"illegal\"].foreground","{syntax.error}"],["vscode","tokenColors[\"illegal\"].foreground","{syntax.error}"],["vscode","tokenColors[\"Broken\"].foreground","{syntax.error}"],["vscode","tokenColors[\"Deprecated\"].foreground","{syntax.deprecated}"],["vscode","tokenColors[\"Unimplemented\"].foreground","{syntax.unimplemented}"],["vscode","tokenColors[\"Source Json Meta Structure Dictionary Json > String Quoted Json\"].foreground","{syntax.property}"],["vscode","tokenColors[\"Source Json Meta Structure Dictionary Json > String Quoted Json > Punctuation String\"].foreground","{syntax.property}"],["vscode","tokenColors[\"Source Json Meta Structure Dictionary Json > Value Json > String Quoted Json,source Json Meta Structure Array Json > Value Json > String Quoted Json,source Json Meta Structure Dictionary Json > Value Json > String Quoted Json > Punctuation,source Json Meta Structure Array Json > Value Json > String Quoted Json > Punctuation\"].foreground","{syntax.string}"],["vscode","tokenColors[\"Source Json Meta Structure Dictionary Json > Constant Language Json,source Json Meta Structure Array Json > Constant Language Json\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] JSON Property Name\"].foreground","{syntax.property}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] JSON Punctuation for Property Name\"].foreground","{syntax.property}"],["vscode","tokenColors[\"laravel blade tag\"].foreground","{syntax.function}"],["vscode","tokenColors[\"laravel blade @\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"use statement for other classes\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"php namespace declaration\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"error suppression\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"php instanceof\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"style double quoted array index normal begin\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"style double quoted array index normal end\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"php illegal.non-null-typehinted\"].foreground","{syntax.error}"],["vscode","tokenColors[\"php types\"].foreground","{syntax.type}"],["vscode","tokenColors[\"php call-function\"].foreground","{syntax.function}"],["vscode","tokenColors[\"php function-resets\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"support php constants\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"support php constants\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"php goto\"].foreground","{syntax.function}"],["vscode","tokenColors[\"php logical/bitwise operator\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"php regexp operator\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"php comparison\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"php heredoc/nowdoc\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"python function decorator @\"].foreground","{syntax.function}"],["vscode","tokenColors[\"python function support\"].foreground","{syntax.function}"],["vscode","tokenColors[\"parameter function js/ts\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"brace function\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"parameter function ruby cs\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"constant.language.symbol.ruby\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"rgb-value\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"rgb value\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"rgb value less\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"sass selector\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"ts primitive/builtin types\"].foreground","{syntax.type}"],["vscode","tokenColors[\"block scope\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"cs storage type\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"cs local variable\"].foreground","{syntax.variable}"],["vscode","tokenColors[176].foreground","{syntax.link}"],["vscode","tokenColors[177].foreground","{syntax.number}"],["vscode","tokenColors[178].foreground","{syntax.error}"],["vscode","tokenColors[179].foreground","{syntax.keyword}"],["vscode","tokenColors[\"String interpolation\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Reset JavaScript string interpolation expression\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Import module JS\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"js Flowtype\"].foreground","{syntax.type}"],["vscode","tokenColors[\"js Flow\"].foreground","{syntax.type}"],["vscode","tokenColors[\"js class prop\"].foreground","{syntax.property}"],["vscode","tokenColors[\"js func parameter\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"js template literals begin\"].foreground","{syntax.string}"],["vscode","tokenColors[\"js template literals end\"].foreground","{syntax.string}"],["vscode","tokenColors[\"js template literals variable braces begin\"].foreground","{syntax.string}"],["vscode","tokenColors[\"js template literals variable braces end\"].foreground","{syntax.string}"],["vscode","tokenColors[\"js operator.assignment\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"go operator\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"go operator\"].foreground","{syntax.operator}"],["vscode","tokenColors[\"Go package name\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"elm prelude\"].foreground","{syntax.type}"],["vscode","tokenColors[\"elm constant\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"template literal\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"html/pug (jade) escaped characters and entities\"].foreground","{syntax.number}"],["vscode","tokenColors[\"styling css pseudo-elements/classes to be able to differentiate from classes which are the same colour\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Clojure globals\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Clojure symbols\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"Clojure constants\"].foreground","{syntax.constant}"],["vscode","tokenColors[\"CoffeeScript Function Argument\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Ini Default Text\"].foreground","{syntax.string}"],["vscode","tokenColors[\"Makefile prerequisities\"].foreground","{syntax.string}"],["vscode","tokenColors[\"Makefile text colour\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Groovy import names\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"Groovy Methods\"].foreground","{syntax.function}"],["vscode","tokenColors[\"Groovy Variables\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"Groovy Inheritance\"].foreground","{syntax.string}"],["vscode","tokenColors[\"HLSL Semantic\"].foreground","{syntax.type}"],["vscode","tokenColors[\"HLSL Types\"].foreground","{syntax.type}"],["vscode","tokenColors[\"SQL Variables\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"types\"].foreground","{syntax.type}"],["vscode","tokenColors[\"heading 1, keyword\"].foreground","{syntax.type}"],["vscode","tokenColors[\"heading 2, callable\"].foreground","{syntax.regex}"],["vscode","tokenColors[\"heading 3, property\"].foreground","{syntax.variable}"],["vscode","tokenColors[\"heading 4, type, class, interface\"].foreground","{syntax.keyword}"],["vscode","tokenColors[\"heading 5, enums, preprocessor, constant, decorator\"].foreground","{syntax.regex}"],["vscode","tokenColors[\"heading 6, number\"].foreground","{syntax.text}"],["vscode","tokenColors[\"string\"].foreground","{syntax.string}"],["vscode","tokenColors[\"comments\"].foreground","{syntax.comment}"],["vscode","tokenColors[\"link\"].foreground","{syntax.function}"],["vscode","tokenColors[\"accent\"].foreground","{syntax.function}"],["vscode","tokenColors[\"wikiword\"].foreground","{syntax.namespace}"],["vscode","tokenColors[\"language operators like '+', '-' etc\"].foreground","{syntax.text}"],["vscode","tokenColors[\"elements to dim\"].foreground","{syntax.comment}"],["vscode","tokenColors[\"C++/C#\"].foreground","{syntax.type}"],["vscode","tokenColors[\"Markdown underscore-style headers\"].foreground","{syntax.function}"],["vscode","tokenColors[\"meta.brace.square\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[\"Comments\"].foreground","{syntax.comment}"],["vscode","tokenColors[\"[VSCODE-CUSTOM] Markdown Quote\"].foreground","{syntax.comment}"],["vscode","tokenColors[\"punctuation.definition.block.sequence.item.yaml\"].foreground","{syntax.punctuation}"],["vscode","tokenColors[234].foreground","{syntax.constant}"]]};
+</script>
+<script>
+// Colour maths shared by the build and the variant generator. No dependencies.
+const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255);
+const hexOf = (a) => "#" + a.map((v) => Math.round(Math.min(1, Math.max(0, v)) * 255).toString(16).padStart(2, "0")).join("");
+const mix = (a, b, t) => { const x = rgb(a), y = rgb(b); return hexOf(x.map((v, i) => v + (y[i] - v) * t)); };
+const lin = (v) => (v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+const gam = (v) => (v <= 0.0031308 ? 12.92 * v : 1.055 * v ** (1 / 2.4) - 0.055);
+
+const toHsl = (h) => { const [r, g, b] = rgb(h), mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn; let H = 0, S = 0; if (d) { S = d / (1 - Math.abs(2 * l - 1)); H = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; H = (H * 60 + 360) % 360; } return [H, S, l]; };
+const fromHsl = (H, S, l) => { H = ((H % 360) + 360) % 360; S = Math.min(1, Math.max(0, S)); l = Math.min(1, Math.max(0, l)); const c = (1 - Math.abs(2 * l - 1)) * S, x = c * (1 - Math.abs((H / 60) % 2 - 1)), m = l - c / 2; const [r, g, b] = H < 60 ? [c, x, 0] : H < 120 ? [x, c, 0] : H < 180 ? [0, c, x] : H < 240 ? [0, x, c] : H < 300 ? [x, 0, c] : [c, 0, x]; return hexOf([r + m, g + m, b + m]); };
+
+// OKLab / OKLCH
+const toOklab = (h) => { const [r, g, b] = rgb(h).map(lin);
+  const l = Math.cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b), m = Math.cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b), s = Math.cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
+  return [0.2104542553 * l + 0.793617785 * m - 0.0040720468 * s, 1.9779984951 * l - 2.428592205 * m + 0.4505937099 * s, 0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s]; };
+const toOklch = (h) => { const [L, A, B] = toOklab(h); return [L, Math.hypot(A, B), Math.atan2(B, A)]; };
+const oklchRgb = (L, C, h) => { const A = C * Math.cos(h), B = C * Math.sin(h);
+  const l = (L + 0.3963377774 * A + 0.2158037573 * B) ** 3, m = (L - 0.1055613458 * A - 0.0638541728 * B) ** 3, s = (L - 0.0894841775 * A - 1.291485548 * B) ** 3;
+  return [4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s, -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s, -0.0041960863 * l - 0.7034186147 * m + 1.707614701 * s]; };
+const inGamut = (x) => x.every((v) => v >= -0.0001 && v <= 1.0001);
+const fromOklch = (L, C, h) => { let c = C, x; for (let i = 0; i < 80; i++) { x = oklchRgb(L, c, h); if (inGamut(x)) break; c *= 0.97; } return hexOf(x.map(gam)); };
+const deltaE = (a, b) => { const x = toOklab(a), y = toOklab(b); return Math.hypot(x[0] - y[0], x[1] - y[1], x[2] - y[2]) * 100; };
+
+// CIE LCh (D50), as used by Catppuccin's palette generator (colorjs "lch")
+const D65toXYZ = [[0.4123907992659595, 0.357584339383878, 0.1804807884018343], [0.21263900587151036, 0.7151686787677559, 0.07219231536073371], [0.01933081871559185, 0.11919477979462599, 0.9505321522496606]];
+const XYZtoD65 = [[3.2409699419045226, -1.537383177570094, -0.4986107602930034], [-0.9692436362808796, 1.8759675015077202, 0.04155505740717559], [0.05563007969699366, -0.20397695888897652, 1.0569715142428786]];
+const D65toD50 = [[1.0479298208405488, 0.022946793341019088, -0.05019222954313557], [0.029627815688159344, 0.990434484573249, -0.01707382502938514], [-0.009243058152591178, 0.015055144896577895, 0.7518742899580008]];
+const D50toD65 = [[0.9554734527042182, -0.023098536874261423, 0.0632593086610217], [-0.028369706963208136, 1.0099954580058226, 0.021041398966943008], [0.012314001688319899, -0.020507696433477912, 1.3303659366080753]];
+const W50 = [0.3457 / 0.3585, 1, (1 - 0.3457 - 0.3585) / 0.3585];
+const mul = (M, v) => M.map((r) => r[0] * v[0] + r[1] * v[1] + r[2] * v[2]);
+const e = 216 / 24389, k = 24389 / 27;
+const toLch = (h) => {
+  const xyz = mul(D65toD50, mul(D65toXYZ, rgb(h).map(lin))).map((v, i) => v / W50[i]);
+  const f = xyz.map((v) => (v > e ? Math.cbrt(v) : (k * v + 16) / 116));
+  const L = 116 * f[1] - 16, a = 500 * (f[0] - f[1]), b = 200 * (f[1] - f[2]);
+  return [L, Math.hypot(a, b), ((Math.atan2(b, a) * 180) / Math.PI + 360) % 360];
+};
+const lchRgb = (L, C, H) => {
+  const a = C * Math.cos((H * Math.PI) / 180), b = C * Math.sin((H * Math.PI) / 180);
+  const fy = (L + 16) / 116, fx = a / 500 + fy, fz = fy - b / 200;
+  const xyz = [fx ** 3 > e ? fx ** 3 : (116 * fx - 16) / k, L > k * e ? fy ** 3 : L / k, fz ** 3 > e ? fz ** 3 : (116 * fz - 16) / k].map((v, i) => v * W50[i]);
+  return mul(XYZtoD65, mul(D50toD65, xyz)).map(gam);
+};
+// Gamut-map by reducing chroma (close to colorjs toGamut for these light pastels)
+const fromLch = (L, C, H) => { let c = C, x; for (let i = 0; i < 200; i++) { x = lchRgb(L, c, H); if (inGamut(x)) break; c -= 0.25; } return hexOf(x); };
+
+// WCAG
+const luminance = (h) => { const [r, g, b] = rgb(h).map(lin); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+const contrast = (a, b) => { const [x, y] = [luminance(a), luminance(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+
+// Catppuccin's bright-ANSI formula
+const ansiBright = (hex, dark) => { const [L, C, H] = toLch(hex); return fromLch(L * (dark ? 0.94 : 1.09), C + (dark ? 8 : 0), H + 2); };
+
+</script>
+<script>
+(() => {
+const D = window.DARKBERRY;
+const FL = Object.keys(D.palette.flavours);
+const ORIG = JSON.parse(JSON.stringify(D.palette.flavours));
+const NEUT = D.palette.neutralOrder.slice().reverse();
+const ACC = D.palette.accentOrder;
+const ROLE_GROUPS = ["ui", "syntax", "terminal"];
+const roleIndex = {};
+for (const g of ROLE_GROUPS) for (const [k, v] of Object.entries(D.roles[g])) if (!k.startsWith("$")) roleIndex[`${g}.${k}`] = v;
+const ORIG_ROLES = Object.fromEntries(Object.entries(roleIndex).map(([k, v]) => [k, JSON.stringify(v.value)]));
+const DEFAULT_TABLINE = D.tabLine || "none";
+
+let S = { flavour: FL.includes("mire") ? "mire" : FL[0], scope: "one", sel: { kind: "role", name: "ui.tab.indicator" }, palette: {}, roles: {}, why: {}, tabLine: DEFAULT_TABLINE, filter: "" };
+try { const saved = JSON.parse(localStorage.getItem("darkberry-studio") || "null"); if (saved && saved.v === D.version) S = { ...S, ...saved.s }; } catch (e) {}
+const save = () => { try { localStorage.setItem("darkberry-studio", JSON.stringify({ v: D.version, s: S })); } catch (e) {} };
+
+const col = (fl, name) => (S.palette[fl] && S.palette[fl][name]) || ORIG[fl].colors[name];
+const roleVal = (name) => (name in S.roles ? S.roles[name] : roleIndex[name].value);
+
+function ansiFor(fl) {
+  const dark = ORIG[fl].dark, A = D.roles.ansi, src = [];
+  src[0] = dark ? "surface1" : "subtext1"; src[8] = dark ? "surface2" : "subtext0";
+  src[7] = dark ? "subtext0" : "surface2"; src[15] = dark ? "subtext1" : "surface1";
+  ["red", "green", "yellow", "blue", "magenta", "cyan"].forEach((n, i) => { src[i + 1] = A[n]; src[i + 9] = A[n]; });
+  return src.map((n, i) => ({ src: n, hex: i >= 9 && i <= 14 ? ansiBright(col(fl, n), dark) : col(fl, n) }));
+}
+function resolve(expr, fl, tr = { roles: [], palette: new Set() }, depth = 0) {
+  if (depth > 14) throw new Error("cycle");
+  const m = /^mix\(([\w.]+),([\w.]+),([\d.]+)\)$/.exec(expr);
+  if (m) return [mix(resolve(m[1], fl, tr, depth + 1)[0], resolve(m[2], fl, tr, depth + 1)[0], +m[3]), tr];
+  if (/^ansi\.\d+$/.test(expr)) { const a = ansiFor(fl)[+expr.split(".")[1]]; tr.roles.push(expr); tr.palette.add(a.src); return [a.hex, tr]; }
+  if (roleIndex[expr]) { tr.roles.push(expr); let v = roleVal(expr); if (v && typeof v === "object") v = ORIG[fl].dark ? v.dark : v.light; return resolve(v, fl, tr, depth + 1); }
+  if (expr in ORIG[fl].colors) { tr.palette.add(expr); return [col(fl, expr), tr]; }
+  throw new Error(`unknown ${expr}`);
+}
+const R = (expr, fl = S.flavour) => { try { return resolve(expr, fl)[0]; } catch (e) { return "#ff00ff"; } };
+
+// bindings: [port, key, expr]
+const bind = {};
+for (const [port, key, expr] of D.bindings) { (bind[port] ??= {})[key] = expr; }
+function keyExpr(port, key) {
+  if (port === "vscode" && S.tabLine !== "none") {
+    const on = S.tabLine === "top" ? "tab.activeBorderTop" : "tab.activeBorder";
+    if (key === on) return "{ui.tab.indicator}";
+    if (key === "tab.activeBorderTop" || key === "tab.activeBorder") return "{ui.tab.indicator}00";
+  }
+  return (bind[port] && (bind[port][`${key} (override)`] || bind[port][key])) || null;
+}
+function K(port, key, fl = S.flavour) {
+  const e = keyExpr(port, key); if (!e) return "transparent";
+  const m = /^\{([^}]+)\}([0-9a-f]{2})?$/.exec(e); if (!m) return "transparent";
+  return R(m[1], fl) + (m[2] || "");
+}
+const srcOf = (port, key) => { const e = keyExpr(port, key); const m = e && /^\{([^}]+)\}/.exec(e); return m ? m[1] : ""; };
+const attr = (port, key) => `data-src="${srcOf(port, key)}" title="${port}: ${key}"`;
+const tok = (role, text, st = "") => `<span data-src="${role}" title="${role}" style="color:${R(role)};${st}">${text}</span>`;
+
+// ---------- chrome follows the theme it's editing ----------
+function chrome() {
+  const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  const fl = dark ? (FL.includes("mire") ? "mire" : FL.find((f) => ORIG[f].dark)) : (FL.find((f) => !ORIG[f].dark) || FL[0]);
+  const s = document.documentElement.style, c = (n) => col(fl, n);
+  s.setProperty("--bg", c("mantle")); s.setProperty("--panel", c("base")); s.setProperty("--sunk", c("crust"));
+  s.setProperty("--line", c("surface1")); s.setProperty("--text", c("text")); s.setProperty("--muted", c("subtext0"));
+  s.setProperty("--subtle", c("overlay1")); s.setProperty("--accent", R("ui.accent", fl)); s.setProperty("--fill", R("ui.fill", fl));
+  s.setProperty("--onfill", R("ui.on.fill", fl)); s.setProperty("--warn", R("ui.warning", fl)); s.setProperty("--bad", R("ui.error", fl));
+}
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => { chrome(); });
+
+// ---------- specimen ----------
+function specimen() {
+  const V = (k) => K("vscode", k), a = ansiFor(S.flavour).map((x) => x.hex);
+  const tabs = ["jam.ts", "pantry.ts", "lid.ts"].map((t, i) => {
+    const act = i === 0, bt = act && S.tabLine === "top" ? `border-top:2px solid ${V("tab.activeBorderTop")};` : "", bb = act && S.tabLine === "bottom" ? `border-bottom:2px solid ${V("tab.activeBorder")};` : "";
+    return `<span ${attr("vscode", act ? "tab.activeBackground" : "tab.inactiveBackground")} style="padding:7px 14px;font-size:12.5px;background:${V(act ? "tab.activeBackground" : "tab.inactiveBackground")};color:${V(act ? "tab.activeForeground" : "tab.inactiveForeground")};border-right:1px solid ${V("tab.border")};${bt}${bb}" class="mono">${t}</span>`;
+  }).join("");
+  const badge = (n) => `<span ${attr("vscode", "activityBarBadge.background")} style="position:absolute;right:-7px;bottom:-5px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;font-size:10.5px;display:flex;align-items:center;justify-content:center;background:${V("activityBarBadge.background")};color:${V("activityBarBadge.foreground")}" class="mono">${n}</span>`;
+  const ico = (on, n) => `<span ${attr("vscode", on ? "activityBar.foreground" : "activityBar.inactiveForeground")} style="position:relative;display:block;width:22px;height:22px;border-radius:5px;border:2px solid ${V(on ? "activityBar.foreground" : "activityBar.inactiveForeground")}">${n ? badge(n) : ""}</span>`;
+  const ln = (n, act) => `<span ${attr("vscode", act ? "editorLineNumber.activeForeground" : "editorLineNumber.foreground")} style="color:${V(act ? "editorLineNumber.activeForeground" : "editorLineNumber.foreground")};display:inline-block;width:2.4em;text-align:right;margin-right:1.2em">${n}</span>`;
+  const p = (t) => tok("syntax.punctuation", t);
+  const lines = [
+    tok("syntax.comment", "// seal a jar of whatever is ripe", "font-style:italic"),
+    `${tok("syntax.keyword", "import")} ${p("*")} ${tok("syntax.keyword", "as")} ${tok("syntax.namespace", "Orchard")} ${tok("syntax.keyword", "from")} ${tok("syntax.string", '"orchard"')}${p(";")}`,
+    `${tok("syntax.keyword", "export function")} ${tok("syntax.function", "sealJar")}${p("(")}${tok("syntax.variable", "jam")}${p(":")} ${tok("syntax.type", "Preserve")}${p("):")} ${tok("syntax.type", "Jar")} ${p("{")}`,
+    `  ${tok("syntax.keyword", "const")} ${tok("syntax.variable", "lid")} ${tok("syntax.operator", "=")} ${tok("syntax.namespace", "Orchard")}${p(".")}${tok("syntax.function", "findLid")}${p("(")}${tok("syntax.variable", "jam")}${p(".")}${tok("syntax.property", "size")}${p(");")}`,
+    `  ${tok("syntax.keyword", "if")} ${p("(!")}${tok("syntax.variable", "lid")}${p(")")} ${tok("syntax.error", "throw")} ${tok("syntax.keyword", "new")} ${tok("syntax.type", "PantryError")}${p("(")}${tok("syntax.string", '"no lid"')}${p(");")}`,
+    `  ${tok("syntax.keyword", "return")} ${tok("syntax.variable", "jam")}${p(".")}${tok("syntax.function", "replace")}${p("(")}${tok("syntax.regex", "/ber+y/g")}${p(",")} ${tok("syntax.constant", "MAX_SUGAR")}${p(",")} ${tok("syntax.number", "0.72")}${p(");")}`,
+    `${p("}")}  ${tok("syntax.comment", "// docs:", "font-style:italic")} ${tok("syntax.link", "https://jam.dev", "text-decoration:underline")}`,
+  ];
+  const code = lines.map((l, i) => `<div ${i === 3 ? `${attr("vscode", "editor.lineHighlightBackground")} style="background:${V("editor.lineHighlightBackground")}"` : ""}>${ln(i + 1, i === 3)}${l}${i === 3 ? `<span ${attr("vscode", "editorCursor.foreground")} style="display:inline-block;width:2px;height:1.15em;vertical-align:-.2em;background:${V("editorCursor.foreground")};margin-left:1px"></span>` : ""}</div>`).join("");
+  const vscode = `<p class="lbl">VS Code</p><div class="win" style="background:${V("titleBar.activeBackground")}">
+  <div ${attr("vscode", "titleBar.activeBackground")} style="height:26px;font-size:12px;display:flex;align-items:center;justify-content:center;color:${V("titleBar.activeForeground")}">darkberry — jam.ts</div>
+  <div style="display:grid;grid-template-columns:46px 170px minmax(0,1fr)">
+   <div ${attr("vscode", "activityBar.background")} style="background:${V("activityBar.background")};display:flex;flex-direction:column;align-items:center;gap:18px;padding:12px 0;border-right:1px solid ${V("activityBar.border")}">${ico(true, 3)}${ico(false)}${ico(false, 12)}</div>
+   <div ${attr("vscode", "sideBar.background")} style="background:${V("sideBar.background")};color:${V("sideBar.foreground")};font-size:12.5px;padding:8px 0">
+    <div style="padding:0 12px 6px;color:${V("sideBarSectionHeader.foreground")}">pantry</div>
+    <div ${attr("vscode", "list.activeSelectionBackground")} style="padding:3px 14px;background:${V("list.activeSelectionBackground")};color:${V("list.activeSelectionForeground")}">jam.ts</div>
+    <div ${attr("vscode", "list.hoverBackground")} style="padding:3px 14px;background:${V("list.hoverBackground")}">pantry.ts</div>
+    <div style="padding:3px 14px"><span ${attr("vscode", "gitDecoration.modifiedResourceForeground")} style="color:${V("gitDecoration.modifiedResourceForeground")}">lid.ts M</span></div>
+    <div style="padding:3px 14px"><span ${attr("vscode", "gitDecoration.untrackedResourceForeground")} style="color:${V("gitDecoration.untrackedResourceForeground")}">notes.md U</span></div>
+    <div style="padding:10px 12px 0"><span ${attr("vscode", "button.background")} style="display:inline-block;padding:4px 10px;border-radius:4px;background:${V("button.background")};color:${V("button.foreground")}">Commit</span></div>
+   </div>
+   <div style="min-width:0">
+    <div ${attr("vscode", "editorGroupHeader.tabsBackground")} style="display:flex;background:${V("editorGroupHeader.tabsBackground")};overflow:hidden">${tabs}</div>
+    <div ${attr("vscode", "editor.background")} class="mono" style="background:${V("editor.background")};color:${V("editor.foreground")};font-size:12.5px;line-height:1.7;padding:8px 0;white-space:pre;overflow-x:auto">${code}</div>
+   </div>
+  </div>
+  <div ${attr("vscode", "statusBar.background")} style="display:flex;font-size:11.5px;background:${V("statusBar.background")};color:${V("statusBar.foreground")}"><span ${attr("vscode", "statusBarItem.remoteBackground")} style="padding:3px 10px;background:${V("statusBarItem.remoteBackground")};color:${V("statusBarItem.remoteForeground")}">WSL</span><span style="padding:3px 10px">main</span><span style="padding:3px 10px"><span ${attr("vscode", "editorError.foreground")} style="color:${V("editorError.foreground")}">⊗ 1</span> <span ${attr("vscode", "editorWarning.foreground")} style="color:${V("editorWarning.foreground")}">⚠ 2</span></span></div>
+ </div>`;
+  const kk = (k) => K("kitty", k);
+  const term = `<p class="lbl">kitty and Ghostty</p><div class="win" style="background:${kk("background")}">
+  <div ${attr("kitty", "tab_bar_background")} class="mono" style="display:flex;font-size:12px;background:${kk("tab_bar_background")}"><span ${attr("kitty", "active_tab_background")} style="padding:3px 12px;background:${kk("active_tab_background")};color:${kk("active_tab_foreground")}">1 jam</span><span ${attr("kitty", "inactive_tab_background")} style="padding:3px 12px;background:${kk("inactive_tab_background")};color:${kk("inactive_tab_foreground")}">2 pantry</span><span ${attr("kitty", "inactive_tab_background")} style="padding:3px 12px;background:${kk("inactive_tab_background")};color:${kk("inactive_tab_foreground")}">3 logs</span></div>
+  <div ${attr("kitty", "background")} class="mono" style="padding:10px 14px;font-size:12.5px;line-height:1.7;color:${kk("foreground")};white-space:pre;overflow-x:auto"><span data-src="ansi.2" style="color:${a[2]}">➜</span> <span data-src="ansi.4" style="color:${a[4]}">~/jam</span> <span data-src="ansi.5" style="color:${a[5]}">git:(main)</span> ls -la
+<span data-src="ansi.12" style="color:${a[12]}">recipes/</span>  <span data-src="ansi.10" style="color:${a[10]}">seal.sh</span>  notes.md  <span data-src="ansi.1" style="color:${a[1]}">broken.lnk</span>  <span data-src="ansi.3" style="color:${a[3]}">TODO</span>  <span data-src="ansi.6" style="color:${a[6]}">.cache</span>
+<span ${attr("kitty", "url_color")} style="color:${kk("url_color")};text-decoration:underline">https://jam.dev</span>  <span ${attr("kitty", "selection_background")} style="background:${kk("selection_background")};color:${kk("selection_foreground")}">selected text</span>  <span ${attr("kitty", "cursor")} style="background:${kk("cursor")};color:${kk("cursor_text_color")}">█</span>
+<span style="display:inline-flex;gap:3px">${a.slice(0, 8).map((c, i) => `<i data-src="ansi.${i}" title="ansi ${i}" style="display:inline-block;width:24px;height:14px;border-radius:3px;background:${c}"></i>`).join("")}</span>
+<span style="display:inline-flex;gap:3px">${a.slice(8, 16).map((c, i) => `<i data-src="ansi.${i + 8}" title="ansi ${i + 8}" style="display:inline-block;width:24px;height:14px;border-radius:3px;background:${c}"></i>`).join("")}</span></div></div>`;
+  const F = (k) => K("firefox", k);
+  const fx = `<p class="lbl">Firefox</p><div class="win" ${attr("firefox", "frame")} style="background:${F("frame")}">
+  <div style="display:flex;gap:2px;padding:6px 8px 0"><span ${attr("firefox", "tab_selected")} style="padding:7px 16px;font-size:12.5px;border-radius:7px 7px 0 0;background:${F("tab_selected")};color:${F("tab_text")};box-shadow:inset 0 2px 0 ${F("tab_line")}">Jam recipes</span><span ${attr("firefox", "tab_background_text")} style="padding:7px 16px;font-size:12.5px;color:${F("tab_background_text")}">Pantry</span><span style="padding:7px 16px;font-size:12.5px;color:${F("tab_background_text")}">Orchard</span></div>
+  <div ${attr("firefox", "toolbar")} style="display:flex;align-items:center;gap:10px;padding:7px 10px;background:${F("toolbar")}"><span ${attr("firefox", "icons")} style="color:${F("icons")}">◀ ▶</span><span ${attr("firefox", "toolbar_field_focus")} style="flex:1;font-size:12.5px;padding:4px 10px;border-radius:7px;background:${F("toolbar_field_focus")};color:${F("toolbar_field_text_focus")};border:1.5px solid ${F("toolbar_field_border_focus")}">https://jam.dev/<span ${attr("firefox", "toolbar_field_highlight")} style="background:${F("toolbar_field_highlight")};color:${F("toolbar_field_highlight_text")}">recipes</span></span><span ${attr("firefox", "icons_attention")} style="color:${F("icons_attention")}">★</span></div>
+  <div ${attr("firefox", "ntp_background")} style="background:${F("ntp_background")};color:${F("ntp_text")};padding:12px 14px;font-size:13px;display:flex;gap:14px"><div ${attr("firefox", "popup")} style="background:${F("popup")};color:${F("popup_text")};border:1px solid ${F("popup_border")};border-radius:8px;padding:4px;min-width:170px"><div style="padding:4px 8px">Open in new tab</div><div ${attr("firefox", "popup_highlight")} style="padding:4px 8px;border-radius:5px;background:${F("popup_highlight")};color:${F("popup_highlight_text")}">Bookmark page</div><div style="padding:4px 8px">Copy link</div></div><div style="align-self:center;color:${F("ntp_text")}">New tab page</div></div></div>`;
+  const el = document.getElementById("specimen");
+  el.innerHTML = vscode + term + fx;
+  el.querySelectorAll("[data-src]").forEach((n) => n.addEventListener("click", (e) => {
+    e.stopPropagation(); const s = n.dataset.src; if (!s) return;
+    if (roleIndex[s] || s.startsWith("ansi.")) select(s.startsWith("ansi.") ? { kind: "palette", name: ansiFor(S.flavour)[+s.split(".")[1]].src, via: s } : { kind: "role", name: s });
+    else if (/^mix\(/.test(s)) select({ kind: "mix", name: s });
+    else select({ kind: "palette", name: s });
+  }));
+}
+
+// ---------- sidebar ----------
+function sidebar() {
+  const chip = (n) => `<button class="chip${isModPal(n) ? " mod" : ""}" aria-pressed="${S.sel.kind === "palette" && S.sel.name === n}" data-p="${n}" title="${n} ${col(S.flavour, n)}" aria-label="${n}" style="background:${col(S.flavour, n)}"></button>`;
+  document.getElementById("neutrals").innerHTML = NEUT.map(chip).join("");
+  document.getElementById("accents").innerHTML = ACC.map(chip).join("");
+  document.querySelectorAll("[data-p]").forEach((b) => b.onclick = () => select({ kind: "palette", name: b.dataset.p }));
+  const f = S.filter.toLowerCase();
+  document.getElementById("roles").innerHTML = Object.keys(roleIndex).filter((r) => !f || r.toLowerCase().includes(f)).map((r) =>
+    `<button class="rl${r in S.roles && JSON.stringify(S.roles[r]) !== ORIG_ROLES[r] ? " mod" : ""}" aria-pressed="${S.sel.kind === "role" && S.sel.name === r}" data-r="${r}"><i style="background:${R(r)}"></i><span>${r}</span></button>`).join("");
+  document.querySelectorAll("[data-r]").forEach((b) => b.onclick = () => select({ kind: "role", name: b.dataset.r }));
+}
+const isModPal = (n) => FL.some((fl) => S.palette[fl] && S.palette[fl][n] && S.palette[fl][n] !== ORIG[fl].colors[n]);
+
+// ---------- usage ----------
+function usageOf(target, isPalette) {
+  const ports = {};
+  for (const [port, keys] of Object.entries(bind)) for (const key of Object.keys(keys)) {
+    const e = keyExpr(port, key.replace(" (override)", "")); if (!e) continue;
+    const m = /^\{([^}]+)\}/.exec(e); if (!m) continue;
+    let tr; try { tr = resolve(m[1], S.flavour)[1]; } catch (x) { continue; }
+    if (isPalette ? tr.palette.has(target) : tr.roles.includes(target)) (ports[port] ??= new Set()).add(key.replace(" (override)", ""));
+  }
+  const viaRoles = Object.keys(roleIndex).filter((r) => { try { const tr = resolve(r, S.flavour)[1]; return isPalette ? tr.palette.has(target) : tr.roles.includes(target) && r !== target; } catch (x) { return false; } });
+  return { ports, viaRoles };
+}
+const NAMES = { vscode: "VS Code", kitty: "kitty", ghostty: "Ghostty", firefox: "Firefox" };
+function usageHTML(u) {
+  const rows = Object.entries(u.ports).map(([p, keys]) => `<li><details><summary>${NAMES[p]}: ${keys.size} setting${keys.size === 1 ? "" : "s"}</summary><div class="keys mono">${[...keys].sort().join("<br>")}</div></details></li>`).join("");
+  return `<ul class="use">${rows || "<li>Not used directly by any app.</li>"}</ul>${u.viaRoles.length ? `<p class="lbl" style="margin-top:8px">Also feeds: ${u.viaRoles.map((r) => `<a href="#" data-go="${r}">${r}</a>`).join(", ")}</p>` : ""}`;
+}
+
+// ---------- inspector ----------
+const fl4 = (fn) => `<div class="fl4">${FL.map((f) => { const h = fn(f); return `<div style="background:${h};color:${contrast(h, "#000000") > contrast(h, "#ffffff") ? "#000" : "#fff"}" title="${ORIG[f].name} ${h}"><span class="mono">${ORIG[f].name.slice(0, 4)}</span></div>`; }).join("")}</div>`;
+function inspector() {
+  const el = document.getElementById("inspector"), sel = S.sel;
+  if (sel.kind === "mix") { el.innerHTML = `<h2>Mixed colour</h2><p class="hint">This setting uses <code>${sel.name}</code> directly in the app template, not a shared role. Change it by editing the palette colours it mixes.</p>`; return; }
+  if (sel.kind === "palette") {
+    const n = sel.name, hex = col(S.flavour, n), [L, C, H] = toOklch(hex), hdeg = ((H * 180 / Math.PI) + 360) % 360;
+    el.innerHTML = `<h2>${n}${sel.via ? ` <span class="lbl">(${sel.via})</span>` : ""}</h2>
+      <div class="big" style="background:${hex}"></div>
+      <div class="row"><input type="text" id="hex" class="mono" value="${hex}" aria-label="Hex value" style="width:110px"><button id="revertP">Revert</button></div>
+      <p class="lbl">${S.scope === "all" ? "Editing every flavour together. Lightness moves away from each flavour's background, so Wisp darkens while the dark flavours lighten." : `Editing ${ORIG[S.flavour].name} only.`}</p>
+      <div class="dial"><label for="dL">Lightness</label><input type="range" id="dL" min="0" max="1" step="0.005" value="${L.toFixed(3)}"><output class="mono">${(L * 100).toFixed(1)}</output></div>
+      <div class="dial"><label for="dC">Chroma</label><input type="range" id="dC" min="0" max="0.37" step="0.002" value="${C.toFixed(3)}"><output class="mono">${C.toFixed(3)}</output></div>
+      <div class="dial"><label for="dH">Hue</label><input type="range" id="dH" min="0" max="360" step="1" value="${hdeg.toFixed(0)}"><output class="mono">${hdeg.toFixed(0)}°</output></div>
+      <p class="lbl">All flavours</p>${fl4((f) => col(f, n))}
+      <h2>Used by</h2>${usageHTML(usageOf(n, true))}`;
+    const apply = () => setPalette(n, fromOklch(+dL.value, +dC.value, (+dH.value) * Math.PI / 180));
+    ["dL", "dC", "dH"].forEach((id) => document.getElementById(id).oninput = apply);
+    document.getElementById("hex").onchange = (e) => { const v = e.target.value.trim(); if (/^#[0-9a-f]{6}$/i.test(v)) { e.target.setCustomValidity(""); setPalette(n, v.toLowerCase(), true); } else { e.target.setCustomValidity("Use #rrggbb"); e.target.reportValidity(); } };
+    document.getElementById("revertP").onclick = () => { for (const f of FL) if (S.palette[f]) delete S.palette[f][n]; changed(); };
+  } else {
+    const r = sel.name, def = roleIndex[r], cur = roleVal(r), str = typeof cur === "string" ? cur : null;
+    const mm = str && /^mix\(([\w.]+),([\w.]+),([\d.]+)\)$/.exec(str);
+    const A = mm ? mm[1] : str, B = mm ? mm[2] : "", T = mm ? +mm[3] : 0.5;
+    const opts = (v) => `<optgroup label="Palette">${[...ACC, ...NEUT].map((p) => `<option ${p === v ? "selected" : ""}>${p}</option>`).join("")}</optgroup><optgroup label="Roles">${Object.keys(roleIndex).filter((x) => x !== r).map((x) => `<option ${x === v ? "selected" : ""}>${x}</option>`).join("")}</optgroup>`;
+    const aligned = def.catppuccin === "=";
+    const deviates = aligned && JSON.stringify(cur) !== ORIG_ROLES[r];
+    el.innerHTML = `<h2>${r}</h2>
+      <div class="big" style="background:${R(r)}"></div>
+      ${str === null ? `<p class="hint">This role uses different colours for dark and light flavours (<code>${JSON.stringify(cur)}</code>).</p>` : `
+      <label class="lbl" for="rA">Colour</label><select id="rA">${opts(A)}</select>
+      <div class="row" style="margin-top:8px"><label style="font-size:13px"><input type="checkbox" id="rMix" ${mm ? "checked" : ""}> Mix with another colour</label></div>
+      <div id="mixBox" ${mm ? "" : "hidden"}><select id="rB">${opts(B || "base")}</select>
+      <div class="dial" style="margin-top:8px"><label for="rT">Amount</label><input type="range" id="rT" min="0.05" max="0.95" step="0.05" value="${T}"><output class="mono">${Math.round(T * 100)}%</output></div></div>
+      <p class="lbl">Value: <code>${str}</code></p>`}
+      ${r === "ui.tab.indicator" ? `<label class="lbl" for="tabLine">VS Code tab line</label><select id="tabLine">${[["none", "None"], ["top", "Top edge"], ["bottom", "Bottom edge"]].map(([v, l]) => `<option value="${v}" ${S.tabLine === v ? "selected" : ""}>${l}</option>`).join("")}</select>` : ""}
+      <p class="lbl" style="margin-top:10px">All flavours</p>${fl4((f) => R(r, f))}
+      <p class="lbl">Catppuccin: ${aligned ? "same as Darkberry" : def.catppuccin || "not specified"}${def.why && !deviates ? `. ${def.why.includes(".$why") ? D.roles.syntax.$why : def.why}` : ""}</p>
+      ${deviates || (!aligned && def.catppuccin && JSON.stringify(cur) !== ORIG_ROLES[r]) ? `<label class="lbl" for="why">${deviates ? "This role matched Catppuccin. Say why it should differ (required to export)." : "Update the reason if it changed (optional)."}</label><textarea id="why" rows="2">${S.why[r] || ""}</textarea>${deviates && !S.why[r] ? `<p class="err">A reason is needed before this can be exported.</p>` : ""}` : ""}
+      <div class="row" style="margin-top:8px"><button id="revertR">Revert role</button></div>
+      <h2>Used by</h2>${usageHTML(usageOf(r, false))}`;
+    if (str !== null) {
+      const set = () => { const a = rA.value; setRole(r, rMix.checked ? `mix(${a},${rB.value},${(+rT.value).toFixed(2)})` : a); };
+      rA.onchange = set; rMix.onchange = () => { mixBox.hidden = !rMix.checked; set(); };
+      rB.onchange = set; rT.oninput = set;
+    }
+    const tl = document.getElementById("tabLine"); if (tl) tl.onchange = () => { S.tabLine = tl.value; changed(); };
+    const w = document.getElementById("why"); if (w) w.oninput = () => { S.why[r] = w.value; save(); };
+    document.getElementById("revertR").onclick = () => { delete S.roles[r]; delete S.why[r]; changed(); };
+  }
+  el.querySelectorAll("[data-go]").forEach((a) => a.onclick = (e) => { e.preventDefault(); select({ kind: "role", name: a.dataset.go }); });
+}
+function setPalette(n, hex, fromHex) {
+  if (S.scope === "one") { (S.palette[S.flavour] ??= {})[n] = hex; return changed(!fromHex); }
+  const [L0, C0, H0] = toOklch(ORIG[S.flavour].colors[n]), [L1, C1, H1] = toOklch(hex);
+  const sign = ORIG[S.flavour].dark ? 1 : -1;
+  for (const f of FL) {
+    if (f === S.flavour) { (S.palette[f] ??= {})[n] = hex; continue; }
+    const [l, c, h] = toOklch(ORIG[f].colors[n]), s2 = ORIG[f].dark ? 1 : -1;
+    (S.palette[f] ??= {})[n] = fromOklch(l + (L1 - L0) * sign * s2, Math.max(0, c + (C1 - C0)), h + (H1 - H0));
+  }
+  changed(!fromHex);
+}
+function setRole(r, v) {
+  const prev = S.roles[r];
+  try { S.roles[r] = v; resolve(r, S.flavour); } catch (e) { if (prev === undefined) delete S.roles[r]; else S.roles[r] = prev; render(); const box = document.getElementById("inspector"); box.insertAdjacentHTML("afterbegin", `<p class="err">That would make ${r} refer to itself, so it wasn't changed.</p>`); return; }
+  changed();
+}
+
+// ---------- checks ----------
+function checks() {
+  const out = [];
+  for (const f of FL) {
+    const bg = R("ui.background", f), name = ORIG[f].name;
+    for (const [k, r] of Object.entries(D.roles.syntax)) { if (k.startsWith("$")) continue;
+      const v = contrast(R(`syntax.${k}`, f), bg), min = r.minContrast ?? 4.5; if (v < min) out.push(["bad", `syntax.${k}`, `${name}: syntax.${k} contrast ${v.toFixed(2)}, needs ${min}`]); }
+    for (const k of ["ui.text", "ui.text.muted", "ui.link"]) { const v = contrast(R(k, f), bg); if (v < 4.5) out.push(["bad", k, `${name}: ${k} contrast ${v.toFixed(2)}, needs 4.5`]); }
+    const pairs = [["ui.on.fill", "ui.fill", 4.5], ...Object.entries(roleIndex).filter(([, r]) => r.minContrastWith).map(([n, r]) => [r.minContrastWith[0], n, r.minContrastWith[1]])];
+    for (const [fg, b, min] of pairs) { const v = contrast(R(fg, f), R(b, f)); if (v < min) out.push(["bad", b, `${name}: ${fg} on ${b} contrast ${v.toFixed(2)}, needs ${min}`]); }
+    const key = Object.entries(D.roles.syntax).filter(([, r]) => r.key).map(([k]) => k);
+    for (let i = 0; i < key.length; i++) for (let j = i + 1; j < key.length; j++) {
+      const d = deltaE(R(`syntax.${key[i]}`, f), R(`syntax.${key[j]}`, f));
+      if (d < 5) out.push(["bad", `syntax.${key[i]}`, `${name}: ${key[i]} and ${key[j]} look alike (${d.toFixed(1)}, needs 5)`]);
+      else if (d < 7) out.push(["warn", `syntax.${key[i]}`, `${name}: ${key[i]} and ${key[j]} are close (${d.toFixed(1)})`]);
+    }
+  }
+  const bad = out.filter((o) => o[0] === "bad"), warn = out.filter((o) => o[0] === "warn");
+  const el = document.getElementById("checks");
+  el.innerHTML = bad.length || warn.length ? [...bad, ...warn.slice(0, 8)].map(([c, role, t]) => `<li class="${c}" data-go="${role}">${t}</li>`).join("") + (warn.length > 8 ? `<li class="ok">${warn.length - 8} more close pairs, same as the current build</li>` : "") : `<li class="ok">Everything passes, in every flavour.</li>`;
+  el.querySelectorAll("[data-go]").forEach((li) => li.onclick = () => select({ kind: "role", name: li.dataset.go }));
+  return bad;
+}
+
+// ---------- export ----------
+function buildPatch() {
+  const patch = { "darkberry-patch": 1, palette: {}, roles: {} };
+  for (const f of FL) for (const [n, h] of Object.entries(S.palette[f] || {})) if (h !== ORIG[f].colors[n]) (patch.palette[f] ??= {})[n] = h;
+  for (const [r, v] of Object.entries(S.roles)) if (JSON.stringify(v) !== ORIG_ROLES[r]) patch.roles[r] = { value: v, ...(S.why[r] ? { why: S.why[r] } : {}) };
+  if (S.tabLine !== DEFAULT_TABLINE) patch.vscodeTabLine = S.tabLine;
+  return patch;
+}
+function exportPanel() {
+  const p = buildPatch(), panel = document.getElementById("exportPanel");
+  const empty = !Object.keys(p.palette).length && !Object.keys(p.roles).length && !p.vscodeTabLine;
+  const missing = Object.keys(p.roles).filter((r) => roleIndex[r].catppuccin === "=" && !p.roles[r].why);
+  const bad = checks();
+  panel.hidden = false;
+  panel.innerHTML = empty ? `<h2>Nothing to export yet</h2><p class="hint">Change a palette colour or a role first. Your edits are kept in this browser until you discard them.</p>` :
+    `<h2>Your patch</h2>${missing.length ? `<p class="err">Add a reason for: ${missing.join(", ")}. These roles matched Catppuccin, and the repo requires a reason to change them.</p>` : ""}${bad.length ? `<p class="err">${bad.length} check${bad.length === 1 ? "" : "s"} fail. The build will refuse this patch until they pass.</p>` : ""}
+    <pre class="mono" id="patchText">${JSON.stringify(p, null, 2)}</pre>
+    <div class="row"><button class="primary" id="copyPatch">Copy patch</button><span class="lbl" id="copied" aria-live="polite"></span></div>
+    <ol><li>Save it in the repo as <code>patch.json</code>.</li><li>Run <code>node tools/apply-patch.mjs patch.json</code>. It updates the palette and roles, then rebuilds every port.</li><li>Or paste it into your chat with Claude.</li></ol>`;
+  const cp = document.getElementById("copyPatch");
+  if (cp) cp.onclick = async () => { try { await navigator.clipboard.writeText(JSON.stringify(p, null, 2)); document.getElementById("copied").textContent = "Copied"; } catch (e) { const r = document.createRange(); r.selectNodeContents(document.getElementById("patchText")); getSelection().removeAllRanges(); getSelection().addRange(r); document.getElementById("copied").textContent = "Selected. Press Ctrl+C or Cmd+C to copy."; } };
+  panel.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+
+// ---------- wiring ----------
+function select(sel) { S.sel = sel; save(); render(); }
+function changed(keepInputs) { save(); if (keepInputs && S.sel.kind === "palette") { specimen(); sidebar(); checks(); chrome(); document.querySelector(".big").style.background = col(S.flavour, S.sel.name); document.getElementById("hex").value = col(S.flavour, S.sel.name); document.querySelectorAll(".dial output")[0].textContent = (+dL.value * 100).toFixed(1); document.querySelectorAll(".dial output")[1].textContent = (+dC.value).toFixed(3); document.querySelectorAll(".dial output")[2].textContent = (+dH.value) + "°"; const fl = document.querySelector(".fl4"); if (fl) fl.outerHTML = fl4((f) => col(f, S.sel.name)); return; } render(); }
+function render() {
+  document.querySelectorAll("#flavours button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === S.flavour));
+  scopeOne.setAttribute("aria-pressed", S.scope === "one"); scopeAll.setAttribute("aria-pressed", S.scope === "all");
+  chrome(); sidebar(); specimen(); inspector(); checks();
+  if (!document.getElementById("exportPanel").hidden) exportPanel();
+}
+document.getElementById("ver").textContent = `v${D.version}`;
+document.getElementById("flavours").innerHTML = FL.map((f) => `<button data-f="${f}">${ORIG[f].emoji || ""} ${ORIG[f].name}</button>`).join("");
+document.querySelectorAll("#flavours button").forEach((b) => b.onclick = () => { S.flavour = b.dataset.f; save(); render(); });
+scopeOne.onclick = () => { S.scope = "one"; save(); render(); };
+scopeAll.onclick = () => { S.scope = "all"; save(); render(); };
+let armed = null;
+undoAll.onclick = () => {
+  if (!armed) { undoAll.textContent = "Click again to discard everything"; armed = setTimeout(() => { armed = null; undoAll.textContent = "Discard changes"; }, 4000); return; }
+  clearTimeout(armed); armed = null; undoAll.textContent = "Discard changes";
+  S.palette = {}; S.roles = {}; S.why = {}; S.tabLine = DEFAULT_TABLINE; document.getElementById("exportPanel").hidden = true; changed();
+};
+exportBtn.onclick = exportPanel;
+roleFilter.value = S.filter; roleFilter.oninput = () => { S.filter = roleFilter.value; save(); sidebar(); };
+render();
+})();
+</script>
+</body>
+</html>

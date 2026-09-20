@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Darkberry Mire",
+  "version": "0.3.0",
+  "description": "Darkberry for Firefox. The main dark flavour: wine-dark mire with berry accents.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "darkberry-mire@darkberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#1c1119",
+      "frame_inactive": "#1c1119",
+      "tab_selected": "#2a1e26",
+      "tab_text": "#efe3eb",
+      "tab_background_text": "#cbbcc5",
+      "tab_line": "#d577be",
+      "tab_loading": "#fd7ca5",
+      "toolbar": "#2a1e26",
+      "toolbar_text": "#efe3eb",
+      "bookmark_text": "#efe3eb",
+      "icons": "#cbbcc5",
+      "icons_attention": "#fd7ca5",
+      "toolbar_field": "#32222c",
+      "toolbar_field_text": "#efe3eb",
+      "toolbar_field_border": "#3e2936",
+      "toolbar_field_focus": "#32222c",
+      "toolbar_field_text_focus": "#efe3eb",
+      "toolbar_field_border_focus": "#fd7ca5",
+      "toolbar_field_highlight": "#6e3e52",
+      "toolbar_field_highlight_text": "#efe3eb",
+      "toolbar_top_separator": "#1c1119",
+      "toolbar_bottom_separator": "#32222c",
+      "toolbar_vertical_separator": "#3e2936",
+      "popup": "#23161f",
+      "popup_text": "#efe3eb",
+      "popup_border": "#3e2936",
+      "popup_highlight": "#6e3e52",
+      "popup_highlight_text": "#efe3eb",
+      "sidebar": "#23161f",
+      "sidebar_text": "#efe3eb",
+      "sidebar_border": "#32222c",
+      "sidebar_highlight": "#6e3e52",
+      "sidebar_highlight_text": "#efe3eb",
+      "ntp_background": "#2a1e26",
+      "ntp_text": "#efe3eb",
+      "button_background_hover": "#32222c",
+      "button_background_active": "#3e2936"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

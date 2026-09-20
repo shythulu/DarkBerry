@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Darkberry Wisp",
+  "version": "0.3.0",
+  "description": "Darkberry for Firefox. Light. Text is a violet-leaning cousin of the paint colour.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "darkberry-wisp@darkberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#ebdae5",
+      "frame_inactive": "#ebdae5",
+      "tab_selected": "#fbf4f8",
+      "tab_text": "#4f3143",
+      "tab_background_text": "#694e5f",
+      "tab_line": "#a82590",
+      "tab_loading": "#d21570",
+      "toolbar": "#fbf4f8",
+      "toolbar_text": "#4f3143",
+      "bookmark_text": "#4f3143",
+      "icons": "#694e5f",
+      "icons_attention": "#d21570",
+      "toolbar_field": "#dfcbd8",
+      "toolbar_field_text": "#4f3143",
+      "toolbar_field_border": "#d0bac8",
+      "toolbar_field_focus": "#dfcbd8",
+      "toolbar_field_text_focus": "#4f3143",
+      "toolbar_field_border_focus": "#d21570",
+      "toolbar_field_highlight": "#d191b2",
+      "toolbar_field_highlight_text": "#4f3143",
+      "toolbar_top_separator": "#ebdae5",
+      "toolbar_bottom_separator": "#dfcbd8",
+      "toolbar_vertical_separator": "#d0bac8",
+      "popup": "#f3e6ef",
+      "popup_text": "#4f3143",
+      "popup_border": "#d0bac8",
+      "popup_highlight": "#d191b2",
+      "popup_highlight_text": "#4f3143",
+      "sidebar": "#f3e6ef",
+      "sidebar_text": "#4f3143",
+      "sidebar_border": "#dfcbd8",
+      "sidebar_highlight": "#d191b2",
+      "sidebar_highlight_text": "#4f3143",
+      "ntp_background": "#fbf4f8",
+      "ntp_text": "#4f3143",
+      "button_background_hover": "#dfcbd8",
+      "button_background_active": "#d0bac8"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}
