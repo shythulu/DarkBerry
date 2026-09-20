@@ -3,10 +3,14 @@
 # packages without releasing and leaves the files as build artifacts, which is the way to
 # check a packaging change before tagging.
 #
-# The Firefox .xpi files are unsigned, so they install only through about:debugging or on
-# an unbranded build. Add AMO_JWT_ISSUER and AMO_JWT_SECRET as repository secrets and the
-# signing step starts replacing them with signed ones that install anywhere; nothing else
-# about this file has to change.
+# Firefox is distributed through addons.mozilla.org as a listed add-on, so AMO signs and
+# serves it and users get updates automatically. The .xpi files attached to the release are
+# the unsigned build output, kept for archival only.
+#
+# The amo job submits each flavour as a new version. It stays skipped until AMO_JWT_ISSUER
+# and AMO_JWT_SECRET exist as repository secrets, and it only handles UPDATES: the first
+# submission of each of the four flavours has to be made once by hand on AMO, where you
+# choose categories and upload preview images. See docs/AMO.md.
 name: Release
 on:
   push:
@@ -19,9 +23,6 @@ concurrency:
 jobs:
   package:
     runs-on: ubuntu-latest
-    env:
-      AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
-      AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -49,22 +50,6 @@ jobs:
       - name: Package
         run: ./package.sh
 
-      - name: Sign the Firefox themes
-        id: sign
-        if: env.AMO_JWT_ISSUER != ''
-        run: |
-          version='${{ steps.meta.outputs.version }}'
-          for dir in ports/firefox/*/; do
-            flavour=$(basename "$dir")
-            npx --yes web-ext sign --source-dir "$dir" --channel unlisted \
-              --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET" \
-              --artifacts-dir "signed/$flavour"
-            xpi=$(find "signed/$flavour" -name '*.xpi' | head -1)
-            test -n "$xpi" || { echo "::error::no signed .xpi came back for $flavour"; exit 1; }
-            mv "$xpi" "dist/darkberry-$flavour-$version.xpi"
-          done
-          echo "signed=yes" >> "$GITHUB_OUTPUT"
-
       - name: Write the release notes
         if: startsWith(github.ref, 'refs/tags/')
         run: |
@@ -84,11 +69,7 @@ jobs:
             echo
             echo "**Konsole** — unzip \`darkberry-konsole-$version.zip\` into \`~/.local/share/konsole/\`, then Settings > Edit Current Profile > Appearance."
             echo
-            if [ '${{ steps.sign.outputs.signed }}' = 'yes' ]; then
-              echo "**Firefox** — open the \`.xpi\` for the flavour you want. These are signed by Mozilla for self-distribution."
-            else
-              echo "**Firefox** — these \`.xpi\` files are unsigned, so release Firefox will refuse them. Load one temporarily through \`about:debugging\` > This Firefox > Load Temporary Add-on, or install it permanently on Developer Edition or Nightly with \`xpinstall.signatures.required\` set to \`false\`."
-            fi
+            echo "**Firefox** — install from [addons.mozilla.org](https://addons.mozilla.org/firefox/search/?q=darkberry), which is where updates come from. The \`.xpi\` files attached here are the unsigned build output, kept for archival: release Firefox refuses unsigned add-ons, so they install only through \`about:debugging\` > Load Temporary Add-on, or on Developer Edition, Nightly or an unbranded Release/Beta build with \`xpinstall.signatures.required\` set to \`false\`."
           } > notes.md
 
       - name: Create the release
@@ -110,3 +91,35 @@ jobs:
             dist/*.vsix
             dist/*.xpi
             dist/*.zip
+
+  # Separate job on purpose: the release must not depend on AMO being up or quick.
+  amo:
+    needs: package
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    env:
+      AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
+      AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Submit each flavour to addons.mozilla.org
+        if: env.AMO_JWT_ISSUER != ''
+        run: |
+          # --channel listed adds a version to an existing listing. AMO publishes the signed
+          # file itself, so there is nothing to wait for or bring back: a short approval
+          # timeout keeps four submissions from holding the runner for an hour.
+          fail=0
+          for dir in ports/firefox/*/; do
+            flavour=$(basename "$dir")
+            echo "::group::$flavour"
+            npx --yes web-ext sign --source-dir "$dir" --channel listed \
+              --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET" \
+              --approval-timeout 0 || { echo "::error::AMO submission failed for $flavour"; fail=1; }
+            echo "::endgroup::"
+          done
+          test "$fail" -eq 0 ||
+            { echo "::error::The release published; only the AMO submission failed. Re-run this job once fixed."; exit 1; }

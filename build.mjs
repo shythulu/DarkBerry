@@ -49,6 +49,7 @@ const note = (port, trace) => {
 const meta = (ctx) => ({
   FULL: `${P.name} ${ctx.f.name}`, NAME: P.name, NOTE: ctx.f.note, VERSION: P.version,
   SLUG: `${P.id}-${ctx.id}`, ID: P.id, SCHEME: ctx.f.dark ? "dark" : "light",
+  HOMEPAGE: P.homepage,
   ...accentHsl(ctx),
 });
 // Obsidian builds --color-accent and its hover shades out of these three, so a hex is not enough.
@@ -116,6 +117,7 @@ for (const ctx of ctxs) {
 out("ports/vscode/package.json", {
   name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
   publisher: "your-publisher-id", license: "MIT", engines: { vscode: "^1.70.0" },
+  homepage: P.homepage, repository: { type: "git", url: P.repository },
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
 });

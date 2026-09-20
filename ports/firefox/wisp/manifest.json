@@ -3,6 +3,7 @@
   "name": "Darkberry Wisp",
   "version": "0.3.0",
   "description": "Darkberry for Firefox. Light. Text is a violet-leaning cousin of the paint colour.",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
   "browser_specific_settings": {
     "gecko": {
       "id": "darkberry-wisp@darkberry-theme"
