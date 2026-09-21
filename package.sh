@@ -30,4 +30,6 @@ done
 (cd ports/starship && zip -qr "../../dist/darkberry-starship-$VERSION.zip" .)
 (cd ports/lsd && zip -qr "../../dist/darkberry-lsd-$VERSION.zip" .)
 (cd ports/ls-colors && zip -qr "../../dist/darkberry-ls-colors-$VERSION.zip" .)
+(cd ports/tinted8 && zip -qr "../../dist/darkberry-tinted8-$VERSION.zip" .)
+(cd ports/base24 && zip -qr "../../dist/darkberry-base24-$VERSION.zip" .)
 ls dist

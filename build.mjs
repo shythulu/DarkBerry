@@ -49,6 +49,7 @@ const note = (port, trace) => {
 const meta = (ctx) => ({
   FULL: `${P.name} ${ctx.f.name}`, NAME: P.name, NOTE: ctx.f.note, VERSION: P.version,
   SLUG: `${P.id}-${ctx.id}`, ID: P.id, SCHEME: ctx.f.dark ? "dark" : "light",
+  FLAVOUR: ctx.f.name,
   HOMEPAGE: P.homepage,
   ISDARK: ctx.f.dark ? "true" : "false",
   ...accentHsl(ctx),
@@ -92,6 +93,7 @@ const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.jso
 const nppT = read("src/ports/notepadpp.xml");
 const starshipT = read("src/ports/starship.toml"), lsdT = read("src/ports/lsd.yaml");
 const lsColorsT = read("src/ports/ls-colors.txt");
+const tinted8T = read("src/ports/tinted8.yaml"), base24T = read("src/ports/base24.yaml");
 const gtkT = read("src/ports/gtk.css"), darktableT = read("src/ports/darktable.css"), gimpT = read("src/ports/gimp.css");
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
 const toBareHex = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => `"${h.toUpperCase()}"`);
@@ -129,6 +131,22 @@ function toLsColors(text) {
   }
   return lines.join("\n").replace(/\n{3,}/g, "\n\n").trimEnd() + "\n\nexport LS_COLORS\n";
 }
+// The two Tinted Theming schemes carry a trailing note on some lines. Aligning
+// it here rather than in the template is the only way it lands straight: a role
+// name and the hex it resolves to are different lengths.
+const alignYamlNotes = (text) => {
+  const lines = [], block = [];
+  const flush = () => {
+    const w = Math.max(0, ...block.map(([code]) => code.length));
+    for (const [code, note] of block.splice(0)) lines.push(code.padEnd(w) + "  " + note);
+  };
+  for (const line of text.split("\n")) {
+    const m = /^(\s*[\w.-]+: "#[0-9a-f]{6}")\s+(#.*)$/.exec(line);
+    if (m) block.push([m[1], m[2]]); else { flush(); lines.push(line); }
+  }
+  flush();
+  return lines.join("\n");
+};
 const toTriplets = (text) => text.replace(/#([0-9a-f]{6})/g, (_, h) => rgb("#" + h).map((v) => Math.round(v * 255)).join(","));
 const vscodeT = read("src/vscode/template.json");
 
@@ -159,6 +177,8 @@ for (const ctx of ctxs) {
   out(`ports/lsd/${slug}.yaml`, applyOverrides("lsd", "lines", fill(ctx, lsdT, "lsd"), ctx));
   out(`ports/ls-colors/${slug}.sh`, toLsColors(applyOverrides("ls-colors", "lines", fill(ctx, lsColorsT, "ls-colors"), ctx)));
   out(`ports/starship/${slug}.toml`, applyOverrides("starship", "lines", fill(ctx, starshipT, "starship"), ctx));
+  out(`ports/tinted8/${slug}.yaml`, alignYamlNotes(applyOverrides("tinted8", "lines", fill(ctx, tinted8T, "tinted8"), ctx)));
+  out(`ports/base24/${slug}.yaml`, alignYamlNotes(applyOverrides("base24", "lines", fill(ctx, base24T, "base24"), ctx)));
   out(`ports/gtk/${full}/gtk-3.0/gtk.css`, applyOverrides("gtk", "lines", fill(ctx, gtkT, "gtk"), ctx));
   out(`ports/darktable/${slug}.css`, applyOverrides("darktable", "lines", fill(ctx, darktableT, "darktable"), ctx));
   out(`ports/gimp/${slug}.css`, applyOverrides("gimp", "lines", fill(ctx, gimpT, "gimp"), ctx));
@@ -191,7 +211,7 @@ const traceExpr = (port, key, raw) => {
 const walk = (port, o, pre = "") => { if (typeof o === "string") return traceExpr(port, pre, o);
   if (Array.isArray(o)) return o.forEach((v, i) => walk(port, v, `${pre}[${v?.name ? JSON.stringify(v.name) : i}]`));
   if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) walk(port, v, pre ? (pre === "colors" || pre.endsWith("colors") ? `${k}` : `${pre}.${k}`) : k); };
-for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["lsd", lsdT], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT]])
+for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT]])
   for (const line of text.split("\n")) { const m = /^([\w.-]+(?:\s*=\s*\d+)?)\s*=?\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("#")) traceExpr(port, m[1].replace(/\s+/g, " "), m[2]); }
 for (const raw of lsColorsT.split("\n")) {
   const t = raw.trim();
@@ -205,7 +225,7 @@ walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "co
 walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
-for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "lsd", "ls-colors"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 out("dist/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
@@ -294,10 +314,10 @@ rolesMd += `\nAligned with Catppuccin: ANSI mapping and bright formula, all back
 out("docs/ROLES.md", rolesMd);
 
 // ---------- docs/USAGE.md (blast radius of each palette colour) ----------
-let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | lsd | LS_COLORS |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
+let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
 for (const k of order) {
   const u = usage[k];
-  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "lsd", "ls-colors"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
+  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
 }
 usageMd += `\nANSI colours (\`ansi.0\` to \`ansi.15\`) come from the palette via \`roles.json\` → \`ansi\`, the same way for every terminal.\n`;
 out("docs/USAGE.md", usageMd);

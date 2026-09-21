@@ -75,6 +75,8 @@ jobs:
             echo
             echo "**starship** — unzip \`darkberry-starship-$version.zip\` and copy a flavour over \`~/.config/starship.toml\`."
             echo
+            echo "**Base24 and Tinted8** — unzip \`darkberry-base24-$version.zip\` or \`darkberry-tinted8-$version.zip\` into a [Tinted Theming](https://github.com/tinted-theming) builder's schemes directory and build; one file themes every app that has a Base24 or Tinted8 template."
+            echo
             echo "**micro** — unzip \`darkberry-micro-$version.zip\` into \`~/.config/micro/colorschemes/\`, then \`set colorscheme darkberry-mire\`."
             echo
             echo "**Kate** — unzip \`darkberry-kate-$version.zip\` into \`~/.local/share/org.kde.syntax-highlighting/themes/\`, then Settings > Configure Kate > Fonts & Colors."
