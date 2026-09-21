@@ -29,4 +29,5 @@ done
 (cd ports/gimp && zip -qr "../../dist/darkberry-gimp-$VERSION.zip" .)
 (cd ports/starship && zip -qr "../../dist/darkberry-starship-$VERSION.zip" .)
 (cd ports/lsd && zip -qr "../../dist/darkberry-lsd-$VERSION.zip" .)
+(cd ports/ls-colors && zip -qr "../../dist/darkberry-ls-colors-$VERSION.zip" .)
 ls dist

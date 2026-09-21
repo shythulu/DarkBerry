@@ -1,0 +1,77 @@
+# %FULL% for LS_COLORS. %NOTE%
+#
+# This is the companion to the lsd port, and the more important half of it.
+# lsd 1.2.0 skips the `file-type` key in its theme struct, so colors.yaml can
+# only reach the metadata columns -- permissions, owner, size, date, git. The
+# names of the files and folders, which are nearly everything you look at in a
+# listing, come from LS_COLORS instead, and without it lsd falls back to its
+# built-in blue directories and green executables no matter what theme is set.
+# GNU ls, eza, fd, dust, delta and zsh's completion menu read the same variable,
+# so one file themes all of them.
+#
+# BSD ls (macOS without coreutils) reads LSCOLORS instead, which only addresses
+# the eight ANSI colours and cannot carry these. Use lsd or GNU ls there.
+#
+# Source it from your shell rc:  . ~/.config/darkberry/%SLUG%.sh
+#
+# Plain POSIX sh, and safe to source from zsh: the assignments wrap the variable
+# name in braces, because unbraced zsh reads `$LS_COLORS:st=` as the :s history
+# modifier and refuses the whole file.
+
+# --- What the entry is -----------------------------------------------------
+# Directories carry the accent, because they are the thing the eye sorts a
+# listing by first. Everything else is quieter than they are.
+di  01;{berry}          directory
+fi  {ui.text}           regular file
+ln  {frost}             symlink, cool and cold like the link column in the lsd theme
+or  01;{ui.error}       symlink with no target
+mi  01;{ui.error}       the missing target itself
+ex  01;{gooseberry}     executable -- green because "you can run this" is older than any theme
+
+# A world-writable or sticky directory is still a directory, so it keeps the
+# accent's weight and shifts hue rather than shouting in an error colour.
+tw  01;{plum}           sticky and other-writable
+ow  01;{plum}           other-writable
+st  01;{plum}           sticky
+
+# setuid and setgid do deserve to shout.
+su  01;{ui.error}       setuid
+sg  01;{ui.error}       setgid
+
+# Pipes, sockets and devices: rare, and grouped so they read as one odd class.
+pi  {juniper}           fifo
+so  {juniper}           socket
+bd  {juniper}           block device
+cd  {juniper}           character device
+
+# --- What the file holds ---------------------------------------------------
+# Six groups, each a different hue, so a directory's shape is legible before
+# you read a single name. Source is the loudest because it is what you came for.
+
+# Source code
+*.rs *.py *.pyi *.js *.mjs *.cjs *.jsx *.ts *.tsx *.go *.c *.h *.cc *.cpp *.hpp *.cs  {plum}
+*.rb *.php *.pl *.lua *.java *.kt *.swift *.zig *.hs *.ml *.scala *.dart *.ex *.exs   {plum}
+*.sh *.bash *.zsh *.fish *.ps1 *.psm1 *.nu *.vim *.el *.scm *.sql                     {plum}
+
+# Configuration and data
+*.json *.json5 *.toml *.yaml *.yml *.ini *.cfg *.conf *.config *.env *.properties     {lavender}
+*.xml *.plist *.csv *.tsv *.parquet *.db *.sqlite *.sqlite3 *.lock                    {lavender}
+
+# Prose and documents
+*.md *.markdown *.rst *.org *.txt *.text *.adoc *.tex *.pdf *.epub                    {honey}
+*.doc *.docx *.odt *.rtf *.ppt *.pptx *.xls *.xlsx *.ods                              {honey}
+
+# Pictures, video and sound
+*.png *.jpg *.jpeg *.gif *.bmp *.webp *.svg *.ico *.tiff *.tif *.heic *.avif          {petal}
+*.psd *.xcf *.raw *.cr2 *.nef *.dng                                                   {petal}
+*.mp4 *.mkv *.webm *.mov *.avi *.m4v *.wmv *.flv                                      {petal}
+*.mp3 *.flac *.wav *.ogg *.opus *.m4a *.aac                                           {petal}
+
+# Archives and images of whole systems
+*.tar *.tgz *.gz *.bz2 *.xz *.zst *.lz4 *.zip *.7z *.rar *.jar *.war                  {apricot}
+*.deb *.rpm *.apk *.dmg *.iso *.img *.whl *.pkg *.cab *.msi                           {apricot}
+
+# Output you did not write and would not miss: build leavings, logs, backups.
+# These are the one group deliberately pushed under the reading colour.
+*.log *.bak *.tmp *.temp *.swp *.swo *.orig *.rej *.pid *.part *.crdownload           {ui.text.subtle}
+*.pyc *.pyo *.o *.obj *.class *.cache *~                                              {ui.text.subtle}

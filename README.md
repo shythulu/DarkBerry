@@ -109,6 +109,27 @@ Written against lsd 1.2.0, whose theme struct rejects unknown keys. Notably `fil
 skipped in that version, so a theme carrying it is discarded whole and lsd falls back to its
 defaults without saying so. Every key here is one lsd 1.2.0 accepts.
 
+That skipped key is why `ports/ls-colors/` exists, and why you want both halves. colors.yaml
+reaches only the metadata columns; the file and folder names, which are most of what a listing
+actually shows, are left on lsd's stock blue and green until LS_COLORS is set.
+
+### LS_COLORS
+
+Source a flavour from `ports/ls-colors/` in your shell rc:
+
+```sh
+. ~/.config/darkberry/darkberry-mire.sh
+```
+
+It exports `LS_COLORS`, which lsd, GNU `ls`, eza, fd, dust, delta and zsh's completion menu all
+read, so the one file themes every listing on the machine. Directories take the accent; source,
+configuration, prose, media and archives each take a hue; build leavings and backups sit under
+the reading colour. Executables stay green and symlinks stay cool, because those two meanings
+are older than any theme.
+
+BSD `ls`, which is what macOS ships without coreutils, reads `LSCOLORS` instead -- a different
+format limited to the eight ANSI colours, which cannot carry these. Use lsd or GNU `ls` there.
+
 ### starship
 
 Copy a flavour from `ports/starship/` over `~/.config/starship.toml`. A two-line

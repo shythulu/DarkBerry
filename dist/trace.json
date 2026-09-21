@@ -6431,6 +6431,470 @@
     }
   },
   {
+    "port": "ls-colors",
+    "key": "di",
+    "expr": "{berry}",
+    "roles": [],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "fi",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "ln",
+    "expr": "{frost}",
+    "roles": [],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#1b778c",
+      "fen": "#a0d0da",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "or",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "mi",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "ex",
+    "expr": "{gooseberry}",
+    "roles": [],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#377a37",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "tw",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "ow",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "st",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "su",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "sg",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#cc3838",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "pi",
+    "expr": "{juniper}",
+    "roles": [],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "so",
+    "expr": "{juniper}",
+    "roles": [],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "bd",
+    "expr": "{juniper}",
+    "roles": [],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "cd",
+    "expr": "{juniper}",
+    "roles": [],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#1d7d6c",
+      "fen": "#bad9d4",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.rs *.py *.pyi *.js *.mjs *.cjs *.jsx *.ts *.tsx *.go *.c *.h *.cc *.cpp *.hpp *.cs",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.rb *.php *.pl *.lua *.java *.kt *.swift *.zig *.hs *.ml *.scala *.dart *.ex *.exs",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.sh *.bash *.zsh *.fish *.ps1 *.psm1 *.nu *.vim *.el *.scm *.sql",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#9a4cc0",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.json *.json5 *.toml *.yaml *.yml *.ini *.cfg *.conf *.config *.env *.properties",
+    "expr": "{lavender}",
+    "roles": [],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.xml *.plist *.csv *.tsv *.parquet *.db *.sqlite *.sqlite3 *.lock",
+    "expr": "{lavender}",
+    "roles": [],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7a58b0",
+      "fen": "#cebede",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.md *.markdown *.rst *.org *.txt *.text *.adoc *.tex *.pdf *.epub",
+    "expr": "{honey}",
+    "roles": [],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.doc *.docx *.odt *.rtf *.ppt *.pptx *.xls *.xlsx *.ods",
+    "expr": "{honey}",
+    "roles": [],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#90670a",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.png *.jpg *.jpeg *.gif *.bmp *.webp *.svg *.ico *.tiff *.tif *.heic *.avif",
+    "expr": "{petal}",
+    "roles": [],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.psd *.xcf *.raw *.cr2 *.nef *.dng",
+    "expr": "{petal}",
+    "roles": [],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.mp4 *.mkv *.webm *.mov *.avi *.m4v *.wmv *.flv",
+    "expr": "{petal}",
+    "roles": [],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.mp3 *.flac *.wav *.ogg *.opus *.m4a *.aac",
+    "expr": "{petal}",
+    "roles": [],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#b7437d",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.tar *.tgz *.gz *.bz2 *.xz *.zst *.lz4 *.zip *.7z *.rar *.jar *.war",
+    "expr": "{apricot}",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#b15423",
+      "fen": "#f7bf9e",
+      "mire": "#f2ad8a",
+      "blackwater": "#f2ad8a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.deb *.rpm *.apk *.dmg *.iso *.img *.whl *.pkg *.cab *.msi",
+    "expr": "{apricot}",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#b15423",
+      "fen": "#f7bf9e",
+      "mire": "#f2ad8a",
+      "blackwater": "#f2ad8a"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.log *.bak *.tmp *.temp *.swp *.swo *.orig *.rej *.pid *.part *.crdownload",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "ls-colors",
+    "key": "*.pyc *.pyo *.o *.obj *.class *.cache *~",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
     "port": "firefox",
     "key": "frame",
     "expr": "{ui.pane.tertiary}",
