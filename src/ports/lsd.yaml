@@ -9,6 +9,11 @@
 # `file-type:` key -- which plenty of lsd themes carry -- makes lsd discard the
 # whole theme and fall back to stock defaults without printing an error. Every
 # key below is one lsd 1.2.0 accepts. Keys left out simply keep their defaults.
+#
+# Because `file-type` is skipped, this file reaches only the metadata columns.
+# File and folder names -- nearly everything a listing shows -- keep lsd's
+# built-in blue and green until LS_COLORS is set. Source the LS_COLORS port
+# alongside this one or the theme stops at the left margin.
 
 user: "{berry}"
 group: "{lavender}"
