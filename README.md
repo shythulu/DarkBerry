@@ -142,6 +142,40 @@ colour from `src/roles.json`, so anything meaning "this failed" follows `ui.erro
 named after a palette colour cover what no role describes: a language's brand colour, or a
 git state that only needs to be distinguishable.
 
+### Base24 and Tinted8
+
+Two ports carry Darkberry into [Tinted Theming](https://github.com/tinted-theming), whose
+builders turn one scheme file into configuration for seventy-odd applications. These are the
+only ports here that theme apps Darkberry has never heard of.
+
+Copy a flavour from `ports/base24/` or `ports/tinted8/` into a builder's schemes directory
+and build:
+
+```sh
+tinty install                      # or: tinted-builder-rust build .
+```
+
+Which one depends on the builder. **Base24** is the widely supported system: twenty-four
+fixed slots, `base00` to `base17`, understood by every Base16 and Base24 template.
+**Tinted8** is the newer spec: eight anchor colours that a builder expands, plus optional
+`syntax` and `ui` blocks that let a scheme state what it actually means instead of leaving
+the builder to guess. Darkberry fills both blocks, so the Tinted8 file is the more faithful
+of the two -- it carries the syntax assignments token for token from the VS Code port, and
+names the cursor, gutter, current line, selection and status colours outright.
+
+Base24 has to compress more. Each of its slots does two jobs at once, an editor meaning and
+an ANSI code, and where those disagree the file keeps the ANSI half so that a terminal built
+from it matches the kitty, Ghostty and Konsole ports, and keeps the legible half wherever the
+spec asks for legibility by name. The header comment in each generated file says which slots
+were compromised and why; `src/ports/base24.yaml` carries the full reasoning.
+
+Both were checked by building all four flavours with `tinted-builder-rust` 0.21.0, which is
+stricter than the spec it implements: its scheme struct denies unknown fields, so a single key
+spelled the way the styling spec prints it makes the builder reject the whole file -- the same
+trap lsd's theme struct sets. The templates use the names the builder accepts, and every value
+they declare was rendered back out and compared: 105 keys in the Tinted8 file, all 24 slots in
+the Base24 one.
+
 ### micro
 
 Copy a `.micro` file from `ports/micro/` into `~/.config/micro/colorschemes/`, then
