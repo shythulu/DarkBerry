@@ -138,7 +138,7 @@ for (const ctx of ctxs) {
 }
 out("ports/vscode/package.json", {
   name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
-  publisher: "your-publisher-id", license: "MIT", engines: { vscode: "^1.70.0" },
+  publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" },
   homepage: P.homepage, repository: { type: "git", url: P.repository },
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
