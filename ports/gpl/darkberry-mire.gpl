@@ -1,0 +1,33 @@
+GIMP Palette
+Name: Darkberry Mire
+Columns: 8
+# Darkberry 0.3.0, https://shythulu.github.io/DarkBerry/
+231 197 216	Blossom
+254 175 212	Petal
+253 124 165	Berry
+221 176 236	Plum
+240 106 106	Cranberry
+211 145 156	Cherry
+242 173 138	Apricot
+232 201 138	Honey
+163 218 163	Gooseberry
+158 208 196	Juniper
+134 192 204	Frost
+127 180 224	Bilberry
+143 176 242	Blueberry
+186 168 220	Lavender
+186  72 137	Jam
+255 255 255	Onjam
+253 124 165	Tint
+239 227 235	Text
+221 208 217	Subtext1
+203 188 197	Subtext0
+173 141 162	Overlay2
+145 130 139	Overlay1
+125 105 118	Overlay0
+ 79  49  67	Surface2
+ 62  41  54	Surface1
+ 50  34  44	Surface0
+ 42  30  38	Base
+ 35  22  31	Mantle
+ 28  17  25	Crust

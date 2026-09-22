@@ -1,0 +1,33 @@
+GIMP Palette
+Name: Darkberry Wisp
+Columns: 8
+# Darkberry 0.3.0, https://shythulu.github.io/DarkBerry/
+161  88 115	Blossom
+183  67 125	Petal
+210  21 112	Berry
+154  76 192	Plum
+204  56  56	Cranberry
+177  74  94	Cherry
+177  84  35	Apricot
+144 103  10	Honey
+ 55 122  55	Gooseberry
+ 29 125 108	Juniper
+ 27 119 140	Frost
+ 42 111 176	Bilberry
+ 59  95 208	Blueberry
+122  88 176	Lavender
+185  72 139	Jam
+255 255 255	Onjam
+210  21 112	Tint
+ 79  49  67	Text
+ 90  64  80	Subtext1
+105  78  95	Subtext0
+128 103 118	Overlay2
+150 125 140	Overlay1
+172 147 162	Overlay0
+195 171 185	Surface2
+208 186 200	Surface1
+223 203 216	Surface0
+251 244 248	Base
+243 230 239	Mantle
+235 218 229	Crust
