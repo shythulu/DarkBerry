@@ -5535,6 +5535,41 @@
     }
   },
   {
+    "port": "borders",
+    "key": "active_color",
+    "expr": "{ui.border.active}",
+    "roles": [
+      "ui.border.active",
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "borders",
+    "key": "inactive_color",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
     "port": "lsd",
     "key": "user",
     "expr": "{berry}",

@@ -29,6 +29,7 @@ done
 (cd ports/gimp && zip -qr "../../dist/darkberry-gimp-$VERSION.zip" .)
 (cd ports/gpl && zip -qr "../../dist/darkberry-gpl-$VERSION.zip" .)
 (cd ports/starship && zip -qr "../../dist/darkberry-starship-$VERSION.zip" .)
+(cd ports/borders && zip -qr "../../dist/darkberry-borders-$VERSION.zip" .)
 (cd ports/lsd && zip -qr "../../dist/darkberry-lsd-$VERSION.zip" .)
 (cd ports/ls-colors && zip -qr "../../dist/darkberry-ls-colors-$VERSION.zip" .)
 (cd ports/tinted8 && zip -qr "../../dist/darkberry-tinted8-$VERSION.zip" .)
