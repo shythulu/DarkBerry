@@ -75,7 +75,9 @@ table.pal th{text-align:left;font-weight:500;color:var(--c-subtext0);padding:8px
 table.pal td{padding:6px 10px;border-bottom:1px solid var(--c-surface0)}
 table.pal tr.grp td{color:var(--c-subtext0);padding-top:18px;font-style:italic;border-bottom:0}
 table.pal button.sw{width:28px;height:28px;border-radius:50%;border:1px solid var(--c-surface2);cursor:pointer;padding:0;display:block}
-table.pal td.m{font-family:var(--mono);font-size:13px;color:var(--c-subtext1)}
+table.pal td.m{font-family:var(--mono);font-size:13px;color:var(--c-subtext1);white-space:nowrap}
+table.pal button.v{font:inherit;color:inherit;background:none;border:0;padding:2px 4px;margin:0 -4px;border-radius:4px;cursor:pointer;text-align:left}
+table.pal button.v:hover{background:var(--c-surface0);color:var(--ui-text)}
 table.pal td.job{color:var(--c-subtext0);font-size:14px}
 table.pal tr.copied td{background:color-mix(in srgb,var(--ui-accent) 14%,transparent)}
 .scroll{overflow-x:auto}
@@ -146,7 +148,7 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 
 <section id="palette"><div class="wrap">
   <h2>The palette</h2>
-  <p class="intro">Fourteen accents, twelve neutrals, a jam for buttons and a tint for the active tab. Click any colour to copy its hex.</p>
+  <p class="intro">Fourteen accents, twelve neutrals, a jam for buttons and a tint for the active tab. Every colour in hex, RGB, HSL and OKLCH. Click a swatch to copy its hex, or any value to copy that form.</p>
   <div class="scroll"><table class="pal" id="pal"></table></div>
 </div></section>
 
@@ -214,14 +216,15 @@ function apply() {
   palette(); terminal();
 }
 function palette() {
-  const cols = D.tints[tn].colors[fl];
+  const cols = D.tints[tn].colors[fl], oklch = D.tints[tn].oklch[fl];
+  const val = (k, v, cls = "") => `<td class="m ${cls}"><button class="v" data-v="${v}" aria-label="Copy ${k} as ${v}">${v}</button></td>`;
   const rows = D.order.map((k, i) => {
     const h = cols[i], [r, g, b] = rgb(h), [H, S, L] = hsl(h);
-    const head = i === 0 ? `<tr class="grp"><td colspan="6">Accents</td></tr>` : k === "jam" ? `<tr class="grp"><td colspan="6">Darkberry's own</td></tr>` : k === "text" ? `<tr class="grp"><td colspan="6">Neutrals</td></tr>` : "";
-    return head + `<tr><td><button class="sw" style="background:${h}" data-hex="${h}" aria-label="Copy ${k} ${h}"></button></td><td>${k[0].toUpperCase() + k.slice(1)}</td><td class="m">${h}</td><td class="m hide-s">rgb(${r}, ${g}, ${b})</td><td class="m hide-s">hsl(${H}, ${S}%, ${L}%)</td><td class="job">${JOB[k]}</td></tr>`;
+    const head = i === 0 ? `<tr class="grp"><td colspan="7">Accents</td></tr>` : k === "jam" ? `<tr class="grp"><td colspan="7">Darkberry's own</td></tr>` : k === "text" ? `<tr class="grp"><td colspan="7">Neutrals</td></tr>` : "";
+    return head + `<tr><td><button class="sw" style="background:${h}" data-v="${h}" aria-label="Copy ${k} ${h}"></button></td><td>${k[0].toUpperCase() + k.slice(1)}</td>${val(k, h)}${val(k, `rgb(${r}, ${g}, ${b})`, "hide-s")}${val(k, `hsl(${H}, ${S}%, ${L}%)`, "hide-s")}${val(k, oklch[i])}<td class="job">${JOB[k]}</td></tr>`;
   }).join("");
-  $("pal").innerHTML = `<thead><tr><th><span class="sr" style="position:absolute;left:-9999px">Swatch</span></th><th>${D.flavours[fl].emoji} ${D.tints[tn].name} ${D.flavours[fl].name}</th><th>Hex</th><th class="hide-s">RGB</th><th class="hide-s">HSL</th><th>Used for</th></tr></thead><tbody>${rows}</tbody>`;
-  $("pal").querySelectorAll("button.sw").forEach((b) => b.onclick = () => copy(b.dataset.hex, b.closest("tr")));
+  $("pal").innerHTML = `<thead><tr><th><span class="sr" style="position:absolute;left:-9999px">Swatch</span></th><th>${D.flavours[fl].emoji} ${D.tints[tn].name} ${D.flavours[fl].name}</th><th>Hex</th><th class="hide-s">RGB</th><th class="hide-s">HSL</th><th>OKLCH</th><th>Used for</th></tr></thead><tbody>${rows}</tbody>`;
+  $("pal").querySelectorAll("button.sw, button.v").forEach((b) => b.onclick = () => copy(b.dataset.v, b.closest("tr")));
 }
 function terminal() {
   const a = D.tints[tn].ansi[fl], r = D.tints[tn].roles[fl];
@@ -252,6 +255,7 @@ $("cards").innerHTML = [
   ["Kate", `Copy a flavour into <code>~/.local/share/org.kde.syntax-highlighting/themes/</code>, then Fonts &amp; Colors:`, `${slug("mire")}.theme`, `${tree}/ports/kate`],
   ["Chrome and Edge", `Turn on Developer mode at <code>chrome://extensions</code>, then Load unpacked on a flavour folder:`, `chrome://extensions`, `${tree}/ports/chrome`],
   ["Nimbalyst", `Copy a flavour folder into Nimbalyst&rsquo;s themes directory, then pick it under Settings > Themes:`, `${title("mire")}/theme.json`, `${tree}/ports/nimbalyst`],
+  ["GIMP and Inkscape", `The palette itself as <code>.gpl</code> files, one per flavour and one with all four. Inkscape reads them from its palettes folder; GIMP imports them from the Palettes dialog:`, `~/.config/inkscape/palettes/${slug("mire")}.gpl`, `${tree}/ports/gpl`],
   ["KDE Plasma", `Copy the <code>.colors</code> files into <code>~/.local/share/color-schemes/</code>, then pick a flavour in System Settings > Colors:`, `~/.local/share/color-schemes/${title("mire")}.colors`, `${tree}/ports/kde`],
   ["Konsole", `Copy the <code>.colorscheme</code> files into <code>~/.local/share/konsole/</code>, then Edit Current Profile > Appearance:`, `~/.local/share/konsole/${title("mire")}.colorscheme`, `${tree}/ports/konsole`],
   ["Obsidian", `Copy a flavour's folder into your vault's <code>.obsidian/themes/</code>, then pick it under Appearance:`, `.obsidian/themes/${title("mire")}/`, `${tree}/ports/obsidian`],

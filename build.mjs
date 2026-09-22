@@ -191,6 +191,16 @@ for (const ctx of ctxs) {
   vs.colors = applyOverrides("vscode", "json", vs.colors, ctx);
   out(`ports/vscode/themes/${slug}-color-theme.json`, { name: full, type: ctx.f.dark ? "dark" : "light", ...vs });
 }
+// GIMP palette (.gpl): the format GIMP, Inkscape, Krita, MyPaint and Aseprite all import.
+// One file per flavour, and one with every flavour so a picker can hold the whole theme.
+const gpl = (name, rows) => `GIMP Palette\nName: ${name}\nColumns: 8\n# ${P.name} ${P.version}, ${P.homepage}\n` +
+  rows.map(([hex, label]) => rgb(hex).map((v) => String(Math.round(v * 255)).padStart(3)).join(" ") + "\t" + label).join("\n") + "\n";
+const label = (k) => k[0].toUpperCase() + k.slice(1);
+const gplOrder = [...P.accentOrder, ...P.neutralOrder];
+for (const ctx of ctxs)
+  out(`ports/gpl/${P.id}-${ctx.id}.gpl`, gpl(`${P.name} ${ctx.f.name}`, gplOrder.map((k) => [ctx.f.colors[k], label(k)])));
+out(`ports/gpl/${P.id}.gpl`, gpl(P.name, ctxs.flatMap((ctx) => gplOrder.map((k) => [ctx.f.colors[k], `${ctx.f.name} ${label(k)}`]))));
+
 out("ports/vscode/package.json", {
   name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
   publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" },

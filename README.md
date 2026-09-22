@@ -22,6 +22,7 @@ lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formu
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
 ports/                    generated kitty, Ghostty, VS Code and Firefox themes
+ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results
 docs/USAGE.md             which roles and ports use each palette colour
@@ -93,6 +94,18 @@ file beside the application's own CSS so the `@import` resolves.
 For colour work, keep the image surround neutral. A saturated frame shifts how you judge
 colour in the picture, which is why both applications ship greys. Darkberry uses its least
 saturated colours there, but a grey theme is still the right tool for grading.
+
+### Colour palettes for GIMP, Inkscape and Krita
+
+`ports/gpl/` holds the palette itself, not a theme, in the GIMP palette format that GIMP,
+Inkscape, Krita, MyPaint and Aseprite all import. There is one file per flavour and
+`darkberry.gpl` with every flavour's colours, each labelled with its flavour and name.
+
+- GIMP: Edit > Preferences > Folders > Palettes shows the folder; copy the files in, or
+  Windows > Dockable Dialogs > Palettes, then Import Palette from a file.
+- Inkscape: copy the files into `~/.config/inkscape/palettes/` and pick them from the
+  menu at the left end of the palette bar.
+- Krita: Settings > Manage Resources > Import Resources.
 
 ### Notepad++
 
