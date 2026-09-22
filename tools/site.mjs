@@ -5,6 +5,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { indexRoles, flavourContext } from "../lib/resolve.mjs";
+import { toOklch } from "../lib/color.mjs";
+
+// CSS oklch(): lightness as a percentage, chroma to three places, hue in degrees.
+const oklchCss = (hex) => { const [L, C, h] = toOklch(hex); const H = C < 0.0005 ? 0 : ((h * 180) / Math.PI + 360) % 360; return `oklch(${(L * 100).toFixed(1)}% ${C.toFixed(3)} ${H.toFixed(1)})`; };
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const read = (p) => fs.readFileSync(path.join(root, p), "utf8");
@@ -33,10 +37,11 @@ const data = {
   tints: {},
 };
 for (const [id, pal] of palettes) {
-  const t = { name: id[0].toUpperCase() + id.slice(1), note: TINT_NOTES[id] || "", colors: {}, roles: {}, ansi: {} };
+  const t = { name: id[0].toUpperCase() + id.slice(1), note: TINT_NOTES[id] || "", colors: {}, roles: {}, ansi: {}, oklch: {} };
   for (const [fid, f] of Object.entries(pal.flavours)) {
     const ctx = flavourContext(fid, f, ROLES, roleIndex);
     t.colors[fid] = ORDER.map((k) => f.colors[k]);
+    t.oklch[fid] = t.colors[fid].map(oklchCss);
     t.roles[fid] = Object.fromEntries(Object.keys(roleIndex).map((r) => [r, ctx.resolve(r)[0]]));
     t.ansi[fid] = ctx.ansi;
   }
