@@ -143,6 +143,13 @@ are older than any theme.
 BSD `ls`, which is what macOS ships without coreutils, reads `LSCOLORS` instead -- a different
 format limited to the eight ANSI colours, which cannot carry these. Use lsd or GNU `ls` there.
 
+### JankyBorders (macOS)
+
+Copy a flavour from `ports/borders/` over `~/.config/borders/bordersrc` and restart borders
+(`brew services restart borders`). The focused window's border follows `ui.border.active`,
+the accent, and every other window `ui.border.inactive`. Width, style and hidpi are plain
+defaults in the file; only the two colours are the theme.
+
 ### starship
 
 Copy a flavour from `ports/starship/` over `~/.config/starship.toml`. A two-line

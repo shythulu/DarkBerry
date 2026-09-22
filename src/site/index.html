@@ -251,6 +251,7 @@ $("cards").innerHTML = [
   ["Notepad++", `Copy a flavour into <code>%APPDATA%\\Notepad++\\themes\\</code>, restart, then Settings > Style Configurator:`, `%APPDATA%\\Notepad++\\themes\\${title("mire")}.xml`, `${tree}/ports/notepadpp`],
   ["lsd", `Copy a flavour to <code>~/.config/lsd/colors.yaml</code> and set the custom theme:`, `cp ${slug("mire")}.yaml ~/.config/lsd/colors.yaml`, `${tree}/ports/lsd`],
   ["starship", `Copy a flavour over <code>~/.config/starship.toml</code> for a two-line prompt that follows the same roles:`, `cp ${slug("mire")}.toml ~/.config/starship.toml`, `${tree}/ports/starship`],
+  ["JankyBorders", `Window borders on macOS for yabai and AeroSpace users. Copy a flavour over your <code>bordersrc</code> and restart borders:`, `cp ${slug("mire")}.sh ~/.config/borders/bordersrc`, `${tree}/ports/borders`],
   ["micro", `Copy a flavour into <code>~/.config/micro/colorschemes/</code>, then set it from the command bar:`, `set colorscheme ${slug("mire")}`, `${tree}/ports/micro`],
   ["Kate", `Copy a flavour into <code>~/.local/share/org.kde.syntax-highlighting/themes/</code>, then Fonts &amp; Colors:`, `${slug("mire")}.theme`, `${tree}/ports/kate`],
   ["Chrome and Edge", `Turn on Developer mode at <code>chrome://extensions</code>, then Load unpacked on a flavour folder:`, `chrome://extensions`, `${tree}/ports/chrome`],
