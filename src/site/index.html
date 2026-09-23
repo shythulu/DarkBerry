@@ -253,6 +253,7 @@ $("cards").innerHTML = [
   ["starship", `Copy a flavour over <code>~/.config/starship.toml</code> for a two-line prompt that follows the same roles:`, `cp ${slug("mire")}.toml ~/.config/starship.toml`, `${tree}/ports/starship`],
   ["JankyBorders", `Window borders on macOS for yabai and AeroSpace users. Copy a flavour over your <code>bordersrc</code> and restart borders:`, `cp ${slug("mire")}.sh ~/.config/borders/bordersrc`, `${tree}/ports/borders`],
   ["micro", `Copy a flavour into <code>~/.config/micro/colorschemes/</code>, then set it from the command bar:`, `set colorscheme ${slug("mire")}`, `${tree}/ports/micro`],
+  ["bat", `Copy a flavour into <code>$(bat --config-dir)/themes/</code>, run <code>bat cache --build</code>, then name it:`, `bat --theme="${title("mire")}" file.rs`, `${tree}/ports/bat`],
   ["Kate", `Copy a flavour into <code>~/.local/share/org.kde.syntax-highlighting/themes/</code>, then Fonts &amp; Colors:`, `${slug("mire")}.theme`, `${tree}/ports/kate`],
   ["Chrome and Edge", `Turn on Developer mode at <code>chrome://extensions</code>, then Load unpacked on a flavour folder:`, `chrome://extensions`, `${tree}/ports/chrome`],
   ["Nimbalyst", `Copy a flavour folder into Nimbalyst&rsquo;s themes directory, then pick it under Settings > Themes:`, `${title("mire")}/theme.json`, `${tree}/ports/nimbalyst`],
