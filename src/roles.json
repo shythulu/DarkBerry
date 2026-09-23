@@ -188,6 +188,41 @@
     },
     "on.badge": {
       "value": "ui.on.fill"
+    },
+    "emphasis": {
+      "minContrast": 4.5,
+      "value": "cherry",
+      "catppuccin": "no single colour (nvim PmenuMatch: text bold; Title: blue)",
+      "why": "Match text in lists and titles take one secondary accent, cherry, the colour VS Code's port already gives three of its four emphasis keys; it clears 5.6:1 on every background."
+    },
+    "search.matches": {
+      "value": "mix(ui.background,ui.mark1,0.22)",
+      "carriesCode": 0.65,
+      "catppuccin": "sky at 30% into base (nvim Search)",
+      "why": "Every search hit but the current one is the mark colour faded 22% into the background, so the hits belong to the same family as the current match (ui.mark1); 22% is the most the tint can be while every syntax role keeps 65% of its minimum on it in all five tints (35% left comments at 81%)."
+    },
+    "diff.added": {
+      "value": "mix(ui.background,ui.success,0.18)",
+      "carriesCode": 0.65,
+      "catppuccin": "="
+    },
+    "diff.changed": {
+      "value": "mix(ui.background,ui.warning,0.1)",
+      "carriesCode": 0.65,
+      "catppuccin": "blue at 7% into base",
+      "why": "A changed line follows ui.warning, the colour modified lines carry in every port, at 10% so the changed span inside it (ui.diff.text, 18%) still stands out."
+    },
+    "diff.removed": {
+      "value": "mix(ui.background,syntax.diff.removed,0.18)",
+      "carriesCode": 0.65,
+      "catppuccin": "red at 18% into base",
+      "why": "A removed line follows syntax.diff.removed, the warm red the removed text itself uses, so the line and its text agree and ui.error stays for errors."
+    },
+    "diff.text": {
+      "value": "mix(ui.background,ui.warning,0.18)",
+      "carriesCode": 0.65,
+      "catppuccin": "blue at 30% into base",
+      "why": "The changed span inside a changed line is the same warning tint at nearly twice the strength of ui.diff.changed, without a second hue; 18% is the most it can be while every syntax role keeps 65% of its minimum on it in all five tints."
     }
   },
   "terminal": {

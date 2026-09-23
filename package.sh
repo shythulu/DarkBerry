@@ -7,6 +7,8 @@
 # Chrome, Notepad++ and btop theme files.
 # per flavour, and zips of the kitty, Ghostty, Obsidian, KDE, Konsole, Nimbalyst, micro, Kate,
 # Chrome, Notepad++ and bat theme files.
+# per flavour, and zips of the kitty, Ghostty, Obsidian, KDE, Konsole, Nimbalyst, micro, Kate,
+# Chrome, Notepad++ and Neovim theme files.
 set -e
 cd "$(dirname "$0")"
 rm -f dist/*.vsix dist/*.xpi dist/*.zip
@@ -31,6 +33,7 @@ done
 (cd ports/kate && zip -qr "../../dist/darkberry-kate-$VERSION.zip" .)
 (cd ports/chrome && zip -qr "../../dist/darkberry-chrome-$VERSION.zip" .)
 (cd ports/notepadpp && zip -qr "../../dist/darkberry-notepadpp-$VERSION.zip" .)
+(cd ports/neovim && zip -qr "../../dist/darkberry-neovim-$VERSION.zip" .)
 (cd ports/gtk && zip -qr "../../dist/darkberry-gtk-$VERSION.zip" .)
 (cd ports/darktable && zip -qr "../../dist/darkberry-darktable-$VERSION.zip" .)
 (cd ports/gimp && zip -qr "../../dist/darkberry-gimp-$VERSION.zip" .)

@@ -79,12 +79,18 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | ui.on.fill on ui.fill | 4.5 | 4.81 | 4.64 | 4.56 | 4.80 |
 | syntax on ui.selection | 65% of each role’s own minimum | ok | ok | ok | ok |
 | syntax on ui.line.current | 85% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.search.matches | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.added | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.changed | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.removed | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.text | 65% of each role’s own minimum | ok | ok | ok | ok |
 | *non-text UI on ui.background* | |  |  |  |  |
 | ui.accent | 3 | 4.45 | 3.53 | 3.51 | 3.79 |
 | ui.focus | 3 | 4.52 | 4.46 | 5.30 | 5.63 |
 | ui.border.active | 3 | 4.45 | 3.53 | 3.51 | 3.79 |
 | ui.border.inactive | 3 | 3.46 | 3.33 | 4.40 | 4.38 |
 | ui.cursor | 3 | 5.69 | 7.66 | 9.37 | 10.66 |
+| ui.emphasis | 4.5 | 5.64 | 5.84 | 6.33 | 7.19 |
 | ui.on.accent on ui.accent | 4.5 | 4.81 | 4.64 | 4.56 | 4.80 |
 | ui.on.error on ui.error | 4.5 | 6.13 | 6.57 | 6.10 | 6.51 |
 | ui.mark.text on ui.mark1 | 4.5 | 5.64 | 7.71 | 8.50 | 9.07 |

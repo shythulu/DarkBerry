@@ -110,6 +110,7 @@ const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.co
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
 const nppT = read("src/ports/notepadpp.xml"), batT = read("src/ports/bat.tmTheme");
+const neovimT = read("src/ports/neovim.lua");
 const starshipT = read("src/ports/starship.toml"), lsdT = read("src/ports/lsd.yaml"), bordersT = read("src/ports/borders.sh");
 // JankyBorders takes 0xAARRGGBB, so the filled hex gets an opaque alpha prefix.
 const toArgb = (text) => text.replace(/#([0-9a-f]{6})\b/g, (_, h) => `0xff${h}`);
@@ -207,6 +208,17 @@ mustBe("kde", kdeT, "DecorationHover", "{ui.accent}", /^DecorationHover=\{ui\.ac
 mustBe("kate", kateT, "CurrentLine", "{ui.line.current}", /"CurrentLine": "\{ui\.line\.current\}"/);
 mustBe("micro", microT, "error", "{ui.on.error} on {ui.error}", /^color-link error "\{ui\.on\.error\},\{ui\.error\}"/m);
 mustBe("micro", microT, "error-message", "{ui.on.error} on {ui.error}", /^color-link error-message "\{ui\.on\.error\},\{ui\.error\}"/m);
+mustBe("neovim", neovimT, "Visual", "{ui.selection}", /^H\.Visual = \{ bg = "\{ui\.selection\}" \}$/m);
+mustBe("neovim", neovimT, "CursorLine", "{ui.line.current}", /^H\.CursorLine = \{ bg = "\{ui\.line\.current\}" \}$/m);
+mustBe("neovim", neovimT, "CurSearch", "{ui.mark.text} on {ui.mark1}", /^H\.CurSearch = \{ fg = "\{ui\.mark\.text\}", bg = "\{ui\.mark1\}" \}$/m);
+mustBe("neovim", neovimT, "PmenuSel", "{ui.on.fill} on {ui.fill}", /^H\.PmenuSel = \{ fg = "\{ui\.on\.fill\}", bg = "\{ui\.fill\}" \}$/m);
+mustBe("neovim", neovimT, "ErrorMsg", "{ui.on.error} on {ui.error}", /^H\.ErrorMsg = \{ fg = "\{ui\.on\.error\}", bg = "\{ui\.error\}"/m);
+mustBe("neovim", neovimT, "TabLineSel", "{ui.tab.active} underlined in {ui.tab.indicator}", /^H\.TabLineSel = \{ fg = "\{ui\.text\}", bg = "\{ui\.tab\.active\}", underline = true, sp = "\{ui\.tab\.indicator\}" \}$/m);
+mustBe("neovim", neovimT, "Cursor", "{ui.cursor.text} on {ui.cursor}", /^H\.Cursor = \{ fg = "\{ui\.cursor\.text\}", bg = "\{ui\.cursor\}" \}$/m);
+mustBe("neovim", neovimT, "Underlined", "{ui.link}", /^H\.Underlined = \{ fg = "\{ui\.link\}", underline = true \}$/m);
+mustBe("neovim", neovimT, "DiffAdd", "{ui.diff.added}", /^H\.DiffAdd = \{ bg = "\{ui\.diff\.added\}" \}$/m);
+mustBe("neovim", neovimT, "DiffDelete", "{syntax.diff.removed} on {ui.diff.removed}", /^H\.DiffDelete = \{ fg = "\{syntax\.diff\.removed\}", bg = "\{ui\.diff\.removed\}" \}$/m);
+mustBe("neovim", neovimT, "terminal_color_*", "{ansi.N}, as kitty", /^vim\.g\.terminal_color_(\d+) = "\{ansi\.\1\}"$/m);
 mustBe("lsd", to256(fill(ctxs[0], lsdT, "lsd-check")), "256 companion", "free of hex strings", /^(?![\s\S]*"#[0-9a-f]{6}")/);
 mustBe("btop", btopT, "main_bg", "{ui.background}", /^theme\[main_bg\]="\{ui\.background\}"$/m);
 mustBe("btop", btopT, "main_fg", "{ui.text}", /^theme\[main_fg\]="\{ui\.text\}"$/m);
@@ -278,6 +290,7 @@ for (const ctx of ctxs) {
   out(`ports/gimp/${slug}.css`, applyOverrides("gimp", "lines", fill(ctx, gimpT, "gimp"), ctx));
   out(`ports/btop/${slug}.theme`, applyOverrides("btop", "lines", fill(ctx, btopT, "btop"), ctx));
   out(`ports/bat/${full}.tmTheme`, applyOverrides("bat", "plist", fill(ctx, batT, "bat"), ctx));
+  out(`ports/neovim/${slug}.lua`, applyOverrides("neovim", "lines", fill(ctx, neovimT, "neovim"), ctx));
   out(`ports/notepadpp/${full}.xml`, toBareHex(applyOverrides("notepadpp", "lines", fill(ctx, nppT, "notepadpp"), ctx)));
   out(`ports/kde/${full}.colors`, toTriplets(applyOverrides("kde", "lines", fill(ctx, kdeT, "kde"), ctx)));
   out(`ports/konsole/${full}.colorscheme`, toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
@@ -319,6 +332,9 @@ const walk = (port, o, pre = "") => { if (typeof o === "string") return traceExp
   if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) walk(port, v, pre ? (pre === "colors" || pre.endsWith("colors") ? `${k}` : `${pre}.${k}`) : k); };
 for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritty", alacrittyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["borders", bordersT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT]])
   for (const line of text.split("\n")) { const m = /^([\w.-]+(?:\s*=\s*\d+)?)\s*=?\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("#")) traceExpr(port, m[1].replace(/\s+/g, " "), m[2]); }
+// Neovim's template is Lua: H.Group = { ... } and H["@capture"] = { ... } lines, and
+// the vim.g.terminal_color_N assignments; the key is the group or capture name.
+for (const line of neovimT.split("\n")) { const m = /^(?:H\.|H\[")?([@\w.]+)(?:"\])?\s*=\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("--")) traceExpr("neovim", m[1], m[2]); }
 for (const raw of lsColorsT.split("\n")) {
   const t = raw.trim();
   if (!t || t.startsWith("#")) continue;
@@ -347,6 +363,7 @@ walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.se
 for (const port of ["kitty", "ghostty", "alacritty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "btop"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "bat"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "neovim", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 out("dist/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
@@ -455,10 +472,12 @@ rolesMd += `\nAligned with Catppuccin: ANSI mapping and bright formula, all back
 out("docs/ROLES.md", rolesMd);
 
 // ---------- docs/USAGE.md (blast radius of each palette colour) ----------
-let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | Alacritty | tmux | bat | btop | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
+let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | Alacritty | tmux | btop | bat | Neovim | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+`;
 for (const k of order) {
   const u = usage[k];
-  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "alacritty", "tmux", "bat", "btop", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
+  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "alacritty", "tmux", "btop", "bat", "neovim", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
 }
 usageMd += `\nANSI colours (\`ansi.0\` to \`ansi.15\`) come from the palette via \`roles.json\` → \`ansi\`, the same way for every terminal.\n`;
 out("docs/USAGE.md", usageMd);

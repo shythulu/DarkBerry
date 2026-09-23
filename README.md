@@ -17,6 +17,7 @@ src/roles.json            layer 2: what each colour means, shared by every port,
 src/overrides/            layer 3: rare port-only exceptions, each with a reason
 src/ports/                kitty, Ghostty, Alacritty and Firefox templates (roles in {braces}, no hex)
 src/ports/                kitty, Ghostty, tmux, Firefox and the other templates (roles in {braces}, no hex)
+src/ports/                kitty, Ghostty, Firefox, Neovim and the other templates (roles in {braces}, no hex)
 src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
@@ -260,6 +261,12 @@ Any bat with `bat cache --build` loads it; written against 0.24 and checked on 0
 terminal must advertise truecolor (`COLORTERM=truecolor`) or bat rounds every colour to
 the nearest xterm-256 index. The same file works in delta, gitui and Sublime Text, which
 read the caret, selection and gutter keys bat ignores.
+### Neovim
+
+Copy a `.lua` file from `ports/neovim/` into `~/.config/nvim/colors/` (keep its name), then
+`:colorscheme darkberry-mire`, or `vim.cmd.colorscheme("darkberry-mire")` in `init.lua`.
+Needs Neovim 0.9 and `termguicolors` on; the file paints the editor, the syntax groups, the
+Tree-sitter and LSP captures and the terminal palette, and nothing plugin-specific.
 
 ### Kate
 

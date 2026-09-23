@@ -38,6 +38,12 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.on.tab.indicator` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` |  |
 | `ui.badge` | `ui.fill` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` |  |
 | `ui.on.badge` | `ui.on.fill` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` |  |
+| `ui.emphasis` | `cherry` | `#a53f54` | `#e7aab5` | `#d3919c` | `#d3919c` | no single colour (nvim PmenuMatch: text bold; Title: blue) |
+| `ui.search.matches` | `mix(ui.background,ui.mark1,0.22)` | `#ddd0e6` | `#6a4d67` | `#4a3c4e` | `#403345` | sky at 30% into base (nvim Search) |
+| `ui.diff.added` | `mix(ui.background,ui.success,0.18)` | `#d6dcd3` | `#625258` | `#40403d` | `#353633` | same |
+| `ui.diff.changed` | `mix(ui.background,ui.warning,0.1)` | `#efe5df` | `#5f424c` | `#3d2f30` | `#312425` | blue at 7% into base |
+| `ui.diff.removed` | `mix(ui.background,syntax.diff.removed,0.18)` | `#ead4cf` | `#6e4652` | `#4e3235` | `#43282b` | red at 18% into base |
+| `ui.diff.text` | `mix(ui.background,ui.warning,0.18)` | `#e5d8cc` | `#6c4f54` | `#4c3d38` | `#42332e` | blue at 30% into base |
 | `terminal.color16` | `apricot` | `#a24712` | `#f7bf9e` | `#f2ad8a` | `#f2ad8a` | same |
 | `terminal.color17` | `blossom` | `#934b66` | `#eaafd6` | `#e7c5d8` | `#e7c5d8` | same |
 | `syntax.text` | `text` | `#4f3143` | `#f2e6ee` | `#efe3eb` | `#ede1e9` | same |
@@ -76,6 +82,11 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.line.current` | `mix(ui.background,surface0,0.35)` | no equivalent (editors tint the line themselves) | The cursor line is a tint of the background rather than a surface step, so syntax colours on the highlighted row keep most of their contrast. |
 | `ui.link` | `frost` | blue | Links are teal-blue frost because blueberry already carries constants. |
 | `ui.on.error` | `{"dark":"crust","light":"onjam"}` | no equivalent | Text drawn on an error fill (micro's error bar, Obsidian's destructive buttons). White on cranberry is 2.3:1 in Fen; crust reaches 6:1 in every dark flavour. |
+| `ui.emphasis` | `cherry` | no single colour (nvim PmenuMatch: text bold; Title: blue) | Match text in lists and titles take one secondary accent, cherry, the colour VS Code's port already gives three of its four emphasis keys; it clears 5.6:1 on every background. |
+| `ui.search.matches` | `mix(ui.background,ui.mark1,0.22)` | sky at 30% into base (nvim Search) | Every search hit but the current one is the mark colour faded 22% into the background, so the hits belong to the same family as the current match (ui.mark1); 22% is the most the tint can be while every syntax role keeps 65% of its minimum on it in all five tints (35% left comments at 81%). |
+| `ui.diff.changed` | `mix(ui.background,ui.warning,0.1)` | blue at 7% into base | A changed line follows ui.warning, the colour modified lines carry in every port, at 10% so the changed span inside it (ui.diff.text, 18%) still stands out. |
+| `ui.diff.removed` | `mix(ui.background,syntax.diff.removed,0.18)` | red at 18% into base | A removed line follows syntax.diff.removed, the warm red the removed text itself uses, so the line and its text agree and ui.error stays for errors. |
+| `ui.diff.text` | `mix(ui.background,ui.warning,0.18)` | blue at 30% into base | The changed span inside a changed line is the same warning tint at nearly twice the strength of ui.diff.changed, without a second hue; 18% is the most it can be while every syntax role keeps 65% of its minimum on it in all five tints. |
 | `syntax.keyword` | `berry` | mauve | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.function` | `petal` | blue | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.type` | `plum` | yellow | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
