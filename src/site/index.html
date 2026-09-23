@@ -246,6 +246,7 @@ const slug = (f) => `darkberry-${f}`, title = (f) => `Darkberry ${D.flavours[f].
 $("cards").innerHTML = [
   ["kitty", `Copy a flavour into <code>~/.config/kitty/themes/</code>, then choose it with <code>kitty +kitten themes</code>, or include it directly:`, `include themes/${slug("mire")}.conf`, `${tree}/ports/kitty`],
   ["Ghostty", `Copy the theme files into <code>~/.config/ghostty/themes/</code> and follow your system's light and dark mode:`, `theme = light:${title("wisp")},dark:${title("mire")}`, `${tree}/ports/ghostty`],
+  ["Alacritty", `Copy a flavour into <code>~/.config/alacritty/themes/</code> and import it from your <code>alacritty.toml</code> (needs 0.13 or newer):`, `import = ["~/.config/alacritty/themes/${slug("mire")}.toml"]`, `${tree}/ports/alacritty`],
   ["VS Code", `Install the <code>.vsix</code> through Extensions, then pick a flavour with the theme picker:`, `code --install-extension darkberry-theme.vsix`, `${tree}/ports/vscode`],
   ["Firefox", `Load a flavour's <code>manifest.json</code> from <code>about:debugging</code> to try it, or sign it through addons.mozilla.org to keep it.`, `about:debugging#/runtime/this-firefox`, `${tree}/ports/firefox`],
   ["Notepad++", `Copy a flavour into <code>%APPDATA%\\Notepad++\\themes\\</code>, restart, then Settings > Style Configurator:`, `%APPDATA%\\Notepad++\\themes\\${title("mire")}.xml`, `${tree}/ports/notepadpp`],
