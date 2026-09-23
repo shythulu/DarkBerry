@@ -64,6 +64,8 @@ jobs:
             echo
             echo "**Ghostty** — unzip \`darkberry-ghostty-$version.zip\` into \`~/.config/ghostty/themes/\`, keeping the file names, then set \`theme = light:Darkberry Wisp,dark:Darkberry Mire\`."
             echo
+            echo "**tmux** — unzip \`darkberry-tmux-$version.zip\` into \`~/.config/tmux/\`, then \`source-file ~/.config/tmux/darkberry-mire.conf\` from your tmux.conf (tmux 3.2+)."
+            echo
             echo "**Obsidian** — unzip \`darkberry-obsidian-$version.zip\` into your vault's \`.obsidian/themes/\`, then pick a flavour under Settings > Appearance > Themes."
             echo
             echo "**KDE Plasma** — unzip \`darkberry-kde-$version.zip\` into \`~/.local/share/color-schemes/\`, then pick a flavour in System Settings > Colors."

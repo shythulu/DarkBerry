@@ -16,12 +16,14 @@ src/palette.json          layer 1: the untinted default palette, 12 neutrals + 1
 src/roles.json            layer 2: what each colour means, shared by every port, with Catppuccin comparison
 src/overrides/            layer 3: rare port-only exceptions, each with a reason
 src/ports/                kitty, Ghostty, Alacritty and Firefox templates (roles in {braces}, no hex)
+src/ports/                kitty, Ghostty, tmux, Firefox and the other templates (roles in {braces}, no hex)
 src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
 ports/                    generated kitty, Ghostty, Alacritty, VS Code and Firefox themes
+ports/                    generated kitty, Ghostty, tmux, VS Code, Firefox and other themes
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results
@@ -58,6 +60,7 @@ Open `docs/studio.html` (regenerated on every build, so it always starts from th
 
 Every tagged release carries the packaged files for each app: a `.vsix` for VS Code, an
 `.xpi` per flavour for Firefox, and zips of the kitty, Ghostty and Alacritty configs. Download them
+`.xpi` per flavour for Firefox, and zips of the kitty, Ghostty and tmux configs. Download them
 from [Releases](https://github.com/shythulu/DarkBerry/releases), or build them yourself
 with `./package.sh`, which writes the same set into `dist/`.
 
@@ -93,6 +96,23 @@ Needs Alacritty 0.13 or newer, the first release that reads TOML; on 0.13 itself
 `import` line at the top of the file rather than under `[general]`. Alacritty reloads the
 config on save, so switching flavours is editing that one line. Nothing else is needed:
 the file carries the ANSI set, cursor, selection, search, hint and vi-mode colours.
+### tmux
+
+Copy a file from `ports/tmux/` to `~/.config/tmux/`, then source it from `tmux.conf`:
+
+```
+source-file ~/.config/tmux/darkberry-mire.conf
+```
+
+Reload with `tmux source-file ~/.config/tmux/tmux.conf`. The file is the whole theme: a
+two-segment status line (session badge on the left, host and clock on the right), the
+window list with the active window on the tab indicator, pane borders, messages, copy-mode
+selection and search hits, the clock, pane numbers, popups and menus. It needs tmux 3.2 or
+later; the popup and menu styles are 3.3 and 3.4 and are set with `-q`, so an older tmux
+skips them. The colours are 24-bit, so tmux must see a truecolor terminal (kitty, Ghostty
+and Konsole all are); if not, add `set -as terminal-features ",xterm-256color:RGB"` to
+`tmux.conf`. The pane's own text and background stay the terminal's, so use it with the
+kitty, Ghostty or Konsole port.
 
 ### GIMP, Inkscape and darktable
 
