@@ -1,6 +1,6 @@
 # Port overrides (layer 3)
 
-One JSON file per port: `kitty.json`, `ghostty.json`, `vscode.json`, `firefox.json`.
+One JSON file per port, named after the port (`kitty.json`, `vscode.json`, and so on); every port has one and most are empty.
 Each entry replaces one key in that port's output:
 
 ```json
