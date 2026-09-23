@@ -118,7 +118,9 @@ your own choice survives.
 Copy a flavour from `ports/lsd/` to `~/.config/lsd/colors.yaml`, and set
 `color: {theme: custom}` in `~/.config/lsd/config.yaml`.
 
-Written against lsd 1.2.0, whose theme struct rejects unknown keys. Notably `file-type` is
+Needs lsd 1.1 or newer; below that lsd rejects hex strings and silently drops the whole
+theme, so for lsd 1.0 (Ubuntu 24.04) use the `.256.yaml` companion, the same theme as
+xterm-256 indices. Written against lsd 1.2.0, whose theme struct rejects unknown keys. Notably `file-type` is
 skipped in that version, so a theme carrying it is discarded whole and lsd falls back to its
 defaults without saying so. Every key here is one lsd 1.2.0 accepts.
 

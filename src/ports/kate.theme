@@ -142,7 +142,7 @@
         "BackgroundColor": "{ui.background}",
         "CodeFolding": "{ui.selection}",
         "BracketMatching": "{surface2}",
-        "CurrentLine": "{surface0}",
+        "CurrentLine": "{ui.line.current}",
         "IconBorder": "{ui.pane.secondary}",
         "IndentationLine": "{surface1}",
         "LineNumbers": "{ui.text.subtle}",

@@ -2176,23 +2176,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -2206,6 +2189,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -2377,23 +2377,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -2407,6 +2390,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -2580,23 +2580,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -2610,6 +2593,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -2783,23 +2783,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -2813,6 +2796,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -2984,23 +2984,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -3014,6 +2997,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -3187,23 +3187,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -3217,6 +3200,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -3388,23 +3388,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -3418,6 +3401,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -3589,23 +3589,6 @@
   {
     "port": "kde",
     "key": "DecorationFocus",
-    "expr": "{ui.accent}",
-    "roles": [
-      "ui.accent"
-    ],
-    "palette": [
-      "jam"
-    ],
-    "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
-    }
-  },
-  {
-    "port": "kde",
-    "key": "DecorationHover",
     "expr": "{ui.focus}",
     "roles": [
       "ui.focus"
@@ -3619,6 +3602,23 @@
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "kde",
+    "key": "DecorationHover",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#fa99b4",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -4371,18 +4371,18 @@
   {
     "port": "konsole",
     "key": "Color",
-    "expr": "{ui.accent}",
+    "expr": "{ui.text}",
     "roles": [
-      "ui.accent"
+      "ui.text"
     ],
     "palette": [
-      "jam"
+      "text"
     ],
     "hex": {
-      "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
-      "blackwater": "#ba4889"
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
     }
   },
   {
@@ -4747,18 +4747,18 @@
   {
     "port": "micro",
     "key": "color-link",
-    "expr": "{ui.on.fill}",
+    "expr": "{ui.on.error}",
     "roles": [
-      "ui.on.fill"
+      "ui.on.error"
     ],
     "palette": [
-      "onjam"
+      "crust"
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
-      "mire": "#ffffff",
-      "blackwater": "#ffffff"
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
     }
   },
   {
@@ -5206,18 +5206,18 @@
   {
     "port": "micro",
     "key": "color-link",
-    "expr": "{ui.on.fill}",
+    "expr": "{ui.on.error}",
     "roles": [
-      "ui.on.fill"
+      "ui.on.error"
     ],
     "palette": [
-      "onjam"
+      "crust"
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
-      "mire": "#ffffff",
-      "blackwater": "#ffffff"
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
     }
   },
   {
@@ -5784,48 +5784,46 @@
   {
     "port": "lsd",
     "key": "hour-old",
-    "expr": "{petal}",
+    "expr": "{juniper}",
     "roles": [],
     "palette": [
-      "petal"
+      "juniper"
     ],
     "hex": {
-      "wisp": "#a83570",
-      "fen": "#ffc4dd",
-      "mire": "#feafd4",
-      "blackwater": "#feafd4"
+      "wisp": "#006f5f",
+      "fen": "#b0dfd9",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
     }
   },
   {
     "port": "lsd",
     "key": "day-old",
-    "expr": "{cherry}",
+    "expr": "{frost}",
     "roles": [],
     "palette": [
-      "cherry"
+      "frost"
     ],
     "hex": {
-      "wisp": "#a53f54",
-      "fen": "#e7aab5",
-      "mire": "#d3919c",
-      "blackwater": "#d3919c"
+      "wisp": "#026b80",
+      "fen": "#83d4db",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
     }
   },
   {
     "port": "lsd",
     "key": "older",
-    "expr": "{ui.text.muted}",
-    "roles": [
-      "ui.text.muted"
-    ],
+    "expr": "{bilberry}",
+    "roles": [],
     "palette": [
-      "subtext0"
+      "bilberry"
     ],
     "hex": {
-      "wisp": "#694e5f",
-      "fen": "#ccbac5",
-      "mire": "#cbbcc5",
-      "blackwater": "#c6b7c0"
+      "wisp": "#1d64a4",
+      "fen": "#9cc6ea",
+      "mire": "#7fb4e0",
+      "blackwater": "#7fb4e0"
     }
   },
   {
@@ -11331,16 +11329,20 @@
   {
     "port": "kate",
     "key": "CurrentLine",
-    "expr": "{surface0}",
-    "roles": [],
+    "expr": "{ui.line.current}",
+    "roles": [
+      "ui.line.current",
+      "ui.background"
+    ],
     "palette": [
+      "base",
       "surface0"
     ],
     "hex": {
-      "wisp": "#dfcbd8",
-      "fen": "#5d3e51",
-      "mire": "#32222c",
-      "blackwater": "#271a23"
+      "wisp": "#f1e6ed",
+      "fen": "#543648",
+      "mire": "#2d1f28",
+      "blackwater": "#21151d"
     }
   },
   {
@@ -11775,17 +11777,20 @@
   {
     "port": "vscode",
     "key": "selection.background",
-    "expr": "{mix(surface1,plum,0.2)}58",
-    "roles": [],
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
     "palette": [
-      "surface1",
-      "plum"
+      "base",
+      "berry"
     ],
     "hex": {
-      "wisp": "#c2a1c458",
-      "fen": "#86627f58",
-      "mire": "#5e445a58",
-      "blackwater": "#563e5458"
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -12681,17 +12686,18 @@
   {
     "port": "vscode",
     "key": "button.background",
-    "expr": "{mix(jam,crust,0.2)}",
-    "roles": [],
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
     "palette": [
-      "jam",
-      "crust"
+      "jam"
     ],
     "hex": {
-      "wisp": "#c3659d",
-      "fen": "#9f4077",
-      "mire": "#9a3d73",
-      "blackwater": "#983b71"
+      "wisp": "#b9488b",
+      "fen": "#ba4889",
+      "mire": "#ba4889",
+      "blackwater": "#ba4889"
     }
   },
   {
@@ -12967,17 +12973,20 @@
   {
     "port": "vscode",
     "key": "editor.selectionBackground",
-    "expr": "{mix(surface0,plum,0.18)}80",
-    "roles": [],
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
     "palette": [
-      "surface0",
-      "plum"
+      "base",
+      "berry"
     ],
     "hex": {
-      "wisp": "#d0b2d180",
-      "fen": "#77557080",
-      "mire": "#513c4f80",
-      "blackwater": "#48354780"
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
     }
   },
   {
@@ -13186,17 +13195,20 @@
   {
     "port": "vscode",
     "key": "editor.lineHighlightBackground",
-    "expr": "{mix(surface0,surface1,0.6)}38",
-    "roles": [],
+    "expr": "{ui.line.current}",
+    "roles": [
+      "ui.line.current",
+      "ui.background"
+    ],
     "palette": [
-      "surface0",
-      "surface1"
+      "base",
+      "surface0"
     ],
     "hex": {
-      "wisp": "#d6c1ce38",
-      "fen": "#66465a38",
-      "mire": "#39263238",
-      "blackwater": "#2f1f2a38"
+      "wisp": "#f1e6ed",
+      "fen": "#543648",
+      "mire": "#2d1f28",
+      "blackwater": "#21151d"
     }
   },
   {
@@ -13851,7 +13863,7 @@
   {
     "port": "vscode",
     "key": "tab.activeBorderTop",
-    "expr": "{ui.tab.indicator}00",
+    "expr": "{ui.tab.indicator}",
     "roles": [
       "ui.tab.indicator"
     ],
@@ -13859,10 +13871,10 @@
       "tint"
     ],
     "hex": {
-      "wisp": "#d2157000",
-      "fen": "#fa99b400",
-      "mire": "#fd7ca500",
-      "blackwater": "#fd7ca500"
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
     }
   },
   {

@@ -29,8 +29,8 @@ IntensityEffect=0
 [Colors:Button]
 BackgroundAlternate={surface1}
 BackgroundNormal={surface0}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.accent}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}
@@ -43,8 +43,8 @@ ForegroundVisited={plum}
 [Colors:Complementary]
 BackgroundAlternate={surface0}
 BackgroundNormal={ui.pane.tertiary}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.accent}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}
@@ -57,8 +57,8 @@ ForegroundVisited={plum}
 [Colors:Header]
 BackgroundAlternate={ui.background}
 BackgroundNormal={ui.pane.secondary}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.accent}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}
@@ -71,8 +71,8 @@ ForegroundVisited={plum}
 [Colors:Header][Inactive]
 BackgroundAlternate={ui.pane.secondary}
 BackgroundNormal={ui.pane.tertiary}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.accent}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}
@@ -85,8 +85,8 @@ ForegroundVisited={plum}
 [Colors:Selection]
 BackgroundAlternate={surface2}
 BackgroundNormal={ui.fill}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.on.fill}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}
@@ -99,8 +99,8 @@ ForegroundVisited={plum}
 [Colors:Tooltip]
 BackgroundAlternate={ui.pane.tertiary}
 BackgroundNormal={ui.pane.secondary}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.accent}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}
@@ -113,8 +113,8 @@ ForegroundVisited={plum}
 [Colors:View]
 BackgroundAlternate={surface0}
 BackgroundNormal={ui.background}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.accent}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}
@@ -127,8 +127,8 @@ ForegroundVisited={plum}
 [Colors:Window]
 BackgroundAlternate={surface0}
 BackgroundNormal={ui.pane.secondary}
-DecorationFocus={ui.accent}
-DecorationHover={ui.focus}
+DecorationFocus={ui.focus}
+DecorationHover={ui.accent}
 ForegroundActive={ui.accent}
 ForegroundInactive={ui.text.muted}
 ForegroundLink={ui.link}

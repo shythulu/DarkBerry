@@ -98,6 +98,14 @@ const lsColorsT = read("src/ports/ls-colors.txt");
 const tinted8T = read("src/ports/tinted8.yaml"), base24T = read("src/ports/base24.yaml");
 const gtkT = read("src/ports/gtk.css"), darktableT = read("src/ports/darktable.css"), gimpT = read("src/ports/gimp.css");
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
+const to256 = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => {
+  const [r, g, b] = rgb("#" + h).map((v) => v * 255), steps = [0, 95, 135, 175, 215, 255];
+  const near = (v) => steps.reduce((best, s, i) => Math.abs(s - v) < Math.abs(steps[best] - v) ? i : best, 0);
+  const cube = [near(r), near(g), near(b)], cubeRgb = cube.map((i) => steps[i]);
+  const grey = Math.round(Math.min(23, Math.max(0, ((r + g + b) / 3 - 8) / 10))), greyV = 8 + grey * 10;
+  const dist = (x) => (x[0] - r) ** 2 + (x[1] - g) ** 2 + (x[2] - b) ** 2;
+  return String(dist([greyV, greyV, greyV]) < dist(cubeRgb) ? 232 + grey : 16 + 36 * cube[0] + 6 * cube[1] + cube[2]);
+});
 const toBareHex = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => `"${h.toUpperCase()}"`);
 const toRgbArrays = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => "[" + rgb("#" + h).map((v) => Math.round(v * 255)).join(", ") + "]");
 // LS_COLORS is one colon-joined string, so its port is a table (patterns, value,
@@ -158,6 +166,24 @@ const mustBeRole = ["editor.background", "editorCursor.foreground", "terminalCur
   "badge.background", "badge.foreground", "button.foreground", "editorError.foreground", "editorWarning.foreground", "editorInfo.foreground",
   "gitDecoration.addedResourceForeground", "terminal.background", "terminal.selectionBackground", ...Object.keys(VS.colors).filter((k) => k.startsWith("terminal.ansi"))];
 for (const k of mustBeRole) if (!/^\{(ui|syntax|ansi)\./.test(VS.colors[k] || "")) errors.push(`vscode: ${k} must reference a role`);
+// One meaning, one role, in every port. These keys carry a shared meaning
+// (selection, current line, fill, focus, emphasis, text on an error fill), so a
+// port that reaches past the role for a palette mix is a drift, not a style.
+const mustBe = (port, text, key, want, re) => { if (!re.test(text)) errors.push(`${port}: ${key} must be ${want}`); };
+mustBe("vscode", VS.colors["editor.selectionBackground"], "editor.selectionBackground", "{ui.selection}", /^\{ui\.selection\}/);
+mustBe("vscode", VS.colors["selection.background"], "selection.background", "{ui.selection}", /^\{ui\.selection\}/);
+mustBe("vscode", VS.colors["editor.lineHighlightBackground"], "editor.lineHighlightBackground", "{ui.line.current}", /^\{ui\.line\.current\}/);
+mustBe("vscode", VS.colors["button.background"], "button.background", "{ui.fill}", /^\{ui\.fill\}/);
+mustBe("vscode", VS.colors["tab.activeBorderTop"], "tab.activeBorderTop", "an opaque {ui.tab.indicator}", /^\{ui\.tab\.indicator\}$/);
+mustBe("konsole", konsoleT, "[ForegroundIntense]", "{ui.text} (Konsole draws bold with it)", /\[ForegroundIntense\]\nColor=\{ui\.text\}/);
+mustBe("kde", kdeT, "DecorationFocus", "{ui.focus}", /^DecorationFocus=\{ui\.focus\}$/m);
+mustBe("kde", kdeT, "DecorationHover", "{ui.accent}", /^DecorationHover=\{ui\.accent\}$/m);
+mustBe("kate", kateT, "CurrentLine", "{ui.line.current}", /"CurrentLine": "\{ui\.line\.current\}"/);
+mustBe("micro", microT, "error", "{ui.on.error} on {ui.error}", /^color-link error "\{ui\.on\.error\},\{ui\.error\}"/m);
+mustBe("micro", microT, "error-message", "{ui.on.error} on {ui.error}", /^color-link error-message "\{ui\.on\.error\},\{ui\.error\}"/m);
+mustBe("lsd", to256(fill(ctxs[0], lsdT, "lsd-check")), "256 companion", "free of hex strings", /^(?![\s\S]*"#[0-9a-f]{6}")/);
+mustBe("darktable", darktableT, "@import", "free of chunk-fonts.css (darktable 5 only; 4.6 fails to load the theme)", /^(?![\s\S]*@import[^\n]*chunk-fonts)/);
+
 for (const t of VS.tokenColors) for (const v of [t.settings.foreground, t.settings.background].filter(Boolean))
   if (!/^\{syntax\./.test(v)) errors.push(`vscode: token rule "${t.name}" must use a syntax.* role (found ${v})`);
 
@@ -176,7 +202,12 @@ for (const ctx of ctxs) {
   kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
   out(`ports/kate/${slug}.theme`, kt);
   out(`ports/chrome/${full}/manifest.json`, toRgbArrays(fill(ctx, chromeT, "chrome")));
-  out(`ports/lsd/${slug}.yaml`, applyOverrides("lsd", "lines", fill(ctx, lsdT, "lsd"), ctx));
+  const lsdOut = applyOverrides("lsd", "lines", fill(ctx, lsdT, "lsd"), ctx);
+  out(`ports/lsd/${slug}.yaml`, lsdOut);
+  // lsd below 1.1 rejects hex strings and then drops the whole theme without a word
+  // (Ubuntu 24.04 ships 1.0.0), so a companion file carries the nearest xterm-256 index.
+  out(`ports/lsd/${slug}.256.yaml`, to256(lsdOut).replace(/^attributes:\n(?:[ #].*\n)+/m, "") // the attributes block is lsd 1.1+ too
+    .replace("Install with:", "lsd 1.0 companion (nearest xterm-256 colours). Install with:").replace(`${slug}.yaml`, `${slug}.256.yaml`));
   out(`ports/ls-colors/${slug}.sh`, toLsColors(applyOverrides("ls-colors", "lines", fill(ctx, lsColorsT, "ls-colors"), ctx)));
   out(`ports/starship/${slug}.toml`, applyOverrides("starship", "lines", fill(ctx, starshipT, "starship"), ctx));
   out(`ports/borders/${slug}.sh`, toArgb(applyOverrides("borders", "lines", fill(ctx, bordersT, "borders"), ctx)));

@@ -16,7 +16,8 @@
 */
 
 @import url("darktable.css");
-@import url("chunk-fonts.css");
+/* darktable 5 splits its fonts into chunk-fonts.css; importing it here made 4.6 fail to
+   parse the whole theme. darktable.css already brings the fonts on either version. */
 
 /* General */
 @define-color selected_bg_color      #6e4457;
