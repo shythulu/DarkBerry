@@ -13,11 +13,11 @@
     "text-muted": "#694e5f",
     "border": "#ac93a2",
     "primary": "#b9488b",
-    "link": "#1b778c",
-    "success": "#377a37",
-    "warning": "#90670a",
-    "error": "#cc3838",
-    "info": "#1d7d6c"
+    "link": "#026b80",
+    "success": "#2c6f2d",
+    "warning": "#815b02",
+    "error": "#bb262a",
+    "info": "#006f5f"
   },
   "tags": [
     "darkberry",

@@ -45,12 +45,12 @@ palette:
   # Wisp; ui.line.current misses none, in any flavour.
   base01: "#f1e6ed"
   # Selection, measured the same way at 65%.
-  base02: "#f4cce0"
+  base02: "#f0cadd"
   # base03 is comments and invisibles, and ANSI 8. The spec asks for legibility
   # against base00, so it takes the comment role, which is contrast-checked at
   # 4.5:1, rather than ansi.8's surface grey, which lands between 1.4:1 and
   # 1.9:1 in the three dark flavours.
-  base03: "#806776"
+  base03: "#745b6a"
   # Status-bar foreground, and the spec's menu text.
   base04: "#694e5f"
   # Default foreground: caret, delimiters, operators. ANSI 7.
@@ -58,7 +58,7 @@ palette:
   # base06 is the light foreground. The spec spends it on search matches and on
   # the selected menu item, so it takes the colour Darkberry already uses to say
   # "you are here" rather than a near-white nothing.
-  base06: "#b7437d"
+  base06: "#a83570"
   # base07 is ANSI 15, bright white, written as the terminal ports write it.
   # base06 already carries the light-foreground duty, so this slot goes to
   # terminals rather than to editors.
@@ -66,14 +66,14 @@ palette:
 
   # The hues. These are Darkberry's ANSI colours, not its syntax roles; the
   # comment on each names the meaning base24 attaches to it.
-  base08: "#cc3838"  # red: errors, diff deleted
-  base09: "#b15423"  # orange, ANSI 16: integers, booleans, constants
-  base0A: "#90670a"  # yellow: classes, markup bold
-  base0B: "#377a37"  # green: strings, diff inserted
-  base0C: "#1d7d6c"  # cyan: support, regex, escapes, quotes
-  base0D: "#3b5fd0"  # blue: functions, methods, headings
-  base0E: "#d21570"  # magenta: keywords, storage, markup italic
-  base0F: "#a15873"  # dark red, ANSI 17: deprecated code, embedded tags
+  base08: "#bb262a"  # red: errors, diff deleted
+  base09: "#a24712"  # orange, ANSI 16: integers, booleans, constants
+  base0A: "#815b02"  # yellow: classes, markup bold
+  base0B: "#2c6f2d"  # green: strings, diff inserted
+  base0C: "#006f5f"  # cyan: support, regex, escapes, quotes
+  base0D: "#3659ca"  # blue: functions, methods, headings
+  base0E: "#bf0b64"  # magenta: keywords, storage, markup italic
+  base0F: "#934b66"  # dark red, ANSI 17: deprecated code, embedded tags
 
   # The two recessed backgrounds. Light flavours keep these recessed rather than
   # raised, as every scheme in the tinted-theming repository does and the spec's
@@ -83,9 +83,9 @@ palette:
   base11: "#ebdae5"
 
   # The brights, following Catppuccin's formula as applied in lib/color.mjs.
-  base12: "#d8473e"  # bright red
-  base13: "#997317"  # bright yellow
-  base14: "#3e8543"  # bright green
-  base15: "#298878"  # bright cyan
-  base16: "#5067da"  # bright blue
-  base17: "#df2a76"  # bright magenta
+  base12: "#c5352f"  # bright red
+  base13: "#89650e"  # bright yellow
+  base14: "#327938"  # bright green
+  base15: "#12796a"  # bright cyan
+  base16: "#4b60d3"  # bright blue
+  base17: "#cb216a"  # bright magenta

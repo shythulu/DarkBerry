@@ -276,6 +276,14 @@ const cRows = [...syntaxRoles.map(([k, r]) => [`syntax.${k}`, r.minContrast ?? 4
 for (const [role, min] of cRows) {
   checks += `| ${role} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(role)[0], x.resolve("ui.background")[0]); if (v < min) errors.push(`${x.f.name}: ${role} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
 }
+// The same text lands on sidebars, panels, title and status bars in every port, so
+// each text role must reach its own minimum on the two pane colours as well.
+for (const bgRole of ["ui.pane.secondary", "ui.pane.tertiary"]) {
+  checks += `| *on ${bgRole}* | | ${ctxs.map(() => "").join(" | ")} |\n`;
+  for (const [role, min] of cRows) {
+    checks += `| ${role} on ${bgRole} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(role)[0], x.resolve(bgRole)[0]); if (v < min) errors.push(`${x.f.name}: ${role} on ${bgRole} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
+  }
+}
 checks += `| ui.on.fill on ui.fill | 4.5 | ` + ctxs.map((x) => { const v = contrast(x.resolve("ui.on.fill")[0], x.resolve("ui.fill")[0]); if (v < 4.5) errors.push(`${x.f.name}: on.fill contrast ${v.toFixed(2)}`); return v.toFixed(2) + (v < 4.5 ? " ✗" : ""); }).join(" | ") + " |\n";
 // Backgrounds that code is drawn on. Syntax colours keep their own foreground on
 // these, so each one has to preserve a share of every syntax role's declared minimum.

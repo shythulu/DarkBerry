@@ -63,7 +63,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -80,7 +80,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -114,7 +114,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -166,7 +166,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -322,7 +322,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -357,7 +357,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -392,7 +392,7 @@
       "bilberry"
     ],
     "hex": {
-      "wisp": "#2a6fb0",
+      "wisp": "#1d64a4",
       "fen": "#9cc6ea",
       "mire": "#7fb4e0",
       "blackwater": "#7fb4e0"
@@ -443,7 +443,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -460,7 +460,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#d8473e",
+      "wisp": "#c5352f",
       "fen": "#fc7776",
       "mire": "#ed5858",
       "blackwater": "#ed5858"
@@ -477,7 +477,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -494,7 +494,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#3e8543",
+      "wisp": "#327938",
       "fen": "#9bdba1",
       "mire": "#87cf8e",
       "blackwater": "#87cf8e"
@@ -511,7 +511,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -528,7 +528,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#997317",
+      "wisp": "#89650e",
       "fen": "#e3c782",
       "mire": "#dcbb6d",
       "blackwater": "#dcbb6d"
@@ -545,7 +545,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -562,7 +562,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#5067da",
+      "wisp": "#4b60d3",
       "fen": "#8fb6f7",
       "mire": "#7da4f4",
       "blackwater": "#7da4f4"
@@ -579,7 +579,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -596,7 +596,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#df2a76",
+      "wisp": "#cb216a",
       "fen": "#f985a5",
       "mire": "#fc6796",
       "blackwater": "#fc6796"
@@ -613,7 +613,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -630,7 +630,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#298878",
+      "wisp": "#12796a",
       "fen": "#99cfc8",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
@@ -681,7 +681,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -698,7 +698,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -732,7 +732,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -749,7 +749,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -766,7 +766,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -783,7 +783,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -800,7 +800,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -817,7 +817,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -868,7 +868,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#d8473e",
+      "wisp": "#c5352f",
       "fen": "#fc7776",
       "mire": "#ed5858",
       "blackwater": "#ed5858"
@@ -885,7 +885,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#3e8543",
+      "wisp": "#327938",
       "fen": "#9bdba1",
       "mire": "#87cf8e",
       "blackwater": "#87cf8e"
@@ -902,7 +902,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#997317",
+      "wisp": "#89650e",
       "fen": "#e3c782",
       "mire": "#dcbb6d",
       "blackwater": "#dcbb6d"
@@ -919,7 +919,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#5067da",
+      "wisp": "#4b60d3",
       "fen": "#8fb6f7",
       "mire": "#7da4f4",
       "blackwater": "#7da4f4"
@@ -936,7 +936,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#df2a76",
+      "wisp": "#cb216a",
       "fen": "#f985a5",
       "mire": "#fc6796",
       "blackwater": "#fc6796"
@@ -953,7 +953,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#298878",
+      "wisp": "#12796a",
       "fen": "#99cfc8",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
@@ -1021,7 +1021,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -1057,7 +1057,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -1226,7 +1226,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -1286,7 +1286,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -1301,7 +1301,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -1316,7 +1316,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -1331,7 +1331,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -1346,7 +1346,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -1361,7 +1361,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -1376,7 +1376,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -1391,7 +1391,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -1554,7 +1554,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc383833",
+      "wisp": "#bb262a33",
       "fen": "#ff8a8a33",
       "mire": "#f06a6a33",
       "blackwater": "#f06a6a33"
@@ -1571,7 +1571,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc383855",
+      "wisp": "#bb262a55",
       "fen": "#ff8a8a55",
       "mire": "#f06a6a55",
       "blackwater": "#f06a6a55"
@@ -1588,7 +1588,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a3733",
+      "wisp": "#2c6f2d33",
       "fen": "#b7e6b733",
       "mire": "#a3daa333",
       "blackwater": "#a3daa333"
@@ -1722,7 +1722,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -1739,7 +1739,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -1756,7 +1756,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -1788,7 +1788,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -1807,7 +1807,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -1839,7 +1839,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -1954,7 +1954,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -1971,7 +1971,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -1988,7 +1988,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -2005,7 +2005,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -2023,7 +2023,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -2041,7 +2041,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -2059,7 +2059,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -2076,7 +2076,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -2093,7 +2093,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -2110,7 +2110,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -2205,7 +2205,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -2256,7 +2256,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -2273,7 +2273,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -2290,7 +2290,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -2324,7 +2324,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -2339,7 +2339,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -2406,7 +2406,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -2457,7 +2457,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -2474,7 +2474,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -2491,7 +2491,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -2525,7 +2525,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -2540,7 +2540,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -2609,7 +2609,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -2660,7 +2660,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -2677,7 +2677,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -2694,7 +2694,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -2728,7 +2728,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -2743,7 +2743,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -2812,7 +2812,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -2863,7 +2863,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -2880,7 +2880,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -2897,7 +2897,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -2931,7 +2931,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -2946,7 +2946,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -3013,7 +3013,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -3064,7 +3064,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -3081,7 +3081,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -3098,7 +3098,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -3132,7 +3132,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -3147,7 +3147,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -3216,7 +3216,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -3267,7 +3267,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -3284,7 +3284,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -3301,7 +3301,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -3335,7 +3335,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -3350,7 +3350,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -3417,7 +3417,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -3468,7 +3468,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -3485,7 +3485,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -3502,7 +3502,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -3536,7 +3536,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -3551,7 +3551,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -3618,7 +3618,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -3669,7 +3669,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -3686,7 +3686,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -3703,7 +3703,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -3737,7 +3737,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -3752,7 +3752,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -3977,7 +3977,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -3996,7 +3996,7 @@
       "base"
     ],
     "hex": {
-      "wisp": "#df8385",
+      "wisp": "#d5787c",
       "fen": "#b9666e",
       "mire": "#a14c4f",
       "blackwater": "#9c474a"
@@ -4013,7 +4013,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#d8473e",
+      "wisp": "#c5352f",
       "fen": "#fc7776",
       "mire": "#ed5858",
       "blackwater": "#ed5858"
@@ -4030,7 +4030,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -4049,7 +4049,7 @@
       "base"
     ],
     "hex": {
-      "wisp": "#85ab84",
+      "wisp": "#7fa47e",
       "fen": "#8d9e89",
       "mire": "#738f71",
       "blackwater": "#6d8a6c"
@@ -4066,7 +4066,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#3e8543",
+      "wisp": "#327938",
       "fen": "#9bdba1",
       "mire": "#87cf8e",
       "blackwater": "#87cf8e"
@@ -4083,7 +4083,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -4102,7 +4102,7 @@
       "base"
     ],
     "hex": {
-      "wisp": "#bb9f69",
+      "wisp": "#b29864",
       "fen": "#b0947b",
       "mire": "#9c8562",
       "blackwater": "#97805d"
@@ -4119,7 +4119,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#997317",
+      "wisp": "#89650e",
       "fen": "#e3c782",
       "mire": "#dcbb6d",
       "blackwater": "#dcbb6d"
@@ -4136,7 +4136,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -4155,7 +4155,7 @@
       "base"
     ],
     "hex": {
-      "wisp": "#889be0",
+      "wisp": "#8597dc",
       "fen": "#8289ae",
       "mire": "#6776a0",
       "blackwater": "#61719c"
@@ -4172,7 +4172,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#5067da",
+      "wisp": "#4b60d3",
       "fen": "#8fb6f7",
       "mire": "#7da4f4",
       "blackwater": "#7da4f4"
@@ -4189,7 +4189,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -4208,7 +4208,7 @@
       "base"
     ],
     "hex": {
-      "wisp": "#e26ea6",
+      "wisp": "#d7689f",
       "fen": "#b66f87",
       "mire": "#a95672",
       "blackwater": "#a3526d"
@@ -4225,7 +4225,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#df2a76",
+      "wisp": "#cb216a",
       "fen": "#f985a5",
       "mire": "#fc6796",
       "blackwater": "#fc6796"
@@ -4242,7 +4242,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -4261,7 +4261,7 @@
       "base"
     ],
     "hex": {
-      "wisp": "#76ada4",
+      "wisp": "#64a49c",
       "fen": "#8f969a",
       "mire": "#708985",
       "blackwater": "#6a8480"
@@ -4278,7 +4278,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#298878",
+      "wisp": "#12796a",
       "fen": "#99cfc8",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
@@ -4433,7 +4433,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -4450,7 +4450,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -4467,7 +4467,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -4485,7 +4485,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -4502,7 +4502,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -4519,7 +4519,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -4536,7 +4536,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -4553,7 +4553,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -4570,7 +4570,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -4587,7 +4587,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -4604,7 +4604,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -4621,7 +4621,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -4638,7 +4638,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -4656,7 +4656,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -4674,7 +4674,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -4692,7 +4692,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -4709,7 +4709,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -4726,7 +4726,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -4744,7 +4744,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -4778,7 +4778,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -4795,7 +4795,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -4914,7 +4914,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -4931,7 +4931,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -5035,7 +5035,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -5203,7 +5203,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -5237,7 +5237,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -5254,7 +5254,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -5271,7 +5271,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -5289,7 +5289,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#bf414b",
+      "wisp": "#b0333f",
       "fen": "#f39aa0",
       "mire": "#e27e83",
       "blackwater": "#e27e83"
@@ -5306,7 +5306,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -5323,7 +5323,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -5340,7 +5340,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -5357,7 +5357,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -5374,7 +5374,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -5438,7 +5438,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -5453,7 +5453,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -5468,7 +5468,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -5483,7 +5483,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -5498,7 +5498,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -5513,7 +5513,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -5528,7 +5528,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -5543,7 +5543,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -5558,7 +5558,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -5575,7 +5575,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -5592,7 +5592,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -5607,7 +5607,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b14a5e",
+      "wisp": "#a53f54",
       "fen": "#e7aab5",
       "mire": "#d3919c",
       "blackwater": "#d3919c"
@@ -5622,7 +5622,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -5654,7 +5654,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -5669,7 +5669,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -5684,7 +5684,7 @@
       "bilberry"
     ],
     "hex": {
-      "wisp": "#2a6fb0",
+      "wisp": "#1d64a4",
       "fen": "#9cc6ea",
       "mire": "#7fb4e0",
       "blackwater": "#7fb4e0"
@@ -5699,7 +5699,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -5714,7 +5714,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -5746,7 +5746,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -5761,7 +5761,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -5776,7 +5776,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b14a5e",
+      "wisp": "#a53f54",
       "fen": "#e7aab5",
       "mire": "#d3919c",
       "blackwater": "#d3919c"
@@ -5825,7 +5825,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -5840,7 +5840,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -5855,7 +5855,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -5870,7 +5870,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -5919,7 +5919,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -6004,7 +6004,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -6021,7 +6021,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -6036,7 +6036,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -6053,7 +6053,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -6068,7 +6068,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -6085,7 +6085,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -6102,7 +6102,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -6136,7 +6136,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -6153,7 +6153,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -6170,7 +6170,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -6187,7 +6187,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -6204,7 +6204,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -6221,7 +6221,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -6272,7 +6272,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#d8473e",
+      "wisp": "#c5352f",
       "fen": "#fc7776",
       "mire": "#ed5858",
       "blackwater": "#ed5858"
@@ -6289,7 +6289,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#3e8543",
+      "wisp": "#327938",
       "fen": "#9bdba1",
       "mire": "#87cf8e",
       "blackwater": "#87cf8e"
@@ -6306,7 +6306,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#997317",
+      "wisp": "#89650e",
       "fen": "#e3c782",
       "mire": "#dcbb6d",
       "blackwater": "#dcbb6d"
@@ -6323,7 +6323,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#5067da",
+      "wisp": "#4b60d3",
       "fen": "#8fb6f7",
       "mire": "#7da4f4",
       "blackwater": "#7da4f4"
@@ -6340,7 +6340,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#df2a76",
+      "wisp": "#cb216a",
       "fen": "#f985a5",
       "mire": "#fc6796",
       "blackwater": "#fc6796"
@@ -6357,7 +6357,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#298878",
+      "wisp": "#12796a",
       "fen": "#99cfc8",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
@@ -6391,7 +6391,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -6408,7 +6408,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -6442,7 +6442,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -6459,7 +6459,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -6476,7 +6476,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -6493,7 +6493,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -6510,7 +6510,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -6527,7 +6527,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -6544,7 +6544,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -6561,7 +6561,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -6578,7 +6578,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -6595,7 +6595,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -6612,7 +6612,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -6629,7 +6629,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -6647,7 +6647,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -6665,7 +6665,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#89707f",
+      "wisp": "#826978",
       "fen": "#b293a7",
       "mire": "#a28999",
       "blackwater": "#998190"
@@ -6682,7 +6682,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -6700,7 +6700,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -6717,7 +6717,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -6734,7 +6734,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -6752,7 +6752,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#bf414b",
+      "wisp": "#b0333f",
       "fen": "#f39aa0",
       "mire": "#e27e83",
       "blackwater": "#e27e83"
@@ -6769,7 +6769,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -6786,7 +6786,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -6803,7 +6803,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -6821,7 +6821,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -6839,7 +6839,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -6856,7 +6856,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -6873,7 +6873,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -6891,7 +6891,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -6908,7 +6908,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -6925,7 +6925,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -6942,7 +6942,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -6959,7 +6959,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -6976,7 +6976,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -6993,7 +6993,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -7010,7 +7010,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -7027,7 +7027,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -7044,7 +7044,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -7061,7 +7061,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -7078,7 +7078,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -7095,7 +7095,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -7112,7 +7112,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -7130,7 +7130,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -7147,7 +7147,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -7300,7 +7300,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -7369,7 +7369,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#89707f",
+      "wisp": "#826978",
       "fen": "#b293a7",
       "mire": "#a28999",
       "blackwater": "#998190"
@@ -7590,7 +7590,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -7627,7 +7627,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -7663,7 +7663,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -7729,7 +7729,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -7748,7 +7748,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -7798,7 +7798,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -7815,7 +7815,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -7832,7 +7832,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -7849,7 +7849,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -7952,7 +7952,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -7969,7 +7969,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -8020,7 +8020,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -8054,7 +8054,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -8071,7 +8071,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -8088,7 +8088,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -8105,7 +8105,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -8122,7 +8122,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -8139,7 +8139,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -8156,7 +8156,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -8173,7 +8173,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -8224,7 +8224,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#d8473e",
+      "wisp": "#c5352f",
       "fen": "#fc7776",
       "mire": "#ed5858",
       "blackwater": "#ed5858"
@@ -8241,7 +8241,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#997317",
+      "wisp": "#89650e",
       "fen": "#e3c782",
       "mire": "#dcbb6d",
       "blackwater": "#dcbb6d"
@@ -8258,7 +8258,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#3e8543",
+      "wisp": "#327938",
       "fen": "#9bdba1",
       "mire": "#87cf8e",
       "blackwater": "#87cf8e"
@@ -8275,7 +8275,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#298878",
+      "wisp": "#12796a",
       "fen": "#99cfc8",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
@@ -8292,7 +8292,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#5067da",
+      "wisp": "#4b60d3",
       "fen": "#8fb6f7",
       "mire": "#7da4f4",
       "blackwater": "#7da4f4"
@@ -8309,7 +8309,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#df2a76",
+      "wisp": "#cb216a",
       "fen": "#f985a5",
       "mire": "#fc6796",
       "blackwater": "#fc6796"
@@ -8566,7 +8566,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -8601,7 +8601,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -8646,7 +8646,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -8678,7 +8678,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -8695,7 +8695,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -8712,7 +8712,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -8727,7 +8727,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -8742,7 +8742,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -8757,7 +8757,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -8772,7 +8772,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -8789,7 +8789,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -8806,7 +8806,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -8821,7 +8821,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -8836,7 +8836,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -8851,7 +8851,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -8866,7 +8866,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -8881,7 +8881,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -8896,7 +8896,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -8911,7 +8911,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -8926,7 +8926,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -8941,7 +8941,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -8956,7 +8956,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -8971,7 +8971,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -8986,7 +8986,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -9001,7 +9001,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -9016,7 +9016,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -9031,7 +9031,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -9046,7 +9046,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -9061,7 +9061,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -9415,7 +9415,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -9547,7 +9547,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -9632,7 +9632,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -9966,7 +9966,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -10117,7 +10117,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -10134,7 +10134,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -10151,7 +10151,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -10168,7 +10168,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -10185,7 +10185,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -10236,7 +10236,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -10253,7 +10253,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -10270,7 +10270,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -10287,7 +10287,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -10304,7 +10304,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -10321,7 +10321,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -10338,7 +10338,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -10355,7 +10355,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -10373,7 +10373,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -10391,7 +10391,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -10408,7 +10408,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -10425,7 +10425,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -10442,7 +10442,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -10459,7 +10459,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -10476,7 +10476,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -10493,7 +10493,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -10511,7 +10511,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -10529,7 +10529,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -10546,7 +10546,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -10563,7 +10563,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -10580,7 +10580,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -10597,7 +10597,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -10614,7 +10614,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -10631,7 +10631,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -10648,7 +10648,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -10665,7 +10665,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -10682,7 +10682,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -10699,7 +10699,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -10716,7 +10716,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -10733,7 +10733,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -10750,7 +10750,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -10767,7 +10767,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -10784,7 +10784,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -10801,7 +10801,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -10818,7 +10818,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -10835,7 +10835,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -10852,7 +10852,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -10869,7 +10869,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -10886,7 +10886,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -10903,7 +10903,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -10920,7 +10920,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -10937,7 +10937,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -10954,7 +10954,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -10971,7 +10971,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -10989,7 +10989,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -11007,7 +11007,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -11024,7 +11024,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -11041,7 +11041,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -11058,7 +11058,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -11075,7 +11075,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -11092,7 +11092,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -11109,7 +11109,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -11126,7 +11126,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -11143,7 +11143,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -11160,7 +11160,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -11177,7 +11177,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -11195,7 +11195,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -11213,7 +11213,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -11230,7 +11230,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -11247,7 +11247,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -11283,7 +11283,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -11396,7 +11396,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -11413,7 +11413,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -11430,7 +11430,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -11479,7 +11479,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -11496,7 +11496,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -11513,7 +11513,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -11547,7 +11547,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -11581,7 +11581,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -11615,7 +11615,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -11742,7 +11742,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -11758,7 +11758,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#c5a4c658",
+      "wisp": "#c2a1c458",
       "fen": "#86627f58",
       "mire": "#5e445a58",
       "blackwater": "#563e5458"
@@ -11926,7 +11926,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b14a5e",
+      "wisp": "#a53f54",
       "fen": "#e7aab5",
       "mire": "#d3919c",
       "blackwater": "#d3919c"
@@ -12034,7 +12034,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d191b2",
+      "wisp": "#cc8eaf",
       "fen": "#905f75",
       "mire": "#6e3e52",
       "blackwater": "#66394c"
@@ -12095,7 +12095,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -12111,7 +12111,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a3647580",
+      "wisp": "#9e5e7080",
       "fen": "#c496a680",
       "mire": "#b28a9380",
       "blackwater": "#ae848f80"
@@ -12129,7 +12129,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -12145,7 +12145,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d0a1bb",
+      "wisp": "#cda0b9",
       "fen": "#81586d",
       "mire": "#5b3547",
       "blackwater": "#523040"
@@ -12176,7 +12176,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d0a1bb",
+      "wisp": "#cda0b9",
       "fen": "#81586d",
       "mire": "#5b3547",
       "blackwater": "#523040"
@@ -12206,7 +12206,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b14a5e",
+      "wisp": "#a53f54",
       "fen": "#e7aab5",
       "mire": "#d3919c",
       "blackwater": "#d3919c"
@@ -12283,7 +12283,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d099b6",
+      "wisp": "#cd97b4",
       "fen": "#885b71",
       "mire": "#643a4c",
       "blackwater": "#5c3446"
@@ -12512,7 +12512,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d0a1bb",
+      "wisp": "#cda0b9",
       "fen": "#81586d",
       "mire": "#5b3547",
       "blackwater": "#523040"
@@ -12680,7 +12680,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b64979",
+      "wisp": "#b14475",
       "fen": "#cc6f9b",
       "mire": "#c46591",
       "blackwater": "#c46591"
@@ -12802,7 +12802,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b14a5e66",
+      "wisp": "#a53f5466",
       "fen": "#e7aab566",
       "mire": "#d3919c66",
       "blackwater": "#d3919c66"
@@ -12817,7 +12817,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d2157000",
+      "wisp": "#bf0b6400",
       "fen": "#fa99b400",
       "mire": "#fd7ca500",
       "blackwater": "#fd7ca500"
@@ -12832,7 +12832,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -12849,7 +12849,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -12866,7 +12866,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -12934,7 +12934,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -12950,7 +12950,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#d3b4d480",
+      "wisp": "#d0b2d180",
       "fen": "#77557080",
       "mire": "#513c4f80",
       "blackwater": "#48354780"
@@ -12997,7 +12997,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a3647520",
+      "wisp": "#9e5e7020",
       "fen": "#c496a620",
       "mire": "#b28a9320",
       "blackwater": "#ae848f20"
@@ -13013,7 +13013,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a3647560",
+      "wisp": "#9e5e7060",
       "fen": "#c496a660",
       "mire": "#b28a9360",
       "blackwater": "#ae848f60"
@@ -13029,7 +13029,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d0a1bb80",
+      "wisp": "#cda0b980",
       "fen": "#81586d80",
       "mire": "#5b354780",
       "blackwater": "#52304080"
@@ -13047,7 +13047,7 @@
       "overlay1"
     ],
     "hex": {
-      "wisp": "#a36475",
+      "wisp": "#9e5e70",
       "fen": "#c496a6",
       "mire": "#b28a93",
       "blackwater": "#ae848f"
@@ -13309,7 +13309,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -13324,7 +13324,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc383800",
+      "wisp": "#bb262a00",
       "fen": "#ff8a8a00",
       "mire": "#f06a6a00",
       "blackwater": "#f06a6a00"
@@ -13356,7 +13356,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -13371,7 +13371,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a00",
+      "wisp": "#815b0200",
       "fen": "#f0d6a000",
       "mire": "#e8c98a00",
       "blackwater": "#e8c98a00"
@@ -13403,7 +13403,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -13418,7 +13418,7 @@
       "bilberry"
     ],
     "hex": {
-      "wisp": "#2a6fb000",
+      "wisp": "#1d64a400",
       "fen": "#9cc6ea00",
       "mire": "#7fb4e000",
       "blackwater": "#7fb4e000"
@@ -13433,7 +13433,7 @@
       "bilberry"
     ],
     "hex": {
-      "wisp": "#2a6fb000",
+      "wisp": "#1d64a400",
       "fen": "#9cc6ea00",
       "mire": "#7fb4e000",
       "blackwater": "#7fb4e000"
@@ -13463,7 +13463,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -13480,7 +13480,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -13495,7 +13495,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -13525,7 +13525,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -13555,7 +13555,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a3733",
+      "wisp": "#2c6f2d33",
       "fen": "#b7e6b733",
       "mire": "#a3daa333",
       "blackwater": "#a3daa333"
@@ -13570,7 +13570,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc383833",
+      "wisp": "#bb262a33",
       "fen": "#ff8a8a33",
       "mire": "#f06a6a33",
       "blackwater": "#f06a6a33"
@@ -14020,7 +14020,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#80677666",
+      "wisp": "#745b6a66",
       "fen": "#bd9fb166",
       "mire": "#ad8da266",
       "blackwater": "#a5879966"
@@ -14129,7 +14129,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b14a5e",
+      "wisp": "#a53f54",
       "fen": "#e7aab5",
       "mire": "#d3919c",
       "blackwater": "#d3919c"
@@ -14222,7 +14222,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -14239,7 +14239,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -14256,7 +14256,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -14333,7 +14333,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -14348,7 +14348,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -14365,7 +14365,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -14397,7 +14397,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -14414,7 +14414,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -14431,7 +14431,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -14446,7 +14446,7 @@
       "bilberry"
     ],
     "hex": {
-      "wisp": "#2a6fb0",
+      "wisp": "#1d64a4",
       "fen": "#9cc6ea",
       "mire": "#7fb4e0",
       "blackwater": "#7fb4e0"
@@ -14463,7 +14463,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -14495,7 +14495,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -14512,7 +14512,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -14529,7 +14529,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -14545,7 +14545,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#a3bda1",
+      "wisp": "#9eb89d",
       "fen": "#7e8277",
       "mire": "#60735e",
       "blackwater": "#596c58"
@@ -14561,7 +14561,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#d4dcd1",
+      "wisp": "#d2d9cf",
       "fen": "#64555a",
       "mire": "#42443f",
       "blackwater": "#383a35"
@@ -14577,7 +14577,7 @@
       "bilberry"
     ],
     "hex": {
-      "wisp": "#9db8d8",
+      "wisp": "#97b3d2",
       "fen": "#72748e",
       "mire": "#50627a",
       "blackwater": "#495b73"
@@ -14593,7 +14593,7 @@
       "bilberry"
     ],
     "hex": {
-      "wisp": "#d1d9ea",
+      "wisp": "#cfd7e7",
       "fen": "#5e4f64",
       "mire": "#3b3c4b",
       "blackwater": "#313242"
@@ -14684,7 +14684,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#b14a5e",
+      "wisp": "#a53f54",
       "fen": "#e7aab5",
       "mire": "#d3919c",
       "blackwater": "#d3919c"
@@ -14761,7 +14761,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -14806,7 +14806,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b1542399",
+      "wisp": "#a2471299",
       "fen": "#f7bf9e99",
       "mire": "#f2ad8a99",
       "blackwater": "#f2ad8a99"
@@ -14821,7 +14821,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b15423",
+      "wisp": "#a24712",
       "fen": "#f7bf9e",
       "mire": "#f2ad8a",
       "blackwater": "#f2ad8a"
@@ -14882,7 +14882,7 @@
       "apricot"
     ],
     "hex": {
-      "wisp": "#b154234d",
+      "wisp": "#a247124d",
       "fen": "#f7bf9e4d",
       "mire": "#f2ad8a4d",
       "blackwater": "#f2ad8a4d"
@@ -14897,7 +14897,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd033",
+      "wisp": "#3659ca33",
       "fen": "#a4c3f633",
       "mire": "#8fb0f233",
       "blackwater": "#8fb0f233"
@@ -15079,7 +15079,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -15094,7 +15094,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -15109,7 +15109,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -15125,7 +15125,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d0a1bb80",
+      "wisp": "#cda0b980",
       "fen": "#81586d80",
       "mire": "#5b354780",
       "blackwater": "#52304080"
@@ -15158,7 +15158,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -15175,7 +15175,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -15252,7 +15252,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#dd9197",
+      "wisp": "#d58991",
       "fen": "#905057",
       "mire": "#7b393d",
       "blackwater": "#763538"
@@ -15283,7 +15283,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#c7ac8d",
+      "wisp": "#c1a78a",
       "fen": "#80695c",
       "mire": "#6e5b46",
       "blackwater": "#685640"
@@ -15450,7 +15450,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d0a1bb58",
+      "wisp": "#cda0b958",
       "fen": "#81586d58",
       "mire": "#5b354758",
       "blackwater": "#52304058"
@@ -15466,7 +15466,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d0a1bb80",
+      "wisp": "#cda0b980",
       "fen": "#81586d80",
       "mire": "#5b354780",
       "blackwater": "#52304080"
@@ -15583,7 +15583,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -15648,7 +15648,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#aba3cab8",
+      "wisp": "#aaa2c9b8",
       "fen": "#7a6a86b8",
       "mire": "#524b65b8",
       "blackwater": "#4b465fb8"
@@ -15682,7 +15682,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#f4cce0",
+      "wisp": "#f0cadd",
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
@@ -15733,7 +15733,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -15748,7 +15748,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a371a",
+      "wisp": "#2c6f2d1a",
       "fen": "#b7e6b71a",
       "mire": "#a3daa31a",
       "blackwater": "#a3daa31a"
@@ -15814,7 +15814,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -15831,7 +15831,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#d8473e",
+      "wisp": "#c5352f",
       "fen": "#fc7776",
       "mire": "#ed5858",
       "blackwater": "#ed5858"
@@ -15848,7 +15848,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -15865,7 +15865,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#3e8543",
+      "wisp": "#327938",
       "fen": "#9bdba1",
       "mire": "#87cf8e",
       "blackwater": "#87cf8e"
@@ -15882,7 +15882,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -15899,7 +15899,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#997317",
+      "wisp": "#89650e",
       "fen": "#e3c782",
       "mire": "#dcbb6d",
       "blackwater": "#dcbb6d"
@@ -15916,7 +15916,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -15933,7 +15933,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#5067da",
+      "wisp": "#4b60d3",
       "fen": "#8fb6f7",
       "mire": "#7da4f4",
       "blackwater": "#7da4f4"
@@ -15950,7 +15950,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -15967,7 +15967,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#df2a76",
+      "wisp": "#cb216a",
       "fen": "#f985a5",
       "mire": "#fc6796",
       "blackwater": "#fc6796"
@@ -15984,7 +15984,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -16001,7 +16001,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#298878",
+      "wisp": "#12796a",
       "fen": "#99cfc8",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
@@ -16053,7 +16053,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -16070,7 +16070,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16087,7 +16087,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -16104,7 +16104,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16122,7 +16122,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -16139,7 +16139,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16156,7 +16156,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -16173,7 +16173,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -16190,7 +16190,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -16207,7 +16207,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16224,7 +16224,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -16241,7 +16241,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -16258,7 +16258,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -16275,7 +16275,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -16292,7 +16292,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16309,7 +16309,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -16326,7 +16326,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -16343,7 +16343,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -16360,7 +16360,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -16378,7 +16378,7 @@
       "cherry"
     ],
     "hex": {
-      "wisp": "#bf414b",
+      "wisp": "#b0333f",
       "fen": "#f39aa0",
       "mire": "#e27e83",
       "blackwater": "#e27e83"
@@ -16395,7 +16395,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16413,7 +16413,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -16431,7 +16431,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -16448,7 +16448,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -16465,7 +16465,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -16482,7 +16482,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -16499,7 +16499,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -16516,7 +16516,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16533,7 +16533,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -16551,7 +16551,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -16568,7 +16568,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -16585,7 +16585,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -16602,7 +16602,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -16619,7 +16619,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16637,7 +16637,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -16655,7 +16655,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -16673,7 +16673,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -16690,7 +16690,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -16708,7 +16708,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -16725,7 +16725,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -16743,7 +16743,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -16760,7 +16760,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -16778,7 +16778,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -16795,7 +16795,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -16812,7 +16812,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -16830,7 +16830,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -16847,7 +16847,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -16864,7 +16864,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -16881,7 +16881,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -16899,7 +16899,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -16916,7 +16916,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -16934,7 +16934,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -16952,7 +16952,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -16969,7 +16969,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -16986,7 +16986,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -17004,7 +17004,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -17022,7 +17022,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -17040,7 +17040,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -17058,7 +17058,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -17076,7 +17076,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -17093,7 +17093,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17110,7 +17110,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17127,7 +17127,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -17144,7 +17144,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17161,7 +17161,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17178,7 +17178,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -17196,7 +17196,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -17213,7 +17213,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17230,7 +17230,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17248,7 +17248,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -17266,7 +17266,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -17284,7 +17284,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -17301,7 +17301,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17318,7 +17318,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -17335,7 +17335,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -17352,7 +17352,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -17369,7 +17369,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -17386,7 +17386,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -17403,7 +17403,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17420,7 +17420,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17437,7 +17437,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17454,7 +17454,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17471,7 +17471,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17488,7 +17488,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17505,7 +17505,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17522,7 +17522,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17540,7 +17540,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -17557,7 +17557,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17574,7 +17574,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17591,7 +17591,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17608,7 +17608,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17625,7 +17625,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17643,7 +17643,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -17660,7 +17660,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17677,7 +17677,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17695,7 +17695,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -17712,7 +17712,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -17729,7 +17729,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -17746,7 +17746,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17763,7 +17763,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -17780,7 +17780,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17797,7 +17797,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17814,7 +17814,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17831,7 +17831,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17848,7 +17848,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17865,7 +17865,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17882,7 +17882,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17899,7 +17899,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -17916,7 +17916,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17933,7 +17933,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -17950,7 +17950,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -17967,7 +17967,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -17984,7 +17984,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -18001,7 +18001,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -18018,7 +18018,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -18035,7 +18035,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -18053,7 +18053,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18071,7 +18071,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18088,7 +18088,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -18105,7 +18105,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -18122,7 +18122,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -18139,7 +18139,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -18157,7 +18157,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18174,7 +18174,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -18192,7 +18192,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18210,7 +18210,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18228,7 +18228,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -18246,7 +18246,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -18263,7 +18263,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -18280,7 +18280,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -18297,7 +18297,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -18314,7 +18314,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -18332,7 +18332,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -18350,7 +18350,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -18368,7 +18368,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -18386,7 +18386,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#89707f",
+      "wisp": "#826978",
       "fen": "#b293a7",
       "mire": "#a28999",
       "blackwater": "#998190"
@@ -18404,7 +18404,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#907693",
+      "wisp": "#8f7492",
       "fen": "#ab8ea5",
       "mire": "#998a9b",
       "blackwater": "#928294"
@@ -18422,7 +18422,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -18440,7 +18440,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -18457,7 +18457,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -18474,7 +18474,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -18492,7 +18492,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -18510,7 +18510,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -18527,7 +18527,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -18544,7 +18544,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -18561,7 +18561,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -18578,7 +18578,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -18596,7 +18596,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -18614,7 +18614,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -18632,7 +18632,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18650,7 +18650,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18668,7 +18668,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -18685,7 +18685,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -18702,7 +18702,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -18720,7 +18720,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18737,7 +18737,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -18754,7 +18754,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -18771,7 +18771,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -18789,7 +18789,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -18807,7 +18807,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -18825,7 +18825,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -18843,7 +18843,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -18860,7 +18860,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -18877,7 +18877,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -18894,7 +18894,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -18912,7 +18912,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -18929,7 +18929,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -18946,7 +18946,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -18963,7 +18963,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -18980,7 +18980,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -18997,7 +18997,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -19014,7 +19014,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19031,7 +19031,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19049,7 +19049,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -19066,7 +19066,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19083,7 +19083,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -19101,7 +19101,7 @@
       "frost"
     ],
     "hex": {
-      "wisp": "#1b778c",
+      "wisp": "#026b80",
       "fen": "#a0d0da",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
@@ -19118,7 +19118,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -19136,7 +19136,7 @@
       "cranberry"
     ],
     "hex": {
-      "wisp": "#cc3838",
+      "wisp": "#bb262a",
       "fen": "#ff8a8a",
       "mire": "#f06a6a",
       "blackwater": "#f06a6a"
@@ -19153,7 +19153,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19170,7 +19170,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19187,7 +19187,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -19204,7 +19204,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19221,7 +19221,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19238,7 +19238,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19256,7 +19256,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#725388",
+      "wisp": "#6e4f84",
       "fen": "#cdbcd2",
       "mire": "#c3b2d1",
       "blackwater": "#c0b0ce"
@@ -19273,7 +19273,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -19290,7 +19290,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19307,7 +19307,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19324,7 +19324,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19341,7 +19341,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19359,7 +19359,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -19377,7 +19377,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -19395,7 +19395,7 @@
       "subtext0"
     ],
     "hex": {
-      "wisp": "#775d6d",
+      "wisp": "#705666",
       "fen": "#c3aab9",
       "mire": "#b9a0b0",
       "blackwater": "#b29aa9"
@@ -19412,7 +19412,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -19429,7 +19429,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19446,7 +19446,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -19463,7 +19463,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19480,7 +19480,7 @@
       "honey"
     ],
     "hex": {
-      "wisp": "#90670a",
+      "wisp": "#815b02",
       "fen": "#f0d6a0",
       "mire": "#e8c98a",
       "blackwater": "#e8c98a"
@@ -19497,7 +19497,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -19514,7 +19514,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19531,7 +19531,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -19548,7 +19548,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"
@@ -19565,7 +19565,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -19582,7 +19582,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19599,7 +19599,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19616,7 +19616,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19633,7 +19633,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19650,7 +19650,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -19667,7 +19667,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -19684,7 +19684,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19701,7 +19701,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19718,7 +19718,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19735,7 +19735,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -19752,7 +19752,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19769,7 +19769,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -19786,7 +19786,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -19803,7 +19803,7 @@
       "blossom"
     ],
     "hex": {
-      "wisp": "#a15873",
+      "wisp": "#934b66",
       "fen": "#eedce5",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
@@ -19820,7 +19820,7 @@
       "berry"
     ],
     "hex": {
-      "wisp": "#d21570",
+      "wisp": "#bf0b64",
       "fen": "#fa99b4",
       "mire": "#fd7ca5",
       "blackwater": "#fd7ca5"
@@ -19837,7 +19837,7 @@
       "juniper"
     ],
     "hex": {
-      "wisp": "#1d7d6c",
+      "wisp": "#006f5f",
       "fen": "#bad9d4",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
@@ -19871,7 +19871,7 @@
       "gooseberry"
     ],
     "hex": {
-      "wisp": "#377a37",
+      "wisp": "#2c6f2d",
       "fen": "#b7e6b7",
       "mire": "#a3daa3",
       "blackwater": "#a3daa3"
@@ -19888,7 +19888,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -19905,7 +19905,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -19922,7 +19922,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -19939,7 +19939,7 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#7a58b0",
+      "wisp": "#7350a8",
       "fen": "#cebede",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
@@ -19973,7 +19973,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -19990,7 +19990,7 @@
       "plum"
     ],
     "hex": {
-      "wisp": "#9a4cc0",
+      "wisp": "#8c3eb2",
       "fen": "#ecbcfc",
       "mire": "#ddb0ec",
       "blackwater": "#ddb0ec"
@@ -20007,7 +20007,7 @@
       "petal"
     ],
     "hex": {
-      "wisp": "#b7437d",
+      "wisp": "#a83570",
       "fen": "#ffc4dd",
       "mire": "#feafd4",
       "blackwater": "#feafd4"
@@ -20025,7 +20025,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -20042,7 +20042,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -20059,7 +20059,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#806776",
+      "wisp": "#745b6a",
       "fen": "#bd9fb1",
       "mire": "#ad8da2",
       "blackwater": "#a58799"
@@ -20077,7 +20077,7 @@
       "overlay2"
     ],
     "hex": {
-      "wisp": "#8e7584",
+      "wisp": "#8a7180",
       "fen": "#ab8ca0",
       "mire": "#9b8693",
       "blackwater": "#927d8a"
@@ -20094,7 +20094,7 @@
       "blueberry"
     ],
     "hex": {
-      "wisp": "#3b5fd0",
+      "wisp": "#3659ca",
       "fen": "#a4c3f6",
       "mire": "#8fb0f2",
       "blackwater": "#8fb0f2"

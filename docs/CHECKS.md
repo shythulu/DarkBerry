@@ -9,33 +9,79 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | Role | Min | Wisp | Fen | Mire | Blackwater |
 |---|---:|---:|---:|---:|---:|
 | syntax.text | 4.5 | 10.47 | 9.35 | 12.85 | 14.34 |
-| syntax.keyword | 4.5 | 4.75 | 5.55 | 6.56 | 7.46 |
-| syntax.function | 4.5 | 4.72 | 7.66 | 9.37 | 10.66 |
-| syntax.type | 4.5 | 4.65 | 7.11 | 8.76 | 9.96 |
-| syntax.namespace | 4.5 | 5.04 | 6.50 | 7.41 | 8.43 |
-| syntax.constant | 4.5 | 5.20 | 6.32 | 7.36 | 8.37 |
-| syntax.number | 4.5 | 4.70 | 8.00 | 10.02 | 11.40 |
-| syntax.string | 4.5 | 4.85 | 8.10 | 9.99 | 11.37 |
-| syntax.regex | 4.5 | 4.62 | 7.54 | 9.35 | 10.64 |
-| syntax.variable | 4.5 | 4.66 | 8.64 | 10.19 | 11.59 |
-| syntax.property | 4.5 | 5.86 | 6.33 | 8.09 | 8.96 |
-| syntax.operator | 3 | 5.43 | 5.27 | 6.64 | 7.01 |
-| syntax.punctuation | 3 | 3.86 | 3.77 | 4.74 | 4.79 |
-| syntax.comment | 4.5 | 4.71 | 4.73 | 5.42 | 5.66 |
-| syntax.link | 4.5 | 4.77 | 6.76 | 7.95 | 9.04 |
-| syntax.error | 4.5 | 4.63 | 4.99 | 5.32 | 6.05 |
-| syntax.deprecated | 3 | 4.14 | 4.12 | 5.01 | 5.11 |
-| syntax.unimplemented | 3 | 3.73 | 3.86 | 4.93 | 5.06 |
-| syntax.diff.removed | 4.5 | 4.76 | 5.37 | 5.75 | 6.54 |
+| syntax.keyword | 4.5 | 5.63 | 5.55 | 6.56 | 7.46 |
+| syntax.function | 4.5 | 5.69 | 7.66 | 9.37 | 10.66 |
+| syntax.type | 4.5 | 5.63 | 7.11 | 8.76 | 9.96 |
+| syntax.namespace | 4.5 | 5.64 | 6.50 | 7.41 | 8.43 |
+| syntax.constant | 4.5 | 5.64 | 6.32 | 7.36 | 8.37 |
+| syntax.number | 4.5 | 5.65 | 8.00 | 10.02 | 11.40 |
+| syntax.string | 4.5 | 5.67 | 8.10 | 9.99 | 11.37 |
+| syntax.regex | 4.5 | 5.64 | 7.54 | 9.35 | 10.64 |
+| syntax.variable | 4.5 | 5.64 | 8.64 | 10.19 | 11.59 |
+| syntax.property | 4.5 | 6.23 | 6.33 | 8.09 | 8.96 |
+| syntax.operator | 3 | 6.04 | 5.27 | 6.64 | 7.01 |
+| syntax.punctuation | 3 | 4.08 | 3.77 | 4.74 | 4.79 |
+| syntax.comment | 4.5 | 5.63 | 4.73 | 5.42 | 5.66 |
+| syntax.link | 4.5 | 5.68 | 6.76 | 7.95 | 9.04 |
+| syntax.error | 4.5 | 5.67 | 4.99 | 5.32 | 6.05 |
+| syntax.deprecated | 3 | 4.57 | 4.12 | 5.01 | 5.11 |
+| syntax.unimplemented | 3 | 3.82 | 3.86 | 4.93 | 5.06 |
+| syntax.diff.removed | 4.5 | 5.72 | 5.37 | 5.75 | 6.54 |
 | ui.text | 4.5 | 10.47 | 9.35 | 12.85 | 14.34 |
 | ui.text.muted | 4.5 | 6.79 | 6.15 | 8.79 | 9.48 |
-| ui.link | 4.5 | 4.77 | 6.76 | 7.95 | 9.04 |
+| ui.link | 4.5 | 5.68 | 6.76 | 7.95 | 9.04 |
+| *on ui.pane.secondary* | |  |  |  |  |
+| syntax.text on ui.pane.secondary | 4.5 | 9.38 | 10.98 | 13.98 | 15.00 |
+| syntax.keyword on ui.pane.secondary | 4.5 | 5.04 | 6.51 | 7.13 | 7.80 |
+| syntax.function on ui.pane.secondary | 4.5 | 5.10 | 8.99 | 10.20 | 11.14 |
+| syntax.type on ui.pane.secondary | 4.5 | 5.04 | 8.34 | 9.53 | 10.42 |
+| syntax.namespace on ui.pane.secondary | 4.5 | 5.05 | 7.63 | 8.06 | 8.81 |
+| syntax.constant on ui.pane.secondary | 4.5 | 5.05 | 7.42 | 8.01 | 8.75 |
+| syntax.number on ui.pane.secondary | 4.5 | 5.06 | 9.40 | 10.91 | 11.92 |
+| syntax.string on ui.pane.secondary | 4.5 | 5.08 | 9.51 | 10.87 | 11.89 |
+| syntax.regex on ui.pane.secondary | 4.5 | 5.05 | 8.85 | 10.18 | 11.12 |
+| syntax.variable on ui.pane.secondary | 4.5 | 5.05 | 10.14 | 11.09 | 12.12 |
+| syntax.property on ui.pane.secondary | 4.5 | 5.58 | 7.42 | 8.80 | 9.37 |
+| syntax.operator on ui.pane.secondary | 3 | 5.41 | 6.19 | 7.23 | 7.33 |
+| syntax.punctuation on ui.pane.secondary | 3 | 3.65 | 4.43 | 5.16 | 5.01 |
+| syntax.comment on ui.pane.secondary | 4.5 | 5.04 | 5.55 | 5.89 | 5.91 |
+| syntax.link on ui.pane.secondary | 4.5 | 5.08 | 7.94 | 8.64 | 9.45 |
+| syntax.error on ui.pane.secondary | 4.5 | 5.08 | 5.86 | 5.78 | 6.32 |
+| syntax.deprecated on ui.pane.secondary | 3 | 4.10 | 4.83 | 5.45 | 5.34 |
+| syntax.unimplemented on ui.pane.secondary | 3 | 3.42 | 4.53 | 5.36 | 5.30 |
+| syntax.diff.removed on ui.pane.secondary | 4.5 | 5.12 | 6.30 | 6.26 | 6.84 |
+| ui.text on ui.pane.secondary | 4.5 | 9.38 | 10.98 | 13.98 | 15.00 |
+| ui.text.muted on ui.pane.secondary | 4.5 | 6.08 | 7.22 | 9.57 | 9.91 |
+| ui.link on ui.pane.secondary | 4.5 | 5.08 | 7.94 | 8.64 | 9.45 |
+| *on ui.pane.tertiary* | |  |  |  |  |
+| syntax.text on ui.pane.tertiary | 4.5 | 8.47 | 12.30 | 14.74 | 15.44 |
+| syntax.keyword on ui.pane.tertiary | 4.5 | 4.55 | 7.30 | 7.52 | 8.03 |
+| syntax.function on ui.pane.tertiary | 4.5 | 4.60 | 10.08 | 10.75 | 11.47 |
+| syntax.type on ui.pane.tertiary | 4.5 | 4.55 | 9.35 | 10.05 | 10.73 |
+| syntax.namespace on ui.pane.tertiary | 4.5 | 4.56 | 8.55 | 8.50 | 9.07 |
+| syntax.constant on ui.pane.tertiary | 4.5 | 4.56 | 8.32 | 8.45 | 9.01 |
+| syntax.number on ui.pane.tertiary | 4.5 | 4.57 | 10.53 | 11.50 | 12.27 |
+| syntax.string on ui.pane.tertiary | 4.5 | 4.59 | 10.66 | 11.47 | 12.24 |
+| syntax.regex on ui.pane.tertiary | 4.5 | 4.56 | 9.91 | 10.73 | 11.45 |
+| syntax.variable on ui.pane.tertiary | 4.5 | 4.56 | 11.36 | 11.70 | 12.48 |
+| syntax.property on ui.pane.tertiary | 4.5 | 5.04 | 8.32 | 9.28 | 9.65 |
+| syntax.operator on ui.pane.tertiary | 3 | 4.89 | 6.94 | 7.62 | 7.55 |
+| syntax.punctuation on ui.pane.tertiary | 3 | 3.30 | 4.96 | 5.44 | 5.15 |
+| syntax.comment on ui.pane.tertiary | 4.5 | 4.55 | 6.22 | 6.22 | 6.09 |
+| syntax.link on ui.pane.tertiary | 4.5 | 4.59 | 8.90 | 9.12 | 9.73 |
+| syntax.error on ui.pane.tertiary | 4.5 | 4.58 | 6.57 | 6.10 | 6.51 |
+| syntax.deprecated on ui.pane.tertiary | 3 | 3.70 | 5.41 | 5.75 | 5.50 |
+| syntax.unimplemented on ui.pane.tertiary | 3 | 3.09 | 5.07 | 5.65 | 5.45 |
+| syntax.diff.removed on ui.pane.tertiary | 4.5 | 4.63 | 7.06 | 6.60 | 7.04 |
+| ui.text on ui.pane.tertiary | 4.5 | 8.47 | 12.30 | 14.74 | 15.44 |
+| ui.text.muted on ui.pane.tertiary | 4.5 | 5.50 | 8.09 | 10.09 | 10.20 |
+| ui.link on ui.pane.tertiary | 4.5 | 4.59 | 8.90 | 9.12 | 9.73 |
 | ui.on.fill on ui.fill | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
 | syntax on ui.selection | 65% of each role’s own minimum | ok | ok | ok | ok |
 | syntax on ui.line.current | 85% of each role’s own minimum | ok | ok | ok | ok |
-| ui.mark.text on ui.mark1 | 4.5 | 5.04 | 8.55 | 8.50 | 9.07 |
-| ui.mark.text on ui.mark2 | 4.5 | 4.65 | 9.35 | 10.05 | 10.73 |
-| ui.mark.text on ui.mark3 | 4.5 | 4.85 | 8.29 | 8.31 | 8.87 |
+| ui.mark.text on ui.mark1 | 4.5 | 5.64 | 8.55 | 8.50 | 9.07 |
+| ui.mark.text on ui.mark2 | 4.5 | 5.63 | 9.35 | 10.05 | 10.73 |
+| ui.mark.text on ui.mark3 | 4.5 | 5.69 | 8.29 | 8.31 | 8.87 |
 | ui.on.tab.indicator on ui.tab.indicator | 4.5 | 4.75 | 5.55 | 6.56 | 7.46 |
 | ui.on.badge on ui.badge | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
 
@@ -43,7 +89,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 
 OKLab distance ×100 between every pair of key syntax roles. Calibrated against Catppuccin, whose closest core pair is 5.7 (Frappé). Under 7 is a warning, under 5 fails. Closest pairs per flavour:
 
-- **Wisp:** function/variable 6.1 ~, keyword/function 6.5 ~, type/namespace 6.6 ~, string/regex 7.0
+- **Wisp:** keyword/function 5.4 ~, type/namespace 5.9 ~, function/variable 6.1 ~, string/regex 6.9 ~
 - **Fen:** keyword/error 5.6 ~, function/variable 6.0 ~, namespace/constant 6.1 ~, function/type 6.1 ~
 - **Mire:** function/type 6.0 ~, function/variable 6.0 ~, string/regex 6.0 ~, type/namespace 6.1 ~
 - **Blackwater:** function/type 6.0 ~, function/variable 6.0 ~, string/regex 6.0 ~, type/namespace 6.1 ~

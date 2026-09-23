@@ -15,48 +15,48 @@
 # built-in blue and green until LS_COLORS is set. Source the LS_COLORS port
 # alongside this one or the theme stops at the left margin.
 
-user: "#d21570"
-group: "#7a58b0"
+user: "#bf0b64"
+group: "#7350a8"
 
 permission:
-  read: "#377a37"
-  write: "#90670a"
+  read: "#2c6f2d"
+  write: "#815b02"
   # The rwx triad has to stay readable at a glance, so exec takes cherry rather
   # than ui.error: cranberry means "this failed", and every executable file in
   # the listing should not be shouting that.
-  exec: "#b14a5e"
-  exec-sticky: "#9a4cc0"
+  exec: "#a53f54"
+  exec-sticky: "#8c3eb2"
   no-access: "#967d8c"
-  octal: "#1b778c"
-  acl: "#1d7d6c"
-  context: "#2a6fb0"
+  octal: "#026b80"
+  acl: "#006f5f"
+  context: "#1d64a4"
 
 attributes:
-  archive: "#377a37"
-  read: "#90670a"
+  archive: "#2c6f2d"
+  read: "#815b02"
   hidden: "#967d8c"
-  system: "#9a4cc0"
+  system: "#8c3eb2"
 
 # Recency, brightest first.
 date:
-  hour-old: "#b7437d"
-  day-old: "#b14a5e"
+  hour-old: "#a83570"
+  day-old: "#a53f54"
   older: "#694e5f"
 
 size:
   none: "#967d8c"
-  small: "#377a37"
-  medium: "#90670a"
-  large: "#b15423"
+  small: "#2c6f2d"
+  medium: "#815b02"
+  large: "#a24712"
 
 inode:
-  valid: "#1b778c"
+  valid: "#026b80"
   invalid: "#967d8c"
 
 tree-edge: "#ac93a2"
 
 links:
-  valid: "#1b778c"
+  valid: "#026b80"
   invalid: "#967d8c"
 
 # Same meanings the starship port uses, so a dirty tree reads the same in both.
@@ -64,10 +64,10 @@ git-status:
   default: "#967d8c"
   unmodified: "#967d8c"
   ignored: "#967d8c"
-  new-in-index: "#377a37"
-  new-in-workdir: "#90670a"
-  typechange: "#9a4cc0"
-  deleted: "#cc3838"
-  renamed: "#7a58b0"
-  modified: "#90670a"
-  conflicted: "#cc3838"
+  new-in-index: "#2c6f2d"
+  new-in-workdir: "#815b02"
+  typechange: "#8c3eb2"
+  deleted: "#bb262a"
+  renamed: "#7350a8"
+  modified: "#815b02"
+  conflicted: "#bb262a"
