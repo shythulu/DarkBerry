@@ -64,7 +64,7 @@ Generated from `src/roles.json`. Every port references these names.
 
 | Role | Darkberry | Catppuccin | Why |
 |---|---|---|---|
-| `ui.accent` | `jam` | lavender (terminal borders), blue (tags) | Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Jam's lightness is set per flavour by the fill equation (lib/derive.mjs) so it clears every background by 3.5:1. |
+| `ui.accent` | `jam` | lavender (terminal borders), blue (tags) | Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Jam's lightness is set per flavour by the fill equation (lib/derive.mjs) so it clears every background by 3.3:1. |
 | `ui.on.accent` | `ui.on.fill` | base (text on accent) | Text on the accent is text on the fill: onjam, chosen by the fill equation as white or crust, whichever reads on that flavour's jam. |
 | `ui.fill` | `jam` | no equivalent (accents are used as fills directly) | A deeper jam colour is kept for buttons, badges and progress bars, so saturated pink never covers large areas. |
 | `ui.on.fill` | `onjam` | base (text on accent) | Base on jam failed contrast in every flavour. onjam is white or crust per flavour, whichever reads best on that flavour's jam (the fill equation in lib/derive.mjs), and must reach 4.5:1. |
@@ -75,7 +75,7 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.selection` | `mix(ui.background,berry,0.18)` | overlay2 at 20-30% opacity | Selections are tinted with berry so they read as part of the theme rather than as grey. Mixed from the background rather than a surface step, so syntax colours on selected text keep most of their contrast. |
 | `ui.line.current` | `mix(ui.background,surface0,0.35)` | no equivalent (editors tint the line themselves) | The cursor line is a tint of the background rather than a surface step, so syntax colours on the highlighted row keep most of their contrast. |
 | `ui.link` | `frost` | blue | Links are teal-blue frost because blueberry already carries constants. |
-| `ui.on.error` | `{"dark":"crust","light":"onjam"}` | no equivalent | Text drawn on an error fill (micro's error bar, Kate's marks). White on cranberry is 2.3:1 in Fen; crust reaches 6:1 in every dark flavour. |
+| `ui.on.error` | `{"dark":"crust","light":"onjam"}` | no equivalent | Text drawn on an error fill (micro's error bar, Obsidian's destructive buttons). White on cranberry is 2.3:1 in Fen; crust reaches 6:1 in every dark flavour. |
 | `syntax.keyword` | `berry` | mauve | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.function` | `petal` | blue | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.type` | `plum` | yellow | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |

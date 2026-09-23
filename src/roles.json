@@ -33,7 +33,7 @@
       ],
       "value": "jam",
       "catppuccin": "lavender (terminal borders), blue (tags)",
-      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Jam's lightness is set per flavour by the fill equation (lib/derive.mjs) so it clears every background by 3.5:1."
+      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Jam's lightness is set per flavour by the fill equation (lib/derive.mjs) so it clears every background by 3.3:1."
     },
     "on.accent": {
       "value": "ui.on.fill",
@@ -120,7 +120,7 @@
         "light": "onjam"
       },
       "catppuccin": "no equivalent",
-      "why": "Text drawn on an error fill (micro's error bar, Kate's marks). White on cranberry is 2.3:1 in Fen; crust reaches 6:1 in every dark flavour."
+      "why": "Text drawn on an error fill (micro's error bar, Obsidian's destructive buttons). White on cranberry is 2.3:1 in Fen; crust reaches 6:1 in every dark flavour."
     },
     "info": {
       "value": "juniper",
