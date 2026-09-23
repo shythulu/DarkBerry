@@ -95,6 +95,7 @@ function applyOverrides(port, kind, content, ctx) {
 
 // ---------- ports ----------
 const kittyT = read("src/ports/kitty.conf"), ghosttyT = read("src/ports/ghostty"), firefoxT = read("src/ports/firefox.json");
+const alacrittyT = read("src/ports/alacritty.toml");
 const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/ports/obsidian.json");
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
@@ -185,6 +186,11 @@ mustBe("vscode", VS.colors["editor.lineHighlightBackground"], "editor.lineHighli
 mustBe("vscode", VS.colors["button.background"], "button.background", "{ui.fill}", /^\{ui\.fill\}/);
 mustBe("vscode", VS.colors["tab.activeBorderTop"], "tab.activeBorderTop", "an opaque {ui.tab.indicator}", /^\{ui\.tab\.indicator\}$/);
 mustBe("konsole", konsoleT, "[ForegroundIntense]", "{ui.text} (Konsole draws bold with it)", /\[ForegroundIntense\]\nColor=\{ui\.text\}/);
+mustBe("alacritty", alacrittyT, "[colors.selection]", "{ui.selection} under {ui.text}", /\[colors\.selection\]\ntext = "\{ui\.text\}"\nbackground = "\{ui\.selection\}"/);
+mustBe("alacritty", alacrittyT, "[colors.cursor]", "{ui.cursor} over {ui.cursor.text}", /\[colors\.cursor\]\ntext = "\{ui\.cursor\.text\}"\ncursor = "\{ui\.cursor\}"/);
+mustBe("alacritty", alacrittyT, "[colors.search.focused_match]", "{ui.mark1} under {ui.mark.text}", /\[colors\.search\.focused_match\]\nforeground = "\{ui\.mark\.text\}"\nbackground = "\{ui\.mark1\}"/);
+mustBe("alacritty", alacrittyT, "bright_foreground", "{ui.text} (Alacritty draws bold with it)", /^bright_foreground = "\{ui\.text\}"$/m);
+mustBe("alacritty", alacrittyT, "[colors.footer_bar]", "{ui.text} on {ui.pane.secondary} (a status bar)", /\[colors\.footer_bar\]\nforeground = "\{ui\.text\}"\nbackground = "\{ui\.pane\.secondary\}"/);
 mustBe("kde", kdeT, "DecorationFocus", "{ui.focus}", /^DecorationFocus=\{ui\.focus\}$/m);
 mustBe("kde", kdeT, "DecorationHover", "{ui.accent}", /^DecorationHover=\{ui\.accent\}$/m);
 mustBe("kate", kateT, "CurrentLine", "{ui.line.current}", /"CurrentLine": "\{ui\.line\.current\}"/);
@@ -200,6 +206,7 @@ for (const ctx of ctxs) {
   const slug = `${P.id}-${ctx.id}`, full = `${P.name} ${ctx.f.name}`;
   out(`ports/kitty/${slug}.conf`, applyOverrides("kitty", "lines", fill(ctx, kittyT, "kitty"), ctx));
   out(`ports/ghostty/${full}`, applyOverrides("ghostty", "lines", fill(ctx, ghosttyT, "ghostty"), ctx));
+  out(`ports/alacritty/${slug}.toml`, applyOverrides("alacritty", "lines", fill(ctx, alacrittyT, "alacritty"), ctx));
   const ff = JSON.parse(fill(ctx, firefoxT, "firefox"));
   ff.theme.colors = applyOverrides("firefox", "json", ff.theme.colors, ctx);
   out(`ports/firefox/${ctx.id}/manifest.json`, ff);
@@ -264,7 +271,7 @@ const traceExpr = (port, key, raw) => {
 const walk = (port, o, pre = "") => { if (typeof o === "string") return traceExpr(port, pre, o);
   if (Array.isArray(o)) return o.forEach((v, i) => walk(port, v, `${pre}[${v?.name ? JSON.stringify(v.name) : i}]`));
   if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) walk(port, v, pre ? (pre === "colors" || pre.endsWith("colors") ? `${k}` : `${pre}.${k}`) : k); };
-for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["borders", bordersT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT]])
+for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritty", alacrittyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["borders", bordersT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT]])
   for (const line of text.split("\n")) { const m = /^([\w.-]+(?:\s*=\s*\d+)?)\s*=?\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("#")) traceExpr(port, m[1].replace(/\s+/g, " "), m[2]); }
 for (const raw of lsColorsT.split("\n")) {
   const t = raw.trim();
@@ -278,7 +285,7 @@ walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "co
 walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
-for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const port of ["kitty", "ghostty", "alacritty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 out("dist/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
@@ -387,10 +394,10 @@ rolesMd += `\nAligned with Catppuccin: ANSI mapping and bright formula, all back
 out("docs/ROLES.md", rolesMd);
 
 // ---------- docs/USAGE.md (blast radius of each palette colour) ----------
-let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
+let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | Alacritty | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
 for (const k of order) {
   const u = usage[k];
-  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
+  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "alacritty", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
 }
 usageMd += `\nANSI colours (\`ansi.0\` to \`ansi.15\`) come from the palette via \`roles.json\` → \`ansi\`, the same way for every terminal.\n`;
 out("docs/USAGE.md", usageMd);
