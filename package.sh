@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 # Build everything, then package each port into dist/: the VS Code .vsix, a Firefox .xpi
 # per flavour, and zips of the kitty, Ghostty, Obsidian, KDE, Konsole, Nimbalyst, micro, Kate,
-# Chrome and Notepad++ theme files.
+# Chrome, Notepad++ and btop theme files.
 set -e
 cd "$(dirname "$0")"
 rm -f dist/*.vsix dist/*.xpi dist/*.zip
@@ -34,4 +34,5 @@ done
 (cd ports/ls-colors && zip -qr "../../dist/darkberry-ls-colors-$VERSION.zip" .)
 (cd ports/tinted8 && zip -qr "../../dist/darkberry-tinted8-$VERSION.zip" .)
 (cd ports/base24 && zip -qr "../../dist/darkberry-base24-$VERSION.zip" .)
+(cd ports/btop && zip -qr "../../dist/darkberry-btop-$VERSION.zip" .)
 ls dist
