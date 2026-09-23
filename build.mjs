@@ -108,6 +108,7 @@ const lsColorsT = read("src/ports/ls-colors.txt");
 const tmuxT = read("src/ports/tmux.conf");
 const tinted8T = read("src/ports/tinted8.yaml"), base24T = read("src/ports/base24.yaml");
 const gtkT = read("src/ports/gtk.css"), darktableT = read("src/ports/darktable.css"), gimpT = read("src/ports/gimp.css");
+const btopT = read("src/ports/btop.theme");
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
 const to256 = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => {
   const [r, g, b] = rgb("#" + h).map((v) => v * 255), steps = [0, 95, 135, 175, 215, 255];
@@ -198,6 +199,15 @@ mustBe("kate", kateT, "CurrentLine", "{ui.line.current}", /"CurrentLine": "\{ui\
 mustBe("micro", microT, "error", "{ui.on.error} on {ui.error}", /^color-link error "\{ui\.on\.error\},\{ui\.error\}"/m);
 mustBe("micro", microT, "error-message", "{ui.on.error} on {ui.error}", /^color-link error-message "\{ui\.on\.error\},\{ui\.error\}"/m);
 mustBe("lsd", to256(fill(ctxs[0], lsdT, "lsd-check")), "256 companion", "free of hex strings", /^(?![\s\S]*"#[0-9a-f]{6}")/);
+mustBe("btop", btopT, "main_bg", "{ui.background}", /^theme\[main_bg\]="\{ui\.background\}"$/m);
+mustBe("btop", btopT, "main_fg", "{ui.text}", /^theme\[main_fg\]="\{ui\.text\}"$/m);
+mustBe("btop", btopT, "selected_bg", "{ui.fill} (a row selection)", /^theme\[selected_bg\]="\{ui\.fill\}"$/m);
+mustBe("btop", btopT, "selected_fg", "{ui.on.fill}", /^theme\[selected_fg\]="\{ui\.on\.fill\}"$/m);
+mustBe("btop", btopT, "followed_bg", "{ui.mark1}", /^theme\[followed_bg\]="\{ui\.mark1\}"$/m);
+mustBe("btop", btopT, "followed_fg", "{ui.mark.text}", /^theme\[followed_fg\]="\{ui\.mark\.text\}"$/m);
+mustBe("btop", btopT, "temp gradient", "{ui.success} > {ui.warning} > {ui.error}", /^theme\[temp_start\]="\{ui\.success\}"\ntheme\[temp_mid\]="\{ui\.warning\}"\ntheme\[temp_end\]="\{ui\.error\}"$/m);
+mustBe("btop", btopT, "proc_banner_fg", "{ui.on.error} (text on the status fills)", /^theme\[proc_banner_fg\]="\{ui\.on\.error\}"$/m);
+mustBe("btop", btopT, "div_line", "{ui.border.inactive}", /^theme\[div_line\]="\{ui\.border\.inactive\}"$/m);
 mustBe("darktable", darktableT, "@import", "free of chunk-fonts.css (unreleased file; a missing @import drops the whole theme on 4.6 to 5.2)", /^(?![\s\S]*@import[^\n]*chunk-fonts)/);
 mustBe("tmux", tmuxT, "mode-style", "{ui.selection} under {ui.text}", /^set -g mode-style "fg=\{ui\.text\},bg=\{ui\.selection\}"$/m);
 mustBe("tmux", tmuxT, "window-status-current-style", "{ui.on.tab.indicator} on an opaque {ui.tab.indicator}", /^set -g window-status-current-style "fg=\{ui\.on\.tab\.indicator\},bg=\{ui\.tab\.indicator\}(,\w+)*"$/m);
@@ -241,6 +251,7 @@ for (const ctx of ctxs) {
   out(`ports/gtk/${full}/gtk-3.0/gtk.css`, applyOverrides("gtk", "lines", fill(ctx, gtkT, "gtk"), ctx));
   out(`ports/darktable/${slug}.css`, applyOverrides("darktable", "lines", fill(ctx, darktableT, "darktable"), ctx));
   out(`ports/gimp/${slug}.css`, applyOverrides("gimp", "lines", fill(ctx, gimpT, "gimp"), ctx));
+  out(`ports/btop/${slug}.theme`, applyOverrides("btop", "lines", fill(ctx, btopT, "btop"), ctx));
   out(`ports/notepadpp/${full}.xml`, toBareHex(applyOverrides("notepadpp", "lines", fill(ctx, nppT, "notepadpp"), ctx)));
   out(`ports/kde/${full}.colors`, toTriplets(applyOverrides("kde", "lines", fill(ctx, kdeT, "kde"), ctx)));
   out(`ports/konsole/${full}.colorscheme`, toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
@@ -290,6 +301,8 @@ for (const raw of lsColorsT.split("\n")) {
 }
 // tmux lines are `set -g <option> <value>`, so the generic `key = value` loop above would name every key "set".
 for (const raw of tmuxT.split("\n")) { const m = /^set\s+-\S+\s+(\S+)\s+(.*\{.*)$/.exec(raw.trim()); if (m) traceExpr("tmux", m[1], m[2]); }
+// btop spells its keys theme[name]="..."; the line regex above would record every one as "theme".
+for (const line of btopT.split("\n")) { const m = /^theme\[(\w+)\]="(.*)"$/.exec(line); if (m) traceExpr("btop", m[1], m[2]); }
 walk("firefox", JSON.parse(firefoxT).theme.colors, "colors");
 walk("chrome", JSON.parse(chromeT).theme.colors, "colors");
 walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "colors");
@@ -297,6 +310,7 @@ walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
 for (const port of ["kitty", "ghostty", "alacritty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "btop"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 out("dist/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
@@ -405,10 +419,10 @@ rolesMd += `\nAligned with Catppuccin: ANSI mapping and bright formula, all back
 out("docs/ROLES.md", rolesMd);
 
 // ---------- docs/USAGE.md (blast radius of each palette colour) ----------
-let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | Alacritty | tmux | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
+let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | Alacritty | tmux | btop | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
 for (const k of order) {
   const u = usage[k];
-  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "alacritty", "tmux", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
+  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "alacritty", "tmux", "btop", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
 }
 usageMd += `\nANSI colours (\`ansi.0\` to \`ansi.15\`) come from the palette via \`roles.json\` → \`ansi\`, the same way for every terminal.\n`;
 out("docs/USAGE.md", usageMd);
