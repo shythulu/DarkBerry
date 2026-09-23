@@ -53,7 +53,7 @@ inode:
   valid: "#86c0cc"
   invalid: "#887882"
 
-tree-edge: "#6b5764"
+tree-edge: "#887882"
 
 links:
   valid: "#86c0cc"

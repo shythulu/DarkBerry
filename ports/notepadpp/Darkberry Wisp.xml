@@ -1987,7 +1987,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Tags match highlighting" styleID="27" bgColor="C3ABB9" />
         <WidgetStyle name="Tags attribute" styleID="26" fgColor="6E4F84" />
         <WidgetStyle name="Active tab focused indicator" styleID="0" fgColor="D21570" />
-        <WidgetStyle name="Active tab unfocused indicator" styleID="0" fgColor="AC93A2" />
+        <WidgetStyle name="Active tab unfocused indicator" styleID="0" fgColor="967D8C" />
         <WidgetStyle name="Active tab text" styleID="0" fgColor="4F3143" />
         <WidgetStyle name="Inactive tabs" styleID="0" fgColor="694E5F" bgColor="EBDAE5" />
         <WidgetStyle name="Tab color 1" styleID="0" bgColor="FBF4F8" fgColor="4F3143" />

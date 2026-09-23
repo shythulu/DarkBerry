@@ -30,7 +30,7 @@
 @define-color theme_unfocused_selected_bg_color #c3abb9;
 @define-color theme_unfocused_selected_fg_color #4f3143;
 
-@define-color borders #ac93a2;
+@define-color borders #967d8c;
 @define-color unfocused_borders #d0bac8;
 
 @define-color warning_color #815b02;
@@ -42,7 +42,7 @@
 @define-color wm_title #4f3143;
 @define-color wm_unfocused_title #694e5f;
 @define-color wm_bg #f3e6ef;
-@define-color wm_border #ac93a2;
+@define-color wm_border #967d8c;
 @define-color wm_highlight #d0bac8;
 
 @define-color content_view_bg #fbf4f8;
@@ -53,7 +53,7 @@ headerbar, .titlebar {
   background-image: none;
   background-color: #f3e6ef;
   color: #4f3143;
-  border-color: #ac93a2;
+  border-color: #967d8c;
 }
 headerbar:backdrop, .titlebar:backdrop {
   background-color: #ebdae5;
@@ -62,7 +62,7 @@ headerbar:backdrop, .titlebar:backdrop {
 menu, .menu, popover, popover.background {
   background-color: #f3e6ef;
   color: #4f3143;
-  border: 1px solid #ac93a2;
+  border: 1px solid #967d8c;
 }
 tooltip, tooltip.background {
   background-color: #ebdae5;
@@ -70,7 +70,7 @@ tooltip, tooltip.background {
 }
 notebook > header {
   background-color: #f3e6ef;
-  border-color: #ac93a2;
+  border-color: #967d8c;
 }
 notebook > header > tabs > tab:checked {
   color: #4f3143;

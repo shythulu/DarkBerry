@@ -135,8 +135,8 @@ syntax:
 # answer: write what the reader accepts. Verified by building all four flavours
 # with it.
 ui:
-  accent.normal: "#ba4889"
-  border.normal: "#8f6e82"
+  accent.normal: "#fa99b4"
+  border.normal: "#a28297"
   chrome.background.normal: "#402838"
   chrome.background.dark: "#35212e"
   chrome.background.light: "#4f3143"
@@ -145,7 +145,7 @@ ui:
   chrome.foreground.light: "#f2e6ee"
   cursor.normal.background: "#ffc4dd"
   cursor.normal.foreground: "#35212e"
-  cursor.muted.background: "#8f6e82"
+  cursor.muted.background: "#a28297"
   cursor.muted.foreground: "#4f3143"
   deprecated: "#b293a7"
   global.background.normal: "#4f3143"

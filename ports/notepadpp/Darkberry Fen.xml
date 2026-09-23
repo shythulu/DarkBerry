@@ -1954,7 +1954,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
     <GlobalStyles>
         <WidgetStyle name="Default Style" styleID="32" fgColor="F2E6EE" bgColor="4F3143" fontName="Courier New" fontStyle="0" fontSize="10" />
         <WidgetStyle name="Indent guideline style" styleID="37" fgColor="6C4C60" bgColor="4F3143" fontName="" fontStyle="0" fontSize="" />
-        <WidgetStyle name="Brace highlight style" styleID="34" fgColor="BA4889" bgColor="6C4C60" fontName="" fontStyle="1" fontSize="" />
+        <WidgetStyle name="Brace highlight style" styleID="34" fgColor="FA99B4" bgColor="6C4C60" fontName="" fontStyle="1" fontSize="" />
         <WidgetStyle name="Bad brace colour" styleID="35" fgColor="FF8A8A" bgColor="4F3143" fontName="" fontStyle="0" fontSize="" />
         <WidgetStyle name="Current line background colour" styleID="0" bgColor="5D3E51" />
         <WidgetStyle name="Selected text colour" styleID="0" bgColor="6E4457" fgColor="F2E6EE" />
@@ -1970,7 +1970,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Change History revert origin" styleID="0" fgColor="A0D0DA" bgColor="A0D0DA" />
         <WidgetStyle name="Change History saved" styleID="0" fgColor="B7E6B7" bgColor="B7E6B7" />
         <WidgetStyle name="Fold" styleID="0" fgColor="8F6E82" bgColor="402838" />
-        <WidgetStyle name="Fold active" styleID="0" fgColor="BA4889" />
+        <WidgetStyle name="Fold active" styleID="0" fgColor="FA99B4" />
         <WidgetStyle name="Fold margin" styleID="0" fgColor="35212E" bgColor="402838" />
         <WidgetStyle name="White space symbol" styleID="0" fgColor="8F6E82" />
         <WidgetStyle name="Smart Highlighting" styleID="29" fgColor="35212E" bgColor="CEBEDE" />
@@ -1987,7 +1987,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Tags match highlighting" styleID="27" bgColor="7B5A6E" />
         <WidgetStyle name="Tags attribute" styleID="26" fgColor="CDBCD2" />
         <WidgetStyle name="Active tab focused indicator" styleID="0" fgColor="FA99B4" />
-        <WidgetStyle name="Active tab unfocused indicator" styleID="0" fgColor="8F6E82" />
+        <WidgetStyle name="Active tab unfocused indicator" styleID="0" fgColor="A28297" />
         <WidgetStyle name="Active tab text" styleID="0" fgColor="F2E6EE" />
         <WidgetStyle name="Inactive tabs" styleID="0" fgColor="CCBAC5" bgColor="35212E" />
         <WidgetStyle name="Tab color 1" styleID="0" bgColor="4F3143" fgColor="F2E6EE" />

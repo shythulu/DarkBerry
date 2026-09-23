@@ -136,7 +136,7 @@ syntax:
 # with it.
 ui:
   accent.normal: "#ba4889"
-  border.normal: "#7d6976"
+  border.normal: "#91828b"
   chrome.background.normal: "#23161f"
   chrome.background.dark: "#1c1119"
   chrome.background.light: "#2a1e26"
@@ -145,7 +145,7 @@ ui:
   chrome.foreground.light: "#efe3eb"
   cursor.normal.background: "#feafd4"
   cursor.normal.foreground: "#1c1119"
-  cursor.muted.background: "#7d6976"
+  cursor.muted.background: "#91828b"
   cursor.muted.foreground: "#2a1e26"
   deprecated: "#a28999"
   global.background.normal: "#2a1e26"

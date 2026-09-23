@@ -21,7 +21,7 @@
 
 @define-color fg-color #f2e6ee;
 @define-color bg-color #4f3143;
-@define-color border-color #8f6e82;
+@define-color border-color #a28297;
 
 @define-color dimmed-fg-color #ccbac5;
 @define-color disabled-fg-color #a28297;
@@ -35,7 +35,7 @@
 
 @define-color strong-border-color #7b5a6e;
 @define-color stronger-border-color #8f6e82;
-@define-color edge-border-color #ba4889;
+@define-color edge-border-color #fa99b4;
 
 @define-color scrollbar-slider-color #8f6e82;
 @define-color scrollbar-trough-color #402838;

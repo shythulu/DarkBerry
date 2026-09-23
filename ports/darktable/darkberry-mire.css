@@ -20,7 +20,7 @@
 
 /* General */
 @define-color selected_bg_color      #502f3d;
-@define-color border_color           #7d6976;
+@define-color border_color           #91828b;
 @define-color bg_color               #2a1e26;
 @define-color fg_color               #efe3eb;
 @define-color text_color             #efe3eb;
@@ -79,7 +79,7 @@
 
 /* Histogram and graphs */
 @define-color graph_bg        #1c1119;
-@define-color graph_border    #7d6976;
+@define-color graph_border    #91828b;
 @define-color graph_fg        #ba4889;
 @define-color graph_grid      #7d6976;
 @define-color inset_histogram #3e2936;

@@ -307,6 +307,13 @@ for (const [name, r] of Object.entries(roleIndex)) if (r.carriesCode) {
     return worst === Infinity ? "ok" : `${who} ${(worst * 100).toFixed(0)}% \u2717`;
   }).join(" | ") + " |\n";
 }
+// Non-text UI: borders, focus rings, cursors and the accent itself must be visible
+// against the background at 3:1 (WCAG 1.4.11), the minimum each role declares.
+const uiRows = Object.entries(roleIndex).filter(([n, r]) => n.startsWith("ui.") && r.minContrast).map(([n, r]) => [n, r.minContrast]);
+checks += `| *non-text UI on ui.background* | | ${ctxs.map(() => "").join(" | ")} |\n`;
+for (const [role, min] of uiRows) {
+  checks += `| ${role} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(role)[0], x.resolve("ui.background")[0]); if (v < min) errors.push(`${x.f.name}: ${role} on ui.background ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
+}
 for (const [name, r] of Object.entries(roleIndex)) if (r.minContrastWith) {
   const [fg, min] = r.minContrastWith;
   checks += `| ${fg} on ${name} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(fg)[0], x.resolve(name)[0]); if (v < min) errors.push(`${x.f.name}: ${fg} on ${name} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
@@ -325,7 +332,7 @@ out("docs/CHECKS.md", checks);
 // ---------- docs/ROLES.md (roles, values, Catppuccin comparison) ----------
 let rolesMd = `# Roles\n\nGenerated from \`src/roles.json\`. Every port references these names.\n\n| Role | Value | ${ctxs.map((x) => x.f.name).join(" | ")} | Catppuccin |\n|---|---|${ctxs.map(() => "---").join("|")}|---|\n`;
 for (const [name, r] of Object.entries(roleIndex)) {
-  const v = typeof r.value === "object" ? `dark: ${r.value.dark}, light: ${r.value.light}` : r.value;
+  const v = typeof r.value === "object" ? Object.entries(r.value).map(([k, x]) => `${k}: ${x}`).join(", ") : r.value;
   rolesMd += `| \`${name}\` | \`${v}\` | ${ctxs.map((x) => `\`${x.resolve(name)[0]}\``).join(" | ")} | ${r.catppuccin === "=" ? "same" : r.catppuccin || ""} |\n`;
 }
 rolesMd += `\n## Deviations from Catppuccin\n\n| Role | Darkberry | Catppuccin | Why |\n|---|---|---|---|\n`;

@@ -12,4 +12,4 @@
 # style and hidpi are plain defaults, so change them freely.
 borders style=round width=6.0 hidpi=on \
   active_color=0xffba4889 \
-  inactive_color=0xff6b5764
+  inactive_color=0xff887882

@@ -40,7 +40,7 @@
   --background-secondary-alt: #12090f;
   --background-modifier-hover: #34222e;
   --background-modifier-active-hover: #432c3b;
-  --background-modifier-border: #6b5764;
+  --background-modifier-border: #887882;
   --background-modifier-border-hover: #887882;
   --background-modifier-border-focus: #ba4889;
   --background-modifier-error: #f06a6a33;
@@ -53,7 +53,7 @@
   --text-muted: #c6b7c0;
   --text-faint: #887882;
   --text-on-accent: #ffffff;
-  --text-on-accent-inverted: #1d121a;
+  --text-on-accent-inverted: #ffffff;
   --text-success: #a3daa3;
   --text-warning: #e8c98a;
   --text-error: #f06a6a;

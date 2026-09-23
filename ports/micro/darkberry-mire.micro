@@ -31,7 +31,7 @@ color-link line-number "#91828b,#23161f"
 color-link current-line-number "#ba4889,#23161f"
 color-link gutter-error "#f06a6a"
 color-link gutter-warning "#e8c98a"
-color-link divider "#7d6976,#2a1e26"
+color-link divider "#91828b,#2a1e26"
 # micro takes this group's FOREGROUND and uses it as the line's background,
 # discarding any background given (internal/display/bufwindow.go). So this is
 # one colour, and it has to be a background: naming ui.text here painted the
@@ -43,7 +43,7 @@ color-link match-brace "#ba4889,#3e2936"
 color-link hlsearch "#ffffff,#ba4889"
 color-link statusline "#efe3eb,#23161f"
 color-link tabbar "#cbbcc5,#1c1119"
-color-link scrollbar "#7d6976"
+color-link scrollbar "#91828b"
 color-link message "#9ed0c4"
 color-link error-message "#ffffff,#f06a6a"
 color-link diff-added "#a3daa3"

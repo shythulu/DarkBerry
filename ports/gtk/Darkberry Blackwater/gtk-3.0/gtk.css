@@ -30,7 +30,7 @@
 @define-color theme_unfocused_selected_bg_color #432c3b;
 @define-color theme_unfocused_selected_fg_color #ede1e9;
 
-@define-color borders #6b5764;
+@define-color borders #887882;
 @define-color unfocused_borders #34222e;
 
 @define-color warning_color #e8c98a;
@@ -42,7 +42,7 @@
 @define-color wm_title #ede1e9;
 @define-color wm_unfocused_title #c6b7c0;
 @define-color wm_bg #170d13;
-@define-color wm_border #6b5764;
+@define-color wm_border #887882;
 @define-color wm_highlight #34222e;
 
 @define-color content_view_bg #1d121a;
@@ -53,7 +53,7 @@ headerbar, .titlebar {
   background-image: none;
   background-color: #170d13;
   color: #ede1e9;
-  border-color: #6b5764;
+  border-color: #887882;
 }
 headerbar:backdrop, .titlebar:backdrop {
   background-color: #12090f;
@@ -62,7 +62,7 @@ headerbar:backdrop, .titlebar:backdrop {
 menu, .menu, popover, popover.background {
   background-color: #170d13;
   color: #ede1e9;
-  border: 1px solid #6b5764;
+  border: 1px solid #887882;
 }
 tooltip, tooltip.background {
   background-color: #12090f;
@@ -70,7 +70,7 @@ tooltip, tooltip.background {
 }
 notebook > header {
   background-color: #170d13;
-  border-color: #6b5764;
+  border-color: #887882;
 }
 notebook > header > tabs > tab:checked {
   color: #ede1e9;

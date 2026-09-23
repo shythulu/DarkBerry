@@ -79,10 +79,18 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | ui.on.fill on ui.fill | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
 | syntax on ui.selection | 65% of each role’s own minimum | ok | ok | ok | ok |
 | syntax on ui.line.current | 85% of each role’s own minimum | ok | ok | ok | ok |
+| *non-text UI on ui.background* | |  |  |  |  |
+| ui.accent | 3 | 4.45 | 5.55 | 3.33 | 3.79 |
+| ui.focus | 3 | 4.52 | 4.46 | 5.30 | 5.63 |
+| ui.border.active | 3 | 4.45 | 5.55 | 3.33 | 3.79 |
+| ui.border.inactive | 3 | 3.46 | 3.33 | 4.40 | 4.38 |
+| ui.cursor | 3 | 5.69 | 7.66 | 9.37 | 10.66 |
+| ui.on.accent on ui.accent | 4.5 | 4.81 | 7.30 | 4.80 | 4.80 |
+| ui.on.error on ui.error | 4.5 | 6.13 | 6.57 | 6.10 | 6.51 |
 | ui.mark.text on ui.mark1 | 4.5 | 5.64 | 8.55 | 8.50 | 9.07 |
 | ui.mark.text on ui.mark2 | 4.5 | 5.63 | 9.35 | 10.05 | 10.73 |
 | ui.mark.text on ui.mark3 | 4.5 | 5.69 | 8.29 | 8.31 | 8.87 |
-| ui.on.tab.indicator on ui.tab.indicator | 4.5 | 4.75 | 5.55 | 6.56 | 7.46 |
+| ui.on.tab.indicator on ui.tab.indicator | 4.5 | 4.75 | 7.30 | 7.52 | 8.03 |
 | ui.on.badge on ui.badge | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
 
 ## Distinctness of key syntax roles

@@ -26,13 +26,27 @@
       "catppuccin": "="
     },
     "accent": {
-      "value": "jam",
+      "minContrast": 3,
+      "minContrastWith": [
+        "ui.on.accent",
+        4.5
+      ],
+      "value": {
+        "fen": "berry",
+        "dark": "jam",
+        "light": "jam"
+      },
       "catppuccin": "lavender (terminal borders), blue (tags)",
-      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges."
+      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Fen is the exception: jam is 2.4:1 on its plum base, so Fen's accent is berry (5.6:1), the same family as its tint. Fills stay jam everywhere."
     },
     "on.accent": {
-      "value": "base",
-      "catppuccin": "="
+      "value": {
+        "fen": "crust",
+        "dark": "onjam",
+        "light": "onjam"
+      },
+      "catppuccin": "base (text on accent)",
+      "why": "Base on jam is 2.4 to 4.5:1. White reads on jam at 4.8:1 in every flavour; on Fen's berry accent crust reads at 7.3:1."
     },
     "fill": {
       "value": "jam",
@@ -45,20 +59,25 @@
       "why": "Base on jam fails contrast in every flavour (about 3:1). White passes at 4.8:1."
     },
     "focus": {
+      "minContrast": 3,
       "value": "mix(cherry,overlay1,0.5)",
       "catppuccin": "lavender",
       "why": "A soft berry focus ring stays visible without competing with the berry accent."
     },
     "border.active": {
+      "minContrast": 3,
       "value": "ui.accent",
       "catppuccin": "lavender",
       "why": "Follows ui.accent."
     },
     "border.inactive": {
-      "value": "overlay0",
-      "catppuccin": "="
+      "minContrast": 3,
+      "value": "overlay1",
+      "catppuccin": "overlay0",
+      "why": "overlay0 is under 3:1 on Wisp, Fen and Blackwater backgrounds, so an unfocused split or window edge was not reliably visible. overlay1 clears 3:1 in every flavour."
     },
     "cursor": {
+      "minContrast": 3,
       "value": "petal",
       "catppuccin": "rosewater",
       "why": "A bright rose cursor is easy to find on dark, wine-tinted backgrounds; blossom, the rosewater slot, is too dusty for that."
@@ -97,7 +116,19 @@
     },
     "error": {
       "value": "cranberry",
-      "catppuccin": "="
+      "catppuccin": "=",
+      "minContrastWith": [
+        "ui.on.error",
+        4.5
+      ]
+    },
+    "on.error": {
+      "value": {
+        "dark": "crust",
+        "light": "onjam"
+      },
+      "catppuccin": "no equivalent",
+      "why": "Text drawn on an error fill (micro's error bar, Kate's marks). White on cranberry is 2.3:1 in Fen; crust reaches 6:1 in every dark flavour."
     },
     "info": {
       "value": "juniper",
@@ -150,7 +181,11 @@
       "note": "Follows the theme's tint: berry in Darkberry, each berry's own colour in the nature tints."
     },
     "on.tab.indicator": {
-      "value": "ui.on.accent"
+      "value": {
+        "dark": "crust",
+        "light": "base"
+      },
+      "why": "The active tab is filled with the tint (berry), and text on it has to read on that fill, not on the accent: crust on the dark tints, base on Wisp's, 4.7:1 or better everywhere."
     },
     "badge": {
       "value": "ui.fill",
