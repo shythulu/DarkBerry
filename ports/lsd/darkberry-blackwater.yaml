@@ -4,6 +4,10 @@
 # Install with:  cp darkberry-blackwater.yaml ~/.config/lsd/colors.yaml
 # and set  color: {theme: custom}  in ~/.config/lsd/config.yaml.
 #
+# Needs lsd 1.1 or newer: older releases reject hex strings and then drop the whole
+# theme silently (Ubuntu 24.04 ships 1.0.0). For those, darkberry-blackwater.256.yaml beside this
+# file carries the same theme as xterm-256 indices.
+#
 # Verified against lsd 1.2.0. Two things about that version are worth knowing:
 # the theme struct is deny_unknown_fields, and `file-type` is skipped, so a
 # `file-type:` key -- which plenty of lsd themes carry -- makes lsd discard the
@@ -37,11 +41,13 @@ attributes:
   hidden: "#887882"
   system: "#ddb0ec"
 
-# Recency, brightest first.
+# Recency, cool and brightest first. The same shape catppuccin/lsd uses (teal, sky,
+# sapphire): most rows are "older", so the column has to keep a colour of its own
+# or the listing loses it. Cool against the warm size column beside it.
 date:
-  hour-old: "#feafd4"
-  day-old: "#d3919c"
-  older: "#c6b7c0"
+  hour-old: "#9ed0c4"
+  day-old: "#86c0cc"
+  older: "#7fb4e0"
 
 size:
   none: "#887882"
@@ -53,7 +59,7 @@ inode:
   valid: "#86c0cc"
   invalid: "#887882"
 
-tree-edge: "#6b5764"
+tree-edge: "#887882"
 
 links:
   valid: "#86c0cc"

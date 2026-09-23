@@ -16,11 +16,14 @@
 */
 
 @import url("darktable.css");
-@import url("chunk-fonts.css");
+/* No chunk-fonts.css import: that file exists only on darktable's master branch, and an
+   @import of a missing file makes every released darktable (4.6 to 5.2) drop the theme. */
 
 /* General */
 @define-color selected_bg_color      #6e4457;
-@define-color border_color           #8f6e82;
+/* border_color is the window's outer edge (stock: grey_10, darker than bg), not a split
+   border, so it takes the deepest pane rather than ui.border.inactive. */
+@define-color border_color           #35212e;
 @define-color bg_color               #4f3143;
 @define-color fg_color               #f2e6ee;
 @define-color text_color             #f2e6ee;
@@ -29,7 +32,7 @@
 
 /* Scroll bars */
 @define-color scroll_bar_inactive #8f6e82;
-@define-color scroll_bar_active   #ba4889;
+@define-color scroll_bar_active   #dc67a7;
 @define-color scroll_bar_bg       #402838;
 
 /* Module panels */
@@ -39,17 +42,17 @@
 
 /* Bauhaus sliders and combo boxes */
 @define-color bauhaus_fg               #f2e6ee;
-@define-color bauhaus_indicator_border #ba4889;
-@define-color bauhaus_fill             #ba4889;
+@define-color bauhaus_indicator_border #dc67a7;
+@define-color bauhaus_fill             #dc67a7;
 @define-color bauhaus_bg_hover         #6c4c60;
-@define-color bauhaus_fg_hover         #ba4889;
+@define-color bauhaus_fg_hover         #dc67a7;
 @define-color bauhaus_fg_selected      #f2e6ee;
 @define-color bauhaus_fg_insensitive   #a28297;
 
 /* Buttons */
 @define-color button_bg       #5d3e51;
 @define-color button_hover_bg #6c4c60;
-@define-color button_hover_fg #ba4889;
+@define-color button_hover_fg #dc67a7;
 
 /* Entry fields */
 @define-color field_bg          #5d3e51;
@@ -74,12 +77,12 @@
 @define-color thumbnail_selected_bg_color #6c4c60;
 @define-color thumbnail_hover_bg_color    #7b5a6e;
 @define-color thumbnail_hover_fg_color    #f2e6ee;
-@define-color thumbnail_localcopy_color   #bad9d4;
+@define-color thumbnail_localcopy   #b0dfd9;
 @define-color range_bg_color              #5d3e51;
 
 /* Histogram and graphs */
 @define-color graph_bg        #35212e;
-@define-color graph_border    #8f6e82;
-@define-color graph_fg        #ba4889;
+@define-color graph_border    #a28297;
+@define-color graph_fg        #dc67a7;
 @define-color graph_grid      #8f6e82;
 @define-color inset_histogram #6c4c60;

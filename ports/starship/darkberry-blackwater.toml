@@ -232,7 +232,7 @@ warning     = "#e8c98a"
 error       = "#f06a6a"
 info        = "#9ed0c4"
 text_subtle = "#887882"
-frame       = "#6b5764"
+frame       = "#887882"
 rule        = "#432c3b"
 
 # Palette colours: no role carries these meanings.

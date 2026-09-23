@@ -15,13 +15,13 @@ A bog-witch berry theme in four flavours, grown from Benjamin Moore Dark Purple 
 src/palette.json          layer 1: the untinted default palette, 12 neutrals + 14 accents + jam/onjam per flavour
 src/roles.json            layer 2: what each colour means, shared by every port, with Catppuccin comparison
 src/overrides/            layer 3: rare port-only exceptions, each with a reason
-src/ports/                kitty, Ghostty and Firefox templates (roles in {braces}, no hex)
+src/ports/                every port's template: terminals, editors, browsers, shells (roles in {braces}, no hex)
 src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
-ports/                    generated kitty, Ghostty, VS Code and Firefox themes
+ports/                    generated themes for every port
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results
@@ -30,6 +30,7 @@ docs/specimen.html        editor, terminal and browser in all four flavours on o
 docs/studio.html          Darkberry Studio: edit palette and roles live, then export a patch
 tools/variants.mjs        makes Darkberry variations: node tools/variants.mjs <variant> [hue step] [chroma step]
 tools/spread.mjs          nudges key syntax colours apart when they're too close
+tools/settle.mjs          settles a palette against the build's full syntax checks (used by variants.mjs)
 tools/where.mjs           shows what drives any setting: node tools/where.mjs tab
 tools/apply-patch.mjs     applies a patch exported from Darkberry Studio, then rebuilds
 tools/site.mjs            builds the GitHub Pages showcase into site/
@@ -56,7 +57,8 @@ Open `docs/studio.html` (regenerated on every build, so it always starts from th
 ## Install
 
 Every tagged release carries the packaged files for each app: a `.vsix` for VS Code, an
-`.xpi` per flavour for Firefox, and zips of the kitty and Ghostty configs. Download them
+`.xpi` per flavour for Firefox, and zips of the kitty, Ghostty and Alacritty configs. Download them
+`.xpi` per flavour for Firefox, and zips of the kitty, Ghostty and tmux configs. Download them
 from [Releases](https://github.com/shythulu/DarkBerry/releases), or build them yourself
 with `./package.sh`, which writes the same set into `dist/`.
 
@@ -77,6 +79,38 @@ Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping the
 ```
 theme = light:Darkberry Wisp,dark:Darkberry Mire
 ```
+
+### Alacritty
+
+Copy a file from `ports/alacritty/` to `~/.config/alacritty/themes/`, then import it from
+`~/.config/alacritty/alacritty.toml`:
+
+```toml
+[general]
+import = ["~/.config/alacritty/themes/darkberry-mire.toml"]
+```
+
+Needs Alacritty 0.13 or newer, the first release that reads TOML; on 0.13 itself put the
+`import` line at the top of the file rather than under `[general]`. Alacritty reloads the
+config on save, so switching flavours is editing that one line. Nothing else is needed:
+the file carries the ANSI set, cursor, selection, search, hint and vi-mode colours.
+### tmux
+
+Copy a file from `ports/tmux/` to `~/.config/tmux/`, then source it from `tmux.conf`:
+
+```
+source-file ~/.config/tmux/darkberry-mire.conf
+```
+
+Reload with `tmux source-file ~/.config/tmux/tmux.conf`. The file is the whole theme: a
+two-segment status line (session badge on the left, host and clock on the right), the
+window list with the active window on the tab indicator, pane borders, messages, copy-mode
+selection and search hits, the clock, pane numbers, popups and menus. It needs tmux 3.2 or
+later; the popup and menu styles are 3.3 and 3.4 and are set with `-q`, so an older tmux
+skips them. The colours are 24-bit, so tmux must see a truecolor terminal (kitty, Ghostty
+and Konsole all are); if not, add `set -as terminal-features ",xterm-256color:RGB"` to
+`tmux.conf`. The pane's own text and background stay the terminal's, so use it with the
+kitty, Ghostty or Konsole port.
 
 ### GIMP, Inkscape and darktable
 
@@ -118,7 +152,9 @@ your own choice survives.
 Copy a flavour from `ports/lsd/` to `~/.config/lsd/colors.yaml`, and set
 `color: {theme: custom}` in `~/.config/lsd/config.yaml`.
 
-Written against lsd 1.2.0, whose theme struct rejects unknown keys. Notably `file-type` is
+Needs lsd 1.1 or newer; below that lsd rejects hex strings and silently drops the whole
+theme, so for lsd 1.0 (Ubuntu 24.04) use the `.256.yaml` companion, the same theme as
+xterm-256 indices. Written against lsd 1.2.0, whose theme struct rejects unknown keys. Notably `file-type` is
 skipped in that version, so a theme carrying it is discarded whole and lsd falls back to its
 defaults without saying so. Every key here is one lsd 1.2.0 accepts.
 
@@ -142,6 +178,13 @@ are older than any theme.
 
 BSD `ls`, which is what macOS ships without coreutils, reads `LSCOLORS` instead -- a different
 format limited to the eight ANSI colours, which cannot carry these. Use lsd or GNU `ls` there.
+
+### JankyBorders (macOS)
+
+Copy a flavour from `ports/borders/` over `~/.config/borders/bordersrc` and restart borders
+(`brew services restart borders`). The focused window's border follows `ui.border.active`,
+the accent, and every other window `ui.border.inactive`. Width, style and hidpi are plain
+defaults in the file; only the two colours are the theme.
 
 ### starship
 
@@ -193,6 +236,34 @@ the Base24 one.
 
 Copy a `.micro` file from `ports/micro/` into `~/.config/micro/colorschemes/`, then
 `set colorscheme darkberry-mire`.
+
+### btop
+
+Copy a `.theme` file from `ports/btop/` into `~/.config/btop/themes/`, then pick it under
+Esc > Options > Color theme, or set `color_theme = "darkberry-mire"` in `btop.conf`. btop
+lists themes by file name, so keep the names. Needs btop 1.3 or newer for every key, and
+1.4.7 for the process-list banner and followed-row keys, which older releases simply skip.
+For a transparent terminal, set `theme_background = False` in `btop.conf` rather than
+editing the file; on a terminal without truecolor, set `lowcolor = True`.
+### bat
+
+Copy a `.tmTheme` file from `ports/bat/` into `$(bat --config-dir)/themes/` (usually
+`~/.config/bat/themes/`), run `bat cache --build`, then pick it:
+
+```sh
+bat --theme="Darkberry Mire" file.rs        # or: export BAT_THEME="Darkberry Mire"
+```
+
+Any bat with `bat cache --build` loads it; written against 0.24 and checked on 0.26.1. The
+terminal must advertise truecolor (`COLORTERM=truecolor`) or bat rounds every colour to
+the nearest xterm-256 index. The same file works in delta, gitui and Sublime Text, which
+read the caret, selection and gutter keys bat ignores.
+### Neovim
+
+Copy a `.lua` file from `ports/neovim/` into `~/.config/nvim/colors/` (keep its name), then
+`:colorscheme darkberry-mire`, or `vim.cmd.colorscheme("darkberry-mire")` in `init.lua`.
+Needs Neovim 0.9 and `termguicolors` on; the file paints the editor, the syntax groups, the
+Tree-sitter and LSP captures and the terminal palette, and nothing plugin-specific.
 
 ### Kate
 

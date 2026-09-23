@@ -25,58 +25,58 @@ Color=154,136,147
 Color=105,78,95
 
 [Color1]
-Color=204,56,56
+Color=187,38,42
 
 [Color1Faint]
-Color=223,131,133
+Color=213,120,124
 
 [Color1Intense]
-Color=216,71,62
+Color=197,53,47
 
 [Color2]
-Color=55,122,55
+Color=44,111,45
 
 [Color2Faint]
-Color=133,171,132
+Color=127,164,126
 
 [Color2Intense]
-Color=62,133,67
+Color=50,121,56
 
 [Color3]
-Color=144,103,10
+Color=129,91,2
 
 [Color3Faint]
-Color=187,159,105
+Color=178,152,100
 
 [Color3Intense]
-Color=153,115,23
+Color=137,101,14
 
 [Color4]
-Color=59,95,208
+Color=54,89,202
 
 [Color4Faint]
-Color=136,155,224
+Color=133,151,220
 
 [Color4Intense]
-Color=80,103,218
+Color=75,96,211
 
 [Color5]
-Color=210,21,112
+Color=191,11,100
 
 [Color5Faint]
-Color=226,110,166
+Color=215,104,159
 
 [Color5Intense]
-Color=223,42,118
+Color=203,33,106
 
 [Color6]
-Color=29,125,108
+Color=0,111,95
 
 [Color6Faint]
-Color=118,173,164
+Color=100,164,156
 
 [Color6Intense]
-Color=41,136,120
+Color=18,121,106
 
 [Color7]
 Color=195,171,185
@@ -94,7 +94,7 @@ Color=79,49,67
 Color=105,78,95
 
 [ForegroundIntense]
-Color=185,72,139
+Color=79,49,67
 
 [General]
 Description=Darkberry Wisp

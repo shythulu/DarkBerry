@@ -26,13 +26,19 @@
       "catppuccin": "="
     },
     "accent": {
+      "minContrast": 3,
+      "minContrastWith": [
+        "ui.on.accent",
+        4.5
+      ],
       "value": "jam",
       "catppuccin": "lavender (terminal borders), blue (tags)",
-      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges."
+      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Jam's lightness is set per flavour by the fill equation (lib/derive.mjs) so it clears every background by 3.3:1."
     },
     "on.accent": {
-      "value": "base",
-      "catppuccin": "="
+      "value": "ui.on.fill",
+      "catppuccin": "base (text on accent)",
+      "why": "Text on the accent is text on the fill: onjam, chosen by the fill equation as white or crust, whichever reads on that flavour's jam."
     },
     "fill": {
       "value": "jam",
@@ -42,23 +48,28 @@
     "on.fill": {
       "value": "onjam",
       "catppuccin": "base (text on accent)",
-      "why": "Base on jam fails contrast in every flavour (about 3:1). White passes at 4.8:1."
+      "why": "Base on jam failed contrast in every flavour. onjam is white or crust per flavour, whichever reads best on that flavour's jam (the fill equation in lib/derive.mjs), and must reach 4.5:1."
     },
     "focus": {
+      "minContrast": 3,
       "value": "mix(cherry,overlay1,0.5)",
       "catppuccin": "lavender",
       "why": "A soft berry focus ring stays visible without competing with the berry accent."
     },
     "border.active": {
+      "minContrast": 3,
       "value": "ui.accent",
       "catppuccin": "lavender",
       "why": "Follows ui.accent."
     },
     "border.inactive": {
-      "value": "overlay0",
-      "catppuccin": "="
+      "minContrast": 3,
+      "value": "overlay1",
+      "catppuccin": "overlay0",
+      "why": "overlay0 is under 3:1 on Wisp, Fen and Blackwater backgrounds, so an unfocused split or window edge was not reliably visible. overlay1 clears 3:1 in every flavour."
     },
     "cursor": {
+      "minContrast": 3,
       "value": "petal",
       "catppuccin": "rosewater",
       "why": "A bright rose cursor is easy to find on dark, wine-tinted backgrounds; blossom, the rosewater slot, is too dusty for that."
@@ -97,7 +108,19 @@
     },
     "error": {
       "value": "cranberry",
-      "catppuccin": "="
+      "catppuccin": "=",
+      "minContrastWith": [
+        "ui.on.error",
+        4.5
+      ]
+    },
+    "on.error": {
+      "value": {
+        "dark": "crust",
+        "light": "onjam"
+      },
+      "catppuccin": "no equivalent",
+      "why": "Text drawn on a full status fill: error bars in micro, Obsidian's destructive buttons, btop's banners. White on cranberry is 2.3:1 in Fen; crust reaches 6:1 on the error, warning and info fills in every dark flavour, white 5:1 on Wisp's."
     },
     "info": {
       "value": "juniper",
@@ -150,7 +173,11 @@
       "note": "Follows the theme's tint: berry in Darkberry, each berry's own colour in the nature tints."
     },
     "on.tab.indicator": {
-      "value": "ui.on.accent"
+      "value": {
+        "dark": "crust",
+        "light": "base"
+      },
+      "why": "The active tab is filled with the tint (berry), and text on it has to read on that fill, not on the accent: crust on the dark tints, base on Wisp's, 4.7:1 or better everywhere."
     },
     "badge": {
       "value": "ui.fill",
@@ -161,6 +188,41 @@
     },
     "on.badge": {
       "value": "ui.on.fill"
+    },
+    "emphasis": {
+      "minContrast": 4.5,
+      "value": "cherry",
+      "catppuccin": "no single colour (nvim PmenuMatch: text bold; Title: blue)",
+      "why": "Match text in lists and titles take one secondary accent, cherry, the colour VS Code's port already gives three of its four emphasis keys; it clears 5.6:1 on every background."
+    },
+    "search.matches": {
+      "value": "mix(ui.background,ui.mark1,0.22)",
+      "carriesCode": 0.65,
+      "catppuccin": "sky at 30% into base (nvim Search)",
+      "why": "Every search hit but the current one is the mark colour faded 22% into the background, so the hits belong to the same family as the current match (ui.mark1); 22% is the most the tint can be while every syntax role keeps 65% of its minimum on it in all five tints (35% left comments at 81%)."
+    },
+    "diff.added": {
+      "value": "mix(ui.background,ui.success,0.18)",
+      "carriesCode": 0.65,
+      "catppuccin": "="
+    },
+    "diff.changed": {
+      "value": "mix(ui.background,ui.warning,0.1)",
+      "carriesCode": 0.65,
+      "catppuccin": "blue at 7% into base",
+      "why": "A changed line follows ui.warning, the colour modified lines carry in every port, at 10% so the changed span inside it (ui.diff.text, 18%) still stands out."
+    },
+    "diff.removed": {
+      "value": "mix(ui.background,syntax.diff.removed,0.18)",
+      "carriesCode": 0.65,
+      "catppuccin": "red at 18% into base",
+      "why": "A removed line follows syntax.diff.removed, the warm red the removed text itself uses, so the line and its text agree and ui.error stays for errors."
+    },
+    "diff.text": {
+      "value": "mix(ui.background,ui.warning,0.18)",
+      "carriesCode": 0.65,
+      "catppuccin": "blue at 30% into base",
+      "why": "The changed span inside a changed line is the same warning tint at nearly twice the strength of ui.diff.changed, without a second hue; 18% is the most it can be while every syntax role keeps 65% of its minimum on it in all five tints."
     }
   },
   "terminal": {
@@ -242,21 +304,30 @@
       "key": true
     },
     "property": {
-      "value": "mix(lavender,subtext0,0.5)",
+      "value": {
+        "dark": "mix(apricot,subtext0,0.3)",
+        "light": "mix(bilberry,subtext0,0.5)"
+      },
       "catppuccin": "blue",
-      "why": "A mauve-grey keeps object keys quieter than functions.",
+      "why": "A warm grey keeps object keys quieter than functions. The former lavender mix was 1.7 units from namespace in Fen; on Wisp the warm mix collides with diff.removed, so the light value mixes bilberry instead.",
       "minContrast": 4.5
     },
     "operator": {
-      "value": "mix(overlay2,subtext0,0.4)",
+      "value": {
+        "dark": "subtext0",
+        "light": "mix(subtext0,subtext1,0.6)"
+      },
       "catppuccin": "sky",
-      "why": "Structural glue recedes instead of being coloured.",
+      "why": "Structural glue recedes: one subtext step above comments. Light flavours sit between subtext0 and subtext1, because subtext0 is 1.6 from Wisp's darkened comment grey and subtext1 is 4.9 from crowberry's text.",
       "minContrast": 3
     },
     "punctuation": {
-      "value": "mix(overlay1,overlay2,0.35)",
+      "value": {
+        "dark": "overlay1",
+        "light": "mix(overlay1,overlay2,0.2)"
+      },
       "catppuccin": "overlay2",
-      "why": "Slightly quieter than comments, so brackets fade behind code.",
+      "why": "Quieter than comments. Wisp's overlay1 is 2.8:1 on crust, so the light value leans a fifth toward overlay2 to hold 3:1 there.",
       "minContrast": 3
     },
     "comment": {
@@ -277,21 +348,24 @@
       "key": true
     },
     "deprecated": {
-      "value": "mix(overlay1,overlay2,0.6)",
+      "value": "syntax.comment",
       "catppuccin": "no equivalent",
-      "why": "A dimmed grey marks code on its way out.",
+      "why": "Deprecated code is comment-coloured; the strikethrough VS Code draws is the distinction, a grey of its own was 1 to 3 units from comment and read as the same colour.",
       "minContrast": 3
     },
     "unimplemented": {
-      "value": "mix(overlay1,lavender,0.2)",
+      "value": "syntax.comment",
       "catppuccin": "no equivalent",
-      "why": "A faint lilac-grey marks stubs and placeholders.",
+      "why": "Stubs share the comment colour. A separate faint lilac-grey sat under 2 units from punctuation.",
       "minContrast": 3
     },
     "diff.removed": {
-      "value": "mix(cranberry,cherry,0.5)",
+      "value": {
+        "light": "mix(cranberry,honey,0.5)",
+        "dark": "mix(cranberry,apricot,0.5)"
+      },
       "catppuccin": "red",
-      "why": "A softer red for removed lines, so diffs don't read as errors.",
+      "why": "Removed lines lean warm, toward apricot on dark flavours and honey on Wisp, so they sit six or more units from ui.error instead of three; a softer red never got far enough away.",
       "minContrast": 4.5
     }
   },

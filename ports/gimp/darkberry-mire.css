@@ -21,7 +21,7 @@
 
 @define-color fg-color #efe3eb;
 @define-color bg-color #2a1e26;
-@define-color border-color #7d6976;
+@define-color border-color #91828b;
 
 @define-color dimmed-fg-color #cbbcc5;
 @define-color disabled-fg-color #91828b;
@@ -29,13 +29,13 @@
 
 @define-color hover-color #3e2936;
 @define-color widget-bg-color #23161f;
-@define-color selected-color #ba4889;
+@define-color selected-color #502f3d; /* GIMP draws fg-color on it, so it must be a text ground */
 @define-color extreme-bg-color #1c1119;
 @define-color extreme-selected-color #502f3d;
 
 @define-color strong-border-color #4f3143;
 @define-color stronger-border-color #7d6976;
-@define-color edge-border-color #ba4889;
+@define-color edge-border-color #91828b; /* every idle button's edge, not a focus mark */
 
 @define-color scrollbar-slider-color #7d6976;
 @define-color scrollbar-trough-color #23161f;

@@ -16,11 +16,14 @@
 */
 
 @import url("darktable.css");
-@import url("chunk-fonts.css");
+/* No chunk-fonts.css import: that file exists only on darktable's master branch, and an
+   @import of a missing file makes every released darktable (4.6 to 5.2) drop the theme. */
 
 /* General */
 @define-color selected_bg_color      {ui.selection};
-@define-color border_color           {ui.border.inactive};
+/* border_color is the window's outer edge (stock: grey_10, darker than bg), not a split
+   border, so it takes the deepest pane rather than ui.border.inactive. */
+@define-color border_color           {ui.pane.tertiary};
 @define-color bg_color               {ui.background};
 @define-color fg_color               {ui.text};
 @define-color text_color             {ui.text};
@@ -74,7 +77,7 @@
 @define-color thumbnail_selected_bg_color {surface1};
 @define-color thumbnail_hover_bg_color    {surface2};
 @define-color thumbnail_hover_fg_color    {ui.text};
-@define-color thumbnail_localcopy_color   {ui.info};
+@define-color thumbnail_localcopy   {ui.info};
 @define-color range_bg_color              {surface0};
 
 /* Histogram and graphs */

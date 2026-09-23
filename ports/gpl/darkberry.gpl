@@ -2,27 +2,27 @@ GIMP Palette
 Name: Darkberry
 Columns: 8
 # Darkberry 0.3.0, https://shythulu.github.io/DarkBerry/
-161  88 115	Wisp Blossom
-183  67 125	Wisp Petal
-210  21 112	Wisp Berry
-154  76 192	Wisp Plum
-204  56  56	Wisp Cranberry
-177  74  94	Wisp Cherry
-177  84  35	Wisp Apricot
-144 103  10	Wisp Honey
- 55 122  55	Wisp Gooseberry
- 29 125 108	Wisp Juniper
- 27 119 140	Wisp Frost
- 42 111 176	Wisp Bilberry
- 59  95 208	Wisp Blueberry
-122  88 176	Wisp Lavender
+147  75 102	Wisp Blossom
+168  53 112	Wisp Petal
+191  11 100	Wisp Berry
+140  62 178	Wisp Plum
+187  38  42	Wisp Cranberry
+165  63  84	Wisp Cherry
+162  71  18	Wisp Apricot
+129  91   2	Wisp Honey
+ 44 111  45	Wisp Gooseberry
+  0 111  95	Wisp Juniper
+  2 107 128	Wisp Frost
+ 29 100 164	Wisp Bilberry
+ 54  89 202	Wisp Blueberry
+115  80 168	Wisp Lavender
 185  72 139	Wisp Jam
 255 255 255	Wisp Onjam
 210  21 112	Wisp Tint
  79  49  67	Wisp Text
  90  64  80	Wisp Subtext1
 105  78  95	Wisp Subtext0
-128 103 118	Wisp Overlay2
+116  91 106	Wisp Overlay2
 150 125 140	Wisp Overlay1
 172 147 162	Wisp Overlay0
 195 171 185	Wisp Surface2
@@ -31,7 +31,7 @@ Columns: 8
 251 244 248	Wisp Base
 243 230 239	Wisp Mantle
 235 218 229	Wisp Crust
-238 220 229	Fen Blossom
+234 175 214	Fen Blossom
 255 196 221	Fen Petal
 250 153 180	Fen Berry
 236 188 252	Fen Plum
@@ -40,13 +40,13 @@ Columns: 8
 247 191 158	Fen Apricot
 240 214 160	Fen Honey
 183 230 183	Fen Gooseberry
-186 217 212	Fen Juniper
-160 208 218	Fen Frost
+176 223 217	Fen Juniper
+131 212 219	Fen Frost
 156 198 234	Fen Bilberry
 164 195 246	Fen Blueberry
-206 190 222	Fen Lavender
-186  72 137	Fen Jam
-255 255 255	Fen Onjam
+201 176 232	Fen Lavender
+220 103 167	Fen Jam
+ 53  33  46	Fen Onjam
 250 153 180	Fen Tint
 242 230 238	Fen Text
 223 206 217	Fen Subtext1
@@ -74,7 +74,7 @@ Columns: 8
 127 180 224	Mire Bilberry
 143 176 242	Mire Blueberry
 186 168 220	Mire Lavender
-186  72 137	Mire Jam
+190  76 141	Mire Jam
 255 255 255	Mire Onjam
 253 124 165	Mire Tint
 239 227 235	Mire Text

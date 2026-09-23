@@ -43,8 +43,8 @@
   --background-modifier-border: {ui.border.inactive};
   --background-modifier-border-hover: {overlay1};
   --background-modifier-border-focus: {ui.border.active};
-  --background-modifier-error: {ui.error}33;
-  --background-modifier-error-hover: {ui.error}55;
+  --background-modifier-error: {ui.error};
+  --background-modifier-error-hover: {mix(ui.error,ui.text,0.12)};
   --background-modifier-success: {ui.success}33;
   --background-modifier-message: {ui.pane.tertiary};
   --background-modifier-form-field: {surface0};
@@ -59,6 +59,10 @@
   --text-error: {ui.error};
   --text-accent: {ui.accent};
   --text-accent-hover: {petal};
+  --link-color: {ui.link};
+  --link-color-hover: {petal};
+  --link-external-color: {ui.link};
+  --link-external-color-hover: {petal};
   --text-selection: {ui.selection};
   --text-highlight-bg: {surface1};
   --caret-color: {ui.cursor};
@@ -81,3 +85,9 @@
   --code-tag: {syntax.type};
   --code-value: {syntax.number};
 }
+
+/* Obsidian draws its destructive buttons as --background-modifier-error under
+   --text-on-accent, a pairing the host chose for a tinted red. On a full cranberry fill
+   that text is white on Mire and crust on Fen, and only one of those reads, so the
+   button's text is set here to ui.on.error, which is chosen per flavour to read on it. */
+.mod-warning, button.mod-warning, .mod-destructive { color: {ui.on.error}; }

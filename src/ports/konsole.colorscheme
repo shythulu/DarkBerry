@@ -94,7 +94,7 @@ Color={ui.text}
 Color={ui.text.muted}
 
 [ForegroundIntense]
-Color={ui.accent}
+Color={ui.text}
 
 [General]
 Description=%FULL%

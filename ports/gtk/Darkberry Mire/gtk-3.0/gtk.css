@@ -16,7 +16,7 @@
 @define-color theme_fg_color #efe3eb;
 @define-color theme_base_color #23161f;
 @define-color theme_text_color #efe3eb;
-@define-color theme_selected_bg_color #ba4889;
+@define-color theme_selected_bg_color #be4c8d;
 @define-color theme_selected_fg_color #ffffff;
 
 @define-color insensitive_bg_color #23161f;
@@ -30,7 +30,7 @@
 @define-color theme_unfocused_selected_bg_color #4f3143;
 @define-color theme_unfocused_selected_fg_color #efe3eb;
 
-@define-color borders #7d6976;
+@define-color borders #91828b;
 @define-color unfocused_borders #3e2936;
 
 @define-color warning_color #e8c98a;
@@ -42,7 +42,7 @@
 @define-color wm_title #efe3eb;
 @define-color wm_unfocused_title #cbbcc5;
 @define-color wm_bg #23161f;
-@define-color wm_border #7d6976;
+@define-color wm_border #91828b;
 @define-color wm_highlight #3e2936;
 
 @define-color content_view_bg #2a1e26;
@@ -53,7 +53,7 @@ headerbar, .titlebar {
   background-image: none;
   background-color: #23161f;
   color: #efe3eb;
-  border-color: #7d6976;
+  border-color: #91828b;
 }
 headerbar:backdrop, .titlebar:backdrop {
   background-color: #1c1119;
@@ -62,7 +62,7 @@ headerbar:backdrop, .titlebar:backdrop {
 menu, .menu, popover, popover.background {
   background-color: #23161f;
   color: #efe3eb;
-  border: 1px solid #7d6976;
+  border: 1px solid #91828b;
 }
 tooltip, tooltip.background {
   background-color: #1c1119;
@@ -70,7 +70,7 @@ tooltip, tooltip.background {
 }
 notebook > header {
   background-color: #23161f;
-  border-color: #7d6976;
+  border-color: #91828b;
 }
 notebook > header > tabs > tab:checked {
   color: #efe3eb;

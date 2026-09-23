@@ -8,9 +8,9 @@
 
 .theme-light,
 .theme-dark {
-  --accent-h: 326;
-  --accent-s: 45%;
-  --accent-l: 51%;
+  --accent-h: 327;
+  --accent-s: 63%;
+  --accent-l: 63%;
 
   --color-base-00: #4f3143;
   --color-base-05: #5d3e51;
@@ -29,7 +29,7 @@
   --color-orange: #f7bf9e;
   --color-yellow: #f0d6a0;
   --color-green: #b7e6b7;
-  --color-cyan: #bad9d4;
+  --color-cyan: #b0dfd9;
   --color-blue: #a4c3f6;
   --color-purple: #ecbcfc;
   --color-pink: #fa99b4;
@@ -40,11 +40,11 @@
   --background-secondary-alt: #35212e;
   --background-modifier-hover: #6c4c60;
   --background-modifier-active-hover: #7b5a6e;
-  --background-modifier-border: #8f6e82;
+  --background-modifier-border: #a28297;
   --background-modifier-border-hover: #a28297;
-  --background-modifier-border-focus: #ba4889;
-  --background-modifier-error: #ff8a8a33;
-  --background-modifier-error-hover: #ff8a8a55;
+  --background-modifier-border-focus: #dc67a7;
+  --background-modifier-error: #ff8a8a;
+  --background-modifier-error-hover: #fd9596;
   --background-modifier-success: #b7e6b733;
   --background-modifier-message: #35212e;
   --background-modifier-form-field: #5d3e51;
@@ -52,32 +52,42 @@
   --text-normal: #f2e6ee;
   --text-muted: #ccbac5;
   --text-faint: #a28297;
-  --text-on-accent: #ffffff;
-  --text-on-accent-inverted: #4f3143;
+  --text-on-accent: #35212e;
+  --text-on-accent-inverted: #35212e;
   --text-success: #b7e6b7;
   --text-warning: #f0d6a0;
   --text-error: #ff8a8a;
-  --text-accent: #ba4889;
+  --text-accent: #dc67a7;
   --text-accent-hover: #ffc4dd;
+  --link-color: #83d4db;
+  --link-color-hover: #ffc4dd;
+  --link-external-color: #83d4db;
+  --link-external-color-hover: #ffc4dd;
   --text-selection: #6e4457;
   --text-highlight-bg: #6c4c60;
   --caret-color: #ffc4dd;
 
   --interactive-normal: #5d3e51;
   --interactive-hover: #6c4c60;
-  --interactive-accent: #ba4889;
-  --interactive-accent-hover: #ba4889;
+  --interactive-accent: #dc67a7;
+  --interactive-accent-hover: #dc67a7;
 
   --code-background: #35212e;
   --code-normal: #f2e6ee;
   --code-comment: #bd9fb1;
   --code-function: #ffc4dd;
-  --code-important: #bad9d4;
+  --code-important: #b0dfd9;
   --code-keyword: #fa99b4;
-  --code-operator: #c3aab9;
-  --code-property: #cdbcd2;
-  --code-punctuation: #ab8ca0;
+  --code-operator: #ccbac5;
+  --code-property: #eabeaa;
+  --code-punctuation: #a28297;
   --code-string: #b7e6b7;
   --code-tag: #ecbcfc;
   --code-value: #f0d6a0;
 }
+
+/* Obsidian draws its destructive buttons as --background-modifier-error under
+   --text-on-accent, a pairing the host chose for a tinted red. On a full cranberry fill
+   that text is white on Mire and crust on Fen, and only one of those reads, so the
+   button's text is set here to ui.on.error, which is chosen per flavour to read on it. */
+.mod-warning, button.mod-warning, .mod-destructive { color: #35212e; }

@@ -16,11 +16,14 @@
 */
 
 @import url("darktable.css");
-@import url("chunk-fonts.css");
+/* No chunk-fonts.css import: that file exists only on darktable's master branch, and an
+   @import of a missing file makes every released darktable (4.6 to 5.2) drop the theme. */
 
 /* General */
-@define-color selected_bg_color      #f4cce0;
-@define-color border_color           #ac93a2;
+@define-color selected_bg_color      #f0cadd;
+/* border_color is the window's outer edge (stock: grey_10, darker than bg), not a split
+   border, so it takes the deepest pane rather than ui.border.inactive. */
+@define-color border_color           #ebdae5;
 @define-color bg_color               #fbf4f8;
 @define-color fg_color               #4f3143;
 @define-color text_color             #4f3143;
@@ -55,7 +58,7 @@
 @define-color field_bg          #dfcbd8;
 @define-color field_active_bg   #d0bac8;
 @define-color field_active_fg   #4f3143;
-@define-color field_selected_bg #f4cce0;
+@define-color field_selected_bg #f0cadd;
 @define-color field_selected_fg #4f3143;
 @define-color field_hover_bg    #d0bac8;
 @define-color field_hover_fg    #4f3143;
@@ -74,12 +77,12 @@
 @define-color thumbnail_selected_bg_color #d0bac8;
 @define-color thumbnail_hover_bg_color    #c3abb9;
 @define-color thumbnail_hover_fg_color    #4f3143;
-@define-color thumbnail_localcopy_color   #1d7d6c;
+@define-color thumbnail_localcopy   #006f5f;
 @define-color range_bg_color              #dfcbd8;
 
 /* Histogram and graphs */
 @define-color graph_bg        #ebdae5;
-@define-color graph_border    #ac93a2;
+@define-color graph_border    #967d8c;
 @define-color graph_fg        #b9488b;
 @define-color graph_grid      #ac93a2;
 @define-color inset_histogram #d0bac8;

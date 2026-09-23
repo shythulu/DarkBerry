@@ -20,7 +20,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -60,10 +60,10 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMERIC OID DEFINITION" styleID="4" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="NON OID NUMBERS" styleID="5" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORDS" styleID="6" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
-            <WordsStyle name="ATTRIBUTES" styleID="7" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
+            <WordsStyle name="ATTRIBUTES" styleID="7" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="DESCRIPTORS" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="TYPES" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
-            <WordsStyle name="OPERATORS" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="asp" desc="ASP" ext="">
             <WordsStyle name="DEFAULT" styleID="81" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -72,7 +72,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="WORD" styleID="84" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="85" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="86" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="ASP SYMBOL" styleID="15" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="ASP SYMBOL" styleID="15" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SCRIPT TYPE" styleID="16" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="USER KEYWORDS 1" styleID="216" fgColor="8FB0F2" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="substyle1" />
             <WordsStyle name="USER KEYWORDS 2" styleID="217" fgColor="8FB0F2" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="substyle2" />
@@ -88,7 +88,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="3" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="4" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="4" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="5" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CPU INSTRUCTION" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="MATH INSTRUCTION" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
@@ -108,7 +108,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="MACRO" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="STRING" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="8" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="8" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VARIABLE" styleID="9" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SENT" styleID="10" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
             <WordsStyle name="PREPROCESSOR" styleID="11" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type3" />
@@ -123,7 +123,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="COMMENT: [* *]" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="LINE COMMENT: &#35;" styleID="3" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATORS" styleID="5" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS" styleID="5" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIERS" styleID="6" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DOUBLE QUOTED STRING" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING WITH THREE DOUBLE QUOTES" styleID="8" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -142,7 +142,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="KEYWORDS" styleID="4" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="5" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PREPROCESSOR" styleID="6" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="7" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="7" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="8" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING EOL NC" styleID="9" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="FUNCTIONS" styleID="10" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
@@ -150,7 +150,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="SUB SECTIONS" styleID="12" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
             <WordsStyle name="MAIN SECTIONS" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type3" />
             <WordsStyle name="PREDEFINED VARIABLE" styleID="14" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type4" />
-            <WordsStyle name="PREDEFINED ATTRIBUTES" styleID="15" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type5" />
+            <WordsStyle name="PREDEFINED ATTRIBUTES" styleID="15" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type5" />
             <WordsStyle name="ENUM DOMAINS" styleID="16" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type6" />
             <WordsStyle name="USER DEFINED" styleID="17" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type7" />
             <WordsStyle name="TABLE DEFINITIONS" styleID="18" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -168,7 +168,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="3" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="5" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="7" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="7" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="8" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SCALAR" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -190,10 +190,10 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="KEYWORDS" styleID="2" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="LABEL" styleID="3" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="HIDE SYMBOL" styleID="4" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="HIDE SYMBOL" styleID="4" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMAND" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VARIABLE" styleID="6" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="7" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="7" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="AFTER LABEL" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="blitzbasic" desc="BlitzBasic" ext="">
@@ -202,7 +202,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORD1" styleID="3" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORD2" styleID="10" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre2" />
             <WordsStyle name="KEYWORD3" styleID="11" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="type1" />
@@ -220,7 +220,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -249,7 +249,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRINGRAW" styleID="20" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -277,7 +277,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -305,7 +305,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="BUILIN FUNC &amp; TYPE" styleID="4" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="TYPE" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="LINENUM" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="7" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="7" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="NUMBER" styleID="8" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="9" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="11" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -321,7 +321,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING L" styleID="3" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING R" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMAND" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
-            <WordsStyle name="PARAMETER" styleID="6" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="PARAMETER" styleID="6" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VARIABLE" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="USER DEFINED" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="WHILEDEF" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -340,7 +340,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT DOC" styleID="3" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -352,14 +352,14 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="3" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="3" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTR" styleID="4" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="5" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="OPCODE" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="HEADER STATEMENT" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="USER KEYWORDS" styleID="8" fgColor="8FB0F2" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="type1" />
             <WordsStyle name="COMMENT BLOCK" styleID="9" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
-            <WordsStyle name="PARAMETER" styleID="10" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="PARAMETER" styleID="10" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="A-RATE VARIABLE" styleID="11" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="K-RATE VARIABLE" styleID="12" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="I-RATE VARIABLE" styleID="13" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -374,7 +374,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -394,7 +394,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="CLASS" styleID="2" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PSEUDOCLASS" styleID="3" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="UNKNOWN PSEUDOCLASS" styleID="4" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="5" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="5" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="6" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="UNKNOWN IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VALUE" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -404,7 +404,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="DIRECTIVE" styleID="12" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DOUBLE STRING" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SINGLE STRING" styleID="14" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="ATTRIBUTE" styleID="16" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="ATTRIBUTE" styleID="16" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PSEUDOELEMENT" styleID="18" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type3"/>
             <WordsStyle name="LEGACY PSEUDOELEMENT" styleID="20" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type5" />
             <WordsStyle name="MEDIA" styleID="22" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -423,7 +423,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="5" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="10" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="12" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="13" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="13" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT DOC" styleID="3" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -466,9 +466,9 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="BUILT-IN FUNCTIONS" styleID="22" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="FUNCTION NAME" styleID="8" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="MODULE NAME" styleID="23" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="MODULE ATTRIBUTES" styleID="24" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
+            <WordsStyle name="MODULE ATTRIBUTES" styleID="24" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
             <WordsStyle name="PREPROCESSOR" styleID="12" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
-            <WordsStyle name="OPERATORS" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="UNKNOWN: ERROR" styleID="31" fgColor="F06A6A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="errorlist" desc="ErrorList" ext="">
@@ -690,7 +690,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORD" styleID="5" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="DOUBLE QUOTED STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATORS" styleID="7" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS" styleID="7" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIERS" styleID="8" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="BRACES" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORDS2" styleID="10" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre2" />
@@ -716,13 +716,13 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="3" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING2" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION WORD" styleID="8" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="FUNCTION1" styleID="9" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="FUNCTION2" styleID="10" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="PREPROCESSOR" styleID="11" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR2" styleID="12" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR2" styleID="12" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="LABEL" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CONTINUATION" styleID="14" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
@@ -732,13 +732,13 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="3" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING2" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION WORD" styleID="8" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="FUNCTION1" styleID="9" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="FUNCTION2" styleID="10" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="PREPROCESSOR" styleID="11" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR2" styleID="12" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR2" styleID="12" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="LABEL" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CONTINUATION" styleID="14" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
@@ -749,7 +749,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="KEYWORD1" styleID="3" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PREPROCESSOR" styleID="5" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORD2" styleID="10" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre2" />
             <WordsStyle name="KEYWORD3" styleID="11" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="type1" />
@@ -770,7 +770,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="TRIPLE DOUBLE" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CLASS NAME" styleID="8" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="FUNC NAME" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="11" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT BLOCK" styleID="12" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="STRING EOL" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -796,7 +796,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING RAW" styleID="20" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -822,11 +822,11 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="COMMENT" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="GLOBAL" styleID="3" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="EVENT" styleID="4" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
-            <WordsStyle name="ATTRIBUTE" styleID="5" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
+            <WordsStyle name="ATTRIBUTE" styleID="5" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="CONTROL" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
             <WordsStyle name="COMMAND" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type3" />
             <WordsStyle name="STRING" styleID="8" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="9" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="9" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="haskell" desc="Haskell" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -840,7 +840,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="CAPITAL" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DATA" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IMPORT" styleID="10" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="11" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="11" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTANCE" styleID="12" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="13" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT BLOCK" styleID="14" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -859,7 +859,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING" styleID="8" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING BLOCK" styleID="9" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PREPROCESSOR" styleID="10" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="11" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="11" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="12" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CONSTANT" styleID="13" fgColor="8FB0F2" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="HEXNUMBER" styleID="14" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -873,8 +873,8 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="TAG" styleID="1" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="TAG END" styleID="11" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TAG UNKNOWN" styleID="2" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="ATTRIBUTE" styleID="3" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="ATTRIBUTE UNKNOWN" styleID="4" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="ATTRIBUTE" styleID="3" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="ATTRIBUTE UNKNOWN" styleID="4" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SGML DEFAULT" styleID="21" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SGML COMMAND" styleID="22" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="SGML 1ST PARAM" styleID="23" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -888,10 +888,10 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="USER TAGS2" styleID="193" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle2" />
             <WordsStyle name="USER TAGS3" styleID="194" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle3" />
             <WordsStyle name="USER TAGS4" styleID="195" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle4" />
-            <WordsStyle name="USER ATTRIBUTES1" styleID="196" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle5">download</WordsStyle>
-            <WordsStyle name="USER ATTRIBUTES2" styleID="197" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle6" />
-            <WordsStyle name="USER ATTRIBUTES3" styleID="198" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle7" />
-            <WordsStyle name="USER ATTRIBUTES4" styleID="199" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle8" />
+            <WordsStyle name="USER ATTRIBUTES1" styleID="196" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle5">download</WordsStyle>
+            <WordsStyle name="USER ATTRIBUTES2" styleID="197" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle6" />
+            <WordsStyle name="USER ATTRIBUTES3" styleID="198" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle7" />
+            <WordsStyle name="USER ATTRIBUTES4" styleID="199" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle8" />
         </LexerType>
         <LexerType name="ihex" desc="Intel HEX" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -925,7 +925,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="KEYWORD" styleID="2" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre2" />
-            <WordsStyle name="PARAMETER" styleID="3" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
+            <WordsStyle name="PARAMETER" styleID="3" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="SECTION" styleID="4" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="PREPROCESSOR" styleID="5" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
             <WordsStyle name="PREPROCESSOR INLINE" styleID="6" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -943,7 +943,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -970,7 +970,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="SINGLE STRING" styleID="49" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TEMPLATE LIT. (CLIENT)" styleID="53" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TEMPLATE LIT. (SERVER)" styleID="68" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="SYMBOLS" styleID="50" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOLS" styleID="50" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="52" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="42" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="43" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -993,7 +993,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING RAW" styleID="20" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -1016,11 +1016,11 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="1" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="2" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING EOL" styleID="3" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="PROPERTY NAME" styleID="4" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="PROPERTY NAME" styleID="4" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="ESCAPE SEQUENCE" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="LINE COMMENT" styleID="6" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="BLOCK COMMENT" styleID="7" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="8" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="8" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="URI" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMPACT IRI" styleID="10" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORD" styleID="11" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1"/>
@@ -1037,7 +1037,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="MACRO" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="INSTRUCTION WORD" styleID="7" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="FUNCTION" styleID="8" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
-            <WordsStyle name="OPERATOR" styleID="9" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="9" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="lisp" desc="LISP" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1045,10 +1045,10 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="FUNCTION WORD" styleID="3" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="FUNCTION WORD2" styleID="4" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
-            <WordsStyle name="SYMBOL" styleID="5" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOL" styleID="5" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="9" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="SPECIAL" styleID="11" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="12" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
         </LexerType>
@@ -1078,7 +1078,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="FUNC1" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="FUNC2" styleID="14" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="FUNC3" styleID="15" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
@@ -1098,7 +1098,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="PREPROCESSOR" styleID="2" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="3" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="4" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="4" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TARGET" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDEOL" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
@@ -1109,7 +1109,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="3" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION WORD" styleID="4" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="5" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DOUBLE QUOTE STRING" styleID="8" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
@@ -1124,7 +1124,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="NUMBER" styleID="3" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="5" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="5" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="6" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VARIABLE" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COL NAME" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1146,8 +1146,8 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING" styleID="12" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGISTER" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="HEXADECIMAL NUMBER" styleID="14" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="15" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="SYMBOL" styleID="16" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
+            <WordsStyle name="OPERATOR" styleID="15" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOL" styleID="16" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="COMMENT OTHERWISE" styleID="17" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
         </LexerType>
         <LexerType name="nfo" desc="DOS Style" ext="">
@@ -1185,7 +1185,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="TRIPLE DOUBLE QUOTES" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CLASS NAME DEFINITION" styleID="8" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="FUNCTION OR METHOD NAME DEFINITION" styleID="9" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATORS" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIERS" styleID="11" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT-BLOCKS" styleID="12" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="END OF LINE WHERE STRING IS NOT CLOSED" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1218,12 +1218,12 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="IDENTIFIER" styleID="9" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SERVER-GLOBAL VARIABLE (PREFIXED BY $)" styleID="10" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="LANGUAGE NATIVE KEYWORD OR RESERVED WORD" styleID="11" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
-            <WordsStyle name="OPERATOR; EITHER SYMBOLIC OR LITERAL" styleID="12" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
+            <WordsStyle name="OPERATOR; EITHER SYMBOLIC OR LITERAL" styleID="12" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="LABEL TO JUMP TO WITH THE GOTO STATEMENT" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TYPE" styleID="14" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
             <WordsStyle name="FUNCTION" styleID="15" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type3" />
             <WordsStyle name="STATIC BUILT-IN OBJECT" styleID="16" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type4" />
-            <WordsStyle name="OBJECT PROPERTY" styleID="17" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OBJECT PROPERTY" styleID="17" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="OBJECT METHOD" styleID="18" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="objc" desc="Objective-C" ext="">
@@ -1236,7 +1236,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -1259,7 +1259,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="INSTRUCTION WORD" styleID="9" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="10" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="12" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="13" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="13" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="ASM" styleID="14" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="MULTILINESTRING" styleID="15" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
@@ -1267,12 +1267,12 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1">carp croak</WordsStyle>
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="11" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SCALAR" styleID="12" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="ARRAY" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="HASH" styleID="14" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="SYMBOL TABLE" styleID="15" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOL TABLE" styleID="15" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PROTOTYPE" styleID="40" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="STRING SINGLEQUOTE" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1318,7 +1318,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="VARIABLE" styleID="123" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="124" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="125" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="127" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="127" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PREDEFINED" styleID="213" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle6" />
             <WordsStyle name="FUNCS AND METHODS 1" styleID="214" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle7" />
             <WordsStyle name="FUNCS AND METHODS 2" styleID="215" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle8" />
@@ -1353,7 +1353,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="CHARACTER" styleID="3" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VARIABLE" styleID="5" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION WORD" styleID="8" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="CMDLET" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
@@ -1379,7 +1379,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORD1" styleID="3" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEYWORD2" styleID="10" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre2" />
             <WordsStyle name="KEYWORD3" styleID="11" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="type1" />
@@ -1401,12 +1401,12 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="TRIPLE DOUBLE" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CLASS NAME" styleID="8" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DEF NAME" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="11" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT BLOCK" styleID="12" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="BUILTINS" styleID="14" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="DECORATOR" styleID="15" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="ATTRIBUTE" styleID="20" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="ATTRIBUTE" styleID="20" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="F STRING" styleID="16" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="F CHARACTER" styleID="17" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="F TRIPLE" styleID="18" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1429,7 +1429,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="5" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING2" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="8" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="8" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="9" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INFIX" styleID="10" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INFIXEOL" styleID="11" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1457,7 +1457,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="ADVERB" styleID="15" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type5" />
             <WordsStyle name="NUMBER" styleID="16" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PREPROCESSOR" styleID="17" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="18" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="18" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION WORD" styleID="19" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="FUNCTION" styleID="20" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
             <WordsStyle name="IDENTIFIER" styleID="21" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1477,7 +1477,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -1503,7 +1503,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="LINE COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="BLOCK COMMENT" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="PREFACE" styleID="3" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATORS" styleID="4" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS" styleID="4" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTERS" styleID="5" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING WITH QUOTES" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING WITH BRACES" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1541,8 +1541,8 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="ESCAPED CHARACTERS IN STRINGS" styleID="8" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="GUID IN KEY PATH" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="GUID IN STRING" styleID="10" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="PARAMETER" styleID="11" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATORS" styleID="12" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="PARAMETER" styleID="11" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS" styleID="12" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="ruby" desc="Ruby" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1555,11 +1555,11 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CLASS NAME" styleID="8" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DEF NAME" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="11" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="12" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="GLOBAL" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="SYMBOL" styleID="14" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOL" styleID="14" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="MODULE NAME" styleID="15" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTANCE VAR" styleID="16" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CLASS VAR" styleID="17" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1585,7 +1585,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="REGULAR STRING" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="RAW STRING" styleID="14" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="15" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="16" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="16" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="17" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="LIFETIME" styleID="18" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="MACRO" styleID="19" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1602,7 +1602,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT BLOCK" styleID="3" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="5" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="5" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="6" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="MACRO" styleID="11" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1617,10 +1617,10 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="FUNCTION WORD" styleID="3" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="FUNCTION WORD2" styleID="4" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
-            <WordsStyle name="SYMBOL" styleID="5" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOL" styleID="5" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="9" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="SPECIAL" styleID="11" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="12" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
         </LexerType>
@@ -1629,7 +1629,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING" styleID="1" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="NUMBER" styleID="2" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="3" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
-            <WordsStyle name="SYMBOL" styleID="4" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOL" styleID="4" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="BINARY" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="BOOL" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SELF" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1650,7 +1650,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="KEYWORD2" styleID="3" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre2" />
             <WordsStyle name="KEYWORD3" styleID="4" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="type1" />
             <WordsStyle name="NUMBER" styleID="5" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATORS (DELIMITERS)" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATORS (DELIMITERS)" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VALUE" styleID="7" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="8" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
         </LexerType>
@@ -1661,11 +1661,11 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING2" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
             <WordsStyle name="COMMENT DOC" styleID="3" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
-            <WordsStyle name="Q OPERATOR" styleID="24" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="Q OPERATOR" styleID="24" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="srec" desc="S-Record" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1695,7 +1695,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -1726,7 +1726,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="3" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SUB BRACE" styleID="9" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SUBSTITUTION" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="7" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="WORD IN QUOTE" styleID="4" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IN QUOTE" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1759,7 +1759,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SPECIAL" styleID="1" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="GROUP" styleID="2" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="SYMBOL" styleID="3" fgColor="927D8A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SYMBOL" styleID="3" fgColor="887882" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMAND" styleID="4" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TEXT" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
@@ -1772,7 +1772,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="TABLE" styleID="5" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="KEY" styleID="6" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="ERROR" styleID="7" fgColor="F06A6A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="8" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="8" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING SQ" styleID="9" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING DQ" styleID="10" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TRIPLE STRING SQ" styleID="11" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1817,7 +1817,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING RAW" styleID="20" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="VERBATIM" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="REGEX" styleID="14" fgColor="9ED0C4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="A58799" bgColor="1D121A" fontName="" fontStyle="2" fontSize="" />
@@ -1842,7 +1842,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="WORD" styleID="3" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="STRING" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PREPROCESSOR" styleID="5" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="6" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="6" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DATE" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
        <LexerType name="verilog" desc="Verilog" ext="">
@@ -1850,7 +1850,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="IDENTIFIER" styleID="11" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
             <WordsStyle name="KEYWORD" styleID="7" fgColor="FD7CA5" bgColor="1D121A" fontName="" fontStyle="1" fontSize="" keywordClass="type1" />
-            <WordsStyle name="OPERATOR" styleID="10" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="NUMBER" styleID="4" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="BAA8DC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="6" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1867,11 +1867,11 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="NUMBER" styleID="3" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING" styleID="4" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="STRING EOL" styleID="7" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="5" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="5" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="IDENTIFIER" styleID="6" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="INSTRUCTION" styleID="8" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
-            <WordsStyle name="STD OPERATOR" styleID="9" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
-            <WordsStyle name="ATTRIBUTE" styleID="10" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
+            <WordsStyle name="STD OPERATOR" styleID="9" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre2" />
+            <WordsStyle name="ATTRIBUTE" styleID="10" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type1" />
             <WordsStyle name="STD FUNCTION" styleID="11" fgColor="FEAFD4" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type2" />
             <WordsStyle name="STD PACKAGE" styleID="12" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type3" />
             <WordsStyle name="STD TYPE" styleID="13" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="type4" />
@@ -1890,7 +1890,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="VARIABLE" styleID="9" fgColor="E7C5D8" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="ANONYMOUS" styleID="10" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="NUMBER" styleID="11" fgColor="E8C98A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="OPERATOR" styleID="12" fgColor="B29AA9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="OPERATOR" styleID="12" fgColor="C6B7C0" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER" styleID="13" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER TOO MANY" styleID="14" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CHARACTER ESCAPE ERROR" styleID="15" fgColor="A3DAA3" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1913,8 +1913,8 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="TAG" styleID="1" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TAG END" styleID="11" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="TAG UNKNOWN" styleID="2" fgColor="DDB0EC" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="ATTRIBUTE" styleID="3" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="ATTRIBUTE UNKNOWN" styleID="4" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="ATTRIBUTE" styleID="3" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="ATTRIBUTE UNKNOWN" styleID="4" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SGML DEFAULT" styleID="21" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="SGML COMMAND" styleID="22" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="instre1" />
             <WordsStyle name="SGML 1ST PARAM" styleID="23" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1923,14 +1923,14 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
             <WordsStyle name="SGML BLOCK DEFAULT" styleID="31" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="CDATA" styleID="17" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="ENTITY" styleID="10" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
-            <WordsStyle name="USER ATTRIBUTES 1" styleID="192" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle1" />
-            <WordsStyle name="USER ATTRIBUTES 2" styleID="193" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle2" />
-            <WordsStyle name="USER ATTRIBUTES 3" styleID="194" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle3" />
-            <WordsStyle name="USER ATTRIBUTES 4" styleID="195" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle4" />
-            <WordsStyle name="USER ATTRIBUTES 5" styleID="196" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle5" />
-            <WordsStyle name="USER ATTRIBUTES 6" styleID="197" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle6" />
-            <WordsStyle name="USER ATTRIBUTES 7" styleID="198" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle7" />
-            <WordsStyle name="USER ATTRIBUTES 8" styleID="199" fgColor="C0B0CE" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle8" />
+            <WordsStyle name="USER ATTRIBUTES 1" styleID="192" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle1" />
+            <WordsStyle name="USER ATTRIBUTES 2" styleID="193" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle2" />
+            <WordsStyle name="USER ATTRIBUTES 3" styleID="194" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle3" />
+            <WordsStyle name="USER ATTRIBUTES 4" styleID="195" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle4" />
+            <WordsStyle name="USER ATTRIBUTES 5" styleID="196" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle5" />
+            <WordsStyle name="USER ATTRIBUTES 6" styleID="197" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle6" />
+            <WordsStyle name="USER ATTRIBUTES 7" styleID="198" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle7" />
+            <WordsStyle name="USER ATTRIBUTES 8" styleID="199" fgColor="E5B09A" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" keywordClass="substyle8" />
         </LexerType>
         <LexerType name="yaml" desc="YAML" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="EDE1E9" bgColor="1D121A" fontName="" fontStyle="0" fontSize="" />
@@ -1985,9 +1985,9 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Mark Style 5" styleID="21" fgColor="12090F" bgColor="DDB0EC" />
         <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="BA4889" />
         <WidgetStyle name="Tags match highlighting" styleID="27" bgColor="432C3B" />
-        <WidgetStyle name="Tags attribute" styleID="26" fgColor="C0B0CE" />
+        <WidgetStyle name="Tags attribute" styleID="26" fgColor="E5B09A" />
         <WidgetStyle name="Active tab focused indicator" styleID="0" fgColor="FD7CA5" />
-        <WidgetStyle name="Active tab unfocused indicator" styleID="0" fgColor="6B5764" />
+        <WidgetStyle name="Active tab unfocused indicator" styleID="0" fgColor="887882" />
         <WidgetStyle name="Active tab text" styleID="0" fgColor="EDE1E9" />
         <WidgetStyle name="Inactive tabs" styleID="0" fgColor="C6B7C0" bgColor="12090F" />
         <WidgetStyle name="Tab color 1" styleID="0" bgColor="1D121A" fgColor="EDE1E9" />

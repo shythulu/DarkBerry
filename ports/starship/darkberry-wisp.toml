@@ -226,20 +226,20 @@ disabled = true
 
 [palettes.darkberry]
 # Roles: meaning. Change these in src/roles.json, not here.
-cursor      = "#b7437d"
-success     = "#377a37"
-warning     = "#90670a"
-error       = "#cc3838"
-info        = "#1d7d6c"
+cursor      = "#a83570"
+success     = "#2c6f2d"
+warning     = "#815b02"
+error       = "#bb262a"
+info        = "#006f5f"
 text_subtle = "#967d8c"
-frame       = "#ac93a2"
+frame       = "#967d8c"
 rule        = "#c3abb9"
 
 # Palette colours: no role carries these meanings.
-berry      = "#d21570"
-plum       = "#9a4cc0"
-lavender   = "#7a58b0"
-apricot    = "#b15423"
-frost      = "#1b778c"
-gooseberry = "#377a37"
-honey      = "#90670a"
+berry      = "#bf0b64"
+plum       = "#8c3eb2"
+lavender   = "#7350a8"
+apricot    = "#a24712"
+frost      = "#026b80"
+gooseberry = "#2c6f2d"
+honey      = "#815b02"
