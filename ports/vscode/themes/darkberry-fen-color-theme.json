@@ -25,7 +25,7 @@
       "name": "haskell variable generic-type",
       "scope": "variable.other.generic-type.haskell",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -39,7 +39,7 @@
       "name": "support.variable.magic.python",
       "scope": "support.variable.magic.python",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -53,7 +53,7 @@
       "name": "variable.parameter.function.language.special.self.python",
       "scope": "variable.parameter.function.language.special.self.python",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -81,7 +81,7 @@
       "name": "variable.language.rust",
       "scope": "variable.language.rust",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -116,7 +116,7 @@
       "name": "Text",
       "scope": "variable.parameter.function",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -158,7 +158,7 @@
       "name": "c++ function",
       "scope": "meta.function.c,meta.function.cpp",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -207,7 +207,7 @@
       "name": "java source",
       "scope": "source.java",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -249,7 +249,7 @@
       "name": "java variable.name",
       "scope": "meta.definition.variable.name.java",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -360,7 +360,7 @@
       "name": "js/ts console",
       "scope": "support.type.object.console",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -402,7 +402,7 @@
       "name": "js dom",
       "scope": "support.type.object.dom",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -458,7 +458,7 @@
       "name": "python parameter",
       "scope": "variable.parameter.function.language.python",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -479,7 +479,7 @@
       "name": "pyCs",
       "scope": "variable.parameter.function.python",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -542,28 +542,28 @@
       "name": "Variables",
       "scope": "variable",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
       "name": "Variables",
       "scope": "variable.c",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
       "name": "Language variables",
       "scope": "variable.language",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
       "name": "Java Variables",
       "scope": "token.variable.parameter.java",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -951,7 +951,7 @@
       "name": "Embedded",
       "scope": "punctuation.section.embedded, variable.interpolation",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1190,7 +1190,7 @@
       "name": "parameter function js/ts",
       "scope": "function.parameter",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1204,7 +1204,7 @@
       "name": "parameter function ruby cs",
       "scope": "function.parameter.ruby, function.parameter.cs",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1267,7 +1267,7 @@
       "name": "cs local variable",
       "scope": "entity.name.variable.local.cs",
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1311,7 +1311,7 @@
         "meta.template.expression"
       ],
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1356,7 +1356,7 @@
         "variable.parameter.function.js"
       ],
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1512,7 +1512,7 @@
         "variable.parameter.function.coffee"
       ],
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1566,7 +1566,7 @@
         "meta.definition.variable.name.groovy"
       ],
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1608,7 +1608,7 @@
         "text.bracketed"
       ],
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1645,7 +1645,7 @@
         "constant.character.character-class.regexp.xi"
       ],
       "settings": {
-        "foreground": "#e6b2d4"
+        "foreground": "#eaafd6"
       }
     },
     {
@@ -1836,7 +1836,7 @@
     "activityBar.foreground": "#f2e6ee",
     "activityBar.background": "#4f3143",
     "activityBar.inactiveForeground": "#f2e6ee66",
-    "activityBarBadge.background": "#ba4889",
+    "activityBarBadge.background": "#dc67a7",
     "activityBar.border": "#6c4c60",
     "activityBar.activeBackground": "#402838",
     "sideBar.background": "#402838",
@@ -1869,7 +1869,7 @@
     "statusBar.debuggingForeground": "#f2e6ee",
     "statusBar.noFolderBackground": "#4f3143",
     "statusBar.noFolderForeground": "#f2e6ee",
-    "statusBarItem.remoteBackground": "#ba4889",
+    "statusBarItem.remoteBackground": "#dc67a7",
     "titleBar.activeBackground": "#402838",
     "titleBar.activeForeground": "#f2e6ee",
     "titleBar.inactiveBackground": "#35212e",
@@ -1890,8 +1890,8 @@
     "commandCenter.activeBackground": "#66465a",
     "commandCenter.activeForeground": "#f2e6ee",
     "commandCenter.inactiveForeground": "#a28297",
-    "button.background": "#ba4889",
-    "button.hoverBackground": "#cc6f9b",
+    "button.background": "#dc67a7",
+    "button.hoverBackground": "#e082ad",
     "button.border": "#f2e6ee1f",
     "button.secondaryForeground": "#f2e6ee",
     "button.secondaryBackground": "#66465a",
@@ -1915,7 +1915,7 @@
     "editor.selectionHighlightBorder": "#c496a660",
     "editor.findMatchBackground": "#81586d80",
     "editor.findMatchBorder": "#c496a6",
-    "editor.findMatchHighlightBackground": "#ba488940",
+    "editor.findMatchHighlightBackground": "#dc67a740",
     "editor.findMatchHighlightBorder": "#f2e6ee00",
     "editor.findRangeHighlightBackground": "#66465a66",
     "editor.findRangeHighlightBorder": "#f2e6ee00",
@@ -1955,7 +1955,7 @@
     "panelTitle.activeBorder": "#f2e6ee",
     "panelTitle.activeForeground": "#f2e6ee",
     "panelTitle.inactiveForeground": "#f2e6ee99",
-    "badge.background": "#ba4889",
+    "badge.background": "#dc67a7",
     "terminal.border": "#6c4c6080",
     "breadcrumb.background": "#4f3143",
     "breadcrumb.foreground": "#ccbac5cc",
@@ -1978,7 +1978,7 @@
     "scrollbarSlider.background": "#8f6e8266",
     "scrollbarSlider.hoverBackground": "#8f6e82b3",
     "scrollbarSlider.activeBackground": "#bd9fb166",
-    "progressBar.background": "#ba4889",
+    "progressBar.background": "#dc67a7",
     "widget.shadow": "#35212e5c",
     "editorWidget.foreground": "#ccbac5",
     "editorWidget.background": "#462c3c",
@@ -2072,10 +2072,10 @@
     "toolbar.hoverBackground": "#81586d58",
     "toolbar.activeBackground": "#81586d80",
     "toolbar.hoverOutline": "#35212e00",
-    "activityBarBadge.foreground": "#ffffff",
-    "badge.foreground": "#ffffff",
-    "button.foreground": "#ffffff",
-    "statusBarItem.remoteForeground": "#ffffff",
+    "activityBarBadge.foreground": "#35212e",
+    "badge.foreground": "#35212e",
+    "button.foreground": "#35212e",
+    "statusBarItem.remoteForeground": "#35212e",
     "inputOption.activeForeground": "#f2e6ee",
     "terminalCursor.foreground": "#ffc4dd",
     "terminalCursor.background": "#35212e",

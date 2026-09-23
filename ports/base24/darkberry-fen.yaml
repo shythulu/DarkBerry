@@ -73,7 +73,7 @@ palette:
   base0C: "#b0dfd9"  # cyan: support, regex, escapes, quotes
   base0D: "#a4c3f6"  # blue: functions, methods, headings
   base0E: "#fa99b4"  # magenta: keywords, storage, markup italic
-  base0F: "#e6b2d4"  # dark red, ANSI 17: deprecated code, embedded tags
+  base0F: "#eaafd6"  # dark red, ANSI 17: deprecated code, embedded tags
 
   # The two recessed backgrounds. Light flavours keep these recessed rather than
   # raised, as every scheme in the tinted-theming repository does and the spec's

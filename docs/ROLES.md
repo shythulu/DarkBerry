@@ -10,12 +10,12 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.text` | `text` | `#4f3143` | `#f2e6ee` | `#efe3eb` | `#ede1e9` | same |
 | `ui.text.muted` | `subtext0` | `#694e5f` | `#ccbac5` | `#cbbcc5` | `#c6b7c0` | same |
 | `ui.text.subtle` | `overlay1` | `#967d8c` | `#a28297` | `#91828b` | `#887882` | same |
-| `ui.accent` | `fen: berry, dark: jam, light: jam` | `#b9488b` | `#fa99b4` | `#ba4889` | `#ba4889` | lavender (terminal borders), blue (tags) |
-| `ui.on.accent` | `fen: crust, dark: onjam, light: onjam` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` | base (text on accent) |
-| `ui.fill` | `jam` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` | no equivalent (accents are used as fills directly) |
-| `ui.on.fill` | `onjam` | `#ffffff` | `#ffffff` | `#ffffff` | `#ffffff` | base (text on accent) |
+| `ui.accent` | `jam` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` | lavender (terminal borders), blue (tags) |
+| `ui.on.accent` | `ui.on.fill` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` | base (text on accent) |
+| `ui.fill` | `jam` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` | no equivalent (accents are used as fills directly) |
+| `ui.on.fill` | `onjam` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` | base (text on accent) |
 | `ui.focus` | `mix(cherry,overlay1,0.5)` | `#9e5e70` | `#c496a6` | `#b28a93` | `#ae848f` | lavender |
-| `ui.border.active` | `ui.accent` | `#b9488b` | `#fa99b4` | `#ba4889` | `#ba4889` | lavender |
+| `ui.border.active` | `ui.accent` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` | lavender |
 | `ui.border.inactive` | `overlay1` | `#967d8c` | `#a28297` | `#91828b` | `#887882` | overlay0 |
 | `ui.cursor` | `petal` | `#a83570` | `#ffc4dd` | `#feafd4` | `#feafd4` | rosewater |
 | `ui.cursor.text` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
@@ -36,10 +36,10 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.tab.inactive` | `ui.pane.secondary` | `#f3e6ef` | `#402838` | `#23161f` | `#170d13` |  |
 | `ui.tab.indicator` | `tint` | `#d21570` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` |  |
 | `ui.on.tab.indicator` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` |  |
-| `ui.badge` | `ui.fill` | `#b9488b` | `#ba4889` | `#ba4889` | `#ba4889` |  |
-| `ui.on.badge` | `ui.on.fill` | `#ffffff` | `#ffffff` | `#ffffff` | `#ffffff` |  |
+| `ui.badge` | `ui.fill` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` |  |
+| `ui.on.badge` | `ui.on.fill` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` |  |
 | `terminal.color16` | `apricot` | `#a24712` | `#f7bf9e` | `#f2ad8a` | `#f2ad8a` | same |
-| `terminal.color17` | `blossom` | `#934b66` | `#e6b2d4` | `#e7c5d8` | `#e7c5d8` | same |
+| `terminal.color17` | `blossom` | `#934b66` | `#eaafd6` | `#e7c5d8` | `#e7c5d8` | same |
 | `syntax.text` | `text` | `#4f3143` | `#f2e6ee` | `#efe3eb` | `#ede1e9` | same |
 | `syntax.keyword` | `berry` | `#bf0b64` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` | mauve |
 | `syntax.function` | `petal` | `#a83570` | `#ffc4dd` | `#feafd4` | `#feafd4` | blue |
@@ -49,7 +49,7 @@ Generated from `src/roles.json`. Every port references these names.
 | `syntax.number` | `honey` | `#815b02` | `#f0d6a0` | `#e8c98a` | `#e8c98a` | peach |
 | `syntax.string` | `gooseberry` | `#2c6f2d` | `#b7e6b7` | `#a3daa3` | `#a3daa3` | same |
 | `syntax.regex` | `juniper` | `#006f5f` | `#b0dfd9` | `#9ed0c4` | `#9ed0c4` | pink |
-| `syntax.variable` | `blossom` | `#934b66` | `#e6b2d4` | `#e7c5d8` | `#e7c5d8` | text (maroon for parameters) |
+| `syntax.variable` | `blossom` | `#934b66` | `#eaafd6` | `#e7c5d8` | `#e7c5d8` | text (maroon for parameters) |
 | `syntax.property` | `dark: mix(apricot,subtext0,0.3), light: mix(bilberry,subtext0,0.5)` | `#435982` | `#eabeaa` | `#e6b29c` | `#e5b09a` | blue |
 | `syntax.operator` | `dark: subtext0, light: mix(subtext0,subtext1,0.6)` | `#604656` | `#ccbac5` | `#cbbcc5` | `#c6b7c0` | sky |
 | `syntax.punctuation` | `dark: overlay1, light: mix(overlay1,overlay2,0.2)` | `#8f7685` | `#a28297` | `#91828b` | `#887882` | overlay2 |
@@ -64,10 +64,10 @@ Generated from `src/roles.json`. Every port references these names.
 
 | Role | Darkberry | Catppuccin | Why |
 |---|---|---|---|
-| `ui.accent` | `{"fen":"berry","dark":"jam","light":"jam"}` | lavender (terminal borders), blue (tags) | Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Fen is the exception: jam is 2.4:1 on its plum base, so Fen's accent is berry (5.6:1), the same family as its tint. Fills stay jam everywhere. |
-| `ui.on.accent` | `{"fen":"crust","dark":"onjam","light":"onjam"}` | base (text on accent) | Base on jam is 2.4 to 4.5:1. White reads on jam at 4.8:1 in every flavour; on Fen's berry accent crust reads at 7.3:1. |
+| `ui.accent` | `jam` | lavender (terminal borders), blue (tags) | Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Jam's lightness is set per flavour by the fill equation (lib/derive.mjs) so it clears every background by 3.5:1. |
+| `ui.on.accent` | `ui.on.fill` | base (text on accent) | Text on the accent is text on the fill: onjam, chosen by the fill equation as white or crust, whichever reads on that flavour's jam. |
 | `ui.fill` | `jam` | no equivalent (accents are used as fills directly) | A deeper jam colour is kept for buttons, badges and progress bars, so saturated pink never covers large areas. |
-| `ui.on.fill` | `onjam` | base (text on accent) | Base on jam fails contrast in every flavour (about 3:1). White passes at 4.8:1. |
+| `ui.on.fill` | `onjam` | base (text on accent) | Base on jam failed contrast in every flavour. onjam is white or crust per flavour, whichever reads best on that flavour's jam (the fill equation in lib/derive.mjs), and must reach 4.5:1. |
 | `ui.focus` | `mix(cherry,overlay1,0.5)` | lavender | A soft berry focus ring stays visible without competing with the berry accent. |
 | `ui.border.active` | `ui.accent` | lavender | Follows ui.accent. |
 | `ui.border.inactive` | `overlay1` | overlay0 | overlay0 is under 3:1 on Wisp, Fen and Blackwater backgrounds, so an unfocused split or window edge was not reliably visible. overlay1 clears 3:1 in every flavour. |

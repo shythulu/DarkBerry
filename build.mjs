@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { rgb, mix, toHsl, toOklch, contrast, deltaE } from "./lib/color.mjs";
 import { indexRoles, flavourContext } from "./lib/resolve.mjs";
+import { fillSettled, FILL_ON_BACKGROUND, TEXT_ON_FILL } from "./lib/derive.mjs";
 
 const root = path.dirname(new URL(import.meta.url).pathname);
 const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
@@ -38,6 +39,9 @@ for (const [name, r] of Object.entries(roleIndex)) {
   if (HEX_LITERAL.test(JSON.stringify(r.value))) errors.push(`role ${name} uses a literal hex value`);
 }
 
+// ---------- the fill equation (lib/derive.mjs) ----------
+for (const [id, f] of Object.entries(P.flavours))
+  if (!fillSettled(f.colors)) errors.push(`${f.name}: jam/onjam are not settled (jam ${FILL_ON_BACKGROUND}:1 on base, onjam ${TEXT_ON_FILL}:1 on jam); run node tools/settle.mjs`);
 // ---------- per-flavour resolution (lib/resolve.mjs) ----------
 const ctxs = Object.entries(P.flavours).map(([id, f]) => flavourContext(id, f, ROLES, roleIndex));
 const usageRef = ctxs.find((x) => x.id === "mire") || ctxs.find((x) => x.f.dark) || ctxs[0];

@@ -31,7 +31,7 @@ Columns: 8
 251 244 248	Wisp Base
 243 230 239	Wisp Mantle
 235 218 229	Wisp Crust
-230 178 212	Fen Blossom
+234 175 214	Fen Blossom
 255 196 221	Fen Petal
 250 153 180	Fen Berry
 236 188 252	Fen Plum
@@ -45,8 +45,8 @@ Columns: 8
 156 198 234	Fen Bilberry
 164 195 246	Fen Blueberry
 201 176 232	Fen Lavender
-186  72 137	Fen Jam
-255 255 255	Fen Onjam
+220 103 167	Fen Jam
+ 53  33  46	Fen Onjam
 250 153 180	Fen Tint
 242 230 238	Fen Text
 223 206 217	Fen Subtext1
@@ -74,7 +74,7 @@ Columns: 8
 127 180 224	Mire Bilberry
 143 176 242	Mire Blueberry
 186 168 220	Mire Lavender
-186  72 137	Mire Jam
+190  76 141	Mire Jam
 255 255 255	Mire Onjam
 253 124 165	Mire Tint
 239 227 235	Mire Text

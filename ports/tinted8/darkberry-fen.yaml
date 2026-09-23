@@ -117,11 +117,11 @@ syntax:
   support.constant: "#a4c3f6"
   support.function: "#ffc4dd"
   support.type: "#ecbcfc"
-  support.variable: "#e6b2d4"
-  variable: "#e6b2d4"
-  variable.language: "#e6b2d4"
+  support.variable: "#eaafd6"
+  variable: "#eaafd6"
+  variable.language: "#eaafd6"
   variable.other.property: "#eabeaa"
-  variable.parameter: "#e6b2d4"
+  variable.parameter: "#eaafd6"
 
 # UI. These keys do not inherit -- each one falls back to a builder default on
 # its own -- so every surface Darkberry has an opinion about is named here.
@@ -135,7 +135,7 @@ syntax:
 # answer: write what the reader accepts. Verified by building all four flavours
 # with it.
 ui:
-  accent.normal: "#fa99b4"
+  accent.normal: "#dc67a7"
   border.normal: "#a28297"
   chrome.background.normal: "#402838"
   chrome.background.dark: "#35212e"
@@ -156,8 +156,8 @@ ui:
   global.foreground.light: "#f2e6ee"
   gutter.background: "#402838"
   gutter.foreground: "#a28297"
-  highlight.button.background: "#ba4889"
-  highlight.button.foreground: "#ffffff"
+  highlight.button.background: "#dc67a7"
+  highlight.button.foreground: "#35212e"
   # The one background in the theme built to be written on: the build fails
   # unless it holds 85% of every syntax role's own minimum contrast.
   highlight.line.background: "#543648"

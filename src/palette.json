@@ -93,7 +93,7 @@
         "base": "#4f3143",
         "mantle": "#402838",
         "crust": "#35212e",
-        "blossom": "#e6b2d4",
+        "blossom": "#eaafd6",
         "petal": "#ffc4dd",
         "berry": "#fa99b4",
         "plum": "#ecbcfc",
@@ -107,8 +107,8 @@
         "bilberry": "#9cc6ea",
         "blueberry": "#a4c3f6",
         "lavender": "#c9b0e8",
-        "jam": "#ba4889",
-        "onjam": "#ffffff",
+        "jam": "#dc67a7",
+        "onjam": "#35212e",
         "tint": "#fa99b4"
       },
       "emoji": "🌾"
@@ -144,7 +144,7 @@
         "bilberry": "#7fb4e0",
         "blueberry": "#8fb0f2",
         "lavender": "#baa8dc",
-        "jam": "#ba4889",
+        "jam": "#be4c8d",
         "onjam": "#ffffff",
         "tint": "#fd7ca5"
       },

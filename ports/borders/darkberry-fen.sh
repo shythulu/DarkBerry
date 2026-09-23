@@ -11,5 +11,5 @@
 # beside the tiled gap without drawing the eye. Only the colours are the theme; width,
 # style and hidpi are plain defaults, so change them freely.
 borders style=round width=6.0 hidpi=on \
-  active_color=0xfffa99b4 \
+  active_color=0xffdc67a7 \
   inactive_color=0xffa28297

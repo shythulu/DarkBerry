@@ -135,7 +135,7 @@ syntax:
 # answer: write what the reader accepts. Verified by building all four flavours
 # with it.
 ui:
-  accent.normal: "#ba4889"
+  accent.normal: "#be4c8d"
   border.normal: "#91828b"
   chrome.background.normal: "#23161f"
   chrome.background.dark: "#1c1119"
@@ -156,7 +156,7 @@ ui:
   global.foreground.light: "#efe3eb"
   gutter.background: "#23161f"
   gutter.foreground: "#91828b"
-  highlight.button.background: "#ba4889"
+  highlight.button.background: "#be4c8d"
   highlight.button.foreground: "#ffffff"
   # The one background in the theme built to be written on: the build fails
   # unless it holds 85% of every syntax role's own minimum contrast.

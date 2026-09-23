@@ -12,6 +12,7 @@
 // keeps key syntax colours distinct.
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
+import { settleFill } from "../lib/derive.mjs";
 
 // Settings are relative to Darkberry. darkberry itself is the identity, used for grid tiles.
 export const VARIANTS = {
@@ -88,7 +89,7 @@ export function generate(P, variant, hueStep = 0, chromaStep = 0) {
       let n = 0;
       while (contrast(o.base, o.tint) < 4.5 && n++ < 60) { const [L, C, h] = toOklch(o.tint); o.tint = fromOklch(L + (f.dark ? 0.01 : -0.01), C, h); }
     }
-    if (contrast("#ffffff", o.jam) < 4.5) { let n = 0; while (contrast("#ffffff", o.jam) < 4.5 && n++ < 30) { const [H, S, l] = toHsl(o.jam); o.jam = fromHsl(H, S, l - 0.01); } }
+    Object.assign(o, settleFill(o)); // jam and onjam follow the fill equation (lib/derive.mjs)
   }
   return V;
 }

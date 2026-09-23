@@ -29,13 +29,13 @@
 
 @define-color hover-color #3e2936;
 @define-color widget-bg-color #23161f;
-@define-color selected-color #ba4889;
+@define-color selected-color #be4c8d;
 @define-color extreme-bg-color #1c1119;
 @define-color extreme-selected-color #502f3d;
 
 @define-color strong-border-color #4f3143;
 @define-color stronger-border-color #7d6976;
-@define-color edge-border-color #ba4889;
+@define-color edge-border-color #be4c8d;
 
 @define-color scrollbar-slider-color #7d6976;
 @define-color scrollbar-trough-color #23161f;

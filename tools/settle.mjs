@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import { toOklch, fromOklch, deltaE, contrast } from "../lib/color.mjs";
 import { indexRoles, flavourContext } from "../lib/resolve.mjs";
+import { settleFill } from "../lib/derive.mjs";
 
 const file = process.argv[2] || "src/palette.json", floor = +(process.argv[3] || 5.2);
 const P = JSON.parse(fs.readFileSync(file, "utf8"));
@@ -20,6 +21,7 @@ let report = [];
 
 for (const [id, f] of Object.entries(P.flavours)) {
   const c = f.colors, orig = { ...c };
+  Object.assign(c, settleFill(c)); // jam and onjam follow the fill equation first
   const ctx = () => flavourContext(id, f, ROLES, idx);
   const okContrast = (x) => syn.every(([k, r]) => ["ui.background", "ui.pane.secondary", "ui.pane.tertiary"].every((bg) => contrast(x.resolve(`syntax.${k}`)[0], x.resolve(bg)[0]) >= (r.minContrast ?? 4.5)));
   const pairs = (x) => { const out = []; for (let i = 0; i < syn.length; i++) for (let j = i + 1; j < syn.length; j++) { const a = x.resolve(`syntax.${syn[i][0]}`), b = x.resolve(`syntax.${syn[j][0]}`); out.push([deltaE(a[0], b[0]), syn[i][0], syn[j][0], [...a[1].palette, ...b[1].palette].filter((p) => accents.has(p))]); } return out.sort((p, q) => p[0] - q[0]); };

@@ -22,8 +22,8 @@
       "selected-text-color": "#ffc4dd"
     },
     "Variable": {
-      "text-color": "#e6b2d4",
-      "selected-text-color": "#e6b2d4"
+      "text-color": "#eaafd6",
+      "selected-text-color": "#eaafd6"
     },
     "ControlFlow": {
       "text-color": "#fa99b4",
@@ -109,8 +109,8 @@
       "selected-text-color": "#eabeaa"
     },
     "CommentVar": {
-      "text-color": "#e6b2d4",
-      "selected-text-color": "#e6b2d4"
+      "text-color": "#eaafd6",
+      "selected-text-color": "#eaafd6"
     },
     "RegionMarker": {
       "text-color": "#c9b0e8",
@@ -146,7 +146,7 @@
     "IconBorder": "#402838",
     "IndentationLine": "#6c4c60",
     "LineNumbers": "#a28297",
-    "CurrentLineNumber": "#fa99b4",
+    "CurrentLineNumber": "#dc67a7",
     "MarkBookmark": "#b0dfd9",
     "MarkBreakpointActive": "#ff8a8a",
     "MarkBreakpointReached": "#f0d6a0",
@@ -155,7 +155,7 @@
     "MarkWarning": "#f0d6a0",
     "MarkError": "#ff8a8a",
     "ModifiedLines": "#f0d6a0",
-    "ReplaceHighlight": "#ba4889",
+    "ReplaceHighlight": "#dc67a7",
     "SavedLines": "#b7e6b7",
     "SearchHighlight": "#6c4c60",
     "TextSelection": "#6e4457",

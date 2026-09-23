@@ -1954,7 +1954,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
     <GlobalStyles>
         <WidgetStyle name="Default Style" styleID="32" fgColor="EFE3EB" bgColor="2A1E26" fontName="Courier New" fontStyle="0" fontSize="10" />
         <WidgetStyle name="Indent guideline style" styleID="37" fgColor="3E2936" bgColor="2A1E26" fontName="" fontStyle="0" fontSize="" />
-        <WidgetStyle name="Brace highlight style" styleID="34" fgColor="BA4889" bgColor="3E2936" fontName="" fontStyle="1" fontSize="" />
+        <WidgetStyle name="Brace highlight style" styleID="34" fgColor="BE4C8D" bgColor="3E2936" fontName="" fontStyle="1" fontSize="" />
         <WidgetStyle name="Bad brace colour" styleID="35" fgColor="F06A6A" bgColor="2A1E26" fontName="" fontStyle="0" fontSize="" />
         <WidgetStyle name="Current line background colour" styleID="0" bgColor="32222C" />
         <WidgetStyle name="Selected text colour" styleID="0" bgColor="502F3D" fgColor="EFE3EB" />
@@ -1970,7 +1970,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Change History revert origin" styleID="0" fgColor="86C0CC" bgColor="86C0CC" />
         <WidgetStyle name="Change History saved" styleID="0" fgColor="A3DAA3" bgColor="A3DAA3" />
         <WidgetStyle name="Fold" styleID="0" fgColor="7D6976" bgColor="23161F" />
-        <WidgetStyle name="Fold active" styleID="0" fgColor="BA4889" />
+        <WidgetStyle name="Fold active" styleID="0" fgColor="BE4C8D" />
         <WidgetStyle name="Fold margin" styleID="0" fgColor="1C1119" bgColor="23161F" />
         <WidgetStyle name="White space symbol" styleID="0" fgColor="7D6976" />
         <WidgetStyle name="Smart Highlighting" styleID="29" fgColor="1C1119" bgColor="BAA8DC" />
@@ -1983,7 +1983,7 @@ Copy into %APPDATA%\Notepad++\themes\, then Settings > Style Configurator.
         <WidgetStyle name="Mark Style 3" styleID="23" fgColor="1C1119" bgColor="7FB4E0" />
         <WidgetStyle name="Mark Style 4" styleID="22" fgColor="1C1119" bgColor="BAA8DC" />
         <WidgetStyle name="Mark Style 5" styleID="21" fgColor="1C1119" bgColor="DDB0EC" />
-        <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="BA4889" />
+        <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="BE4C8D" />
         <WidgetStyle name="Tags match highlighting" styleID="27" bgColor="4F3143" />
         <WidgetStyle name="Tags attribute" styleID="26" fgColor="E6B29C" />
         <WidgetStyle name="Active tab focused indicator" styleID="0" fgColor="FD7CA5" />

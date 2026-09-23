@@ -8,9 +8,9 @@
 
 .theme-light,
 .theme-dark {
-  --accent-h: 343;
-  --accent-s: 91%;
-  --accent-l: 79%;
+  --accent-h: 327;
+  --accent-s: 63%;
+  --accent-l: 63%;
 
   --color-base-00: #4f3143;
   --color-base-05: #5d3e51;
@@ -42,7 +42,7 @@
   --background-modifier-active-hover: #7b5a6e;
   --background-modifier-border: #a28297;
   --background-modifier-border-hover: #a28297;
-  --background-modifier-border-focus: #fa99b4;
+  --background-modifier-border-focus: #dc67a7;
   --background-modifier-error: #ff8a8a33;
   --background-modifier-error-hover: #ff8a8a55;
   --background-modifier-success: #b7e6b733;
@@ -52,12 +52,12 @@
   --text-normal: #f2e6ee;
   --text-muted: #ccbac5;
   --text-faint: #a28297;
-  --text-on-accent: #ffffff;
+  --text-on-accent: #35212e;
   --text-on-accent-inverted: #35212e;
   --text-success: #b7e6b7;
   --text-warning: #f0d6a0;
   --text-error: #ff8a8a;
-  --text-accent: #fa99b4;
+  --text-accent: #dc67a7;
   --text-accent-hover: #ffc4dd;
   --text-selection: #6e4457;
   --text-highlight-bg: #6c4c60;
@@ -65,8 +65,8 @@
 
   --interactive-normal: #5d3e51;
   --interactive-hover: #6c4c60;
-  --interactive-accent: #ba4889;
-  --interactive-accent-hover: #fa99b4;
+  --interactive-accent: #dc67a7;
+  --interactive-accent-hover: #dc67a7;
 
   --code-background: #35212e;
   --code-normal: #f2e6ee;

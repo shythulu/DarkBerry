@@ -133,8 +133,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -698,7 +698,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -1537,8 +1537,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -1688,7 +1688,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -1698,7 +1698,8 @@
     "key": "--text-on-accent-inverted",
     "expr": "{ui.on.accent}",
     "roles": [
-      "ui.on.accent"
+      "ui.on.accent",
+      "ui.on.fill"
     ],
     "palette": [
       "onjam"
@@ -1773,8 +1774,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -1886,8 +1887,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -1903,8 +1904,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2203,8 +2204,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2220,8 +2221,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2404,8 +2405,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2421,8 +2422,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2607,8 +2608,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2624,8 +2625,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2810,8 +2811,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2827,8 +2828,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -2976,8 +2977,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -3011,8 +3012,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -3028,7 +3029,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -3113,7 +3114,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -3214,8 +3215,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -3231,8 +3232,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -3415,8 +3416,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -3432,8 +3433,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -3616,8 +3617,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -3633,8 +3634,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -4448,7 +4449,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -4875,8 +4876,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -5047,8 +5048,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -5079,7 +5080,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -5096,8 +5097,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -5541,8 +5542,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -7103,7 +7104,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7120,7 +7121,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7137,7 +7138,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7172,7 +7173,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7189,8 +7190,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -7545,8 +7546,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -7562,7 +7563,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -8198,7 +8199,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -9240,8 +9241,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -9325,8 +9326,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -9421,8 +9422,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -10125,8 +10126,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -10329,7 +10330,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -10346,7 +10347,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -11047,7 +11048,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -11064,7 +11065,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -11406,8 +11407,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#fa99b4",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -11557,8 +11558,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -11866,8 +11867,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -12375,8 +12376,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -12695,8 +12696,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -12711,8 +12712,8 @@
     ],
     "hex": {
       "wisp": "#b14475",
-      "fen": "#cc6f9b",
-      "mire": "#c46591",
+      "fen": "#e082ad",
+      "mire": "#c66893",
       "blackwater": "#c46591"
     }
   },
@@ -13096,8 +13097,8 @@
     ],
     "hex": {
       "wisp": "#b9488b40",
-      "fen": "#ba488940",
-      "mire": "#ba488940",
+      "fen": "#dc67a740",
+      "mire": "#be4c8d40",
       "blackwater": "#ba488940"
     }
   },
@@ -13715,8 +13716,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -14074,8 +14075,8 @@
     ],
     "hex": {
       "wisp": "#b9488b",
-      "fen": "#ba4889",
-      "mire": "#ba4889",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
       "blackwater": "#ba4889"
     }
   },
@@ -15536,7 +15537,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -15554,7 +15555,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -15571,7 +15572,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -15588,7 +15589,7 @@
     ],
     "hex": {
       "wisp": "#ffffff",
-      "fen": "#ffffff",
+      "fen": "#35212e",
       "mire": "#ffffff",
       "blackwater": "#ffffff"
     }
@@ -16106,7 +16107,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16140,7 +16141,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16174,7 +16175,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16242,7 +16243,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16327,7 +16328,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16430,7 +16431,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16549,7 +16550,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16651,7 +16652,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16908,7 +16909,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17011,7 +17012,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17148,7 +17149,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17199,7 +17200,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17352,7 +17353,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17369,7 +17370,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17386,7 +17387,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17403,7 +17404,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -18307,7 +18308,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -18895,7 +18896,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -18929,7 +18930,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19082,7 +19083,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19186,7 +19187,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19272,7 +19273,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19561,7 +19562,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19663,7 +19664,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19731,7 +19732,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19799,7 +19800,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#e6b2d4",
+      "fen": "#eaafd6",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }

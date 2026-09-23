@@ -31,22 +31,14 @@
         "ui.on.accent",
         4.5
       ],
-      "value": {
-        "fen": "berry",
-        "dark": "jam",
-        "light": "jam"
-      },
+      "value": "jam",
       "catppuccin": "lavender (terminal borders), blue (tags)",
-      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Fen is the exception: jam is 2.4:1 on its plum base, so Fen's accent is berry (5.6:1), the same family as its tint. Fills stay jam everywhere."
+      "why": "Jam, the deeper pink already used for fills, carries the accent too, so focus and activity sit at the same weight as buttons and badges. Jam's lightness is set per flavour by the fill equation (lib/derive.mjs) so it clears every background by 3.5:1."
     },
     "on.accent": {
-      "value": {
-        "fen": "crust",
-        "dark": "onjam",
-        "light": "onjam"
-      },
+      "value": "ui.on.fill",
       "catppuccin": "base (text on accent)",
-      "why": "Base on jam is 2.4 to 4.5:1. White reads on jam at 4.8:1 in every flavour; on Fen's berry accent crust reads at 7.3:1."
+      "why": "Text on the accent is text on the fill: onjam, chosen by the fill equation as white or crust, whichever reads on that flavour's jam."
     },
     "fill": {
       "value": "jam",
@@ -56,7 +48,7 @@
     "on.fill": {
       "value": "onjam",
       "catppuccin": "base (text on accent)",
-      "why": "Base on jam fails contrast in every flavour (about 3:1). White passes at 4.8:1."
+      "why": "Base on jam failed contrast in every flavour. onjam is white or crust per flavour, whichever reads best on that flavour's jam (the fill equation in lib/derive.mjs), and must reach 4.5:1."
     },
     "focus": {
       "minContrast": 3,

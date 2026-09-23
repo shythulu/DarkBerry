@@ -17,7 +17,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | syntax.number | 4.5 | 5.65 | 8.00 | 10.02 | 11.40 |
 | syntax.string | 4.5 | 5.67 | 8.10 | 9.99 | 11.37 |
 | syntax.regex | 4.5 | 5.64 | 7.77 | 9.35 | 10.64 |
-| syntax.variable | 4.5 | 5.64 | 6.31 | 10.19 | 11.59 |
+| syntax.variable | 4.5 | 5.64 | 6.26 | 10.19 | 11.59 |
 | syntax.property | 4.5 | 6.49 | 6.72 | 8.55 | 9.54 |
 | syntax.operator | 3 | 7.73 | 6.15 | 8.79 | 9.48 |
 | syntax.punctuation | 3 | 3.80 | 3.33 | 4.40 | 4.38 |
@@ -40,7 +40,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | syntax.number on ui.pane.secondary | 4.5 | 5.06 | 9.40 | 10.91 | 11.92 |
 | syntax.string on ui.pane.secondary | 4.5 | 5.08 | 9.51 | 10.87 | 11.89 |
 | syntax.regex on ui.pane.secondary | 4.5 | 5.05 | 9.12 | 10.18 | 11.12 |
-| syntax.variable on ui.pane.secondary | 4.5 | 5.05 | 7.40 | 11.09 | 12.12 |
+| syntax.variable on ui.pane.secondary | 4.5 | 5.05 | 7.35 | 11.09 | 12.12 |
 | syntax.property on ui.pane.secondary | 4.5 | 5.81 | 7.88 | 9.30 | 9.98 |
 | syntax.operator on ui.pane.secondary | 3 | 6.93 | 7.22 | 9.57 | 9.91 |
 | syntax.punctuation on ui.pane.secondary | 3 | 3.41 | 3.91 | 4.78 | 4.58 |
@@ -63,7 +63,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | syntax.number on ui.pane.tertiary | 4.5 | 4.57 | 10.53 | 11.50 | 12.27 |
 | syntax.string on ui.pane.tertiary | 4.5 | 4.59 | 10.66 | 11.47 | 12.24 |
 | syntax.regex on ui.pane.tertiary | 4.5 | 4.56 | 10.23 | 10.73 | 11.45 |
-| syntax.variable on ui.pane.tertiary | 4.5 | 4.56 | 8.30 | 11.70 | 12.48 |
+| syntax.variable on ui.pane.tertiary | 4.5 | 4.56 | 8.24 | 11.70 | 12.48 |
 | syntax.property on ui.pane.tertiary | 4.5 | 5.25 | 8.84 | 9.80 | 10.27 |
 | syntax.operator on ui.pane.tertiary | 3 | 6.26 | 8.09 | 10.09 | 10.20 |
 | syntax.punctuation on ui.pane.tertiary | 3 | 3.08 | 4.39 | 5.05 | 4.72 |
@@ -76,28 +76,28 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | ui.text on ui.pane.tertiary | 4.5 | 8.47 | 12.30 | 14.74 | 15.44 |
 | ui.text.muted on ui.pane.tertiary | 4.5 | 5.50 | 8.09 | 10.09 | 10.20 |
 | ui.link on ui.pane.tertiary | 4.5 | 4.59 | 8.81 | 9.12 | 9.73 |
-| ui.on.fill on ui.fill | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
+| ui.on.fill on ui.fill | 4.5 | 4.81 | 4.64 | 4.56 | 4.80 |
 | syntax on ui.selection | 65% of each role’s own minimum | ok | ok | ok | ok |
 | syntax on ui.line.current | 85% of each role’s own minimum | ok | ok | ok | ok |
 | *non-text UI on ui.background* | |  |  |  |  |
-| ui.accent | 3 | 4.45 | 5.55 | 3.33 | 3.79 |
+| ui.accent | 3 | 4.45 | 3.53 | 3.51 | 3.79 |
 | ui.focus | 3 | 4.52 | 4.46 | 5.30 | 5.63 |
-| ui.border.active | 3 | 4.45 | 5.55 | 3.33 | 3.79 |
+| ui.border.active | 3 | 4.45 | 3.53 | 3.51 | 3.79 |
 | ui.border.inactive | 3 | 3.46 | 3.33 | 4.40 | 4.38 |
 | ui.cursor | 3 | 5.69 | 7.66 | 9.37 | 10.66 |
-| ui.on.accent on ui.accent | 4.5 | 4.81 | 7.30 | 4.80 | 4.80 |
+| ui.on.accent on ui.accent | 4.5 | 4.81 | 4.64 | 4.56 | 4.80 |
 | ui.on.error on ui.error | 4.5 | 6.13 | 6.57 | 6.10 | 6.51 |
 | ui.mark.text on ui.mark1 | 4.5 | 5.64 | 7.71 | 8.50 | 9.07 |
 | ui.mark.text on ui.mark2 | 4.5 | 5.63 | 9.35 | 10.05 | 10.73 |
 | ui.mark.text on ui.mark3 | 4.5 | 5.69 | 8.29 | 8.31 | 8.87 |
 | ui.on.tab.indicator on ui.tab.indicator | 4.5 | 4.75 | 7.30 | 7.52 | 8.03 |
-| ui.on.badge on ui.badge | 4.5 | 4.81 | 4.80 | 4.80 | 4.80 |
+| ui.on.badge on ui.badge | 4.5 | 4.81 | 4.64 | 4.56 | 4.80 |
 
 ## Distinctness of syntax roles
 
 OKLab distance ×100 between every pair of syntax roles (an alias such as deprecated is checked through its target). Calibrated against Catppuccin, whose closest core pair is 5.7 (Frappé). Under 5 fails; under 7 between two key roles is a warning. Closest pairs per flavour:
 
 - **Wisp:** keyword/function 5.4 ~, type/namespace 5.9 ~, regex/link 6.0 ~, function/variable 6.1 ~
-- **Fen:** variable/operator 5.1 ~, namespace/variable 5.3 ~, keyword/error 5.6 ~, string/regex 5.6 ~
+- **Fen:** type/variable 5.4 ~, namespace/variable 5.5 ~, keyword/error 5.6 ~, string/regex 5.6 ~
 - **Mire:** variable/operator 5.4 ~, regex/link 5.8 ~, function/type 6.0 ~, function/variable 6.0 ~
 - **Blackwater:** regex/link 5.8 ~, function/type 6.0 ~, function/variable 6.0 ~, string/regex 6.0 ~

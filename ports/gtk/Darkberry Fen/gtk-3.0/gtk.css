@@ -16,8 +16,8 @@
 @define-color theme_fg_color #f2e6ee;
 @define-color theme_base_color #402838;
 @define-color theme_text_color #f2e6ee;
-@define-color theme_selected_bg_color #ba4889;
-@define-color theme_selected_fg_color #ffffff;
+@define-color theme_selected_bg_color #dc67a7;
+@define-color theme_selected_fg_color #35212e;
 
 @define-color insensitive_bg_color #402838;
 @define-color insensitive_fg_color #a28297;

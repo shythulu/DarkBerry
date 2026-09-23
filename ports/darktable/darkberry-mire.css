@@ -30,7 +30,7 @@
 
 /* Scroll bars */
 @define-color scroll_bar_inactive #7d6976;
-@define-color scroll_bar_active   #ba4889;
+@define-color scroll_bar_active   #be4c8d;
 @define-color scroll_bar_bg       #23161f;
 
 /* Module panels */
@@ -40,17 +40,17 @@
 
 /* Bauhaus sliders and combo boxes */
 @define-color bauhaus_fg               #efe3eb;
-@define-color bauhaus_indicator_border #ba4889;
-@define-color bauhaus_fill             #ba4889;
+@define-color bauhaus_indicator_border #be4c8d;
+@define-color bauhaus_fill             #be4c8d;
 @define-color bauhaus_bg_hover         #3e2936;
-@define-color bauhaus_fg_hover         #ba4889;
+@define-color bauhaus_fg_hover         #be4c8d;
 @define-color bauhaus_fg_selected      #efe3eb;
 @define-color bauhaus_fg_insensitive   #91828b;
 
 /* Buttons */
 @define-color button_bg       #32222c;
 @define-color button_hover_bg #3e2936;
-@define-color button_hover_fg #ba4889;
+@define-color button_hover_fg #be4c8d;
 
 /* Entry fields */
 @define-color field_bg          #32222c;
@@ -81,6 +81,6 @@
 /* Histogram and graphs */
 @define-color graph_bg        #1c1119;
 @define-color graph_border    #91828b;
-@define-color graph_fg        #ba4889;
+@define-color graph_fg        #be4c8d;
 @define-color graph_grid      #7d6976;
 @define-color inset_histogram #3e2936;
