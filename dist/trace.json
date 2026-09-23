@@ -9212,6 +9212,690 @@
     }
   },
   {
+    "port": "tmux",
+    "key": "status-style",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "status-style",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "status-left",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#35212e",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "status-left",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "status-right",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "status-right",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "status-right",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "status-right",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-style",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-style",
+    "expr": "{ui.tab.inactive}",
+    "roles": [
+      "ui.tab.inactive",
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-current-style",
+    "expr": "{ui.on.tab.indicator}",
+    "roles": [
+      "ui.on.tab.indicator"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-current-style",
+    "expr": "{ui.tab.indicator}",
+    "roles": [
+      "ui.tab.indicator"
+    ],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-activity-style",
+    "expr": "{ui.info}",
+    "roles": [
+      "ui.info"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#006f5f",
+      "fen": "#b0dfd9",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-activity-style",
+    "expr": "{ui.tab.inactive}",
+    "roles": [
+      "ui.tab.inactive",
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-bell-style",
+    "expr": "{ui.bell}",
+    "roles": [
+      "ui.bell"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "window-status-bell-style",
+    "expr": "{ui.tab.inactive}",
+    "roles": [
+      "ui.tab.inactive",
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "pane-border-style",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "pane-active-border-style",
+    "expr": "{ui.border.active}",
+    "roles": [
+      "ui.border.active",
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "message-style",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "message-style",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "message-command-style",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "message-command-style",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "mode-style",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "mode-style",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
+    "palette": [
+      "base",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "copy-mode-current-match-style",
+    "expr": "{ui.mark.text}",
+    "roles": [
+      "ui.mark.text",
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "copy-mode-current-match-style",
+    "expr": "{ui.mark1}",
+    "roles": [
+      "ui.mark1"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7350a8",
+      "fen": "#c9b0e8",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "copy-mode-match-style",
+    "expr": "{mix(ui.background,ui.mark1,0.35)}",
+    "roles": [
+      "ui.background",
+      "ui.mark1"
+    ],
+    "palette": [
+      "base",
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#cbbbdc",
+      "fen": "#7a5d7d",
+      "mire": "#5c4e66",
+      "blackwater": "#54475e"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "copy-mode-mark-style",
+    "expr": "{ui.mark.text}",
+    "roles": [
+      "ui.mark.text",
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "copy-mode-mark-style",
+    "expr": "{ui.mark2}",
+    "roles": [
+      "ui.mark2"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "clock-mode-colour",
+    "expr": "{tint}",
+    "roles": [],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "display-panes-colour",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "display-panes-active-colour",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "popup-style",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "popup-style",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "popup-border-style",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "menu-style",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "menu-style",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "menu-selected-style",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#35212e",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "menu-selected-style",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "tmux",
+    "key": "menu-border-style",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
     "port": "firefox",
     "key": "frame",
     "expr": "{ui.pane.tertiary}",
