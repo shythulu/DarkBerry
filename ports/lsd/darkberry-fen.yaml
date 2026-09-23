@@ -16,7 +16,7 @@
 # alongside this one or the theme stops at the left margin.
 
 user: "#fa99b4"
-group: "#cebede"
+group: "#c9b0e8"
 
 permission:
   read: "#b7e6b7"
@@ -27,8 +27,8 @@ permission:
   exec: "#e7aab5"
   exec-sticky: "#ecbcfc"
   no-access: "#a28297"
-  octal: "#a0d0da"
-  acl: "#bad9d4"
+  octal: "#83d4db"
+  acl: "#b0dfd9"
   context: "#9cc6ea"
 
 attributes:
@@ -50,13 +50,13 @@ size:
   large: "#f7bf9e"
 
 inode:
-  valid: "#a0d0da"
+  valid: "#83d4db"
   invalid: "#a28297"
 
 tree-edge: "#a28297"
 
 links:
-  valid: "#a0d0da"
+  valid: "#83d4db"
   invalid: "#a28297"
 
 # Same meanings the starship port uses, so a dirty tree reads the same in both.
@@ -68,6 +68,6 @@ git-status:
   new-in-workdir: "#f0d6a0"
   typechange: "#ecbcfc"
   deleted: "#ff8a8a"
-  renamed: "#cebede"
+  renamed: "#c9b0e8"
   modified: "#f0d6a0"
   conflicted: "#ff8a8a"

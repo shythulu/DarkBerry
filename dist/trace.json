@@ -115,7 +115,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -322,7 +322,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -613,7 +613,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -630,7 +630,7 @@
     ],
     "hex": {
       "wisp": "#12796a",
-      "fen": "#99cfc8",
+      "fen": "#8dd5ce",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
     }
@@ -698,7 +698,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -817,7 +817,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -953,7 +953,7 @@
     ],
     "hex": {
       "wisp": "#12796a",
-      "fen": "#99cfc8",
+      "fen": "#8dd5ce",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
     }
@@ -1346,7 +1346,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -1988,7 +1988,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -2018,14 +2018,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -2036,14 +2035,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -2054,14 +2053,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -2256,7 +2254,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -2457,7 +2455,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -2660,7 +2658,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -2863,7 +2861,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -3064,7 +3062,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -3267,7 +3265,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -3468,7 +3466,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -3669,7 +3667,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -4242,7 +4240,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -4261,7 +4259,7 @@
     ],
     "hex": {
       "wisp": "#64a49c",
-      "fen": "#8f969a",
+      "fen": "#89999d",
       "mire": "#708985",
       "blackwater": "#6a8480"
     }
@@ -4278,7 +4276,7 @@
     ],
     "hex": {
       "wisp": "#12796a",
-      "fen": "#99cfc8",
+      "fen": "#8dd5ce",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
     }
@@ -4450,7 +4448,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -4480,14 +4478,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -4570,7 +4568,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -4604,7 +4602,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -4651,14 +4649,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -4669,14 +4666,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -4687,14 +4683,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -4744,7 +4739,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -5203,7 +5198,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -5285,13 +5280,13 @@
     ],
     "palette": [
       "cranberry",
-      "cherry"
+      "apricot"
     ],
     "hex": {
-      "wisp": "#b0333f",
-      "fen": "#f39aa0",
-      "mire": "#e27e83",
-      "blackwater": "#e27e83"
+      "wisp": "#9e4116",
+      "fen": "#fba494",
+      "mire": "#f18c7a",
+      "blackwater": "#f18c7a"
     }
   },
   {
@@ -5374,7 +5369,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -5468,7 +5463,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -5498,7 +5493,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -5593,7 +5588,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -5689,7 +5684,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -5704,7 +5699,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -5905,7 +5900,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -5954,7 +5949,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -6103,7 +6098,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -6256,7 +6251,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -6392,7 +6387,7 @@
     ],
     "hex": {
       "wisp": "#12796a",
-      "fen": "#99cfc8",
+      "fen": "#8dd5ce",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
     }
@@ -6579,7 +6574,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -6692,17 +6687,17 @@
     "key": "invalid.deprecated",
     "expr": "{syntax.deprecated}",
     "roles": [
-      "syntax.deprecated"
+      "syntax.deprecated",
+      "syntax.comment"
     ],
     "palette": [
-      "overlay1",
       "overlay2"
     ],
     "hex": {
-      "wisp": "#826978",
-      "fen": "#b293a7",
-      "mire": "#a28999",
-      "blackwater": "#998190"
+      "wisp": "#745b6a",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
     }
   },
   {
@@ -6730,14 +6725,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -6783,13 +6777,13 @@
     ],
     "palette": [
       "cranberry",
-      "cherry"
+      "apricot"
     ],
     "hex": {
-      "wisp": "#b0333f",
-      "fen": "#f39aa0",
-      "mire": "#e27e83",
-      "blackwater": "#e27e83"
+      "wisp": "#9e4116",
+      "fen": "#fba494",
+      "mire": "#f18c7a",
+      "blackwater": "#f18c7a"
     }
   },
   {
@@ -6856,7 +6850,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -6869,14 +6863,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -6921,14 +6914,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -7028,7 +7020,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -7113,7 +7105,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7130,7 +7122,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7147,7 +7139,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7160,14 +7152,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -7182,7 +7174,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -7396,17 +7388,17 @@
     "key": "deprecated",
     "expr": "{syntax.deprecated}",
     "roles": [
-      "syntax.deprecated"
+      "syntax.deprecated",
+      "syntax.comment"
     ],
     "palette": [
-      "overlay1",
       "overlay2"
     ],
     "hex": {
-      "wisp": "#826978",
-      "fen": "#b293a7",
-      "mire": "#a28999",
-      "blackwater": "#998190"
+      "wisp": "#745b6a",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
     }
   },
   {
@@ -7625,7 +7617,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -7764,7 +7756,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -7850,7 +7842,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -8157,7 +8149,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -8208,7 +8200,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -8310,7 +8302,7 @@
     ],
     "hex": {
       "wisp": "#12796a",
-      "fen": "#99cfc8",
+      "fen": "#8dd5ce",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
     }
@@ -8713,7 +8705,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -8856,7 +8848,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -8871,7 +8863,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -8886,7 +8878,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -8901,7 +8893,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -8961,7 +8953,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -8976,7 +8968,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -10001,7 +9993,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -10152,7 +10144,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -10220,7 +10212,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -10339,7 +10331,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -10356,7 +10348,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -10403,14 +10395,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -10421,14 +10412,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -10443,7 +10433,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -10460,7 +10450,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -10511,7 +10501,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -10528,7 +10518,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -10541,14 +10531,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -10559,14 +10549,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -10615,7 +10605,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -10632,7 +10622,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -10717,7 +10707,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -10734,7 +10724,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -10751,7 +10741,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -10768,7 +10758,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -11019,14 +11009,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -11037,14 +11027,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -11059,7 +11049,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -11076,7 +11066,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -11093,7 +11083,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -11110,7 +11100,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -11127,7 +11117,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -11144,7 +11134,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -11431,7 +11421,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -12884,7 +12874,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -12901,7 +12891,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -13438,7 +13428,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -14291,7 +14281,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -14564,7 +14554,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -15768,7 +15758,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -16019,7 +16009,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -16036,7 +16026,7 @@
     ],
     "hex": {
       "wisp": "#12796a",
-      "fen": "#99cfc8",
+      "fen": "#8dd5ce",
       "mire": "#7cc7b8",
       "blackwater": "#7cc7b8"
     }
@@ -16083,14 +16073,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -16105,7 +16094,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16139,7 +16128,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16152,14 +16141,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -16174,7 +16162,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16242,7 +16230,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16327,7 +16315,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16409,13 +16397,13 @@
     ],
     "palette": [
       "cranberry",
-      "cherry"
+      "apricot"
     ],
     "hex": {
-      "wisp": "#b0333f",
-      "fen": "#f39aa0",
-      "mire": "#e27e83",
-      "blackwater": "#e27e83"
+      "wisp": "#9e4116",
+      "fen": "#fba494",
+      "mire": "#f18c7a",
+      "blackwater": "#f18c7a"
     }
   },
   {
@@ -16430,7 +16418,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16443,14 +16431,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -16461,14 +16448,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -16551,7 +16537,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16581,14 +16567,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -16620,7 +16605,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -16654,7 +16639,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16667,14 +16652,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -16685,14 +16669,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -16703,14 +16686,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -16738,14 +16720,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -16773,14 +16754,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -16808,14 +16788,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -16830,7 +16810,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -16847,7 +16827,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -16860,14 +16840,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -16916,7 +16896,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -16929,14 +16909,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -16964,14 +16944,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -16982,14 +16961,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -17021,7 +16999,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17034,14 +17012,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -17052,14 +17030,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -17070,14 +17047,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -17088,14 +17064,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -17106,14 +17081,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -17162,7 +17136,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17213,7 +17187,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17226,14 +17200,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -17278,14 +17251,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -17296,14 +17268,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -17314,14 +17285,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -17353,7 +17323,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -17370,7 +17340,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17387,7 +17357,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17404,7 +17374,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17421,7 +17391,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -17570,14 +17540,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -17673,14 +17642,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -17725,14 +17694,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18083,14 +18051,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18101,14 +18068,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18187,14 +18153,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18222,14 +18187,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18240,14 +18204,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18263,7 +18226,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -18281,7 +18244,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -18298,7 +18261,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -18332,7 +18295,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -18413,17 +18376,17 @@
     "key": "tokenColors[\"Deprecated\"].foreground",
     "expr": "{syntax.deprecated}",
     "roles": [
-      "syntax.deprecated"
+      "syntax.deprecated",
+      "syntax.comment"
     ],
     "palette": [
-      "overlay1",
       "overlay2"
     ],
     "hex": {
-      "wisp": "#826978",
-      "fen": "#b293a7",
-      "mire": "#a28999",
-      "blackwater": "#998190"
+      "wisp": "#745b6a",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
     }
   },
   {
@@ -18431,17 +18394,17 @@
     "key": "tokenColors[\"Unimplemented\"].foreground",
     "expr": "{syntax.unimplemented}",
     "roles": [
-      "syntax.unimplemented"
+      "syntax.unimplemented",
+      "syntax.comment"
     ],
     "palette": [
-      "overlay1",
-      "lavender"
+      "overlay2"
     ],
     "hex": {
-      "wisp": "#8f7492",
-      "fen": "#ab8ea5",
-      "mire": "#998a9b",
-      "blackwater": "#928294"
+      "wisp": "#745b6a",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
     }
   },
   {
@@ -18452,14 +18415,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -18470,14 +18433,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -18522,14 +18485,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -18540,14 +18503,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -18596,7 +18559,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -18613,7 +18576,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -18626,14 +18589,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -18644,14 +18606,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -18662,14 +18623,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18680,14 +18640,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18750,14 +18709,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18819,14 +18777,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -18837,14 +18794,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -18855,14 +18811,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -18873,14 +18828,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -18929,7 +18883,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -18942,14 +18896,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -18964,7 +18917,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19079,14 +19032,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -19118,7 +19070,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19136,7 +19088,7 @@
     ],
     "hex": {
       "wisp": "#026b80",
-      "fen": "#a0d0da",
+      "fen": "#83d4db",
       "mire": "#86c0cc",
       "blackwater": "#86c0cc"
     }
@@ -19222,7 +19174,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19286,14 +19238,14 @@
       "syntax.property"
     ],
     "palette": [
-      "lavender",
+      "apricot",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#6e4f84",
-      "fen": "#cdbcd2",
-      "mire": "#c3b2d1",
-      "blackwater": "#c0b0ce"
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
     }
   },
   {
@@ -19308,7 +19260,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19389,14 +19341,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -19407,14 +19358,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -19425,14 +19375,13 @@
       "syntax.operator"
     ],
     "palette": [
-      "overlay2",
       "subtext0"
     ],
     "hex": {
-      "wisp": "#705666",
-      "fen": "#c3aab9",
-      "mire": "#b9a0b0",
-      "blackwater": "#b29aa9"
+      "wisp": "#5a4050",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
     }
   },
   {
@@ -19447,7 +19396,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -19600,7 +19549,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19702,7 +19651,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19770,7 +19719,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19821,7 +19770,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -19838,7 +19787,7 @@
     ],
     "hex": {
       "wisp": "#934b66",
-      "fen": "#eedce5",
+      "fen": "#e6b2d4",
       "mire": "#e7c5d8",
       "blackwater": "#e7c5d8"
     }
@@ -19872,7 +19821,7 @@
     ],
     "hex": {
       "wisp": "#006f5f",
-      "fen": "#bad9d4",
+      "fen": "#b0dfd9",
       "mire": "#9ed0c4",
       "blackwater": "#9ed0c4"
     }
@@ -19974,7 +19923,7 @@
     ],
     "hex": {
       "wisp": "#7350a8",
-      "fen": "#cebede",
+      "fen": "#c9b0e8",
       "mire": "#baa8dc",
       "blackwater": "#baa8dc"
     }
@@ -20055,14 +20004,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {
@@ -20107,14 +20055,13 @@
       "syntax.punctuation"
     ],
     "palette": [
-      "overlay1",
-      "overlay2"
+      "overlay1"
     ],
     "hex": {
-      "wisp": "#8a7180",
-      "fen": "#ab8ca0",
-      "mire": "#9b8693",
-      "blackwater": "#927d8a"
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {

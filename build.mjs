@@ -318,13 +318,18 @@ for (const [name, r] of Object.entries(roleIndex)) if (r.minContrastWith) {
   const [fg, min] = r.minContrastWith;
   checks += `| ${fg} on ${name} | ${min} | ` + ctxs.map((x) => { const v = contrast(x.resolve(fg)[0], x.resolve(name)[0]); if (v < min) errors.push(`${x.f.name}: ${fg} on ${name} contrast ${v.toFixed(2)} < ${min}`); return v.toFixed(2) + (v < min ? " ✗" : ""); }).join(" | ") + " |\n";
 }
-checks += `\n## Distinctness of key syntax roles\n\nOKLab distance ×100 between every pair of key syntax roles. Calibrated against Catppuccin, whose closest core pair is 5.7 (Frappé). Under 7 is a warning, under 5 fails. Closest pairs per flavour:\n\n`;
+checks += `\n## Distinctness of syntax roles\n\nOKLab distance ×100 between every pair of syntax roles (an alias such as deprecated is checked through its target). Calibrated against Catppuccin, whose closest core pair is 5.7 (Frappé). Under 5 fails; under 7 between two key roles is a warning. Closest pairs per flavour:\n\n`;
 for (const x of ctxs) {
   const pairs = [];
-  for (let i = 0; i < keyRoles.length; i++) for (let j = i + 1; j < keyRoles.length; j++)
-    pairs.push([keyRoles[i], keyRoles[j], deltaE(x.resolve(`syntax.${keyRoles[i]}`)[0], x.resolve(`syntax.${keyRoles[j]}`)[0])]);
+  // Every syntax role, not only the key ones: a role that cannot be told from its
+  // neighbour is a role in name only.
+  // A role whose value is another syntax role is an alias: the distinction is a
+  // font style (strikethrough, italics), so it is checked through its target.
+  const all = syntaxRoles.filter(([, r]) => !(typeof r.value === "string" && r.value.startsWith("syntax."))).map(([k]) => k);
+  for (let i = 0; i < all.length; i++) for (let j = i + 1; j < all.length; j++)
+    pairs.push([all[i], all[j], deltaE(x.resolve(`syntax.${all[i]}`)[0], x.resolve(`syntax.${all[j]}`)[0])]);
   pairs.sort((a, b) => a[2] - b[2]);
-  for (const [a, b, d] of pairs) { if (d < 5) errors.push(`${x.f.name}: syntax.${a} and syntax.${b} too close (${d.toFixed(1)})`); else if (d < 7) warnings.push(`${x.f.name}: syntax.${a} / syntax.${b} ${d.toFixed(1)}`); }
+  for (const [a, b, d] of pairs) { if (d < 5) errors.push(`${x.f.name}: syntax.${a} and syntax.${b} too close (${d.toFixed(1)})`); else if (d < 7 && keyRoles.includes(a) && keyRoles.includes(b)) warnings.push(`${x.f.name}: syntax.${a} / syntax.${b} ${d.toFixed(1)}`); }
   checks += `- **${x.f.name}:** ` + pairs.slice(0, 4).map(([a, b, d]) => `${a}/${b} ${d.toFixed(1)}${d < 5 ? " ✗" : d < 7 ? " ~" : ""}`).join(", ") + "\n";
 }
 out("docs/CHECKS.md", checks);

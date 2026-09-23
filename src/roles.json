@@ -277,21 +277,30 @@
       "key": true
     },
     "property": {
-      "value": "mix(lavender,subtext0,0.5)",
+      "value": {
+        "dark": "mix(apricot,subtext0,0.3)",
+        "light": "mix(bilberry,subtext0,0.5)"
+      },
       "catppuccin": "blue",
-      "why": "A mauve-grey keeps object keys quieter than functions.",
+      "why": "A warm grey keeps object keys quieter than functions. The former lavender mix was 1.7 units from namespace in Fen; on Wisp the warm mix collides with diff.removed, so the light value mixes bilberry instead.",
       "minContrast": 4.5
     },
     "operator": {
-      "value": "mix(overlay2,subtext0,0.4)",
+      "value": {
+        "dark": "subtext0",
+        "light": "subtext1"
+      },
       "catppuccin": "sky",
-      "why": "Structural glue recedes instead of being coloured.",
+      "why": "Structural glue recedes: one subtext step above comments. Light flavours take subtext1 because subtext0 is 1.6 from Wisp's darkened comment grey.",
       "minContrast": 3
     },
     "punctuation": {
-      "value": "mix(overlay1,overlay2,0.35)",
+      "value": {
+        "dark": "overlay1",
+        "light": "mix(overlay1,overlay2,0.2)"
+      },
       "catppuccin": "overlay2",
-      "why": "Slightly quieter than comments, so brackets fade behind code.",
+      "why": "Quieter than comments. Wisp's overlay1 is 2.8:1 on crust, so the light value leans a fifth toward overlay2 to hold 3:1 there.",
       "minContrast": 3
     },
     "comment": {
@@ -312,21 +321,24 @@
       "key": true
     },
     "deprecated": {
-      "value": "mix(overlay1,overlay2,0.6)",
+      "value": "syntax.comment",
       "catppuccin": "no equivalent",
-      "why": "A dimmed grey marks code on its way out.",
+      "why": "Deprecated code is comment-coloured; the strikethrough VS Code draws is the distinction, a grey of its own was 1 to 3 units from comment and read as the same colour.",
       "minContrast": 3
     },
     "unimplemented": {
-      "value": "mix(overlay1,lavender,0.2)",
+      "value": "syntax.comment",
       "catppuccin": "no equivalent",
-      "why": "A faint lilac-grey marks stubs and placeholders.",
+      "why": "Stubs share the comment colour. A separate faint lilac-grey sat under 2 units from punctuation.",
       "minContrast": 3
     },
     "diff.removed": {
-      "value": "mix(cranberry,cherry,0.5)",
+      "value": {
+        "light": "mix(cranberry,honey,0.5)",
+        "dark": "mix(cranberry,apricot,0.5)"
+      },
       "catppuccin": "red",
-      "why": "A softer red for removed lines, so diffs don't read as errors.",
+      "why": "Removed lines lean warm, toward apricot on dark flavours and honey on Wisp, so they sit six or more units from ui.error instead of three; a softer red never got far enough away.",
       "minContrast": 4.5
     }
   },

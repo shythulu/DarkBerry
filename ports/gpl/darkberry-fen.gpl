@@ -2,7 +2,7 @@ GIMP Palette
 Name: Darkberry Fen
 Columns: 8
 # Darkberry 0.3.0, https://shythulu.github.io/DarkBerry/
-238 220 229	Blossom
+230 178 212	Blossom
 255 196 221	Petal
 250 153 180	Berry
 236 188 252	Plum
@@ -11,11 +11,11 @@ Columns: 8
 247 191 158	Apricot
 240 214 160	Honey
 183 230 183	Gooseberry
-186 217 212	Juniper
-160 208 218	Frost
+176 223 217	Juniper
+131 212 219	Frost
 156 198 234	Bilberry
 164 195 246	Blueberry
-206 190 222	Lavender
+201 176 232	Lavender
 186  72 137	Jam
 255 255 255	Onjam
 250 153 180	Tint

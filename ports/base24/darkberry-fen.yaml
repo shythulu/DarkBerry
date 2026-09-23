@@ -70,10 +70,10 @@ palette:
   base09: "#f7bf9e"  # orange, ANSI 16: integers, booleans, constants
   base0A: "#f0d6a0"  # yellow: classes, markup bold
   base0B: "#b7e6b7"  # green: strings, diff inserted
-  base0C: "#bad9d4"  # cyan: support, regex, escapes, quotes
+  base0C: "#b0dfd9"  # cyan: support, regex, escapes, quotes
   base0D: "#a4c3f6"  # blue: functions, methods, headings
   base0E: "#fa99b4"  # magenta: keywords, storage, markup italic
-  base0F: "#eedce5"  # dark red, ANSI 17: deprecated code, embedded tags
+  base0F: "#e6b2d4"  # dark red, ANSI 17: deprecated code, embedded tags
 
   # The two recessed backgrounds. Light flavours keep these recessed rather than
   # raised, as every scheme in the tinted-theming repository does and the spec's
@@ -86,6 +86,6 @@ palette:
   base12: "#fc7776"  # bright red
   base13: "#e3c782"  # bright yellow
   base14: "#9bdba1"  # bright green
-  base15: "#99cfc8"  # bright cyan
+  base15: "#8dd5ce"  # bright cyan
   base16: "#8fb6f7"  # bright blue
   base17: "#f985a5"  # bright magenta

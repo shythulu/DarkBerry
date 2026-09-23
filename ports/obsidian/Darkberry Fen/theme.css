@@ -29,7 +29,7 @@
   --color-orange: #f7bf9e;
   --color-yellow: #f0d6a0;
   --color-green: #b7e6b7;
-  --color-cyan: #bad9d4;
+  --color-cyan: #b0dfd9;
   --color-blue: #a4c3f6;
   --color-purple: #ecbcfc;
   --color-pink: #fa99b4;
@@ -72,11 +72,11 @@
   --code-normal: #f2e6ee;
   --code-comment: #bd9fb1;
   --code-function: #ffc4dd;
-  --code-important: #bad9d4;
+  --code-important: #b0dfd9;
   --code-keyword: #fa99b4;
-  --code-operator: #c3aab9;
-  --code-property: #cdbcd2;
-  --code-punctuation: #ab8ca0;
+  --code-operator: #ccbac5;
+  --code-property: #eabeaa;
+  --code-punctuation: #a28297;
   --code-string: #b7e6b7;
   --code-tag: #ecbcfc;
   --code-value: #f0d6a0;

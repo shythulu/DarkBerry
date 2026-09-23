@@ -23,7 +23,7 @@
 # listing by first. Everything else is quieter than they are.
 LS_COLORS="di=01;38;2;250;153;180"  # directory
 LS_COLORS="${LS_COLORS}:fi=38;2;242;230;238"  # regular file
-LS_COLORS="${LS_COLORS}:ln=38;2;160;208;218"  # symlink, cool and cold like the link column in the lsd theme
+LS_COLORS="${LS_COLORS}:ln=38;2;131;212;219"  # symlink, cool and cold like the link column in the lsd theme
 LS_COLORS="${LS_COLORS}:or=01;38;2;255;138;138"  # symlink with no target
 LS_COLORS="${LS_COLORS}:mi=01;38;2;255;138;138"  # the missing target itself
 LS_COLORS="${LS_COLORS}:ex=01;38;2;183;230;183"  # executable -- green because "you can run this" is older than any theme
@@ -39,10 +39,10 @@ LS_COLORS="${LS_COLORS}:su=01;38;2;255;138;138"  # setuid
 LS_COLORS="${LS_COLORS}:sg=01;38;2;255;138;138"  # setgid
 
 # Pipes, sockets and devices: rare, and grouped so they read as one odd class.
-LS_COLORS="${LS_COLORS}:pi=38;2;186;217;212"  # fifo
-LS_COLORS="${LS_COLORS}:so=38;2;186;217;212"  # socket
-LS_COLORS="${LS_COLORS}:bd=38;2;186;217;212"  # block device
-LS_COLORS="${LS_COLORS}:cd=38;2;186;217;212"  # character device
+LS_COLORS="${LS_COLORS}:pi=38;2;176;223;217"  # fifo
+LS_COLORS="${LS_COLORS}:so=38;2;176;223;217"  # socket
+LS_COLORS="${LS_COLORS}:bd=38;2;176;223;217"  # block device
+LS_COLORS="${LS_COLORS}:cd=38;2;176;223;217"  # character device
 
 # --- What the file holds ---------------------------------------------------
 # Six groups, each a different hue, so a directory's shape is legible before
@@ -63,13 +63,13 @@ LS_COLORS="${LS_COLORS}:*.sh=38;2;236;188;252:*.bash=38;2;236;188;252:*.zsh=38;2
 *.vim=38;2;236;188;252:*.el=38;2;236;188;252:*.scm=38;2;236;188;252:*.sql=38;2;236;188;252"
 
 # Configuration and data
-LS_COLORS="${LS_COLORS}:*.json=38;2;206;190;222:*.json5=38;2;206;190;222:*.toml=38;2;206;190;222:\
-*.yaml=38;2;206;190;222:*.yml=38;2;206;190;222:*.ini=38;2;206;190;222:*.cfg=38;2;206;190;222:\
-*.conf=38;2;206;190;222:*.config=38;2;206;190;222:*.env=38;2;206;190;222:\
-*.properties=38;2;206;190;222"
-LS_COLORS="${LS_COLORS}:*.xml=38;2;206;190;222:*.plist=38;2;206;190;222:*.csv=38;2;206;190;222:\
-*.tsv=38;2;206;190;222:*.parquet=38;2;206;190;222:*.db=38;2;206;190;222:\
-*.sqlite=38;2;206;190;222:*.sqlite3=38;2;206;190;222:*.lock=38;2;206;190;222"
+LS_COLORS="${LS_COLORS}:*.json=38;2;201;176;232:*.json5=38;2;201;176;232:*.toml=38;2;201;176;232:\
+*.yaml=38;2;201;176;232:*.yml=38;2;201;176;232:*.ini=38;2;201;176;232:*.cfg=38;2;201;176;232:\
+*.conf=38;2;201;176;232:*.config=38;2;201;176;232:*.env=38;2;201;176;232:\
+*.properties=38;2;201;176;232"
+LS_COLORS="${LS_COLORS}:*.xml=38;2;201;176;232:*.plist=38;2;201;176;232:*.csv=38;2;201;176;232:\
+*.tsv=38;2;201;176;232:*.parquet=38;2;201;176;232:*.db=38;2;201;176;232:\
+*.sqlite=38;2;201;176;232:*.sqlite3=38;2;201;176;232:*.lock=38;2;201;176;232"
 
 # Prose and documents
 LS_COLORS="${LS_COLORS}:*.md=38;2;240;214;160:*.markdown=38;2;240;214;160:*.rst=38;2;240;214;160:\

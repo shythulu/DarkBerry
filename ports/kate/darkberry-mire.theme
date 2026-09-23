@@ -31,8 +31,8 @@
       "bold": true
     },
     "Operator": {
-      "text-color": "#b9a0b0",
-      "selected-text-color": "#b9a0b0"
+      "text-color": "#cbbcc5",
+      "selected-text-color": "#cbbcc5"
     },
     "BuiltIn": {
       "text-color": "#baa8dc",
@@ -47,8 +47,8 @@
       "selected-text-color": "#baa8dc"
     },
     "Attribute": {
-      "text-color": "#c3b2d1",
-      "selected-text-color": "#c3b2d1"
+      "text-color": "#e6b29c",
+      "selected-text-color": "#e6b29c"
     },
     "Char": {
       "text-color": "#a3daa3",
@@ -105,8 +105,8 @@
       "italic": true
     },
     "Annotation": {
-      "text-color": "#c3b2d1",
-      "selected-text-color": "#c3b2d1"
+      "text-color": "#e6b29c",
+      "selected-text-color": "#e6b29c"
     },
     "CommentVar": {
       "text-color": "#e7c5d8",
