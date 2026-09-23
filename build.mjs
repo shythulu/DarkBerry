@@ -88,6 +88,15 @@ function applyOverrides(port, kind, content, ctx) {
       const re = new RegExp(`^(${o.key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*=?\\s*).*$`, "m");
       if (!re.test(content)) errors.push(`override ${port}/${o.key}: key not found`);
       content = content.replace(re, (_, lead) => lead + v);
+    } else if (kind === "plist") {
+      // A tmTheme key is `lineHighlight` for the settings block, or `<rule name>/foreground`
+      // for one of the scope rules; the value replaces the <string> that follows the key.
+      const [rule, key] = o.key.includes("/") ? o.key.split("/") : [null, o.key];
+      const start = rule ? content.indexOf(`<string>${rule}</string>`) : 0;
+      const re = new RegExp(`(<key>${key}</key>\\s*<string>)[^<]*(</string>)`);
+      const m = start >= 0 ? re.exec(content.slice(start)) : null;
+      if (!m) errors.push(`override ${port}/${o.key}: key not found`);
+      else content = content.slice(0, start) + content.slice(start).replace(re, `$1${v}$2`);
     } else content[o.key] = v;
   }
   return content;
@@ -100,7 +109,7 @@ const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
-const nppT = read("src/ports/notepadpp.xml");
+const nppT = read("src/ports/notepadpp.xml"), batT = read("src/ports/bat.tmTheme");
 const starshipT = read("src/ports/starship.toml"), lsdT = read("src/ports/lsd.yaml"), bordersT = read("src/ports/borders.sh");
 // JankyBorders takes 0xAARRGGBB, so the filled hex gets an opaque alpha prefix.
 const toArgb = (text) => text.replace(/#([0-9a-f]{6})\b/g, (_, h) => `0xff${h}`);
@@ -208,6 +217,22 @@ mustBe("btop", btopT, "followed_fg", "{ui.mark.text}", /^theme\[followed_fg\]="\
 mustBe("btop", btopT, "temp gradient", "{ui.success} > {ui.warning} > {ui.error}", /^theme\[temp_start\]="\{ui\.success\}"\ntheme\[temp_mid\]="\{ui\.warning\}"\ntheme\[temp_end\]="\{ui\.error\}"$/m);
 mustBe("btop", btopT, "proc_banner_fg", "{ui.on.error} (text on the status fills)", /^theme\[proc_banner_fg\]="\{ui\.on\.error\}"$/m);
 mustBe("btop", btopT, "div_line", "{ui.border.inactive}", /^theme\[div_line\]="\{ui\.border\.inactive\}"$/m);
+// bat reads only foreground, gutterForeground and lineHighlight from the settings block;
+// the rest is for the other syntect hosts (delta, Sublime), and must not drift either.
+const batSetting = (k, want) => mustBe("bat", batT, k, want, new RegExp(`<key>${k}</key>\\s*<string>${want.replace(/[.{}]/g, "\\$&")}</string>`));
+batSetting("selection", "{ui.selection}");
+batSetting("lineHighlight", "{ui.line.current}");
+batSetting("caret", "{ui.cursor}");
+batSetting("findHighlight", "{ui.mark1}");
+batSetting("findHighlightForeground", "{ui.mark.text}");
+batSetting("gutterForeground", "{ui.text.subtle}");
+batSetting("gutter", "{ui.pane.secondary}");
+const batRule = (name, want) => mustBe("bat", batT, name, want, new RegExp(`<string>${name}</string>[\\s\\S]*?<key>foreground</key>\\s*<string>${want.replace(/[.{}]/g, "\\$&")}</string>`));
+batRule("Markup links", "{syntax.link}");
+batRule("Diff inserted", "{ui.success}");
+batRule("Diff deleted", "{syntax.diff.removed}");
+batRule("Diff changed", "{ui.warning}");
+batRule("Invalid", "{syntax.error}");
 mustBe("darktable", darktableT, "@import", "free of chunk-fonts.css (unreleased file; a missing @import drops the whole theme on 4.6 to 5.2)", /^(?![\s\S]*@import[^\n]*chunk-fonts)/);
 mustBe("tmux", tmuxT, "mode-style", "{ui.selection} under {ui.text}", /^set -g mode-style "fg=\{ui\.text\},bg=\{ui\.selection\}"$/m);
 mustBe("tmux", tmuxT, "window-status-current-style", "{ui.on.tab.indicator} on an opaque {ui.tab.indicator}", /^set -g window-status-current-style "fg=\{ui\.on\.tab\.indicator\},bg=\{ui\.tab\.indicator\}(,\w+)*"$/m);
@@ -252,6 +277,7 @@ for (const ctx of ctxs) {
   out(`ports/darktable/${slug}.css`, applyOverrides("darktable", "lines", fill(ctx, darktableT, "darktable"), ctx));
   out(`ports/gimp/${slug}.css`, applyOverrides("gimp", "lines", fill(ctx, gimpT, "gimp"), ctx));
   out(`ports/btop/${slug}.theme`, applyOverrides("btop", "lines", fill(ctx, btopT, "btop"), ctx));
+  out(`ports/bat/${full}.tmTheme`, applyOverrides("bat", "plist", fill(ctx, batT, "bat"), ctx));
   out(`ports/notepadpp/${full}.xml`, toBareHex(applyOverrides("notepadpp", "lines", fill(ctx, nppT, "notepadpp"), ctx)));
   out(`ports/kde/${full}.colors`, toTriplets(applyOverrides("kde", "lines", fill(ctx, kdeT, "kde"), ctx)));
   out(`ports/konsole/${full}.colorscheme`, toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
@@ -303,6 +329,15 @@ for (const raw of lsColorsT.split("\n")) {
 for (const raw of tmuxT.split("\n")) { const m = /^set\s+-\S+\s+(\S+)\s+(.*\{.*)$/.exec(raw.trim()); if (m) traceExpr("tmux", m[1], m[2]); }
 // btop spells its keys theme[name]="..."; the line regex above would record every one as "theme".
 for (const line of btopT.split("\n")) { const m = /^theme\[(\w+)\]="(.*)"$/.exec(line); if (m) traceExpr("btop", m[1], m[2]); }
+// The tmTheme is a plist: every <key>k</key><string>{role}</string> pair is traced under
+// the rule name it sits in (the first, unnamed block is the editor settings).
+{
+  let rule = "settings";
+  for (const m of batT.matchAll(/<key>(\w+)<\/key>\s*<string>([^<]*)<\/string>/g)) {
+    if (m[1] === "name" && !m[2].startsWith("%")) rule = m[2]; // the first name is the theme's own
+    else if (m[2].includes("{")) traceExpr("bat", rule === "settings" ? m[1] : `${rule} ${m[1]}`, m[2]);
+  }
+}
 walk("firefox", JSON.parse(firefoxT).theme.colors, "colors");
 walk("chrome", JSON.parse(chromeT).theme.colors, "colors");
 walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "colors");
@@ -311,6 +346,7 @@ walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
 for (const port of ["kitty", "ghostty", "alacritty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "btop"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "bat"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 out("dist/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
@@ -419,10 +455,10 @@ rolesMd += `\nAligned with Catppuccin: ANSI mapping and bright formula, all back
 out("docs/ROLES.md", rolesMd);
 
 // ---------- docs/USAGE.md (blast radius of each palette colour) ----------
-let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | Alacritty | tmux | btop | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
+let usageMd = `# Usage\n\nGenerated by \`build.mjs\`. Before changing a palette colour, check who uses it. Counts are template keys per port, measured on ${usageRef.f.name}; ANSI black and white and cursor text swap neutrals in the light flavour.\n\n| Palette colour | Through roles | kitty | Ghostty | Alacritty | tmux | bat | btop | VS Code | Firefox | Obsidian | KDE | Konsole | Nimbalyst | micro | Kate | Chrome | Notepad++ | GTK | darktable | GIMP | starship | borders | lsd | LS_COLORS | Tinted8 | Base24 |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n`;
 for (const k of order) {
   const u = usage[k];
-  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "alacritty", "tmux", "btop", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
+  usageMd += `| \`${k}\` | ${u ? [...u.roles].filter((r) => !r.startsWith("ansi")).map((r) => `\`${r}\``).join(", ") || "direct only" : "unused"} | ${["kitty", "ghostty", "alacritty", "tmux", "bat", "btop", "vscode", "firefox", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"].map((p) => u?.ports[p] || "").join(" | ")} |\n`;
 }
 usageMd += `\nANSI colours (\`ansi.0\` to \`ansi.15\`) come from the palette via \`roles.json\` → \`ansi\`, the same way for every terminal.\n`;
 out("docs/USAGE.md", usageMd);

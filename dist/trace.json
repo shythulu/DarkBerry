@@ -11493,6 +11493,743 @@
     }
   },
   {
+    "port": "bat",
+    "key": "background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "foreground",
+    "expr": "{syntax.text}",
+    "roles": [
+      "syntax.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "caret",
+    "expr": "{ui.cursor}",
+    "roles": [
+      "ui.cursor"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#a83570",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "lineHighlight",
+    "expr": "{ui.line.current}",
+    "roles": [
+      "ui.line.current",
+      "ui.background"
+    ],
+    "palette": [
+      "base",
+      "surface0"
+    ],
+    "hex": {
+      "wisp": "#f1e6ed",
+      "fen": "#543648",
+      "mire": "#2d1f28",
+      "blackwater": "#21151d"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "selection",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
+    "palette": [
+      "base",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "gutter",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "gutterForeground",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "findHighlight",
+    "expr": "{ui.mark1}",
+    "roles": [
+      "ui.mark1"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7350a8",
+      "fen": "#c9b0e8",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "findHighlightForeground",
+    "expr": "{ui.mark.text}",
+    "roles": [
+      "ui.mark.text",
+      "ui.cursor.text"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "misspelling",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "accent",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "bracketsForeground",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "guide",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "activeGuide",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Basic text and variable names (incl. leading punctuation) foreground",
+    "expr": "{syntax.text}",
+    "roles": [
+      "syntax.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Variables foreground",
+    "expr": "{syntax.variable}",
+    "roles": [
+      "syntax.variable"
+    ],
+    "palette": [
+      "blossom"
+    ],
+    "hex": {
+      "wisp": "#934b66",
+      "fen": "#eaafd6",
+      "mire": "#e7c5d8",
+      "blackwater": "#e7c5d8"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Parentheses, brackets, braces, separators foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Comments foreground",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#745b6a",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Strings foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Escapes and character entities foreground",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Numbers and units foreground",
+    "expr": "{syntax.number}",
+    "roles": [
+      "syntax.number"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Constants and enum members foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3659ca",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Keywords and language constants foreground",
+    "expr": "{syntax.keyword}",
+    "roles": [
+      "syntax.keyword"
+    ],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#bf0b64",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Operators foreground",
+    "expr": "{syntax.operator}",
+    "roles": [
+      "syntax.operator"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#604656",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Functions, methods, macros, decorators, tags foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#a83570",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Classes, structs, enums, types, traits foreground",
+    "expr": "{syntax.type}",
+    "roles": [
+      "syntax.type"
+    ],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Namespaces, modules, preprocessor, sections foreground",
+    "expr": "{syntax.namespace}",
+    "roles": [
+      "syntax.namespace"
+    ],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7350a8",
+      "fen": "#c9b0e8",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Property names and keys (JSON, YAML, TOML, ini, CSS, dotenv) foreground",
+    "expr": "{syntax.property}",
+    "roles": [
+      "syntax.property"
+    ],
+    "palette": [
+      "apricot",
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#435982",
+      "fen": "#eabeaa",
+      "mire": "#e6b29c",
+      "blackwater": "#e5b09a"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Attribute names, pseudo-classes, man page options foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3659ca",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Regular expressions foreground",
+    "expr": "{syntax.regex}",
+    "roles": [
+      "syntax.regex"
+    ],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#006f5f",
+      "fen": "#b0dfd9",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Invalid foreground",
+    "expr": "{syntax.error}",
+    "roles": [
+      "syntax.error",
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Deprecated foreground",
+    "expr": "{syntax.deprecated}",
+    "roles": [
+      "syntax.deprecated",
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#745b6a",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Markup headings (Markdown, AsciiDoc, Typst, man pages) foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#a83570",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Markup heading marks foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Markup bold foreground",
+    "expr": "{syntax.constant}",
+    "roles": [
+      "syntax.constant"
+    ],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3659ca",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Markup links foreground",
+    "expr": "{syntax.link}",
+    "roles": [
+      "syntax.link",
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#026b80",
+      "fen": "#83d4db",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Markup raw (code spans and blocks) foreground",
+    "expr": "{syntax.string}",
+    "roles": [
+      "syntax.string"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Markup fences, separators, list bullets foreground",
+    "expr": "{syntax.punctuation}",
+    "roles": [
+      "syntax.punctuation"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#8f7685",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Markup quotes foreground",
+    "expr": "{syntax.comment}",
+    "roles": [
+      "syntax.comment"
+    ],
+    "palette": [
+      "overlay2"
+    ],
+    "hex": {
+      "wisp": "#745b6a",
+      "fen": "#bd9fb1",
+      "mire": "#ad8da2",
+      "blackwater": "#a58799"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Diff headers foreground",
+    "expr": "{syntax.function}",
+    "roles": [
+      "syntax.function"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#a83570",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Diff inserted foreground",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Diff deleted foreground",
+    "expr": "{syntax.diff.removed}",
+    "roles": [
+      "syntax.diff.removed"
+    ],
+    "palette": [
+      "cranberry",
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#9e4116",
+      "fen": "#fba494",
+      "mire": "#f18c7a",
+      "blackwater": "#f18c7a"
+    }
+  },
+  {
+    "port": "bat",
+    "key": "Diff changed foreground",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
     "port": "firefox",
     "key": "frame",
     "expr": "{ui.pane.tertiary}",

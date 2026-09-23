@@ -247,6 +247,19 @@ lists themes by file name, so keep the names. Needs btop 1.3 or newer for every 
 1.4.7 for the process-list banner and followed-row keys, which older releases simply skip.
 For a transparent terminal, set `theme_background = False` in `btop.conf` rather than
 editing the file; on a terminal without truecolor, set `lowcolor = True`.
+### bat
+
+Copy a `.tmTheme` file from `ports/bat/` into `$(bat --config-dir)/themes/` (usually
+`~/.config/bat/themes/`), run `bat cache --build`, then pick it:
+
+```sh
+bat --theme="Darkberry Mire" file.rs        # or: export BAT_THEME="Darkberry Mire"
+```
+
+Any bat with `bat cache --build` loads it; written against 0.24 and checked on 0.26.1. The
+terminal must advertise truecolor (`COLORTERM=truecolor`) or bat rounds every colour to
+the nearest xterm-256 index. The same file works in delta, gitui and Sublime Text, which
+read the caret, selection and gutter keys bat ignores.
 
 ### Kate
 
