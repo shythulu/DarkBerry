@@ -88,13 +88,13 @@ BackgroundNormal={ui.fill}
 DecorationFocus={ui.focus}
 DecorationHover={ui.accent}
 ForegroundActive={ui.on.fill}
-ForegroundInactive={ui.text.muted}
-ForegroundLink={ui.link}
-ForegroundNegative={ui.error}
-ForegroundNeutral={ui.warning}
+ForegroundInactive={ui.on.fill}
+ForegroundLink={ui.on.fill}
+ForegroundNegative={ui.on.fill}
+ForegroundNeutral={ui.on.fill}
 ForegroundNormal={ui.on.fill}
-ForegroundPositive={ui.success}
-ForegroundVisited={plum}
+ForegroundPositive={ui.on.fill}
+ForegroundVisited={ui.on.fill}
 
 [Colors:Tooltip]
 BackgroundAlternate={ui.pane.tertiary}

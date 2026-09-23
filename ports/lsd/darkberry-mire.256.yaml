@@ -4,9 +4,8 @@
 # lsd 1.0 companion (nearest xterm-256 colours). Install with:  cp darkberry-mire.256.yaml ~/.config/lsd/colors.yaml
 # and set  color: {theme: custom}  in ~/.config/lsd/config.yaml.
 #
-# Needs lsd 1.1 or newer: older releases reject hex strings and then drop the whole
-# theme silently (Ubuntu 24.04 ships 1.0.0). For those, darkberry-mire.256.yaml beside this
-# file carries the same theme as xterm-256 indices.
+# This is the lsd 1.0 companion: the same theme as xterm-256 indices, for releases that
+# reject hex strings (Ubuntu 24.04 ships 1.0.0). On lsd 1.1 or newer use darkberry-mire.yaml.
 #
 # Verified against lsd 1.2.0. Two things about that version are worth knowing:
 # the theme struct is deny_unknown_fields, and `file-type` is skipped, so a

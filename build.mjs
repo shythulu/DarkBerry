@@ -191,7 +191,7 @@ mustBe("kate", kateT, "CurrentLine", "{ui.line.current}", /"CurrentLine": "\{ui\
 mustBe("micro", microT, "error", "{ui.on.error} on {ui.error}", /^color-link error "\{ui\.on\.error\},\{ui\.error\}"/m);
 mustBe("micro", microT, "error-message", "{ui.on.error} on {ui.error}", /^color-link error-message "\{ui\.on\.error\},\{ui\.error\}"/m);
 mustBe("lsd", to256(fill(ctxs[0], lsdT, "lsd-check")), "256 companion", "free of hex strings", /^(?![\s\S]*"#[0-9a-f]{6}")/);
-mustBe("darktable", darktableT, "@import", "free of chunk-fonts.css (darktable 5 only; 4.6 fails to load the theme)", /^(?![\s\S]*@import[^\n]*chunk-fonts)/);
+mustBe("darktable", darktableT, "@import", "free of chunk-fonts.css (unreleased file; a missing @import drops the whole theme on 4.6 to 5.2)", /^(?![\s\S]*@import[^\n]*chunk-fonts)/);
 
 for (const t of VS.tokenColors) for (const v of [t.settings.foreground, t.settings.background].filter(Boolean))
   if (!/^\{syntax\./.test(v)) errors.push(`vscode: token rule "${t.name}" must use a syntax.* role (found ${v})`);
@@ -216,7 +216,7 @@ for (const ctx of ctxs) {
   // lsd below 1.1 rejects hex strings and then drops the whole theme without a word
   // (Ubuntu 24.04 ships 1.0.0), so a companion file carries the nearest xterm-256 index.
   out(`ports/lsd/${slug}.256.yaml`, to256(lsdOut).replace(/^attributes:\n(?:[ #].*\n)+/m, "") // the attributes block is lsd 1.1+ too
-    .replace("Install with:", "lsd 1.0 companion (nearest xterm-256 colours). Install with:").replace(`${slug}.yaml`, `${slug}.256.yaml`));
+    .replace("Install with:", "lsd 1.0 companion (nearest xterm-256 colours). Install with:").replace(`${slug}.yaml`, `${slug}.256.yaml`).replace(/# Needs lsd 1\.1 or newer[\s\S]*?indices\.\n/, `# This is the lsd 1.0 companion: the same theme as xterm-256 indices, for releases that\n# reject hex strings (Ubuntu 24.04 ships 1.0.0). On lsd 1.1 or newer use ${slug}.yaml.\n`));
   out(`ports/ls-colors/${slug}.sh`, toLsColors(applyOverrides("ls-colors", "lines", fill(ctx, lsColorsT, "ls-colors"), ctx)));
   out(`ports/starship/${slug}.toml`, applyOverrides("starship", "lines", fill(ctx, starshipT, "starship"), ctx));
   out(`ports/borders/${slug}.sh`, toArgb(applyOverrides("borders", "lines", fill(ctx, bordersT, "borders"), ctx)));
