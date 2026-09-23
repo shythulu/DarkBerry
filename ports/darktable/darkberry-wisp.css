@@ -21,7 +21,9 @@
 
 /* General */
 @define-color selected_bg_color      #f0cadd;
-@define-color border_color           #967d8c;
+/* border_color is the window's outer edge (stock: grey_10, darker than bg), not a split
+   border, so it takes the deepest pane rather than ui.border.inactive. */
+@define-color border_color           #ebdae5;
 @define-color bg_color               #fbf4f8;
 @define-color fg_color               #4f3143;
 @define-color text_color             #4f3143;
