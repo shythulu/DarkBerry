@@ -49,4 +49,6 @@ The accent, fill, focus, cursor, selection and link roles, and the whole syntax 
 3. Read `docs/CHECKS.md` and open `docs/specimen.html`, which shows editor, terminal and browser together in all four flavours, like Catppuccin's catwalk previews.
 4. Never hand-edit `ports/`, `dist/` or `docs/`; they're generated.
 
+`node build.mjs --check [palette]` runs every check and writes nothing, which is how a tint is verified (both workflows do this for every file in `src/variants/`). `node tools/settle.mjs <palette>` nudges the accent behind any syntax pair the build would reject; `tools/variants.mjs` runs it after `spread.mjs`.
+
 For variants: every variant is a variation on Darkberry, the default palette. `node tools/variants.mjs` regenerates all of them (the nature tints) and keeps their syntax colours distinct; `node tools/variants.mjs <variant> [hue step] [chroma step]` makes one, and `node build.mjs src/variants/<file>.json` builds it. Regenerate the variants after changing the default palette, so they pick up the change.

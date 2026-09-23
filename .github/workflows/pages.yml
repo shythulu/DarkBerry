@@ -21,6 +21,8 @@ jobs:
         with:
           node-version: 20
       - run: node build.mjs
+      - name: Check every tint (writes nothing)
+        run: for v in src/variants/*.json; do node build.mjs --check "$v"; done
       - run: node tools/site.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

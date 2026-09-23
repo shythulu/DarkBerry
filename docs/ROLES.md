@@ -51,7 +51,7 @@ Generated from `src/roles.json`. Every port references these names.
 | `syntax.regex` | `juniper` | `#006f5f` | `#b0dfd9` | `#9ed0c4` | `#9ed0c4` | pink |
 | `syntax.variable` | `blossom` | `#934b66` | `#e6b2d4` | `#e7c5d8` | `#e7c5d8` | text (maroon for parameters) |
 | `syntax.property` | `dark: mix(apricot,subtext0,0.3), light: mix(bilberry,subtext0,0.5)` | `#435982` | `#eabeaa` | `#e6b29c` | `#e5b09a` | blue |
-| `syntax.operator` | `dark: subtext0, light: subtext1` | `#5a4050` | `#ccbac5` | `#cbbcc5` | `#c6b7c0` | sky |
+| `syntax.operator` | `dark: subtext0, light: mix(subtext0,subtext1,0.6)` | `#604656` | `#ccbac5` | `#cbbcc5` | `#c6b7c0` | sky |
 | `syntax.punctuation` | `dark: overlay1, light: mix(overlay1,overlay2,0.2)` | `#8f7685` | `#a28297` | `#91828b` | `#887882` | overlay2 |
 | `syntax.comment` | `overlay2` | `#745b6a` | `#bd9fb1` | `#ad8da2` | `#a58799` | same |
 | `syntax.link` | `ui.link` | `#026b80` | `#83d4db` | `#86c0cc` | `#86c0cc` | blue |
@@ -85,7 +85,7 @@ Generated from `src/roles.json`. Every port references these names.
 | `syntax.regex` | `juniper` | pink | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.variable` | `blossom` | text (maroon for parameters) | Identifiers take a muted rose so code keeps a berry cast without shouting. |
 | `syntax.property` | `{"dark":"mix(apricot,subtext0,0.3)","light":"mix(bilberry,subtext0,0.5)"}` | blue | A warm grey keeps object keys quieter than functions. The former lavender mix was 1.7 units from namespace in Fen; on Wisp the warm mix collides with diff.removed, so the light value mixes bilberry instead. |
-| `syntax.operator` | `{"dark":"subtext0","light":"subtext1"}` | sky | Structural glue recedes: one subtext step above comments. Light flavours take subtext1 because subtext0 is 1.6 from Wisp's darkened comment grey. |
+| `syntax.operator` | `{"dark":"subtext0","light":"mix(subtext0,subtext1,0.6)"}` | sky | Structural glue recedes: one subtext step above comments. Light flavours sit between subtext0 and subtext1, because subtext0 is 1.6 from Wisp's darkened comment grey and subtext1 is 4.9 from crowberry's text. |
 | `syntax.punctuation` | `{"dark":"overlay1","light":"mix(overlay1,overlay2,0.2)"}` | overlay2 | Quieter than comments. Wisp's overlay1 is 2.8:1 on crust, so the light value leans a fifth toward overlay2 to hold 3:1 there. |
 | `syntax.link` | `ui.link` | blue | Follows ui.link. |
 | `syntax.deprecated` | `syntax.comment` | no equivalent | Deprecated code is comment-coloured; the strikethrough VS Code draws is the distinction, a grey of its own was 1 to 3 units from comment and read as the same colour. |

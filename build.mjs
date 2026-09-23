@@ -13,13 +13,18 @@ import { indexRoles, flavourContext } from "./lib/resolve.mjs";
 const root = path.dirname(new URL(import.meta.url).pathname);
 const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
 const readJson = (rel) => JSON.parse(read(rel));
+// `node build.mjs --check [palette]` runs every check and writes nothing, so a tint
+// can be verified without overwriting ports/, docs/ and dist/ with its output.
+const CHECK_ONLY = process.argv.includes("--check");
+const argPalette = process.argv.slice(2).find((a) => !a.startsWith("--"));
 const out = (rel, data) => {
+  if (CHECK_ONLY) return;
   const f = path.join(root, rel);
   fs.mkdirSync(path.dirname(f), { recursive: true });
   fs.writeFileSync(f, typeof data === "string" ? data : JSON.stringify(data, null, 2) + "\n");
 };
 
-const P = readJson(process.argv[2] || "src/palette.json");
+const P = readJson(argPalette || "src/palette.json");
 const ROLES = readJson("src/roles.json");
 const NON_ACCENT = ["jam", "onjam", "tint"];
 const errors = [], warnings = [];
@@ -417,4 +422,4 @@ pre{margin:10px 0 0;padding:10px 12px;border-radius:8px;font:12.5px/1.6 ui-monos
 for (const w of new Set(warnings)) console.warn("warning:", w);
 const uniq = [...new Set(errors)];
 if (uniq.length) { for (const e of uniq) console.error("error:", e); console.error(`Build failed with ${uniq.length} error(s).`); process.exit(1); }
-console.log(`Built ${ctxs.length} flavours. ${warnings.length} warning(s). See docs/CHECKS.md, docs/ROLES.md, docs/USAGE.md, docs/specimen.html.`);
+console.log(CHECK_ONLY ? `Checked ${path.basename(argPalette || "src/palette.json", ".json")} (${ctxs.length} flavours): 0 errors, ${warnings.length} warning(s). Nothing written.` : `Built ${ctxs.length} flavours. ${warnings.length} warning(s). See docs/CHECKS.md, docs/ROLES.md, docs/USAGE.md, docs/specimen.html.`);

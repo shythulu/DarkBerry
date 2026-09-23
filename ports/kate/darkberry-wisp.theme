@@ -31,8 +31,8 @@
       "bold": true
     },
     "Operator": {
-      "text-color": "#5a4050",
-      "selected-text-color": "#5a4050"
+      "text-color": "#604656",
+      "selected-text-color": "#604656"
     },
     "BuiltIn": {
       "text-color": "#7350a8",

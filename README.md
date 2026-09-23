@@ -30,6 +30,7 @@ docs/specimen.html        editor, terminal and browser in all four flavours on o
 docs/studio.html          Darkberry Studio: edit palette and roles live, then export a patch
 tools/variants.mjs        makes Darkberry variations: node tools/variants.mjs <variant> [hue step] [chroma step]
 tools/spread.mjs          nudges key syntax colours apart when they're too close
+tools/settle.mjs          settles a palette against the build's full syntax checks (used by variants.mjs)
 tools/where.mjs           shows what drives any setting: node tools/where.mjs tab
 tools/apply-patch.mjs     applies a patch exported from Darkberry Studio, then rebuilds
 tools/site.mjs            builds the GitHub Pages showcase into site/

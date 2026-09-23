@@ -106,9 +106,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const file = hs || cs ? `src/variants/${name}_h${sign(hs)}_c${sign(cs)}.json` : `src/variants/${name}.json`;
     const out = generate(P, name, hs, cs);
     out.description = `${P.description} Tint: ${VARIANTS[name].label}.`;
+    // The default's flavour notes describe its own neutrals, which a tint replaces.
+    for (const [fid, f] of Object.entries(out.flavours)) f.note = `${VARIANTS[name].label} tint of ${f.name}: ${f.dark ? "dark" : "light"}, neutrals leaned toward ${name} (base ${f.colors.base}).`;
     delete out.defaultVariant;
     fs.writeFileSync(file, JSON.stringify(out, null, 2) + "\n");
-    if (!raw) execFileSync("node", ["tools/spread.mjs", file, "6"], { stdio: "ignore" });
+    if (!raw) { execFileSync("node", ["tools/spread.mjs", file, "6"], { stdio: "ignore" }); execFileSync("node", ["tools/settle.mjs", file], { stdio: "ignore" }); }
     console.log("wrote", file);
   }
 }

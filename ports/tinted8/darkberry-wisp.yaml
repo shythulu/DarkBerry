@@ -93,7 +93,7 @@ syntax:
   invalid: "#bb262a"
   invalid.deprecated: "#745b6a"
   keyword: "#bf0b64"
-  keyword.operator: "#5a4050"
+  keyword.operator: "#604656"
   markup.bold: "#3659ca"
   markup.changed: "#8c3eb2"
   markup.deleted: "#9e4116"

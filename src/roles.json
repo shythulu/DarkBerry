@@ -288,10 +288,10 @@
     "operator": {
       "value": {
         "dark": "subtext0",
-        "light": "subtext1"
+        "light": "mix(subtext0,subtext1,0.6)"
       },
       "catppuccin": "sky",
-      "why": "Structural glue recedes: one subtext step above comments. Light flavours take subtext1 because subtext0 is 1.6 from Wisp's darkened comment grey.",
+      "why": "Structural glue recedes: one subtext step above comments. Light flavours sit between subtext0 and subtext1, because subtext0 is 1.6 from Wisp's darkened comment grey and subtext1 is 4.9 from crowberry's text.",
       "minContrast": 3
     },
     "punctuation": {

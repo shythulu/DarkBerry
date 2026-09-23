@@ -44,6 +44,7 @@ jobs:
       - name: Check the committed ports are current
         run: |
           node build.mjs
+          for v in src/variants/*.json; do node build.mjs --check "$v"; done
           git diff --exit-code -- ports ||
             { echo "::error::ports/ is stale; run node build.mjs and commit the result"; exit 1; }
 

@@ -19,7 +19,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | syntax.regex | 4.5 | 5.64 | 7.77 | 9.35 | 10.64 |
 | syntax.variable | 4.5 | 5.64 | 6.31 | 10.19 | 11.59 |
 | syntax.property | 4.5 | 6.49 | 6.72 | 8.55 | 9.54 |
-| syntax.operator | 3 | 8.49 | 6.15 | 8.79 | 9.48 |
+| syntax.operator | 3 | 7.73 | 6.15 | 8.79 | 9.48 |
 | syntax.punctuation | 3 | 3.80 | 3.33 | 4.40 | 4.38 |
 | syntax.comment | 4.5 | 5.63 | 4.73 | 5.42 | 5.66 |
 | syntax.link | 4.5 | 5.68 | 6.70 | 7.95 | 9.04 |
@@ -42,7 +42,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | syntax.regex on ui.pane.secondary | 4.5 | 5.05 | 9.12 | 10.18 | 11.12 |
 | syntax.variable on ui.pane.secondary | 4.5 | 5.05 | 7.40 | 11.09 | 12.12 |
 | syntax.property on ui.pane.secondary | 4.5 | 5.81 | 7.88 | 9.30 | 9.98 |
-| syntax.operator on ui.pane.secondary | 3 | 7.61 | 7.22 | 9.57 | 9.91 |
+| syntax.operator on ui.pane.secondary | 3 | 6.93 | 7.22 | 9.57 | 9.91 |
 | syntax.punctuation on ui.pane.secondary | 3 | 3.41 | 3.91 | 4.78 | 4.58 |
 | syntax.comment on ui.pane.secondary | 4.5 | 5.04 | 5.55 | 5.89 | 5.91 |
 | syntax.link on ui.pane.secondary | 4.5 | 5.08 | 7.86 | 8.64 | 9.45 |
@@ -65,7 +65,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | syntax.regex on ui.pane.tertiary | 4.5 | 4.56 | 10.23 | 10.73 | 11.45 |
 | syntax.variable on ui.pane.tertiary | 4.5 | 4.56 | 8.30 | 11.70 | 12.48 |
 | syntax.property on ui.pane.tertiary | 4.5 | 5.25 | 8.84 | 9.80 | 10.27 |
-| syntax.operator on ui.pane.tertiary | 3 | 6.87 | 8.09 | 10.09 | 10.20 |
+| syntax.operator on ui.pane.tertiary | 3 | 6.26 | 8.09 | 10.09 | 10.20 |
 | syntax.punctuation on ui.pane.tertiary | 3 | 3.08 | 4.39 | 5.05 | 4.72 |
 | syntax.comment on ui.pane.tertiary | 4.5 | 4.55 | 6.22 | 6.22 | 6.09 |
 | syntax.link on ui.pane.tertiary | 4.5 | 4.59 | 8.81 | 9.12 | 9.73 |
@@ -97,7 +97,7 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 
 OKLab distance ×100 between every pair of syntax roles (an alias such as deprecated is checked through its target). Calibrated against Catppuccin, whose closest core pair is 5.7 (Frappé). Under 5 fails; under 7 between two key roles is a warning. Closest pairs per flavour:
 
-- **Wisp:** text/operator 5.1 ~, keyword/function 5.4 ~, type/namespace 5.9 ~, regex/link 6.0 ~
+- **Wisp:** keyword/function 5.4 ~, type/namespace 5.9 ~, regex/link 6.0 ~, function/variable 6.1 ~
 - **Fen:** variable/operator 5.1 ~, namespace/variable 5.3 ~, keyword/error 5.6 ~, string/regex 5.6 ~
 - **Mire:** variable/operator 5.4 ~, regex/link 5.8 ~, function/type 6.0 ~, function/variable 6.0 ~
 - **Blackwater:** regex/link 5.8 ~, function/type 6.0 ~, function/variable 6.0 ~, string/regex 6.0 ~
