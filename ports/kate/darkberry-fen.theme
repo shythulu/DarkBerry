@@ -141,7 +141,7 @@
   "editor-colors": {
     "BackgroundColor": "#4f3143",
     "CodeFolding": "#6e4457",
-    "BracketMatching": "#7b5a6e",
+    "BracketMatching": "#543648",
     "CurrentLine": "#543648",
     "IconBorder": "#402838",
     "IndentationLine": "#6c4c60",
@@ -157,7 +157,7 @@
     "ModifiedLines": "#f0d6a0",
     "ReplaceHighlight": "#dc67a7",
     "SavedLines": "#b7e6b7",
-    "SearchHighlight": "#6c4c60",
+    "SearchHighlight": "#6a4d67",
     "TextSelection": "#6e4457",
     "Separator": "#a28297",
     "SpellChecking": "#ff8a8a",

@@ -67,7 +67,7 @@ cursor = "{ui.accent}"
 
 [colors.search.matches]
 foreground = "{ui.text}"
-background = "{mix(ui.background,ui.mark1,0.35)}"
+background = "{ui.search.matches}"
 
 [colors.search.focused_match]
 foreground = "{ui.mark.text}"

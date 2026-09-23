@@ -67,7 +67,7 @@ cursor = "#b9488b"
 
 [colors.search.matches]
 foreground = "#4f3143"
-background = "#cbbbdc"
+background = "#ddd0e6"
 
 [colors.search.focused_match]
 foreground = "#fbf4f8"

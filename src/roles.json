@@ -120,7 +120,7 @@
         "light": "onjam"
       },
       "catppuccin": "no equivalent",
-      "why": "Text drawn on an error fill (micro's error bar, Obsidian's destructive buttons). White on cranberry is 2.3:1 in Fen; crust reaches 6:1 in every dark flavour."
+      "why": "Text drawn on a full status fill: error bars in micro, Obsidian's destructive buttons, btop's banners. White on cranberry is 2.3:1 in Fen; crust reaches 6:1 on the error, warning and info fills in every dark flavour, white 5:1 on Wisp's."
     },
     "info": {
       "value": "juniper",

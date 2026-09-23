@@ -1253,8 +1253,9 @@
   {
     "port": "alacritty",
     "key": "background",
-    "expr": "{mix(ui.background,ui.mark1,0.35)}",
+    "expr": "{ui.search.matches}",
     "roles": [
+      "ui.search.matches",
       "ui.background",
       "ui.mark1"
     ],
@@ -1263,10 +1264,10 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#cbbbdc",
-      "fen": "#7a5d7d",
-      "mire": "#5c4e66",
-      "blackwater": "#54475e"
+      "wisp": "#ddd0e6",
+      "fen": "#6a4d67",
+      "mire": "#4a3c4e",
+      "blackwater": "#403345"
     }
   },
   {
@@ -5981,50 +5982,57 @@
   {
     "port": "micro",
     "key": "color-link",
-    "expr": "{surface1}",
-    "roles": [],
+    "expr": "{ui.line.current}",
+    "roles": [
+      "ui.line.current",
+      "ui.background"
+    ],
     "palette": [
-      "surface1"
+      "base",
+      "surface0"
     ],
     "hex": {
-      "wisp": "#d0bac8",
-      "fen": "#6c4c60",
-      "mire": "#3e2936",
-      "blackwater": "#34222e"
+      "wisp": "#f1e6ed",
+      "fen": "#543648",
+      "mire": "#2d1f28",
+      "blackwater": "#21151d"
     }
   },
   {
     "port": "micro",
     "key": "color-link",
-    "expr": "{ui.on.fill}",
+    "expr": "{ui.text}",
     "roles": [
-      "ui.on.fill"
+      "ui.text"
     ],
     "palette": [
-      "onjam"
+      "text"
     ],
     "hex": {
-      "wisp": "#ffffff",
-      "fen": "#35212e",
-      "mire": "#ffffff",
-      "blackwater": "#ffffff"
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
     }
   },
   {
     "port": "micro",
     "key": "color-link",
-    "expr": "{ui.fill}",
+    "expr": "{ui.search.matches}",
     "roles": [
-      "ui.fill"
+      "ui.search.matches",
+      "ui.background",
+      "ui.mark1"
     ],
     "palette": [
-      "jam"
+      "base",
+      "lavender"
     ],
     "hex": {
-      "wisp": "#b9488b",
-      "fen": "#dc67a7",
-      "mire": "#be4c8d",
-      "blackwater": "#ba4889"
+      "wisp": "#ddd0e6",
+      "fen": "#6a4d67",
+      "mire": "#4a3c4e",
+      "blackwater": "#403345"
     }
   },
   {
@@ -10573,16 +10581,20 @@
   {
     "port": "neovim",
     "key": "MatchParen",
-    "expr": "{surface1}",
-    "roles": [],
+    "expr": "{ui.line.current}",
+    "roles": [
+      "ui.line.current",
+      "ui.background"
+    ],
     "palette": [
-      "surface1"
+      "base",
+      "surface0"
     ],
     "hex": {
-      "wisp": "#d0bac8",
-      "fen": "#6c4c60",
-      "mire": "#3e2936",
-      "blackwater": "#34222e"
+      "wisp": "#f1e6ed",
+      "fen": "#543648",
+      "mire": "#2d1f28",
+      "blackwater": "#21151d"
     }
   },
   {
@@ -16726,8 +16738,9 @@
   {
     "port": "tmux",
     "key": "copy-mode-match-style",
-    "expr": "{mix(ui.background,ui.mark1,0.35)}",
+    "expr": "{ui.search.matches}",
     "roles": [
+      "ui.search.matches",
       "ui.background",
       "ui.mark1"
     ],
@@ -16736,10 +16749,10 @@
       "lavender"
     ],
     "hex": {
-      "wisp": "#cbbbdc",
-      "fen": "#7a5d7d",
-      "mire": "#5c4e66",
-      "blackwater": "#54475e"
+      "wisp": "#ddd0e6",
+      "fen": "#6a4d67",
+      "mire": "#4a3c4e",
+      "blackwater": "#403345"
     }
   },
   {
@@ -20641,16 +20654,20 @@
   {
     "port": "kate",
     "key": "BracketMatching",
-    "expr": "{surface2}",
-    "roles": [],
+    "expr": "{ui.line.current}",
+    "roles": [
+      "ui.line.current",
+      "ui.background"
+    ],
     "palette": [
-      "surface2"
+      "base",
+      "surface0"
     ],
     "hex": {
-      "wisp": "#c3abb9",
-      "fen": "#7b5a6e",
-      "mire": "#4f3143",
-      "blackwater": "#432c3b"
+      "wisp": "#f1e6ed",
+      "fen": "#543648",
+      "mire": "#2d1f28",
+      "blackwater": "#21151d"
     }
   },
   {
@@ -20909,16 +20926,21 @@
   {
     "port": "kate",
     "key": "SearchHighlight",
-    "expr": "{surface1}",
-    "roles": [],
+    "expr": "{ui.search.matches}",
+    "roles": [
+      "ui.search.matches",
+      "ui.background",
+      "ui.mark1"
+    ],
     "palette": [
-      "surface1"
+      "base",
+      "lavender"
     ],
     "hex": {
-      "wisp": "#d0bac8",
-      "fen": "#6c4c60",
-      "mire": "#3e2936",
-      "blackwater": "#34222e"
+      "wisp": "#ddd0e6",
+      "fen": "#6a4d67",
+      "mire": "#4a3c4e",
+      "blackwater": "#403345"
     }
   },
   {

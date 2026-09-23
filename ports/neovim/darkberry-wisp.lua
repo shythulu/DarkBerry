@@ -104,7 +104,7 @@ H.IncSearch = { fg = "#fbf4f8", bg = "#7350a8" }
 H.CurSearch = { fg = "#fbf4f8", bg = "#7350a8" }
 H.Substitute = { fg = "#fbf4f8", bg = "#8c3eb2" }
 -- Bracket match: the accent on surface1, as micro and Notepad++.
-H.MatchParen = { fg = "#b9488b", bg = "#d0bac8", bold = true }
+H.MatchParen = { fg = "#b9488b", bg = "#f1e6ed", bold = true }
 H.QuickFixLine = { bg = "#f0cadd", bold = true }
 -- Same-symbol highlights (LSP document highlight): a structural surface step, so the
 -- symbol under the cursor is found without reading as a selection or a search hit.

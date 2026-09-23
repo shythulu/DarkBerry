@@ -141,7 +141,7 @@
     "editor-colors": {
         "BackgroundColor": "{ui.background}",
         "CodeFolding": "{ui.selection}",
-        "BracketMatching": "{surface2}",
+        "BracketMatching": "{ui.line.current}",
         "CurrentLine": "{ui.line.current}",
         "IconBorder": "{ui.pane.secondary}",
         "IndentationLine": "{surface1}",
@@ -157,7 +157,7 @@
         "ModifiedLines": "{ui.warning}",
         "ReplaceHighlight": "{ui.fill}",
         "SavedLines": "{ui.success}",
-        "SearchHighlight": "{surface1}",
+        "SearchHighlight": "{ui.search.matches}",
         "TextSelection": "{ui.selection}",
         "Separator": "{ui.border.inactive}",
         "SpellChecking": "{ui.error}",

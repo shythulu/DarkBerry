@@ -15,16 +15,13 @@ A bog-witch berry theme in four flavours, grown from Benjamin Moore Dark Purple 
 src/palette.json          layer 1: the untinted default palette, 12 neutrals + 14 accents + jam/onjam per flavour
 src/roles.json            layer 2: what each colour means, shared by every port, with Catppuccin comparison
 src/overrides/            layer 3: rare port-only exceptions, each with a reason
-src/ports/                kitty, Ghostty, Alacritty and Firefox templates (roles in {braces}, no hex)
-src/ports/                kitty, Ghostty, tmux, Firefox and the other templates (roles in {braces}, no hex)
-src/ports/                kitty, Ghostty, Firefox, Neovim and the other templates (roles in {braces}, no hex)
+src/ports/                every port's template: terminals, editors, browsers, shells (roles in {braces}, no hex)
 src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
-ports/                    generated kitty, Ghostty, Alacritty, VS Code and Firefox themes
-ports/                    generated kitty, Ghostty, tmux, VS Code, Firefox and other themes
+ports/                    generated themes for every port
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results

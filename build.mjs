@@ -205,6 +205,13 @@ mustBe("alacritty", alacrittyT, "bright_foreground", "{ui.text} (Alacritty draws
 mustBe("alacritty", alacrittyT, "[colors.footer_bar]", "{ui.text} on {ui.pane.secondary} (a status bar)", /\[colors\.footer_bar\]\nforeground = "\{ui\.text\}"\nbackground = "\{ui\.pane\.secondary\}"/);
 mustBe("kde", kdeT, "DecorationFocus", "{ui.focus}", /^DecorationFocus=\{ui\.focus\}$/m);
 mustBe("kde", kdeT, "DecorationHover", "{ui.accent}", /^DecorationHover=\{ui\.accent\}$/m);
+mustBe("alacritty", alacrittyT, "[colors.search.matches]", "{ui.search.matches} under {ui.text}", /\[colors\.search\.matches\]\nforeground = "\{ui\.text\}"\nbackground = "\{ui\.search\.matches\}"/);
+mustBe("tmux", tmuxT, "copy-mode-match-style", "{ui.search.matches}", /^set -g copy-mode-match-style "bg=\{ui\.search\.matches\}"/m);
+mustBe("kate", kateT, "SearchHighlight", "{ui.search.matches}", /"SearchHighlight": "\{ui\.search\.matches\}"/);
+mustBe("kate", kateT, "BracketMatching", "{ui.line.current}", /"BracketMatching": "\{ui\.line\.current\}"/);
+mustBe("micro", microT, "hlsearch", "{ui.text} on {ui.search.matches}", /^color-link hlsearch "\{ui\.text\},\{ui\.search\.matches\}"/m);
+mustBe("micro", microT, "match-brace", "{ui.accent} on {ui.line.current}", /^color-link match-brace "\{ui\.accent\},\{ui\.line\.current\}"/m);
+mustBe("neovim", neovimT, "MatchParen", "{ui.accent} bold on {ui.line.current}", /^H\.MatchParen = \{ fg = "\{ui\.accent\}", bg = "\{ui\.line\.current\}", bold = true \}/m);
 mustBe("kate", kateT, "CurrentLine", "{ui.line.current}", /"CurrentLine": "\{ui\.line\.current\}"/);
 mustBe("micro", microT, "error", "{ui.on.error} on {ui.error}", /^color-link error "\{ui\.on\.error\},\{ui\.error\}"/m);
 mustBe("micro", microT, "error-message", "{ui.on.error} on {ui.error}", /^color-link error-message "\{ui\.on\.error\},\{ui\.error\}"/m);
@@ -360,10 +367,7 @@ walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "co
 walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
-for (const port of ["kitty", "ghostty", "alacritty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
-for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "btop"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
-for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "bat"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
-for (const port of ["kitty", "ghostty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "neovim", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const port of ["kitty", "ghostty", "alacritty", "firefox", "vscode", "obsidian", "kde", "konsole", "nimbalyst", "micro", "kate", "chrome", "notepadpp", "gtk", "darktable", "gimp", "starship", "borders", "lsd", "ls-colors", "tinted8", "base24", "btop", "bat", "neovim"]) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
 out("dist/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
