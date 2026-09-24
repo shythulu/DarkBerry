@@ -1,0 +1,26 @@
+{
+  "id": "crowberry-mire",
+  "name": "Crowberry Mire",
+  "version": "0.3.0",
+  "author": "Crowberry",
+  "description": "Crowberry tint of Mire: dark, neutrals leaned toward crowberry (base #251d34).",
+  "isDark": true,
+  "colors": {
+    "bg": "#251d34",
+    "bg-secondary": "#1e162c",
+    "bg-tertiary": "#181025",
+    "text": "#e9e4f4",
+    "text-muted": "#c3bece",
+    "border": "#8a839a",
+    "primary": "#be4c8d",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

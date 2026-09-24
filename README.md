@@ -22,10 +22,12 @@ src/usage/<port>.md       each port's install steps, the Usage section of its RE
 template/                 the port template (Catppuccin's, adapted): README.md and assets/
 src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
+src/tints.json            the tints in order, with the name, emoji and badge colour each shows in READMEs
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
 ports/<port>/             generated theme files, a README written from template/, and assets/ for screenshots
+ports/<port>/<tint>/      the same for each tint (VS Code and the GIMP palette carry tints in one unit instead)
 assets/                   generated logo, footer and fallback palette previews used by every port README
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
@@ -44,7 +46,7 @@ STYLE_GUIDE.md            the rules
 docs/PORT_CREATION.md     how a port is laid out and added, after Catppuccin's port-creation guide
 ```
 
-`node build.mjs` rebuilds everything and fails if a rule is broken. `./package.sh` also builds the VS Code `.vsix` and Firefox `.xpi` files. To build a variant instead of the default: `node build.mjs src/variants/cloudberry.json`.
+`node build.mjs` rebuilds everything, the tints included, and fails if a rule is broken. `./package.sh` also builds the VS Code `.vsix` and Firefox `.xpi` files. `node build.mjs src/variants/cloudberry.json` rebuilds one tint into its subfolders; `--no-tints` builds only the default.
 
 ## Website
 
@@ -67,10 +69,17 @@ Every port lives in its own folder under `ports/`, laid out the way the
 a README with previews and install steps, an `assets/` folder for screenshots, and the
 theme files. Each README below is the install guide for that app.
 
-Every tagged release also carries the packaged files: a `.vsix` for VS Code, an `.xpi` per
-flavour for Firefox, and a zip of every other port. Download them from
-[Releases](https://github.com/shythulu/DarkBerry/releases), or build them yourself with
-`./package.sh`, which writes the same set into `dist/`.
+Every port also comes in the four tints (lingonberry, cloudberry, crowberry and
+blueberry), each in four flavours. The bar under a port README's badges links to each tint:
+most apps take one theme per file, so a tint lives in its own subfolder with its own README;
+VS Code and the GIMP palette hold every tint in one unit, so those two have a `with-tints`
+extension and a `darkberry-with-tints.gpl` file instead.
+
+Every tagged release carries the packaged files twice over: the plain Darkberry set (a
+`.vsix` for VS Code, an `.xpi` per flavour for Firefox, and a zip of every other port) and a
+with-tints set (a second `.vsix`, an `.xpi` per tint and flavour, and a `-with-tints` zip
+per port). Download them from [Releases](https://github.com/shythulu/DarkBerry/releases), or
+build them yourself with `./package.sh`, which writes the same set into `dist/`.
 
 <!-- ports:begin -->
 <!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->

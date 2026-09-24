@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Crowberry Wisp",
+  "version": "0.3.0",
+  "description": "Crowberry for Chrome and Edge. Crowberry tint of Wisp: light, neutrals leaned toward crowberry (base #f8f4ff).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [226, 220, 239],
+      "frame_inactive": [226, 220, 239],
+      "frame_incognito": [226, 220, 239],
+      "frame_incognito_inactive": [226, 220, 239],
+      "toolbar": [248, 244, 255],
+      "tab_text": [64, 54, 84],
+      "tab_background_text": [92, 81, 112],
+      "tab_background_text_inactive": [137, 128, 155],
+      "bookmark_text": [64, 54, 84],
+      "toolbar_button_icon": [92, 81, 112],
+      "omnibox_background": [212, 206, 226],
+      "omnibox_text": [64, 54, 84],
+      "ntp_background": [248, 244, 255],
+      "ntp_text": [64, 54, 84],
+      "ntp_link": [2, 107, 128],
+      "button_background": [196, 190, 210]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

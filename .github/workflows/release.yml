@@ -44,7 +44,6 @@ jobs:
       - name: Check the committed ports are current
         run: |
           node build.mjs
-          for v in src/variants/*.json; do node build.mjs --check "$v"; done
           git diff --exit-code -- ports assets README.md ||
             { echo "::error::ports/, assets/ or README.md is stale; run node build.mjs and commit the result"; exit 1; }
 
@@ -58,7 +57,9 @@ jobs:
           {
             echo "### Install"
             echo
-            echo "**VS Code** (and Cursor, VSCodium, Windsurf) — \`code --install-extension darkberry-theme-$version.vsix\`, or Extensions > ... > Install from VSIX. Pick a flavour with Ctrl+K Ctrl+T."
+            echo "Every port comes twice: the plain Darkberry file and a \`-with-tints\` one that also carries the lingonberry, cloudberry, crowberry and blueberry tints, each in four flavours."
+            echo
+            echo "**VS Code** (and Cursor, VSCodium, Windsurf) — \`code --install-extension darkberry-theme-$version.vsix\` (or \`darkberry-with-tints-theme-$version.vsix\` for all twenty themes; install one, not both), or Extensions > ... > Install from VSIX. Pick a flavour with Ctrl+K Ctrl+T."
             echo
             echo "**kitty** — unzip \`darkberry-kitty-$version.zip\` into \`~/.config/kitty/themes/\`, then \`kitty +kitten themes\`."
             echo

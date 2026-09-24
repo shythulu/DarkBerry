@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Lingonberry Wisp",
+  "version": "0.3.0",
+  "description": "Lingonberry for Firefox. Lingonberry tint of Wisp: light, neutrals leaned toward lingonberry (base #fff3f6).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lingonberry-wisp@lingonberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#efd9df",
+      "frame_inactive": "#efd9df",
+      "tab_selected": "#fff3f6",
+      "tab_text": "#572c3b",
+      "tab_background_text": "#744956",
+      "tab_line": "#bf0b65",
+      "tab_loading": "#b9488b",
+      "toolbar": "#fff3f6",
+      "toolbar_text": "#572c3b",
+      "bookmark_text": "#572c3b",
+      "icons": "#744956",
+      "icons_attention": "#b9488b",
+      "toolbar_field": "#e2cbd1",
+      "toolbar_field_text": "#572c3b",
+      "toolbar_field_border": "#d3bac0",
+      "toolbar_field_focus": "#e2cbd1",
+      "toolbar_field_text_focus": "#572c3b",
+      "toolbar_field_border_focus": "#b9488b",
+      "toolbar_field_highlight": "#f3c9dc",
+      "toolbar_field_highlight_text": "#572c3b",
+      "toolbar_top_separator": "#efd9df",
+      "toolbar_bottom_separator": "#e2cbd1",
+      "toolbar_vertical_separator": "#d3bac0",
+      "popup": "#f9e4ea",
+      "popup_text": "#572c3b",
+      "popup_border": "#d3bac0",
+      "popup_highlight": "#f3c9dc",
+      "popup_highlight_text": "#572c3b",
+      "sidebar": "#f9e4ea",
+      "sidebar_text": "#572c3b",
+      "sidebar_border": "#e2cbd1",
+      "sidebar_highlight": "#f3c9dc",
+      "sidebar_highlight_text": "#572c3b",
+      "ntp_background": "#fff3f6",
+      "ntp_text": "#572c3b",
+      "button_background_hover": "#e2cbd1",
+      "button_background_active": "#d3bac0"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

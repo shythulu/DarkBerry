@@ -1,0 +1,26 @@
+{
+  "id": "lingonberry-fen",
+  "name": "Lingonberry Fen",
+  "version": "0.3.0",
+  "author": "Lingonberry",
+  "description": "Lingonberry tint of Fen: dark, neutrals leaned toward lingonberry (base #55323d).",
+  "isDark": true,
+  "colors": {
+    "bg": "#55323d",
+    "bg-secondary": "#482832",
+    "bg-tertiary": "#3d2029",
+    "text": "#fae3e9",
+    "text-muted": "#d2b8bf",
+    "border": "#a6828c",
+    "primary": "#dc67a7",
+    "link": "#83d4db",
+    "success": "#bbe5b3",
+    "warning": "#f0d6a0",
+    "error": "#fd8c85",
+    "info": "#afdfdb"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

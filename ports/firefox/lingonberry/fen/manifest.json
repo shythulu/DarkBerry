@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Lingonberry Fen",
+  "version": "0.3.0",
+  "description": "Lingonberry for Firefox. Lingonberry tint of Fen: dark, neutrals leaned toward lingonberry (base #55323d).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lingonberry-fen@lingonberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#3d2029",
+      "frame_inactive": "#3d2029",
+      "tab_selected": "#55323d",
+      "tab_text": "#fae3e9",
+      "tab_background_text": "#d2b8bf",
+      "tab_line": "#f999b7",
+      "tab_loading": "#dc67a7",
+      "toolbar": "#55323d",
+      "toolbar_text": "#fae3e9",
+      "bookmark_text": "#fae3e9",
+      "icons": "#d2b8bf",
+      "icons_attention": "#dc67a7",
+      "toolbar_field": "#643f4a",
+      "toolbar_field_text": "#fae3e9",
+      "toolbar_field_border": "#734d58",
+      "toolbar_field_focus": "#643f4a",
+      "toolbar_field_text_focus": "#fae3e9",
+      "toolbar_field_border_focus": "#dc67a7",
+      "toolbar_field_highlight": "#734452",
+      "toolbar_field_highlight_text": "#fae3e9",
+      "toolbar_top_separator": "#3d2029",
+      "toolbar_bottom_separator": "#643f4a",
+      "toolbar_vertical_separator": "#734d58",
+      "popup": "#482832",
+      "popup_text": "#fae3e9",
+      "popup_border": "#734d58",
+      "popup_highlight": "#734452",
+      "popup_highlight_text": "#fae3e9",
+      "sidebar": "#482832",
+      "sidebar_text": "#fae3e9",
+      "sidebar_border": "#643f4a",
+      "sidebar_highlight": "#734452",
+      "sidebar_highlight_text": "#fae3e9",
+      "ntp_background": "#55323d",
+      "ntp_text": "#fae3e9",
+      "button_background_hover": "#643f4a",
+      "button_background_active": "#734d58"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

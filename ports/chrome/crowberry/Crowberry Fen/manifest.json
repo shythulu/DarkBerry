@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Crowberry Fen",
+  "version": "0.3.0",
+  "description": "Crowberry for Chrome and Edge. Crowberry tint of Fen: dark, neutrals leaned toward crowberry (base #403654).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [44, 35, 61],
+      "frame_inactive": [44, 35, 61],
+      "frame_incognito": [44, 35, 61],
+      "frame_incognito_inactive": [44, 35, 61],
+      "toolbar": [64, 54, 84],
+      "tab_text": [236, 231, 247],
+      "tab_background_text": [194, 189, 206],
+      "tab_background_text_inactive": [145, 135, 166],
+      "bookmark_text": [236, 231, 247],
+      "toolbar_button_icon": [194, 189, 206],
+      "omnibox_background": [77, 67, 98],
+      "omnibox_text": [236, 231, 247],
+      "ntp_background": [64, 54, 84],
+      "ntp_text": [236, 231, 247],
+      "ntp_link": [131, 212, 219],
+      "button_background": [92, 81, 114]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

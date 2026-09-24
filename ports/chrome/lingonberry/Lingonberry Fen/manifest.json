@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Lingonberry Fen",
+  "version": "0.3.0",
+  "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Fen: dark, neutrals leaned toward lingonberry (base #55323d).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [61, 32, 41],
+      "frame_inactive": [61, 32, 41],
+      "frame_incognito": [61, 32, 41],
+      "frame_incognito_inactive": [61, 32, 41],
+      "toolbar": [85, 50, 61],
+      "tab_text": [250, 227, 233],
+      "tab_background_text": [210, 184, 191],
+      "tab_background_text_inactive": [166, 130, 140],
+      "bookmark_text": [250, 227, 233],
+      "toolbar_button_icon": [210, 184, 191],
+      "omnibox_background": [100, 63, 74],
+      "omnibox_text": [250, 227, 233],
+      "ntp_background": [85, 50, 61],
+      "ntp_text": [250, 227, 233],
+      "ntp_link": [131, 212, 219],
+      "button_background": [115, 77, 88]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

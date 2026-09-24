@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Blueberry Fen",
+  "version": "0.3.0",
+  "description": "Blueberry for Chrome and Edge. Blueberry tint of Fen: dark, neutrals leaned toward blueberry (base #2f3b58).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [29, 39, 64],
+      "frame_inactive": [29, 39, 64],
+      "frame_incognito": [29, 39, 64],
+      "frame_incognito_inactive": [29, 39, 64],
+      "toolbar": [47, 59, 88],
+      "tab_text": [227, 234, 249],
+      "tab_background_text": [185, 192, 209],
+      "tab_background_text_inactive": [128, 141, 170],
+      "bookmark_text": [227, 234, 249],
+      "toolbar_button_icon": [185, 192, 209],
+      "omnibox_background": [60, 73, 103],
+      "omnibox_text": [227, 234, 249],
+      "ntp_background": [47, 59, 88],
+      "ntp_text": [227, 234, 249],
+      "ntp_link": [131, 212, 219],
+      "button_background": [74, 87, 118]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Cloudberry Blackwater",
+  "version": "0.3.0",
+  "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Blackwater: dark, neutrals leaned toward cloudberry (base #261207).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [26, 8, 2],
+      "frame_inactive": [26, 8, 2],
+      "frame_incognito": [26, 8, 2],
+      "frame_incognito_inactive": [26, 8, 2],
+      "toolbar": [38, 18, 7],
+      "tab_text": [243, 225, 216],
+      "tab_background_text": [202, 184, 174],
+      "tab_background_text_inactive": [143, 120, 108],
+      "bookmark_text": [243, 225, 216],
+      "toolbar_button_icon": [202, 184, 174],
+      "omnibox_background": [48, 26, 14],
+      "omnibox_text": [243, 225, 216],
+      "ntp_background": [38, 18, 7],
+      "ntp_text": [243, 225, 216],
+      "ntp_link": [134, 192, 204],
+      "button_background": [60, 36, 22]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

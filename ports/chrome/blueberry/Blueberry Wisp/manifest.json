@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Blueberry Wisp",
+  "version": "0.3.0",
+  "description": "Blueberry for Chrome and Edge. Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [216, 224, 242],
+      "frame_inactive": [216, 224, 242],
+      "frame_incognito": [216, 224, 242],
+      "frame_incognito_inactive": [216, 224, 242],
+      "toolbar": [242, 246, 255],
+      "tab_text": [47, 59, 88],
+      "tab_background_text": [74, 87, 116],
+      "tab_background_text_inactive": [122, 133, 159],
+      "bookmark_text": [47, 59, 88],
+      "toolbar_button_icon": [74, 87, 116],
+      "omnibox_background": [201, 210, 229],
+      "omnibox_text": [47, 59, 88],
+      "ntp_background": [242, 246, 255],
+      "ntp_text": [47, 59, 88],
+      "ntp_link": [2, 107, 128],
+      "button_background": [185, 193, 213]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

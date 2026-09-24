@@ -1,0 +1,26 @@
+{
+  "id": "crowberry-wisp",
+  "name": "Crowberry Wisp",
+  "version": "0.3.0",
+  "author": "Crowberry",
+  "description": "Crowberry tint of Wisp: light, neutrals leaned toward crowberry (base #f8f4ff).",
+  "isDark": false,
+  "colors": {
+    "bg": "#f8f4ff",
+    "bg-secondary": "#ece7f9",
+    "bg-tertiary": "#e2dcef",
+    "text": "#403654",
+    "text-muted": "#5c5170",
+    "border": "#89809b",
+    "primary": "#b9488b",
+    "link": "#026b80",
+    "success": "#2c6f2d",
+    "warning": "#815b02",
+    "error": "#bb262a",
+    "info": "#006f5f"
+  },
+  "tags": [
+    "darkberry",
+    "light"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "crowberry-fen",
+  "name": "Crowberry Fen",
+  "version": "0.3.0",
+  "author": "Crowberry",
+  "description": "Crowberry tint of Fen: dark, neutrals leaned toward crowberry (base #403654).",
+  "isDark": true,
+  "colors": {
+    "bg": "#403654",
+    "bg-secondary": "#352b47",
+    "bg-tertiary": "#2c233d",
+    "text": "#ece7f7",
+    "text-muted": "#c2bdce",
+    "border": "#9187a6",
+    "primary": "#dc67a7",
+    "link": "#83d4db",
+    "success": "#bbe5b3",
+    "warning": "#f0d6a0",
+    "error": "#fd8c85",
+    "info": "#afdfdb"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

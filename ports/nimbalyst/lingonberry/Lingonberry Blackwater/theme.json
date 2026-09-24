@@ -1,0 +1,26 @@
+{
+  "id": "lingonberry-blackwater",
+  "name": "Lingonberry Blackwater",
+  "version": "0.3.0",
+  "author": "Lingonberry",
+  "description": "Lingonberry tint of Blackwater: dark, neutrals leaned toward lingonberry (base #261017).",
+  "isDark": true,
+  "colors": {
+    "bg": "#261017",
+    "bg-secondary": "#200b12",
+    "bg-tertiary": "#1a070d",
+    "text": "#f5dee4",
+    "text-muted": "#ccb5bb",
+    "border": "#90757c",
+    "primary": "#ba4889",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

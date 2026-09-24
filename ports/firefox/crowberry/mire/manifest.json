@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Crowberry Mire",
+  "version": "0.3.0",
+  "description": "Crowberry for Firefox. Crowberry tint of Mire: dark, neutrals leaned toward crowberry (base #251d34).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "crowberry-mire@crowberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#181025",
+      "frame_inactive": "#181025",
+      "tab_selected": "#251d34",
+      "tab_text": "#e9e4f4",
+      "tab_background_text": "#c3bece",
+      "tab_line": "#bb95fc",
+      "tab_loading": "#be4c8d",
+      "toolbar": "#251d34",
+      "toolbar_text": "#e9e4f4",
+      "bookmark_text": "#e9e4f4",
+      "icons": "#c3bece",
+      "icons_attention": "#be4c8d",
+      "toolbar_field": "#2b233b",
+      "toolbar_field_text": "#e9e4f4",
+      "toolbar_field_border": "#342b45",
+      "toolbar_field_focus": "#2b233b",
+      "toolbar_field_text_focus": "#e9e4f4",
+      "toolbar_field_border_focus": "#be4c8d",
+      "toolbar_field_highlight": "#4c2e48",
+      "toolbar_field_highlight_text": "#e9e4f4",
+      "toolbar_top_separator": "#181025",
+      "toolbar_bottom_separator": "#2b233b",
+      "toolbar_vertical_separator": "#342b45",
+      "popup": "#1e162c",
+      "popup_text": "#e9e4f4",
+      "popup_border": "#342b45",
+      "popup_highlight": "#4c2e48",
+      "popup_highlight_text": "#e9e4f4",
+      "sidebar": "#1e162c",
+      "sidebar_text": "#e9e4f4",
+      "sidebar_border": "#2b233b",
+      "sidebar_highlight": "#4c2e48",
+      "sidebar_highlight_text": "#e9e4f4",
+      "ntp_background": "#251d34",
+      "ntp_text": "#e9e4f4",
+      "button_background_hover": "#2b233b",
+      "button_background_active": "#342b45"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "blueberry-wisp",
+  "name": "Blueberry Wisp",
+  "version": "0.3.0",
+  "author": "Blueberry",
+  "description": "Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff).",
+  "isDark": false,
+  "colors": {
+    "bg": "#f2f6ff",
+    "bg-secondary": "#e3eafb",
+    "bg-tertiary": "#d8e0f2",
+    "text": "#2f3b58",
+    "text-muted": "#4a5774",
+    "border": "#7a859f",
+    "primary": "#b9488b",
+    "link": "#026b80",
+    "success": "#2c6f2d",
+    "warning": "#815b02",
+    "error": "#bb262a",
+    "info": "#006f5f"
+  },
+  "tags": [
+    "darkberry",
+    "light"
+  ]
+}

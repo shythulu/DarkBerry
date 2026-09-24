@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Blueberry Mire",
+  "version": "0.3.0",
+  "description": "Blueberry for Chrome and Edge. Blueberry tint of Mire: dark, neutrals leaned toward blueberry (base #192237).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [12, 20, 40],
+      "frame_inactive": [12, 20, 40],
+      "frame_incognito": [12, 20, 40],
+      "frame_incognito_inactive": [12, 20, 40],
+      "toolbar": [25, 34, 55],
+      "tab_text": [224, 231, 246],
+      "tab_background_text": [186, 193, 208],
+      "tab_background_text_inactive": [125, 135, 157],
+      "bookmark_text": [224, 231, 246],
+      "toolbar_button_icon": [186, 193, 208],
+      "omnibox_background": [29, 39, 62],
+      "omnibox_text": [224, 231, 246],
+      "ntp_background": [25, 34, 55],
+      "ntp_text": [224, 231, 246],
+      "ntp_link": [134, 192, 204],
+      "button_background": [37, 48, 73]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

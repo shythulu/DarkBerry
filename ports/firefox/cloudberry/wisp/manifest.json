@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Cloudberry Wisp",
+  "version": "0.3.0",
+  "description": "Cloudberry for Firefox. Cloudberry tint of Wisp: light, neutrals leaned toward cloudberry (base #fff4ee).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cloudberry-wisp@cloudberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#efdbd1",
+      "frame_inactive": "#efdbd1",
+      "tab_selected": "#fff4ee",
+      "tab_text": "#55321f",
+      "tab_background_text": "#714e3c",
+      "tab_line": "#a74c06",
+      "tab_loading": "#b9488b",
+      "toolbar": "#fff4ee",
+      "toolbar_text": "#55321f",
+      "bookmark_text": "#55321f",
+      "icons": "#714e3c",
+      "icons_attention": "#b9488b",
+      "toolbar_field": "#e2cdc2",
+      "toolbar_field_text": "#55321f",
+      "toolbar_field_border": "#d2bcb1",
+      "toolbar_field_focus": "#e2cdc2",
+      "toolbar_field_text_focus": "#55321f",
+      "toolbar_field_border_focus": "#b9488b",
+      "toolbar_field_highlight": "#f3cad5",
+      "toolbar_field_highlight_text": "#55321f",
+      "toolbar_top_separator": "#efdbd1",
+      "toolbar_bottom_separator": "#e2cdc2",
+      "toolbar_vertical_separator": "#d2bcb1",
+      "popup": "#f8e6dd",
+      "popup_text": "#55321f",
+      "popup_border": "#d2bcb1",
+      "popup_highlight": "#f3cad5",
+      "popup_highlight_text": "#55321f",
+      "sidebar": "#f8e6dd",
+      "sidebar_text": "#55321f",
+      "sidebar_border": "#e2cdc2",
+      "sidebar_highlight": "#f3cad5",
+      "sidebar_highlight_text": "#55321f",
+      "ntp_background": "#fff4ee",
+      "ntp_text": "#55321f",
+      "button_background_hover": "#e2cdc2",
+      "button_background_active": "#d2bcb1"
+    },
+    "properties": {
+      "color_scheme": "light",
+      "content_color_scheme": "light"
+    }
+  }
+}

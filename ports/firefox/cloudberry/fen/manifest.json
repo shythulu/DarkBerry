@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Cloudberry Fen",
+  "version": "0.3.0",
+  "description": "Cloudberry for Firefox. Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cloudberry-fen@cloudberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#3d2315",
+      "frame_inactive": "#3d2315",
+      "tab_selected": "#553524",
+      "tab_text": "#f8e6dd",
+      "tab_background_text": "#cfbbb1",
+      "tab_line": "#f9a374",
+      "tab_loading": "#dc67a7",
+      "toolbar": "#553524",
+      "toolbar_text": "#f8e6dd",
+      "bookmark_text": "#f8e6dd",
+      "icons": "#cfbbb1",
+      "icons_attention": "#dc67a7",
+      "toolbar_field": "#634331",
+      "toolbar_field_text": "#f8e6dd",
+      "toolbar_field_border": "#73513f",
+      "toolbar_field_focus": "#634331",
+      "toolbar_field_text_focus": "#f8e6dd",
+      "toolbar_field_border_focus": "#dc67a7",
+      "toolbar_field_highlight": "#73463e",
+      "toolbar_field_highlight_text": "#f8e6dd",
+      "toolbar_top_separator": "#3d2315",
+      "toolbar_bottom_separator": "#634331",
+      "toolbar_vertical_separator": "#73513f",
+      "popup": "#472b1c",
+      "popup_text": "#f8e6dd",
+      "popup_border": "#73513f",
+      "popup_highlight": "#73463e",
+      "popup_highlight_text": "#f8e6dd",
+      "sidebar": "#472b1c",
+      "sidebar_text": "#f8e6dd",
+      "sidebar_border": "#634331",
+      "sidebar_highlight": "#73463e",
+      "sidebar_highlight_text": "#f8e6dd",
+      "ntp_background": "#553524",
+      "ntp_text": "#f8e6dd",
+      "button_background_hover": "#634331",
+      "button_background_active": "#73513f"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

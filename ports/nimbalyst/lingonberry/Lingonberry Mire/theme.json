@@ -1,0 +1,26 @@
+{
+  "id": "lingonberry-mire",
+  "name": "Lingonberry Mire",
+  "version": "0.3.0",
+  "author": "Lingonberry",
+  "description": "Lingonberry tint of Mire: dark, neutrals leaned toward lingonberry (base #341c23).",
+  "isDark": true,
+  "colors": {
+    "bg": "#341c23",
+    "bg-secondary": "#2c141c",
+    "bg-tertiary": "#250f16",
+    "text": "#f7e0e6",
+    "text-muted": "#d1bac0",
+    "border": "#997f86",
+    "primary": "#be4c8d",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

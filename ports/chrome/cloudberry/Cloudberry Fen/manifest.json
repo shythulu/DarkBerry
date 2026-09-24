@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Cloudberry Fen",
+  "version": "0.3.0",
+  "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [61, 35, 21],
+      "frame_inactive": [61, 35, 21],
+      "frame_incognito": [61, 35, 21],
+      "frame_incognito_inactive": [61, 35, 21],
+      "toolbar": [85, 53, 36],
+      "tab_text": [248, 230, 221],
+      "tab_background_text": [207, 187, 177],
+      "tab_background_text_inactive": [165, 133, 117],
+      "bookmark_text": [248, 230, 221],
+      "toolbar_button_icon": [207, 187, 177],
+      "omnibox_background": [99, 67, 49],
+      "omnibox_text": [248, 230, 221],
+      "ntp_background": [85, 53, 36],
+      "ntp_text": [248, 230, 221],
+      "ntp_link": [131, 212, 219],
+      "button_background": [115, 81, 63]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

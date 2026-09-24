@@ -1,0 +1,26 @@
+{
+  "id": "lingonberry-wisp",
+  "name": "Lingonberry Wisp",
+  "version": "0.3.0",
+  "author": "Lingonberry",
+  "description": "Lingonberry tint of Wisp: light, neutrals leaned toward lingonberry (base #fff3f6).",
+  "isDark": false,
+  "colors": {
+    "bg": "#fff3f6",
+    "bg-secondary": "#f9e4ea",
+    "bg-tertiary": "#efd9df",
+    "text": "#572c3b",
+    "text-muted": "#744956",
+    "border": "#9b7c84",
+    "primary": "#b9488b",
+    "link": "#026b80",
+    "success": "#2c6f2d",
+    "warning": "#815b02",
+    "error": "#bb262a",
+    "info": "#006f5f"
+  },
+  "tags": [
+    "darkberry",
+    "light"
+  ]
+}

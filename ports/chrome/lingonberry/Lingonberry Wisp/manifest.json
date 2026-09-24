@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Lingonberry Wisp",
+  "version": "0.3.0",
+  "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Wisp: light, neutrals leaned toward lingonberry (base #fff3f6).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [239, 217, 223],
+      "frame_inactive": [239, 217, 223],
+      "frame_incognito": [239, 217, 223],
+      "frame_incognito_inactive": [239, 217, 223],
+      "toolbar": [255, 243, 246],
+      "tab_text": [87, 44, 59],
+      "tab_background_text": [116, 73, 86],
+      "tab_background_text_inactive": [155, 124, 132],
+      "bookmark_text": [87, 44, 59],
+      "toolbar_button_icon": [116, 73, 86],
+      "omnibox_background": [226, 203, 209],
+      "omnibox_text": [87, 44, 59],
+      "ntp_background": [255, 243, 246],
+      "ntp_text": [87, 44, 59],
+      "ntp_link": [2, 107, 128],
+      "button_background": [211, 186, 192]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

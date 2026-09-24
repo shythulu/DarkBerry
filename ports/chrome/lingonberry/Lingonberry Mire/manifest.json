@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Lingonberry Mire",
+  "version": "0.3.0",
+  "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Mire: dark, neutrals leaned toward lingonberry (base #341c23).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [37, 15, 22],
+      "frame_inactive": [37, 15, 22],
+      "frame_incognito": [37, 15, 22],
+      "frame_incognito_inactive": [37, 15, 22],
+      "toolbar": [52, 28, 35],
+      "tab_text": [247, 224, 230],
+      "tab_background_text": [209, 186, 192],
+      "tab_background_text_inactive": [153, 127, 134],
+      "bookmark_text": [247, 224, 230],
+      "toolbar_button_icon": [209, 186, 192],
+      "omnibox_background": [59, 33, 41],
+      "omnibox_text": [247, 224, 230],
+      "ntp_background": [52, 28, 35],
+      "ntp_text": [247, 224, 230],
+      "ntp_link": [134, 192, 204],
+      "button_background": [70, 40, 50]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

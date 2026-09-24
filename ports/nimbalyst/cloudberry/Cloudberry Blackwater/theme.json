@@ -1,0 +1,26 @@
+{
+  "id": "cloudberry-blackwater",
+  "name": "Cloudberry Blackwater",
+  "version": "0.3.0",
+  "author": "Cloudberry",
+  "description": "Cloudberry tint of Blackwater: dark, neutrals leaned toward cloudberry (base #261207).",
+  "isDark": true,
+  "colors": {
+    "bg": "#261207",
+    "bg-secondary": "#1f0d04",
+    "bg-tertiary": "#1a0802",
+    "text": "#f3e1d8",
+    "text-muted": "#cab8ae",
+    "border": "#8f786c",
+    "primary": "#ba4889",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

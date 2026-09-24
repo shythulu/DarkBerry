@@ -20,13 +20,7 @@ const CONFIG = json("src/site/config.json");
 const roleIndex = indexRoles(ROLES);
 const ORDER = [...P.accentOrder, ...P.neutralOrder];
 
-const TINT_NOTES = {
-  darkberry: "The default. Wine-dark plum, rooted in Dark Purple 2073-10.",
-  lingonberry: "Backgrounds steeped in raspberry-red.",
-  cloudberry: "Backgrounds toasted toward ripe peach.",
-  crowberry: "Backgrounds cooled to inky violet.",
-  blueberry: "Backgrounds cooled to dusty slate blue.",
-};
+const TINTS = json("src/tints.json"); delete TINTS.$comment;
 const palettes = [["darkberry", P]];
 for (const f of fs.readdirSync(path.join(root, "src/variants")).filter((f) => f.endsWith(".json")).sort())
   palettes.push([f.replace(".json", ""), json(`src/variants/${f}`)]);
@@ -37,7 +31,7 @@ const data = {
   tints: {},
 };
 for (const [id, pal] of palettes) {
-  const t = { name: id[0].toUpperCase() + id.slice(1), note: TINT_NOTES[id] || "", colors: {}, roles: {}, ansi: {}, oklch: {} };
+  const t = { name: TINTS[id]?.name || id, emoji: TINTS[id]?.emoji || "", note: TINTS[id]?.note || "", colors: {}, roles: {}, ansi: {}, oklch: {} };
   for (const [fid, f] of Object.entries(pal.flavours)) {
     const ctx = flavourContext(fid, f, ROLES, roleIndex);
     t.colors[fid] = ORDER.map((k) => f.colors[k]);

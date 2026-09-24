@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Lingonberry Blackwater",
+  "version": "0.3.0",
+  "description": "Lingonberry for Firefox. Lingonberry tint of Blackwater: dark, neutrals leaned toward lingonberry (base #261017).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "lingonberry-blackwater@lingonberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#1a070d",
+      "frame_inactive": "#1a070d",
+      "tab_selected": "#261017",
+      "tab_text": "#f5dee4",
+      "tab_background_text": "#ccb5bb",
+      "tab_line": "#fc7ca8",
+      "tab_loading": "#ba4889",
+      "toolbar": "#261017",
+      "toolbar_text": "#f5dee4",
+      "bookmark_text": "#f5dee4",
+      "icons": "#ccb5bb",
+      "icons_attention": "#ba4889",
+      "toolbar_field": "#301820",
+      "toolbar_field_text": "#f5dee4",
+      "toolbar_field_border": "#3d212a",
+      "toolbar_field_focus": "#301820",
+      "toolbar_field_text_focus": "#f5dee4",
+      "toolbar_field_border_focus": "#ba4889",
+      "toolbar_field_highlight": "#4d2331",
+      "toolbar_field_highlight_text": "#f5dee4",
+      "toolbar_top_separator": "#1a070d",
+      "toolbar_bottom_separator": "#301820",
+      "toolbar_vertical_separator": "#3d212a",
+      "popup": "#200b12",
+      "popup_text": "#f5dee4",
+      "popup_border": "#3d212a",
+      "popup_highlight": "#4d2331",
+      "popup_highlight_text": "#f5dee4",
+      "sidebar": "#200b12",
+      "sidebar_text": "#f5dee4",
+      "sidebar_border": "#301820",
+      "sidebar_highlight": "#4d2331",
+      "sidebar_highlight_text": "#f5dee4",
+      "ntp_background": "#261017",
+      "ntp_text": "#f5dee4",
+      "button_background_hover": "#301820",
+      "button_background_active": "#3d212a"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

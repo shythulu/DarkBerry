@@ -1,0 +1,26 @@
+{
+  "id": "crowberry-blackwater",
+  "name": "Crowberry Blackwater",
+  "version": "0.3.0",
+  "author": "Crowberry",
+  "description": "Crowberry tint of Blackwater: dark, neutrals leaned toward crowberry (base #191126).",
+  "isDark": true,
+  "colors": {
+    "bg": "#191126",
+    "bg-secondary": "#130c20",
+    "bg-tertiary": "#0f081b",
+    "text": "#e7e2f2",
+    "text-muted": "#beb9c9",
+    "border": "#807990",
+    "primary": "#ba4889",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}
