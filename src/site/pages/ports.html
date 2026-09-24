@@ -1,0 +1,44 @@
+<section id="ports"><div class="wrap">
+  <h2><small>the applications</small>Ports</h2>
+  <p class="intro">Every port is generated from the one palette file, so whatever you install matches whatever you already have. Most are one copied file and one line of config. The pictures follow the flavour and tint you choose.</p>
+  <div class="pickbar" style="padding:0 0 28px"><div class="wrap" style="padding:0">__PICKERS__</div></div>
+  <div class="cards" id="cards"></div>
+</div></section>
+<!--script-->
+const PORTS = [
+  ["kitty", "kitty", `Copy a flavour into <code>~/.config/kitty/themes/</code>, then choose it with <code>kitty +kitten themes</code>, or include it directly:`, (f) => `include themes/${slug(f)}.conf`],
+  ["ghostty", "Ghostty", `Copy the theme files into <code>~/.config/ghostty/themes/</code> and follow your system's light and dark mode:`, () => `theme = light:${title("wisp")},dark:${title("mire")}`],
+  ["alacritty", "Alacritty", `Copy a flavour into <code>~/.config/alacritty/themes/</code> and import it from your <code>alacritty.toml</code> (needs 0.13 or newer):`, (f) => `import = ["~/.config/alacritty/themes/${slug(f)}.toml"]`],
+  ["konsole", "Konsole", `Copy the <code>.colorscheme</code> files into <code>~/.local/share/konsole/</code>, then Edit Current Profile > Appearance:`, (f) => `~/.local/share/konsole/${title(f)}.colorscheme`],
+  ["tmux", "tmux", `Copy a flavour into <code>~/.config/tmux/</code> and source it from your tmux.conf (tmux 3.2 or later, truecolor terminal):`, (f) => `source-file ~/.config/tmux/${slug(f)}.conf`],
+  ["starship", "starship", `Copy a flavour over <code>~/.config/starship.toml</code> for a two-line prompt that follows the same roles:`, (f) => `cp ${slug(f)}.toml ~/.config/starship.toml`],
+  ["btop", "btop", `Copy a flavour into <code>~/.config/btop/themes/</code>, then pick it under Esc &gt; Options &gt; Color theme, or set it in <code>btop.conf</code>:`, (f) => `color_theme = "${slug(f)}"`],
+  ["bat", "bat", `Copy a flavour into <code>$(bat --config-dir)/themes/</code>, run <code>bat cache --build</code>, then name it:`, (f) => `bat --theme="${title(f)}" file.rs`],
+  ["lsd", "lsd", `Copy a flavour to <code>~/.config/lsd/colors.yaml</code> and set the custom theme:`, (f) => `cp ${slug(f)}.yaml ~/.config/lsd/colors.yaml`],
+  ["ls-colors", "LS_COLORS", `Copy a flavour to <code>~/.config/darkberry/</code> and source it from your shell rc. lsd, GNU ls, eza, fd and zsh completion all read it:`, (f) => `. ~/.config/darkberry/${slug(f)}.sh`],
+  ["neovim", "Neovim", `Copy a flavour into <code>~/.config/nvim/colors/</code>, keeping its name, then pick it:`, (f) => `:colorscheme ${slug(f)}`],
+  ["micro", "micro", `Copy a flavour into <code>~/.config/micro/colorschemes/</code>, then set it from the command bar:`, (f) => `set colorscheme ${slug(f)}`],
+  ["vscode", "VS Code", `Install the <code>.vsix</code> through Extensions, then pick a flavour with the theme picker:`, () => `code --install-extension darkberry-theme.vsix`],
+  ["kate", "Kate", `Copy a flavour into <code>~/.local/share/org.kde.syntax-highlighting/themes/</code>, then Fonts &amp; Colors:`, (f) => `${slug(f)}.theme`],
+  ["notepadpp", "Notepad++", `Copy a flavour into <code>%APPDATA%\\Notepad++\\themes\\</code>, restart, then Settings > Style Configurator:`, (f) => `%APPDATA%\\Notepad++\\themes\\${title(f)}.xml`],
+  ["obsidian", "Obsidian", `Copy a flavour's folder into your vault's <code>.obsidian/themes/</code>, then pick it under Appearance:`, (f) => `.obsidian/themes/${title(f)}/`],
+  ["nimbalyst", "Nimbalyst", `Copy a flavour folder into Nimbalyst&rsquo;s themes directory, then pick it under Settings > Themes:`, (f) => `${title(f)}/theme.json`],
+  ["firefox", "Firefox", `Load a flavour's <code>manifest.json</code> from <code>about:debugging</code> to try it, or sign it through addons.mozilla.org to keep it.`, () => `about:debugging#/runtime/this-firefox`],
+  ["chrome", "Chrome and Edge", `Turn on Developer mode at <code>chrome://extensions</code>, then Load unpacked on a flavour folder:`, () => `chrome://extensions`],
+  ["kde", "KDE Plasma", `Copy the <code>.colors</code> files into <code>~/.local/share/color-schemes/</code>, then pick a flavour in System Settings > Colors:`, (f) => `~/.local/share/color-schemes/${title(f)}.colors`],
+  ["gtk", "GTK 3", `Copy a flavour folder into <code>~/.themes/</code> and select it as your GTK theme. Reaches Inkscape and anything else that follows the system theme:`, (f) => `~/.themes/${title(f)}/`],
+  ["gimp", "GIMP", `Copy GIMP's <code>Default</code> theme folder into your own themes folder, drop a flavour in as <code>gimp-dark.css</code>, then Preferences > Interface > Theme:`, (f) => `~/.config/GIMP/3.0/themes/${title(f)}/gimp-dark.css`],
+  ["darktable", "darktable", `Copy a flavour beside darktable's own CSS so its <code>@import</code> resolves, then General > Theme:`, (f) => `${slug(f)}.css`],
+  ["gpl", "GIMP and Inkscape palettes", `The palette itself as <code>.gpl</code> files, one per flavour and one with all four. Inkscape reads them from its palettes folder; GIMP imports them from the Palettes dialog:`, (f) => `~/.config/inkscape/palettes/${slug(f)}.gpl`],
+  ["borders", "JankyBorders", `Window borders on macOS for yabai and AeroSpace users. Copy a flavour over your <code>bordersrc</code> and restart borders:`, (f) => `cp ${slug(f)}.sh ~/.config/borders/bordersrc`],
+  ["tinted8", "Tinted8", `A Tinted Theming scheme with syntax and UI blocks filled in. Copy a flavour into a builder's schemes directory, then build:`, () => `tinty install`],
+  ["base24", "Base24", `The same for every Base16 and Base24 template. Copy a flavour into a builder's schemes directory, then build:`, () => `tinty install`],
+];
+page.push(function cards() {
+  $("cards").innerHTML = PORTS.map(([id, n, p, c]) => {
+    const shots = D.ports[id] || [], has = shots.includes(tn);
+    const src = has ? `${raw}/ports/${id}${tn === "darkberry" ? "" : "/" + tn}/assets/${fl}.webp` : "";
+    const shot = has ? `<div class="shot"><img src="${src}" loading="lazy" alt="${n} in ${D.tints[tn].name} ${D.flavours[fl].name}"></div>` : "";
+    return `<div class="card${has ? "" : " noshot"}">${shot}<h3>${n}</h3><p>${p}</p><pre>${c(fl)}</pre><a href="${tree}/ports/${id}">${n} files on GitHub</a></div>`;
+  }).join("");
+});

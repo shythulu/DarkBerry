@@ -42,13 +42,55 @@ for (const [id, pal] of palettes) {
   data.tints[id] = t;
 }
 
+// Which ports carry screenshots, per tint: ports/<id>/assets/<flavour>.webp for Darkberry itself,
+// ports/<id>/<tint>/assets/<flavour>.webp for the tints. The Ports page only shows a picture it can find.
+data.ports = {};
+for (const id of fs.readdirSync(path.join(root, "ports")).sort()) {
+  const has = (dir) => Object.keys(P.flavours).every((f) => fs.existsSync(path.join(root, "ports", id, dir, "assets", `${f}.webp`)));
+  const shots = palettes.map(([t]) => t).filter((t) => has(t === "darkberry" ? "" : t));
+  if (shots.length) data.ports[id] = shots;
+}
+
+// The page's first paint, before the script runs, is Darkberry Blackwater.
+const first = data.tints.darkberry, ROOT = [
+  ...Object.entries(first.roles.blackwater).map(([r, v]) => `--${r.replace(/\./g, "-")}:${v}`),
+  ...ORDER.map((k, i) => `--c-${k}:${first.colors.blackwater[i]}`),
+].map((l) => "  " + l + ";").join("\n");
+
+const SNIPPETS = {
+  PICKERS: read("src/site/snippets/pickers.html").trim(),
+  CODE: read("src/site/snippets/code.html").trim(),
+  ORIGIN: read("src/site/snippets/origin.html").trim(),
+  ORN: read("src/site/snippets/orn.svg").trim(),
+  BASE_CSS: read("src/site/base.css"),
+  CORE: read("src/site/core.js").trim(),
+  ROOT,
+  DATA: JSON.stringify(data),
+};
+const fill = (html, extra = {}) => {
+  const all = { ...SNIPPETS, ...extra };
+  for (let i = 0; i < 4; i++) html = html.replace(/__([A-Z_]+)__/g, (m, k) => (k in all ? all[k] : m));
+  return html;
+};
+
+const PAGES = [
+  ["index", "Darkberry, a bog-witch berry theme", "Darkberry is a berry dark colour theme in four flavours."],
+  ["palette", "The Darkberry palette", "Every Darkberry colour in hex, RGB, HSL and OKLCH, for each flavour and tint."],
+  ["ports", "Darkberry ports", "Darkberry for terminals, editors, browsers and desktops, with install notes for each."],
+];
+const NAV = (current) => [["index", "Home"], ["palette", "Palette"], ["ports", "Ports"]].map(([id, label]) => `<a href="${id}.html"${id === current ? ' aria-current="page"' : ""}>${label}</a>`).join("");
+
 const out = path.join(root, "site");
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
-fs.writeFileSync(path.join(out, "index.html"), read("src/site/index.html").replace("__DATA__", () => JSON.stringify(data)));
+const layout = read("src/site/layout.html");
+for (const [id, title, desc] of PAGES) {
+  const [body, script = ""] = read(`src/site/pages/${id}.html`).split("<!--script-->");
+  fs.writeFileSync(path.join(out, `${id}.html`), fill(layout, { TITLE: title, DESC: desc, NAV: NAV(id), BODY: body.trim(), SCRIPT: script.trim(), PAGE_CSS: read("src/site/page.css") }));
+}
 fs.writeFileSync(path.join(out, ".nojekyll"), "");
-for (const [from, to] of [["docs/studio.html", "studio.html"], ["docs/specimen.html", "specimen.html"], ["dist/palette.json", "palette.json"]]) {
+for (const [from, to] of [["docs/specimen.html", "specimen.html"], ["dist/palette.json", "palette.json"]]) {
   if (!fs.existsSync(path.join(root, from))) { console.error(`Missing ${from}. Run node build.mjs first.`); process.exit(1); }
   fs.copyFileSync(path.join(root, from), path.join(out, to));
 }
-console.log(`Site built in site/ (${palettes.length} palettes × ${Object.keys(P.flavours).length} flavours).`);
+console.log(`Site built in site/ (${palettes.length} palettes × ${Object.keys(P.flavours).length} flavours, ${Object.keys(data.ports).length} ports with screenshots).`);
