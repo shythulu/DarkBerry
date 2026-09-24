@@ -1,12 +1,12 @@
 # Darkberry
 
-A berry-dark theme in four flavours, brewed from one can of Benjamin Moore Dark Purple 2073-10 (`#4b3540`). Same colours, same jobs, in every editor, terminal and browser it touches.
+A bog-witch berry theme in four flavours, grown from Benjamin Moore Dark Purple 2073-10 (`#4b3540`).
 
 | Flavour | Type | |
 |---|---|---|
 | Wisp | light | Will-o'-the-wisp glow: plum-violet text on pale cream |
-| Fen | dark | Rosy dusk. The background sits within a shade of the paint itself |
-| Mire | dark | The main dark flavour. Wine-dark, with berry accents |
+| Fen | dark | Soft, rosy dusk; the background is within a shade of the paint colour |
+| Mire | dark | The main dark flavour: wine-dark mire with berry accents |
 | Blackwater | dark | Deepest wine, like black bog water |
 
 ## Repository layout
@@ -50,7 +50,7 @@ docs/PORT_CREATION.md     how a port is laid out and added, after Catppuccin's p
 
 ## Website
 
-A showcase site is generated from the palette and published to GitHub Pages by `.github/workflows/pages.yml` on every push to `main`. The site wears the theme. Pick a flavour or tint and the whole page recolours.
+A showcase site is generated from the palette and published to GitHub Pages by `.github/workflows/pages.yml` on every push to `main`. It wears the theme: pick a flavour or tint and the whole page recolours.
 
 1. Set your repository's URL in `src/site/config.json`.
 2. In the repository's Settings > Pages, set the source to **GitHub Actions**.
@@ -64,22 +64,22 @@ Open `docs/studio.html` (regenerated on every build, so it always starts from th
 
 ## Ports
 
-Every port has its own folder under `ports/`, laid out the way the
-[Catppuccin](https://github.com/catppuccin) organisation lays out its port repositories.
-Each one holds a README with previews and install steps, an `assets/` folder for
-screenshots, and the theme files. The README is the install guide for that app.
+Every port lives in its own folder under `ports/`, laid out the way the
+[Catppuccin](https://github.com/catppuccin) organisation lays out its port repositories:
+a README with previews and install steps, an `assets/` folder for screenshots, and the
+theme files. Each README below is the install guide for that app.
 
-Each port is also built in the four tints (lingonberry, cloudberry, crowberry and
-blueberry), and each tint in the four flavours. The bar under a README's badges links to
-them. Most apps load one theme per file, so each tint gets its own subfolder and README.
-VS Code and the GIMP palette hold every tint in one unit, so those two get a `with-tints`
+Every port also comes in the four tints (lingonberry, cloudberry, crowberry and
+blueberry), each in four flavours. The bar under a port README's badges links to each tint:
+most apps take one theme per file, so a tint lives in its own subfolder with its own README;
+VS Code and the GIMP palette hold every tint in one unit, so those two have a `with-tints`
 extension and a `darkberry-with-tints.gpl` file instead.
 
-Every tagged release ships two sets of packaged files. The plain set is a `.vsix` for
-VS Code, an `.xpi` per flavour for Firefox and a zip of every other port. The with-tints
-set is a second `.vsix`, an `.xpi` per tint and flavour and a `-with-tints` zip per port.
-Download them from [Releases](https://github.com/shythulu/DarkBerry/releases), or run
-`./package.sh` to build the same set into `dist/`.
+Every tagged release carries the packaged files twice over: the plain Darkberry set (a
+`.vsix` for VS Code, an `.xpi` per flavour for Firefox, and a zip of every other port) and a
+with-tints set (a second `.vsix`, an `.xpi` per tint and flavour, and a `-with-tints` zip
+per port). Download them from [Releases](https://github.com/shythulu/DarkBerry/releases), or
+build them yourself with `./package.sh`, which writes the same set into `dist/`.
 
 <!-- ports:begin -->
 <!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->

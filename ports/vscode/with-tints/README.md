@@ -57,7 +57,7 @@ Works in VS Code, Cursor, VSCodium and Windsurf.
 
 3. Pick a flavour with Ctrl+K Ctrl+T.
 
-To publish it under your own name, change `publisher` in `build.mjs` before building.
+To publish under your own name, set `publisher` in `build.mjs`.
 
 ## 💝 Thanks to
 
