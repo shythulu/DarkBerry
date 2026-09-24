@@ -1,6 +1,6 @@
 # Port creation
 
-How a Darkberry port is laid out and added. The layout is
+How a Darkberry port is laid out and added. The layout is based on 
 [Catppuccin's](https://github.com/catppuccin/catppuccin/blob/main/docs/port-creation.md),
 which keeps one repository per port, folded into this one repository: every port is a
 folder under `ports/` with the same shape a Catppuccin port repository has, and the

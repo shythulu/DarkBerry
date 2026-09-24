@@ -1,13 +1,14 @@
 # Darkberry
 
-A bog-witch berry theme in four flavours, grown from Benjamin Moore Dark Purple 2073-10 (`#4b3540`).
+A bog-witch berry theme in four flavours
+(`#4b3540`).
 
 | Flavour | Type | |
 |---|---|---|
-| Wisp | light | Will-o'-the-wisp glow: plum-violet text on pale cream |
-| Fen | dark | Soft, rosy dusk; the background is within a shade of the paint colour |
-| Mire | dark | The main dark flavour: wine-dark mire with berry accents |
-| Blackwater | dark | Deepest wine, like black bog water |
+| Wisp | light | The ubiquitous 'makes your eyes bleed' light theme, but cuter. |
+| Fen | dark | Soft, rosy, dusky kind of vibes, soothing. |
+| Mire | darker | Dark red wine, the overnight dredges. |
+| Blackwater | darkest | Like blood mixed with bog water. |
 
 ## Repository layout
 
@@ -69,7 +70,7 @@ Every port lives in its own folder under `ports/`, laid out the way the
 a README with previews and install steps, an `assets/` folder for screenshots, and the
 theme files. Each README below is the install guide for that app.
 
-Every port also comes in the four tints (lingonberry, cloudberry, crowberry and
+Every port also comes in the four tints diverging from Catppuccin, (lingonberry, cloudberry, crowberry and
 blueberry), each in four flavours. The bar under a port README's badges links to each tint:
 most apps take one theme per file, so a tint lives in its own subfolder with its own README;
 VS Code and the GIMP palette hold every tint in one unit, so those two have a `with-tints`
@@ -84,67 +85,66 @@ build them yourself with `./package.sh`, which writes the same set into `dist/`.
 <!-- ports:begin -->
 <!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->
 
-### 👾 Code Editors & IDEs
+###  Code Editors & IDEs
 
-- 🌙 [Neovim](ports/neovim#readme)
-- ✏️ [micro](ports/micro#readme)
-- 💜 [Visual Studio Code](ports/vscode#readme)
-- 🗒️ [Kate](ports/kate#readme)
-- 📄 [Notepad++](ports/notepadpp#readme)
+-  [Neovim](ports/neovim#readme)
+-  [Visual Studio Code](ports/vscode#readme)
+-  [Kate](ports/kate#readme)
+-  [micro](ports/micro#readme)
+-  [Notepad++](ports/notepadpp#readme)
+-  [Nimbalyst](ports/nimbalyst#readme)
 
-### 📚 Libraries
+###  Libraries
 
-- 🖌️ [GIMP Palette](ports/gpl#readme)
+-  [GIMP Palette](ports/gpl#readme)
 
-### 🐚 CLI Tools
+###  CLI Tools
 
-- 🪟 [tmux](ports/tmux#readme)
-- 🚀 [Starship](ports/starship#readme)
-- 📁 [lsd](ports/lsd#readme)
-- 📂 [LS_COLORS](ports/ls-colors#readme)
-- 📊 [btop++](ports/btop#readme)
-- 🦇 [bat](ports/bat#readme)
+-  [tmux](ports/tmux#readme)
+-  [Starship](ports/starship#readme)
+-  [lsd](ports/lsd#readme)
+-  [LS_COLORS](ports/ls-colors#readme)
+-  [btop++](ports/btop#readme)
+-  [bat](ports/bat#readme)
 
-### 🌱 Terminals
+###  Terminals
 
-- 🐱 [kitty](ports/kitty#readme)
-- 👻 [Ghostty](ports/ghostty#readme)
-- ⚡ [Alacritty](ports/alacritty#readme)
-- 🐚 [Konsole](ports/konsole#readme)
+-  [kitty](ports/kitty#readme)
+-  [Ghostty](ports/ghostty#readme)
+-  [Alacritty](ports/alacritty#readme)
+-  [Konsole](ports/konsole#readme)
 
-### 🔧 System
+###  System
 
-- 🧩 [GTK 3](ports/gtk#readme)
-- 🎛️ [Base24](ports/base24#readme)
-- 🎚️ [Tinted8](ports/tinted8#readme)
+-  [GTK 3](ports/gtk#readme)
+-  [Base24](ports/base24#readme)
+-  [Tinted8](ports/tinted8#readme)
 
-### 🖥️ Desktop Environments
+###  Desktop Environments
 
-- 🖥️ [KDE Plasma](ports/kde#readme)
+-  [KDE Plasma](ports/kde#readme)
 
-### 🪟 Window Managers
+###  Window Managers
 
-- 🔲 [JankyBorders](ports/borders#readme)
+-  [JankyBorders](ports/borders#readme)
 
-### 🏄 Browsers
+###  Browsers
 
-- 🦊 [Firefox](ports/firefox#readme)
-- 🌐 [Google Chrome](ports/chrome#readme)
+-  [Firefox](ports/firefox#readme)
+-  [Google Chrome](ports/chrome#readme)
 
-### 📷 Photo & Video
+###  Photo & Video
 
-- 📷 [darktable](ports/darktable#readme)
-- 🎨 [GIMP](ports/gimp#readme)
+-  [darktable](ports/darktable#readme)
+-  [GIMP](ports/gimp#readme)
 
-### 📝 Note Taking
+###  Note Taking
 
-- 💎 [Obsidian](ports/obsidian#readme)
-- ☁️ [Nimbalyst](ports/nimbalyst#readme)
+-  [Obsidian](ports/obsidian#readme)
 
 <!-- ports:end -->
 
 ## Credits
 
-Darkberry is modelled on [Catppuccin](https://github.com/catppuccin) (MIT): its four-flavour structure, twelve-neutral ladder and naming, palette file format, style-guide approach, ANSI mapping and bright-colour formula, and the review rules the build enforces. Deliberate differences from Catppuccin are listed, with reasons, in `docs/ROLES.md`. No Catppuccin source code is included; the colour maths is reimplemented in `lib/color.mjs`.
-
-The one piece of inherited code is the list of syntax rules in `src/vscode/template.json`, which began as a derivative of Pixel Berry by germainelry (MIT). Its licence requires keeping that copyright notice, so it remains in `LICENSE` for as long as the template derives from it.
+Darkberry was inspired the colour I painted my walls! 'Dark Purple' by Benjamin Moore. The idea for building a fullsome theme was aided by [PixelBerry] (https://github.com/germainelry/pixel-berry-vscode-themes) and modelled on [Catppuccin](https://github.com/catppuccin) (MIT)! I liked its four-flavour structure, naming, palette file format, style-guide approach, etc... Like everything. Also it's really pretty! Deliberate differences from Catppuccin are listed in `docs/ROLES.md`. *There needs to be more standardization in these things!*  Colour math is in `lib/color.mjs`.
+The one piece of inherited code is the list of syntax rules in `src/vscode/template.json`, which began as a derivative of Pixel Berry by germainelry (MIT).
