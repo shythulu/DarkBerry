@@ -10,6 +10,7 @@ import path from "node:path";
 import { rgb, mix, toHsl, toOklch, contrast, deltaE } from "./lib/color.mjs";
 import { indexRoles, flavourContext } from "./lib/resolve.mjs";
 import { fillSettled, FILL_ON_BACKGROUND, TEXT_ON_FILL } from "./lib/derive.mjs";
+import { Canvas } from "./lib/png.mjs";
 
 const root = path.dirname(new URL(import.meta.url).pathname);
 const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
@@ -61,6 +62,7 @@ const meta = (ctx) => ({
   FLAVOUR: ctx.f.name,
   HOMEPAGE: P.homepage,
   ISDARK: ctx.f.dark ? "true" : "false",
+  ADWAITA: ctx.f.dark ? "-dark" : "", // Adwaita's dark and light stylesheets differ by this suffix
   ...accentHsl(ctx),
 });
 // Obsidian builds --color-accent and its hover shades out of these three, so a hex is not enough.
@@ -324,6 +326,75 @@ out("ports/vscode/package.json", {
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
 });
+
+// ---------- ports/<key>/README.md, assets/ and the README port list ----------
+// The layout follows catppuccin/catppuccin's port conventions (docs/PORT_CREATION.md):
+// every ports/<key>/ carries a README written from template/README.md, an assets/ folder
+// for its previews, and an entry in src/ports.json with a category from src/categories.json.
+// assets/ at the root holds the generated logo, footer and fallback palette previews.
+const REG = readJson("src/ports.json"), CATS = readJson("src/categories.json");
+const outBin = (rel, buf) => { if (CHECK_ONLY) return; const f = path.join(root, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, buf); };
+const exists = (rel) => fs.existsSync(path.join(root, rel));
+{
+  const cols = [...P.neutralOrder, ...P.accentOrder], W = 1200, H = 120;
+  const strip = (cv, ctx, y) => {
+    cv.rect(0, y, W, H, ctx.f.colors.base);
+    const w = Math.floor((W - 40) / cols.length);
+    cols.forEach((k, i) => cv.rect(20 + i * w + 2, y + 20, w - 4, H - 40, ctx.f.colors[k]));
+  };
+  const all = new Canvas(W, H * ctxs.length);
+  ctxs.forEach((ctx, i) => { strip(all, ctx, i * H); const one = new Canvas(W, H); strip(one, ctx, 0); outBin(`assets/previews/${ctx.id}.png`, one.png()); });
+  outBin("assets/previews/preview.png", all.png());
+  // Logo: a berry quartered into the four flavours' bases, a jam-coloured centre.
+  const logo = new Canvas(256, 256), q = Math.PI / 2;
+  ctxs.forEach((ctx, i) => logo.circle(128, 128, 120, ctx.f.colors.base, i * q, (i + 1) * q));
+  logo.circle(128, 128, 44, usageRef.f.colors.jam);
+  outBin("assets/logos/darkberry.png", logo.png());
+  // Footer: a hairline with one dot per flavour, in a mid tone that shows on light and dark pages.
+  const foot = new Canvas(W, 40);
+  foot.rect(0, 19, W, 2, usageRef.f.colors.overlay0);
+  ctxs.forEach((ctx, i) => { foot.circle(W / 2 + (i - (ctxs.length - 1) / 2) * 44, 20, 12, usageRef.f.colors.base); foot.circle(W / 2 + (i - (ctxs.length - 1) / 2) * 44, 20, 9, ctx.f.colors.jam); });
+  outBin("assets/footers/darkberry_on_line.png", foot.png());
+  outBin("assets/misc/transparent.png", new Canvas(1, 1).png());
+}
+{
+  const tpl = read("template/README.md");
+  if (HEX_LITERAL.test(tpl)) errors.push("template/README.md contains a literal hex value; badge colours come from the palette through %C_*% placeholders");
+  const repoPath = new URL(P.repository).pathname.replace(/^\/|\/$/g, ""), owner = repoPath.split("/")[0];
+  const hexOf = (role) => usageRef.resolve(role)[0].slice(1);
+  const known = new Set(REG.ports.map((p) => p.key));
+  for (const d of fs.readdirSync(path.join(root, "ports"))) if (!d.startsWith(".") && !known.has(d)) errors.push(`ports/${d}/ is not registered in src/ports.json`);
+  for (const port of REG.ports) {
+    if (!exists(`ports/${port.key}`)) { errors.push(`src/ports.json: ${port.key} has no ports/${port.key}/ output`); continue; }
+    if (!exists(`src/usage/${port.key}.md`)) { errors.push(`src/ports.json: ${port.key} has no src/usage/${port.key}.md`); continue; }
+    for (const c of port.categories) if (!CATS.some((x) => x.key === c)) errors.push(`src/ports.json: ${port.key} has an unknown category "${c}"`);
+    if (!port.categories.length) errors.push(`src/ports.json: ${port.key} needs at least one category`);
+    const own = (f) => exists(`ports/${port.key}/assets/${f}`);
+    const vars = {
+      NAME: P.name, APP: port.name, APP_URL: port.url || P.homepage, ROOT: "../..",
+      REPO: P.repository, REPO_PATH: repoPath, OWNER: owner, YEAR: "2026",
+      C_BG: usageRef.f.colors.surface0.slice(1), C_TEXT: usageRef.f.colors.text.slice(1),
+      C_STARS: hexOf("ui.accent"), C_ISSUES: hexOf("ui.warning"), C_CONTRIBUTORS: hexOf("ui.success"),
+      PREVIEW: own("preview.webp") ? "assets/preview.webp" : "../../assets/previews/preview.png",
+      PREVIEWS: ctxs.map((ctx) => `<details>\n<summary>${ctx.f.emoji} ${ctx.f.name}</summary>\n<img src="${own(`${ctx.id}.webp`) ? `assets/${ctx.id}.webp` : `../../assets/previews/${ctx.id}.png`}"/>\n</details>`).join("\n"),
+      USAGE: read(`src/usage/${port.key}.md`).trim(),
+      THANKS: [...(port.maintainers || []), ...REG.maintainers].filter((m, i, a) => a.indexOf(m) === i).map((m) => `- [${m}](https://github.com/${m})`).join("\n"),
+    };
+    out(`ports/${port.key}/README.md`, tpl.replace(/%(\w+)%/g, (_, k) => { if (k in vars) return vars[k]; errors.push(`template/README.md: unknown placeholder %${k}%`); return ""; }));
+    if (!exists(`ports/${port.key}/assets`)) out(`ports/${port.key}/assets/.gitkeep`, "");
+  }
+  out("ports/vscode/.vscodeignore", "assets/**\n"); // screenshots belong to the README on GitHub, not inside the .vsix
+  // The port list in README.md, between the markers, grouped by each port's first category.
+  const begin = "<!-- ports:begin -->", end = "<!-- ports:end -->", readme = read("README.md");
+  if (!readme.includes(begin) || !readme.includes(end)) errors.push(`README.md needs the ${begin} and ${end} markers`);
+  else {
+    const groups = CATS.map((c) => [c, REG.ports.filter((p) => p.categories[0] === c.key)]).filter(([, ps]) => ps.length);
+    const block = groups.map(([c, ps]) => `### ${c.emoji} ${c.name}\n\n${ps.map((p) => `- ${p.emoji} [${p.name}](ports/${p.key}#readme)`).join("\n")}`).join("\n\n");
+    const next = readme.replace(readme.slice(readme.indexOf(begin), readme.indexOf(end) + end.length),
+      `${begin}\n<!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->\n\n${block}\n\n${end}`);
+    if (next !== readme) out("README.md", next);
+  }
+}
 
 // ---------- dist/trace.json (what drives every themed key) ----------
 const trace = [];

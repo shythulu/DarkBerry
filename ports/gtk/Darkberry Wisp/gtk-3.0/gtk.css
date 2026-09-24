@@ -10,7 +10,12 @@
    shape and this file supplies the palette. Since GTK 3.20 Adwaita hardcodes some
    colours instead of reading the named ones, so a few surfaces stay grey. The rules
    after the colour block cover the ones that show most.
+
+   The @import pulls in Adwaita itself (GTK ships it as a resource), so this file is
+   a complete theme on its own: without it GTK would draw every widget unstyled.
 */
+
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk-contained.css");
 
 @define-color theme_bg_color #fbf4f8;
 @define-color theme_fg_color #4f3143;
@@ -76,11 +81,11 @@ notebook > header > tabs > tab:checked {
   color: #4f3143;
   box-shadow: inset 0 -3px #d21570;
 }
-selection, ::selection {
+selection {
   background-color: #f0cadd;
   color: #4f3143;
 }
-*:focus-visible, entry:focus, button:focus {
+*:focus, entry:focus, button:focus {
   outline-color: #9e5e70;
 }
 scrollbar slider {

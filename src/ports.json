@@ -1,0 +1,33 @@
+{
+  "$comment": "The port registry, in the shape of catppuccin/catppuccin's resources/ports.yml. Every key is a directory under ports/ and a file under src/usage/. build.mjs writes ports/<key>/README.md from template/README.md and the block between the ports markers in README.md from this file.",
+  "maintainers": ["shythulu"],
+  "ports": [
+    { "key": "kitty", "name": "kitty", "url": "https://sw.kovidgoyal.net/kitty/", "emoji": "🐱", "categories": ["terminal"], "platform": ["linux", "macos"] },
+    { "key": "ghostty", "name": "Ghostty", "url": "https://ghostty.org", "emoji": "👻", "categories": ["terminal"], "platform": ["linux", "macos", "windows"] },
+    { "key": "alacritty", "name": "Alacritty", "url": "https://alacritty.org", "emoji": "⚡", "categories": ["terminal"], "platform": ["linux", "macos", "windows"] },
+    { "key": "konsole", "name": "Konsole", "url": "https://konsole.kde.org", "emoji": "🐚", "categories": ["terminal"], "platform": ["linux"] },
+    { "key": "tmux", "name": "tmux", "url": "https://github.com/tmux/tmux", "emoji": "🪟", "categories": ["cli"], "platform": ["linux", "macos"] },
+    { "key": "starship", "name": "Starship", "url": "https://starship.rs", "emoji": "🚀", "categories": ["cli"], "platform": ["linux", "macos", "windows"] },
+    { "key": "lsd", "name": "lsd", "url": "https://github.com/lsd-rs/lsd", "emoji": "📁", "categories": ["cli"], "platform": ["linux", "macos", "windows"] },
+    { "key": "ls-colors", "name": "LS_COLORS", "url": "https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html", "emoji": "📂", "categories": ["cli"], "platform": ["linux", "macos"] },
+    { "key": "btop", "name": "btop++", "url": "https://github.com/aristocratos/btop", "emoji": "📊", "categories": ["cli", "analytics"], "platform": ["linux", "macos"] },
+    { "key": "bat", "name": "bat", "url": "https://github.com/sharkdp/bat", "emoji": "🦇", "categories": ["cli", "syntax_highlighting"], "platform": ["linux", "macos", "windows"] },
+    { "key": "neovim", "name": "Neovim", "url": "https://neovim.io", "emoji": "🌙", "categories": ["code_editor", "cli"], "platform": ["linux", "macos", "windows"] },
+    { "key": "micro", "name": "micro", "url": "https://micro-editor.github.io", "emoji": "✏️", "categories": ["code_editor", "cli"], "platform": ["linux", "macos", "windows"] },
+    { "key": "vscode", "name": "Visual Studio Code", "url": "https://code.visualstudio.com", "emoji": "💜", "categories": ["code_editor"], "platform": ["linux", "macos", "windows"] },
+    { "key": "kate", "name": "Kate", "url": "https://kate-editor.org", "emoji": "🗒️", "categories": ["code_editor"], "platform": ["linux", "macos", "windows"] },
+    { "key": "notepadpp", "name": "Notepad++", "url": "https://notepad-plus-plus.org", "emoji": "📄", "categories": ["code_editor"], "platform": ["windows"] },
+    { "key": "obsidian", "name": "Obsidian", "url": "https://obsidian.md", "emoji": "💎", "categories": ["note_taking"], "platform": ["linux", "macos", "windows"] },
+    { "key": "nimbalyst", "name": "Nimbalyst", "url": "https://nimbalyst.com", "emoji": "☁️", "categories": ["note_taking"], "platform": ["linux", "macos", "windows"] },
+    { "key": "firefox", "name": "Firefox", "url": "https://www.mozilla.org/firefox/", "emoji": "🦊", "categories": ["browser"], "platform": ["web"] },
+    { "key": "chrome", "name": "Google Chrome", "url": "https://www.google.com/chrome/", "emoji": "🌐", "categories": ["browser"], "platform": ["web"] },
+    { "key": "kde", "name": "KDE Plasma", "url": "https://kde.org/plasma-desktop/", "emoji": "🖥️", "categories": ["desktop_environment", "system"], "platform": ["linux"] },
+    { "key": "gtk", "name": "GTK 3", "url": "https://www.gtk.org", "emoji": "🧩", "categories": ["system"], "platform": ["linux"] },
+    { "key": "borders", "name": "JankyBorders", "url": "https://github.com/FelixKratz/JankyBorders", "emoji": "🔲", "categories": ["window_manager"], "platform": ["macos"] },
+    { "key": "darktable", "name": "darktable", "url": "https://www.darktable.org", "emoji": "📷", "categories": ["photo_and_video"], "platform": ["linux", "macos", "windows"] },
+    { "key": "gimp", "name": "GIMP", "url": "https://www.gimp.org", "emoji": "🎨", "categories": ["photo_and_video"], "platform": ["linux", "macos", "windows"] },
+    { "key": "gpl", "name": "GIMP Palette", "url": "https://docs.gimp.org/en/gimp-concepts-palettes.html", "emoji": "🖌️", "categories": ["library", "photo_and_video"], "platform": ["linux", "macos", "windows"] },
+    { "key": "base24", "name": "Base24", "url": "https://github.com/tinted-theming/base24", "emoji": "🎛️", "categories": ["system"], "platform": [] },
+    { "key": "tinted8", "name": "Tinted8", "url": "https://github.com/tinted-theming", "emoji": "🎚️", "categories": ["system"], "platform": [] }
+  ]
+}
