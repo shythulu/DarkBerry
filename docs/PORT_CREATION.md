@@ -85,6 +85,10 @@ has no output folder or usage file, or when a category is not in `src/categories
 
 ## Adding a port
 
+The `darkberry-port` skill under `.claude/skills/` walks a contributor through all of
+this in Claude Code, including the prototyping, screenshot and review steps; the steps
+below are the same road without the guide.
+
 1. Follow *Porting an application* in `STYLE_GUIDE.md` for the template, override file,
    build wiring and assertions. Those steps make `ports/<key>/` exist.
 2. Add the entry to `src/ports.json` and write `src/usage/<key>.md`.
