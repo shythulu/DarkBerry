@@ -20,39 +20,40 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/lingonberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/lingonberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/lingonberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/lingonberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/lingonberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
 
 Install from [addons.mozilla.org](https://addons.mozilla.org/firefox/search/?q=darkberry).
-Each flavour is its own theme there, and updates arrive automatically.
+Each flavour is its own listing there, and updates arrive on their own.
 
-The `.xpi` files attached to a [release](https://github.com/shythulu/DarkBerry/releases) are
-the unsigned build output, kept for archival. Firefox refuses unsigned add-ons on release
-and beta, themes included, so those install only through `about:debugging` > This Firefox >
-Load Temporary Add-on, or permanently on Developer Edition, Nightly or an unbranded
-Release/Beta build with `xpinstall.signatures.required` set to `false`. See
-[docs/AMO.md](../../docs/AMO.md) for how the listing is maintained.
+The `.xpi` files attached to each [release](https://github.com/shythulu/DarkBerry/releases)
+are the unsigned build output, kept for the record. Firefox Release and Beta refuse
+unsigned add-ons, themes included, so an `.xpi` from here installs in only two ways. For a
+look, load it as a temporary add-on from `about:debugging` > This Firefox. It lasts until
+Firefox closes. To keep it, use Developer Edition, Nightly or an unbranded build with
+`xpinstall.signatures.required` set to `false`. [docs/AMO.md](../../docs/AMO.md) covers
+how the listing is maintained.
 
 ## 💝 Thanks to
 

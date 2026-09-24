@@ -129,7 +129,7 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 <div class="hero"><div class="wrap">
   <div class="hcopy">
     <h1>Dark<span>berry</span></h1>
-    <p class="lede">A bog-witch berry theme for editors, terminals and browsers, steeped from a single can of dark purple paint.</p>
+    <p class="lede">Darkberry is a berry-dark theme for your editor, terminal and browser, and the same colours do the same jobs in every one of them. Pick a flavour and get comfortable, kiddies. It only gets darker from here.</p>
     <div class="pick"><p id="flabel">Flavour</p><div class="seg" id="flavours" role="group" aria-labelledby="flabel"></div></div>
     <div class="pick"><p id="tlabel">Tint</p><div class="seg" id="tints" role="group" aria-labelledby="tlabel"></div></div>
     <p class="tintnote" id="tintnote" aria-live="polite"></p>
@@ -150,24 +150,24 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
 
 <section id="palette"><div class="wrap">
   <h2>The palette</h2>
-  <p class="intro">Fourteen accents, twelve neutrals, a jam for buttons and a tint for the active tab. Every colour in hex, RGB, HSL and OKLCH. Click a swatch to copy its hex, or any value to copy that form.</p>
+  <p class="intro">Fourteen accents, twelve neutrals, a jam for the buttons and a tint for the active tab. Click a swatch to copy its hex, or click any value in the row to copy that one instead. Go ahead, touch them. They don't bite. Much.</p>
   <div class="scroll"><table class="pal" id="pal"></table></div>
 </div></section>
 
 <section id="practice"><div class="wrap">
   <h2>In practice</h2>
-  <p class="intro">The same roles drive every app: keywords are berry everywhere, errors are cranberry everywhere, and the active tab always carries the tint.</p>
+  <p class="intro">Every app reads from the same list of roles. Keywords are berry, errors are cranberry and the active tab wears the tint, whether you're in kitty, Firefox or a Neovim buffer at three in the morning. Consistency, darling. It's the only thing I'm strict about.</p>
   <div class="grid3">
     <div><p class="cap">kitty and Ghostty</p><div class="win steep"><div class="tabs mono" id="ktabs"></div><div class="term" id="term"></div></div></div>
     <div><p class="cap">Firefox</p><div class="win ff steep"><div class="tabs"><span class="tab on">Jam recipes</span><span class="tab">Pantry</span><span class="tab">Bog map</span></div>
       <div style="background:var(--ui-background);display:flex;align-items:center"><div class="url" style="flex:1">example.com/<span>brews</span></div><span class="badge" style="margin-right:12px">3</span></div>
-      <div class="page"><div class="menu"><div>Open in new tab</div><div class="on">Bookmark page</div><div>Copy link</div></div><div>Toolbars, menus and the new-tab page, all from the same roles.</div></div></div></div>
+      <div class="page"><div class="menu"><div>Open in new tab</div><div class="on">Bookmark page</div><div>Copy link</div></div><div>Toolbars, menus and the new-tab page, painted from the same roles as the editor. No surprises. Well, one or two.</div></div></div></div>
   </div>
 </div></section>
 
 <section id="install"><div class="wrap">
   <h2>Install</h2>
-  <p class="intro">Every port is generated from one palette file, so all four apps always match.</p>
+  <p class="intro">Every port below is generated from one palette file, so whatever you install matches whatever you already have. Most of them are one copied file and one line of config. Even I can manage that, and I do my nails first.</p>
   <div class="cards" id="cards"></div>
 </div></section>
 
@@ -176,17 +176,17 @@ footer nav{display:flex;gap:18px;flex-wrap:wrap}
   <div class="origin">
     <div class="chip"><div class="swatch"></div><div class="label"><b>Dark Purple</b>Benjamin Moore 2073-10<br>#4b3540</div></div>
     <ul class="facts">
-      <li><b>One paint colour at the root.</b> Dark Purple is Wisp's text, Fen's background and the raised surfaces in Mire, and every neutral in Darkberry is built around its plum.</li>
-      <li><b>Modelled on Catppuccin.</b> Four flavours, twelve neutrals with Catppuccin's names and jobs, the same palette file format, and the same terminal colour rules.</li>
-      <li><b>Checked on every build.</b> Text you read stays at 4.5:1 contrast or better, and code colours stay far enough apart that keywords, functions and types never blur together.</li>
-      <li><b>Four berry tints.</b> Lingonberry, cloudberry, crowberry and blueberry each lean Darkberry's backgrounds toward a berry, spaced evenly around the colour wheel.</li>
+      <li><b>It started as a paint chip.</b> Benjamin Moore Dark Purple 2073-10 is Wisp's text, Fen's background and the raised surfaces in Mire. Every neutral in the palette is mixed from its plum.</li>
+      <li><b>Modelled on Catppuccin.</b> Four flavours, twelve neutrals with Catppuccin's names and jobs, the same palette file format and the same terminal colour rules. I borrowed the bones. The blood is mine.</li>
+      <li><b>Checked on every build.</b> Body text never drops below 4.5:1 contrast, and the build fails if keywords, functions and types drift close enough to blur. I have standards. Low ones, but standards.</li>
+      <li><b>Four berry tints.</b> Lingonberry, cloudberry, crowberry and blueberry each pull the backgrounds toward a different berry, spaced evenly around the colour wheel so none of them fight.</li>
     </ul>
   </div>
 </div></section>
 </main>
 
 <footer class="steep"><div class="wrap">
-  <span>Darkberry <span id="ver"></span>. MIT licensed. Modelled on Catppuccin.</span>
+  <span>Darkberry <span id="ver"></span>. MIT licensed. Modelled on Catppuccin. Unpleasant dreams.</span>
   <nav aria-label="More"><a href="studio.html">Darkberry Studio</a><a href="specimen.html">Specimen</a><a href="palette.json">palette.json</a><a id="gh2" href="#">Source</a></nav>
 </div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -251,7 +251,7 @@ $("cards").innerHTML = [
   ["Alacritty", `Copy a flavour into <code>~/.config/alacritty/themes/</code> and import it from your <code>alacritty.toml</code> (needs 0.13 or newer):`, `import = ["~/.config/alacritty/themes/${slug("mire")}.toml"]`, `${tree}/ports/alacritty`],
   ["tmux", `Copy a flavour into <code>~/.config/tmux/</code> and source it from your tmux.conf (tmux 3.2 or later, truecolor terminal):`, `source-file ~/.config/tmux/${slug("mire")}.conf`, `${tree}/ports/tmux`],
   ["VS Code", `Install the <code>.vsix</code> through Extensions, then pick a flavour with the theme picker:`, `code --install-extension darkberry-theme.vsix`, `${tree}/ports/vscode`],
-  ["Firefox", `Load a flavour's <code>manifest.json</code> from <code>about:debugging</code> to try it, or sign it through addons.mozilla.org to keep it.`, `about:debugging#/runtime/this-firefox`, `${tree}/ports/firefox`],
+  ["Firefox", `Install a flavour from addons.mozilla.org. To try an unsigned build first, load its <code>manifest.json</code> as a temporary add-on:`, `about:debugging#/runtime/this-firefox`, `${tree}/ports/firefox`],
   ["Notepad++", `Copy a flavour into <code>%APPDATA%\\Notepad++\\themes\\</code>, restart, then Settings > Style Configurator:`, `%APPDATA%\\Notepad++\\themes\\${title("mire")}.xml`, `${tree}/ports/notepadpp`],
   ["lsd", `Copy a flavour to <code>~/.config/lsd/colors.yaml</code> and set the custom theme:`, `cp ${slug("mire")}.yaml ~/.config/lsd/colors.yaml`, `${tree}/ports/lsd`],
   ["starship", `Copy a flavour over <code>~/.config/starship.toml</code> for a two-line prompt that follows the same roles:`, `cp ${slug("mire")}.toml ~/.config/starship.toml`, `${tree}/ports/starship`],

@@ -20,39 +20,40 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/cloudberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/cloudberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/cloudberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/cloudberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/cloudberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
 
-darktable ignores the system GTK theme and uses its own, which is why this port exists
-beside the [GTK 3](../gtk) one.
+darktable ignores the system GTK theme and uses its own CSS, so the [GTK 3](../gtk) port
+doesn't reach it. This one does.
 
-1. Copy a flavour from this folder beside darktable's own CSS, so the `@import` resolves; the file's header has the path.
+1. Copy a flavour from this folder beside darktable's own CSS, so its `@import` resolves. The header of each file gives the path.
 2. Pick it in darktable's preferences under General > Theme.
 
-For colour work, keep the image surround neutral. A saturated frame shifts how you judge
-colour in the picture, which is why darktable ships greys. Darkberry uses its least
-saturated colours there, but a grey theme is still the right tool for grading.
+One honest warning. A coloured frame around a photo changes how you judge the colours
+inside it, which is why darktable ships grey themes. Darkberry uses its least saturated
+colours around the image, but for serious grading, switch back to a grey theme and come
+back to me when you're done.
 
 ## 💝 Thanks to
 

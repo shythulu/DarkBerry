@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/blueberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/blueberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/blueberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/blueberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/blueberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage

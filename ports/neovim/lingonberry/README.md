@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/lingonberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/lingonberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/lingonberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/lingonberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/lingonberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -47,8 +47,9 @@
 1. Copy a `.lua` file from this folder into `~/.config/nvim/colors/`, keeping its name.
 2. `:colorscheme darkberry-mire`, or `vim.cmd.colorscheme("darkberry-mire")` in `init.lua`.
 
-Needs Neovim 0.9 and `termguicolors` on; the file paints the editor, the syntax groups, the
-Tree-sitter and LSP captures and the terminal palette, and nothing plugin-specific.
+You need Neovim 0.9 or newer with `termguicolors` on. The file colours the editor UI, the
+classic syntax groups, the Tree-sitter and LSP captures and the built-in terminal palette.
+It doesn't define groups for any plugin.
 
 ## 💝 Thanks to
 

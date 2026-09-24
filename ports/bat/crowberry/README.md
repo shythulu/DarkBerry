@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/crowberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/crowberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/crowberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/crowberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/crowberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -52,10 +52,11 @@
    bat --theme="Darkberry Mire" file.rs        # or: export BAT_THEME="Darkberry Mire"
    ```
 
-Any bat with `bat cache --build` loads it; written against 0.24 and checked on 0.26.1. The
-terminal must advertise truecolor (`COLORTERM=truecolor`) or bat rounds every colour to the
-nearest xterm-256 index. The same file works in delta, gitui and Sublime Text, which read
-the caret, selection and gutter keys bat ignores.
+Any bat that has `bat cache --build` can load it. The theme was written against 0.24 and
+checked on 0.26.1. Your terminal has to advertise truecolor (`COLORTERM=truecolor`), or
+bat rounds every colour to the nearest xterm-256 index and the whole thing goes muddy.
+The same `.tmTheme` also works in delta, gitui and Sublime Text, which read the caret,
+selection and gutter keys that bat ignores.
 
 ## 💝 Thanks to
 

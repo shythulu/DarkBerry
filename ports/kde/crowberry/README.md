@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/crowberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/crowberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/crowberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/crowberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/crowberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -47,8 +47,8 @@
 1. Copy the `.colors` files from this folder into `~/.local/share/color-schemes/`.
 2. Pick a flavour in System Settings > Colors.
 
-The scheme covers every Qt and KDE application; the Plasma Style and window decorations are
-artwork rather than colour, so they stay as they are.
+The scheme colours every Qt and KDE application. The Plasma Style and window decorations
+are artwork, not colours, so they stay as they were.
 
 ## 💝 Thanks to
 

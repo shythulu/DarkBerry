@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/crowberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/crowberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/crowberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/crowberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/crowberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -53,14 +53,22 @@
 
 3. Reload with `tmux source-file ~/.config/tmux/tmux.conf`.
 
-The file is the whole theme: a two-segment status line (session badge on the left, host and
-clock on the right), the window list with the active window on the tab indicator, pane
-borders, messages, copy-mode selection and search hits, the clock, pane numbers, popups and
-menus. It needs tmux 3.2 or later; the popup and menu styles are 3.3 and 3.4 and are set
-with `-q`, so an older tmux skips them. The colours are 24-bit, so tmux must see a truecolor
-terminal (kitty, Ghostty and Konsole all are); if not, add
-`set -as terminal-features ",xterm-256color:RGB"` to `tmux.conf`. The pane's own text and
-background stay the terminal's, so use it with the kitty, Ghostty or Konsole port.
+The one file is the whole theme. It styles the status line (session badge on the left,
+host and clock on the right), the window list with the active window on the tab colour,
+pane borders, messages, copy-mode selection and search hits, the clock, pane numbers,
+popups and menus.
+
+You need tmux 3.2 or later. The popup and menu styles arrived in 3.3 and 3.4, and they're
+set with `-q`, so an older tmux skips them instead of failing. The colours are 24-bit, so
+tmux has to know it's on a truecolor terminal. kitty, Ghostty and Konsole all advertise
+one. If yours doesn't, add this to `tmux.conf`:
+
+```
+set -as terminal-features ",xterm-256color:RGB"
+```
+
+The text and background inside each pane are the terminal's own, so pair this with the
+kitty, Ghostty or Konsole port.
 
 ## 💝 Thanks to
 

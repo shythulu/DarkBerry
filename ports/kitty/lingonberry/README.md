@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/lingonberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/lingonberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/lingonberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/lingonberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/lingonberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -51,7 +51,8 @@
    include themes/darkberry-mire.conf
    ```
 
-To follow the OS light/dark setting (kitty 0.38+), copy two flavours to `~/.config/kitty/` named `light-theme.auto.conf` and `dark-theme.auto.conf`.
+To follow the system's light and dark setting (kitty 0.38 or newer), copy two flavours
+into `~/.config/kitty/` and name them `light-theme.auto.conf` and `dark-theme.auto.conf`.
 
 ## 💝 Thanks to
 

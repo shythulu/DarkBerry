@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/blueberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/blueberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/blueberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/blueberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/blueberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -47,17 +47,17 @@
 1. Copy a flavour from this folder to `~/.config/lsd/colors.yaml`.
 2. Set `color: {theme: custom}` in `~/.config/lsd/config.yaml`.
 
-Needs lsd 1.1 or newer; below that lsd rejects hex strings and silently drops the whole
-theme, so for lsd 1.0 (Ubuntu 24.04) use the `.256.yaml` companion, the same theme as
-xterm-256 indices. Written against lsd 1.2.0, whose theme struct rejects unknown keys.
-Notably `file-type` is skipped in that version, so a theme carrying it is discarded whole
-and lsd falls back to its defaults without saying so. Every key here is one lsd 1.2.0
-accepts.
+You need lsd 1.1 or newer. Older versions reject hex colours and drop the whole theme
+without a word, so on lsd 1.0 (what Ubuntu 24.04 ships) use the `.256.yaml` file beside
+each flavour. It's the same theme in xterm-256 indices.
 
-That skipped key is why the [LS_COLORS](../ls-colors) port exists, and why you want both
-halves. colors.yaml reaches only the metadata columns; the file and folder names, which are
-most of what a listing actually shows, are left on lsd's stock blue and green until
-LS_COLORS is set.
+lsd 1.2.0 rejects any key it doesn't know, and when it finds one it throws the whole file
+away and falls back to its defaults, again without saying so. `file-type` is one of those
+keys in 1.2.0, so it isn't in these files. Every key here is one that 1.2.0 accepts.
+
+That missing key is also why the [LS_COLORS](../ls-colors) port exists, and why you want
+both. `colors.yaml` only reaches the metadata columns. File and folder names, which are
+most of what a listing shows, stay on lsd's stock blue and green until `LS_COLORS` is set.
 
 ## 💝 Thanks to
 

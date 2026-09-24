@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/crowberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/crowberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/crowberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/crowberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/crowberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -52,10 +52,11 @@
    import = ["~/.config/alacritty/themes/darkberry-mire.toml"]
    ```
 
-Needs Alacritty 0.13 or newer, the first release that reads TOML; on 0.13 itself put the
-`import` line at the top of the file rather than under `[general]`. Alacritty reloads the
-config on save, so switching flavours is editing that one line. Nothing else is needed:
-the file carries the ANSI set, cursor, selection, search, hint and vi-mode colours.
+You need Alacritty 0.13 or newer, the first release that reads TOML. On 0.13 exactly, put
+the `import` line at the top of the file instead of under `[general]`. Alacritty reloads
+its config on save, so switching flavours means changing that one line. The theme file
+covers the ANSI colours, cursor, selection, search, hints and vi mode, so there is nothing
+else to set.
 
 ## 💝 Thanks to
 

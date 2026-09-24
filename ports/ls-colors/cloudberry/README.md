@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../../assets/previews/cloudberry/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/cloudberry/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../../assets/previews/cloudberry/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../../assets/previews/cloudberry/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/cloudberry/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -51,14 +51,16 @@
    . ~/.config/darkberry/darkberry-mire.sh
    ```
 
-It exports `LS_COLORS`, which lsd, GNU `ls`, eza, fd, dust, delta and zsh's completion menu
-all read, so the one file themes every listing on the machine. Directories take the accent;
-source, configuration, prose, media and archives each take a hue; build leavings and backups
-sit under the reading colour. Executables stay green and symlinks stay cool, because those
-two meanings are older than any theme.
+The file exports `LS_COLORS`. lsd, GNU `ls`, eza, fd, dust, delta and zsh's completion
+menu all read that variable, so this one file colours every listing on the machine.
+Directories get the accent. Source, config, prose, media and archives each get their own
+hue. Build output and backups drop below the body-text colour so they fade. Executables
+stay green and symlinks stay a cool colour, because people have read them that way since
+long before anyone had a theme.
 
-BSD `ls`, which is what macOS ships without coreutils, reads `LSCOLORS` instead, a different
-format limited to the eight ANSI colours, which cannot carry these. Use lsd or GNU `ls` there.
+macOS ships BSD `ls`, which reads `LSCOLORS` instead. That's a different format limited to
+the eight ANSI colours, and it can't hold this theme. Use lsd or GNU `ls` from coreutils
+there.
 
 ## 💝 Thanks to
 
