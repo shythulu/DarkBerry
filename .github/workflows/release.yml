@@ -45,8 +45,8 @@ jobs:
         run: |
           node build.mjs
           for v in src/variants/*.json; do node build.mjs --check "$v"; done
-          git diff --exit-code -- ports ||
-            { echo "::error::ports/ is stale; run node build.mjs and commit the result"; exit 1; }
+          git diff --exit-code -- ports assets README.md ||
+            { echo "::error::ports/, assets/ or README.md is stale; run node build.mjs and commit the result"; exit 1; }
 
       - name: Package
         run: ./package.sh
@@ -134,6 +134,7 @@ jobs:
           fail=0
           for dir in ports/firefox/*/; do
             flavour=$(basename "$dir")
+            [ "$flavour" = assets ] && continue
             echo "::group::$flavour"
             npx --yes web-ext sign --source-dir "$dir" --channel listed \
               --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET" \

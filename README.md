@@ -16,12 +16,17 @@ src/palette.json          layer 1: the untinted default palette, 12 neutrals + 1
 src/roles.json            layer 2: what each colour means, shared by every port, with Catppuccin comparison
 src/overrides/            layer 3: rare port-only exceptions, each with a reason
 src/ports/                every port's template: terminals, editors, browsers, shells (roles in {braces}, no hex)
+src/ports.json            the port registry (name, app URL, categories, platforms), in the shape of Catppuccin's ports.yml
+src/categories.json       the port categories, Catppuccin's keys and emoji
+src/usage/<port>.md       each port's install steps, the Usage section of its README
+template/                 the port template (Catppuccin's, adapted): README.md and assets/
 src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
-ports/                    generated themes for every port
+ports/<port>/             generated theme files, a README written from template/, and assets/ for screenshots
+assets/                   generated logo, footer and fallback palette previews used by every port README
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results
@@ -36,6 +41,7 @@ tools/apply-patch.mjs     applies a patch exported from Darkberry Studio, then r
 tools/site.mjs            builds the GitHub Pages showcase into site/
 lib/resolve.mjs           role resolution shared by the build and the site
 STYLE_GUIDE.md            the rules
+docs/PORT_CREATION.md     how a port is laid out and added, after Catppuccin's port-creation guide
 ```
 
 `node build.mjs` rebuilds everything and fails if a rule is broken. `./package.sh` also builds the VS Code `.vsix` and Firefox `.xpi` files. To build a variant instead of the default: `node build.mjs src/variants/cloudberry.json`.
@@ -54,268 +60,79 @@ To preview locally: `node build.mjs && node tools/site.mjs`, then open `site/ind
 
 Open `docs/studio.html` (regenerated on every build, so it always starts from the current theme). Click anything in its previews to see which role and palette colour it comes from, change it, check the results, then export a patch and run `node tools/apply-patch.mjs patch.json`.
 
-## Install
+## Ports
 
-Every tagged release carries the packaged files for each app: a `.vsix` for VS Code, an
-`.xpi` per flavour for Firefox, and zips of the kitty, Ghostty and Alacritty configs. Download them
-`.xpi` per flavour for Firefox, and zips of the kitty, Ghostty and tmux configs. Download them
-from [Releases](https://github.com/shythulu/DarkBerry/releases), or build them yourself
-with `./package.sh`, which writes the same set into `dist/`.
+Every port lives in its own folder under `ports/`, laid out the way the
+[Catppuccin](https://github.com/catppuccin) organisation lays out its port repositories:
+a README with previews and install steps, an `assets/` folder for screenshots, and the
+theme files. Each README below is the install guide for that app.
 
-### kitty
+Every tagged release also carries the packaged files: a `.vsix` for VS Code, an `.xpi` per
+flavour for Firefox, and a zip of every other port. Download them from
+[Releases](https://github.com/shythulu/DarkBerry/releases), or build them yourself with
+`./package.sh`, which writes the same set into `dist/`.
 
-Copy a file from `ports/kitty/` to `~/.config/kitty/themes/`, then run `kitty +kitten themes` and pick it. Or add to `kitty.conf`:
+<!-- ports:begin -->
+<!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->
 
-```
-include themes/darkberry-mire.conf
-```
+### 👾 Code Editors & IDEs
 
-To follow the OS light/dark setting (kitty 0.38+), copy two flavours to `~/.config/kitty/` named `light-theme.auto.conf` and `dark-theme.auto.conf`.
+- 🌙 [Neovim](ports/neovim#readme)
+- ✏️ [micro](ports/micro#readme)
+- 💜 [Visual Studio Code](ports/vscode#readme)
+- 🗒️ [Kate](ports/kate#readme)
+- 📄 [Notepad++](ports/notepadpp#readme)
 
-### Ghostty
+### 📚 Libraries
 
-Copy the files from `ports/ghostty/` to `~/.config/ghostty/themes/`, keeping their names, then in your Ghostty config:
+- 🖌️ [GIMP Palette](ports/gpl#readme)
 
-```
-theme = light:Darkberry Wisp,dark:Darkberry Mire
-```
+### 🐚 CLI Tools
 
-### Alacritty
+- 🪟 [tmux](ports/tmux#readme)
+- 🚀 [Starship](ports/starship#readme)
+- 📁 [lsd](ports/lsd#readme)
+- 📂 [LS_COLORS](ports/ls-colors#readme)
+- 📊 [btop++](ports/btop#readme)
+- 🦇 [bat](ports/bat#readme)
 
-Copy a file from `ports/alacritty/` to `~/.config/alacritty/themes/`, then import it from
-`~/.config/alacritty/alacritty.toml`:
+### 🌱 Terminals
 
-```toml
-[general]
-import = ["~/.config/alacritty/themes/darkberry-mire.toml"]
-```
+- 🐱 [kitty](ports/kitty#readme)
+- 👻 [Ghostty](ports/ghostty#readme)
+- ⚡ [Alacritty](ports/alacritty#readme)
+- 🐚 [Konsole](ports/konsole#readme)
 
-Needs Alacritty 0.13 or newer, the first release that reads TOML; on 0.13 itself put the
-`import` line at the top of the file rather than under `[general]`. Alacritty reloads the
-config on save, so switching flavours is editing that one line. Nothing else is needed:
-the file carries the ANSI set, cursor, selection, search, hint and vi-mode colours.
-### tmux
+### 🔧 System
 
-Copy a file from `ports/tmux/` to `~/.config/tmux/`, then source it from `tmux.conf`:
+- 🧩 [GTK 3](ports/gtk#readme)
+- 🎛️ [Base24](ports/base24#readme)
+- 🎚️ [Tinted8](ports/tinted8#readme)
 
-```
-source-file ~/.config/tmux/darkberry-mire.conf
-```
+### 🖥️ Desktop Environments
 
-Reload with `tmux source-file ~/.config/tmux/tmux.conf`. The file is the whole theme: a
-two-segment status line (session badge on the left, host and clock on the right), the
-window list with the active window on the tab indicator, pane borders, messages, copy-mode
-selection and search hits, the clock, pane numbers, popups and menus. It needs tmux 3.2 or
-later; the popup and menu styles are 3.3 and 3.4 and are set with `-q`, so an older tmux
-skips them. The colours are 24-bit, so tmux must see a truecolor terminal (kitty, Ghostty
-and Konsole all are); if not, add `set -as terminal-features ",xterm-256color:RGB"` to
-`tmux.conf`. The pane's own text and background stay the terminal's, so use it with the
-kitty, Ghostty or Konsole port.
+- 🖥️ [KDE Plasma](ports/kde#readme)
 
-### GIMP, Inkscape and darktable
+### 🪟 Window Managers
 
-These are GTK 3 applications, and each theme covers a different layer.
+- 🔲 [JankyBorders](ports/borders#readme)
 
-`ports/gtk/` is a GTK 3 theme: copy a flavour folder into `~/.themes/` and select it as
-your GTK theme. That reaches Inkscape and any other GTK 3 application that follows the
-system theme. It recolours Adwaita rather than replacing it, so a few surfaces Adwaita
-hardcodes stay grey.
+### 🏄 Browsers
 
-`ports/darktable/` and `ports/gimp/` exist because those two ignore the system theme and
-use their own. Each file's header has its install path, both of which involve sitting the
-file beside the application's own CSS so the `@import` resolves.
+- 🦊 [Firefox](ports/firefox#readme)
+- 🌐 [Google Chrome](ports/chrome#readme)
 
-For colour work, keep the image surround neutral. A saturated frame shifts how you judge
-colour in the picture, which is why both applications ship greys. Darkberry uses its least
-saturated colours there, but a grey theme is still the right tool for grading.
+### 📷 Photo & Video
 
-### Colour palettes for GIMP, Inkscape and Krita
+- 📷 [darktable](ports/darktable#readme)
+- 🎨 [GIMP](ports/gimp#readme)
 
-`ports/gpl/` holds the palette itself, not a theme, in the GIMP palette format that GIMP,
-Inkscape, Krita, MyPaint and Aseprite all import. There is one file per flavour and
-`darkberry.gpl` with every flavour's colours, each labelled with its flavour and name.
+### 📝 Note Taking
 
-- GIMP: Edit > Preferences > Folders > Palettes shows the folder; copy the files in, or
-  Windows > Dockable Dialogs > Palettes, then Import Palette from a file.
-- Inkscape: copy the files into `~/.config/inkscape/palettes/` and pick them from the
-  menu at the left end of the palette bar.
-- Krita: Settings > Manage Resources > Import Resources.
+- 💎 [Obsidian](ports/obsidian#readme)
+- ☁️ [Nimbalyst](ports/nimbalyst#readme)
 
-### Notepad++
-
-Copy a `.xml` file from `ports/notepadpp/` into `%APPDATA%\\Notepad++\\themes\\`, restart
-Notepad++, then Settings > Style Configurator and pick the flavour. Fonts are left blank so
-your own choice survives.
-
-### lsd
-
-Copy a flavour from `ports/lsd/` to `~/.config/lsd/colors.yaml`, and set
-`color: {theme: custom}` in `~/.config/lsd/config.yaml`.
-
-Needs lsd 1.1 or newer; below that lsd rejects hex strings and silently drops the whole
-theme, so for lsd 1.0 (Ubuntu 24.04) use the `.256.yaml` companion, the same theme as
-xterm-256 indices. Written against lsd 1.2.0, whose theme struct rejects unknown keys. Notably `file-type` is
-skipped in that version, so a theme carrying it is discarded whole and lsd falls back to its
-defaults without saying so. Every key here is one lsd 1.2.0 accepts.
-
-That skipped key is why `ports/ls-colors/` exists, and why you want both halves. colors.yaml
-reaches only the metadata columns; the file and folder names, which are most of what a listing
-actually shows, are left on lsd's stock blue and green until LS_COLORS is set.
-
-### LS_COLORS
-
-Source a flavour from `ports/ls-colors/` in your shell rc:
-
-```sh
-. ~/.config/darkberry/darkberry-mire.sh
-```
-
-It exports `LS_COLORS`, which lsd, GNU `ls`, eza, fd, dust, delta and zsh's completion menu all
-read, so the one file themes every listing on the machine. Directories take the accent; source,
-configuration, prose, media and archives each take a hue; build leavings and backups sit under
-the reading colour. Executables stay green and symlinks stay cool, because those two meanings
-are older than any theme.
-
-BSD `ls`, which is what macOS ships without coreutils, reads `LSCOLORS` instead -- a different
-format limited to the eight ANSI colours, which cannot carry these. Use lsd or GNU `ls` there.
-
-### JankyBorders (macOS)
-
-Copy a flavour from `ports/borders/` over `~/.config/borders/bordersrc` and restart borders
-(`brew services restart borders`). The focused window's border follows `ui.border.active`,
-the accent, and every other window `ui.border.inactive`. Width, style and hidpi are plain
-defaults in the file; only the two colours are the theme.
-
-### starship
-
-Copy a flavour from `ports/starship/` over `~/.config/starship.toml`. A two-line
-box-drawing prompt: row one is where you are, row two is the caret with the last command's
-result on the right margin. The frame is plain Unicode, so it survives without a Nerd Font;
-only the module icons need one.
-
-The palette inside each file is split on purpose. Entries named after a role take their
-colour from `src/roles.json`, so anything meaning "this failed" follows `ui.error`. Entries
-named after a palette colour cover what no role describes: a language's brand colour, or a
-git state that only needs to be distinguishable.
-
-### Base24 and Tinted8
-
-Two ports carry Darkberry into [Tinted Theming](https://github.com/tinted-theming), whose
-builders turn one scheme file into configuration for seventy-odd applications. These are the
-only ports here that theme apps Darkberry has never heard of.
-
-Copy a flavour from `ports/base24/` or `ports/tinted8/` into a builder's schemes directory
-and build:
-
-```sh
-tinty install                      # or: tinted-builder-rust build .
-```
-
-Which one depends on the builder. **Base24** is the widely supported system: twenty-four
-fixed slots, `base00` to `base17`, understood by every Base16 and Base24 template.
-**Tinted8** is the newer spec: eight anchor colours that a builder expands, plus optional
-`syntax` and `ui` blocks that let a scheme state what it actually means instead of leaving
-the builder to guess. Darkberry fills both blocks, so the Tinted8 file is the more faithful
-of the two -- it carries the syntax assignments token for token from the VS Code port, and
-names the cursor, gutter, current line, selection and status colours outright.
-
-Base24 has to compress more. Each of its slots does two jobs at once, an editor meaning and
-an ANSI code, and where those disagree the file keeps the ANSI half so that a terminal built
-from it matches the kitty, Ghostty and Konsole ports, and keeps the legible half wherever the
-spec asks for legibility by name. The header comment in each generated file says which slots
-were compromised and why; `src/ports/base24.yaml` carries the full reasoning.
-
-Both were checked by building all four flavours with `tinted-builder-rust` 0.21.0, which is
-stricter than the spec it implements: its scheme struct denies unknown fields, so a single key
-spelled the way the styling spec prints it makes the builder reject the whole file -- the same
-trap lsd's theme struct sets. The templates use the names the builder accepts, and every value
-they declare was rendered back out and compared: 105 keys in the Tinted8 file, all 24 slots in
-the Base24 one.
-
-### micro
-
-Copy a `.micro` file from `ports/micro/` into `~/.config/micro/colorschemes/`, then
-`set colorscheme darkberry-mire`.
-
-### btop
-
-Copy a `.theme` file from `ports/btop/` into `~/.config/btop/themes/`, then pick it under
-Esc > Options > Color theme, or set `color_theme = "darkberry-mire"` in `btop.conf`. btop
-lists themes by file name, so keep the names. Needs btop 1.3 or newer for every key, and
-1.4.7 for the process-list banner and followed-row keys, which older releases simply skip.
-For a transparent terminal, set `theme_background = False` in `btop.conf` rather than
-editing the file; on a terminal without truecolor, set `lowcolor = True`.
-### bat
-
-Copy a `.tmTheme` file from `ports/bat/` into `$(bat --config-dir)/themes/` (usually
-`~/.config/bat/themes/`), run `bat cache --build`, then pick it:
-
-```sh
-bat --theme="Darkberry Mire" file.rs        # or: export BAT_THEME="Darkberry Mire"
-```
-
-Any bat with `bat cache --build` loads it; written against 0.24 and checked on 0.26.1. The
-terminal must advertise truecolor (`COLORTERM=truecolor`) or bat rounds every colour to
-the nearest xterm-256 index. The same file works in delta, gitui and Sublime Text, which
-read the caret, selection and gutter keys bat ignores.
-### Neovim
-
-Copy a `.lua` file from `ports/neovim/` into `~/.config/nvim/colors/` (keep its name), then
-`:colorscheme darkberry-mire`, or `vim.cmd.colorscheme("darkberry-mire")` in `init.lua`.
-Needs Neovim 0.9 and `termguicolors` on; the file paints the editor, the syntax groups, the
-Tree-sitter and LSP captures and the terminal palette, and nothing plugin-specific.
-
-### Kate
-
-Copy a `.theme` file from `ports/kate/` into
-`~/.local/share/org.kde.syntax-highlighting/themes/`, then Settings > Configure Kate >
-Fonts & Colors. The surrounding window chrome comes from the KDE colour scheme below.
-
-### Chrome and Edge
-
-Unzip `ports/chrome/` somewhere permanent, open `chrome://extensions`, turn on Developer
-mode and use *Load unpacked* on a flavour's folder. Chromium themes install like extensions,
-so a folder loaded this way stays until you remove it.
-
-### Nimbalyst
-
-Copy a flavour's folder from `ports/nimbalyst/` into Nimbalyst's themes directory, then pick
-it under Settings > Themes. Each folder holds a `theme.json`, which is how Nimbalyst
-discovers a theme.
-
-### KDE Plasma
-
-Copy the `.colors` files from `ports/kde/` into `~/.local/share/color-schemes/`, then pick a
-flavour in System Settings > Colors. The scheme covers every Qt and KDE application; the
-Plasma Style and window decorations are artwork rather than colour, so they stay as they are.
-
-### Konsole
-
-Copy the `.colorscheme` files from `ports/konsole/` into `~/.local/share/konsole/`, then
-Settings > Edit Current Profile > Appearance.
-
-### Obsidian
-
-Copy a flavour's folder from `ports/obsidian/` into your vault's `.obsidian/themes/`, keeping the
-folder name, then pick it under Settings > Appearance > Themes. Each flavour is its own theme
-and paints both of Obsidian's colour schemes, so the Appearance light/dark switch leaves the
-flavour alone.
-
-### VS Code (and Cursor, VSCodium, Windsurf)
-
-Install `darkberry-theme-<version>.vsix` via Extensions > `...` > Install from VSIX, or `code --install-extension darkberry-theme-<version>.vsix`. Then pick a flavour with Ctrl+K Ctrl+T. To publish, set your own `publisher` in `build.mjs`.
-
-### Firefox
-
-Install from [addons.mozilla.org](https://addons.mozilla.org/firefox/search/?q=darkberry).
-Each flavour is its own theme there, and updates arrive automatically.
-
-The `.xpi` files attached to a release are the unsigned build output, kept for archival.
-Firefox refuses unsigned add-ons on release and beta — themes included — so those install
-only through `about:debugging` > This Firefox > Load Temporary Add-on, or permanently on
-Developer Edition, Nightly or an unbranded Release/Beta build with
-`xpinstall.signatures.required` set to `false`. See [docs/AMO.md](docs/AMO.md) for how the
-listing is maintained.
+<!-- ports:end -->
 
 ## Credits
 

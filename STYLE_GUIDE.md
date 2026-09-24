@@ -82,8 +82,10 @@ fill whose foreground the host application chooses (below, *Host-owned pairings*
 ## Porting an application
 
 The result of this procedure is: a template in `src/ports/`, an empty override file, the
-build wired up, assertions for the shared meanings, the install text in five places, a
-notes file, and a verified screenshot per light and dark flavour.
+build wired up, assertions for the shared meanings, a registry entry and usage file that
+give the port its README (the layout is Catppuccin's; see `docs/PORT_CREATION.md`), the
+install line in two more places, a notes file, and a verified screenshot per flavour under
+`ports/<port>/assets/`.
 
 1. **Study the app's own default theme and its Catppuccin port.** Fetch the current
    Catppuccin template (`catppuccin/<app>` on GitHub; `resources/ports.yml` in
@@ -155,7 +157,8 @@ notes file, and a verified screenshot per light and dark flavour.
      before a port that cannot avoid braces.
    - Placeholders: `%FULL%` (`Darkberry Mire`), `%NAME%`, `%ID%`, `%SLUG%`
      (`darkberry-mire`), `%FLAVOUR%`, `%NOTE%` (the flavour's note), `%VERSION%`,
-     `%HOMEPAGE%`, `%SCHEME%` (`dark`/`light`), `%ISDARK%`, `%ACCENT_H%`/`%ACCENT_S%`/
+     `%HOMEPAGE%`, `%SCHEME%` (`dark`/`light`), `%ISDARK%`, `%ADWAITA%` (`-dark` or empty,
+     for Adwaita's stylesheet names), `%ACCENT_H%`/`%ACCENT_S%`/
      `%ACCENT_L%` (HSL parts of `ui.accent`, for apps that derive shades). The scan is
      `%(\w+)%`: an unknown name is put back (`%H:%M` survives), a name that is a
      placeholder (`%ID%` in a strftime string) is not.
@@ -230,13 +233,17 @@ notes file, and a verified screenshot per light and dark flavour.
     background, cursor and cursor text) is one regex over both lines, and a key that
     repeats across sections (TOML `background`) is anchored on the section header plus
     the lines under it (`build.mjs`'s Alacritty lines).
-12. **Ship it.** A `zip` line in `package.sh`; an install section in `README.md` (path,
-    the app's picker step or import line, the version floor in one line, the environment
-    note when there is one) and the port's name in README's *Repository layout* lines
-    for `src/ports/` and `ports/`; the install line in `.github/workflows/release.yml`'s
-    release-notes block; a card in `src/site/index.html`'s `cards` list (name, prose,
-    code line, link; copy the Alacritty entry; `src/site/` is source, `site/` is
-    generated); and `ports/` rebuilt and committed (`release.yml` fails when `ports/` is
+12. **Ship it.** An entry in `src/ports.json` (key, name, app URL, emoji, categories,
+    platforms; the shape is in `docs/PORT_CREATION.md`) and the install steps in
+    `src/usage/<port>.md` (path, the app's picker step or import line, the version floor
+    in one line, the environment note when there is one); the build then writes
+    `ports/<port>/README.md` from `template/README.md` and the port's line in
+    `README.md`. A `zip` line in `package.sh` with `-x "assets/*"`; the install line in
+    `.github/workflows/release.yml`'s release-notes block; a card in
+    `src/site/index.html`'s `cards` list (name, prose, code line, link; copy the
+    Alacritty entry; `src/site/` is source, `site/` is generated); screenshots as
+    `preview.webp` and `<flavour>.webp` in `ports/<port>/assets/`; and `ports/`,
+    `assets/` and `README.md` rebuilt and committed (`release.yml` fails when they are
     stale).
 
 ## Meaning → role table
@@ -400,4 +407,6 @@ there.
    `node tools/variants.mjs <variant> [hue step] [chroma step]` makes one;
    `node build.mjs src/variants/<file>.json` builds it. Regenerate the variants after
    changing the default palette.
-6. Never hand-edit `ports/`, `dist/`, `docs/` or `site/`; they are generated.
+6. Never hand-edit `ports/`, `assets/`, `dist/`, `docs/` or `site/`; they are generated.
+   The exceptions are the screenshots in `ports/<port>/assets/` and the hand-written
+   files in `docs/` (`AMO.md`, `PORT_CREATION.md`).

@@ -9,9 +9,12 @@
    gimp-dark.css:
 
      cp -r /usr/share/gimp/3.0/themes/Default ~/.config/GIMP/3.0/themes/Darkberry Blackwater
+     cp -r /usr/share/gimp/3.0/themes/System ~/.config/GIMP/3.0/themes/
      cp "darkberry-blackwater.css" ~/.config/GIMP/3.0/themes/Darkberry Blackwater/gimp-dark.css
 
-   Then Edit > Preferences > Interface > Theme. Copying rather than shipping
+   The System copy is there because Default's common.css imports ../System/gimp.css
+   (checked on GIMP 3.2.6, whose config folder is ~/.config/GIMP/3.2/). Then
+   Edit > Preferences > Interface > Theme. Copying rather than shipping
    GIMP's files keeps this MIT: GIMP's own CSS is GPL3.
 
    A saturated surround shifts how you judge colour in the image you are editing.

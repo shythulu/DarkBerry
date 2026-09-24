@@ -1,0 +1,14 @@
+[
+  { "key": "code_editor", "name": "Code Editors & IDEs", "description": "Tools for writing and editing code, offering syntax highlighting, debugging, etc.", "emoji": "👾" },
+  { "key": "syntax_highlighting", "name": "Syntax Highlighting", "description": "Tools designed to improve syntax highlighting.", "emoji": "🖍️" },
+  { "key": "library", "name": "Libraries", "description": "Files that carry the palette itself into another program.", "emoji": "📚" },
+  { "key": "cli", "name": "CLI Tools", "description": "Command-line utilities, from file listings to system monitors.", "emoji": "🐚" },
+  { "key": "terminal", "name": "Terminals", "description": "Programs providing text-based interfaces to interact with the operating system.", "emoji": "🌱" },
+  { "key": "system", "name": "System", "description": "Applications that are close to the operating system, and scheme formats that theme many apps at once.", "emoji": "🔧" },
+  { "key": "desktop_environment", "name": "Desktop Environments", "description": "Graphical User Interfaces providing a complete experience for interacting with the operating system.", "emoji": "🖥️" },
+  { "key": "window_manager", "name": "Window Managers", "description": "Applications that control the placement and appearance of windows in a GUI.", "emoji": "🪟" },
+  { "key": "browser", "name": "Browsers", "description": "Applications for accessing and navigating the World Wide Web.", "emoji": "🏄" },
+  { "key": "photo_and_video", "name": "Photo & Video", "description": "Applications for viewing and editing photos and video.", "emoji": "📷" },
+  { "key": "note_taking", "name": "Note Taking", "description": "Applications for writing, organising and linking notes.", "emoji": "📝" },
+  { "key": "analytics", "name": "Analytics", "description": "Tools that monitor or visualise data and system state.", "emoji": "📊" }
+]
