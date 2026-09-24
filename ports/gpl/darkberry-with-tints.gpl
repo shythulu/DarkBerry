@@ -1,0 +1,584 @@
+GIMP Palette
+Name: Darkberry with tints
+Columns: 8
+# Darkberry 0.3.0, https://shythulu.github.io/DarkBerry/
+147  75 102	Darkberry Wisp Blossom
+168  53 112	Darkberry Wisp Petal
+191  11 100	Darkberry Wisp Berry
+140  62 178	Darkberry Wisp Plum
+187  38  42	Darkberry Wisp Cranberry
+165  63  84	Darkberry Wisp Cherry
+162  71  18	Darkberry Wisp Apricot
+129  91   2	Darkberry Wisp Honey
+ 44 111  45	Darkberry Wisp Gooseberry
+  0 111  95	Darkberry Wisp Juniper
+  2 107 128	Darkberry Wisp Frost
+ 29 100 164	Darkberry Wisp Bilberry
+ 54  89 202	Darkberry Wisp Blueberry
+115  80 168	Darkberry Wisp Lavender
+185  72 139	Darkberry Wisp Jam
+255 255 255	Darkberry Wisp Onjam
+210  21 112	Darkberry Wisp Tint
+ 79  49  67	Darkberry Wisp Text
+ 90  64  80	Darkberry Wisp Subtext1
+105  78  95	Darkberry Wisp Subtext0
+116  91 106	Darkberry Wisp Overlay2
+150 125 140	Darkberry Wisp Overlay1
+172 147 162	Darkberry Wisp Overlay0
+195 171 185	Darkberry Wisp Surface2
+208 186 200	Darkberry Wisp Surface1
+223 203 216	Darkberry Wisp Surface0
+251 244 248	Darkberry Wisp Base
+243 230 239	Darkberry Wisp Mantle
+235 218 229	Darkberry Wisp Crust
+234 175 214	Darkberry Fen Blossom
+255 196 221	Darkberry Fen Petal
+250 153 180	Darkberry Fen Berry
+236 188 252	Darkberry Fen Plum
+255 138 138	Darkberry Fen Cranberry
+231 170 181	Darkberry Fen Cherry
+247 191 158	Darkberry Fen Apricot
+240 214 160	Darkberry Fen Honey
+183 230 183	Darkberry Fen Gooseberry
+176 223 217	Darkberry Fen Juniper
+131 212 219	Darkberry Fen Frost
+156 198 234	Darkberry Fen Bilberry
+164 195 246	Darkberry Fen Blueberry
+201 176 232	Darkberry Fen Lavender
+220 103 167	Darkberry Fen Jam
+ 53  33  46	Darkberry Fen Onjam
+250 153 180	Darkberry Fen Tint
+242 230 238	Darkberry Fen Text
+223 206 217	Darkberry Fen Subtext1
+204 186 197	Darkberry Fen Subtext0
+189 159 177	Darkberry Fen Overlay2
+162 130 151	Darkberry Fen Overlay1
+143 110 130	Darkberry Fen Overlay0
+123  90 110	Darkberry Fen Surface2
+108  76  96	Darkberry Fen Surface1
+ 93  62  81	Darkberry Fen Surface0
+ 79  49  67	Darkberry Fen Base
+ 64  40  56	Darkberry Fen Mantle
+ 53  33  46	Darkberry Fen Crust
+231 197 216	Darkberry Mire Blossom
+254 175 212	Darkberry Mire Petal
+253 124 165	Darkberry Mire Berry
+221 176 236	Darkberry Mire Plum
+240 106 106	Darkberry Mire Cranberry
+211 145 156	Darkberry Mire Cherry
+242 173 138	Darkberry Mire Apricot
+232 201 138	Darkberry Mire Honey
+163 218 163	Darkberry Mire Gooseberry
+158 208 196	Darkberry Mire Juniper
+134 192 204	Darkberry Mire Frost
+127 180 224	Darkberry Mire Bilberry
+143 176 242	Darkberry Mire Blueberry
+186 168 220	Darkberry Mire Lavender
+190  76 141	Darkberry Mire Jam
+255 255 255	Darkberry Mire Onjam
+253 124 165	Darkberry Mire Tint
+239 227 235	Darkberry Mire Text
+221 208 217	Darkberry Mire Subtext1
+203 188 197	Darkberry Mire Subtext0
+173 141 162	Darkberry Mire Overlay2
+145 130 139	Darkberry Mire Overlay1
+125 105 118	Darkberry Mire Overlay0
+ 79  49  67	Darkberry Mire Surface2
+ 62  41  54	Darkberry Mire Surface1
+ 50  34  44	Darkberry Mire Surface0
+ 42  30  38	Darkberry Mire Base
+ 35  22  31	Darkberry Mire Mantle
+ 28  17  25	Darkberry Mire Crust
+231 197 216	Darkberry Blackwater Blossom
+254 175 212	Darkberry Blackwater Petal
+253 124 165	Darkberry Blackwater Berry
+221 176 236	Darkberry Blackwater Plum
+240 106 106	Darkberry Blackwater Cranberry
+211 145 156	Darkberry Blackwater Cherry
+242 173 138	Darkberry Blackwater Apricot
+232 201 138	Darkberry Blackwater Honey
+163 218 163	Darkberry Blackwater Gooseberry
+158 208 196	Darkberry Blackwater Juniper
+134 192 204	Darkberry Blackwater Frost
+127 180 224	Darkberry Blackwater Bilberry
+143 176 242	Darkberry Blackwater Blueberry
+186 168 220	Darkberry Blackwater Lavender
+186  72 137	Darkberry Blackwater Jam
+255 255 255	Darkberry Blackwater Onjam
+253 124 165	Darkberry Blackwater Tint
+237 225 233	Darkberry Blackwater Text
+216 203 212	Darkberry Blackwater Subtext1
+198 183 192	Darkberry Blackwater Subtext0
+165 135 153	Darkberry Blackwater Overlay2
+136 120 130	Darkberry Blackwater Overlay1
+107  87 100	Darkberry Blackwater Overlay0
+ 67  44  59	Darkberry Blackwater Surface2
+ 52  34  46	Darkberry Blackwater Surface1
+ 39  26  35	Darkberry Blackwater Surface0
+ 29  18  26	Darkberry Blackwater Base
+ 23  13  19	Darkberry Blackwater Mantle
+ 18   9  15	Darkberry Blackwater Crust
+147  75 102	Lingonberry Wisp Blossom
+166  54 118	Lingonberry Wisp Petal
+191  11 100	Lingonberry Wisp Berry
+140  62 178	Lingonberry Wisp Plum
+187  38  42	Lingonberry Wisp Cranberry
+165  63  84	Lingonberry Wisp Cherry
+162  71  18	Lingonberry Wisp Apricot
+129  91   2	Lingonberry Wisp Honey
+ 44 111  45	Lingonberry Wisp Gooseberry
+  0 111  95	Lingonberry Wisp Juniper
+  2 107 128	Lingonberry Wisp Frost
+ 29 100 164	Lingonberry Wisp Bilberry
+ 54  89 202	Lingonberry Wisp Blueberry
+110  82 171	Lingonberry Wisp Lavender
+185  72 139	Lingonberry Wisp Jam
+255 255 255	Lingonberry Wisp Onjam
+191  11 101	Lingonberry Wisp Tint
+ 87  44  59	Lingonberry Wisp Text
+101  59  72	Lingonberry Wisp Subtext1
+116  73  86	Lingonberry Wisp Subtext0
+120  90  99	Lingonberry Wisp Overlay2
+155 124 132	Lingonberry Wisp Overlay1
+178 146 154	Lingonberry Wisp Overlay0
+197 171 178	Lingonberry Wisp Surface2
+211 186 192	Lingonberry Wisp Surface1
+226 203 209	Lingonberry Wisp Surface0
+255 243 246	Lingonberry Wisp Base
+249 228 234	Lingonberry Wisp Mantle
+239 217 223	Lingonberry Wisp Crust
+236 174 210	Lingonberry Fen Blossom
+255 196 221	Lingonberry Fen Petal
+254 150 180	Lingonberry Fen Berry
+237 187 254	Lingonberry Fen Plum
+253 140 133	Lingonberry Fen Cranberry
+231 170 181	Lingonberry Fen Cherry
+247 191 158	Lingonberry Fen Apricot
+240 214 160	Lingonberry Fen Honey
+187 229 179	Lingonberry Fen Gooseberry
+175 223 219	Lingonberry Fen Juniper
+131 212 219	Lingonberry Fen Frost
+156 198 234	Lingonberry Fen Bilberry
+164 195 246	Lingonberry Fen Blueberry
+201 176 232	Lingonberry Fen Lavender
+220 103 167	Lingonberry Fen Jam
+ 61  32  41	Lingonberry Fen Onjam
+249 153 183	Lingonberry Fen Tint
+250 227 233	Lingonberry Fen Text
+229 204 211	Lingonberry Fen Subtext1
+210 184 191	Lingonberry Fen Subtext0
+193 158 168	Lingonberry Fen Overlay2
+166 130 140	Lingonberry Fen Overlay1
+146 110 120	Lingonberry Fen Overlay0
+130  91 103	Lingonberry Fen Surface2
+115  77  88	Lingonberry Fen Surface1
+100  63  74	Lingonberry Fen Surface0
+ 85  50  61	Lingonberry Fen Base
+ 72  40  50	Lingonberry Fen Mantle
+ 61  32  41	Lingonberry Fen Crust
+231 197 216	Lingonberry Mire Blossom
+254 175 212	Lingonberry Mire Petal
+253 124 165	Lingonberry Mire Berry
+221 176 236	Lingonberry Mire Plum
+240 106 106	Lingonberry Mire Cranberry
+211 145 156	Lingonberry Mire Cherry
+242 173 138	Lingonberry Mire Apricot
+232 201 138	Lingonberry Mire Honey
+163 218 163	Lingonberry Mire Gooseberry
+158 208 196	Lingonberry Mire Juniper
+134 192 204	Lingonberry Mire Frost
+127 180 224	Lingonberry Mire Bilberry
+143 176 242	Lingonberry Mire Blueberry
+186 168 220	Lingonberry Mire Lavender
+190  76 141	Lingonberry Mire Jam
+255 255 255	Lingonberry Mire Onjam
+252 124 168	Lingonberry Mire Tint
+247 224 230	Lingonberry Mire Text
+229 206 212	Lingonberry Mire Subtext1
+209 186 192	Lingonberry Mire Subtext0
+177 141 151	Lingonberry Mire Overlay2
+153 127 134	Lingonberry Mire Overlay1
+131 103 111	Lingonberry Mire Overlay0
+ 85  50  61	Lingonberry Mire Surface2
+ 70  40  50	Lingonberry Mire Surface1
+ 59  33  41	Lingonberry Mire Surface0
+ 52  28  35	Lingonberry Mire Base
+ 44  20  28	Lingonberry Mire Mantle
+ 37  15  22	Lingonberry Mire Crust
+231 197 216	Lingonberry Blackwater Blossom
+254 175 212	Lingonberry Blackwater Petal
+253 124 165	Lingonberry Blackwater Berry
+221 176 236	Lingonberry Blackwater Plum
+240 106 106	Lingonberry Blackwater Cranberry
+211 145 156	Lingonberry Blackwater Cherry
+242 173 138	Lingonberry Blackwater Apricot
+232 201 138	Lingonberry Blackwater Honey
+163 218 163	Lingonberry Blackwater Gooseberry
+158 208 196	Lingonberry Blackwater Juniper
+134 192 204	Lingonberry Blackwater Frost
+127 180 224	Lingonberry Blackwater Bilberry
+143 176 242	Lingonberry Blackwater Blueberry
+186 168 220	Lingonberry Blackwater Lavender
+186  72 137	Lingonberry Blackwater Jam
+255 255 255	Lingonberry Blackwater Onjam
+252 124 168	Lingonberry Blackwater Tint
+245 222 228	Lingonberry Blackwater Text
+224 201 207	Lingonberry Blackwater Subtext1
+204 181 187	Lingonberry Blackwater Subtext0
+169 134 144	Lingonberry Blackwater Overlay2
+144 117 124	Lingonberry Blackwater Overlay1
+113  85  93	Lingonberry Blackwater Overlay0
+ 75  44  53	Lingonberry Blackwater Surface2
+ 61  33  42	Lingonberry Blackwater Surface1
+ 48  24  32	Lingonberry Blackwater Surface0
+ 38  16  23	Lingonberry Blackwater Base
+ 32  11  18	Lingonberry Blackwater Mantle
+ 26   7  13	Lingonberry Blackwater Crust
+147  75 102	Cloudberry Wisp Blossom
+166  54 118	Cloudberry Wisp Petal
+191  11 100	Cloudberry Wisp Berry
+140  62 178	Cloudberry Wisp Plum
+187  38  42	Cloudberry Wisp Cranberry
+165  63  84	Cloudberry Wisp Cherry
+162  71  18	Cloudberry Wisp Apricot
+129  91   2	Cloudberry Wisp Honey
+ 44 111  45	Cloudberry Wisp Gooseberry
+  0 111  95	Cloudberry Wisp Juniper
+  2 107 128	Cloudberry Wisp Frost
+ 29 100 164	Cloudberry Wisp Bilberry
+ 54  89 202	Cloudberry Wisp Blueberry
+110  82 171	Cloudberry Wisp Lavender
+185  72 139	Cloudberry Wisp Jam
+255 255 255	Cloudberry Wisp Onjam
+167  76   6	Cloudberry Wisp Tint
+ 85  50  31	Cloudberry Wisp Text
+ 98  64  46	Cloudberry Wisp Subtext1
+113  78  60	Cloudberry Wisp Subtext0
+120  93  79	Cloudberry Wisp Overlay2
+155 127 112	Cloudberry Wisp Overlay1
+177 149 134	Cloudberry Wisp Overlay0
+196 174 162	Cloudberry Wisp Surface2
+210 188 177	Cloudberry Wisp Surface1
+226 205 194	Cloudberry Wisp Surface0
+255 244 238	Cloudberry Wisp Base
+248 230 221	Cloudberry Wisp Mantle
+239 219 209	Cloudberry Wisp Crust
+236 174 210	Cloudberry Fen Blossom
+255 196 221	Cloudberry Fen Petal
+254 150 180	Cloudberry Fen Berry
+237 187 254	Cloudberry Fen Plum
+253 140 133	Cloudberry Fen Cranberry
+231 170 181	Cloudberry Fen Cherry
+251 195 162	Cloudberry Fen Apricot
+240 214 160	Cloudberry Fen Honey
+187 229 179	Cloudberry Fen Gooseberry
+175 223 219	Cloudberry Fen Juniper
+131 212 219	Cloudberry Fen Frost
+156 198 234	Cloudberry Fen Bilberry
+164 195 246	Cloudberry Fen Blueberry
+201 176 232	Cloudberry Fen Lavender
+220 103 167	Cloudberry Fen Jam
+ 61  35  21	Cloudberry Fen Onjam
+249 163 116	Cloudberry Fen Tint
+248 230 221	Cloudberry Fen Text
+227 207 197	Cloudberry Fen Subtext1
+207 187 177	Cloudberry Fen Subtext0
+193 162 146	Cloudberry Fen Overlay2
+165 133 117	Cloudberry Fen Overlay1
+145 114  97	Cloudberry Fen Overlay0
+130  95  77	Cloudberry Fen Surface2
+115  81  63	Cloudberry Fen Surface1
+ 99  67  49	Cloudberry Fen Surface0
+ 85  53  36	Cloudberry Fen Base
+ 71  43  28	Cloudberry Fen Mantle
+ 61  35  21	Cloudberry Fen Crust
+231 197 216	Cloudberry Mire Blossom
+254 175 212	Cloudberry Mire Petal
+253 124 165	Cloudberry Mire Berry
+221 176 236	Cloudberry Mire Plum
+240 106 106	Cloudberry Mire Cranberry
+211 145 156	Cloudberry Mire Cherry
+247 171 132	Cloudberry Mire Apricot
+232 201 138	Cloudberry Mire Honey
+163 218 163	Cloudberry Mire Gooseberry
+158 208 196	Cloudberry Mire Juniper
+134 192 204	Cloudberry Mire Frost
+127 180 224	Cloudberry Mire Bilberry
+143 176 242	Cloudberry Mire Blueberry
+186 168 220	Cloudberry Mire Lavender
+190  76 141	Cloudberry Mire Jam
+255 255 255	Cloudberry Mire Onjam
+252 137  68	Cloudberry Mire Tint
+245 227 218	Cloudberry Mire Text
+226 208 199	Cloudberry Mire Subtext1
+207 189 179	Cloudberry Mire Subtext0
+177 144 127	Cloudberry Mire Overlay2
+152 130 118	Cloudberry Mire Overlay1
+131 106  93	Cloudberry Mire Overlay0
+ 85  53  36	Cloudberry Mire Surface2
+ 70  43  29	Cloudberry Mire Surface1
+ 59  35  22	Cloudberry Mire Surface0
+ 52  30  19	Cloudberry Mire Base
+ 44  22  10	Cloudberry Mire Mantle
+ 37  17   6	Cloudberry Mire Crust
+231 197 216	Cloudberry Blackwater Blossom
+254 175 212	Cloudberry Blackwater Petal
+253 124 165	Cloudberry Blackwater Berry
+221 176 236	Cloudberry Blackwater Plum
+240 106 106	Cloudberry Blackwater Cranberry
+211 145 156	Cloudberry Blackwater Cherry
+247 171 132	Cloudberry Blackwater Apricot
+232 201 138	Cloudberry Blackwater Honey
+163 218 163	Cloudberry Blackwater Gooseberry
+158 208 196	Cloudberry Blackwater Juniper
+134 192 204	Cloudberry Blackwater Frost
+127 180 224	Cloudberry Blackwater Bilberry
+143 176 242	Cloudberry Blackwater Blueberry
+186 168 220	Cloudberry Blackwater Lavender
+186  72 137	Cloudberry Blackwater Jam
+255 255 255	Cloudberry Blackwater Onjam
+252 137  68	Cloudberry Blackwater Tint
+243 225 216	Cloudberry Blackwater Text
+221 203 194	Cloudberry Blackwater Subtext1
+202 184 174	Cloudberry Blackwater Subtext0
+168 138 122	Cloudberry Blackwater Overlay2
+143 120 108	Cloudberry Blackwater Overlay1
+112  88  75	Cloudberry Blackwater Overlay0
+ 75  47  32	Cloudberry Blackwater Surface2
+ 60  36  22	Cloudberry Blackwater Surface1
+ 48  26  14	Cloudberry Blackwater Surface0
+ 38  18   7	Cloudberry Blackwater Base
+ 31  13   4	Cloudberry Blackwater Mantle
+ 26   8   2	Cloudberry Blackwater Crust
+147  75 102	Crowberry Wisp Blossom
+166  54 118	Crowberry Wisp Petal
+191  11 100	Crowberry Wisp Berry
+140  62 178	Crowberry Wisp Plum
+187  38  42	Crowberry Wisp Cranberry
+165  63  84	Crowberry Wisp Cherry
+162  71  18	Crowberry Wisp Apricot
+129  91   2	Crowberry Wisp Honey
+ 44 111  45	Crowberry Wisp Gooseberry
+  0 111  95	Crowberry Wisp Juniper
+  2 107 128	Crowberry Wisp Frost
+ 29 100 164	Crowberry Wisp Bilberry
+ 54  89 202	Crowberry Wisp Blueberry
+110  82 171	Crowberry Wisp Lavender
+185  72 139	Crowberry Wisp Jam
+255 255 255	Crowberry Wisp Onjam
+127  63 205	Crowberry Wisp Tint
+ 64  54  84	Crowberry Wisp Text
+ 77  67  97	Crowberry Wisp Subtext1
+ 92  81 112	Crowberry Wisp Subtext0
+103  95 121	Crowberry Wisp Overlay2
+137 128 155	Crowberry Wisp Overlay1
+159 150 178	Crowberry Wisp Overlay0
+181 175 196	Crowberry Wisp Surface2
+196 190 210	Crowberry Wisp Surface1
+212 206 226	Crowberry Wisp Surface0
+248 244 255	Crowberry Wisp Base
+236 231 249	Crowberry Wisp Mantle
+226 220 239	Crowberry Wisp Crust
+236 174 210	Crowberry Fen Blossom
+255 196 221	Crowberry Fen Petal
+254 150 180	Crowberry Fen Berry
+237 187 254	Crowberry Fen Plum
+253 140 133	Crowberry Fen Cranberry
+231 170 181	Crowberry Fen Cherry
+247 191 158	Crowberry Fen Apricot
+240 214 160	Crowberry Fen Honey
+187 229 179	Crowberry Fen Gooseberry
+175 223 219	Crowberry Fen Juniper
+131 212 219	Crowberry Fen Frost
+156 198 234	Crowberry Fen Bilberry
+164 195 246	Crowberry Fen Blueberry
+201 176 232	Crowberry Fen Lavender
+220 103 167	Crowberry Fen Jam
+ 44  35  61	Crowberry Fen Onjam
+198 169 252	Crowberry Fen Tint
+236 231 247	Crowberry Fen Text
+214 209 226	Crowberry Fen Subtext1
+194 189 206	Crowberry Fen Subtext0
+173 164 193	Crowberry Fen Overlay2
+145 135 166	Crowberry Fen Overlay1
+125 116 146	Crowberry Fen Overlay0
+106  95 128	Crowberry Fen Surface2
+ 92  81 114	Crowberry Fen Surface1
+ 77  67  98	Crowberry Fen Surface0
+ 64  54  84	Crowberry Fen Base
+ 53  43  71	Crowberry Fen Mantle
+ 44  35  61	Crowberry Fen Crust
+231 197 216	Crowberry Mire Blossom
+254 175 212	Crowberry Mire Petal
+253 124 165	Crowberry Mire Berry
+221 176 236	Crowberry Mire Plum
+240 106 106	Crowberry Mire Cranberry
+211 145 156	Crowberry Mire Cherry
+242 173 138	Crowberry Mire Apricot
+232 201 138	Crowberry Mire Honey
+163 218 163	Crowberry Mire Gooseberry
+158 208 196	Crowberry Mire Juniper
+134 192 204	Crowberry Mire Frost
+127 180 224	Crowberry Mire Bilberry
+143 176 242	Crowberry Mire Blueberry
+186 168 220	Crowberry Mire Lavender
+190  76 141	Crowberry Mire Jam
+255 255 255	Crowberry Mire Onjam
+187 149 252	Crowberry Mire Tint
+233 228 244	Crowberry Mire Text
+214 210 225	Crowberry Mire Subtext1
+195 190 206	Crowberry Mire Subtext0
+156 146 177	Crowberry Mire Overlay2
+138 131 154	Crowberry Mire Overlay1
+115 107 132	Crowberry Mire Overlay0
+ 64  54  84	Crowberry Mire Surface2
+ 52  43  69	Crowberry Mire Surface1
+ 43  35  59	Crowberry Mire Surface0
+ 37  29  52	Crowberry Mire Base
+ 30  22  44	Crowberry Mire Mantle
+ 24  16  37	Crowberry Mire Crust
+231 197 216	Crowberry Blackwater Blossom
+254 175 212	Crowberry Blackwater Petal
+253 124 165	Crowberry Blackwater Berry
+221 176 236	Crowberry Blackwater Plum
+240 106 106	Crowberry Blackwater Cranberry
+211 145 156	Crowberry Blackwater Cherry
+242 173 138	Crowberry Blackwater Apricot
+232 201 138	Crowberry Blackwater Honey
+163 218 163	Crowberry Blackwater Gooseberry
+158 208 196	Crowberry Blackwater Juniper
+134 192 204	Crowberry Blackwater Frost
+127 180 224	Crowberry Blackwater Bilberry
+143 176 242	Crowberry Blackwater Blueberry
+186 168 220	Crowberry Blackwater Lavender
+186  72 137	Crowberry Blackwater Jam
+255 255 255	Crowberry Blackwater Onjam
+187 149 252	Crowberry Blackwater Tint
+231 226 242	Crowberry Blackwater Text
+209 205 220	Crowberry Blackwater Subtext1
+190 185 201	Crowberry Blackwater Subtext0
+149 140 169	Crowberry Blackwater Overlay2
+128 121 144	Crowberry Blackwater Overlay1
+ 97  89 113	Crowberry Blackwater Overlay0
+ 56  47  74	Crowberry Blackwater Surface2
+ 44  35  60	Crowberry Blackwater Surface1
+ 34  26  48	Crowberry Blackwater Surface0
+ 25  17  38	Crowberry Blackwater Base
+ 19  12  32	Crowberry Blackwater Mantle
+ 15   8  27	Crowberry Blackwater Crust
+147  75 102	Blueberry Wisp Blossom
+166  54 118	Blueberry Wisp Petal
+191  11 100	Blueberry Wisp Berry
+140  62 178	Blueberry Wisp Plum
+187  38  42	Blueberry Wisp Cranberry
+165  63  84	Blueberry Wisp Cherry
+162  71  18	Blueberry Wisp Apricot
+129  91   2	Blueberry Wisp Honey
+ 44 111  45	Blueberry Wisp Gooseberry
+  0 111  95	Blueberry Wisp Juniper
+  2 107 128	Blueberry Wisp Frost
+ 29 100 164	Blueberry Wisp Bilberry
+ 54  89 202	Blueberry Wisp Blueberry
+110  82 171	Blueberry Wisp Lavender
+185  72 139	Blueberry Wisp Jam
+255 255 255	Blueberry Wisp Onjam
+ 51  90 223	Blueberry Wisp Tint
+ 47  59  88	Blueberry Wisp Text
+ 61  73 101	Blueberry Wisp Subtext1
+ 74  87 116	Blueberry Wisp Subtext0
+ 88  99 124	Blueberry Wisp Overlay2
+122 133 159	Blueberry Wisp Overlay1
+144 155 182	Blueberry Wisp Overlay0
+170 179 199	Blueberry Wisp Surface2
+185 193 213	Blueberry Wisp Surface1
+201 210 229	Blueberry Wisp Surface0
+242 246 255	Blueberry Wisp Base
+227 234 251	Blueberry Wisp Mantle
+216 224 242	Blueberry Wisp Crust
+236 174 210	Blueberry Fen Blossom
+255 196 221	Blueberry Fen Petal
+254 150 180	Blueberry Fen Berry
+237 187 254	Blueberry Fen Plum
+253 140 133	Blueberry Fen Cranberry
+231 170 181	Blueberry Fen Cherry
+247 191 158	Blueberry Fen Apricot
+240 214 160	Blueberry Fen Honey
+187 229 179	Blueberry Fen Gooseberry
+175 223 219	Blueberry Fen Juniper
+131 212 219	Blueberry Fen Frost
+156 198 234	Blueberry Fen Bilberry
+164 195 246	Blueberry Fen Blueberry
+201 176 232	Blueberry Fen Lavender
+220 103 167	Blueberry Fen Jam
+ 29  39  64	Blueberry Fen Onjam
+155 185 255	Blueberry Fen Tint
+227 234 249	Blueberry Fen Text
+204 212 228	Blueberry Fen Subtext1
+185 192 209	Blueberry Fen Subtext0
+156 169 197	Blueberry Fen Overlay2
+128 141 170	Blueberry Fen Overlay1
+109 121 150	Blueberry Fen Overlay0
+ 87 101 133	Blueberry Fen Surface2
+ 74  87 118	Blueberry Fen Surface1
+ 60  73 103	Blueberry Fen Surface0
+ 47  59  88	Blueberry Fen Base
+ 37  48  75	Blueberry Fen Mantle
+ 29  39  64	Blueberry Fen Crust
+231 197 216	Blueberry Mire Blossom
+254 175 212	Blueberry Mire Petal
+253 124 165	Blueberry Mire Berry
+221 176 236	Blueberry Mire Plum
+240 106 106	Blueberry Mire Cranberry
+211 145 156	Blueberry Mire Cherry
+242 173 138	Blueberry Mire Apricot
+232 201 138	Blueberry Mire Honey
+163 218 163	Blueberry Mire Gooseberry
+158 208 196	Blueberry Mire Juniper
+134 192 204	Blueberry Mire Frost
+127 180 224	Blueberry Mire Bilberry
+143 176 242	Blueberry Mire Blueberry
+186 168 220	Blueberry Mire Lavender
+190  76 141	Blueberry Mire Jam
+255 255 255	Blueberry Mire Onjam
+135 170 253	Blueberry Mire Tint
+224 231 246	Blueberry Mire Text
+206 212 228	Blueberry Mire Subtext1
+186 193 208	Blueberry Mire Subtext0
+139 152 181	Blueberry Mire Overlay2
+125 135 157	Blueberry Mire Overlay1
+101 112 135	Blueberry Mire Overlay0
+ 47  59  88	Blueberry Mire Surface2
+ 37  48  73	Blueberry Mire Surface1
+ 29  39  62	Blueberry Mire Surface0
+ 25  34  55	Blueberry Mire Base
+ 17  26  47	Blueberry Mire Mantle
+ 12  20  40	Blueberry Mire Crust
+231 197 216	Blueberry Blackwater Blossom
+254 175 212	Blueberry Blackwater Petal
+253 124 165	Blueberry Blackwater Berry
+221 176 236	Blueberry Blackwater Plum
+240 106 106	Blueberry Blackwater Cranberry
+211 145 156	Blueberry Blackwater Cherry
+242 173 138	Blueberry Blackwater Apricot
+232 201 138	Blueberry Blackwater Honey
+163 218 163	Blueberry Blackwater Gooseberry
+158 208 196	Blueberry Blackwater Juniper
+134 192 204	Blueberry Blackwater Frost
+127 180 224	Blueberry Blackwater Bilberry
+143 176 242	Blueberry Blackwater Blueberry
+186 168 220	Blueberry Blackwater Lavender
+186  72 137	Blueberry Blackwater Jam
+255 255 255	Blueberry Blackwater Onjam
+135 170 253	Blueberry Blackwater Tint
+222 229 244	Blueberry Blackwater Text
+201 207 222	Blueberry Blackwater Subtext1
+181 188 203	Blueberry Blackwater Subtext0
+133 145 173	Blueberry Blackwater Overlay2
+115 125 148	Blueberry Blackwater Overlay1
+ 84  94 117	Blueberry Blackwater Overlay0
+ 41  52  78	Blueberry Blackwater Surface2
+ 30  40  64	Blueberry Blackwater Surface1
+ 21  30  51	Blueberry Blackwater Surface0
+ 13  21  41	Blueberry Blackwater Base
+  8  15  35	Blueberry Blackwater Mantle
+  5  11  30	Blueberry Blackwater Crust

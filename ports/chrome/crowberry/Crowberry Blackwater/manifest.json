@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Crowberry Blackwater",
+  "version": "0.3.0",
+  "description": "Crowberry for Chrome and Edge. Crowberry tint of Blackwater: dark, neutrals leaned toward crowberry (base #191126).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [15, 8, 27],
+      "frame_inactive": [15, 8, 27],
+      "frame_incognito": [15, 8, 27],
+      "frame_incognito_inactive": [15, 8, 27],
+      "toolbar": [25, 17, 38],
+      "tab_text": [231, 226, 242],
+      "tab_background_text": [190, 185, 201],
+      "tab_background_text_inactive": [128, 121, 144],
+      "bookmark_text": [231, 226, 242],
+      "toolbar_button_icon": [190, 185, 201],
+      "omnibox_background": [34, 26, 48],
+      "omnibox_text": [231, 226, 242],
+      "ntp_background": [25, 17, 38],
+      "ntp_text": [231, 226, 242],
+      "ntp_link": [134, 192, 204],
+      "button_background": [44, 35, 60]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

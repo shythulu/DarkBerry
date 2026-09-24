@@ -1,0 +1,8 @@
+{
+  "$comment": "The tints, in display order. darkberry is the default palette (src/palette.json); every other key is a variant in src/variants/<key>.json and builds into each port's <key>/ subfolder.",
+  "darkberry": { "swatch": "berry", "name": "Darkberry", "emoji": "🫐", "note": "The default. Wine-dark plum." },
+  "lingonberry": { "swatch": "cranberry", "name": "Lingonberry", "emoji": "🍒", "note": "Backgrounds steeped in raspberry red." },
+  "cloudberry": { "swatch": "apricot", "name": "Cloudberry", "emoji": "🍊", "note": "Backgrounds warmed toward ripe peach." },
+  "crowberry": { "swatch": "plum", "name": "Crowberry", "emoji": "🍇", "note": "Backgrounds cooled to inky violet." },
+  "blueberry": { "swatch": "blueberry", "name": "Blueberry", "emoji": "💙", "note": "Backgrounds cooled to a dusty slate blue." }
+}

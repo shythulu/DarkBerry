@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "copyright": [
+      "SPDX-FileCopyrightText: Darkberry"
+    ],
+    "license": "SPDX-License-Identifier: MIT",
+    "revision": 1,
+    "name": "Crowberry Fen"
+  },
+  "text-styles": {
+    "Normal": {
+      "text-color": "#ece7f7",
+      "selected-text-color": "#ece7f7"
+    },
+    "Keyword": {
+      "text-color": "#fe96b4",
+      "selected-text-color": "#fe96b4",
+      "bold": true
+    },
+    "Function": {
+      "text-color": "#ffc4dd",
+      "selected-text-color": "#ffc4dd"
+    },
+    "Variable": {
+      "text-color": "#ecaed2",
+      "selected-text-color": "#ecaed2"
+    },
+    "ControlFlow": {
+      "text-color": "#fe96b4",
+      "selected-text-color": "#fe96b4",
+      "bold": true
+    },
+    "Operator": {
+      "text-color": "#c2bdce",
+      "selected-text-color": "#c2bdce"
+    },
+    "BuiltIn": {
+      "text-color": "#c9b0e8",
+      "selected-text-color": "#c9b0e8"
+    },
+    "Extension": {
+      "text-color": "#ffc4dd",
+      "selected-text-color": "#ffc4dd"
+    },
+    "Preprocessor": {
+      "text-color": "#c9b0e8",
+      "selected-text-color": "#c9b0e8"
+    },
+    "Attribute": {
+      "text-color": "#e7beac",
+      "selected-text-color": "#e7beac"
+    },
+    "Char": {
+      "text-color": "#bbe5b3",
+      "selected-text-color": "#bbe5b3"
+    },
+    "SpecialChar": {
+      "text-color": "#afdfdb",
+      "selected-text-color": "#afdfdb"
+    },
+    "String": {
+      "text-color": "#bbe5b3",
+      "selected-text-color": "#bbe5b3"
+    },
+    "VerbatimString": {
+      "text-color": "#bbe5b3",
+      "selected-text-color": "#bbe5b3"
+    },
+    "SpecialString": {
+      "text-color": "#afdfdb",
+      "selected-text-color": "#afdfdb"
+    },
+    "Import": {
+      "text-color": "#c9b0e8",
+      "selected-text-color": "#c9b0e8"
+    },
+    "DataType": {
+      "text-color": "#edbbfe",
+      "selected-text-color": "#edbbfe"
+    },
+    "DecVal": {
+      "text-color": "#f0d6a0",
+      "selected-text-color": "#f0d6a0"
+    },
+    "BaseN": {
+      "text-color": "#f0d6a0",
+      "selected-text-color": "#f0d6a0"
+    },
+    "Float": {
+      "text-color": "#f0d6a0",
+      "selected-text-color": "#f0d6a0"
+    },
+    "Constant": {
+      "text-color": "#a4c3f6",
+      "selected-text-color": "#a4c3f6"
+    },
+    "Comment": {
+      "text-color": "#ada4c1",
+      "selected-text-color": "#ada4c1",
+      "italic": true
+    },
+    "Documentation": {
+      "text-color": "#ada4c1",
+      "selected-text-color": "#ada4c1",
+      "italic": true
+    },
+    "Annotation": {
+      "text-color": "#e7beac",
+      "selected-text-color": "#e7beac"
+    },
+    "CommentVar": {
+      "text-color": "#ecaed2",
+      "selected-text-color": "#ecaed2"
+    },
+    "RegionMarker": {
+      "text-color": "#c9b0e8",
+      "selected-text-color": "#c9b0e8"
+    },
+    "Information": {
+      "text-color": "#afdfdb",
+      "selected-text-color": "#afdfdb"
+    },
+    "Warning": {
+      "text-color": "#f0d6a0",
+      "selected-text-color": "#f0d6a0"
+    },
+    "Alert": {
+      "text-color": "#fd8c85",
+      "selected-text-color": "#fd8c85",
+      "bold": true
+    },
+    "Error": {
+      "text-color": "#fd8c85",
+      "selected-text-color": "#fd8c85"
+    },
+    "Others": {
+      "text-color": "#a4c3f6",
+      "selected-text-color": "#a4c3f6"
+    }
+  },
+  "editor-colors": {
+    "BackgroundColor": "#403654",
+    "CodeFolding": "#624765",
+    "BracketMatching": "#453b59",
+    "CurrentLine": "#453b59",
+    "IconBorder": "#352b47",
+    "IndentationLine": "#5c5172",
+    "LineNumbers": "#9187a6",
+    "CurrentLineNumber": "#dc67a7",
+    "MarkBookmark": "#afdfdb",
+    "MarkBreakpointActive": "#fd8c85",
+    "MarkBreakpointReached": "#f0d6a0",
+    "MarkBreakpointDisabled": "#7d7492",
+    "MarkExecution": "#9187a6",
+    "MarkWarning": "#f0d6a0",
+    "MarkError": "#fd8c85",
+    "ModifiedLines": "#f0d6a0",
+    "ReplaceHighlight": "#dc67a7",
+    "SavedLines": "#bbe5b3",
+    "SearchHighlight": "#5e5175",
+    "TextSelection": "#624765",
+    "Separator": "#9187a6",
+    "SpellChecking": "#fd8c85",
+    "TabMarker": "#7d7492",
+    "TemplateBackground": "#4d4362",
+    "TemplatePlaceholder": "#5c5172",
+    "TemplateFocusedPlaceholder": "#6a5f80",
+    "TemplateReadOnlyPlaceholder": "#352b47",
+    "WordWrapMarker": "#7d7492"
+  }
+}

@@ -1,0 +1,12 @@
+  <div class="win steep" aria-label="Code editor preview">
+    <div class="bar"><b></b><b></b><b></b></div>
+    <div class="tabs"><span class="tab on">cauldron.ts</span><span class="tab">pantry.ts</span><span class="tab">notes.md</span></div>
+<pre class="code"><span class="ln">1</span><span class="cm">// steep until the berries give up their colour</span>
+<span class="ln">2</span><span class="k">import</span> <span class="pu">{</span> <span class="ty">Jar</span><span class="pu">,</span> <span class="va">ripen</span> <span class="pu">}</span> <span class="k">from</span> <span class="st">"./pantry"</span><span class="pu">;</span>
+<span class="ln">3</span><span class="k">import</span> <span class="pu">*</span> <span class="k">as</span> <span class="ns">Bog</span> <span class="k">from</span> <span class="st">"./bog"</span><span class="pu">;</span>
+<span class="ln">4</span>
+<span class="ln">5</span><span class="k">export function</span> <span class="fn">brew</span><span class="pu">(</span><span class="va">berries</span><span class="pu">:</span> <span class="ty">Berry</span><span class="pu">[]):</span> <span class="ty">Jar</span> <span class="pu">{</span>
+<span class="hl"><span class="ln">6</span>  <span class="k">const</span> <span class="va">heat</span> <span class="op">=</span> <span class="ns">Bog</span><span class="pu">.</span><span class="fn">peatFire</span><span class="pu">(</span><span class="nu">0.72</span><span class="pu">);</span><span class="cur"></span></span><span class="ln">7</span>  <span class="k">if</span> <span class="pu">(</span><span class="va">berries</span><span class="pu">.</span><span class="pr">length</span> <span class="op">&gt;</span> <span class="co">MAX_BERRIES</span><span class="pu">)</span> <span class="er">throw</span> <span class="k">new</span> <span class="ty">SpillError</span><span class="pu">();</span>
+<span class="ln">8</span>  <span class="k">return</span> <span class="fn">ripen</span><span class="pu">(</span><span class="va">berries</span><span class="pu">,</span> <span class="va">heat</span><span class="pu">).</span><span class="fn">label</span><span class="pu">(</span><span class="re">/cloud|lingon/i</span><span class="pu">);</span>
+<span class="ln">9</span><span class="pu">}</span>  <span class="cm">// recipe:</span> <span class="lk">example.com/brews</span></pre>
+  </div>

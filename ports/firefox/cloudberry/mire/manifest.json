@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "Cloudberry Mire",
+  "version": "0.3.0",
+  "description": "Cloudberry for Firefox. Cloudberry tint of Mire: dark, neutrals leaned toward cloudberry (base #341e13).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cloudberry-mire@cloudberry-theme"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#251106",
+      "frame_inactive": "#251106",
+      "tab_selected": "#341e13",
+      "tab_text": "#f5e3da",
+      "tab_background_text": "#cfbdb3",
+      "tab_line": "#fc8944",
+      "tab_loading": "#be4c8d",
+      "toolbar": "#341e13",
+      "toolbar_text": "#f5e3da",
+      "bookmark_text": "#f5e3da",
+      "icons": "#cfbdb3",
+      "icons_attention": "#be4c8d",
+      "toolbar_field": "#3b2316",
+      "toolbar_field_text": "#f5e3da",
+      "toolbar_field_border": "#462b1d",
+      "toolbar_field_focus": "#3b2316",
+      "toolbar_field_text_focus": "#f5e3da",
+      "toolbar_field_border_focus": "#be4c8d",
+      "toolbar_field_highlight": "#582f2d",
+      "toolbar_field_highlight_text": "#f5e3da",
+      "toolbar_top_separator": "#251106",
+      "toolbar_bottom_separator": "#3b2316",
+      "toolbar_vertical_separator": "#462b1d",
+      "popup": "#2c160a",
+      "popup_text": "#f5e3da",
+      "popup_border": "#462b1d",
+      "popup_highlight": "#582f2d",
+      "popup_highlight_text": "#f5e3da",
+      "sidebar": "#2c160a",
+      "sidebar_text": "#f5e3da",
+      "sidebar_border": "#3b2316",
+      "sidebar_highlight": "#582f2d",
+      "sidebar_highlight_text": "#f5e3da",
+      "ntp_background": "#341e13",
+      "ntp_text": "#f5e3da",
+      "button_background_hover": "#3b2316",
+      "button_background_active": "#462b1d"
+    },
+    "properties": {
+      "color_scheme": "dark",
+      "content_color_scheme": "dark"
+    }
+  }
+}

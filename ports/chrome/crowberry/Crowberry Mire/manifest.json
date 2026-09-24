@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Crowberry Mire",
+  "version": "0.3.0",
+  "description": "Crowberry for Chrome and Edge. Crowberry tint of Mire: dark, neutrals leaned toward crowberry (base #251d34).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [24, 16, 37],
+      "frame_inactive": [24, 16, 37],
+      "frame_incognito": [24, 16, 37],
+      "frame_incognito_inactive": [24, 16, 37],
+      "toolbar": [37, 29, 52],
+      "tab_text": [233, 228, 244],
+      "tab_background_text": [195, 190, 206],
+      "tab_background_text_inactive": [138, 131, 154],
+      "bookmark_text": [233, 228, 244],
+      "toolbar_button_icon": [195, 190, 206],
+      "omnibox_background": [43, 35, 59],
+      "omnibox_text": [233, 228, 244],
+      "ntp_background": [37, 29, 52],
+      "ntp_text": [233, 228, 244],
+      "ntp_link": [134, 192, 204],
+      "button_background": [52, 43, 69]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

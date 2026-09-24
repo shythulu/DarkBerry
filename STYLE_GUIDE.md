@@ -238,11 +238,13 @@ install line in two more places, a notes file, and a verified screenshot per fla
     `src/usage/<port>.md` (path, the app's picker step or import line, the version floor
     in one line, the environment note when there is one); the build then writes
     `ports/<port>/README.md` from `template/README.md` and the port's line in
-    `README.md`. A `zip` line in `package.sh` with `-x "assets/*"`; the install line in
+    `README.md`. The install line in
     `.github/workflows/release.yml`'s release-notes block; a card in
     `src/site/index.html`'s `cards` list (name, prose, code line, link; copy the
     Alacritty entry; `src/site/` is source, `site/` is generated); screenshots as
-    `preview.webp` and `<flavour>.webp` in `ports/<port>/assets/`; and `ports/`,
+    `preview.webp` and `<flavour>.webp` in `ports/<port>/assets/` (and per tint under
+    `ports/<port>/<tint>/assets/`); no `zip` line is needed, `package.sh` packages every
+    registered port, plain and with tints; and `ports/`,
     `assets/` and `README.md` rebuilt and committed (`release.yml` fails when they are
     stale).
 
@@ -405,8 +407,10 @@ there.
 5. Variants: every variant is a variation on `src/palette.json`. `node tools/variants.mjs`
    regenerates all the nature tints (`spread.mjs` then `settle.mjs` run on each);
    `node tools/variants.mjs <variant> [hue step] [chroma step]` makes one;
-   `node build.mjs src/variants/<file>.json` builds it. Regenerate the variants after
-   changing the default palette.
+   `node build.mjs` builds every variant into each port's `<tint>/` subfolder after the
+   default (`node build.mjs src/variants/<file>.json` does one; `--no-tints` skips them),
+   so a tint that breaks a rule fails the build. Regenerate the variants after changing
+   the default palette.
 6. Never hand-edit `ports/`, `assets/`, `dist/`, `docs/` or `site/`; they are generated.
    The exceptions are the screenshots in `ports/<port>/assets/` and the hand-written
    files in `docs/` (`AMO.md`, `PORT_CREATION.md`).

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Cloudberry Mire",
+  "version": "0.3.0",
+  "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Mire: dark, neutrals leaned toward cloudberry (base #341e13).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [37, 17, 6],
+      "frame_inactive": [37, 17, 6],
+      "frame_incognito": [37, 17, 6],
+      "frame_incognito_inactive": [37, 17, 6],
+      "toolbar": [52, 30, 19],
+      "tab_text": [245, 227, 218],
+      "tab_background_text": [207, 189, 179],
+      "tab_background_text_inactive": [152, 130, 118],
+      "bookmark_text": [245, 227, 218],
+      "toolbar_button_icon": [207, 189, 179],
+      "omnibox_background": [59, 35, 22],
+      "omnibox_text": [245, 227, 218],
+      "ntp_background": [52, 30, 19],
+      "ntp_text": [245, 227, 218],
+      "ntp_link": [134, 192, 204],
+      "button_background": [70, 43, 29]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

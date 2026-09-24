@@ -1,0 +1,131 @@
+{
+  "name": "darkberry-with-tints-theme",
+  "displayName": "Darkberry with tints",
+  "description": "Darkberry: a four-flavour bog-witch berry theme, from Benjamin Moore Dark Purple (2073-10, #4B3540). This edition also carries the Lingonberry, Cloudberry, Crowberry, Blueberry tints.",
+  "version": "0.3.0",
+  "publisher": "shythulu",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "homepage": "https://shythulu.github.io/DarkBerry/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shythulu/DarkBerry"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "light",
+    "berry",
+    "plum",
+    "wine"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Darkberry Wisp",
+        "uiTheme": "vs",
+        "path": "./themes/darkberry-wisp-color-theme.json"
+      },
+      {
+        "label": "Darkberry Fen",
+        "uiTheme": "vs-dark",
+        "path": "./themes/darkberry-fen-color-theme.json"
+      },
+      {
+        "label": "Darkberry Mire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/darkberry-mire-color-theme.json"
+      },
+      {
+        "label": "Darkberry Blackwater",
+        "uiTheme": "vs-dark",
+        "path": "./themes/darkberry-blackwater-color-theme.json"
+      },
+      {
+        "label": "Lingonberry Wisp",
+        "uiTheme": "vs",
+        "path": "./themes/lingonberry-wisp-color-theme.json"
+      },
+      {
+        "label": "Lingonberry Fen",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lingonberry-fen-color-theme.json"
+      },
+      {
+        "label": "Lingonberry Mire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lingonberry-mire-color-theme.json"
+      },
+      {
+        "label": "Lingonberry Blackwater",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lingonberry-blackwater-color-theme.json"
+      },
+      {
+        "label": "Cloudberry Wisp",
+        "uiTheme": "vs",
+        "path": "./themes/cloudberry-wisp-color-theme.json"
+      },
+      {
+        "label": "Cloudberry Fen",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cloudberry-fen-color-theme.json"
+      },
+      {
+        "label": "Cloudberry Mire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cloudberry-mire-color-theme.json"
+      },
+      {
+        "label": "Cloudberry Blackwater",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cloudberry-blackwater-color-theme.json"
+      },
+      {
+        "label": "Crowberry Wisp",
+        "uiTheme": "vs",
+        "path": "./themes/crowberry-wisp-color-theme.json"
+      },
+      {
+        "label": "Crowberry Fen",
+        "uiTheme": "vs-dark",
+        "path": "./themes/crowberry-fen-color-theme.json"
+      },
+      {
+        "label": "Crowberry Mire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/crowberry-mire-color-theme.json"
+      },
+      {
+        "label": "Crowberry Blackwater",
+        "uiTheme": "vs-dark",
+        "path": "./themes/crowberry-blackwater-color-theme.json"
+      },
+      {
+        "label": "Blueberry Wisp",
+        "uiTheme": "vs",
+        "path": "./themes/blueberry-wisp-color-theme.json"
+      },
+      {
+        "label": "Blueberry Fen",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blueberry-fen-color-theme.json"
+      },
+      {
+        "label": "Blueberry Mire",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blueberry-mire-color-theme.json"
+      },
+      {
+        "label": "Blueberry Blackwater",
+        "uiTheme": "vs-dark",
+        "path": "./themes/blueberry-blackwater-color-theme.json"
+      }
+    ]
+  }
+}

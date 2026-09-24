@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Blueberry Blackwater",
+  "version": "0.3.0",
+  "description": "Blueberry for Chrome and Edge. Blueberry tint of Blackwater: dark, neutrals leaned toward blueberry (base #0d1529).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [5, 11, 30],
+      "frame_inactive": [5, 11, 30],
+      "frame_incognito": [5, 11, 30],
+      "frame_incognito_inactive": [5, 11, 30],
+      "toolbar": [13, 21, 41],
+      "tab_text": [222, 229, 244],
+      "tab_background_text": [181, 188, 203],
+      "tab_background_text_inactive": [115, 125, 148],
+      "bookmark_text": [222, 229, 244],
+      "toolbar_button_icon": [181, 188, 203],
+      "omnibox_background": [21, 30, 51],
+      "omnibox_text": [222, 229, 244],
+      "ntp_background": [13, 21, 41],
+      "ntp_text": [222, 229, 244],
+      "ntp_link": [134, 192, 204],
+      "button_background": [30, 40, 64]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

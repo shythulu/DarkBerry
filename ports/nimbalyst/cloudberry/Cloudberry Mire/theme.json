@@ -1,0 +1,26 @@
+{
+  "id": "cloudberry-mire",
+  "name": "Cloudberry Mire",
+  "version": "0.3.0",
+  "author": "Cloudberry",
+  "description": "Cloudberry tint of Mire: dark, neutrals leaned toward cloudberry (base #341e13).",
+  "isDark": true,
+  "colors": {
+    "bg": "#341e13",
+    "bg-secondary": "#2c160a",
+    "bg-tertiary": "#251106",
+    "text": "#f5e3da",
+    "text-muted": "#cfbdb3",
+    "border": "#988276",
+    "primary": "#be4c8d",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

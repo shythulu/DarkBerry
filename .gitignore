@@ -4,3 +4,5 @@ node_modules/
 dist/*.vsix
 dist/*.xpi
 dist/*.zip
+.claude/settings.local.json
+.claude/worktrees/

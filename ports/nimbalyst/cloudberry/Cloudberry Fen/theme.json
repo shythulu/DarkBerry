@@ -1,0 +1,26 @@
+{
+  "id": "cloudberry-fen",
+  "name": "Cloudberry Fen",
+  "version": "0.3.0",
+  "author": "Cloudberry",
+  "description": "Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524).",
+  "isDark": true,
+  "colors": {
+    "bg": "#553524",
+    "bg-secondary": "#472b1c",
+    "bg-tertiary": "#3d2315",
+    "text": "#f8e6dd",
+    "text-muted": "#cfbbb1",
+    "border": "#a58575",
+    "primary": "#dc67a7",
+    "link": "#83d4db",
+    "success": "#bbe5b3",
+    "warning": "#f0d6a0",
+    "error": "#fd8c85",
+    "info": "#afdfdb"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

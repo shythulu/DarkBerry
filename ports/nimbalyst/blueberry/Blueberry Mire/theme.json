@@ -1,0 +1,26 @@
+{
+  "id": "blueberry-mire",
+  "name": "Blueberry Mire",
+  "version": "0.3.0",
+  "author": "Blueberry",
+  "description": "Blueberry tint of Mire: dark, neutrals leaned toward blueberry (base #192237).",
+  "isDark": true,
+  "colors": {
+    "bg": "#192237",
+    "bg-secondary": "#111a2f",
+    "bg-tertiary": "#0c1428",
+    "text": "#e0e7f6",
+    "text-muted": "#bac1d0",
+    "border": "#7d879d",
+    "primary": "#be4c8d",
+    "link": "#86c0cc",
+    "success": "#a3daa3",
+    "warning": "#e8c98a",
+    "error": "#f06a6a",
+    "info": "#9ed0c4"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Lingonberry Blackwater",
+  "version": "0.3.0",
+  "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Blackwater: dark, neutrals leaned toward lingonberry (base #261017).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [26, 7, 13],
+      "frame_inactive": [26, 7, 13],
+      "frame_incognito": [26, 7, 13],
+      "frame_incognito_inactive": [26, 7, 13],
+      "toolbar": [38, 16, 23],
+      "tab_text": [245, 222, 228],
+      "tab_background_text": [204, 181, 187],
+      "tab_background_text_inactive": [144, 117, 124],
+      "bookmark_text": [245, 222, 228],
+      "toolbar_button_icon": [204, 181, 187],
+      "omnibox_background": [48, 24, 32],
+      "omnibox_text": [245, 222, 228],
+      "ntp_background": [38, 16, 23],
+      "ntp_text": [245, 222, 228],
+      "ntp_link": [134, 192, 204],
+      "button_background": [61, 33, 42]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

@@ -11,6 +11,8 @@
 	<a href="%REPO%/contributors"><img src="https://img.shields.io/github/contributors/%REPO_PATH%?colorA=%C_BG%&colorB=%C_CONTRIBUTORS%&style=for-the-badge"></a>
 </p>
 
+%TINTS%
+
 <p align="center">
 	<img src="%PREVIEW%"/>
 </p>

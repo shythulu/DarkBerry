@@ -44,7 +44,6 @@ jobs:
       - name: Check the committed ports are current
         run: |
           node build.mjs
-          for v in src/variants/*.json; do node build.mjs --check "$v"; done
           git diff --exit-code -- ports assets README.md ||
             { echo "::error::ports/, assets/ or README.md is stale; run node build.mjs and commit the result"; exit 1; }
 
@@ -58,7 +57,9 @@ jobs:
           {
             echo "### Install"
             echo
-            echo "**VS Code** (and Cursor, VSCodium, Windsurf) — \`code --install-extension darkberry-theme-$version.vsix\`, or Extensions > ... > Install from VSIX. Pick a flavour with Ctrl+K Ctrl+T."
+            echo "Every port comes twice: the plain Darkberry file and a \`-with-tints\` one that also carries the lingonberry, cloudberry, crowberry and blueberry tints, each in four flavours."
+            echo
+            echo "**VS Code** (and Cursor, VSCodium, Windsurf) — \`code --install-extension darkberry-theme-$version.vsix\` (or \`darkberry-with-tints-theme-$version.vsix\` for all twenty themes; install one, not both), or Extensions > ... > Install from VSIX. Pick a flavour with Ctrl+K Ctrl+T."
             echo
             echo "**kitty** — unzip \`darkberry-kitty-$version.zip\` into \`~/.config/kitty/themes/\`, then \`kitty +kitten themes\`."
             echo
@@ -132,9 +133,12 @@ jobs:
           # file itself, so there is nothing to wait for or bring back: a short approval
           # timeout keeps four submissions from holding the runner for an hour.
           fail=0
+          # Only the Darkberry flavour folders, which hold a manifest.json directly; assets/
+          # and the tint folders (a flavour folder each, one level down) are skipped, since
+          # the tints have no AMO listings yet (see docs/publishing/firefox.md).
           for dir in ports/firefox/*/; do
             flavour=$(basename "$dir")
-            [ "$flavour" = assets ] && continue
+            [ -f "$dir/manifest.json" ] || continue
             echo "::group::$flavour"
             npx --yes web-ext sign --source-dir "$dir" --channel listed \
               --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET" \

@@ -7,6 +7,7 @@
 // structural chrome) inside {braces}. Literal hex values are a build error.
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 import { rgb, mix, toHsl, toOklch, contrast, deltaE } from "./lib/color.mjs";
 import { indexRoles, flavourContext } from "./lib/resolve.mjs";
 import { fillSettled, FILL_ON_BACKGROUND, TEXT_ON_FILL } from "./lib/derive.mjs";
@@ -21,15 +22,41 @@ const CHECK_ONLY = process.argv.includes("--check");
 const argPalette = process.argv.slice(2).find((a) => !a.startsWith("--"));
 const out = (rel, data) => {
   if (CHECK_ONLY) return;
-  const f = path.join(root, rel);
+  const target = route(rel); if (!target) return;
+  const f = path.join(root, target);
   fs.mkdirSync(path.dirname(f), { recursive: true });
   fs.writeFileSync(f, typeof data === "string" ? data : JSON.stringify(data, null, 2) + "\n");
 };
 
 const P = readJson(argPalette || "src/palette.json");
+const errors = [], warnings = [];
+// ---------- tints ----------
+// src/tints.json lists the default palette and the variants in src/variants/. A variant
+// palette (it carries a `variant` block) builds under its own id and name, so
+// cloudberry-mire.conf sits beside darkberry-mire.conf, into each port's <tint>/ subfolder.
+// The default build runs every variant after itself; --no-tints skips that.
+const TINTS = readJson("src/tints.json"); delete TINTS.$comment;
+const TINT = P.variant ? P.variant.name : null;
+if (TINT && !TINTS[TINT]) { console.error(`error: ${argPalette} is the variant "${TINT}", which src/tints.json does not list`); process.exit(1); }
+if (TINT) { P.id = TINT; P.name = TINTS[TINT].name; }
+const EDITIONS = Object.entries(TINTS).map(([id, t]) => {
+  const pal = id === "darkberry" ? readJson("src/palette.json") : readJson(`src/variants/${id}.json`);
+  if (id !== "darkberry" && pal.variant?.name !== id) errors.push(`src/variants/${id}.json is the variant "${pal.variant?.name}", not "${id}"`);
+  return { id, ...t, pal, colour: pal.flavours.mire.colors[t.swatch] || pal.flavours.mire.colors.tint };
+});
+// Where a tint's output goes. Ports keep each tint in a subfolder, except the two whose
+// format holds every tint at once: VS Code's with-tints extension and the GIMP palette file.
+// Everything outside ports/ (docs, dist, assets, README.md) belongs to the default build.
+function route(rel) {
+  if (!TINT) return rel;
+  const m = rel.match(/^ports\/([^/]+)\/(.*)$/); if (!m) return null;
+  const [, key, rest] = m;
+  if (key === "vscode") return rest.startsWith("themes/") ? `ports/vscode/with-tints/${rest}` : null;
+  if (key === "gpl") return rest === `${P.id}.gpl` ? rel : null;
+  return `ports/${key}/${TINT}/${rest}`;
+}
 const ROLES = readJson("src/roles.json");
 const NON_ACCENT = ["jam", "onjam", "tint"];
-const errors = [], warnings = [];
 const HEX_LITERAL = /#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/;
 
 // ---------- roles ----------
@@ -49,6 +76,7 @@ const usageRef = ctxs.find((x) => x.id === "mire") || ctxs.find((x) => x.f.dark)
 
 // ---------- template filling ----------
 const usage = {}; // palette colour -> { roles:Set, ports:{port:count} }
+const vsThemes = {}; // slug -> the VS Code theme object, for the with-tints edition
 const note = (port, trace) => {
   for (const p of trace.palette) {
     usage[p] ??= { roles: new Set(), ports: {} };
@@ -307,7 +335,8 @@ for (const ctx of ctxs) {
   out(`ports/obsidian/${full}/manifest.json`, JSON.parse(fill(ctx, obsidianManifestT, "obsidian")));
   const vs = JSON.parse(fill(ctx, vscodeT, "vscode"));
   vs.colors = applyOverrides("vscode", "json", vs.colors, ctx);
-  out(`ports/vscode/themes/${slug}-color-theme.json`, { name: full, type: ctx.f.dark ? "dark" : "light", ...vs });
+  vsThemes[slug] = { name: full, type: ctx.f.dark ? "dark" : "light", ...vs };
+  out(`ports/vscode/themes/${slug}-color-theme.json`, vsThemes[slug]);
 }
 // GIMP palette (.gpl): the format GIMP, Inkscape, Krita, MyPaint and Aseprite all import.
 // One file per flavour, and one with every flavour so a picker can hold the whole theme.
@@ -326,6 +355,22 @@ out("ports/vscode/package.json", {
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
 });
+if (!TINT) {
+  // The two formats that hold every tint in one unit: a second VS Code extension with all
+  // twenty themes (each tint build adds its four under with-tints/themes/), and one GIMP
+  // palette file with every tint's colours.
+  const tintNames = EDITIONS.filter((e) => e.id !== "darkberry").map((e) => e.name);
+  out("ports/vscode/with-tints/package.json", {
+    name: `${P.id}-with-tints-theme`, displayName: `${P.name} with tints`,
+    description: `${P.description} This edition also carries the ${tintNames.join(", ")} tints.`, version: P.version,
+    publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" },
+    homepage: P.homepage, repository: { type: "git", url: P.repository },
+    categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
+    contributes: { themes: EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
+  });
+  for (const ctx of ctxs) out(`ports/vscode/with-tints/themes/${P.id}-${ctx.id}-color-theme.json`, vsThemes[`${P.id}-${ctx.id}`]);
+  out(`ports/gpl/${P.id}-with-tints.gpl`, gpl(`${P.name} with tints`, EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).flatMap(([, f]) => gplOrder.map((k) => [f.colors[k], `${e.name} ${f.name} ${label(k)}`])))));
+}
 
 // ---------- ports/<key>/README.md, assets/ and the README port list ----------
 // The layout follows catppuccin/catppuccin's port conventions (docs/PORT_CREATION.md):
@@ -333,18 +378,23 @@ out("ports/vscode/package.json", {
 // for its previews, and an entry in src/ports.json with a category from src/categories.json.
 // assets/ at the root holds the generated logo, footer and fallback palette previews.
 const REG = readJson("src/ports.json"), CATS = readJson("src/categories.json");
-const outBin = (rel, buf) => { if (CHECK_ONLY) return; const f = path.join(root, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, buf); };
+const outBin = (rel, buf) => { if (CHECK_ONLY || !route(rel)) return; const f = path.join(root, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, buf); };
 const exists = (rel) => fs.existsSync(path.join(root, rel));
-{
+if (!TINT) {
   const cols = [...P.neutralOrder, ...P.accentOrder], W = 1200, H = 120;
-  const strip = (cv, ctx, y) => {
-    cv.rect(0, y, W, H, ctx.f.colors.base);
+  const strip = (cv, f, y) => {
+    cv.rect(0, y, W, H, f.colors.base);
     const w = Math.floor((W - 40) / cols.length);
-    cols.forEach((k, i) => cv.rect(20 + i * w + 2, y + 20, w - 4, H - 40, ctx.f.colors[k]));
+    cols.forEach((k, i) => cv.rect(20 + i * w + 2, y + 20, w - 4, H - 40, f.colors[k]));
   };
-  const all = new Canvas(W, H * ctxs.length);
-  ctxs.forEach((ctx, i) => { strip(all, ctx, i * H); const one = new Canvas(W, H); strip(one, ctx, 0); outBin(`assets/previews/${ctx.id}.png`, one.png()); });
-  outBin("assets/previews/preview.png", all.png());
+  // Palette strips per flavour and all four together, for the default and for every tint
+  // (a tint's go under assets/previews/<tint>/), the fallback when a port has no screenshot.
+  for (const e of EDITIONS) {
+    const dir = e.id === "darkberry" ? "assets/previews" : `assets/previews/${e.id}`, fls = Object.entries(e.pal.flavours);
+    const all = new Canvas(W, H * fls.length);
+    fls.forEach(([fid, f], i) => { strip(all, f, i * H); const one = new Canvas(W, H); strip(one, f, 0); outBin(`${dir}/${fid}.png`, one.png()); });
+    outBin(`${dir}/preview.png`, all.png());
+  }
   // Logo: a berry quartered into the four flavours' bases, a jam-coloured centre.
   const logo = new Canvas(256, 256), q = Math.PI / 2;
   ctxs.forEach((ctx, i) => logo.circle(128, 128, 120, ctx.f.colors.base, i * q, (i + 1) * q));
@@ -363,30 +413,60 @@ const exists = (rel) => fs.existsSync(path.join(root, rel));
   const repoPath = new URL(P.repository).pathname.replace(/^\/|\/$/g, ""), owner = repoPath.split("/")[0];
   const hexOf = (role) => usageRef.resolve(role)[0].slice(1);
   const known = new Set(REG.ports.map((p) => p.key));
-  for (const d of fs.readdirSync(path.join(root, "ports"))) if (!d.startsWith(".") && !known.has(d)) errors.push(`ports/${d}/ is not registered in src/ports.json`);
-  for (const port of REG.ports) {
-    if (!exists(`ports/${port.key}`)) { errors.push(`src/ports.json: ${port.key} has no ports/${port.key}/ output`); continue; }
-    if (!exists(`src/usage/${port.key}.md`)) { errors.push(`src/ports.json: ${port.key} has no src/usage/${port.key}.md`); continue; }
-    for (const c of port.categories) if (!CATS.some((x) => x.key === c)) errors.push(`src/ports.json: ${port.key} has an unknown category "${c}"`);
-    if (!port.categories.length) errors.push(`src/ports.json: ${port.key} needs at least one category`);
-    const own = (f) => exists(`ports/${port.key}/assets/${f}`);
+  if (!TINT) {
+    for (const d of fs.readdirSync(path.join(root, "ports"))) if (!d.startsWith(".") && !known.has(d)) errors.push(`ports/${d}/ is not registered in src/ports.json`);
+    for (const port of REG.ports) {
+      if (!exists(`ports/${port.key}`)) errors.push(`src/ports.json: ${port.key} has no ports/${port.key}/ output`);
+      if (!exists(`src/usage/${port.key}.md`)) errors.push(`src/ports.json: ${port.key} has no src/usage/${port.key}.md`);
+      for (const c of port.categories) if (!CATS.some((x) => x.key === c)) errors.push(`src/ports.json: ${port.key} has an unknown category "${c}"`);
+      if (!port.categories.length) errors.push(`src/ports.json: ${port.key} needs at least one category`);
+    }
+  }
+  // The tint bar under the badges: one coloured badge per edition, linked to where that
+  // edition lives for this port; the edition the README is about is left unlinked.
+  const badge = (e) => `<img src="https://img.shields.io/badge/${encodeURIComponent(e.name)}-${e.colour.slice(1)}?style=for-the-badge" alt="${e.name}"/>`;
+  const tintBar = (hrefOf) => `<p align="center">\n${EDITIONS.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${e.emoji} ${badge(e)}</a>` : `\t${e.emoji} ${badge(e)}`; }).join("\n")}\n</p>`;
+  // dir: the folder the README sits in, relative to ports/<key>/; depth: how far that is below the repo root
+  const writeReadme = (port, dir, depth, hrefOf, usage) => {
+    // out() routes a tint build into its subfolder itself, so the written path omits it
+    const base = `ports/${port.key}${dir ? `/${dir}` : ""}`, outBase = TINT ? `ports/${port.key}` : base, up = "../".repeat(depth), own = (f) => exists(`${base}/assets/${f}`);
+    const previews = TINT ? `${up}assets/previews/${TINT}` : `${up}assets/previews`;
     const vars = {
-      NAME: P.name, APP: port.name, APP_URL: port.url || P.homepage, ROOT: "../..",
+      NAME: P.name, APP: port.name, APP_URL: port.url || P.homepage, ROOT: up.slice(0, -1),
       REPO: P.repository, REPO_PATH: repoPath, OWNER: owner, YEAR: "2026",
       C_BG: usageRef.f.colors.surface0.slice(1), C_TEXT: usageRef.f.colors.text.slice(1),
       C_STARS: hexOf("ui.accent"), C_ISSUES: hexOf("ui.warning"), C_CONTRIBUTORS: hexOf("ui.success"),
-      PREVIEW: own("preview.webp") ? "assets/preview.webp" : "../../assets/previews/preview.png",
-      PREVIEWS: ctxs.map((ctx) => `<details>\n<summary>${ctx.f.emoji} ${ctx.f.name}</summary>\n<img src="${own(`${ctx.id}.webp`) ? `assets/${ctx.id}.webp` : `../../assets/previews/${ctx.id}.png`}"/>\n</details>`).join("\n"),
-      USAGE: read(`src/usage/${port.key}.md`).trim(),
+      TINTS: tintBar(hrefOf),
+      PREVIEW: own("preview.webp") ? "assets/preview.webp" : `${previews}/preview.png`,
+      PREVIEWS: ctxs.map((ctx) => `<details>\n<summary>${ctx.f.emoji} ${ctx.f.name}</summary>\n<img src="${own(`${ctx.id}.webp`) ? `assets/${ctx.id}.webp` : `${previews}/${ctx.id}.png`}"/>\n</details>`).join("\n"),
+      USAGE: usage,
       THANKS: [...(port.maintainers || []), ...REG.maintainers].filter((m, i, a) => a.indexOf(m) === i).map((m) => `- [${m}](https://github.com/${m})`).join("\n"),
     };
-    out(`ports/${port.key}/README.md`, tpl.replace(/%(\w+)%/g, (_, k) => { if (k in vars) return vars[k]; errors.push(`template/README.md: unknown placeholder %${k}%`); return ""; }));
-    if (!exists(`ports/${port.key}/assets`)) out(`ports/${port.key}/assets/.gitkeep`, "");
+    out(`${outBase}/README.md`, tpl.replace(/%(\w+)%/g, (_, k) => { if (k in vars) return vars[k]; errors.push(`template/README.md: unknown placeholder %${k}%`); return ""; }));
+    if (!exists(`${base}/assets`)) out(`${outBase}/assets/.gitkeep`, "");
+  };
+  for (const port of REG.ports) {
+    if (!exists(`src/usage/${port.key}.md`)) continue;
+    const usage = read(`src/usage/${port.key}.md`).trim();
+    const allInOne = port.key === "vscode" || port.key === "gpl"; // these carry every tint in one unit
+    if (!TINT) {
+      writeReadme(port, "", 2, (e) => e.id === "darkberry" ? null : port.key === "vscode" ? "with-tints/" : port.key === "gpl" ? `${e.id}.gpl` : `${e.id}/`, usage);
+      if (port.key === "vscode") {
+        const note = `This edition carries every tint: ${EDITIONS.map((e) => e.name).join(", ")}, four flavours each. Install it instead of the plain ${P.name} extension, not beside it, or the ${P.name} themes are listed twice. The packaged file is \`${P.id}-with-tints-theme-<version>.vsix\`.`;
+        // route() sends tint builds' themes here, so this README and package.json are the default build's
+        const vsWithTints = { ...port, name: `${port.name} (with tints)` };
+        writeReadme(vsWithTints, "with-tints", 3, (e) => e.id === "darkberry" ? "../" : null, `${note}\n\n${usage}`);
+        out("ports/vscode/.vscodeignore", "assets/**\nwith-tints/**\n"); // screenshots belong to the README on GitHub, not inside the .vsix
+        out("ports/vscode/with-tints/.vscodeignore", "assets/**\n");
+      }
+    } else if (!allInOne) {
+      writeReadme(port, TINT, 3, (e) => e.id === TINT ? null : e.id === "darkberry" ? "../" : `../${e.id}/`, usage);
+    }
   }
-  out("ports/vscode/.vscodeignore", "assets/**\n"); // screenshots belong to the README on GitHub, not inside the .vsix
   // The port list in README.md, between the markers, grouped by each port's first category.
   const begin = "<!-- ports:begin -->", end = "<!-- ports:end -->", readme = read("README.md");
-  if (!readme.includes(begin) || !readme.includes(end)) errors.push(`README.md needs the ${begin} and ${end} markers`);
+  if (TINT) {}
+  else if (!readme.includes(begin) || !readme.includes(end)) errors.push(`README.md needs the ${begin} and ${end} markers`);
   else {
     const groups = CATS.map((c) => [c, REG.ports.filter((p) => p.categories[0] === c.key)]).filter(([, ps]) => ps.length);
     const block = groups.map(([c, ps]) => `### ${c.emoji} ${c.name}\n\n${ps.map((p) => `- ${p.emoji} [${p.name}](ports/${p.key}#readme)`).join("\n")}`).join("\n\n");
@@ -585,7 +665,11 @@ pre{margin:10px 0 0;padding:10px 12px;border-radius:8px;font:12.5px/1.6 ui-monos
 <body><main>${ctxs.map(card).join("\n")}</main></body></html>\n`);
 
 // ---------- result ----------
-for (const w of new Set(warnings)) console.warn("warning:", w);
+if (!TINT) for (const w of new Set(warnings)) console.warn("warning:", w);
 const uniq = [...new Set(errors)];
 if (uniq.length) { for (const e of uniq) console.error("error:", e); console.error(`Build failed with ${uniq.length} error(s).`); process.exit(1); }
-console.log(CHECK_ONLY ? `Checked ${path.basename(argPalette || "src/palette.json", ".json")} (${ctxs.length} flavours): 0 errors, ${warnings.length} warning(s). Nothing written.` : `Built ${ctxs.length} flavours. ${warnings.length} warning(s). See docs/CHECKS.md, docs/ROLES.md, docs/USAGE.md, docs/specimen.html.`);
+console.log(CHECK_ONLY ? `Checked ${path.basename(argPalette || "src/palette.json", ".json")} (${ctxs.length} flavours): 0 errors, ${warnings.length} warning(s). Nothing written.`
+  : TINT ? `Built ${P.name} (${ctxs.length} flavours) into ports/*/${TINT}/. ${warnings.length} warning(s).`
+  : `Built ${ctxs.length} flavours. ${warnings.length} warning(s). See docs/CHECKS.md, docs/ROLES.md, docs/USAGE.md, docs/specimen.html.`);
+if (!TINT && !CHECK_ONLY && !process.argv.includes("--no-tints"))
+  for (const e of EDITIONS) if (e.id !== "darkberry") execFileSync(process.execPath, [path.join(root, "build.mjs"), `src/variants/${e.id}.json`], { stdio: "inherit", cwd: root });

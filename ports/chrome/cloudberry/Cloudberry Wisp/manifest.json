@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Cloudberry Wisp",
+  "version": "0.3.0",
+  "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Wisp: light, neutrals leaned toward cloudberry (base #fff4ee).",
+  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "theme": {
+    "colors": {
+      "frame": [239, 219, 209],
+      "frame_inactive": [239, 219, 209],
+      "frame_incognito": [239, 219, 209],
+      "frame_incognito_inactive": [239, 219, 209],
+      "toolbar": [255, 244, 238],
+      "tab_text": [85, 50, 31],
+      "tab_background_text": [113, 78, 60],
+      "tab_background_text_inactive": [155, 127, 112],
+      "bookmark_text": [85, 50, 31],
+      "toolbar_button_icon": [113, 78, 60],
+      "omnibox_background": [226, 205, 194],
+      "omnibox_text": [85, 50, 31],
+      "ntp_background": [255, 244, 238],
+      "ntp_text": [85, 50, 31],
+      "ntp_link": [2, 107, 128],
+      "button_background": [210, 188, 177]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "blueberry-fen",
+  "name": "Blueberry Fen",
+  "version": "0.3.0",
+  "author": "Blueberry",
+  "description": "Blueberry tint of Fen: dark, neutrals leaned toward blueberry (base #2f3b58).",
+  "isDark": true,
+  "colors": {
+    "bg": "#2f3b58",
+    "bg-secondary": "#25304b",
+    "bg-tertiary": "#1d2740",
+    "text": "#e3eaf9",
+    "text-muted": "#b9c0d1",
+    "border": "#808daa",
+    "primary": "#dc67a7",
+    "link": "#83d4db",
+    "success": "#bbe5b3",
+    "warning": "#f0d6a0",
+    "error": "#fd8c85",
+    "info": "#afdfdb"
+  },
+  "tags": [
+    "darkberry",
+    "dark"
+  ]
+}

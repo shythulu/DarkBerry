@@ -1,0 +1,26 @@
+{
+  "id": "cloudberry-wisp",
+  "name": "Cloudberry Wisp",
+  "version": "0.3.0",
+  "author": "Cloudberry",
+  "description": "Cloudberry tint of Wisp: light, neutrals leaned toward cloudberry (base #fff4ee).",
+  "isDark": false,
+  "colors": {
+    "bg": "#fff4ee",
+    "bg-secondary": "#f8e6dd",
+    "bg-tertiary": "#efdbd1",
+    "text": "#55321f",
+    "text-muted": "#714e3c",
+    "border": "#9b7f70",
+    "primary": "#b9488b",
+    "link": "#026b80",
+    "success": "#2c6f2d",
+    "warning": "#815b02",
+    "error": "#bb262a",
+    "info": "#006f5f"
+  },
+  "tags": [
+    "darkberry",
+    "light"
+  ]
+}

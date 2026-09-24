@@ -1,0 +1,120 @@
+GIMP Palette
+Name: Crowberry
+Columns: 8
+# Crowberry 0.3.0, https://shythulu.github.io/DarkBerry/
+147  75 102	Wisp Blossom
+166  54 118	Wisp Petal
+191  11 100	Wisp Berry
+140  62 178	Wisp Plum
+187  38  42	Wisp Cranberry
+165  63  84	Wisp Cherry
+162  71  18	Wisp Apricot
+129  91   2	Wisp Honey
+ 44 111  45	Wisp Gooseberry
+  0 111  95	Wisp Juniper
+  2 107 128	Wisp Frost
+ 29 100 164	Wisp Bilberry
+ 54  89 202	Wisp Blueberry
+110  82 171	Wisp Lavender
+185  72 139	Wisp Jam
+255 255 255	Wisp Onjam
+127  63 205	Wisp Tint
+ 64  54  84	Wisp Text
+ 77  67  97	Wisp Subtext1
+ 92  81 112	Wisp Subtext0
+103  95 121	Wisp Overlay2
+137 128 155	Wisp Overlay1
+159 150 178	Wisp Overlay0
+181 175 196	Wisp Surface2
+196 190 210	Wisp Surface1
+212 206 226	Wisp Surface0
+248 244 255	Wisp Base
+236 231 249	Wisp Mantle
+226 220 239	Wisp Crust
+236 174 210	Fen Blossom
+255 196 221	Fen Petal
+254 150 180	Fen Berry
+237 187 254	Fen Plum
+253 140 133	Fen Cranberry
+231 170 181	Fen Cherry
+247 191 158	Fen Apricot
+240 214 160	Fen Honey
+187 229 179	Fen Gooseberry
+175 223 219	Fen Juniper
+131 212 219	Fen Frost
+156 198 234	Fen Bilberry
+164 195 246	Fen Blueberry
+201 176 232	Fen Lavender
+220 103 167	Fen Jam
+ 44  35  61	Fen Onjam
+198 169 252	Fen Tint
+236 231 247	Fen Text
+214 209 226	Fen Subtext1
+194 189 206	Fen Subtext0
+173 164 193	Fen Overlay2
+145 135 166	Fen Overlay1
+125 116 146	Fen Overlay0
+106  95 128	Fen Surface2
+ 92  81 114	Fen Surface1
+ 77  67  98	Fen Surface0
+ 64  54  84	Fen Base
+ 53  43  71	Fen Mantle
+ 44  35  61	Fen Crust
+231 197 216	Mire Blossom
+254 175 212	Mire Petal
+253 124 165	Mire Berry
+221 176 236	Mire Plum
+240 106 106	Mire Cranberry
+211 145 156	Mire Cherry
+242 173 138	Mire Apricot
+232 201 138	Mire Honey
+163 218 163	Mire Gooseberry
+158 208 196	Mire Juniper
+134 192 204	Mire Frost
+127 180 224	Mire Bilberry
+143 176 242	Mire Blueberry
+186 168 220	Mire Lavender
+190  76 141	Mire Jam
+255 255 255	Mire Onjam
+187 149 252	Mire Tint
+233 228 244	Mire Text
+214 210 225	Mire Subtext1
+195 190 206	Mire Subtext0
+156 146 177	Mire Overlay2
+138 131 154	Mire Overlay1
+115 107 132	Mire Overlay0
+ 64  54  84	Mire Surface2
+ 52  43  69	Mire Surface1
+ 43  35  59	Mire Surface0
+ 37  29  52	Mire Base
+ 30  22  44	Mire Mantle
+ 24  16  37	Mire Crust
+231 197 216	Blackwater Blossom
+254 175 212	Blackwater Petal
+253 124 165	Blackwater Berry
+221 176 236	Blackwater Plum
+240 106 106	Blackwater Cranberry
+211 145 156	Blackwater Cherry
+242 173 138	Blackwater Apricot
+232 201 138	Blackwater Honey
+163 218 163	Blackwater Gooseberry
+158 208 196	Blackwater Juniper
+134 192 204	Blackwater Frost
+127 180 224	Blackwater Bilberry
+143 176 242	Blackwater Blueberry
+186 168 220	Blackwater Lavender
+186  72 137	Blackwater Jam
+255 255 255	Blackwater Onjam
+187 149 252	Blackwater Tint
+231 226 242	Blackwater Text
+209 205 220	Blackwater Subtext1
+190 185 201	Blackwater Subtext0
+149 140 169	Blackwater Overlay2
+128 121 144	Blackwater Overlay1
+ 97  89 113	Blackwater Overlay0
+ 56  47  74	Blackwater Surface2
+ 44  35  60	Blackwater Surface1
+ 34  26  48	Blackwater Surface0
+ 25  17  38	Blackwater Base
+ 19  12  32	Blackwater Mantle
+ 15   8  27	Blackwater Crust

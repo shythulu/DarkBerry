@@ -1,6 +1,6 @@
 # Port creation
 
-How a Darkberry port is laid out and added. The layout is
+How a Darkberry port is laid out and added. The layout is based on 
 [Catppuccin's](https://github.com/catppuccin/catppuccin/blob/main/docs/port-creation.md),
 which keeps one repository per port, folded into this one repository: every port is a
 folder under `ports/` with the same shape a Catppuccin port repository has, and the
@@ -15,10 +15,30 @@ ports/<key>/
   README.md          written by build.mjs from template/README.md; never edited by hand
   assets/            screenshots: preview.webp (all flavours in one image) and one <flavour>.webp each
   <theme files>      one installable unit per flavour, named as STYLE_GUIDE.md step 9 says
+  <tint>/            the same again for each tint (see Tints below)
 ```
 
 `<key>` is the app's name in lower kebab case (`ls-colors`, `notepadpp`), as Catppuccin
 names its repositories.
+
+## Tints
+
+Every port is also built in each tint from `src/tints.json` (`src/variants/<tint>.json`),
+under the tint's own id and name, so `cloudberry-mire.conf` can sit beside
+`darkberry-mire.conf` in an app's theme folder. Where the tint goes depends on whether
+the app's format can hold several themes in one unit:
+
+- **One theme per file or folder** (every port but two): the tint gets
+  `ports/<key>/<tint>/`, with the same files, its own `assets/` for screenshots and its
+  own README. The bar of tint badges under every README's badges links between them.
+- **Every tint in one unit**: VS Code, where one extension contributes many themes, gets
+  `ports/vscode/with-tints/`, a second extension with all twenty; the GIMP palette gets
+  `ports/gpl/darkberry-with-tints.gpl` and one `<tint>.gpl` per tint beside the Darkberry
+  files.
+
+`build.mjs` does the routing in `route()`: a tint build writes only under `ports/`, into
+the subfolder, and the default build writes the two all-in-one units, the docs and the
+root README. `package.sh` makes a plain and a with-tints package of every port.
 
 The README follows the template top to bottom: logo and title, the three badges, the main
 preview, a collapsible preview per flavour, **Usage**, **Thanks to**, the footer and the
@@ -65,6 +85,10 @@ has no output folder or usage file, or when a category is not in `src/categories
 
 ## Adding a port
 
+The `darkberry-port` skill under `.claude/skills/` walks a contributor through all of
+this in Claude Code, including the prototyping, screenshot and review steps; the steps
+below are the same road without the guide.
+
 1. Follow *Porting an application* in `STYLE_GUIDE.md` for the template, override file,
    build wiring and assertions. Those steps make `ports/<key>/` exist.
 2. Add the entry to `src/ports.json` and write `src/usage/<key>.md`.
@@ -82,6 +106,7 @@ has no output folder or usage file, or when a category is not in `src/categories
 assets/logos/darkberry.png             the four flavours' bases quartered around a jam centre
 assets/previews/preview.png            palette strips of all four flavours, the fallback main preview
 assets/previews/<flavour>.png          one flavour's strip, the fallback per-flavour preview
+assets/previews/<tint>/...             the same strips for each tint
 assets/footers/darkberry_on_line.png   the footer line with one dot per flavour
 assets/misc/transparent.png            the spacer the template's title uses
 ```
