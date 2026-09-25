@@ -1,0 +1,28 @@
+/* The site's Tailwind input. tools/site.mjs fills the placeholder below from roles.json and the palette,
+   appends base.css and page.css inside @layer base, writes the result to site/.tw/input.css
+   and runs the Tailwind CLI on it. The output is inlined into every page. */
+
+/* Cascade layers, lowest priority first. base.css lives in `base`, so a utility class
+   on an element always beats a rule in base.css. Unlayered CSS (inline styles, the
+   first-paint :root block) beats every layer. */
+@layer theme, base, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+/* No preflight.css: it would reset the hand-tuned headings, tables and buttons. */
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+
+/* source(none) above turns off automatic scanning (it would crawl ports/ and site/).
+   Scan only the site's own sources for class names. Relative to site/.tw/input.css. */
+@source "../../src/site";
+
+/* Drop Tailwind's built-in palette so bg-red-500 and friends do not exist here.
+   The only colours on the site are Darkberry's. */
+@theme {
+  --color-*: initial;
+}
+
+/* Every role and palette colour as a Tailwind colour: bg-ui-background, text-syntax-keyword,
+   border-overlay2, text-jam. `inline` makes each utility carry var(--ui-background) itself
+   instead of a copy of the value, so core.js's runtime flavour and tint swap still recolours it. */
+@theme inline {
+__THEME__
+}

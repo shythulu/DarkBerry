@@ -26,6 +26,7 @@ src/variants/             nature tints of Darkberry: lingonberry, cloudberry, cr
 src/tints.json            the tints in order, with the name, emoji and badge colour each shows in READMEs
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
+package.json              devDependencies for the site build only: the Tailwind CLI. build.mjs needs nothing from it
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
 ports/<port>/             generated theme files, a README written from template/, and assets/ for screenshots
 ports/<port>/<tint>/      the same for each tint (VS Code and the GIMP palette carry tints in one unit instead)
@@ -57,7 +58,7 @@ A showcase site is generated from the palette and published to GitHub Pages by `
 2. In the repository's Settings > Pages, set the source to **GitHub Actions**.
 3. Push to `main`. The site appears at `https://<your-name>.github.io/<repo>/`.
 
-To preview locally: `node build.mjs && node tools/site.mjs`, then open `site/index.html`. The `site/` folder is generated and ignored by git.
+To preview locally: `npm ci` once, then `node build.mjs && node tools/site.mjs` (or `npm run site`) and open `site/index.html`. The site's CSS goes through the Tailwind CLI: `src/site/tailwind.css` is the input, and every role and palette colour is a utility (`bg-ui-background`, `text-jam`). The `site/` folder is generated and ignored by git.
 
 ## Adjusting colours
 

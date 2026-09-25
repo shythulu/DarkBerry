@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
+      - run: npm ci
       - run: node build.mjs
       - name: Check every tint (writes nothing)
         run: for v in src/variants/*.json; do node build.mjs --check "$v"; done
