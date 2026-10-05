@@ -318,7 +318,7 @@
         "light": "mix(subtext0,subtext1,0.6)"
       },
       "catppuccin": "sky",
-      "why": "Structural glue recedes: one subtext step above comments. Light flavours sit between subtext0 and subtext1, because subtext0 is 1.6 from Wisp's darkened comment grey and subtext1 is 4.9 from crowberry's text.",
+      "why": "One subtext step above comments. Light flavours sit between subtext0 and subtext1, because subtext0 is 1.6 from Wisp's darkened comment grey and subtext1 is 4.9 from crowberry's text.",
       "minContrast": 3
     },
     "punctuation": {
@@ -327,7 +327,7 @@
         "light": "mix(overlay1,overlay2,0.2)"
       },
       "catppuccin": "overlay2",
-      "why": "Quieter than comments. Wisp's overlay1 is 2.8:1 on crust, so the light value leans a fifth toward overlay2 to hold 3:1 there.",
+      "why": "Quieter than comments. Wisp's overlay1 is 2.8:1 on crust, so the light value leans a fifth toward overlay2 to hold 3:1 there contrast.",
       "minContrast": 3
     },
     "comment": {
