@@ -4,6 +4,10 @@ const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { ret
 const FLS = Object.keys(D.flavours), TINTS = Object.keys(D.tints);
 let fl = FLS.includes(store.get("darkberry-flavour")) ? store.get("darkberry-flavour") : "blackwater";
 let tn = TINTS.includes(store.get("darkberry-tint")) ? store.get("darkberry-tint") : "darkberry";
+// A link can name the flavour and tint (index.html#mire/cloudberry), over the saved choice.
+const [hf, ht] = location.hash.slice(1).split("/");
+if (FLS.includes(hf)) fl = hf;
+if (TINTS.includes(ht)) tn = ht;
 const repo = D.config.repo.replace(/\/$/, ""), tree = `${repo}/tree/${D.config.branch}`;
 const raw = repo.replace("https://github.com/", "https://raw.githubusercontent.com/") + "/" + D.config.branch;
 const slug = (f) => `darkberry-${f}`, title = (f) => `Darkberry ${D.flavours[f].name}`;
