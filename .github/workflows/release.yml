@@ -97,7 +97,7 @@ jobs:
             echo
             echo "**micro** — unzip \`darkberry-micro-$version.zip\` into \`~/.config/micro/colorschemes/\`, then \`set colorscheme darkberry-mire\`."
             echo
-            echo "**Kate** — unzip \`darkberry-kate-$version.zip\` into \`~/.local/share/org.kde.syntax-highlighting/themes/\`, then Settings > Configure Kate > Fonts & Colors."
+            echo "**Kate** — unzip \`darkberry-kate-$version.zip\`, copy the \`.theme\` files into \`~/.local/share/org.kde.syntax-highlighting/themes/\` and the \`.colors\` files into \`~/.local/share/color-schemes/\`, then pick a flavour under Settings > Window Color Scheme and under Settings > Configure Kate > Fonts & Colors."
             echo
             echo "**Chrome and Edge** — unzip \`darkberry-chrome-$version.zip\`, then load a flavour folder via Developer mode at \`chrome://extensions\`."
             echo

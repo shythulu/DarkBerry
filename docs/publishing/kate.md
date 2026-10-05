@@ -1,6 +1,6 @@
 # Publishing the Kate port
 
-`ports/kate/*.theme` is four standalone KSyntaxHighlighting colour-theme files (`darkberry-wisp.theme`, `-fen`, `-mire`, `-blackwater`), one per flavour, installed by copying into `~/.local/share/org.kde.syntax-highlighting/themes/`; `ports/kate/<tint>/` holds the same four files re-derived per tint (lingonberry/cloudberry/crowberry/blueberry). Each is a JSON file (`"metadata"` + `"text-styles"`/`"custom-styles"` objects) read by the KSyntaxHighlighting framework, so it lights up Kate, KWrite and every other KTextEditor-based app — nothing to build or sign.
+`ports/kate/` ships each flavour as a pair: a KDE colour scheme (`Darkberry Mire.colors`, the same file as the KDE Plasma port's) for Kate's window, and a KSyntaxHighlighting theme for the editor. The venues below take only the editor half; the colour schemes can go to the KDE Store's Plasma Color Schemes category with the KDE port. `ports/kate/*.theme` is four standalone KSyntaxHighlighting colour-theme files (`darkberry-wisp.theme`, `-fen`, `-mire`, `-blackwater`), one per flavour, installed by copying into `~/.local/share/org.kde.syntax-highlighting/themes/`; `ports/kate/<tint>/` holds the same four files re-derived per tint (lingonberry/cloudberry/crowberry/blueberry). Each is a JSON file (`"metadata"` + `"text-styles"`/`"custom-styles"` objects) read by the KSyntaxHighlighting framework, so it lights up Kate, KWrite and every other KTextEditor-based app — nothing to build or sign.
 
 ## Venues
 
