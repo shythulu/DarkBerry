@@ -25,6 +25,8 @@ src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* ro
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
 src/tints.json            the tints in order, with the name, emoji and badge colour each shows in READMEs
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
+lib/derive.mjs            the fill equation that sets jam and onjam, checked by the build
+lib/png.mjs               a small PNG writer for the generated logo, footer and previews
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 package.json              devDependencies for the site build only: the Tailwind CLI. build.mjs needs nothing from it
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
@@ -43,6 +45,7 @@ tools/settle.mjs          settles a palette against the build's full syntax chec
 tools/where.mjs           shows what drives any setting: node tools/where.mjs tab
 tools/apply-patch.mjs     applies a patch exported from Darkberry Studio, then rebuilds
 tools/site.mjs            builds the GitHub Pages showcase into site/
+tools/npp-template.mjs    rebuilds src/ports/notepadpp.xml from Notepad++'s stylers.model.xml
 lib/resolve.mjs           role resolution shared by the build and the site
 STYLE_GUIDE.md            the rules
 docs/PORT_CREATION.md     how a port is laid out and added, after Catppuccin's port-creation guide
@@ -86,62 +89,62 @@ build them yourself with `./package.sh`, which writes the same set into `dist/`.
 <!-- ports:begin -->
 <!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->
 
-###  Code Editors & IDEs
+### Code Editors & IDEs
 
--  [Neovim](ports/neovim#readme)
--  [Visual Studio Code](ports/vscode#readme)
--  [Kate](ports/kate#readme)
--  [micro](ports/micro#readme)
--  [Notepad++](ports/notepadpp#readme)
--  [Nimbalyst](ports/nimbalyst#readme)
+- [Neovim](ports/neovim#readme)
+- [Visual Studio Code](ports/vscode#readme)
+- [Kate](ports/kate#readme)
+- [micro](ports/micro#readme)
+- [Notepad++](ports/notepadpp#readme)
+- [Nimbalyst](ports/nimbalyst#readme)
 
-###  Libraries
+### Libraries
 
--  [GIMP Palette](ports/gpl#readme)
+- [GIMP Palette](ports/gpl#readme)
 
-###  CLI Tools
+### CLI Tools
 
--  [tmux](ports/tmux#readme)
--  [Starship](ports/starship#readme)
--  [lsd](ports/lsd#readme)
--  [LS_COLORS](ports/ls-colors#readme)
--  [btop++](ports/btop#readme)
--  [bat](ports/bat#readme)
+- [tmux](ports/tmux#readme)
+- [Starship](ports/starship#readme)
+- [lsd](ports/lsd#readme)
+- [LS_COLORS](ports/ls-colors#readme)
+- [btop++](ports/btop#readme)
+- [bat](ports/bat#readme)
 
-###  Terminals
+### Terminals
 
--  [kitty](ports/kitty#readme)
--  [Ghostty](ports/ghostty#readme)
--  [Alacritty](ports/alacritty#readme)
--  [Konsole](ports/konsole#readme)
+- [kitty](ports/kitty#readme)
+- [Ghostty](ports/ghostty#readme)
+- [Alacritty](ports/alacritty#readme)
+- [Konsole](ports/konsole#readme)
 
-###  System
+### System
 
--  [GTK 3](ports/gtk#readme)
--  [Base24](ports/base24#readme)
--  [Tinted8](ports/tinted8#readme)
+- [GTK 3](ports/gtk#readme)
+- [Base24](ports/base24#readme)
+- [Tinted8](ports/tinted8#readme)
 
-###  Desktop Environments
+### Desktop Environments
 
--  [KDE Plasma](ports/kde#readme)
+- [KDE Plasma](ports/kde#readme)
 
-###  Window Managers
+### Window Managers
 
--  [JankyBorders](ports/borders#readme)
+- [JankyBorders](ports/borders#readme)
 
-###  Browsers
+### Browsers
 
--  [Firefox](ports/firefox#readme)
--  [Google Chrome](ports/chrome#readme)
+- [Firefox](ports/firefox#readme)
+- [Google Chrome](ports/chrome#readme)
 
-###  Photo & Video
+### Photo & Video
 
--  [darktable](ports/darktable#readme)
--  [GIMP](ports/gimp#readme)
+- [darktable](ports/darktable#readme)
+- [GIMP](ports/gimp#readme)
 
-###  Note Taking
+### Note Taking
 
--  [Obsidian](ports/obsidian#readme)
+- [Obsidian](ports/obsidian#readme)
 
 <!-- ports:end -->
 

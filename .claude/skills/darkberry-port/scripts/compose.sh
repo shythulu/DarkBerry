@@ -8,10 +8,12 @@ d=${1:?usage: compose.sh <dir> [width] [height]}; W=${2:-1200}; H=${3:-750}; S=$
 command -v convert >/dev/null || { echo "ImageMagick's convert is needed (brew install imagemagick / apt install imagemagick)"; exit 1; }
 for f in wisp fen mire blackwater; do [ -f "$d/$f.png" ] || { echo "missing $d/$f.png"; exit 1; }; done
 # A transparent margin (a window shadow) is trimmed first; a frame of another shape is then scaled to cover the target and cropped at the centre, never stretched.
+# An opaque frame is not trimmed: -trim would also cut a terminal's empty rows or a plain edge, and the frame would be zoomed.
 # A frame taller than the target keeps its top (menu bar, toolbar, tabs), a wider one its middle.
-fw=$(convert "$d/mire.png" -trim +repage -format "%w" info:); fh=$(convert "$d/mire.png" -trim +repage -format "%h" info:)
+trim=(); [ "$(convert "$d/mire.png" -format "%[opaque]" info: | tr A-Z a-z)" = true ] || trim=(-trim +repage) # ImageMagick 6 says true, 7 True
+fw=$(convert "$d/mire.png" "${trim[@]}" -format "%w" info:); fh=$(convert "$d/mire.png" "${trim[@]}" -format "%h" info:)
 if [ $((fh * W)) -gt $((fw * H)) ]; then g=north; else g=center; fi
-for f in wisp fen mire blackwater; do convert "$d/$f.png" -trim +repage -resize "${W}x${H}^" -gravity $g -extent "${W}x${H}" "$d/$f.webp"; done
+for f in wisp fen mire blackwater; do convert "$d/$f.png" "${trim[@]}" -resize "${W}x${H}^" -gravity $g -extent "${W}x${H}" "$d/$f.webp"; done
 i=0
 for f in wisp fen mire blackwater; do
   x0=$((i*W/4)); x1=$(((i+1)*W/4))

@@ -11,7 +11,7 @@ import { execFileSync } from "node:child_process";
 const [file, flag] = process.argv.slice(2);
 if (!file) { console.error("usage: node tools/apply-patch.mjs patch.json [--no-build]"); process.exit(1); }
 const patch = JSON.parse(fs.readFileSync(file, "utf8"));
-if ((patch["darkberry-patch"] ?? patch["bramble-patch"]) !== 1) { console.error("Not a Darkberry Studio patch."); process.exit(1); }
+if (patch["darkberry-patch"] !== 1) { console.error("Not a Darkberry Studio patch."); process.exit(1); }
 
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const write = (p, o) => fs.writeFileSync(p, JSON.stringify(o, null, 2) + "\n");

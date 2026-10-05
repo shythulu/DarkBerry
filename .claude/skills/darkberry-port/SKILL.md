@@ -140,6 +140,9 @@ they know git, just say what the branch and commit should contain and let them d
 
 - `scripts/compose.sh <dir> [width] [height]`: four `<flavour>.png` frames in `<dir>` to
   `.webp` files and `preview.webp`. Needs ImageMagick; says so if it is missing.
+- `scripts/headless/cap.sh <port> [flavours]`, with `mksample.sh` and `demo.sh`: the
+  headless Linux capture harness the repository's own screenshots came from (Xvfb, a
+  throwaway HOME per flavour). Setup and use are in `references/capture.md`.
 - `scripts/contrast.mjs <fg> <bg> [more pairs]`: contrast ratios through
   `lib/color.mjs`, the same maths the build uses, for judging a pairing during
   prototyping.

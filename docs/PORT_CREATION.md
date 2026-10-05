@@ -95,8 +95,9 @@ below are the same road without the guide.
 3. `node build.mjs`. It writes `ports/<key>/README.md`, an empty `ports/<key>/assets/`
    and the port's line in `README.md`.
 4. Take the screenshots into `ports/<key>/assets/` and rebuild so the README picks them up.
-5. A `zip` line in `package.sh` (with `-x "assets/*"`), the install line in
-   `.github/workflows/release.yml`'s release notes, and a card in `src/site/index.html`.
+5. The install line in `.github/workflows/release.yml`'s release notes, and a card in the
+   `PORTS` list in `src/site/pages/ports.html`. `package.sh` packages every registered
+   port, so it needs no change.
 
 ## Generated assets
 

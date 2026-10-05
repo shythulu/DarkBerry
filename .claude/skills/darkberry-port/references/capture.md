@@ -90,11 +90,46 @@ it with them. PowerShell can read it too:
 
 ## Headless or remote
 
-The repository's own screenshots were taken on a Linux box with no display, under Xvfb
-with the GLX extension, one throwaway HOME per flavour, a session D-Bus for GTK4 and GIMP,
-and `import -window` on the app's window. That is the route for a contributor with a
-server but no desktop; the harness is described in `docs/PORT_CREATION.md`. It is not the
-route for a contributor's own desktop, where the consent rules above apply.
+The repository's own screenshots were taken on a Linux box with no display by the harness
+in `scripts/headless/`. Each capture gets its own Xvfb at 1200×750 (with GLX, which kitty
+and Alacritty need), a session D-Bus (GTK4 and GIMP need it) and a throwaway HOME holding
+only the Darkberry files, and `import -window` grabs the app's window. There is no desktop
+and no personal window to catch, so this is the route for a contributor with a server. It
+is not the route for a contributor's own desktop, where the consent rules above apply.
+
+Setup, on Ubuntu 24.04 or similar:
+
+- The apps being captured, plus `xvfb xdotool imagemagick dbus wmctrl tree git python3
+  openssl` and Node (`npx`). Ghostty, lsd 1.1 or newer (Ubuntu ships 1.0), starship and
+  VS Code come from their own releases.
+- JetBrainsMono Nerd Font and Noto Sans installed system-wide (`/usr/local/share/fonts`),
+  because the per-flavour HOMEs have no fonts of their own.
+- Apps that are not packages, through environment variables: `FIREFOX` (a `firefox`
+  binary), `CHROMIUM` (a portable ungoogled-chromium folder; branded Chrome ignores
+  `--load-extension`), `GIMP` and `OBSIDIAN` (each an extracted AppImage folder).
+- For the browser shots, the built site: `npm ci`, then `npm run site`. The browsers open
+  `index.html#<flavour>/<tint>`, so the page wears the theme under capture. Serve `site/`
+  locally and set `SITE_URL` (`python3 -m http.server 8080 --bind 127.0.0.1 -d site`, then
+  `SITE_URL=http://localhost:8080`), or the address bar shows the checkout's path.
+
+Then, from the repository:
+
+```sh
+H=.claude/skills/darkberry-port/scripts/headless
+$H/mksample.sh                       # once: the sample project every shot shows
+$H/cap.sh kitty                      # all four flavours, or name some: $H/cap.sh kitty mire
+TINT=cloudberry $H/cap.sh kitty      # a tint's files, into out/cloudberry/kitty/
+for d in ~/.cache/darkberry-shots/out/*/ ~/.cache/darkberry-shots/out/*/*/; do
+  [ -f "$d/blackwater.png" ] && .claude/skills/darkberry-port/scripts/compose.sh "$d"
+done
+```
+
+Frames land in `~/.cache/darkberry-shots/out/` (set `SHOTS` to move the work folder).
+`cap.sh` knows the ports that run on Linux: kitty, Alacritty, Ghostty, Konsole, tmux, lsd,
+LS_COLORS, btop, bat, starship, Neovim, micro, Kate, KDE (Kate's settings dialog), GTK 3
+(gtk3-widget-factory), darktable, GIMP, the GIMP palette, VS Code, Firefox, Chrome and
+Obsidian. A new port needs a case of its own. Run it outside an SSH session, or starship
+puts the machine's user and host name in the prompt.
 
 ## By hand: the five files the README needs
 
