@@ -329,7 +329,11 @@ for (const ctx of ctxs) {
   out(`ports/bat/${full}.tmTheme`, applyOverrides("bat", "plist", fill(ctx, batT, "bat"), ctx));
   out(`ports/neovim/${slug}.lua`, applyOverrides("neovim", "lines", fill(ctx, neovimT, "neovim"), ctx));
   out(`ports/notepadpp/${full}.xml`, toBareHex(applyOverrides("notepadpp", "lines", fill(ctx, nppT, "notepadpp"), ctx)));
-  out(`ports/kde/${full}.colors`, toTriplets(applyOverrides("kde", "lines", fill(ctx, kdeT, "kde"), ctx)));
+  const kdeColors = toTriplets(applyOverrides("kde", "lines", fill(ctx, kdeT, "kde"), ctx));
+  out(`ports/kde/${full}.colors`, kdeColors);
+  // Kate's window takes a KDE colour scheme and its editor a syntax theme; the port ships
+  // both, so Kate is themed whole without changing the desktop's colours.
+  out(`ports/kate/${full}.colors`, kdeColors);
   out(`ports/konsole/${full}.colorscheme`, toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
   out(`ports/obsidian/${full}/theme.css`, applyOverrides("obsidian", "lines", fill(ctx, obsidianT, "obsidian"), ctx));
   out(`ports/obsidian/${full}/manifest.json`, JSON.parse(fill(ctx, obsidianManifestT, "obsidian")));
