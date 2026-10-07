@@ -3,7 +3,7 @@
   "displayName": "Darkberry",
   "description": "Darkberry: a four-flavour bog-witch berry theme.",
   "version": "0.3.0",
-  "publisher": "shythulu",
+  "publisher": "Slacklab",
   "license": "MIT",
   "engines": {
     "vscode": "^1.70.0"

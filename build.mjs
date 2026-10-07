@@ -354,7 +354,7 @@ out(`ports/gpl/${P.id}.gpl`, gpl(P.name, ctxs.flatMap((ctx) => gplOrder.map((k) 
 
 out("ports/vscode/package.json", {
   name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
-  publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
+  publisher: "Slacklab", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
   homepage: P.homepage, repository: { type: "git", url: P.repository },
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
@@ -367,7 +367,7 @@ if (!TINT) {
   out("ports/vscode/with-tints/package.json", {
     name: `${P.id}-with-tints-theme`, displayName: `${P.name} with tints`,
     description: `${P.description} This edition also carries the ${tintNames.join(", ")} tints.`, version: P.version,
-    publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
+    publisher: "Slacklab", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
     homepage: P.homepage, repository: { type: "git", url: P.repository },
     categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
     contributes: { themes: EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
