@@ -354,7 +354,7 @@ out(`ports/gpl/${P.id}.gpl`, gpl(P.name, ctxs.flatMap((ctx) => gplOrder.map((k) 
 
 out("ports/vscode/package.json", {
   name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
-  publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" },
+  publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
   homepage: P.homepage, repository: { type: "git", url: P.repository },
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
@@ -367,7 +367,7 @@ if (!TINT) {
   out("ports/vscode/with-tints/package.json", {
     name: `${P.id}-with-tints-theme`, displayName: `${P.name} with tints`,
     description: `${P.description} This edition also carries the ${tintNames.join(", ")} tints.`, version: P.version,
-    publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" },
+    publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
     homepage: P.homepage, repository: { type: "git", url: P.repository },
     categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
     contributes: { themes: EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
@@ -380,7 +380,8 @@ if (!TINT) {
 // The layout follows catppuccin/catppuccin's port conventions (docs/PORT_CREATION.md):
 // every ports/<key>/ carries a README written from template/README.md, an assets/ folder
 // for its previews, and an entry in src/ports.json with a category from src/categories.json.
-// assets/ at the root holds the generated logo, footer and fallback palette previews.
+// assets/ at the root holds the drawn logos (assets/logos/, kept in git), the generated footer
+// and the fallback palette previews.
 const REG = readJson("src/ports.json"), CATS = readJson("src/categories.json");
 const outBin = (rel, buf) => { if (CHECK_ONLY || !route(rel)) return; const f = path.join(root, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, buf); };
 const exists = (rel) => fs.existsSync(path.join(root, rel));
@@ -399,17 +400,15 @@ if (!TINT) {
     fls.forEach(([fid, f], i) => { strip(all, f, i * H); const one = new Canvas(W, H); strip(one, f, 0); outBin(`${dir}/${fid}.png`, one.png()); });
     outBin(`${dir}/preview.png`, all.png());
   }
-  // Logo: a berry quartered into the four flavours' bases, a jam-coloured centre.
-  const logo = new Canvas(256, 256), q = Math.PI / 2;
-  ctxs.forEach((ctx, i) => logo.circle(128, 128, 120, ctx.f.colors.base, i * q, (i + 1) * q));
-  logo.circle(128, 128, 44, usageRef.f.colors.jam);
-  outBin("assets/logos/darkberry.png", logo.png());
   // Footer: a hairline with one dot per flavour, in a mid tone that shows on light and dark pages.
   const foot = new Canvas(W, 40);
   foot.rect(0, 19, W, 2, usageRef.f.colors.overlay0);
   ctxs.forEach((ctx, i) => { foot.circle(W / 2 + (i - (ctxs.length - 1) / 2) * 44, 20, 12, usageRef.f.colors.base); foot.circle(W / 2 + (i - (ctxs.length - 1) / 2) * 44, 20, 9, ctx.f.colors.jam); });
   outBin("assets/footers/darkberry_on_line.png", foot.png());
   outBin("assets/misc/transparent.png", new Canvas(1, 1).png());
+  // The Marketplace takes the extension icon only as a PNG inside the extension, so both
+  // extensions carry a copy of the drawn logo. (The with-tints edition is still Darkberry.)
+  for (const dir of ["ports/vscode", "ports/vscode/with-tints"]) outBin(`${dir}/icon.png`, fs.readFileSync(path.join(root, "assets/logos/darkberry-logo.png")));
 }
 {
   const tpl = read("template/README.md");
@@ -438,6 +437,9 @@ if (!TINT) {
     const vars = {
       NAME: P.name, APP: port.name, APP_URL: port.url || P.homepage, ROOT: up.slice(0, -1),
       REPO: P.repository, REPO_PATH: repoPath, OWNER: owner, YEAR: "2026",
+      // The edition's drawn logo. The SVG everywhere GitHub renders the README; the VS Code
+      // READMEs become Marketplace pages, which refuse SVG images other than approved badges.
+      LOGO: `${up}assets/logos/${TINT || "darkberry"}-logo.${port.key === "vscode" ? "png" : "svg"}`,
       C_BG: usageRef.f.colors.surface0.slice(1), C_TEXT: usageRef.f.colors.text.slice(1),
       C_STARS: hexOf("ui.accent"), C_ISSUES: hexOf("ui.warning"), C_CONTRIBUTORS: hexOf("ui.success"),
       TINTS: tintBar(hrefOf),

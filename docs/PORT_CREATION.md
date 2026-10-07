@@ -104,7 +104,7 @@ below are the same road without the guide.
 `assets/` at the repository root is written by the build and is not edited by hand:
 
 ```
-assets/logos/darkberry.png             the four flavours' bases quartered around a jam centre
+assets/logos/<tint>-logo.svg           the drawn logo per tint (and a PNG copy, which the VS Code READMEs and icon use)
 assets/previews/preview.png            palette strips of all four flavours, the fallback main preview
 assets/previews/<flavour>.png          one flavour's strip, the fallback per-flavour preview
 assets/previews/<tint>/...             the same strips for each tint

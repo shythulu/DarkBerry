@@ -32,7 +32,7 @@ package.json              devDependencies for the site build only: the Tailwind 
 dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
 ports/<port>/             generated theme files, a README written from template/, and assets/ for screenshots
 ports/<port>/<tint>/      the same for each tint (VS Code and the GIMP palette carry tints in one unit instead)
-assets/                   generated logo, footer and fallback palette previews used by every port README
+assets/                   the drawn logos, plus the generated footer and fallback palette previews every port README uses
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results

@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img src="../../../assets/logos/darkberry.png" width="100" alt="Logo"/><br/>
+	<img src="../../../assets/logos/crowberry-logo.svg" width="100" alt="Logo"/><br/>
 	<img src="../../../assets/misc/transparent.png" height="30" width="0px"/>
 	Crowberry for <a href="https://kde.org/plasma-desktop/">KDE Plasma</a>
 	<img src="../../../assets/misc/transparent.png" height="30" width="0px"/>

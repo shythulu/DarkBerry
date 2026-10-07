@@ -8,6 +8,9 @@ dates and a confidence level; **Not applicable**, the venues checked and ruled o
 **Open questions**, the decisions a human has to make before submitting. Nothing has been
 submitted anywhere except Firefox (see `../AMO.md`).
 
+Listing text (names, short and long descriptions, keywords, one-liners) lives in
+`copy/`, one file per port as it gets written; `copy/vscode.md` is the first.
+
 Confidence means: *verified*, read from the venue's own docs or repo; *partly verified*,
 the mechanism is confirmed but some field (an image size, a form label, a review bar) is
 not; *unverified*, only secondary evidence. Anything unverified needs a look in a browser
