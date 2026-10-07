@@ -38,7 +38,7 @@ top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour 
      "New discussion".
   2. Pick category "Show and tell".
   3. Title it with the theme name (e.g. "Darkberry — a JankyBorders/yabai theme, 4 flavours + tints").
-  4. Body: link the site (https://shythulu.github.io/DarkBerry/) and the port folder
+  4. Body: link the site (https://darkberry.slacklab.ca/) and the port folder
      (`ports/borders/`), include a screenshot per flavour, and state the MIT licence.
   5. Post. No approval step — discussions are visible immediately; maintainers may pin notable ones.
 - **Updates**: edit the same discussion post, or reply to it, when the port changes.

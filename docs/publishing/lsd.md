@@ -27,7 +27,7 @@ setting `color: {theme: custom}` in `~/.config/lsd/config.yaml`; there is no pac
      https://github.com/lsd-rs/lsd → New discussion → category "Show and tell").
   3. Title it something like "Darkberry theme for lsd" and link
      https://github.com/shythulu/DarkBerry/tree/main/ports/lsd (or the site page
-     https://shythulu.github.io/DarkBerry/), noting the four flavours/tints, MIT licence, and
+     https://darkberry.slacklab.ca/), noting the four flavours/tints, MIT licence, and
      the lsd-version caveat (1.1+ needs hex `colors.yaml`; 1.0 needs the `.256.yaml` file).
   4. Optionally attach or embed a preview screenshot (no size requirement observed).
 - **Updates**: edit the discussion post directly; no separate re-submission process.

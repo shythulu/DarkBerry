@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Blueberry Mire",
+  "name": "Blueberry - Mire (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Blueberry for Firefox. Blueberry tint of Mire: dark, neutrals leaned toward blueberry (base #192237).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Blueberry tint of Darkberry - Mire: dark, neutrals leaned toward blueberry",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "browser_specific_settings": {
     "gecko": {
       "id": "blueberry-mire@blueberry-theme"

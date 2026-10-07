@@ -28,7 +28,7 @@
 - **Steps**:
   1. Register/sign in at https://discuss.pixls.us.
   2. Open a new topic in Software > darktable (https://discuss.pixls.us/c/software/darktable/19).
-  3. Title it plainly (e.g. "Darkberry — a darktable theme, four flavours"), describe the port, link the GitHub repo and the site (https://shythulu.github.io/DarkBerry/), attach or embed the flavour screenshots.
+  3. Title it plainly (e.g. "Darkberry — a darktable theme, four flavours"), describe the port, link the GitHub repo and the site (https://darkberry.slacklab.ca/), attach or embed the flavour screenshots.
   4. Tag the topic `darktable` (the existing tag) since no dedicated theme tag exists.
 - **Updates**: reply to the same thread, or edit the original post, when the theme changes; no separate re-submission process.
 - **Contacts**: Meta category for site issues https://discuss.pixls.us/c/meta ; Terms of Service https://discuss.pixls.us/tos ; no named moderator/email found in what was fetched.

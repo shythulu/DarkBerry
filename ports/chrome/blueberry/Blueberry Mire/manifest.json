@@ -3,7 +3,7 @@
   "name": "Blueberry Mire",
   "version": "0.3.0",
   "description": "Blueberry for Chrome and Edge. Blueberry tint of Mire: dark, neutrals leaned toward blueberry (base #192237).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [12, 20, 40],

@@ -69,7 +69,7 @@ Settings > Style Configurator.
   3. Include preview images (e.g. from `assets/previews/` or `docs/specimen.html`), a short
      description of the four flavours/tints, and links to the GitHub repo
      (https://github.com/shythulu/DarkBerry) and the site
-     (https://shythulu.github.io/DarkBerry/).
+     (https://darkberry.slacklab.ca/).
   4. A regular contributor/moderator in past threads (PeterJones) has redirected posters toward
      nppThemes as the preferred central listing — expect the same suggestion.
 - **Updates**: edit the original post or reply in the same topic; the forum has no
