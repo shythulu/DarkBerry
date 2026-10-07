@@ -8,6 +8,7 @@
   "engines": {
     "vscode": "^1.70.0"
   },
+  "icon": "icon.png",
   "homepage": "https://shythulu.github.io/DarkBerry/",
   "repository": {
     "type": "git",

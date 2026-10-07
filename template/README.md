@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img src="%ROOT%/assets/logos/darkberry.png" width="100" alt="Logo"/><br/>
+	<img src="%LOGO%" width="100" alt="Logo"/><br/>
 	<img src="%ROOT%/assets/misc/transparent.png" height="30" width="0px"/>
 	%NAME% for <a href="%APP_URL%">%APP%</a>
 	<img src="%ROOT%/assets/misc/transparent.png" height="30" width="0px"/>

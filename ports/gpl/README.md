@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img src="../../assets/logos/darkberry.png" width="100" alt="Logo"/><br/>
+	<img src="../../assets/logos/darkberry-logo.svg" width="100" alt="Logo"/><br/>
 	<img src="../../assets/misc/transparent.png" height="30" width="0px"/>
 	Darkberry for <a href="https://docs.gimp.org/en/gimp-concepts-palettes.html">GIMP Palette</a>
 	<img src="../../assets/misc/transparent.png" height="30" width="0px"/>
