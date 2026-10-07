@@ -6,7 +6,8 @@ has the same shape: **Venues** in order of reach, each with the URL, what it acc
 account and signing requirements, numbered steps, the update path, contacts, sources with
 dates and a confidence level; **Not applicable**, the venues checked and ruled out; and
 **Open questions**, the decisions a human has to make before submitting. Nothing has been
-submitted anywhere except Firefox (see `../AMO.md`).
+submitted anywhere except Firefox (see `../AMO.md`) and, since 2026-10-06, the two VS Code
+extensions on the Visual Studio Marketplace (see `vscode.md`).
 
 Listing text (names, short and long descriptions, keywords, one-liners) lives in
 `copy/`, one file per port as it gets written; `copy/vscode.md` is the first.
