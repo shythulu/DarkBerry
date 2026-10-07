@@ -3,7 +3,7 @@
   "name": "Darkberry Fen",
   "version": "0.3.0",
   "description": "Darkberry for Chrome and Edge. Soft dark. The background (#4c3342) is within a shade of the paint colour.",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [53, 33, 46],

@@ -3,7 +3,7 @@
   "name": "Blueberry Blackwater",
   "version": "0.3.0",
   "description": "Blueberry for Chrome and Edge. Blueberry tint of Blackwater: dark, neutrals leaned toward blueberry (base #0d1529).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [5, 11, 30],

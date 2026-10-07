@@ -3,7 +3,7 @@
   "name": "Cloudberry Fen",
   "version": "0.3.0",
   "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [61, 35, 21],

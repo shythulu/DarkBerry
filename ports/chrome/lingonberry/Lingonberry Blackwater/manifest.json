@@ -3,7 +3,7 @@
   "name": "Lingonberry Blackwater",
   "version": "0.3.0",
   "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Blackwater: dark, neutrals leaned toward lingonberry (base #261017).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [26, 7, 13],
