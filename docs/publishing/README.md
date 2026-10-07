@@ -6,7 +6,9 @@ has the same shape: **Venues** in order of reach, each with the URL, what it acc
 account and signing requirements, numbered steps, the update path, contacts, sources with
 dates and a confidence level; **Not applicable**, the venues checked and ruled out; and
 **Open questions**, the decisions a human has to make before submitting. Nothing has been
-submitted anywhere except Firefox (see `../AMO.md`).
+submitted anywhere except Firefox (see `../AMO.md`) and, since 2026-10-06, the two VS Code
+extensions on the Visual Studio Marketplace (see `vscode.md`) and the four kitty flavours to
+dexpota/kitty-themes (PR open, see `kitty.md`).
 
 Listing text (names, short and long descriptions, keywords, one-liners) lives in
 `copy/`, one file per port as it gets written; `copy/vscode.md` is the first.
@@ -21,7 +23,7 @@ automated fetches outright.
 
 | Port | Best venue | Others | Notes |
 |---|---|---|---|
-| [kitty](kitty.md) | kitty-themes (verified) | iTerm2-Color-Schemes, Gogh | Official collection takes PRs directly |
+| [kitty](kitty.md) | kitty-themes (verified) | dexpota/kitty-themes (PR #74 open), iTerm2-Color-Schemes, Gogh | Official collection takes PRs directly; dexpota's has not merged a PR since 2019 |
 | [Ghostty](ghostty.md) | iTerm2-Color-Schemes (verified) | ghostty.style, Awesome-Ghostty | Ghostty bundles that repo weekly; submit a YAML source, not the generated file |
 | [Alacritty](alacritty.md) | alacritty/alacritty-theme (verified) | rajasegar/alacritty-themes | **Author submissions are refused**; someone else must open the PR |
 | [Konsole](konsole.md) | KDE Store (partly) | Konsole upstream, iTerm2-Color-Schemes, AUR | Upstream bundle is GPL; licence question open |
