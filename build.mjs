@@ -315,9 +315,15 @@ for (const ctx of ctxs) {
   nb.colors = applyOverrides("nimbalyst", "json", nb.colors, ctx);
   out(`ports/nimbalyst/${full}/theme.json`, nb);
   // T3 Code reads the id from the file name, so the slug is the name the reader keeps.
-  const t3 = JSON.parse(fill(ctx, t3codeT, "t3code"));
-  t3.colors = applyOverrides("t3code", "json", t3.colors, ctx);
-  out(`ports/t3code/${slug}.json`, t3);
+  // One file per dark flavour; the light flavour rides along as each file's `variants.light`,
+  // because a T3 Code theme is picked once and shows a half per appearance.
+  if (ctx.f.dark) {
+    const t3 = JSON.parse(fill(ctx, t3codeT, "t3code"));
+    t3.colors = applyOverrides("t3code", "json", t3.colors, ctx);
+    const light = ctxs.find((c) => !c.f.dark);
+    const lightColors = applyOverrides("t3code", "json", JSON.parse(fill(light, t3codeT, "t3code")).colors, light);
+    out(`ports/t3code/${slug}.json`, { ...t3, variants: { light: lightColors } });
+  }
   out(`ports/micro/${slug}.micro`, applyOverrides("micro", "lines", fill(ctx, microT, "micro"), ctx));
   const kt = JSON.parse(fill(ctx, kateT, "kate"));
   kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
