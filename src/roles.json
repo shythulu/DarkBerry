@@ -126,6 +126,42 @@
       "value": "juniper",
       "catppuccin": "="
     },
+    "error.surface": {
+      "value": {
+        "dark": "mix(ui.pane.secondary,ui.error,0.06)",
+        "light": "mix(ui.background,ui.error,0.06)"
+      },
+      "minContrastWith": [
+        "ui.error",
+        4.5
+      ],
+      "catppuccin": "no equivalent (alerts tint the status colour themselves)",
+      "why": "A faint tint of the status colour behind status-coloured text: T3 Code's alerts and Obsidian's callouts. The dark flavours tint ui.pane.secondary, the card surface, because cranberry is only 4.8 to 5.0:1 on Fen's base across the tints and a 6% tint of base drops it to 4.36 (Cloudberry); over mantle the worst case is 5.09. Wisp's mantle is darker than its base, so there the tint comes from the background, 5.16:1."
+    },
+    "warning.surface": {
+      "value": {
+        "dark": "mix(ui.pane.secondary,ui.warning,0.06)",
+        "light": "mix(ui.background,ui.warning,0.06)"
+      },
+      "minContrastWith": [
+        "ui.warning",
+        4.5
+      ],
+      "catppuccin": "no equivalent (alerts tint the status colour themselves)",
+      "why": "The warning counterpart of ui.error.surface, at the same 6% so the three status surfaces sit at one weight."
+    },
+    "info.surface": {
+      "value": {
+        "dark": "mix(ui.pane.secondary,ui.info,0.06)",
+        "light": "mix(ui.background,ui.info,0.06)"
+      },
+      "minContrastWith": [
+        "ui.info",
+        4.5
+      ],
+      "catppuccin": "no equivalent (alerts tint the status colour themselves)",
+      "why": "The info counterpart of ui.error.surface: T3 Code's update banner, at the same 6%."
+    },
     "bell": {
       "value": "honey",
       "catppuccin": "="
