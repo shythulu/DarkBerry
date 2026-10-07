@@ -55,7 +55,7 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   1. Create a gitlab.com account if needed; fork https://gitlab.com/inkscape/inkscape.
   2. Add `share/palettes/darkberry-<flavour>.gpl` for each of Wisp/Fen/Mire/Blackwater
      (matching this port's existing per-flavour files), with a `#` comment citing the site
-     (https://shythulu.github.io/DarkBerry/) and licence (MIT).
+     (https://darkberry.slacklab.ca/) and licence (MIT).
   3. Open a merge request against `master`.
 - **Updates**: a follow-up merge request editing the same file(s) — this directory is
   actively maintained (last new palette merged 2025-12-17, "Add elementary palette").

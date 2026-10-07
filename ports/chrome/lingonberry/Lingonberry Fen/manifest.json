@@ -3,7 +3,7 @@
   "name": "Lingonberry Fen",
   "version": "0.3.0",
   "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Fen: dark, neutrals leaned toward lingonberry (base #55323d).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [61, 32, 41],

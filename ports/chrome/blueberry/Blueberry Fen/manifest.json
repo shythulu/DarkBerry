@@ -3,7 +3,7 @@
   "name": "Blueberry Fen",
   "version": "0.3.0",
   "description": "Blueberry for Chrome and Edge. Blueberry tint of Fen: dark, neutrals leaned toward blueberry (base #2f3b58).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [29, 39, 64],

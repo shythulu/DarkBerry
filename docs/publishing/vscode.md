@@ -6,6 +6,14 @@
 
 ### Visual Studio Marketplace
 
+**Published 2026-10-06**, version 0.3.0, under publisher `Slacklab`, with `npx @vscode/vsce publish --packagePath dist/<file>.vsix` after `vsce login Slacklab`:
+
+- https://marketplace.visualstudio.com/items?itemName=Slacklab.darkberry-theme
+- https://marketplace.visualstudio.com/items?itemName=Slacklab.darkberry-with-tints-theme
+- Manage both at https://marketplace.visualstudio.com/manage/publishers/Slacklab
+
+To update: bump `version` in `src/palette.json` (every variant file carries the same `version`), run `./package.sh`, publish both `.vsix` files again.
+
 - **URL**: https://marketplace.visualstudio.com/manage (publisher management), https://marketplace.visualstudio.com/vscode (public gallery)
 - **Kind**: official gallery (the default source VS Code itself queries)
 - **Accepts**: a packaged `.vsix` built by `vsce`/`@vscode/vsce`. Required `package.json` fields: `publisher`, `name`, `version` (semver), `license`, `repository`, `engines.vscode`, `categories` (already `["Themes"]` here). Icon: PNG, minimum 128x128, 256x256+ recommended, SVG icons are rejected; current `package.json` has no `icon` field set (needs adding before publish — see Open questions). Optional `galleryBanner` (1376x80 banner strip) and `galleryBanner.theme`. README.md becomes the marketplace description; image/badge URLs in it must be HTTPS, and badges must come from an allow-listed set of trusted providers (shields.io is allowed). LICENSE and CHANGELOG.md are conventional but not strictly enforced by the tool.

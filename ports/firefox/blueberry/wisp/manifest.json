@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Blueberry Wisp",
+  "name": "Blueberry - Wisp (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Blueberry for Firefox. Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Blueberry tint of Darkberry - Wisp: light, neutrals leaned toward blueberry",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "browser_specific_settings": {
     "gecko": {
       "id": "blueberry-wisp@blueberry-theme"

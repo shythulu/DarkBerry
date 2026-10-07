@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Crowberry Wisp",
+  "name": "Crowberry - Wisp (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Crowberry for Firefox. Crowberry tint of Wisp: light, neutrals leaned toward crowberry (base #f8f4ff).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Crowberry tint of Darkberry - Wisp: light, neutrals leaned toward crowberry",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "browser_specific_settings": {
     "gecko": {
       "id": "crowberry-wisp@crowberry-theme"
