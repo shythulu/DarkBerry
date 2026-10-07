@@ -19,6 +19,7 @@
     { "key": "notepadpp", "name": "Notepad++", "url": "https://notepad-plus-plus.org", "emoji": "📄", "categories": ["code_editor"], "platform": ["windows"] },
     { "key": "nimbalyst", "name": "Nimbalyst", "url": "https://nimbalyst.com", "emoji": "☁️", "categories": ["code_editor", "note_taking"], "platform": ["linux", "macos", "windows"] },
     { "key": "obsidian", "name": "Obsidian", "url": "https://obsidian.md", "emoji": "💎", "categories": ["note_taking"], "platform": ["linux", "macos", "windows"] },
+    { "key": "t3code", "name": "T3 Code", "url": "https://t3.codes", "emoji": "🤖", "categories": ["artificial_intelligence", "code_editor"], "platform": ["linux", "macos", "windows"] },
     { "key": "firefox", "name": "Firefox", "url": "https://www.mozilla.org/firefox/", "emoji": "🦊", "categories": ["browser"], "platform": ["web"] },
     { "key": "chrome", "name": "Google Chrome", "url": "https://www.google.com/chrome/", "emoji": "🌐", "categories": ["browser"], "platform": ["web"] },
     { "key": "kde", "name": "KDE Plasma", "url": "https://kde.org/plasma-desktop/", "emoji": "🖥️", "categories": ["desktop_environment", "system"], "platform": ["linux"] },

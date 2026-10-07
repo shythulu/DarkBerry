@@ -1,5 +1,6 @@
 [
   { "key": "code_editor", "name": "Code Editors & IDEs", "description": "Tools for writing and editing code, offering syntax highlighting, debugging, etc.", "emoji": "👾" },
+  { "key": "artificial_intelligence", "name": "Artificial Intelligence", "description": "Applications that use or provide AI, such as coding agents and chat clients.", "emoji": "🤖" },
   { "key": "syntax_highlighting", "name": "Syntax Highlighting", "description": "Tools designed to improve syntax highlighting.", "emoji": "🖍️" },
   { "key": "library", "name": "Libraries", "description": "Files that carry the palette itself into another program.", "emoji": "📚" },
   { "key": "cli", "name": "CLI Tools", "description": "Command-line utilities, from file listings to system monitors.", "emoji": "🐚" },

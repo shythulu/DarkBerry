@@ -93,6 +93,9 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | ui.emphasis | 4.5 | 5.64 | 5.84 | 6.33 | 7.19 |
 | ui.on.accent on ui.accent | 4.5 | 4.81 | 4.64 | 4.56 | 4.80 |
 | ui.on.error on ui.error | 4.5 | 6.13 | 6.57 | 6.10 | 6.51 |
+| ui.error on ui.error.surface | 4.5 | 5.17 | 5.27 | 5.35 | 5.90 |
+| ui.warning on ui.warning.surface | 4.5 | 5.22 | 8.13 | 9.63 | 10.78 |
+| ui.info on ui.info.surface | 4.5 | 5.18 | 7.91 | 9.10 | 10.09 |
 | ui.mark.text on ui.mark1 | 4.5 | 5.64 | 7.71 | 8.50 | 9.07 |
 | ui.mark.text on ui.mark2 | 4.5 | 5.63 | 9.35 | 10.05 | 10.73 |
 | ui.mark.text on ui.mark3 | 4.5 | 5.69 | 8.29 | 8.31 | 8.87 |

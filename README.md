@@ -98,6 +98,10 @@ build them yourself with `./package.sh`, which writes the same set into `dist/`.
 - [Notepad++](ports/notepadpp#readme)
 - [Nimbalyst](ports/nimbalyst#readme)
 
+### Artificial Intelligence
+
+- [T3 Code](ports/t3code#readme)
+
 ### Libraries
 
 - [GIMP Palette](ports/gpl#readme)

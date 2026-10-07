@@ -138,6 +138,7 @@ const alacrittyT = read("src/ports/alacritty.toml");
 const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/ports/obsidian.json");
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
+const t3codeT = read("src/ports/t3code.json");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
 const nppT = read("src/ports/notepadpp.xml"), batT = read("src/ports/bat.tmTheme");
 const neovimT = read("src/ports/neovim.lua");
@@ -252,6 +253,13 @@ mustBe("neovim", neovimT, "PmenuSel", "{ui.on.fill} on {ui.fill}", /^H\.PmenuSel
 mustBe("neovim", neovimT, "ErrorMsg", "{ui.on.error} on {ui.error}", /^H\.ErrorMsg = \{ fg = "\{ui\.on\.error\}", bg = "\{ui\.error\}"/m);
 mustBe("neovim", neovimT, "TabLineSel", "{ui.tab.active} underlined in {ui.tab.indicator}", /^H\.TabLineSel = \{ fg = "\{ui\.text\}", bg = "\{ui\.tab\.active\}", underline = true, sp = "\{ui\.tab\.indicator\}" \}$/m);
 mustBe("neovim", neovimT, "Cursor", "{ui.cursor.text} on {ui.cursor}", /^H\.Cursor = \{ fg = "\{ui\.cursor\.text\}", bg = "\{ui\.cursor\}" \}$/m);
+mustBe("t3code", t3codeT, "terminalSelection", "{ui.selection}", /"terminalSelection": "\{ui\.selection\}"/);
+mustBe("t3code", t3codeT, "sidebarRowSelected", "{ui.selection} (the sidebar paints its own text over it)", /"sidebarRowSelected": "\{ui\.selection\}"/);
+mustBe("t3code", t3codeT, "messageAction", "{ui.fill} under {ui.on.fill}", /"messageAction": "\{ui\.fill\}",\n\s*"messageActionForeground": "\{ui\.on\.fill\}"/);
+mustBe("t3code", t3codeT, "focus", "{ui.focus}", /"focus": "\{ui\.focus\}"/);
+mustBe("t3code", t3codeT, "terminalCursor", "{ui.cursor}", /"terminalCursor": "\{ui\.cursor\}"/);
+mustBe("t3code", t3codeT, "errorForeground", "{ui.error} on {ui.error.surface}", /"errorForeground": "\{ui\.error\}",\n\s*"errorSurface": "\{ui\.error\.surface\}"/);
+mustBe("t3code", t3codeT, "accent", "{ui.accent} under {ui.on.accent}", /"accent": "\{ui\.accent\}",\n\s*"accentForeground": "\{ui\.on\.accent\}"/);
 mustBe("neovim", neovimT, "Underlined", "{ui.link}", /^H\.Underlined = \{ fg = "\{ui\.link\}", underline = true \}$/m);
 mustBe("neovim", neovimT, "DiffAdd", "{ui.diff.added}", /^H\.DiffAdd = \{ bg = "\{ui\.diff\.added\}" \}$/m);
 mustBe("neovim", neovimT, "DiffDelete", "{syntax.diff.removed} on {ui.diff.removed}", /^H\.DiffDelete = \{ fg = "\{syntax\.diff\.removed\}", bg = "\{ui\.diff\.removed\}" \}$/m);
@@ -306,6 +314,10 @@ for (const ctx of ctxs) {
   const nb = JSON.parse(fill(ctx, nimbalystT, "nimbalyst"));
   nb.colors = applyOverrides("nimbalyst", "json", nb.colors, ctx);
   out(`ports/nimbalyst/${full}/theme.json`, nb);
+  // T3 Code reads the id from the file name, so the slug is the name the reader keeps.
+  const t3 = JSON.parse(fill(ctx, t3codeT, "t3code"));
+  t3.colors = applyOverrides("t3code", "json", t3.colors, ctx);
+  out(`ports/t3code/${slug}.json`, t3);
   out(`ports/micro/${slug}.micro`, applyOverrides("micro", "lines", fill(ctx, microT, "micro"), ctx));
   const kt = JSON.parse(fill(ctx, kateT, "kate"));
   kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
@@ -520,6 +532,7 @@ for (const line of btopT.split("\n")) { const m = /^theme\[(\w+)\]="(.*)"$/.exec
 walk("firefox", JSON.parse(firefoxT).theme.colors, "colors");
 walk("chrome", JSON.parse(chromeT).theme.colors, "colors");
 walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "colors");
+walk("t3code", JSON.parse(t3codeT).colors, "colors");
 walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
