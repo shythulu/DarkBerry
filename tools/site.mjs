@@ -104,7 +104,17 @@ for (const [id, title, desc] of PAGES) {
   fs.writeFileSync(path.join(out, `${id}.html`), fill(layout, { TITLE: title, DESC: desc, NAV: NAV(id), BODY: body.trim(), SCRIPT: script.trim() }));
 }
 fs.writeFileSync(path.join(out, ".nojekyll"), "");
-for (const [from, to] of [["docs/specimen.html", "specimen.html"], ["dist/palette.json", "palette.json"]]) {
+// The favicon is the Darkberry logo (assets/logos/darkberry-logo.svg) exported from Inkscape as a
+// plain SVG with the "D" converted to a path, since a favicon cannot load the web font. The PNGs
+// are the Safari fallback (96px) and the iOS home-screen icon (180px on the Mire base).
+const COPIES = [
+  ["docs/specimen.html", "specimen.html"],
+  ["dist/palette.json", "palette.json"],
+  ["src/site/icons/favicon.svg", "favicon.svg"],
+  ["src/site/icons/favicon.png", "favicon.png"],
+  ["src/site/icons/apple-touch-icon.png", "apple-touch-icon.png"],
+];
+for (const [from, to] of COPIES) {
   if (!fs.existsSync(path.join(root, from))) { console.error(`Missing ${from}. Run node build.mjs first.`); process.exit(1); }
   fs.copyFileSync(path.join(root, from), path.join(out, to));
 }
