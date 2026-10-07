@@ -1,6 +1,6 @@
 <section id="ports"><div class="wrap">
   <h2><small>the applications</small>Ports</h2>
-  <p class="intro">Every port is generated from the one palette file, so whatever you install matches whatever you already have. Most are one copied file and one line of config. The pictures follow the flavour and tint you choose.</p>
+  <p class="intro">Current ports were agent generated. They are being tested and pushed to any respective theme libraries as time and energy allow. Contributions welcome.</p>
   <div class="pickbar pb-7"><div class="wrap p-0">__PICKERS__</div></div>
   <div class="cards" id="cards"></div>
 </div></section>
@@ -37,7 +37,7 @@ const PORTS = [
 page.push(function cards() {
   $("cards").innerHTML = PORTS.map(([id, n, p, c]) => {
     const shots = D.ports[id] || [], has = shots.includes(tn);
-    const src = has ? `${raw}/ports/${id}${tn === "darkberry" ? "" : "/" + tn}/assets/${fl}.webp` : "";
+    const src = has ? `${raw}/ports/${id}${tn === "darkberry" ? "" : "/" + tn}/assets/preview.webp` : "";
     const shot = has ? `<div class="shot"><img src="${src}" loading="lazy" alt="${n} in ${D.tints[tn].name} ${D.flavours[fl].name}"></div>` : "";
     return `<div class="card${has ? "" : " noshot"}">${shot}<h3>${n}</h3><p>${p}</p><pre>${c(fl)}</pre><a href="${tree}/ports/${id}">${n} files on GitHub</a></div>`;
   }).join("");
