@@ -13,6 +13,7 @@
   "theme_experiment": {
     "stylesheet": "theme.css",
     "colors": {
+      "lwt_frame": "--lwt-frame",
       "spaces_bg": "--spaces-bg-color",
       "spaces_button_active_bg": "--spaces-button-active-bg-color",
       "spaces_button_active_text": "--spaces-button-active-text-color",
@@ -97,6 +98,7 @@
       "sidebar_highlight_border": "#b9488b",
       "button_background_hover": "#c9d2e5",
       "button_background_active": "#b9c1d5",
+      "lwt_frame": "#d8e0f2",
       "spaces_bg": "#d8e0f2",
       "spaces_button_active_bg": "#b9488b",
       "spaces_button_active_text": "#ffffff",

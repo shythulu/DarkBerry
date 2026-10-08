@@ -19713,6 +19713,23 @@
   },
   {
     "port": "thunderbird",
+    "key": "lwt_frame",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "thunderbird",
     "key": "spaces_bg",
     "expr": "{ui.pane.tertiary}",
     "roles": [
