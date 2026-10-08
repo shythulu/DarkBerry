@@ -141,6 +141,10 @@ build them yourself with `./package.sh`, which writes the same set into `dist/`.
 - [Firefox](ports/firefox#readme)
 - [Google Chrome](ports/chrome#readme)
 
+### Browser Extensions
+
+- [Dark Reader](ports/dark-reader#readme)
+
 ### Photo & Video
 
 - [darktable](ports/darktable#readme)
