@@ -77,6 +77,8 @@ Everything else in the README is filled from `src/ports.json` and `src/palette.j
   keys, names and emoji. The first category is where the port is listed in `README.md`.
 - `platform` is `linux`, `macos`, `windows`, `web`, or empty for a format that has no
   platform of its own (Base24).
+- `darkOnly`, optional, `true` for a port that ships only the dark flavours (Dark Reader):
+  the README then lists no preview for Wisp.
 - `maintainers`, optional, adds names to **Thanks to** ahead of the repository's
   maintainers.
 
