@@ -3,7 +3,7 @@
   "name": "Cloudberry Blackwater",
   "version": "0.3.0",
   "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Blackwater: dark, neutrals leaned toward cloudberry (base #261207).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [26, 8, 2],

@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Darkberry Fen",
+  "name": "Darkberry - Fen",
   "version": "0.3.0",
-  "description": "Darkberry for Firefox. Soft dark. The background (#4c3342) is within a shade of the paint colour.",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Darkberry - Fen: Soft dark. The background (#4c3342) is within a shade of the paint colour.",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "browser_specific_settings": {
     "gecko": {
       "id": "darkberry-fen@darkberry-theme"

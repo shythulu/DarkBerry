@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Lingonberry Mire",
+  "name": "Lingonberry - Mire (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Lingonberry for Firefox. Lingonberry tint of Mire: dark, neutrals leaned toward lingonberry (base #341c23).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Lingonberry tint of Darkberry - Mire: dark, neutrals leaned toward lingonberry",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "browser_specific_settings": {
     "gecko": {
       "id": "lingonberry-mire@lingonberry-theme"

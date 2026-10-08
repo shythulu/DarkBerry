@@ -89,10 +89,18 @@ const meta = (ctx) => ({
   SLUG: `${P.id}-${ctx.id}`, ID: P.id, SCHEME: ctx.f.dark ? "dark" : "light",
   FLAVOUR: ctx.f.name,
   HOMEPAGE: P.homepage,
+  // Store-listing name and summary (addons.mozilla.org): "Cloudberry - Blackwater (A Darkberry
+  // Tint)" and "Cloudberry tint of Darkberry - Blackwater: dark, neutrals leaned toward
+  // cloudberry"; the default edition is "Darkberry - Blackwater" with the flavour's note.
+  LISTING: TINT ? `${P.name} - ${ctx.f.name} (A ${TINTS.darkberry.name} Tint)` : `${P.name} - ${ctx.f.name}`,
+  SUMMARY: TINT ? `${P.name} tint of ${TINTS.darkberry.name} - ${ctx.f.name}: ${tintNoteBody(ctx.f.note)}` : `${P.name} - ${ctx.f.name}: ${ctx.f.note}`,
   ISDARK: ctx.f.dark ? "true" : "false",
   ADWAITA: ctx.f.dark ? "-dark" : "", // Adwaita's dark and light stylesheets differ by this suffix
   ...accentHsl(ctx),
 });
+// A tint's flavour note reads "<Tint> tint of <Flavour>: <body> (base #hex)." (tools/variants.mjs
+// writes it); the listing summary wants only the body.
+const tintNoteBody = (n) => (n.match(/^\w+ tint of \w+: (.*?)(?: \(base #[0-9a-fA-F]{6}\))?\.?$/) || [, n])[1];
 // Obsidian builds --color-accent and its hover shades out of these three, so a hex is not enough.
 function accentHsl(ctx) {
   const [H, S, L] = toHsl(ctx.resolve("ui.accent")[0]);
@@ -384,7 +392,7 @@ out(`ports/gpl/${P.id}.gpl`, gpl(P.name, ctxs.flatMap((ctx) => gplOrder.map((k) 
 
 out("ports/vscode/package.json", {
   name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
-  publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
+  publisher: "Slacklab", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
   homepage: P.homepage, repository: { type: "git", url: P.repository },
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
@@ -397,7 +405,7 @@ if (!TINT) {
   out("ports/vscode/with-tints/package.json", {
     name: `${P.id}-with-tints-theme`, displayName: `${P.name} with tints`,
     description: `${P.description} This edition also carries the ${tintNames.join(", ")} tints.`, version: P.version,
-    publisher: "shythulu", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
+    publisher: "Slacklab", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
     homepage: P.homepage, repository: { type: "git", url: P.repository },
     categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
     contributes: { themes: EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },

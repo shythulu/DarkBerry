@@ -64,7 +64,7 @@ Differs from Catppuccin:
   <key>semanticClass</key>
   <string>theme.dark.darkberry-blackwater</string>
   <key>author</key>
-  <string>Darkberry 0.3.0, https://shythulu.github.io/DarkBerry/</string>
+  <string>Darkberry 0.3.0, https://darkberry.slacklab.ca/</string>
   <key>colorSpaceName</key>
   <string>sRGB</string>
   <key>settings</key>
