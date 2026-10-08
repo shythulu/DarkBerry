@@ -77,6 +77,8 @@ Everything else in the README is filled from `src/ports.json` and `src/palette.j
   keys, names and emoji. The first category is where the port is listed in `README.md`.
 - `platform` is `linux`, `macos`, `windows`, `web`, or empty for a format that has no
   platform of its own (Base24).
+- `darkOnly`, optional, `true` for a port that ships only the dark flavours (Dark Reader):
+  the README then lists no preview for Wisp.
 - `maintainers`, optional, adds names to **Thanks to** ahead of the repository's
   maintainers.
 
@@ -104,7 +106,8 @@ below are the same road without the guide.
 `assets/` at the repository root is written by the build and is not edited by hand:
 
 ```
-assets/logos/<tint>-logo.svg           the drawn logo per tint (and a PNG copy, which the VS Code READMEs and icon use)
+assets/logos/<edition>-logo.svg        the logo per edition, its initial over the berries (and a PNG copy, which the VS Code READMEs and icon use)
+assets/logos/<edition>-logo-words.svg  the same with the edition's name underneath
 assets/previews/preview.png            palette strips of all four flavours, the fallback main preview
 assets/previews/<flavour>.png          one flavour's strip, the fallback per-flavour preview
 assets/previews/<tint>/...             the same strips for each tint
@@ -113,5 +116,8 @@ assets/misc/transparent.png            the spacer the template's title uses
 ```
 
 They are drawn by `lib/png.mjs`, a small PNG writer, so the build still has no
-dependencies. Port screenshots under `ports/<key>/assets/` are the one thing under
+dependencies. The logos are the exception: `node tools/logo.mjs` makes them from the one drawn logo in
+`assets/logos/source/`, and needs Inkscape and the Manufacturing Consent font. It sets each
+edition's initial and name the same way and converts the lettering to paths, since a README
+shows the logo through `<img>`, which cannot load the font. Port screenshots under `ports/<key>/assets/` are the one thing under
 `ports/` that is made by hand.

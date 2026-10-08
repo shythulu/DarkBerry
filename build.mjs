@@ -147,6 +147,7 @@ const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
 const t3codeT = read("src/ports/t3code.json");
+const darkReaderT = read("src/ports/dark-reader.txt");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
 const nppT = read("src/ports/notepadpp.xml"), batT = read("src/ports/bat.tmTheme");
 const neovimT = read("src/ports/neovim.lua");
@@ -261,6 +262,8 @@ mustBe("neovim", neovimT, "PmenuSel", "{ui.on.fill} on {ui.fill}", /^H\.PmenuSel
 mustBe("neovim", neovimT, "ErrorMsg", "{ui.on.error} on {ui.error}", /^H\.ErrorMsg = \{ fg = "\{ui\.on\.error\}", bg = "\{ui\.error\}"/m);
 mustBe("neovim", neovimT, "TabLineSel", "{ui.tab.active} underlined in {ui.tab.indicator}", /^H\.TabLineSel = \{ fg = "\{ui\.text\}", bg = "\{ui\.tab\.active\}", underline = true, sp = "\{ui\.tab\.indicator\}" \}$/m);
 mustBe("neovim", neovimT, "Cursor", "{ui.cursor.text} on {ui.cursor}", /^H\.Cursor = \{ fg = "\{ui\.cursor\.text\}", bg = "\{ui\.cursor\}" \}$/m);
+mustBe("dark-reader", darkReaderT, "Selection", "{ui.selection}", /^Selection = \{ui\.selection\}$/m);
+mustBe("dark-reader", darkReaderT, "Background and Text", "{ui.background} and {ui.text}", /^Background = \{ui\.background\}\nText = \{ui\.text\}$/m);
 mustBe("t3code", t3codeT, "terminalSelection", "{ui.selection}", /"terminalSelection": "\{ui\.selection\}"/);
 mustBe("t3code", t3codeT, "sidebarRowSelected", "{ui.selection} (the sidebar paints its own text over it)", /"sidebarRowSelected": "\{ui\.selection\}"/);
 mustBe("t3code", t3codeT, "messageAction", "{ui.fill} under {ui.on.fill}", /"messageAction": "\{ui\.fill\}",\n\s*"messageActionForeground": "\{ui\.on\.fill\}"/);
@@ -323,9 +326,24 @@ for (const ctx of ctxs) {
   nb.colors = applyOverrides("nimbalyst", "json", nb.colors, ctx);
   out(`ports/nimbalyst/${full}/theme.json`, nb);
   // T3 Code reads the id from the file name, so the slug is the name the reader keeps.
-  const t3 = JSON.parse(fill(ctx, t3codeT, "t3code"));
-  t3.colors = applyOverrides("t3code", "json", t3.colors, ctx);
-  out(`ports/t3code/${slug}.json`, t3);
+  // One file per dark flavour; the light flavour rides along as each file's `variants.light`,
+  // because a T3 Code theme is picked once and shows a half per appearance.
+  if (ctx.f.dark) {
+    const t3 = JSON.parse(fill(ctx, t3codeT, "t3code"));
+    t3.colors = applyOverrides("t3code", "json", t3.colors, ctx);
+    const light = ctxs.find((c) => !c.f.dark);
+    const lightColors = applyOverrides("t3code", "json", JSON.parse(fill(light, t3codeT, "t3code")).colors, light);
+    out(`ports/t3code/${slug}.json`, { ...t3, variants: { light: lightColors } });
+  }
+  // Dark Reader: dark flavours only, one settings sheet each, named as its Color Scheme list names them.
+  // With a custom Selection it paints selected text white under HSL lightness 0.5 and black above,
+  // whatever Text is, so the selection has to stay dark enough for white in every flavour and tint.
+  if (ctx.f.dark) {
+    const dr = applyOverrides("dark-reader", "lines", fill(ctx, darkReaderT, "dark-reader"), ctx);
+    out(`ports/dark-reader/${full}.txt`, dr);
+    const sel = /^Selection = (#[0-9a-f]{6})$/m.exec(dr)?.[1] || "#ffffff";
+    if (toHsl(sel)[2] >= 0.5 || contrast("#ffffff", sel) < 4.5) errors.push(`dark-reader: ${full} Selection ${sel} must take white selected text at 4.5:1 or better (Dark Reader picks white or black by lightness)`);
+  }
   out(`ports/micro/${slug}.micro`, applyOverrides("micro", "lines", fill(ctx, microT, "micro"), ctx));
   const kt = JSON.parse(fill(ctx, kateT, "kate"));
   kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
@@ -464,7 +482,7 @@ if (!TINT) {
       C_STARS: hexOf("ui.accent"), C_ISSUES: hexOf("ui.warning"), C_CONTRIBUTORS: hexOf("ui.success"),
       TINTS: tintBar(hrefOf),
       PREVIEW: own("preview.webp") ? "assets/preview.webp" : `${previews}/preview.png`,
-      PREVIEWS: ctxs.map((ctx) => `<details>\n<summary>${ctx.f.emoji} ${ctx.f.name}</summary>\n<img src="${own(`${ctx.id}.webp`) ? `assets/${ctx.id}.webp` : `${previews}/${ctx.id}.png`}"/>\n</details>`).join("\n"),
+      PREVIEWS: ctxs.filter((ctx) => ctx.f.dark || !port.darkOnly).map((ctx) => `<details>\n<summary>${ctx.f.emoji} ${ctx.f.name}</summary>\n<img src="${own(`${ctx.id}.webp`) ? `assets/${ctx.id}.webp` : `${previews}/${ctx.id}.png`}"/>\n</details>`).join("\n"),
       USAGE: usage,
       THANKS: [...(port.maintainers || []), ...REG.maintainers].filter((m, i, a) => a.indexOf(m) === i).map((m) => `- [${m}](https://github.com/${m})`).join("\n"),
     };
@@ -513,7 +531,7 @@ const traceExpr = (port, key, raw) => {
 const walk = (port, o, pre = "") => { if (typeof o === "string") return traceExpr(port, pre, o);
   if (Array.isArray(o)) return o.forEach((v, i) => walk(port, v, `${pre}[${v?.name ? JSON.stringify(v.name) : i}]`));
   if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) walk(port, v, pre ? (pre === "colors" || pre.endsWith("colors") ? `${k}` : `${pre}.${k}`) : k); };
-for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritty", alacrittyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["borders", bordersT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT]])
+for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritty", alacrittyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["borders", bordersT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT], ["dark-reader", darkReaderT]])
   for (const line of text.split("\n")) { const m = /^([\w.-]+(?:\s*=\s*\d+)?)\s*=?\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("#")) traceExpr(port, m[1].replace(/\s+/g, " "), m[2]); }
 // Neovim's template is Lua: H.Group = { ... } and H["@capture"] = { ... } lines, and
 // the vim.g.terminal_color_N assignments; the key is the group or capture name.
