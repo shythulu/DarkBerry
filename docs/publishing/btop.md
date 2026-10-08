@@ -13,16 +13,21 @@ theme format (shared with bpytop/bashtop), meant to be copied to `~/.config/btop
   https://github.com/aristocratos/btop, licensed Apache-2.0)
 - **Kind**: official gallery — themes ship inside the app's own repo and are installed by
   `make install` to the system themes dir; this is the only "built-in" theme collection btop has.
-- **Accepts**: one plain `.theme` file per submission, added directly to `themes/`, named
-  after the theme (existing convention: lower-case, hyphen or underscore, e.g.
-  `kanagawa-dragon.theme`, `catppuccin_mocha.theme`, `gotham.theme` — no fixed rule, just match
-  the existing style). No required front-matter format, but merged examples commonly open with
-  a comment header naming the theme, original palette/author, and licence/attribution when
-  adapted from elsewhere (e.g. `gotham.theme`: "# Credit to Andrea Lopardi ... # Adapted by
-  jrebs"). No preview-image file is committed to the repo; a preview image is instead embedded
-  in the **pull request description** (merged PR #1602 included a `<img>` screenshot inline).
-  No separate metadata file, licence file, or naming registry exists — `CONTRIBUTING.md` has no
+- **Accepts**: one plain `.theme` file per submission, added directly to `themes/`. No
+  separate metadata file, licence file, or naming registry exists — `CONTRIBUTING.md` has no
   theme-specific section at all.
+- **Fields**: Name (the filename, named after the theme; existing convention: lower-case,
+  hyphen or underscore, e.g. `kanagawa-dragon.theme`, `catppuccin_mocha.theme`,
+  `gotham.theme` — no fixed rule, just match the existing style); Description (the PR body,
+  see Steps); Author (in a comment header: no required front-matter format, but merged
+  examples commonly open with one naming the theme, original palette/author, and
+  licence/attribution when adapted from elsewhere, e.g. `gotham.theme`: "# Credit to Andrea
+  Lopardi ... # Adapted by jrebs"); Repository (credited in the same header, see Steps);
+  Licence (MIT, in the same header); Screenshots (one preview image, not committed to the
+  repo but embedded in the **pull request description**; merged PR #1602 included a `<img>`
+  screenshot inline); Title (e.g. "Add Darkberry theme").
+- **Add-ons**: `[AI generated]` in the PR title if any code or content was LLM-generated (see
+  Requirements and Open questions).
 - **Requirements**: no account beyond a GitHub account to open a PR; no fee; no signing keys;
   no CLA bot in `.github/workflows` (checked: `ci.yml`, `cmake.yml`, `test-snap-can-build.yml`,
   `zizmor.yml` — none run a CLA/DCO check). Ordinary maintainer code review applies.

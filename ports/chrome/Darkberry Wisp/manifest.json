@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Darkberry Wisp",
   "version": "0.3.0",
-  "description": "Darkberry for Chrome and Edge. Light. Text is a violet-leaning cousin of the paint colour.",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Darkberry for Chromium browsers. Light. A pale page, the berries deepened to read on it. The light theme that doesn't hurt.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [235, 218, 229],

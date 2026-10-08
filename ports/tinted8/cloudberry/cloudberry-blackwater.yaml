@@ -37,8 +37,8 @@ scheme:
   slug: "cloudberry-blackwater"
   family: "Cloudberry"
   style: "Blackwater"
-  author: "Cloudberry (https://shythulu.github.io/DarkBerry/)"
-  description: "Cloudberry tint of Blackwater: dark, neutrals leaned toward cloudberry (base #261207)."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds warmed toward ripe peach."
 variant: "dark"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

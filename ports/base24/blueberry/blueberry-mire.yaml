@@ -24,8 +24,8 @@
 system: "base24"
 name: "Blueberry Mire"
 slug: "blueberry-mire"
-author: "Blueberry (https://shythulu.github.io/DarkBerry/)"
-description: "Blueberry tint of Mire: dark, neutrals leaned toward blueberry (base #192237)."
+author: "shythulu (https://darkberry.slacklab.ca)"
+description: "Dark. The main flavour, berries at full strength. Backgrounds cooled to a dusty slate blue."
 variant: "dark"
 
 palette:

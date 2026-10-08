@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Crowberry Wisp",
   "version": "0.3.0",
-  "description": "Crowberry for Chrome and Edge. Crowberry tint of Wisp: light, neutrals leaned toward crowberry (base #f8f4ff).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Crowberry for Chromium browsers. Light. A pale page, the berries deepened to read on it. Backgrounds cooled to inky violet.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [226, 220, 239],

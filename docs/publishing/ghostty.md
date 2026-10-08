@@ -22,18 +22,21 @@ by a PR to Ghostty itself.
   point contributors here, and its CI pulls new themes into Ghostty's bundled set weekly.
 - **Accepts**: a source file under `yaml/` (preferred) or `schemes/` (`.itermcolors`, for themes
   exported directly from iTerm2) — never a hand-written file under `ghostty/` or any other
-  per-app output directory, those are generated. File name must be the exact human-readable
-  display name, no slugifying and no underscores for spaces, e.g. `yaml/Darkberry Wisp.yml`. The
-  YAML format (Gogh-based) uses `color_01`–`color_16` (0–7 normal, 8–15 bright), `background`,
-  `foreground`, `cursor`, `cursor_text`, `selection`, `selection_text`, plus optional `name`
-  (must match the filename if given), `author`, and `variant` (`dark`/`light`) — confirmed
-  against the live `yaml/Catppuccin Mocha.yml`. Optional metadata beyond that: an entry in
-  `CREDITS.md` crediting the author. No licence field per theme — the whole repo is MIT and a
-  contribution is accepted under that licence.
+  per-app output directory, those are generated. The YAML format (Gogh-based) uses
+  `color_01`–`color_16` (0–7 normal, 8–15 bright), `background`, `foreground`, `cursor`,
+  `cursor_text`, `selection`, `selection_text`, plus the optional keys under Fields and Add-ons
+  — confirmed against the live `yaml/Catppuccin Mocha.yml`.
+- **Fields**: Name (the file name, the exact human-readable display name, no slugifying and no
+  underscores for spaces, e.g. `yaml/Darkberry Wisp.yml`; optional YAML `name`, which must
+  match the filename if given); Description (the PR template asks for one); Author (optional
+  YAML `author`); Licence (no field per theme: the whole repo is MIT and a contribution is
+  accepted under that licence).
+- **Add-ons**: optional YAML `variant` (`dark`/`light`); an optional entry in `CREDITS.md`
+  crediting the author; a disclosure of AI involvement in the commit message/PR description,
+  which `AGENTS.md` asks for (removable by the human contributor if they prefer).
 - **Requirements**: a GitHub account to open a pull request; no fee, no signing key, no special
   approval beyond ordinary PR review. `AGENTS.md` explicitly welcomes AI-assisted contributions
-  and asks that AI involvement be disclosed in the commit message/PR description (removable by
-  the human contributor if they prefer).
+  (disclosure under Add-ons).
 - **Steps**:
   1. Fork the repo, set up the Python tooling (`python -m venv .venv && source .venv/bin/activate
      && pip install -r requirements.txt`, or use `./generate-all.sh` via Docker).
@@ -71,8 +74,11 @@ by a PR to Ghostty itself.
   a Supabase database behind the site, not as files in the GitHub repo.
 - **Accepts**: a Ghostty theme submitted through the web upload form, validated in real time
   against Ghostty's own config reference (catches bad hex colours, invalid keys, wrong enum
-  values). Exact required metadata fields (author name, tags, preview generation) are not
-  documented in the repo's README and were not verified by using the form itself.
+  values).
+- **Fields**: Author (author name); Keywords (tags); Screenshots (preview generation). None of
+  these are documented as required in the repo's README, and none were verified by using the
+  form itself.
+- **Add-ons**: light/dark marking, per the site's feature list (see Steps); unverified.
 - **Requirements**: unverified — the README does not say whether an account/sign-in is needed to
   upload, and the repo has no `CONTRIBUTING.md`. No fee is implied; the project takes Ko-fi
   donations for hosting.
@@ -96,10 +102,13 @@ by a PR to Ghostty itself.
   maintained" and points to this fork)
 - **Kind**: community repo (curated "awesome list"), not run by Ghostty's maintainers.
 - **Accepts**: one Markdown list item under `## Themes` in `README.md`, format
-  `* [Name](repo-url) - optional short description`. Confirmed from the live `## Themes` section:
-  most entries link straight to the theme's own GitHub repo (e.g. `catppuccin/ghostty`,
-  `rose-pine/ghostty`), roughly alphabetically ordered but not strictly. No preview image or
-  metadata fields live in the list itself.
+  `* [Name](repo-url) - optional short description`, roughly alphabetically ordered but not
+  strictly (confirmed from the live `## Themes` section). No preview image or metadata fields
+  live in the list itself.
+- **Fields**: Name (`[Name]`); Summary (the optional short description after ` - `);
+  Repository (`repo-url`; most entries link straight to the theme's own GitHub repo, e.g.
+  `catppuccin/ghostty`, `rose-pine/ghostty`).
+- **Add-ons**: none.
 - **Requirements**: a GitHub account to open a PR; no fee, no signing, no formal review criteria
   found (no `CONTRIBUTING.md` in the repo).
 - **Steps**:

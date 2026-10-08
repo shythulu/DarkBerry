@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Crowberry Mire",
   "version": "0.3.0",
-  "description": "Crowberry for Firefox. Crowberry tint of Mire: dark, neutrals leaned toward crowberry (base #251d34).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Crowberry for Firefox. Dark. The main flavour, berries at full strength. Backgrounds cooled to inky violet.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "crowberry-mire@crowberry-theme"

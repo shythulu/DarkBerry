@@ -24,8 +24,8 @@
 system: "base24"
 name: "Darkberry Mire"
 slug: "darkberry-mire"
-author: "Darkberry (https://shythulu.github.io/DarkBerry/)"
-description: "The main dark flavour: wine-dark mire with berry accents."
+author: "shythulu (https://darkberry.slacklab.ca)"
+description: "Dark. The main flavour, berries at full strength. Wine-dark, the overnight dredges."
 variant: "dark"
 
 palette:

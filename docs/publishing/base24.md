@@ -8,11 +8,13 @@
 
 - **URL**: https://github.com/tinted-theming/schemes
 - **Kind**: official gallery source / canonical community repo — this is the single repo every current Base16/Base24 builder (`tinty`, `tinted-builder-rust`, `tinted-builder-go`, `tinted-builder-python`) and the gallery site pull schemes from. It replaced the old per-scheme-repo model.
-- **Accepts**: one scheme YAML per flavour, placed in `base24/` at the repo root (flat, no subfolders; e.g. existing multi-flavour families sit as `catppuccin-frappe.yaml`, `catppuccin-latte.yaml`, `catppuccin-macchiato.yaml`, `catppuccin-mocha.yaml`, `gruvbox-dark.yaml`, `gruvbox-light.yaml` — Darkberry's existing `darkberry-<flavour>.yaml` naming already matches this convention). Darkberry's existing `slug`/`description` fields are valid: they are optional fields of the current common scheme format (Builder Guidelines v0.11.2, see tinted-theming/home), not rejected extras.
+- **Accepts**: one scheme YAML per flavour, placed in `base24/` at the repo root (flat, no subfolders).
+- **Fields**: Name (`name`, required); Description (`description`, optional); Author (`author`, required). Darkberry's existing `slug`/`description` fields are valid: they are optional fields of the current common scheme format (Builder Guidelines v0.11.2, see tinted-theming/home), not rejected extras.
+- **Add-ons**: `system` (required); `slug` (optional); `variant` (required); `palette` (required; every `base0x` colour must start with `#`); the filename, `darkberry-<flavour>.yaml`, which already matches the convention of existing multi-flavour families (`catppuccin-frappe.yaml`, `catppuccin-latte.yaml`, `catppuccin-macchiato.yaml`, `catppuccin-mocha.yaml`, `gruvbox-dark.yaml`, `gruvbox-light.yaml`).
 - **Requirements**: a GitHub account to open a PR. No CLA, fee, or signing key found. The repo itself is MIT-licensed (`LICENSE`, copyright Tinted Theming); there is no separate contributor licence statement, so licensing a contributed scheme MIT (which Darkberry already is) matches the repo's own licence but this inbound-licensing expectation is not spelled out anywhere — treat as the norm, not a written rule.
 - **Steps**:
   1. Fork https://github.com/tinted-theming/schemes.
-  2. Add each flavour's YAML file to `base24/` at the repo root (e.g. `base24/darkberry-wisp.yaml`), keeping the existing field structure. Required fields per `scripts/lint`: `author`, `name`, `palette`, `system`, `variant`; every `base0x` colour must start with `#`. `.yamllint.yml` also lints (`extends: default`, line length max 180, `document-start` and `comments` rules disabled).
+  2. Add each flavour's YAML file to `base24/` at the repo root (e.g. `base24/darkberry-wisp.yaml`), keeping the existing field structure. `scripts/lint` checks the required fields (see Fields and Add-ons). `.yamllint.yml` also lints (`extends: default`, line length max 180, `document-start` and `comments` rules disabled).
   3. Repeat for `fen`/`mire`/`blackwater`; a submitting agent should decide whether to also submit the four tints (16 more files) in the same PR or hold them back (see Open questions).
   4. Commit and open a PR against `main`.
   5. The `Test` GitHub Actions workflow (`.github/workflows/test.yml`) runs `yamllint` and `scripts/lint` on PRs — confirmed running and passing on merged PRs (e.g. PR #122, 2026-09-12) even though the workflow file's declared trigger (`on.pull_request.branches: ["spec-**"]`) reads as if it should only fire for PRs targeting `spec-**` branches; the observed behaviour on `main`-targeted PRs contradicts the file as read, so treat the discrepancy as unexplained rather than resolved.
@@ -27,6 +29,8 @@
 - **URL**: https://tinted-theming.github.io/tinted-gallery/ (source: https://github.com/tinted-theming/tinted-gallery)
 - **Kind**: official gallery site.
 - **Accepts**: nothing submitted directly — no separate submission exists for this venue. Its build (`.github/workflows/pages_v2.yaml`) runs `tinty install` (which pulls from `tinted-theming/schemes`) and `tinty gallery --dump`, on every push to `main` and daily via cron (`0 0 * * *`).
+- **Fields**: none stated (the gallery shows whatever `tinted-theming/schemes` holds).
+- **Add-ons**: none.
 - **Requirements**: none for a scheme author; this is fully automatic once a scheme is merged into `tinted-theming/schemes`.
 - **Steps**: none — a scheme appears here automatically after merging into `tinted-theming/schemes` (within one day, or immediately on the next push to that repo's `main` if the gallery's own workflow is manually dispatched sooner).
 - **Updates**: automatic, same mechanism.

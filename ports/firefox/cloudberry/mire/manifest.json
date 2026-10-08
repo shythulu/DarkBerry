@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Cloudberry Mire",
   "version": "0.3.0",
-  "description": "Cloudberry for Firefox. Cloudberry tint of Mire: dark, neutrals leaned toward cloudberry (base #341e13).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Cloudberry for Firefox. Dark. The main flavour, berries at full strength. Backgrounds warmed toward ripe peach.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "cloudberry-mire@cloudberry-theme"

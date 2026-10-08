@@ -2,8 +2,8 @@
   "id": "cloudberry-mire",
   "name": "Cloudberry Mire",
   "version": "0.3.0",
-  "author": "Cloudberry",
-  "description": "Cloudberry tint of Mire: dark, neutrals leaned toward cloudberry (base #341e13).",
+  "author": "shythulu",
+  "description": "Dark. The main flavour, berries at full strength. Backgrounds warmed toward ripe peach.",
   "isDark": true,
   "colors": {
     "bg": "#341e13",

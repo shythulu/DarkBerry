@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Cloudberry Wisp",
   "version": "0.3.0",
-  "description": "Cloudberry for Firefox. Cloudberry tint of Wisp: light, neutrals leaned toward cloudberry (base #fff4ee).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Cloudberry for Firefox. Light. A pale page, the berries deepened to read on it. Backgrounds warmed toward ripe peach.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "cloudberry-wisp@cloudberry-theme"

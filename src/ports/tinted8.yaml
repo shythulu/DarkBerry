@@ -37,8 +37,8 @@ scheme:
   slug: "%SLUG%"
   family: "%NAME%"
   style: "%FLAVOUR%"
-  author: "%NAME% (%HOMEPAGE%)"
-  description: "%NOTE%"
+  author: "%AUTHOR% (%HOMEPAGE%)"
+  description: "%DESCRIPTION%"
 variant: "%SCHEME%"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

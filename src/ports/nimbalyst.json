@@ -2,8 +2,8 @@
   "id": "%SLUG%",
   "name": "%FULL%",
   "version": "%VERSION%",
-  "author": "%NAME%",
-  "description": "%NOTE%",
+  "author": "%AUTHOR%",
+  "description": "%DESCRIPTION%",
   "isDark": %ISDARK%,
   "colors": {
     "bg": "{ui.background}",

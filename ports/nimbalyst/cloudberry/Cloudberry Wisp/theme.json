@@ -2,8 +2,8 @@
   "id": "cloudberry-wisp",
   "name": "Cloudberry Wisp",
   "version": "0.3.0",
-  "author": "Cloudberry",
-  "description": "Cloudberry tint of Wisp: light, neutrals leaned toward cloudberry (base #fff4ee).",
+  "author": "shythulu",
+  "description": "Light. A pale page, the berries deepened to read on it. Backgrounds warmed toward ripe peach.",
   "isDark": false,
   "colors": {
     "bg": "#fff4ee",

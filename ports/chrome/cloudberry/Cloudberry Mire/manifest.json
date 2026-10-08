@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Cloudberry Mire",
   "version": "0.3.0",
-  "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Mire: dark, neutrals leaned toward cloudberry (base #341e13).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Cloudberry for Chromium browsers. Dark. The main flavour, berries at full strength. Backgrounds warmed toward ripe peach.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [37, 17, 6],

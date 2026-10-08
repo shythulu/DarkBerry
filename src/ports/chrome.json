@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "%FULL%",
   "version": "%VERSION%",
-  "description": "%NAME% for Chrome and Edge. %NOTE%",
+  "description": "%NAME% for Chromium browsers. %DESCRIPTION%",
   "homepage_url": "%HOMEPAGE%",
   "theme": {
     "colors": {

@@ -24,8 +24,8 @@
 system: "base24"
 name: "Crowberry Wisp"
 slug: "crowberry-wisp"
-author: "Crowberry (https://shythulu.github.io/DarkBerry/)"
-description: "Crowberry tint of Wisp: light, neutrals leaned toward crowberry (base #f8f4ff)."
+author: "shythulu (https://darkberry.slacklab.ca)"
+description: "Light. A pale page, the berries deepened to read on it. Backgrounds cooled to inky violet."
 variant: "light"
 
 palette:

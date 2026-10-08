@@ -2,8 +2,8 @@
   "id": "lingonberry-fen",
   "name": "Lingonberry Fen",
   "version": "0.3.0",
-  "author": "Lingonberry",
-  "description": "Lingonberry tint of Fen: dark, neutrals leaned toward lingonberry (base #55323d).",
+  "author": "shythulu",
+  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds steeped in raspberry red.",
   "isDark": true,
   "colors": {
     "bg": "#55323d",

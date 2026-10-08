@@ -14,20 +14,23 @@ will accept them.
   bottom of the discover pane. No web URL to submit to.
 - **Kind**: official, but self-hosted (the repo you point at is the distribution).
 - **Accepts**: a git repository whose root (or a folder within it) has a valid
-  `manifest.json`. Required manifest fields: `id` (reverse-domain string, e.g.
-  `com.shythulu.darkberry-wisp`), `name`, `version` (semver). `main` may be omitted for a
-  "manifest-only" theme extension (no JS/build step) — confirmed by the real
-  `packages/extensions/example-theme` fixture in the Nimbalyst repo, which ships only a
-  `manifest.json`. Optional top-level: `description`, `author`, `styles`, `apiVersion`,
-  `requiredReleaseChannel`, `defaultEnabled`, `permissions`. Themes go under
+  `manifest.json`. `main` may be omitted for a "manifest-only" theme extension (no JS/build
+  step) — confirmed by the real `packages/extensions/example-theme` fixture in the Nimbalyst
+  repo, which ships only a `manifest.json`.
+- **Fields**: Name (manifest `name`, required); Description (manifest `description`,
+  optional, free text); Author (manifest `author`, optional); Licence (no `license` field is
+  documented; MIT can only go in a repo `LICENSE` file and the free-text `description`);
+  Version (manifest `version`, semver, required); Screenshots (no documented preview-image
+  field or size for themes specifically — the Marketplace pane shows "screenshots" for
+  extensions generally, but the manifest reference does not name a field for supplying one).
+- **Add-ons**: manifest `id` (required, reverse-domain string, e.g.
+  `com.shythulu.darkberry-wisp`); optional top-level `styles`, `apiVersion`,
+  `requiredReleaseChannel`, `defaultEnabled`, `permissions`; the themes under
   `contributions.themes[]`, each with `id`, `name`, `isDark` (boolean), `colors` (partial
   override map keyed like `bg`, `bg-secondary`, `text`, `primary`, `link`, `success`,
   `warning`, `error`, `info`, plus optional domain-specific keys such as `code-*`,
   `terminal-*`, `diff-*`; missing domain colors are auto-derived). Theme IDs are namespaced at
-  runtime as `extensionId:themeId`. No documented preview-image field or size for themes
-  specifically (the Marketplace pane shows "screenshots" for extensions generally, but the
-  manifest reference does not name a field for supplying one). No `license` field is
-  documented; MIT can only go in a repo `LICENSE` file and the free-text `description`.
+  runtime as `extensionId:themeId`.
 - **Requirements**: none — no account, no fee, no signing, no review. Anyone with the repo URL
   can install it. (This is explicitly the fallback path: docs say "the extensions marketplace
   is still a bit underpopulated," which is why the URL-paste exists.)
@@ -62,6 +65,9 @@ will accept them.
 - **Kind**: official gallery.
 - **Accepts**: same manifest/theme format as above (the catalog is populated from extensions
   that went through some publication step — see below).
+- **Fields**: the same manifest fields as the GitHub-URL install above; no listing form is
+  documented (see Requirements).
+- **Add-ons**: the same as the GitHub-URL install above.
 - **Requirements**: unverified. No developer account signup, submission form, CLI, fee,
   signing key, or review process is documented anywhere checked (docs site, marketplace docs
   page, nimbalyst.com/extensions, the main repo's CONTRIBUTING.md, or general web search for a
@@ -93,6 +99,8 @@ will accept them.
 - **Accepts**: unverified whether third-party themes are accepted into this folder at all —
   the folder's contents (`animation`, `browser`, `git`, `example-theme`, etc.) read as
   first-party/built-in extensions, not a community contrib area.
+- **Fields**: none stated.
+- **Add-ons**: none stated.
 - **Requirements**: standard PR process per `CONTRIBUTING.md` — DCO sign-off
   (`Signed-off-by` trailer, `git commit -s`), commits authored by the person who wrote them,
   Contributor Covenant code of conduct. No mention of a distinct process for adding
@@ -114,6 +122,8 @@ will accept them.
   mechanism above, not a shared registry. Each author just hosts their own repo and shares
   the URL (README, Discord). Not pursued as a distinct venue.
 - **Accepts/Requirements/Steps/Updates**: identical to the GitHub-URL venue above.
+- **Fields**: identical to the GitHub-URL venue above.
+- **Add-ons**: identical to the GitHub-URL venue above.
 - **Contacts**: each repo's own issues.
 - **Sources**: both repos fetched 2026-09-24, including
   https://raw.githubusercontent.com/bglti148/nimbalyst-tokyo-night-theme/main/manifest.json.

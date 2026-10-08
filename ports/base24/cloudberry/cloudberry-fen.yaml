@@ -24,8 +24,8 @@
 system: "base24"
 name: "Cloudberry Fen"
 slug: "cloudberry-fen"
-author: "Cloudberry (https://shythulu.github.io/DarkBerry/)"
-description: "Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524)."
+author: "shythulu (https://darkberry.slacklab.ca)"
+description: "Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds warmed toward ripe peach."
 variant: "dark"
 
 palette:

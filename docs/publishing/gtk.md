@@ -20,15 +20,18 @@ no build/package step — the folder itself is the installable unit.
 - **Kind**: official/dominant community gallery — this is the de facto GNOME/GTK theme store (also
   branded OpenDesktop.org and, for KDE, store.kde.org) that GNOME Tweaks-adjacent tooling and most
   "download a GTK theme" links point to.
-- **Accepts**: a product entry per theme with a title, a rich-text/BBCode-style description, a
-  **Source** field (link to a git repo or the original work being adapted — present on every
-  product page checked), one or more preview images, a downloadable content file (themes are
-  typically a `.tar.gz`/`.zip` of the installable `~/.themes/<name>/` folder), and a licence field:
-  confirmed MIT-licensed content already exists in this exact category (e.g. "Apex Limine Theme",
-  https://www.gnome-look.org/p/2345086, listed as "MIT License, version v1.0"), so MIT is an
-  accepted licence choice, not just GPL/CC as the general Pling marketing copy implies. Exact
+- **Accepts**: a product entry per theme with a downloadable content file (themes are
+  typically a `.tar.gz`/`.zip` of the installable `~/.themes/<name>/` folder). Exact
   preview-image pixel dimensions and file-size/format limits could not be confirmed — the upload
   form itself sits behind login and an anti-bot challenge (see Confidence).
+- **Fields**: Name (title); Description (rich-text/BBCode-style); Category ("GTK3/4 Themes",
+  id 135); Repository (**Source** field, a link to a git repo or the original work being
+  adapted — present on every product page checked); Licence (MIT: confirmed MIT-licensed
+  content already exists in this exact category, e.g. "Apex Limine Theme",
+  https://www.gnome-look.org/p/2345086, listed as "MIT License, version v1.0", so MIT is an
+  accepted licence choice, not just GPL/CC as the general Pling marketing copy implies);
+  Screenshots (one or more preview images).
+- **Add-ons**: none.
 - **Requirements**: a free Pling/OpenDesktop account (register at pling.com; login also offers
   GitHub OAuth per the login page's "for old GitHub login" note); registration requires agreeing
   to Terms of Service and a privacy policy (checkbox on the register page; exact ToS text was not
@@ -74,6 +77,8 @@ no build/package step — the folder itself is the installable unit.
 - **URL**: https://github.com/valpackett/awesome-gtk and https://github.com/Kazhnuz/awesome-gnome
 - **Kind**: community repo (curated README list)
 - **Accepts**: N/A for this port — see Not applicable below.
+- **Fields**: none stated.
+- **Add-ons**: none.
 - **Requirements / Steps / Updates / Contacts**: N/A.
 - **Sources**: raw READMEs of both repos fetched 2026-09-24.
 - **Confidence**: verified (both READMEs read directly) that neither list has a GTK-app-theme

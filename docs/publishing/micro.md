@@ -8,7 +8,9 @@
 
 - **URL**: https://github.com/micro-editor/plugin-channel (list consumed by micro: `https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json`)
 - **Kind**: official store, built into micro's `plugin` command
-- **Accepts**: a colorscheme shipped as a Lua "plugin". The plugin repo needs a `.lua` file whose first line sets `VERSION = "x.y.z"` and that calls `AddRuntimeFile("<name>", "colorscheme", "<file>.micro")` per scheme (e.g. `novln/micro-gotham-colors`: `gotham-colors.lua` + `gotham.micro` + `repo.json`), the `.micro` file(s) alongside it, a `repo.json` at the repo root (`Name`, `Description`, `Website`, `Tags[]`, `Versions[{Version, Url (zip of a tagged release), Require:{micro:">=x.y.z"}}]`), and a LICENSE file.
+- **Accepts**: a colorscheme shipped as a Lua "plugin". The plugin repo needs a `.lua` file that calls `AddRuntimeFile("<name>", "colorscheme", "<file>.micro")` per scheme (e.g. `novln/micro-gotham-colors`: `gotham-colors.lua` + `gotham.micro` + `repo.json`), the `.micro` file(s) alongside it, a `repo.json` at the repo root, and a LICENSE file.
+- **Fields**: Name (`repo.json` `Name`); Description (`repo.json` `Description`); Keywords (`repo.json` `Tags[]`); Homepage (`repo.json` `Website`); Licence (the LICENSE file); Version (`repo.json` `Versions[].Version`, and the `.lua` file's first line, `VERSION = "x.y.z"`).
+- **Add-ons**: each `repo.json` `Versions[]` entry's `Url` (zip of a tagged release) and `Require:{micro:">=x.y.z"}`.
 - **Requirements**: GitHub account to open a PR; no fee, no signing; maintainer review (JoeKar and others) before the zip is uploaded to the channel repo's own `plugins` GitHub Release.
 - **Steps**: 1) Build a plugin repo (DarkBerry's monorepo layout doesn't match the flat plugin shape needed, so this likely wants a small dedicated repo) with `repo.json`, a `.lua` registering each flavour, the `.micro` files, and MIT `LICENSE`. 2) Tag a release and zip it. 3) Fork `plugin-channel`; add either a `plugins/<name>.json` file (legacy in-repo pattern used by `gotham-colors`/`monokai-dark`) or a direct link to your repo's raw `repo.json` (pattern used by newer entries) into `channel.json`. 4) Add a row to the README plugin table. 5) Open a PR with the zip linked or attached. 6) Maintainer reviews and uploads the zip to the `plugins` release if accepted.
 - **Updates**: open a new PR bumping `Versions` in your `repo.json`/`plugins/<name>.json` with the new version and zip link; maintainer re-uploads.
@@ -20,7 +22,9 @@
 
 - **URL**: https://github.com/micro-editor/micro/discussions/4167
 - **Kind**: official-adjacent docs/community listing — a Discussion on the editor's own repo that maintainer JoeKar now explicitly points new-colorscheme submitters to, after closing direct add-to-core PRs.
-- **Accepts**: one top-level comment per colorscheme with a link to the theme's repo and a screenshot. Rules posted by the thread's opener (usfbih8u): stay on topic (link + screenshot only), search the thread first (Ctrl+F, check by URL) to avoid duplicates, only post if it's new, use reactions rather than reply comments to express preference. No file format or metadata is enforced — it just links out to wherever DarkBerry already lives.
+- **Accepts**: one top-level comment per colorscheme. Rules posted by the thread's opener (usfbih8u): stay on topic (link + screenshot only), search the thread first (Ctrl+F, check by URL) to avoid duplicates, only post if it's new, use reactions rather than reply comments to express preference. No file format or metadata is enforced — it just links out to wherever DarkBerry already lives.
+- **Fields**: Repository (a link to the theme's repo); Screenshots (one).
+- **Add-ons**: none.
 - **Requirements**: a GitHub account to comment; no fee, no signing, and no approval gate (it is a discussion, not merged content).
 - **Steps**: 1) Search the discussion for "darkberry" and for `github.com/shythulu/DarkBerry` to confirm it isn't listed. 2) Post one comment linking to `https://github.com/shythulu/DarkBerry` (or straight to `ports/micro/`) with a screenshot, e.g. `ports/micro/assets/preview.webp`. 3) No further step — nothing is merged or reviewed.
 - **Updates**: no formal mechanism; the comment author can edit their own comment, or post a follow-up if the port changes materially.
@@ -32,7 +36,9 @@
 
 - **URL**: https://github.com/Neko-Box-Coder/unofficial-plugin-channel (list: `https://raw.githubusercontent.com/Neko-Box-Coder/unofficial-plugin-channel/main/channel.json`)
 - **Kind**: community-run plugin channel, functions identically to the official one once a user adds it
-- **Accepts**: the same plugin shape as the official channel (own repo with `repo.json` + `.lua` + `.micro` files + LICENSE). `channel.json` there points straight at each plugin's own raw `repo.json` URL (confirmed by inspecting its contents), so version bumps live entirely in your own repo and need no further PR to the channel. New entries also need a row in the channel's own `README.md` (alphabetical) and a line in `PLUGINS_TO_STABLE.md` flagging it for eventual promotion.
+- **Accepts**: the same plugin shape as the official channel (own repo with `repo.json` + `.lua` + `.micro` files + LICENSE). `channel.json` there points straight at each plugin's own raw `repo.json` URL (confirmed by inspecting its contents), so version bumps live entirely in your own repo and need no further PR to the channel.
+- **Fields**: the same `repo.json` fields as the official channel: Name (`Name`); Description (`Description`); Keywords (`Tags[]`); Homepage (`Website`); Licence (the LICENSE file); Version (`Versions[].Version`, and the `.lua` file's `VERSION = "x.y.z"`).
+- **Add-ons**: each `Versions[]` entry's `Url` and `Require`, as for the official channel; the plugin's raw `repo.json` URL in `channel.json` (alphabetical); a row in the channel's own `README.md` (alphabetical); a line in `PLUGINS_TO_STABLE.md` flagging it for eventual promotion.
 - **Requirements**: GitHub (or Gitea) account for your plugin repo and to open the PR; no fee/signing; maintainer review (Neko-Box-Coder) before merge.
 - **Steps**: 1) Same plugin-repo prep as the official channel. 2) Fork `unofficial-plugin-channel`. 3) Add a row to `README.md` (alphabetical). 4) Add your repo's raw `repo.json` URL to `channel.json` (alphabetical). 5) Add the plugin name to `PLUGINS_TO_STABLE.md`. 6) Open a PR to `main` using the repo's PR template.
 - **Updates**: bump `Versions` in your own `repo.json` directly — no PR to the channel needed since it dereferences your URL live.
@@ -44,7 +50,9 @@
 
 - **URL**: https://github.com/micro-garden/pub-colorschemes
 - **Kind**: third-party community repo, distributed both as an installable plugin and as raw `.micro` files
-- **Accepts**: `.micro` files dropped into `colorschemes/`, vendored (copied) rather than linked, with a "Credits" entry in `README.md` crediting the original author/repo. No documented naming rule beyond the existing `<author>-<name>[-tc].micro` pattern; MIT-licensed.
+- **Accepts**: `.micro` files, vendored (copied) rather than linked.
+- **Fields**: Author and Repository (a "Credits" entry in `README.md` crediting the original author/repo); Licence (the repo is MIT-licensed).
+- **Add-ons**: the files go in `colorschemes/`; file names follow the existing `<author>-<name>[-tc].micro` pattern (no documented naming rule beyond it).
 - **Requirements**: unclear — the repo has zero merged PRs and zero open issues in its history, so no PR-based intake is evidenced. The README lists sole author Aki Kareha (`aki@kareha.org`) as contact.
 - **Steps**: 1) Email Aki Kareha (or open an issue, if the repo allows it) linking DarkBerry's micro port and asking for inclusion, since no PR path has ever been used. 2) Alternatively, open a PR adding the four `darkberry-*.micro` files to `colorschemes/` and a Credits line — untested, since no external PR has ever been merged there.
 - **Updates**: unverified — no update mechanism is documented.

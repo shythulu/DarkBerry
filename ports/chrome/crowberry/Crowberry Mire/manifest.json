@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Crowberry Mire",
   "version": "0.3.0",
-  "description": "Crowberry for Chrome and Edge. Crowberry tint of Mire: dark, neutrals leaned toward crowberry (base #251d34).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Crowberry for Chromium browsers. Dark. The main flavour, berries at full strength. Backgrounds cooled to inky violet.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [24, 16, 37],

@@ -37,8 +37,8 @@ scheme:
   slug: "lingonberry-blackwater"
   family: "Lingonberry"
   style: "Blackwater"
-  author: "Lingonberry (https://shythulu.github.io/DarkBerry/)"
-  description: "Lingonberry tint of Blackwater: dark, neutrals leaned toward lingonberry (base #261017)."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds steeped in raspberry red."
 variant: "dark"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

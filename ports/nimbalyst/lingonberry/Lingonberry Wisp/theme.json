@@ -2,8 +2,8 @@
   "id": "lingonberry-wisp",
   "name": "Lingonberry Wisp",
   "version": "0.3.0",
-  "author": "Lingonberry",
-  "description": "Lingonberry tint of Wisp: light, neutrals leaned toward lingonberry (base #fff3f6).",
+  "author": "shythulu",
+  "description": "Light. A pale page, the berries deepened to read on it. Backgrounds steeped in raspberry red.",
   "isDark": false,
   "colors": {
     "bg": "#fff3f6",

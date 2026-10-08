@@ -29,7 +29,7 @@ and every install that came from it.
 
 ```sh
 ./package.sh
-ls dist/*.xpi
+ls ports/firefox/dist/*.xpi
 ```
 
 **2. Create an account** at [addons.mozilla.org](https://addons.mozilla.org/) and go to the
@@ -41,7 +41,7 @@ ls dist/*.xpi
   self-distribution, which is what we deliberately moved away from.
 - Category: **Appearance** (themes are categorised separately from extensions).
 - Licence: **MIT**, matching `LICENSE`.
-- Homepage: `https://shythulu.github.io/DarkBerry/` — already in each manifest as
+- Homepage: `https://darkberry.slacklab.ca` — already in each manifest as
   `homepage_url`, so the field should prefill.
 - Summary: the manifest `description` is a reasonable starting point; AMO's limit is short,
   so trim rather than pad.

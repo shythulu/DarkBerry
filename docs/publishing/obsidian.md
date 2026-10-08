@@ -18,15 +18,18 @@ Obsidian's Appearance switch never changes the flavour.
   `https://docs.obsidian.md/Reference/Manifest`.
 - **Kind**: official gallery (in-app "Community themes" browser).
 - **Accepts**: a GitHub repo whose **default-branch root** holds `manifest.json` and
-  `theme.css` (not a subfolder), a `README.md` (its excerpt shows on the listing page), and a
-  `LICENSE` file (any licence accepted; MIT is fine). `manifest.json` required fields:
-  `name`, `author`, `version` (semver `x.y.z`, must match the GitHub release tag),
-  `minAppVersion`; `authorUrl` and `fundingUrl` are optional. Theme names must be English,
-  Basic Latin, short, must not contain "Theme", must not collide with an existing listed
-  name, and **cannot be changed after acceptance**. A screenshot is required; recommended
-  512×288px, referenced by filename in the directory entry. Directory entry schema (from the
-  live `community-themes.json`): `name`, `author`, `repo` (`owner/repo`, no path/branch
-  field), `screenshot`, `modes` (`["dark","light"]`), optional `legacy`.
+  `theme.css` (not a subfolder), a `README.md` and a `LICENSE` file.
+- **Fields**: Name (manifest `name`, required; English, Basic Latin, short, must not contain
+  "Theme", must not collide with an existing listed name, and **cannot be changed after
+  acceptance**); Description (the `README.md`; its excerpt shows on the listing page); Author
+  (manifest `author`, required); Licence (the `LICENSE` file; any licence accepted, MIT is
+  fine); Version (manifest `version`, required, semver `x.y.z`, must match the GitHub release
+  tag); Screenshots (one, required; 512×288px recommended; referenced by filename in the
+  directory entry).
+- **Add-ons**: manifest `minAppVersion` (required); manifest `authorUrl` and `fundingUrl`
+  (optional); the directory entry, whose schema (from the live `community-themes.json`) is
+  `name`, `author`, `repo` (`owner/repo`, no path/branch field), `screenshot`, `modes`
+  (`["dark","light"]`), optional `legacy`.
 - **Requirements**: a GitHub account (for the repo and to sign in to community.obsidian.md);
   no fee; no code signing; automated checks plus a human reviewer merge the listing (forum
   reports ~1 month turnaround); submissions must conform to

@@ -1,8 +1,6 @@
 .DS_Store
 /site/
 node_modules/
-dist/*.vsix
-dist/*.xpi
-dist/*.zip
+ports/*/dist/
 .claude/settings.local.json
 .claude/worktrees/

@@ -2,8 +2,8 @@
   "id": "blueberry-fen",
   "name": "Blueberry Fen",
   "version": "0.3.0",
-  "author": "Blueberry",
-  "description": "Blueberry tint of Fen: dark, neutrals leaned toward blueberry (base #2f3b58).",
+  "author": "shythulu",
+  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds cooled to a dusty slate blue.",
   "isDark": true,
   "colors": {
     "bg": "#2f3b58",

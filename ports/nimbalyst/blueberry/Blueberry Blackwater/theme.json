@@ -2,8 +2,8 @@
   "id": "blueberry-blackwater",
   "name": "Blueberry Blackwater",
   "version": "0.3.0",
-  "author": "Blueberry",
-  "description": "Blueberry tint of Blackwater: dark, neutrals leaned toward blueberry (base #0d1529).",
+  "author": "shythulu",
+  "description": "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to a dusty slate blue.",
   "isDark": true,
   "colors": {
     "bg": "#0d1529",

@@ -37,8 +37,8 @@ scheme:
   slug: "lingonberry-wisp"
   family: "Lingonberry"
   style: "Wisp"
-  author: "Lingonberry (https://shythulu.github.io/DarkBerry/)"
-  description: "Lingonberry tint of Wisp: light, neutrals leaned toward lingonberry (base #fff3f6)."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Light. A pale page, the berries deepened to read on it. Backgrounds steeped in raspberry red."
 variant: "light"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

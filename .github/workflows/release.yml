@@ -103,6 +103,8 @@ jobs:
             echo
             echo "**Nimbalyst** — unzip \`darkberry-nimbalyst-$version.zip\` into Nimbalyst's themes directory, then pick a flavour under Settings > Themes."
             echo
+            echo "**Thunderbird** — download a flavour's \`darkberry-thunderbird-<flavour>-$version.xpi\`, then Tools > Add-ons and Themes > the gear menu > Install Add-on From File. Thunderbird does not require add-ons to be signed, so the file installs as it is."
+            echo
             echo "**T3 Code** — unzip \`darkberry-t3code-$version.zip\` into \`~/.t3/userdata/themes/\`, then pick a flavour under Settings > Appearance."
             echo
             echo "**darktable** — unzip \`darkberry-darktable-$version.zip\` and copy a flavour beside darktable's own CSS (each file's header gives the path), then pick it under Preferences > General > Theme."
@@ -122,7 +124,7 @@ jobs:
           gh release create "$GITHUB_REF_NAME" \
             --title "Darkberry $GITHUB_REF_NAME" \
             --notes-file notes.md \
-            dist/*.vsix dist/*.xpi dist/*.zip dist/palette.json
+            ports/*/dist/* palette.json
 
       - name: Upload the files as artifacts
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
@@ -130,9 +132,7 @@ jobs:
         with:
           name: darkberry-${{ steps.meta.outputs.version }}
           path: |
-            dist/*.vsix
-            dist/*.xpi
-            dist/*.zip
+            ports/*/dist/*
 
   # Separate job on purpose: the release must not depend on AMO being up or quick.
   amo:

@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Darkberry Blackwater",
   "version": "0.3.0",
-  "description": "Darkberry for Firefox. Darkest. Deeper wine surfaces, same accents as Mire.",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Darkberry for Firefox. Darkest. Deeper surfaces, the same berries as Mire. Blood in bog water.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "darkberry-blackwater@darkberry-theme"

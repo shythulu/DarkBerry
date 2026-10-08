@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Lingonberry Fen",
   "version": "0.3.0",
-  "description": "Lingonberry for Firefox. Lingonberry tint of Fen: dark, neutrals leaned toward lingonberry (base #55323d).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Lingonberry for Firefox. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds steeped in raspberry red.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "lingonberry-fen@lingonberry-theme"

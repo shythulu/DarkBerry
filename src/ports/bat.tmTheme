@@ -64,7 +64,7 @@ Differs from Catppuccin:
   <key>semanticClass</key>
   <string>theme.%SCHEME%.%SLUG%</string>
   <key>author</key>
-  <string>%NAME% %VERSION%, %HOMEPAGE%</string>
+  <string>%AUTHOR%, %HOMEPAGE%</string>
   <key>colorSpaceName</key>
   <string>sRGB</string>
   <key>settings</key>

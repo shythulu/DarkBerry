@@ -1,15 +1,15 @@
 {
   "name": "darkberry-theme",
   "displayName": "Darkberry",
-  "description": "Darkberry: a four-flavour bog-witch berry theme.",
+  "description": "Darkberry: a bog-witch berry theme in four flavours, one light and three dark. Wine-dark plum with berry accents.",
   "version": "0.3.0",
-  "publisher": "shythulu",
+  "publisher": "Slacklab",
   "license": "MIT",
   "engines": {
     "vscode": "^1.70.0"
   },
   "icon": "icon.png",
-  "homepage": "https://shythulu.github.io/DarkBerry/",
+  "homepage": "https://darkberry.slacklab.ca",
   "repository": {
     "type": "git",
     "url": "https://github.com/shythulu/DarkBerry"

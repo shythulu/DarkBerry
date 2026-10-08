@@ -18,6 +18,12 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   `.ASE`, Paint.NET `.TXT` and `.HEX` — so Darkberry's own `.gpl` is a natural fit, but Lospec
   regenerates the export itself from colours entered in its form; it does not take an
   uploaded `.gpl` file directly.
+- **Fields**: Name (form label "Title"); Description (supports links and images); Keywords
+  (Tags); Screenshots (a palette example image; submissions without one are likely rejected
+  as showing no evidence of use).
+- **Add-ons**: an optional Hashtag (letters and numbers only, locked after approval); the "I
+  made this palette" tick (Darkberry is original); the colours themselves (manual hex list,
+  paste, or image upload).
 - **Requirements**: a free account, signed in via Discord, GitHub, Google, Reddit or Twitter.
 - **Steps**:
   1. Sign in, go to https://lospec.com/palettes/submit.
@@ -45,6 +51,10 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   `README` says explicitly "They are in Gimp format (.gpl)." Existing entries (Tango,
   Solarized, GNOME_HIG, elementary) show single-theme submissions, one file each, are the
   norm — not combined multi-theme files.
+- **Fields**: Homepage (cited in a `#` comment in the file); Licence (MIT, in the same `#`
+  comment; most existing `.gpl` files carry no licence header, but the maintainers care about
+  licence clarity, see Requirements).
+- **Add-ons**: the file path, `share/palettes/darkberry-<flavour>.gpl`, one per flavour.
 - **Requirements**: a free gitlab.com account (Inkscape's own `CONTRIBUTING.md` walks through
   sign-up). Inkscape's own source is GPL-2.0-or-later; a contributed MIT-licensed file is
   compatible for inclusion, but the one precedent found (the "elementary" palette, added
@@ -55,7 +65,7 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   1. Create a gitlab.com account if needed; fork https://gitlab.com/inkscape/inkscape.
   2. Add `share/palettes/darkberry-<flavour>.gpl` for each of Wisp/Fen/Mire/Blackwater
      (matching this port's existing per-flavour files), with a `#` comment citing the site
-     (https://shythulu.github.io/DarkBerry/) and licence (MIT).
+     (https://darkberry.slacklab.ca) and licence (MIT).
   3. Open a merge request against `master`.
 - **Updates**: a follow-up merge request editing the same file(s) — this directory is
   actively maintained (last new palette merged 2025-12-17, "Add elementary palette").
@@ -73,6 +83,8 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
 - **URL**: https://gitlab.gnome.org/GNOME/gimp/-/tree/master/data/palettes
 - **Kind**: official — ships inside GIMP itself.
 - **Accepts**: `.gpl` files, same format. In principle a good match.
+- **Fields**: none stated.
+- **Add-ons**: none.
 - **Requirements**: a free gitlab.gnome.org account; no `CONTRIBUTING.md` exists in the repo
   root (checked, none found) and no written policy on new palettes was found.
 - **Steps**: unverified as a live path — see confidence note.
@@ -91,6 +103,8 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
 - **Kind**: official — ships inside Krita itself.
 - **Accepts**: `.gpl` files, but the bundled set is small (14 files) and mostly utility
   palettes (UI swatches, CMYK/RGB grids, pixel-art ramps), not a gallery of named themes.
+- **Fields**: none stated.
+- **Add-ons**: the Krita Artists forum category for the proposal post, "Resources".
 - **Requirements**: a free KDE Identity / invent.kde.org account. Krita's own docs
   (`docs.krita.org/en/resources_page.html`) route contributors to the forum first: "Have a
   resource you made and want to share it with other artists? Let us know on Krita Artists
@@ -117,6 +131,11 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   Inkscape, Krita, MyPaint, Aseprite and Drawpile, with a live HTML preview page.
 - **Accepts**: one `.gpl` file per palette in `palettes/`, following the standard format;
   README has an explicit, current "Contributing" section with concrete rules (see Steps).
+- **Fields**: Name (the file's `Name:` header); Repository
+  (https://github.com/shythulu/DarkBerry, cited as the source in a comment line and in the
+  README entry).
+- **Add-ons**: the `Columns:` header (guideline: ≤ 20-24); a name on every colour; an
+  alphabetically-sorted entry in the repo's `README.md`.
 - **Requirements**: a free GitHub account; repo has no LICENSE file (checked, none), so its
   own redistribution terms for accepted palettes are unclear — worth asking the maintainer.
   Actively maintained (commits as recent as 2026-08-16).
@@ -140,6 +159,8 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
 - **Kind**: curated community repo — collection for GIMP, Inkscape, Aseprite, Drawpile,
   Krita, MyPaint with a GitHub Pages preview.
 - **Accepts**: one `.gpl` file per palette; MIT licensed (compatible with Darkberry's MIT).
+- **Fields**: none stated.
+- **Add-ons**: an entry or link in the README, per its existing conventions (inferred).
 - **Requirements**: a free GitHub account. No `CONTRIBUTING.md` (checked, 404); process
   inferred from commit history. Active (palettes added January 2025).
 - **Steps** (inferred, not documented):
@@ -159,6 +180,8 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   search results confirm it hosts individual `.gpl` uploads (e.g. a "Material Design Palette"
   listing, a hosted `Heraldry.gpl`).
 - **Accepts / Requirements / Steps / Updates / Contacts**: unverified — see Confidence.
+- **Fields**: none stated (unverified, see Confidence).
+- **Add-ons**: none stated.
 - **Sources**: web search snippets referencing https://store.kde.org/p/1416698 and a hosted
   `Heraldry.gpl` (searched 2026-09-24); direct fetches against store.kde.org and
   gnome-look.org via WebFetch and a headless-browser crawl (2026-09-24) were both blocked by

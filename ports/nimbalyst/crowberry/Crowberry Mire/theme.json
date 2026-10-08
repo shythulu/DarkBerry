@@ -2,8 +2,8 @@
   "id": "crowberry-mire",
   "name": "Crowberry Mire",
   "version": "0.3.0",
-  "author": "Crowberry",
-  "description": "Crowberry tint of Mire: dark, neutrals leaned toward crowberry (base #251d34).",
+  "author": "shythulu",
+  "description": "Dark. The main flavour, berries at full strength. Backgrounds cooled to inky violet.",
   "isDark": true,
   "colors": {
     "bg": "#251d34",

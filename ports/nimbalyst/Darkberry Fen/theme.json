@@ -2,8 +2,8 @@
   "id": "darkberry-fen",
   "name": "Darkberry Fen",
   "version": "0.3.0",
-  "author": "Darkberry",
-  "description": "Soft dark. The background (#4c3342) is within a shade of the paint colour.",
+  "author": "shythulu",
+  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Rosy and dusky, for reading at night.",
   "isDark": true,
   "colors": {
     "bg": "#4f3143",

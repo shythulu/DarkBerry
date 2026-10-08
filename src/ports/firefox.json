@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "%FULL%",
   "version": "%VERSION%",
-  "description": "%NAME% for Firefox. %NOTE%",
+  "description": "%NAME% for Firefox. %DESCRIPTION%",
   "homepage_url": "%HOMEPAGE%",
   "browser_specific_settings": { "gecko": { "id": "%SLUG%@%ID%-theme" } },
   "theme": {

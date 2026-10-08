@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Lingonberry Wisp",
   "version": "0.3.0",
-  "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Wisp: light, neutrals leaned toward lingonberry (base #fff3f6).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Lingonberry for Chromium browsers. Light. A pale page, the berries deepened to read on it. Backgrounds steeped in raspberry red.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [239, 217, 223],

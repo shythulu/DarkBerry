@@ -37,8 +37,8 @@ scheme:
   slug: "darkberry-wisp"
   family: "Darkberry"
   style: "Wisp"
-  author: "Darkberry (https://shythulu.github.io/DarkBerry/)"
-  description: "Light. Text is a violet-leaning cousin of the paint colour."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Light. A pale page, the berries deepened to read on it. The light theme that doesn't hurt."
 variant: "light"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

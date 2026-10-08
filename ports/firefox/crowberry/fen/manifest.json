@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Crowberry Fen",
   "version": "0.3.0",
-  "description": "Crowberry for Firefox. Crowberry tint of Fen: dark, neutrals leaned toward crowberry (base #403654).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Crowberry for Firefox. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds cooled to inky violet.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "crowberry-fen@crowberry-theme"

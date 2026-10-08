@@ -3,12 +3,12 @@
 A bog-witch berry theme in four flavours
 (`#4b3540`).
 
-| Flavour | Type | |
+| | Flavour | |
 |---|---|---|
-| Wisp | light | The ubiquitous 'makes your eyes bleed' light theme, but cuter. |
-| Fen | dark | Soft, rosy, dusky kind of vibes, soothing. |
-| Mire | darker | Dark red wine, the overnight dredges. |
-| Blackwater | darkest | Like blood mixed with bog water. |
+| 🕯️ | Wisp | Light. A pale page, the berries deepened to read on it. The light theme that doesn't hurt. |
+| 🌾 | Fen | Soft dark. The gentlest dark flavour, a shade above Mire. Rosy and dusky, for reading at night. |
+| 🪦 | Mire | Dark. The main flavour, berries at full strength. Wine-dark, the overnight dredges. |
+| 🌑 | Blackwater | Darkest. Deeper surfaces, the same berries as Mire. Blood in bog water. |
 
 ## Repository layout
 
@@ -29,14 +29,15 @@ lib/derive.mjs            the fill equation that sets jam and onjam, checked by 
 lib/png.mjs               a small PNG writer for the generated logo, footer and previews
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
 package.json              devDependencies for the site build only: the Tailwind CLI. build.mjs needs nothing from it
-dist/palette.json         Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
-ports/<port>/             generated theme files, a README written from template/, and assets/ for screenshots
+palette.json              Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
+ports/<port>/             generated theme files, a README from template/, assets/ for screenshots, dist/ for packages (gitignored)
 ports/<port>/<tint>/      the same for each tint (VS Code and the GIMP palette carry tints in one unit instead)
 assets/                   the drawn logos, plus the generated footer and fallback palette previews every port README uses
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results
 docs/USAGE.md             which roles and ports use each palette colour
+docs/COPY.md              how the theme is described: names, lines, paragraphs, emoji, and which goes in which listing field
 docs/specimen.html        editor, terminal and browser in all four flavours on one page
 docs/studio.html          Darkberry Studio: edit palette and roles live, then export a patch
 tools/variants.mjs        makes Darkberry variations: node tools/variants.mjs <variant> [hue step] [chroma step]
@@ -84,7 +85,7 @@ Every tagged release carries the packaged files twice over: the plain Darkberry 
 `.vsix` for VS Code, an `.xpi` per flavour for Firefox, and a zip of every other port) and a
 with-tints set (a second `.vsix`, an `.xpi` per tint and flavour, and a `-with-tints` zip
 per port). Download them from [Releases](https://github.com/shythulu/DarkBerry/releases), or
-build them yourself with `./package.sh`, which writes the same set into `dist/`.
+build them yourself with `./package.sh`, which writes each port's packages into its own `ports/<port>/dist/`.
 
 <!-- ports:begin -->
 <!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->
@@ -149,6 +150,10 @@ build them yourself with `./package.sh`, which writes the same set into `dist/`.
 ### Note Taking
 
 - [Obsidian](ports/obsidian#readme)
+
+### Email Clients
+
+- [Thunderbird](ports/thunderbird#readme)
 
 <!-- ports:end -->
 

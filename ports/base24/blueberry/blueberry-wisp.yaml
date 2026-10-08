@@ -24,8 +24,8 @@
 system: "base24"
 name: "Blueberry Wisp"
 slug: "blueberry-wisp"
-author: "Blueberry (https://shythulu.github.io/DarkBerry/)"
-description: "Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff)."
+author: "shythulu (https://darkberry.slacklab.ca)"
+description: "Light. A pale page, the berries deepened to read on it. Backgrounds cooled to a dusty slate blue."
 variant: "light"
 
 palette:

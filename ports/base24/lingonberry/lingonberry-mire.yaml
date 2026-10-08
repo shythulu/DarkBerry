@@ -24,8 +24,8 @@
 system: "base24"
 name: "Lingonberry Mire"
 slug: "lingonberry-mire"
-author: "Lingonberry (https://shythulu.github.io/DarkBerry/)"
-description: "Lingonberry tint of Mire: dark, neutrals leaned toward lingonberry (base #341c23)."
+author: "shythulu (https://darkberry.slacklab.ca)"
+description: "Dark. The main flavour, berries at full strength. Backgrounds steeped in raspberry red."
 variant: "dark"
 
 palette:

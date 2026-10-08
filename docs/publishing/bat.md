@@ -11,7 +11,9 @@ bat, delta, gitui and Sublime Text itself all read.
 
 - **URL**: https://packagecontrol.io/docs/submitting_a_package (docs) · https://github.com/wbond/package_control_channel (the channel repo PRs land in)
 - **Kind**: package registry (official store for Sublime Text; `.tmTheme` is a Sublime Text format, so this is the closest thing bat's theme format has to an "app store", independent of bat itself)
-- **Accepts**: a GitHub or Bitbucket repo whose **root is the package root** (one package per repo). Name rules: avoid the word "Sublime" in the name, use CamelCase or underscore_notation, ASCII only, no `. / \ < > : " | ? *` in the name or file names, not confusingly similar to an existing package name. No `.pyc` files, no `package-metadata.json` committed. No licence/README/preview-image requirement is stated by the docs.
+- **Accepts**: a GitHub or Bitbucket repo whose **root is the package root** (one package per repo). No `.pyc` files, no `package-metadata.json` committed. No licence/README/preview-image requirement is stated by the docs.
+- **Fields**: Name (channel entry `name`: avoid the word "Sublime", use CamelCase or underscore_notation, ASCII only, no `. / \ < > : " | ? *`, not confusingly similar to an existing package name); Repository (channel entry `details`); Version (a semantic-version tag on the repo).
+- **Add-ons**: the channel entry's `releases` (`sublime_text`, `tags`), in the right JSON file under `repository/`; file names ASCII only, with none of `. / \ < > : " | ? *`.
 - **Requirements**: free GitHub (or Bitbucket) account to fork `package_control_channel` and open the PR; no fee, no signing key, no 2FA beyond normal GitHub account security. Manual (human) review of every PR before merge; no stated turnaround time.
 - **Steps**:
   1. Search https://packagecontrol.io for existing similar packages first (they ask you to avoid duplicates).
@@ -28,7 +30,9 @@ bat, delta, gitui and Sublime Text itself all read.
 
 - **URL**: https://github.com/dandavison/delta/blob/main/themes.gitconfig
 - **Kind**: community repo (a curated list bundled in delta's own upstream repo, PR-accepted)
-- **Accepts**: a `[delta "<name>"]` gitconfig block appended to `themes.gitconfig`. Per the file's own header comment: (1) the theme's name inside delta must be some kind of wild organism (mammal, bird, plant, mollusc, any language) — not "Darkberry" or a flavour name as-is; (2) only include style settings essential to the look (get the active set via `delta --show-config`); (3) must set `dark = true` or `light = true` so `delta --show-themes` picks it up; (4) an author-attribution comment line is optional but conventional. The block would set `syntax-theme = "Darkberry Mire"` (etc.), which only resolves if the user has separately installed the matching `.tmTheme` into bat's theme cache — delta does not carry the `.tmTheme` file itself, only a reference to a syntect/bat theme name.
+- **Accepts**: a `[delta "<name>"]` gitconfig block appended to `themes.gitconfig`. The block would set `syntax-theme = "Darkberry Mire"` (etc.), which only resolves if the user has separately installed the matching `.tmTheme` into bat's theme cache — delta does not carry the `.tmTheme` file itself, only a reference to a syntect/bat theme name.
+- **Fields**: Name (the block's `<name>`; per the file's own header comment it must be some kind of wild organism (mammal, bird, plant, mollusc, any language) — not "Darkberry" or a flavour name as-is); Author (an attribution comment line, optional but conventional).
+- **Add-ons**: per the same header comment, only style settings essential to the look (get the active set via `delta --show-config`); `dark = true` or `light = true`, required so `delta --show-themes` picks it up; `syntax-theme` naming the bat theme.
 - **Requirements**: free GitHub account, no fee, no signing, ordinary PR review by the delta maintainers.
 - **Steps**:
   1. Pick an organism name per flavour (e.g. one entry per Darkberry flavour, since each is a distinct look).
