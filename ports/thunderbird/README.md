@@ -20,26 +20,26 @@
 </p>
 
 <p align="center">
-	<img src="../../assets/previews/preview.png"/>
+	<img src="assets/preview.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🕯️ Wisp</summary>
-<img src="../../assets/previews/wisp.png"/>
+<img src="assets/wisp.webp"/>
 </details>
 <details>
 <summary>🌾 Fen</summary>
-<img src="../../assets/previews/fen.png"/>
+<img src="assets/fen.webp"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
-<img src="../../assets/previews/mire.png"/>
+<img src="assets/mire.webp"/>
 </details>
 <details>
 <summary>🌑 Blackwater</summary>
-<img src="../../assets/previews/blackwater.png"/>
+<img src="assets/blackwater.webp"/>
 </details>
 
 ## Usage
@@ -56,9 +56,15 @@ installed. To try a flavour without packaging it, open Tools > Developer Tools >
 Add-ons > Load Temporary Add-on and pick its `manifest.json`; it lasts until Thunderbird
 restarts.
 
-Checked on Thunderbird 157. The theme reaches the folder pane, message list, cards,
-Spaces toolbar and calendar through a theme experiment. The message itself is web content,
-so its body keeps the sender's colours.
+Checked on Thunderbird 157. A theme experiment carries the theme into the folder pane, the
+message list and cards, the Spaces toolbar, the address book and the calendar.
+
+Three things keep their own colours:
+
+- The message body. It is web content, so it shows the sender's colours.
+- The Settings tab. Thunderbird applies no theme there.
+- Calendar events and categories. Each calendar's colour is set in its Properties, and each
+  category's under Settings > Calendar > Categories.
 
 ## 💝 Thanks to
 
