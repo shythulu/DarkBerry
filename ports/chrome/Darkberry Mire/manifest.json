@@ -3,7 +3,7 @@
   "name": "Darkberry Mire",
   "version": "0.3.0",
   "description": "Darkberry for Chrome and Edge. The main dark flavour: wine-dark mire with berry accents.",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [28, 17, 25],

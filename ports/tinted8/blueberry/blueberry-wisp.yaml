@@ -37,7 +37,7 @@ scheme:
   slug: "blueberry-wisp"
   family: "Blueberry"
   style: "Wisp"
-  author: "Blueberry (https://shythulu.github.io/DarkBerry/)"
+  author: "Blueberry (https://darkberry.slacklab.ca/)"
   description: "Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff)."
 variant: "light"
 

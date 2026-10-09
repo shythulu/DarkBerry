@@ -1,6 +1,6 @@
 # Publishing the Starship port
 
-The port ships one complete `starship.toml` preset per flavour (`ports/starship/darkberry-{wisp,fen,mire,blackwater}.toml`), each self-contained with its own `[palettes.darkberry]` table, plus four tint subfolders (`ports/starship/{blueberry,cloudberry,crowberry,lingonberry}/`) holding the same four files recoloured. MIT-licensed, repo `shythulu/DarkBerry`, site `https://shythulu.github.io/DarkBerry/`.
+The port ships one complete `starship.toml` preset per flavour (`ports/starship/darkberry-{wisp,fen,mire,blackwater}.toml`), each self-contained with its own `[palettes.darkberry]` table, plus four tint subfolders (`ports/starship/{blueberry,cloudberry,crowberry,lingonberry}/`) holding the same four files recoloured. MIT-licensed, repo `shythulu/DarkBerry`, site `https://darkberry.slacklab.ca/`.
 
 ## Venues
 
@@ -13,7 +13,7 @@ The port ships one complete `starship.toml` preset per flavour (`ports/starship/
 - **Steps**:
   1. Fork `starship/starship`, branch off `master`.
   2. Copy the four flavour files into `docs/public/presets/toml/` as `darkberry-wisp.toml`, `darkberry-fen.toml`, `darkberry-mire.toml`, `darkberry-blackwater.toml` (matches existing local filenames already).
-  3. Add one doc page, e.g. `docs/presets/darkberry.md`, modeled on `docs/presets/catppuccin-powerline.md`: intro, prerequisites (Nerd Font, since module icons need one per the port's own README), one `<<< @/public/presets/toml/<file>.toml` + preset command block per flavour, and a link to `https://shythulu.github.io/DarkBerry/ports/starship/` for the tints.
+  3. Add one doc page, e.g. `docs/presets/darkberry.md`, modeled on `docs/presets/catppuccin-powerline.md`: intro, prerequisites (Nerd Font, since module icons need one per the port's own README), one `<<< @/public/presets/toml/<file>.toml` + preset command block per flavour, and a link to `https://darkberry.slacklab.ca/ports/starship/` for the tints.
   4. Add a screenshot `docs/public/presets/img/darkberry.png` (PNG, not the repo's `.webp`).
   5. Add a `## [Darkberry](./darkberry.md)` entry to `docs/presets/README.md`.
   6. Fill in `.github/PULL_REQUEST_TEMPLATE.md` in full, including the AI-Assistance section, and open the PR with a Conventional-Commit-style title (e.g. `docs: add Darkberry starship preset`).

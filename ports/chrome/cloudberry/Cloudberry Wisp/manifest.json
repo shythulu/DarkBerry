@@ -3,7 +3,7 @@
   "name": "Cloudberry Wisp",
   "version": "0.3.0",
   "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Wisp: light, neutrals leaned toward cloudberry (base #fff4ee).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [239, 219, 209],

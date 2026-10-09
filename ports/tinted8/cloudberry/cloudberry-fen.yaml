@@ -37,7 +37,7 @@ scheme:
   slug: "cloudberry-fen"
   family: "Cloudberry"
   style: "Fen"
-  author: "Cloudberry (https://shythulu.github.io/DarkBerry/)"
+  author: "Cloudberry (https://darkberry.slacklab.ca/)"
   description: "Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524)."
 variant: "dark"
 

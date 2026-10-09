@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Darkberry Wisp",
+  "name": "Darkberry - Wisp",
   "version": "0.3.0",
-  "description": "Darkberry for Firefox. Light. Text is a violet-leaning cousin of the paint colour.",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "description": "Darkberry - Wisp: Light. Text is a violet-leaning cousin of the paint colour.",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "browser_specific_settings": {
     "gecko": {
       "id": "darkberry-wisp@darkberry-theme"

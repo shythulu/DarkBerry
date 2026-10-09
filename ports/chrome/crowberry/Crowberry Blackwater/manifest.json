@@ -3,7 +3,7 @@
   "name": "Crowberry Blackwater",
   "version": "0.3.0",
   "description": "Crowberry for Chrome and Edge. Crowberry tint of Blackwater: dark, neutrals leaned toward crowberry (base #191126).",
-  "homepage_url": "https://shythulu.github.io/DarkBerry/",
+  "homepage_url": "https://darkberry.slacklab.ca/",
   "theme": {
     "colors": {
       "frame": [15, 8, 27],
