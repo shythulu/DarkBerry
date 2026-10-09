@@ -3,7 +3,8 @@
   "name": "%FULL%",
   "version": "%VERSION%",
   "author": "%AUTHOR%",
-  "description": "%DESCRIPTION%",
+  "description": "%NAME% for Nimbalyst. %DESCRIPTION%",
+  "license": "MIT",
   "isDark": %ISDARK%,
   "colors": {
     "bg": "{ui.background}",

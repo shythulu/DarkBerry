@@ -583,7 +583,7 @@ if (!TINT) {
     if (!TINT) {
       writeReadme(port, "", 2, (e) => e.id === "darkberry" ? null : port.key === "vscode" ? "with-tints/" : port.key === "gpl" ? `${e.id}.gpl` : `${e.id}/`, usage);
       if (port.key === "vscode") {
-        const note = `This edition carries every tint: ${EDITIONS.map((e) => e.name).join(", ")}, four flavours each. Install it instead of the plain ${P.name} extension, not beside it, or the ${P.name} themes are listed twice. The packaged file is \`${P.id}-with-tints-theme-<version>.vsix\`.`;
+        const note = `This extension carries every tint: ${EDITIONS.map((e) => e.name).join(", ")}, four flavours each. Install it instead of the plain ${P.name} extension, not beside it, or the ${P.name} themes are listed twice. The packaged file is \`${P.id}-with-tints-theme-<version>.vsix\`.`;
         // route() sends tint builds' themes here, so this README and package.json are the default build's
         const vsWithTints = { ...port, name: `${port.name} (with tints)` };
         writeReadme(vsWithTints, "with-tints", 3, (e) => e.id === "darkberry" ? "../" : null, `${note}\n\n${usage}`);

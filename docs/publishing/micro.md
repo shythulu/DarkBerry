@@ -22,11 +22,11 @@
 
 - **URL**: https://github.com/micro-editor/micro/discussions/4167
 - **Kind**: official-adjacent docs/community listing — a Discussion on the editor's own repo that maintainer JoeKar now explicitly points new-colorscheme submitters to, after closing direct add-to-core PRs.
-- **Accepts**: one top-level comment per colorscheme. Rules posted by the thread's opener (usfbih8u): stay on topic (link + screenshot only), search the thread first (Ctrl+F, check by URL) to avoid duplicates, only post if it's new, use reactions rather than reply comments to express preference. No file format or metadata is enforced — it just links out to wherever DarkBerry already lives.
+- **Accepts**: one top-level comment per colorscheme. Rules posted by the thread's opener (usfbih8u): stay on topic (link + screenshot only), search the thread first (Ctrl+F, check by URL) to avoid duplicates, only post if it's new, use reactions rather than reply comments to express preference. No file format or metadata is enforced — it just links out to wherever Darkberry already lives.
 - **Fields**: Repository (a link to the theme's repo); Screenshots (one).
 - **Add-ons**: none.
 - **Requirements**: a GitHub account to comment; no fee, no signing, and no approval gate (it is a discussion, not merged content).
-- **Steps**: 1) Search the discussion for "darkberry" and for `github.com/shythulu/DarkBerry` to confirm it isn't listed. 2) Post one comment linking to `https://github.com/shythulu/DarkBerry` (or straight to `ports/micro/`) with a screenshot, e.g. `ports/micro/assets/preview.webp`. 3) No further step — nothing is merged or reviewed.
+- **Steps**: 1) Search the discussion for "darkberry" and for `github.com/shythulu/DarkBerry` to confirm it isn't listed. 2) Post one comment linking the Repository, with `ports/micro/assets/preview.webp` as the screenshot. 3) No further step — nothing is merged or reviewed.
 - **Updates**: no formal mechanism; the comment author can edit their own comment, or post a follow-up if the port changes materially.
 - **Contacts**: the discussion thread itself; repo issues at https://github.com/micro-editor/micro/issues; thread opener usfbih8u, maintainer JoeKar.
 - **Sources**: https://github.com/micro-editor/micro/discussions/4167, https://github.com/micro-editor/micro/pull/3745 (closing comment), https://github.com/micro-editor/micro/pull/4164 (JoeKar/Neko-Box-Coder/usfbih8u discussion of routing new colorschemes here) — checked 2026-09-24.
@@ -54,7 +54,7 @@
 - **Fields**: Author and Repository (a "Credits" entry in `README.md` crediting the original author/repo); Licence (the repo is MIT-licensed).
 - **Add-ons**: the files go in `colorschemes/`; file names follow the existing `<author>-<name>[-tc].micro` pattern (no documented naming rule beyond it).
 - **Requirements**: unclear — the repo has zero merged PRs and zero open issues in its history, so no PR-based intake is evidenced. The README lists sole author Aki Kareha (`aki@kareha.org`) as contact.
-- **Steps**: 1) Email Aki Kareha (or open an issue, if the repo allows it) linking DarkBerry's micro port and asking for inclusion, since no PR path has ever been used. 2) Alternatively, open a PR adding the four `darkberry-*.micro` files to `colorschemes/` and a Credits line — untested, since no external PR has ever been merged there.
+- **Steps**: 1) Email Aki Kareha (or open an issue, if the repo allows it) linking Darkberry's micro port and asking for inclusion, since no PR path has ever been used. 2) Alternatively, open a PR adding the four `darkberry-*.micro` files to `colorschemes/` and a Credits line — untested, since no external PR has ever been merged there.
 - **Updates**: unverified — no update mechanism is documented.
 - **Contacts**: `aki@kareha.org`; repo https://github.com/micro-garden/pub-colorschemes.
 - **Sources**: https://raw.githubusercontent.com/micro-garden/pub-colorschemes/main/README.md, repo metadata via `gh api repos/micro-garden/pub-colorschemes` (pushed 2025-10-26, 0 open issues) — checked 2026-09-24.

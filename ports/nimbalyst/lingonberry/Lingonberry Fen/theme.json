@@ -3,7 +3,8 @@
   "name": "Lingonberry Fen",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds steeped in raspberry red.",
+  "description": "Lingonberry for Nimbalyst. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds steeped in raspberry red.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#55323d",

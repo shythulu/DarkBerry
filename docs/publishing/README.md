@@ -68,10 +68,12 @@ automated fetches outright.
 | [Kate](kate.md) | KSyntaxHighlighting on KDE Invent (verified) | KDE Store | MIT-only bundling rule matches; free KDE Identity account |
 | [Notepad++](notepadpp.md) | nppThemes (partly) | Community forum | **nppThemes relicenses to GPLv3** |
 | [Obsidian](obsidian.md) | community theme directory (partly) | none | One repo per listing; four flavours means four repos or a switcher |
-| [Nimbalyst](nimbalyst.md) | install from GitHub URL (partly) | marketplace catalog (unverified) | Loader wants an extension manifest, not the flat theme.json the port ships |
+| [Nimbalyst](nimbalyst.md) | install from GitHub URL (partly) | marketplace catalog (unverified) | The app loads the port's theme.json from `<userData>/themes` as shipped; only the extension venues want a manifest.json |
 | [T3 Code](t3code.md) | Open VSX via the in-app search (verified) | t3themes.com gallery (verified) | Upstream takes no themes; the in-app search finds the VS Code conversion, not the tuned port; the with-tints extension is on Open VSX, the plain one is not |
 | [Firefox](firefox.md) | AMO (verified) | Zen Browser mods | Already listed; tints would be 16 more listings; Zen wants CC BY-NC-SA |
+| [Thunderbird](thunderbird.md) | addons.thunderbird.net (unverified) | none | Not submitted; whether ATN takes a theme_experiment theme is open |
 | [Chrome](chrome.md) | Chrome Web Store (partly) | Edge Add-ons (verified) | Store policy treats near-identical themes as spam; decide the item count |
+| [Dark Reader](dark-reader.md) | Dark Reader's Color Scheme list (partly) | none | Background and Text only; Selection stays a manual step |
 | [KDE Plasma](kde.md) | KDE Store (partly) | none | Upstream ships only first-party schemes |
 | [GTK 3](gtk.md) | gnome-look.org (partly) | Flathub GTK3 theme extension (opt-in) | Pling site blocks automated fetches; one product per flavour or one bundle is undecided |
 | [JankyBorders](borders.md) | none exists (verified) | yabai/SketchyBar/AeroSpace Discussions | Documented absence |
@@ -108,10 +110,11 @@ Settle these once, before any submission:
 
 Fix in the port before submitting, not in the venue:
 
-- Nimbalyst: the port ships `theme.json` per flavour; Nimbalyst's documented loader reads
-  an extension `manifest.json` with a `contributions.themes` list. The usage text also
-  lacks the on-disk path (`~/.config/Nimbalyst`, `~/Library/Application Support/Nimbalyst`,
-  `%APPDATA%\Nimbalyst`).
+- Nimbalyst: the extension venues (GitHub-URL install, Marketplace) read an extension
+  `manifest.json` with a `contributions.themes` list, so the port's `theme.json` files need
+  repackaging for them. The app itself loads `theme.json` folders from `<userData>/themes`
+  (`~/Library/Application Support/@nimbalyst/electron/themes` on macOS, checked on 0.79.1),
+  which is the path the usage text now names.
 - Chrome: the manifest description now says "for Chromium browsers", since Edge Add-ons
   rejects Chrome-branded wording; whether Partner Center also insists on the word "Edge"
   in the manifest is unverified.

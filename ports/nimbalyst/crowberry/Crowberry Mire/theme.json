@@ -3,7 +3,8 @@
   "name": "Crowberry Mire",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Dark. The main flavour, berries at full strength. Backgrounds cooled to inky violet.",
+  "description": "Crowberry for Nimbalyst. Dark. The main flavour, berries at full strength. Backgrounds cooled to inky violet.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#251d34",

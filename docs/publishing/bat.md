@@ -31,11 +31,11 @@ bat, delta, gitui and Sublime Text itself all read.
 - **URL**: https://github.com/dandavison/delta/blob/main/themes.gitconfig
 - **Kind**: community repo (a curated list bundled in delta's own upstream repo, PR-accepted)
 - **Accepts**: a `[delta "<name>"]` gitconfig block appended to `themes.gitconfig`. The block would set `syntax-theme = "Darkberry Mire"` (etc.), which only resolves if the user has separately installed the matching `.tmTheme` into bat's theme cache — delta does not carry the `.tmTheme` file itself, only a reference to a syntect/bat theme name.
-- **Fields**: Name (the block's `<name>`; per the file's own header comment it must be some kind of wild organism (mammal, bird, plant, mollusc, any language) — not "Darkberry" or a flavour name as-is); Author (an attribution comment line, optional but conventional).
+- **Fields**: Name (the block's `<name>`; per the file's own header comment it must be some kind of wild organism (mammal, bird, plant, mollusc, any language), so it takes COPY.md's organism name rather than "Darkberry" or a flavour name); Author (an attribution comment line, optional but conventional, which also says the entry is Darkberry).
 - **Add-ons**: per the same header comment, only style settings essential to the look (get the active set via `delta --show-config`); `dark = true` or `light = true`, required so `delta --show-themes` picks it up; `syntax-theme` naming the bat theme.
 - **Requirements**: free GitHub account, no fee, no signing, ordinary PR review by the delta maintainers.
 - **Steps**:
-  1. Pick an organism name per flavour (e.g. one entry per Darkberry flavour, since each is a distinct look).
+  1. Name the entry with COPY.md's organism name (`bogberry`); if each flavour gets its own entry, decide how the four are told apart (see Open questions).
   2. Append a `[delta "<organism>"]` block to `themes.gitconfig` with `syntax-theme = "Darkberry <Flavour>"`, `dark = true`, and whichever delta UI colours (decorations, line numbers, etc.) match Darkberry.
   3. Open a PR against https://github.com/dandavison/delta.
 - **Updates**: a follow-up PR editing the same block.
@@ -52,6 +52,6 @@ bat, delta, gitui and Sublime Text itself all read.
 
 ## Open questions
 
-- Package Control requires the package repo root to *be* the package (one package per repo). DarkBerry is a monorepo with many ports, so submitting to Package Control means either standing up a small dedicated repo/mirror just for the Sublime Text `.tmTheme` files (a decision a human should make — new repo under whose account, and whether it auto-syncs from `ports/bat/` or is hand-copied) or skipping this venue. Flag to the human before doing any Package Control work.
-- delta's organism-naming rule means the submitted entry name won't say "Darkberry" — decide on four organism names (one per flavour, or per tint too) and whether to credit "Darkberry" only in the author-comment line.
-- Confirm whether Darkberry wants tint variants (Blueberry/Cloudberry/Crowberry/Lingonberry) submitted anywhere beyond the base Darkberry flavours, since both venues above default to listing one canonical name per look.
+- Package Control requires the package repo root to *be* the package (one package per repo). The DarkBerry repository is a monorepo with many ports, so submitting to Package Control means either standing up a small dedicated repo/mirror just for the Sublime Text `.tmTheme` files (a decision a human should make — new repo under whose account, and whether it auto-syncs from `ports/bat/` or is hand-copied) or skipping this venue. Flag to the human before doing any Package Control work.
+- delta's organism-naming rule means the submitted entry name won't say "Darkberry". COPY.md fixes the name as `bogberry` with Darkberry named in the comment line; still open is whether delta gets one entry (Mire) or one per flavour, and what tells four entries apart.
+- Confirm whether Darkberry wants the tints (Blueberry/Cloudberry/Crowberry/Lingonberry) submitted anywhere beyond the base Darkberry flavours, since both venues above default to listing one canonical name per look.

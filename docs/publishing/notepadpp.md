@@ -1,8 +1,8 @@
 # Publishing the Notepad++ port
 
 `ports/notepadpp/` holds one Style Configurator theme XML per flavour (`Darkberry Wisp.xml`,
-`Darkberry Fen.xml`, `Darkberry Mire.xml`, `Darkberry Blackwater.xml`), plus the four tints in
-their own subfolders (`wisp/`, `fen/`, `mire/`, `blackwater/` under each tint directory).
+`Darkberry Fen.xml`, `Darkberry Mire.xml`, `Darkberry Blackwater.xml`), plus a `<tint>/`
+folder per tint with the same four files named for that tint (`lingonberry/Lingonberry Mire.xml`).
 Install is manual: drop a `.xml` into `%APPDATA%\Notepad++\themes\`, then pick it in
 Settings > Style Configurator.
 
@@ -64,9 +64,8 @@ Settings > Style Configurator.
   https://community.notepad-plus-plus.org/topic/26557/3-new-themes,
   https://community.notepad-plus-plus.org/topic/15421/twodark-theme) link out rather than
   attaching the XML directly.
-- **Fields**: none mandated; existing threads carry Description (short); Repository (a link
-  to the theme's own GitHub repo/download); Screenshots (preview screenshots inline, no
-  mandated image size).
+- **Fields**: none mandated; existing threads carry Title; Description (short); Repository (a
+  link in the post); Screenshots (inline, no mandated image size).
 - **Add-ons**: none.
 - **Requirements**: a forum account (free registration). No fee, no review/approval gate to
   post a topic; moderators can act after the fact per normal forum rules (not read in detail).
@@ -74,10 +73,10 @@ Settings > Style Configurator.
   1. Register/log in at https://community.notepad-plus-plus.org/.
   2. Start a new topic in "Notepad++ & Plugin Development"
      (https://community.notepad-plus-plus.org/category/5/notepad-plugin-development).
-  3. Include preview images (e.g. from `assets/previews/` or `docs/specimen.html`), a short
-     description of the four flavours/tints, and links to the GitHub repo
-     (https://github.com/shythulu/DarkBerry) and the site
-     (https://darkberry.slacklab.ca).
+  3. Title it `Darkberry: a berry theme for Notepad++ in four flavours` (COPY.md's forum post
+     title). Include the Screenshots (`ports/notepadpp/assets/` once it has them, the palette
+     strips under `assets/previews/` until then), the Description, and links to the Repository
+     and the Homepage.
   4. A regular contributor/moderator in past threads (PeterJones) has redirected posters toward
      nppThemes as the preferred central listing — expect the same suggestion.
 - **Updates**: edit the original post or reply in the same topic; the forum has no

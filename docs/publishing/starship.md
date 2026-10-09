@@ -60,6 +60,6 @@ The port ships one complete `starship.toml` preset per flavour (`ports/starship/
 ## Open questions
 
 - Four separate preset files (`darkberry-wisp.toml` etc., matching current filenames, one doc page with four download/embed blocks) versus one multi-palette `darkberry.toml` with `palette = 'darkberry_wisp'`/`'darkberry_fen'`/etc. like Catppuccin's port — no upstream rule forces either; the separate-files route needs no rework of the existing `ports/starship/*.toml`.
-- Whether to submit the four tints (16 more files) to `starship/starship` at all, or keep that PR to the four base flavours only and point to the DarkBerry site for tints — 20 presets in one PR risks reading as the "overly verbose"/scope-creep contributions `AI_POLICY.md` says maintainers may close without notice.
+- Whether to submit the four tints (16 more files) to `starship/starship` at all, or keep that PR to the four base flavours only and point to the Darkberry site for tints — 20 presets in one PR risks reading as the "overly verbose"/scope-creep contributions `AI_POLICY.md` says maintainers may close without notice.
 - Who is the human account holder opening and defending the PR — `AI_POLICY.md` requires a person who can explain every line and answer maintainer questions unaided, and forbids an unsupervised autonomous agent submitting it.
 - Which screenshot becomes `docs/public/presets/img/darkberry.png` — the port's own `assets/preview.webp` needs converting to PNG, or a fresh terminal capture taken to match the doc's screenshot convention.

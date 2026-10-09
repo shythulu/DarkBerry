@@ -17,10 +17,10 @@ setting `color: {theme: custom}` in `~/.config/lsd/config.yaml`; there is no pac
   this discussion category is the only place in the project itself where people post themes.
 - **Accepts**: free-form post, with no fixed format. Posts point out to an external repo rather
   than attaching the theme file itself.
-- **Fields**: Title (no pattern); Description (prose, as in the existing example, "Solarized
-  Light/Dark Theme", discussion #917); Repository (a link to the author's own theme repo);
-  Screenshots (optional, no preview-image size defined). No file-naming rule or metadata
-  schema is defined.
+- **Fields**: Title (no venue pattern); Description (prose, as in the existing example,
+  "Solarized Light/Dark Theme", discussion #917); Repository (a link in the post);
+  Homepage (a link in the post); Screenshots (optional, no preview-image size defined). No
+  file-naming rule or metadata schema is defined.
 - **Add-ons**: the "Show and tell" category.
 - **Requirements**: a free GitHub account (signed in) to post; no fee, no signing key, no formal
   review — discussions are not moderated for acceptance, just for conduct.
@@ -28,10 +28,9 @@ setting `color: {theme: custom}` in `~/.config/lsd/config.yaml`; there is no pac
   1. Sign in to GitHub.
   2. Open the "Show and tell" category new-discussion link above (or Discussions tab on
      https://github.com/lsd-rs/lsd → New discussion → category "Show and tell").
-  3. Title it something like "Darkberry theme for lsd" and link
-     https://github.com/shythulu/DarkBerry/tree/main/ports/lsd (or the site page
-     https://darkberry.slacklab.ca), noting the four flavours/tints, MIT licence, and
-     the lsd-version caveat (1.1+ needs hex `colors.yaml`; 1.0 needs the `.256.yaml` file).
+  3. Title it `Darkberry: a berry theme for lsd in four flavours` (COPY.md's forum post
+     title). Write the Description, link the Repository and the Homepage, and add the
+     lsd-version caveat (1.1+ reads the hex `colors.yaml`; 1.0 needs the `.256.yaml` file).
   4. Optionally attach or embed a preview screenshot (no size requirement observed).
 - **Updates**: edit the discussion post directly; no separate re-submission process.
 - **Contacts**: same GitHub Discussions thread; repo issue tracker at
@@ -59,7 +58,7 @@ setting `color: {theme: custom}` in `~/.config/lsd/config.yaml`; there is no pac
 - **Curated third-party list ("awesome-lsd")**: searched and found none. What exists instead is a
   scatter of independent, unaffiliated theme repos other authors made for lsd (e.g.
   `catppuccin/lsd`, `draculatheme.com/lsd`, `bradleyhop/lsd-solarized-theme`) — each is its own
-  standalone repo/site, not a directory Darkberry could list itself in. DarkBerry's own repo
+  standalone repo/site, not a directory Darkberry could list itself in. Darkberry's own repository
   and site already fill that same role for this port, so nothing further to submit to here.
 
 ## Open questions

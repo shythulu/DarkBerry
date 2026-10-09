@@ -1,6 +1,6 @@
 # Publishing the GIMP port
 
-Port folder `ports/gimp/` ships one `gimp-dark.css` (or `gimp-light.css` for Wisp) per flavour, plus tint sub-folders (`ports/gimp/<tint>/`), each an MIT-licensed drop-in replacement for a copy of GIMP's `Default` theme CSS that the user places under `~/.config/GIMP/<version>/themes/`. The port ships no GIMP-authored (GPL-3) files itself — its CSS only `@import`s the user's own local copy of GIMP's GPL-3 `common.css` / `System/gimp.css`.
+Port folder `ports/gimp/` ships one `darkberry-<flavour>.css` per flavour, plus tint sub-folders (`ports/gimp/<tint>/`), each an MIT-licensed drop-in replacement for a copy of GIMP's `Default` theme CSS that the user places under `~/.config/GIMP/<version>/themes/`. The port ships no GIMP-authored (GPL-3) files itself — its CSS only `@import`s the user's own local copy of GIMP's GPL-3 `common.css` / `System/gimp.css`.
 
 ## Venues
 
@@ -43,14 +43,14 @@ Port folder `ports/gimp/` ships one `gimp-dark.css` (or `gimp-light.css` for Wis
 - **URL**: https://discuss.pixls.us/c/software/gimp/24
 - **Kind**: community repo — a Discourse forum for Free/Open-Source photography and imaging tools, not run by the GIMP project
 - **Accepts**: finished GIMP themes posted as new topics; live examples found: "A new neutral grey theme for GIMP 3", "HyperflatGraphite: a new dark theme for GIMP 3.x", "GIMP 'Dracula' inspired theme"
-- **Fields**: Description; Homepage; Repository (link to the GitHub repo/release); Licence (MIT for the CSS; note that it imports the user's own local copy of GIMP's GPL-3 CSS and redistributes nothing GPL); Screenshots; Title (following the pattern of comparable topics, "<Name>: a new theme for GIMP 3")
+- **Fields**: Description; Homepage; Repository (link to the GitHub repo/release); Licence (note that the CSS imports the user's own local copy of GIMP's GPL-3 CSS and redistributes nothing GPL); Screenshots; Title (following the pattern of comparable topics, "<Name>: a new theme for GIMP 3")
 - **Add-ons**: the forum category, Software > GIMP (https://discuss.pixls.us/c/software/gimp/24)
 - **Requirements**: free Discourse account; content must be the poster's own work or permitted ("You may not post anything digital that belongs to someone else without permission"); no AI-generated filler content per site guidelines
 - **Steps**:
   1. Register/log in at discuss.pixls.us.
   2. Create a new topic in Software > GIMP (https://discuss.pixls.us/c/software/gimp/24).
   3. Title it clearly, following the pattern of comparable topics ("<Name>: a new theme for GIMP 3").
-  4. Include description, screenshots, license (MIT for the CSS; note that it imports the user's own local copy of GIMP's GPL-3 CSS and redistributes nothing GPL), and a link to the GitHub repo/release/site.
+  4. Include description, screenshots, licence (note that the CSS imports the user's own local copy of GIMP's GPL-3 CSS and redistributes nothing GPL), and a link to the GitHub repo/release/site.
   5. Respond to replies in-thread.
 - **Updates**: reply in the same topic announcing new versions/tints, or edit the first post.
 - **Contacts**: forum moderators via the site; guidelines at https://discuss.pixls.us/guidelines; no maintainer email found.

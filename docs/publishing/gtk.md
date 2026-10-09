@@ -1,6 +1,6 @@
 # Publishing the GTK port
 
-`ports/gtk/<Darkberry Flavour>/` (four flavours) plus `ports/gtk/<tint>/<Darkberry Flavour>/`
+`ports/gtk/Darkberry <Flavour>/` (four flavours) plus `ports/gtk/<tint>/<Tint> <Flavour>/`
 (tints) hold one theme folder per flavour with `gtk-3.0/` and `gtk-4.0/` in it: GTK's own Adwaita
 stylesheets (vendored under `vendor/`) compiled with Darkberry's colours by `build.mjs` and
 `sassc`. A user copies a flavour folder into `~/.themes/` and selects it. The folder itself is
@@ -45,8 +45,8 @@ the installable unit; there is no packaging step beyond `package.sh`'s zips.
      "Add content" URL/button could not be reached (see Confidence); it is reachable from the
      account menu once logged in, per the forum thread
      https://forum.opendesktop.org/t/how-to-upload-grub-theme-to-gnome-look-org/18168.
-  3. Fill in title, description, Source (link to https://github.com/shythulu/DarkBerry), licence
-     (MIT), and upload preview image(s) plus the packaged theme file(s) — one product per flavour,
+  3. Fill in the Fields above (the Repository goes in **Source**), and upload the packaged
+     theme file(s) — one product per flavour,
      or one product covering all four with flavour folders inside one archive, is a judgement call
      (see Open questions).
   4. Publish.

@@ -51,6 +51,8 @@ reach it. This one does.
 2. Copy a flavour from this folder into that new theme folder as `gimp-dark.css` (`gimp-light.css` for Wisp). It imports `common-dark.css` from beside it, which is why step 1 has to come first.
 3. Pick it under Edit > Preferences > Interface > Theme.
 
+Needs GIMP 3; checked on GIMP 3.2.6.
+
 One honest warning. A coloured frame around a photo changes how you judge the colours
 inside it, which is why GIMP ships grey themes. Darkberry uses its least saturated colours
 around the image, but for serious grading, switch back to a grey theme. The palette itself, for the colour picker, is the

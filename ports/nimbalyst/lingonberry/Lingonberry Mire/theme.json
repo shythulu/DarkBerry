@@ -3,7 +3,8 @@
   "name": "Lingonberry Mire",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Dark. The main flavour, berries at full strength. Backgrounds steeped in raspberry red.",
+  "description": "Lingonberry for Nimbalyst. Dark. The main flavour, berries at full strength. Backgrounds steeped in raspberry red.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#341c23",
