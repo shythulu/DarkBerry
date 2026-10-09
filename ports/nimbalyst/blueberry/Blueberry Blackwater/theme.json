@@ -3,7 +3,8 @@
   "name": "Blueberry Blackwater",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to a dusty slate blue.",
+  "description": "Blueberry for Nimbalyst. Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to a dusty slate blue.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#0d1529",

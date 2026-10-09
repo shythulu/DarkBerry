@@ -3,7 +3,8 @@
   "name": "Crowberry Wisp",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Light. A pale page, the berries deepened to read on it. Backgrounds cooled to inky violet.",
+  "description": "Crowberry for Nimbalyst. Light. A pale page, the berries deepened to read on it. Backgrounds cooled to inky violet.",
+  "license": "MIT",
   "isDark": false,
   "colors": {
     "bg": "#f8f4ff",

@@ -1,7 +1,7 @@
 # Publishing the JankyBorders port
 
 The `borders` port lives in `ports/borders/`: one `darkberry-<flavour>.sh` bordersrc per flavour at the
-top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour under
+top level (`wisp`, `fen`, `mire`, `blackwater`) plus the same four per tint under
 `ports/borders/<tint>/`. Each file is a plain shell script setting `active_color`/`inactive_color`
 (and width/style/hidpi defaults) that a user copies over `~/.config/borders/bordersrc`.
 
@@ -36,15 +36,15 @@ top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour 
   here, it is just visibility among yabai users.
 - **Fields**: Description (the discussion body); Homepage; Repository
   (https://github.com/shythulu/DarkBerry; the port folder, `ports/borders/`, can follow it in
-  the body); Licence (MIT, stated in the body); Screenshots (one per flavour); Title
-  (the theme name, e.g. "Darkberry — a JankyBorders/yabai theme, 4 flavours + tints").
+  the body); Licence (stated in the body); Screenshots (one per flavour); Title
+  (COPY.md's forum post title, with JankyBorders as the app).
 - **Add-ons**: the discussion category, "Show and tell".
 - **Requirements**: a GitHub account; sign in to create a Discussion in that repo.
 - **Steps**:
   1. Go to https://github.com/koekeishiya/yabai/discussions/categories/show-and-tell and click
      "New discussion".
   2. Pick category "Show and tell".
-  3. Title it with the theme name (e.g. "Darkberry — a JankyBorders/yabai theme, 4 flavours + tints").
+  3. Title it with COPY.md's forum post title: "Darkberry: a berry theme for JankyBorders in four flavours".
   4. Body: link the site (https://darkberry.slacklab.ca) and the port folder
      (`ports/borders/`), include a screenshot per flavour, and state the MIT licence.
   5. Post. No approval step — discussions are visible immediately; maintainers may pin notable ones.

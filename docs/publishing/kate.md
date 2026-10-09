@@ -14,8 +14,8 @@
 - **Requirements**: a free KDE Identity account is enough — per KDE's own wiki, "You do not need a KDE Developer account to browse source code, log into invent.kde.org, submit merge requests." No fee, no signing key. Merge requests go through normal maintainer review before merge (unspecified timeline; the Catppuccin theme set took two follow-up MRs — !476, !478 — after the initial merge to tweak colours and backport).
 - **Steps**:
   1. Create a KDE Identity account and sign in at https://invent.kde.org.
-  2. Fork `frameworks/syntax-highlighting`, add the four `darkberry-*.theme` files (and per-tint variants, if submitting those too) under `data/themes/`, each with the `copyright`/`license`/`name`/`revision` metadata already present in this repo's files.
-  3. Open a merge request against `master`, following the precedent in https://invent.kde.org/frameworks/syntax-highlighting/-/merge_requests/455: describe the theme, link the source project (`https://github.com/shythulu/DarkBerry`), and attach a preview screenshot per flavour in the MR description.
+  2. Fork `frameworks/syntax-highlighting`, add the four `darkberry-*.theme` files (and the tint sets, if submitting those too) under `data/themes/`, each with the `copyright`/`license`/`name`/`revision` metadata already present in this repo's files.
+  3. Open a merge request against `master`, following the precedent in https://invent.kde.org/frameworks/syntax-highlighting/-/merge_requests/455: describe the theme with the port's line and paragraph (`../COPY.md`), link the Repository, and attach a preview screenshot per flavour in the MR description.
   4. Respond to review comments; the KDE Kate blog post on submissions warns against opening a tracking issue asking for a theme to be added — submit a working MR directly instead (https://kate-editor.org/post/2020/2020-09-18-submit-a-ksyntaxhighlighting-color-theme/).
 - **Updates**: a follow-up merge request against the same file(s), bumping `revision` in the metadata — this is exactly how the Catppuccin themes were later tweaked (MR !476). Merged changes ship with the next KSyntaxHighlighting/Frameworks release; there is no separate re-publish step.
 - **Contacts**: issue tracker https://invent.kde.org/frameworks/syntax-highlighting/-/issues ; Kate Matrix room https://go.kde.org/matrix/#/%23kate:kde.org (bridged to IRC `#kate`); Kate section of KDE Discuss https://discuss.kde.org ; bug tracker https://bugs.kde.org.
@@ -33,7 +33,7 @@
 - **Steps** (assembled from a first-hand forum account, since the store's own pages could not be fetched — see Confidence):
   1. Register/sign in at store.kde.org.
   2. Go to https://store.kde.org/product/add.
-  3. Fill the form: title (e.g. "Darkberry"), category "Kate" (cat 472) — or "Plasma Color Schemes" if "Kate" turns out not to accept `.theme` uploads at submission time, per one older report that no Kate-specific category existed yet — description, licence (MIT), source-code URL (`https://github.com/shythulu/DarkBerry`), tags.
+  3. Fill the form with the Fields above, in category "Kate" (cat 472) — or "Plasma Color Schemes" if "Kate" turns out not to accept `.theme` uploads at submission time, per one older report that no Kate-specific category existed yet.
   4. Upload preview image(s) — `ports/kate/assets/wisp.webp`, `fen.webp`, `mire.webp`, `blackwater.webp`, `preview.webp` are candidates; format may need converting from `.webp` if the uploader requires PNG/JPG (unverified).
   5. Attach the four `.theme` files as the downloadable content.
   6. Submit/publish.

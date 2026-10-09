@@ -20,6 +20,8 @@ applicable*), so "publishing" means being found from inside the app or in the co
   `sideBar.background`, `button.background`, `list.activeSelectionBackground`,
   `terminal.selectionBackground`, `textLink.foreground` and so on). The result is an automatic
   conversion of the VS Code port, not the hand-tuned port in `ports/t3code/`.
+- **Fields**: the VS Code extension's, as `vscode.md` lists them; nothing is entered here.
+- **Add-ons**: none.
 - **Accepts**: a VS Code theme extension published to Open VSX, which is the same `.vsix` the
   Visual Studio Marketplace takes. `ports/vscode/` and `ports/vscode/with-tints/` already are
   that; `docs/publishing/vscode.md` has the Open VSX account, agreement, token and `ovsx publish`
@@ -29,12 +31,13 @@ applicable*), so "publishing" means being found from inside the app or in the co
   the publisher `Slacklab`, which the in-app search does not query. So a search for "Darkberry"
   inside T3 Code today finds only the with-tints extension.
 - **Steps**:
-  1. Publish `dist/darkberry-theme-<version>.vsix` to Open VSX under `shythulu` (`npx ovsx
-     publish dist/darkberry-theme-<version>.vsix -p <token>`), as `vscode.md` step 6 says.
+  1. Publish `dist/darkberry-theme-<version>.vsix` to Open VSX (`npx ovsx publish
+     dist/darkberry-theme-<version>.vsix -p <token>`), as `vscode.md` step 6 says. It lands in
+     the namespace named by `publisher`, `Slacklab` (see *Namespace mismatch* below).
   2. In T3 Code, Settings → Appearance → Search community themes → "Darkberry", confirm both
      listings appear, import one and compare it with the hand-tuned file for the same flavour.
-  3. Mention in the VS Code listing copy (`copy/vscode.md`) that T3 Code imports it, and that
-     `ports/t3code/` holds the tuned version.
+  3. Mention in the VS Code port's usage text (`src/usage/vscode.md`) that T3 Code imports it,
+     and that `ports/t3code/` holds the tuned version.
 - **Updates**: the same as the VS Code port: bump `version`, `./package.sh`, `ovsx publish` again.
 - **Contacts**: Open VSX namespace and operations issues at
   https://github.com/EclipseFdn/open-vsx.org; the registry software at
@@ -66,6 +69,10 @@ applicable*), so "publishing" means being found from inside the app or in the co
   guide asks for the surfaces, foregrounds, accents and `border` at minimum; the port sets all 57.
   A `variants` block for the other appearance is "strongly encouraged": it gets the theme both
   screenshots and the hover crossfade on its card. The port's files already carry one.
+- **Fields**: Name (`name`, 48 characters or fewer); Summary (`description`, 200 characters or
+  fewer); Author (`author`, the PR opener's GitHub username); Screenshots (generated in CI after
+  merge; none from here).
+- **Add-ons**: `id`, which is also the filename (see Accepts); `appearance`; `variants`.
 - **Requirements**: a GitHub account; one theme per pull request; the diff must touch only the
   new `themes/<id>.json`; `npm install && npm run validate` must print `✓ N theme file(s) valid`.
   No fee, no signing. Screenshots are generated in CI after merge.
@@ -126,12 +133,15 @@ applicable*), so "publishing" means being found from inside the app or in the co
 - **Gallery file shape**: settled 2026-10-07. The port ships one file per dark flavour with Wisp
   as `variants.light`, so the gallery gets three entries with both screenshots each and no
   standalone Wisp entry. Each tint's files carry that tint's own Wisp the same way.
-- **Namespace mismatch.** The Marketplace publisher is `Slacklab`, the Open VSX namespace is
-  `shythulu`. T3 Code shows the Open VSX namespace in its search results. Decide whether to keep
-  both, or move one before publishing the plain extension to Open VSX.
+- **Namespace mismatch.** The Marketplace publisher is `Slacklab`; the with-tints extension sits
+  on Open VSX under `shythulu`. `../COPY.md` *Identity* makes `Slacklab` the publisher on both
+  registries, and T3 Code shows the Open VSX namespace in its search results. Decide what happens
+  to the `shythulu` listing (leave it, deprecate it, or ask Open VSX to move it) before the next
+  `ovsx publish` creates a second one under `Slacklab`.
 - **What the in-app search finds is the VS Code conversion.** Once both extensions are on Open
   VSX, T3 Code users will import an automatic conversion that differs from `ports/t3code/` (the
   conversion derives the status surfaces, sidebar rows and send button from VS Code keys). Decide
   whether the VS Code README should say so and point at the tuned files.
 - **Tints in the gallery.** Twelve more entries, or none; the gallery has no notion of a family,
-  and `description` is the only place to say "Cloudberry is Darkberry's peach tint".
+  and `description` is the only place to carry the tint's short ("Cloudberry is Darkberry with
+  its backgrounds warmed toward ripe peach. Same four flavours, same berry accents.").

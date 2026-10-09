@@ -16,7 +16,7 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
 - **Kind**: official gallery / store — the only distribution channel Chrome itself offers.
 - **Accepts**: a `.zip` (max 2 GB) of one flavour's `manifest.json` + assets, uploaded as a
   separate item per flavour (repetitive-content policy — see Open questions — makes "one item
-  per colour variant" risky, but is how most existing colour-family themes are structured
+  per flavour" risky, but is how most existing colour-family themes are structured
   anyway).
 - **Fields**: Description (detailed description); Category; Version (`manifest.json` version);
   Icon (128×128 PNG store icon, required); Screenshots (at least one, max 5, 1280×800 or
@@ -64,9 +64,9 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
 - **Accepts**: the same Manifest V3 `theme.colors` file Chrome uses, since Edge is Chromium-
   based and documents extension code/manifest keys as directly compatible; the only required
   change is dropping any `update_url` (not present here) and rebranding "Chrome" wording used
-  in the name or description — Darkberry's Chrome manifests currently say "Darkberry for
-  Chrome and Edge" in `description`, which Edge's own porting guide says must be changed to
-  reference Microsoft Edge to pass certification. Upload is a `.zip` per flavour.
+  in the name or description. The manifests' `description` now says "Darkberry for Chromium
+  browsers", which avoids the Chrome brand Edge's porting guide objects to; whether
+  certification also wants Microsoft Edge named is unverified. Upload is a `.zip` per flavour.
 - **Fields**: Name (read from the manifest); Summary (the manifest's short description);
   Description (per language, 250–10,000 characters, required — the manifest's short
   description is too short and needs expanding in Partner Center); Category (required);
@@ -130,8 +130,8 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
 ## Open questions
 
 - Chrome's spam policy names "multiple extensions which merely provide different wallpapers"
-  as a repetitive-content violation that should be one item. Darkberry Chrome is 4 flavours ×
-  5 palettes (Darkberry plus 4 tints) = up to 20 near-identical items. A human needs to decide
+  as a repetitive-content violation that should be one item. The Chrome port is 4 flavours ×
+  5 tints (Darkberry plus 4 more) = up to 20 near-identical items. A human needs to decide
   before submitting anything: list only the 4 base Darkberry flavours (still some risk), list
   all 20, or build a single item with an in-extension flavour picker (not straightforward for
   a declarative MV3 theme — would need a background service worker swapping the applied theme,
@@ -140,6 +140,6 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
   above — mirrors the same open question already raised in `docs/publishing/firefox.md`.
 - Whose Google account (2-Step Verification required, pays the one-time fee) and whose
   Microsoft/Partner Center account (individual vs. company) submissions go through.
-- The Edge rebranding requirement: current manifests' `description` says "Darkberry for
-  Chrome and Edge." Decide whether to edit that string per build target or leave the manifest
-  alone and only change the listing text entered directly in Partner Center.
+- The Edge rebranding requirement: the manifests' `description` says "Darkberry for Chromium
+  browsers", with no Chrome brand. Decide whether Edge needs its own build naming Microsoft
+  Edge, or whether the listing text entered in Partner Center is enough.

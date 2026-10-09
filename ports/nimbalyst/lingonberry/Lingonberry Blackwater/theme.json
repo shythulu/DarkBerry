@@ -3,7 +3,8 @@
   "name": "Lingonberry Blackwater",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds steeped in raspberry red.",
+  "description": "Lingonberry for Nimbalyst. Darkest. Deeper surfaces, the same berries as Mire. Backgrounds steeped in raspberry red.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#261017",

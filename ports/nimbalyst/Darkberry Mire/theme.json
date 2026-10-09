@@ -3,7 +3,8 @@
   "name": "Darkberry Mire",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Dark. The main flavour, berries at full strength. Wine-dark, the overnight dredges.",
+  "description": "Darkberry for Nimbalyst. Dark. The main flavour, berries at full strength. Wine-dark, the overnight dredges.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#2a1e26",

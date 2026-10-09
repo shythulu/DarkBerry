@@ -3,7 +3,8 @@
   "name": "Blueberry Mire",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Dark. The main flavour, berries at full strength. Backgrounds cooled to a dusty slate blue.",
+  "description": "Blueberry for Nimbalyst. Dark. The main flavour, berries at full strength. Backgrounds cooled to a dusty slate blue.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#192237",

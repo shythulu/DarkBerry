@@ -29,11 +29,11 @@ pulled in with `import = [...]`.
   `catppuccin_mocha.png`, no fixed pixel requirement found).
 - **Add-ons**: the `{theme}` filename: existing names are lower_snake_case, e.g.
   `catppuccin_mocha.toml`, `rose_pine_dawn.toml`, `everforest_dark_hard.toml` — multi-word
-  flavour families are one file per variant, so Darkberry's 16 files fit the existing pattern,
+  flavour families are one file per flavour, so Darkberry's 16 files fit the existing pattern,
   e.g. `darkberry_wisp.toml`, `darkberry_lingonberry_wisp.toml`.
 - **Requirements**: no account approval, fee, or signing — a GitHub PR is the whole process.
   The one hard rule: **"submissions by theme authors are not accepted, to ensure there's at
-  least some community interest."** This means shythulu (or any DarkBerry maintainer) opening
+  least some community interest."** This means shythulu (or any Darkberry maintainer) opening
   the PR directly is against the stated policy; it needs a third party (a user of the theme) to
   submit it, or at minimum the PR should not read as self-promotion from the author. The repo
   itself is Apache-2.0 licensed; it does not require contributed theme files to be relicensed,
@@ -42,7 +42,7 @@ pulled in with `import = [...]`.
   1. A non-author community member forks https://github.com/alacritty/alacritty-theme.
   2. Add each Darkberry file to `themes/` as `{theme}.toml` (strip or keep the build-generated
      header comment — not specified either way; existing theme files carry no header comments,
-     so trimming DarkBerry's explanatory header to just the `[colors.*]` tables would match
+     so trimming Darkberry's explanatory header to just the `[colors.*]` tables would match
      house style more closely — unverified whether this matters to reviewers).
   3. Run `print_colors.sh` in a terminal configured with that theme, screenshot it, save as
      `images/{theme}.png`.
@@ -65,7 +65,7 @@ pulled in with `import = [...]`.
 - **Confidence**: verified for the file format, naming convention, screenshot mechanism and the
   author-submission restriction (all quoted/observed directly from the live repo). Unverified:
   whether reviewers enforce the no-self-submission rule strictly in practice, whether a 16-file
-  single-PR submission is acceptable in one go or should be split, and whether the DarkBerry
+  single-PR submission is acceptable in one go or should be split, and whether the Darkberry
   build-generated header comment is welcome or should be stripped.
 
 ## Not applicable
@@ -108,7 +108,7 @@ pulled in with `import = [...]`.
 - Who submits the PR to `alacritty/alacritty-theme` — the stated rule excludes the theme's own
   author, so this needs a community member (someone who actually uses Darkberry in Alacritty) to
   open it, not shythulu directly. A submitting agent should surface this rather than open the PR
-  from the DarkBerry maintainer's own account.
+  from the Darkberry maintainer's own account.
 - Whether to submit all 16 flavour×tint files in one PR or start with the four base Darkberry
   flavours and follow up with tints once those land — the repo has precedent for large
   multi-variant families (everforest has 6, github has 7) but no stated limit either way.

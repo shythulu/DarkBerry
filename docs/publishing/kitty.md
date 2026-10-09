@@ -1,6 +1,6 @@
 # Publishing the kitty port
 
-`ports/kitty/` holds one `.conf` per flavour (`darkberry-wisp.conf`, `darkberry-fen.conf`, `darkberry-mire.conf`, `darkberry-blackwater.conf`) at the folder root, plus the four tints (Lingonberry, Cloudberry, Crowberry, Blueberry) each in their own subfolder with the same four flavour files renamed to `<tint>-<flavour>.conf`. Each file is a plain kitty config using kitty's own `## name:` / `## license:` / `## blurb:` metadata-comment header followed by `key value` colour settings (no external build step; the `.conf` file itself is the distributable artifact).
+`ports/kitty/` holds one `.conf` per flavour (`darkberry-wisp.conf`, `darkberry-fen.conf`, `darkberry-mire.conf`, `darkberry-blackwater.conf`) at the folder root, plus the four tints (Lingonberry, Cloudberry, Crowberry, Blueberry) each in their own subfolder with the same four flavour files renamed to `<tint>-<flavour>.conf`. Each file is a plain kitty config using kitty's own `## name:` / `## author:` / `## license:` / `## blurb:` metadata-comment header followed by `key value` colour settings (no external build step; the `.conf` file itself is the distributable artifact).
 
 ## Venues
 
@@ -9,7 +9,7 @@
 - **URL**: https://github.com/kovidgoyal/kitty-themes
 - **Kind**: official gallery — this is the repo kitty's built-in `kitty +kitten themes` picker downloads from; it is also linked from kitty's own docs at https://sw.kovidgoyal.net/kitty/kittens/themes/.
 - **Accepts**: one `.conf` file per theme dropped in the repo's `themes/` directory (files live flat, not in per-family subfolders), with kitty's `## key:` metadata header. No screenshot file is required in the PR itself (a screenshot is only asked for in the separate "theme request" issue template, for when someone else is asked to add a theme on your behalf).
-- **Fields**: Name (`## name:`, required, the theme display name, unique across the whole repo; "Darkberry Wisp"/"Fen"/"Mire"/"Blackwater" are free as of 2026-09-24); Summary (`## blurb:`, optional, must be the last metadata field, can span lines); Author (`## author:`, optional, not currently set in Darkberry's files); Licence (`## license:`; their `gen-metadata.py` normalizes known spellings, and plain `MIT` is recognised as-is, which matches what Darkberry's files already say).
+- **Fields**: Name (`## name:`, required, the theme display name, unique across the whole repo; "Darkberry Wisp"/"Fen"/"Mire"/"Blackwater" are free as of 2026-09-24); Summary (`## blurb:`, optional, must be the last metadata field, can span lines); Author (`## author:`, optional); Licence (`## license:`; their `gen-metadata.py` normalizes known spellings, and plain `MIT` is recognised as-is, which matches what Darkberry's files already say).
 - **Add-ons**: `## upstream:` (optional URL for auto-updates; could point at the raw GitHub URL of each file in this repo); the filename, with no enforced convention: some contributions use `Family-Variant.conf` (e.g. `Catppuccin-Frappe.conf`), others `family-variant.conf` (e.g. `rose-pine-dawn.conf`); Darkberry's existing `darkberry-mire.conf` style fits.
 - **Requirements**: a GitHub account to fork and open a PR; no CLA, no fee, no signing key, no 2FA requirement stated. Review is manual, by maintainer kovidgoyal (recent merged PRs are small, single-theme, no extra process).
 - **Steps**:
@@ -21,7 +21,7 @@
 - **Updates**: kitty's `themes` kitten fetches the whole repo as a zip from `https://codeload.github.com/kovidgoyal/kitty-themes/zip/master` and caches it locally (`--cache-age`, default ~1 day per `main.py`/`main.go`). Once a PR is merged to `master`, users see it after their local cache expires or they run `kitty +kitten themes --reload`. A later fix is just another PR editing the same `.conf` file.
 - **Contacts**: issues/PRs at https://github.com/kovidgoyal/kitty-themes/issues and /pulls; overall kitty project at https://github.com/kovidgoyal/kitty.
 - **Sources**: https://github.com/kovidgoyal/kitty-themes (2026-09-24), https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/README.rst (2026-09-24), https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/template.conf (2026-09-24), https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/gen-metadata.py (2026-09-24), https://api.github.com/repos/kovidgoyal/kitty-themes/contents/themes (2026-09-24, naming survey), https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/themes.json (2026-09-24, name-collision check), https://raw.githubusercontent.com/kovidgoyal/kitty/master/tools/themes/collection.go (2026-09-24, cache/update mechanism), https://sw.kovidgoyal.net/kitty/kittens/themes/ (2026-09-24).
-- **Confidence**: verified (metadata format, filename freedom, update mechanism, and process all confirmed from primary sources). Unverified: typical PR review turnaround time, and whether a maintainer would ask for all 4 flavours + 16 tint variants in one PR or prefer them split.
+- **Confidence**: verified (metadata format, filename freedom, update mechanism, and process all confirmed from primary sources). Unverified: typical PR review turnaround time, and whether a maintainer would ask for all 4 flavours + the 16 tint files in one PR or prefer them split.
 
 ### mbadolato/iTerm2-Color-Schemes (community multi-terminal repo)
 
@@ -85,7 +85,7 @@ To update: edit the same four files on the fork's `darkberry` branch and push; t
 
 ## Open questions
 
-- Whether to submit only the four base Darkberry flavours to kitty-themes, or the tint variants too (16 more files) — kitty-themes has no folder-per-family convention, so all 20 would land flat in `themes/` with names like "Darkberry Lingonberry Wisp"; a human should decide scope before opening that PR.
+- Whether to submit only the four base Darkberry flavours to kitty-themes, or the tints too (16 more files) — kitty-themes has no folder-per-family convention, so all 20 would land flat in `themes/` with names like "Lingonberry Wisp"; a human should decide scope before opening that PR.
 - Whose GitHub account opens the PRs (shythulu's own, presumably, per repo attribution) — confirm before submitting anywhere that needs a fork.
 - For iTerm2-Color-Schemes and Gogh, whether it's worth accepting the lossy reduction (both formats drop kitty-specific tab/border/mark colours) versus skipping those two venues and relying on kitty-themes as the primary distribution point.
 - No official maintainer response-time data was found for any of the three repos; a human may want to check open PR queues before committing to a submission order.

@@ -3,7 +3,8 @@
   "name": "Darkberry Blackwater",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Darkest. Deeper surfaces, the same berries as Mire. Blood in bog water.",
+  "description": "Darkberry for Nimbalyst. Darkest. Deeper surfaces, the same berries as Mire. Blood in bog water.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#1d121a",

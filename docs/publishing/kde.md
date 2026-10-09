@@ -1,6 +1,6 @@
 # Publishing the KDE Plasma port
 
-`ports/kde/*.colors` is four standalone Plasma colour-scheme files (`Darkberry Wisp.colors`, `Fen`, `Mire`, `Blackwater`), one per flavour, installed by copying into `~/.local/share/color-schemes/`; `ports/kde/<tint>/` holds the same four files re-derived for each of the four tints (lingonberry/cloudberry/crowberry/blueberry). This is the native Plasma "Colors" KConfig `.colors` format (`[General]`/`[Colors:...]` sections), not a packaged plugin — nothing to build or sign.
+`ports/kde/*.colors` is four standalone Plasma colour-scheme files (`Darkberry Wisp.colors`, `Fen`, `Mire`, `Blackwater`), one per flavour, installed by copying into `~/.local/share/color-schemes/`; `ports/kde/<tint>/` holds the same four files re-derived for each of the four tints (lingonberry/cloudberry/crowberry/blueberry). This is the native Plasma "Colors" KConfig `.colors` format (`[General]`/`[Colors:...]` sections), not a package — nothing to build or sign.
 
 ## Venues
 
@@ -9,13 +9,13 @@
 - **URL**: https://store.kde.org/browse?cat=112 (category "Plasma Color Schemes", confirmed id via `https://store.kde.org/browse/cat/112/order/latest/`); upload form https://store.kde.org/product/add ; FAQ https://store.kde.org/faq-pling
 - **Kind**: official gallery — this is the OCS (Open Collaboration Services) provider that Plasma's own "Get New Color Schemes…" button (KNewStuff) queries by default.
 - **Accepts**: a product page with one or more attached files (the `.colors` file(s), plain or archived — `plasma-workspace`'s `.knsrc` declares `Uncompress=archive`, so a `.zip`/`.tar.gz` of the four flavours, or four separate uploads, both work).
-- **Fields**: Name (title); Description; Keywords (tags); Category ("Plasma Color Schemes"); Repository ("source code" URL, should point at the repo, `https://github.com/shythulu/DarkBerry`, rather than being left blank, per community advice); Licence (a dropdown of common OSI/libre licences; MIT-licensed products exist on the store (confirmed by search), so MIT is an accepted option, but the exact dropdown label for MIT was not directly observed — **partly verified**); Screenshots (one or more preview images; exact pixel dimensions are not documented anywhere found — **unverified**).
+- **Fields**: Name (title); Description; Keywords (tags); Category ("Plasma Color Schemes"); Repository ("source code" URL; fill it rather than leaving it blank, per community advice); Licence (a dropdown of common OSI/libre licences; MIT-licensed products exist on the store (confirmed by search), so MIT is an accepted option, but the exact dropdown label for MIT was not directly observed — **partly verified**); Screenshots (one or more preview images; exact pixel dimensions are not documented anywhere found — **unverified**).
 - **Add-ons**: none.
 - **Requirements**: free registration ("Join" + email verification) at store.kde.org/identity.kde.org-backed account — no fee, no bank/PayPal details required just to list content. One discussion thread reported Gmail addresses being rejected at signup, with a Proton Mail address working as a workaround (unverified as still current). This store account is distinct from a KDE Identity / invent.kde.org developer account — no GitLab or KDE Identity account is needed just to upload here. Pling has an opt-in payout program (cents per valid download/view, per its terms) — unrelated to whether content can be listed for free; no evidence payout is mandatory.
 - **Steps** (assembled from a first-hand forum account, since the store's own upload UI could not be fetched — an anti-bot wall (Anubis) blocked automated retrieval of store.kde.org and opendesktop.org pages):
   1. Register/sign in at store.kde.org (or pling.com/opendesktop.org — same backend, "Pling hosts and runs the KDE Store; store.kde.org is basically a KDE-themed front-end to pling.com" per a KDE developer).
   2. Go to https://store.kde.org/product/add.
-  3. Fill the multi-step form: title (e.g. "Darkberry"), category "Plasma Color Schemes", description (can reuse the port README text), licence (MIT), source-code URL (the GitHub repo), tags.
+  3. Fill the multi-step form with the Fields above.
   4. Upload preview image(s) — the flavour preview screenshots already in `ports/kde/assets/` (`wisp.webp`, `fen.webp`, `mire.webp`, `blackwater.webp`, `preview.webp`) are candidates, though their format may need converting from `.webp` if the uploader requires PNG/JPG (unverified).
   5. Attach the `.colors` file(s) as the downloadable content.
   6. Submit/publish.

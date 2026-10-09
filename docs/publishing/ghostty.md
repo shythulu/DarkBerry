@@ -114,7 +114,7 @@ by a PR to Ghostty itself.
 - **Steps**:
   1. Fork https://github.com/wyattgill9/Awesome-Ghostty.
   2. Edit `README.md`, adding a line under `## Themes`, e.g.
-     `* [Darkberry](https://github.com/shythulu/DarkBerry) - four berry-dark flavours, four tints.`
+     `* [Darkberry](https://github.com/shythulu/DarkBerry) - A bog-witch berry theme in four flavours. Wine-dark plum, soft on the eyes, checked for contrast.`
   3. Open a pull request.
 - **Updates**: a follow-up PR editing the same line.
 - **Contacts**: issues at https://github.com/wyattgill9/Awesome-Ghostty/issues.

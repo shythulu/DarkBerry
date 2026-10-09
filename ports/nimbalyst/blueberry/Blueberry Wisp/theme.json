@@ -3,7 +3,8 @@
   "name": "Blueberry Wisp",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Light. A pale page, the berries deepened to read on it. Backgrounds cooled to a dusty slate blue.",
+  "description": "Blueberry for Nimbalyst. Light. A pale page, the berries deepened to read on it. Backgrounds cooled to a dusty slate blue.",
+  "license": "MIT",
   "isDark": false,
   "colors": {
     "bg": "#f2f6ff",

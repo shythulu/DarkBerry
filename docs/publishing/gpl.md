@@ -51,7 +51,7 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   `README` says explicitly "They are in Gimp format (.gpl)." Existing entries (Tango,
   Solarized, GNOME_HIG, elementary) show single-theme submissions, one file each, are the
   norm — not combined multi-theme files.
-- **Fields**: Homepage (cited in a `#` comment in the file); Licence (MIT, in the same `#`
+- **Fields**: Homepage (cited in a `#` comment in the file); Licence (in the same `#`
   comment; most existing `.gpl` files carry no licence header, but the maintainers care about
   licence clarity, see Requirements).
 - **Add-ons**: the file path, `share/palettes/darkberry-<flavour>.gpl`, one per flavour.
@@ -131,9 +131,8 @@ rows) read natively by GIMP, Inkscape, Krita, MyPaint and Aseprite.
   Inkscape, Krita, MyPaint, Aseprite and Drawpile, with a live HTML preview page.
 - **Accepts**: one `.gpl` file per palette in `palettes/`, following the standard format;
   README has an explicit, current "Contributing" section with concrete rules (see Steps).
-- **Fields**: Name (the file's `Name:` header); Repository
-  (https://github.com/shythulu/DarkBerry, cited as the source in a comment line and in the
-  README entry).
+- **Fields**: Name (the file's `Name:` header); Repository (cited as the source in a
+  comment line and in the README entry).
 - **Add-ons**: the `Columns:` header (guideline: ≤ 20-24); a name on every colour; an
   alphabetically-sorted entry in the repo's `README.md`.
 - **Requirements**: a free GitHub account; repo has no LICENSE file (checked, none), so its
