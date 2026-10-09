@@ -12,11 +12,11 @@
 </p>
 
 <p align="center">
-	🫐 <img src="https://img.shields.io/badge/Darkberry-fd7ca5?style=for-the-badge" alt="Darkberry"/>
-	<a href="lingonberry/">🍒 <img src="https://img.shields.io/badge/Lingonberry-f06a6a?style=for-the-badge" alt="Lingonberry"/></a>
-	<a href="cloudberry/">🍊 <img src="https://img.shields.io/badge/Cloudberry-f7ab84?style=for-the-badge" alt="Cloudberry"/></a>
-	<a href="crowberry/">🍇 <img src="https://img.shields.io/badge/Crowberry-ddb0ec?style=for-the-badge" alt="Crowberry"/></a>
-	<a href="blueberry/">💙 <img src="https://img.shields.io/badge/Blueberry-8fb0f2?style=for-the-badge" alt="Blueberry"/></a>
+	<img src="https://img.shields.io/badge/Darkberry-fd7ca5?style=for-the-badge" alt="Darkberry"/>
+	<a href="lingonberry/"><img src="https://img.shields.io/badge/Lingonberry-f06a6a?style=for-the-badge" alt="Lingonberry"/></a>
+	<a href="cloudberry/"><img src="https://img.shields.io/badge/Cloudberry-f7ab84?style=for-the-badge" alt="Cloudberry"/></a>
+	<a href="crowberry/"><img src="https://img.shields.io/badge/Crowberry-ddb0ec?style=for-the-badge" alt="Crowberry"/></a>
+	<a href="blueberry/"><img src="https://img.shields.io/badge/Blueberry-8fb0f2?style=for-the-badge" alt="Blueberry"/></a>
 </p>
 
 <p align="center">
@@ -65,7 +65,7 @@ of the two.
 Checked by building all four flavours with `tinted-builder-rust` 0.21.0, whose scheme
 struct denies unknown fields; every value was rendered back out and compared.
 
-## 💝 Thanks to
+## Created by
 
 - [shythulu](https://github.com/shythulu)
 

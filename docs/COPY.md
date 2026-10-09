@@ -24,11 +24,11 @@ Theme names are `<Tint> <Flavour>` with a space: `Darkberry Mire`, `Blueberry Wi
 are `<tint>-<flavour>`: `darkberry-mire`. The flavour never stands alone in a name a
 stranger reads; "Mire" alone is fine inside a README that has already said Darkberry.
 
-The flavour emoji are 🕯️ Wisp, 🌾 Fen, 🪦 Mire, 🌑 Blackwater. The tint emoji are
-🫐 Darkberry, 🍒 Lingonberry, 🍊 Cloudberry, 🍇 Crowberry, 💙 Blueberry. Every port and
-category has one too (`src/ports.json`, `src/categories.json`). Emoji go in READMEs, the
-site and release notes, before the name, never instead of it. They stay out of manifests,
-store fields, file names and any list that forbids them (awesome-neovim does).
+The flavour emoji are 🕯️ Wisp, 🌾 Fen, 🪦 Mire, 🌑 Blackwater. Tints have no emoji: a tint
+is told apart by its badge colour and its logo. Every port and category has one
+(`src/ports.json`, `src/categories.json`). Emoji go in READMEs, the site and release
+notes, before the name, never instead of it. They stay out of manifests, store fields,
+file names and any list that forbids them (awesome-neovim does).
 
 ## Three lengths, two registers
 
@@ -116,11 +116,11 @@ name alone tells a stranger nothing.
 
 | | Line | Short (listing summary) |
 |---|---|---|
-| 🫐 **Darkberry** | The default. Wine-dark plum. | Darkberry: a bog-witch berry theme in four flavours. Wine-dark plum with berry accents. The default tint. |
-| 🍒 **Lingonberry** | Backgrounds steeped in raspberry red. | Lingonberry is Darkberry with its backgrounds steeped in raspberry red. Same four flavours, same berry accents. |
-| 🍊 **Cloudberry** | Backgrounds warmed toward ripe peach. | Cloudberry is Darkberry with its backgrounds warmed toward ripe peach. Same four flavours, same berry accents. |
-| 🍇 **Crowberry** | Backgrounds cooled to inky violet. | Crowberry is Darkberry with its backgrounds cooled to inky violet. Same four flavours, same berry accents. |
-| 💙 **Blueberry** | Backgrounds cooled to a dusty slate blue. | Blueberry is Darkberry with its backgrounds cooled to a dusty slate blue. Same four flavours, same berry accents. |
+| **Darkberry** | The default. Wine-dark plum. | Darkberry: a bog-witch berry theme in four flavours. Wine-dark plum with berry accents. The default tint. |
+| **Lingonberry** | Backgrounds steeped in raspberry red. | Lingonberry is Darkberry with its backgrounds steeped in raspberry red. Same four flavours, same berry accents. |
+| **Cloudberry** | Backgrounds warmed toward ripe peach. | Cloudberry is Darkberry with its backgrounds warmed toward ripe peach. Same four flavours, same berry accents. |
+| **Crowberry** | Backgrounds cooled to inky violet. | Crowberry is Darkberry with its backgrounds cooled to inky violet. Same four flavours, same berry accents. |
+| **Blueberry** | Backgrounds cooled to a dusty slate blue. | Blueberry is Darkberry with its backgrounds cooled to a dusty slate blue. Same four flavours, same berry accents. |
 
 Paragraphs:
 
@@ -203,7 +203,7 @@ Use these as they are, so every listing makes the same claim in the same words:
 | Support | the repository's issues | |
 
 The author is a person, the publisher an account, and "Darkberry" is neither: an `author`
-field never says Darkberry. **Thanks to** in a README lists maintainers (`src/ports.json`),
+field never says Darkberry. **Created by** in a README lists maintainers (`src/ports.json`),
 which is a different list.
 
 ## Pictures

@@ -32,7 +32,7 @@ const data = {
   tints: {},
 };
 for (const [id, pal] of palettes) {
-  const t = { name: TINTS[id]?.name || id, emoji: TINTS[id]?.emoji || "", note: TINTS[id]?.note || "", colors: {}, roles: {}, ansi: {}, oklch: {} };
+  const t = { name: TINTS[id]?.name || id, note: TINTS[id]?.note || "", colors: {}, roles: {}, ansi: {}, oklch: {} };
   for (const [fid, f] of Object.entries(pal.flavours)) {
     const ctx = flavourContext(fid, f, ROLES, roleIndex);
     t.colors[fid] = ORDER.map((k) => f.colors[k]);

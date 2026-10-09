@@ -41,7 +41,7 @@ the subfolder, and the default build writes the two all-in-one units, the docs a
 root README. `package.sh` makes a plain and a with-tints package of every port.
 
 The README follows the template top to bottom: logo and title, the three badges, the main
-preview, a collapsible preview per flavour, **Usage**, **Thanks to**, the footer and the
+preview, a collapsible preview per flavour, **Usage**, **Created by**, the footer and the
 licence badge. Two parts of it are the port's own:
 
 - **Usage** comes from `src/usage/<key>.md`: numbered install steps, then the version floor
@@ -77,7 +77,7 @@ Everything else in the README is filled from `src/ports.json` and `src/palette.j
   keys, names and emoji. The first category is where the port is listed in `README.md`.
 - `platform` is `linux`, `macos`, `windows`, `web`, or empty for a format that has no
   platform of its own (Base24).
-- `maintainers`, optional, adds names to **Thanks to** ahead of the repository's
+- `maintainers`, optional, adds names to **Created by** ahead of the repository's
   maintainers.
 
 The build fails when a `ports/` folder is missing from the registry, when a registry entry
