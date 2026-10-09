@@ -77,6 +77,10 @@ Everything else in the README is filled from `src/ports.json` and `src/palette.j
   keys, names and emoji. The first category is where the port is listed in `README.md`.
 - `platform` is `linux`, `macos`, `windows`, `web`, or empty for a format that has no
   platform of its own (Base24).
+- `listing`, present once the port is published somewhere, is the venue's `name` and the
+  `url` of the listing, plus `tints`, the tinted edition's own listing, when that is a
+  separate item (VS Code's with-tints extension). The README's Usage, the port's line in
+  `README.md` and the site's Ports page all link it; a port without one links its folder.
 - `darkOnly`, optional, `true` for a port that ships only the dark flavours (Dark Reader):
   the README then lists no preview for Wisp.
 - `maintainers`, optional, adds names to **Created by** ahead of the repository's
@@ -97,9 +101,9 @@ below are the same road without the guide.
 3. `node build.mjs`. It writes `ports/<key>/README.md`, an empty `ports/<key>/assets/`
    and the port's line in `README.md`.
 4. Take the screenshots into `ports/<key>/assets/` and rebuild so the README picks them up.
-5. The install line in `.github/workflows/release.yml`'s release notes, and a card in the
-   `PORTS` list in `src/site/pages/ports.html`. `package.sh` packages every registered
-   port, so it needs no change.
+5. The install line in `.github/workflows/release.yml`'s release notes. The site's Ports
+   page and `package.sh` both read `src/ports.json`, so neither needs a change.
+6. When the port goes live somewhere, add its `listing` to `src/ports.json` and rebuild.
 
 ## Generated assets
 

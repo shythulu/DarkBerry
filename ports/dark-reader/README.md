@@ -40,6 +40,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/dark-reader](https://github.com/shythulu/DarkBerry/tree/main/ports/dark-reader); install them by hand:
+
 Dark Reader takes colours as settings, so there is no file to install. Each dark flavour's
 `.txt` file in this folder holds the three values to type in.
 

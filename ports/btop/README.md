@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/btop](https://github.com/shythulu/DarkBerry/tree/main/ports/btop); install them by hand:
+
 1. Copy a `.theme` file from this folder into `~/.config/btop/themes/`, keeping its name.
 2. Pick it under Esc > Options > Color theme, or set `color_theme = "darkberry-mire"` in `btop.conf`.
 

@@ -89,18 +89,14 @@ table.pal td.job{color:var(--c-subtext0);font-size:14px;font-style:italic}
 table.pal tr.copied td{background:color-mix(in srgb,var(--ui-accent) 14%,transparent)}
 .scroll{overflow-x:auto}
 
-/* cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
-.card{background:color-mix(in srgb,var(--ui-pane-secondary) 80%,transparent);border:1px solid var(--rule);padding:22px 24px;position:relative;display:flex;flex-direction:column}
-.card::before{content:"";position:absolute;inset:5px;border:1px solid color-mix(in srgb,var(--rule) 60%,transparent);pointer-events:none}
-.card h3{margin:0 0 6px;font-size:30px;line-height:1}
-.card p{margin:0 0 12px;font-size:16px;color:var(--c-subtext1)}
-.card pre{margin:0 0 12px;background:var(--ui-pane-tertiary);border:1px solid var(--rule);padding:9px 12px;font:12.5px/1.6 var(--mono);white-space:pre-wrap;word-break:break-all;color:var(--ui-text)}
-.card a{font-size:15px;font-family:var(--sc);letter-spacing:.1em;margin-top:auto}
-.card .shot{margin:-22px -24px 18px;background:var(--ui-pane-tertiary);border-bottom:1px solid var(--rule);aspect-ratio:16/10;overflow:hidden;position:relative}
-.card .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-.card .shot:empty{display:none}
-.card.noshot{padding-top:24px}
+/* the port list */
+.portlist h3{margin:36px 0 4px;font-size:26px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+.portlist h3:first-child{margin-top:0}
+.portlist ul{list-style:none;margin:0;padding:0}
+.portlist li{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;padding:9px 0;border-bottom:1px solid color-mix(in srgb,var(--rule) 45%,transparent)}
+.portlist .app{font-family:var(--sc);letter-spacing:.06em;font-size:18px;color:var(--ui-text);text-decoration:none}
+.portlist .app:hover{color:var(--ui-accent);text-decoration:underline}
+.portlist .links{margin-left:auto;display:flex;gap:22px;font-family:var(--sc);letter-spacing:.1em;font-size:14px}
 .teasers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
 .teaser{display:block;text-decoration:none;color:inherit;border:1px solid var(--rule);padding:28px 30px;position:relative;background:color-mix(in srgb,var(--ui-pane-secondary) 80%,transparent)}
 .teaser::before{content:"";position:absolute;inset:5px;border:1px solid color-mix(in srgb,var(--rule) 60%,transparent);pointer-events:none}
@@ -129,4 +125,4 @@ footer a:hover{text-decoration:underline}
 .toast.show{opacity:1}
 @media (prefers-reduced-motion:no-preference){.toast{transition:opacity .25s}}
 @media (max-width:860px){.hero{padding-top:48px}.hero .wrap{grid-template-columns:minmax(0,1fr)}.origin{grid-template-columns:minmax(0,1fr)}.chip{max-width:240px}table.pal .hide-s{display:none}header.top{position:static}}
-@media (max-width:600px){.wrap{padding:0 16px}.card .shot{margin:-22px -24px 16px}}
+@media (max-width:600px){.wrap{padding:0 16px}.portlist .links{margin-left:0;flex-basis:100%}}

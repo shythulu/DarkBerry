@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/chrome/blueberry](https://github.com/shythulu/DarkBerry/tree/main/ports/chrome/blueberry); install them by hand:
+
 Works in Chrome, Edge and any other Chromium browser.
 
 1. Copy a flavour's folder somewhere permanent.

@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/kate/lingonberry](https://github.com/shythulu/DarkBerry/tree/main/ports/kate/lingonberry); install them by hand:
+
 Each flavour is two files: a `.theme` for the editor and a `.colors` scheme for the window
 around it (menus, tabs, sidebars, status bar).
 

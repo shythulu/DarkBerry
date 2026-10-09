@@ -44,6 +44,8 @@
 
 ## Usage
 
+Get it from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Slacklab.darkberry-with-tints-theme), which is where updates come from. Or install it by hand:
+
 This edition carries every tint: Darkberry, Lingonberry, Cloudberry, Crowberry, Blueberry, four flavours each. Install it instead of the plain Darkberry extension, not beside it, or the Darkberry themes are listed twice. The packaged file is `darkberry-with-tints-theme-<version>.vsix`.
 
 Works in VS Code, Cursor, VSCodium and Windsurf.

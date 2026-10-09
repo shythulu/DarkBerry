@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/obsidian](https://github.com/shythulu/DarkBerry/tree/main/ports/obsidian); install them by hand:
+
 1. Copy a flavour's folder from this folder into your vault's `.obsidian/themes/`, keeping the folder name.
 2. Pick it under Settings > Appearance > Themes.
 

@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/kitty/blueberry](https://github.com/shythulu/DarkBerry/tree/main/ports/kitty/blueberry); install them by hand:
+
 1. Copy a flavour from this folder to `~/.config/kitty/themes/`.
 2. Run `kitty +kitten themes` and pick it, or include it from `kitty.conf`:
 

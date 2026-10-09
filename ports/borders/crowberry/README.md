@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/borders/crowberry](https://github.com/shythulu/DarkBerry/tree/main/ports/borders/crowberry); install them by hand:
+
 1. Copy a flavour from this folder over `~/.config/borders/bordersrc`.
 2. Restart borders: `brew services restart borders`.
 

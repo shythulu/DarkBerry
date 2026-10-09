@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/ls-colors/cloudberry](https://github.com/shythulu/DarkBerry/tree/main/ports/ls-colors/cloudberry); install them by hand:
+
 1. Copy a flavour from this folder to `~/.config/darkberry/`.
 2. Source it in your shell rc:
 

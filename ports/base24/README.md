@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/base24](https://github.com/shythulu/DarkBerry/tree/main/ports/base24); install them by hand:
+
 Carries Darkberry into [Tinted Theming](https://github.com/tinted-theming), whose builders
 turn one scheme file into configuration for seventy-odd applications.
 

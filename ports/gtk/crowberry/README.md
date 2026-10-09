@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/gtk/crowberry](https://github.com/shythulu/DarkBerry/tree/main/ports/gtk/crowberry); install them by hand:
+
 A GTK 3 and GTK 4 theme that reaches Inkscape and any other GTK app that follows the system theme.
 
 1. Copy a flavour folder from this folder into `~/.themes/` (or `~/.local/share/themes/`).

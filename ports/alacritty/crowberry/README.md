@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/alacritty/crowberry](https://github.com/shythulu/DarkBerry/tree/main/ports/alacritty/crowberry); install them by hand:
+
 1. Copy a flavour from this folder to `~/.config/alacritty/themes/`.
 2. Import it from `~/.config/alacritty/alacritty.toml`:
 

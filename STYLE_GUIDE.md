@@ -240,10 +240,8 @@ install line in two more places, a notes file, and a verified screenshot per fla
     `src/usage/<port>.md` (path, the app's picker step or import line, the version floor
     in one line, the environment note when there is one); the build then writes
     `ports/<port>/README.md` from `template/README.md` and the port's line in
-    `README.md`. The install line in
-    `.github/workflows/release.yml`'s release-notes block; a card in
-    `src/site/pages/ports.html`'s `PORTS` list (key, name, prose, code line; copy the
-    Alacritty entry; `src/site/` is source, `site/` is generated); screenshots as
+    `README.md`, and the site's Ports page lists the port from the same entry. The
+    install line in `.github/workflows/release.yml`'s release-notes block; screenshots as
     `preview.webp` and `<flavour>.webp` in `ports/<port>/assets/` (and per tint under
     `ports/<port>/<tint>/assets/`); no `zip` line is needed, `package.sh` packages every
     registered port, plain and with tints; and `ports/`,

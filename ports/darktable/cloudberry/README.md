@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/darktable/cloudberry](https://github.com/shythulu/DarkBerry/tree/main/ports/darktable/cloudberry); install them by hand:
+
 darktable ignores the system GTK theme and uses its own CSS, so the [GTK 3](../gtk) port
 doesn't reach it. This one does.
 

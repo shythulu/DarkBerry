@@ -118,7 +118,7 @@ jobs:
             echo
             echo "**GIMP palette** — \`darkberry-gpl-$version.zip\` holds the palette as \`.gpl\` files, one per flavour and one with all four, for GIMP, Inkscape, Krita, MyPaint and Aseprite to import."
             echo
-            echo "**Firefox** — install from [addons.mozilla.org](https://addons.mozilla.org/firefox/search/?q=darkberry), which is where updates come from. The \`.xpi\` files attached here are the unsigned build output, kept for archival: release Firefox refuses unsigned add-ons, so they install only through \`about:debugging\` > Load Temporary Add-on, or on Developer Edition, Nightly or an unbranded Release/Beta build with \`xpinstall.signatures.required\` set to \`false\`."
+            echo "**Firefox** — install from [addons.mozilla.org](https://addons.mozilla.org/firefox/user/20178967/), which is where updates come from. The \`.xpi\` files attached here are the unsigned build output, kept for archival: release Firefox refuses unsigned add-ons, so they install only through \`about:debugging\` > Load Temporary Add-on, or on Developer Edition, Nightly or an unbranded Release/Beta build with \`xpinstall.signatures.required\` set to \`false\`."
           } > notes.md
 
       - name: Create the release

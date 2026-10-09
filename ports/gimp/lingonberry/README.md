@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/gimp/lingonberry](https://github.com/shythulu/DarkBerry/tree/main/ports/gimp/lingonberry); install them by hand:
+
 GIMP ignores the system GTK theme and uses its own, so the [GTK 3](../gtk) port doesn't
 reach it. This one does.
 

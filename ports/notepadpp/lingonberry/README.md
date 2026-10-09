@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/notepadpp/lingonberry](https://github.com/shythulu/DarkBerry/tree/main/ports/notepadpp/lingonberry); install them by hand:
+
 1. Copy a `.xml` file from this folder into `%APPDATA%\Notepad++\themes\`.
 2. Restart Notepad++, then Settings > Style Configurator and pick the flavour.
 

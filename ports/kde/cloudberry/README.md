@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/kde/cloudberry](https://github.com/shythulu/DarkBerry/tree/main/ports/kde/cloudberry); install them by hand:
+
 1. Copy the `.colors` files from this folder into `~/.local/share/color-schemes/`.
 2. Pick a flavour in System Settings > Colors.
 

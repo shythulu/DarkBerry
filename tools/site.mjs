@@ -43,14 +43,12 @@ for (const [id, pal] of palettes) {
   data.tints[id] = t;
 }
 
-// Which ports carry screenshots, per tint: ports/<id>/assets/<flavour>.webp for Darkberry itself,
-// ports/<id>/<tint>/assets/<flavour>.webp for the tints. The Ports page only shows a picture it can find.
-data.ports = {};
-for (const id of fs.readdirSync(path.join(root, "ports")).sort()) {
-  const has = (dir) => Object.keys(P.flavours).every((f) => fs.existsSync(path.join(root, "ports", id, dir, "assets", `${f}.webp`)));
-  const shots = palettes.map(([t]) => t).filter((t) => has(t === "darkberry" ? "" : t));
-  if (shots.length) data.ports[id] = shots;
-}
+// The port registry, grouped by each port's first category in the order of src/categories.json,
+// the same grouping as the list in README.md. Screenshots and install steps stay in each port's
+// README; the Ports page lists only the name, the listing where the port is published, and the
+// folder in the repository.
+const REG = json("src/ports.json"), CATS = json("src/categories.json");
+data.ports = CATS.map((c) => [c.name, REG.ports.filter((p) => p.categories[0] === c.key).map((p) => ({ key: p.key, name: p.name, url: p.url, listing: p.listing || null }))]).filter(([, ps]) => ps.length);
 
 // The page's first paint, before the script runs, is Darkberry Blackwater.
 const first = data.tints.darkberry, ROOT = [
@@ -76,7 +74,7 @@ const fill = (html, extra = {}) => {
 const PAGES = [
   ["index", "Darkberry, a bog-witch berry theme", "Darkberry is a berry dark colour theme in four flavours."],
   ["palette", "The Darkberry palette", "Every Darkberry colour in hex, RGB, HSL and OKLCH, for each flavour and tint."],
-  ["ports", "Darkberry ports", "Darkberry for terminals, editors, browsers and desktops, with install notes for each."],
+  ["ports", "Darkberry ports", "Darkberry for terminals, editors, browsers and desktops: where each port is published, and where its files are."],
 ];
 const NAV = (current) => [["index", "Home"], ["palette", "Palette"], ["ports", "Ports"]].map(([id, label]) => `<a href="${id}.html"${id === current ? ' aria-current="page"' : ""}>${label}</a>`).join("");
 
@@ -118,4 +116,4 @@ for (const [from, to] of COPIES) {
   if (!fs.existsSync(path.join(root, from))) { console.error(`Missing ${from}. Run node build.mjs first.`); process.exit(1); }
   fs.copyFileSync(path.join(root, from), path.join(out, to));
 }
-console.log(`Site built in site/ (${palettes.length} palettes × ${Object.keys(P.flavours).length} flavours, ${Object.keys(data.ports).length} ports with screenshots).`);
+console.log(`Site built in site/ (${palettes.length} palettes × ${Object.keys(P.flavours).length} flavours, ${REG.ports.length} ports).`);

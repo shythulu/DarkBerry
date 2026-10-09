@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/ghostty/lingonberry](https://github.com/shythulu/DarkBerry/tree/main/ports/ghostty/lingonberry); install them by hand:
+
 1. Copy the files from this folder to `~/.config/ghostty/themes/`, keeping their names.
 2. In your Ghostty config:
 

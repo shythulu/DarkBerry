@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/t3code/lingonberry](https://github.com/shythulu/DarkBerry/tree/main/ports/t3code/lingonberry); install them by hand:
+
 1. Copy a flavour's `.json` file from this folder into `~/.t3/userdata/themes/` (the `themes`
    folder under your T3 Code state directory if you have moved it). The folder is watched, so
    the theme appears without a restart, and the file name is the theme's id.

@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/konsole/crowberry](https://github.com/shythulu/DarkBerry/tree/main/ports/konsole/crowberry); install them by hand:
+
 1. Copy the `.colorscheme` files from this folder into `~/.local/share/konsole/`.
 2. Settings > Edit Current Profile > Appearance, then pick a flavour.
 

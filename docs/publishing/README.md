@@ -11,6 +11,10 @@ submitted anywhere except Firefox (see `../AMO.md`) and, since 2026-10-06, the t
 extensions on the Visual Studio Marketplace (see `vscode.md`) and the four kitty flavours to
 dexpota/kitty-themes (PR open, see `kitty.md`).
 
+Once a port is live somewhere, add the venue and URL as `listing` in `src/ports.json`
+(shape in `../PORT_CREATION.md`) and rebuild: the port's README then opens its Usage with
+that link, and `README.md` and the site's Ports page link it too.
+
 Listing text (names, one-line and long descriptions, keywords, screenshot sizes) is in
 `../COPY.md`, the copy syllabus: one set of strings for the project, the flavours and the
 tints, and a field map saying which string goes in which venue's form.

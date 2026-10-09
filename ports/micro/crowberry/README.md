@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/micro/crowberry](https://github.com/shythulu/DarkBerry/tree/main/ports/micro/crowberry); install them by hand:
+
 1. Copy a `.micro` file from this folder into `~/.config/micro/colorschemes/`.
 2. `set colorscheme darkberry-mire`.
 

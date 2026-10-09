@@ -44,6 +44,8 @@
 
 ## Usage
 
+Get it from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Slacklab.darkberry-theme), which is where updates come from. Or install it by hand:
+
 Works in VS Code, Cursor, VSCodium and Windsurf.
 
 1. Download `darkberry-theme-<version>.vsix` from [Releases](https://github.com/shythulu/DarkBerry/releases), or build it with `./package.sh`.

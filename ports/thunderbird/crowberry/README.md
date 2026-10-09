@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/thunderbird/crowberry](https://github.com/shythulu/DarkBerry/tree/main/ports/thunderbird/crowberry); install them by hand:
+
 1. Download a flavour's `.xpi` from a [release](https://github.com/shythulu/DarkBerry/releases)
    (`darkberry-thunderbird-mire-<version>.xpi` and so on), or zip the two files in one of this
    folder's flavour folders (`manifest.json` and `theme.css`) into a file of your own.

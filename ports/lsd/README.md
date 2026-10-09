@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/lsd](https://github.com/shythulu/DarkBerry/tree/main/ports/lsd); install them by hand:
+
 1. Copy a flavour from this folder to `~/.config/lsd/colors.yaml`.
 2. Set `color: {theme: custom}` in `~/.config/lsd/config.yaml`.
 

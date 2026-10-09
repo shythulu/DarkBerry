@@ -94,7 +94,7 @@ build them yourself with `./package.sh`, which writes each port's packages into 
 ### Code Editors & IDEs
 
 - [Neovim](ports/neovim#readme)
-- [Visual Studio Code](ports/vscode#readme)
+- [Visual Studio Code](ports/vscode#readme) · [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Slacklab.darkberry-theme)
 - [Kate](ports/kate#readme)
 - [micro](ports/micro#readme)
 - [Notepad++](ports/notepadpp#readme)
@@ -140,7 +140,7 @@ build them yourself with `./package.sh`, which writes each port's packages into 
 
 ### Browsers
 
-- [Firefox](ports/firefox#readme)
+- [Firefox](ports/firefox#readme) · [addons.mozilla.org](https://addons.mozilla.org/firefox/user/20178967/)
 - [Google Chrome](ports/chrome#readme)
 
 ### Browser Extensions

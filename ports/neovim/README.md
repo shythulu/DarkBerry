@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/neovim](https://github.com/shythulu/DarkBerry/tree/main/ports/neovim); install them by hand:
+
 1. Copy a `.lua` file from this folder into `~/.config/nvim/colors/`, keeping its name.
 2. `:colorscheme darkberry-mire`, or `vim.cmd.colorscheme("darkberry-mire")` in `init.lua`.
 

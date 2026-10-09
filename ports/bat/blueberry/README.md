@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/bat/blueberry](https://github.com/shythulu/DarkBerry/tree/main/ports/bat/blueberry); install them by hand:
+
 1. Copy a `.tmTheme` file from this folder into `$(bat --config-dir)/themes/` (usually `~/.config/bat/themes/`).
 2. Run `bat cache --build`.
 3. Pick it:

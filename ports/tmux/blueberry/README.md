@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/tmux/blueberry](https://github.com/shythulu/DarkBerry/tree/main/ports/tmux/blueberry); install them by hand:
+
 1. Copy a flavour from this folder to `~/.config/tmux/`.
 2. Source it from `tmux.conf`:
 

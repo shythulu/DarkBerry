@@ -554,10 +554,20 @@ if (!TINT) {
   // edition lives for this port; the edition the README is about is left unlinked.
   const badge = (e) => `<img src="https://img.shields.io/badge/${encodeURIComponent(e.name)}-${e.colour.slice(1)}?style=for-the-badge" alt="${e.name}"/>`;
   const tintBar = (hrefOf) => `<p align="center">\n${EDITIONS.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${badge(e)}</a>` : `\t${badge(e)}`; }).join("\n")}\n</p>`;
+  // Every README's Usage opens with where the port is published, or with the folder its files
+  // are in when it is not published anywhere yet; the hand-install steps from src/usage/ follow.
+  // A tinted edition links the listing's tints URL when that is a separate item.
+  const branch = readJson("src/site/config.json").branch;
+  const lead = (port, folder, tinted) => {
+    const l = port.listing, url = l && (tinted ? l.tints || l.url : l.url);
+    return url ? `Get it from [${l.name}](${url}), which is where updates come from. Or install it by hand:`
+      : `Not on a theme store yet. The files are in [${folder}](${P.repository}/tree/${branch}/${folder}); install them by hand:`;
+  };
   // dir: the folder the README sits in, relative to ports/<key>/; depth: how far that is below the repo root
   const writeReadme = (port, dir, depth, hrefOf, usage) => {
     // out() routes a tint build into its subfolder itself, so the written path omits it
     const base = `ports/${port.key}${dir ? `/${dir}` : ""}`, outBase = TINT ? `ports/${port.key}` : base, up = "../".repeat(depth), own = (f) => exists(`${base}/assets/${f}`);
+    usage = `${lead(port, base, Boolean(TINT || dir))}\n\n${usage}`;
     const previews = TINT ? `${up}assets/previews/${TINT}` : `${up}assets/previews`;
     const vars = {
       NAME: P.name, APP: port.name, APP_URL: port.url || P.homepage, ROOT: up.slice(0, -1),
@@ -599,7 +609,7 @@ if (!TINT) {
   if (!TINT && (!readme.includes(begin) || !readme.includes(end))) errors.push(`README.md needs the ${begin} and ${end} markers`);
   else if (!TINT) {
     const groups = CATS.map((c) => [c, REG.ports.filter((p) => p.categories[0] === c.key)]).filter(([, ps]) => ps.length);
-    const block = groups.map(([c, ps]) => `### ${c.name}\n\n${ps.map((p) => `- [${p.name}](ports/${p.key}#readme)`).join("\n")}`).join("\n\n");
+    const block = groups.map(([c, ps]) => `### ${c.name}\n\n${ps.map((p) => `- [${p.name}](ports/${p.key}#readme)${p.listing ? ` · [${p.listing.name}](${p.listing.url})` : ""}`).join("\n")}`).join("\n\n");
     const next = readme.replace(readme.slice(readme.indexOf(begin), readme.indexOf(end) + end.length),
       `${begin}\n<!-- Written by build.mjs from src/ports.json; edit that file, not this list. -->\n\n${block}\n\n${end}`);
     if (next !== readme) out("README.md", next);

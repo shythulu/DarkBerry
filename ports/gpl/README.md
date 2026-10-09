@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/gpl](https://github.com/shythulu/DarkBerry/tree/main/ports/gpl); install them by hand:
+
 The palette itself, not a theme, in the GIMP palette format that GIMP, Inkscape, Krita,
 MyPaint and Aseprite all import. There is one file per flavour and `darkberry.gpl` with
 every flavour's colours, each labelled with its flavour and name.

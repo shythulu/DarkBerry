@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/tmux/cloudberry](https://github.com/shythulu/DarkBerry/tree/main/ports/tmux/cloudberry); install them by hand:
+
 1. Copy a flavour from this folder to `~/.config/tmux/`.
 2. Source it from `tmux.conf`:
 

@@ -44,6 +44,8 @@
 
 ## Usage
 
+Not on a theme store yet. The files are in [ports/starship/blueberry](https://github.com/shythulu/DarkBerry/tree/main/ports/starship/blueberry); install them by hand:
+
 1. Copy a flavour from this folder over `~/.config/starship.toml`.
 
 A two-line box-drawing prompt: row one is where you are, row two is the caret with the last
