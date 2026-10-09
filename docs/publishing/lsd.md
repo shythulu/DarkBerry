@@ -15,10 +15,13 @@ setting `color: {theme: custom}` in `~/.config/lsd/config.yaml`; there is no pac
 - **Kind**: community repo/docs listing — informal showcase category, not a curated gallery.
   lsd has no built-in theme collection, no official gallery repo, and no theme review process;
   this discussion category is the only place in the project itself where people post themes.
-- **Accepts**: free-form post. No fixed format, file-naming rule, metadata schema or preview-image
-  size is defined. Existing example ("Solarized Light/Dark Theme", discussion #917) is prose plus
-  a link to the author's own theme repo — i.e. posts point out to an external repo rather than
-  attaching the theme file itself.
+- **Accepts**: free-form post, with no fixed format. Posts point out to an external repo rather
+  than attaching the theme file itself.
+- **Fields**: Title (no pattern); Description (prose, as in the existing example, "Solarized
+  Light/Dark Theme", discussion #917); Repository (a link to the author's own theme repo);
+  Screenshots (optional, no preview-image size defined). No file-naming rule or metadata
+  schema is defined.
+- **Add-ons**: the "Show and tell" category.
 - **Requirements**: a free GitHub account (signed in) to post; no fee, no signing key, no formal
   review — discussions are not moderated for acceptance, just for conduct.
 - **Steps**:
@@ -27,7 +30,7 @@ setting `color: {theme: custom}` in `~/.config/lsd/config.yaml`; there is no pac
      https://github.com/lsd-rs/lsd → New discussion → category "Show and tell").
   3. Title it something like "Darkberry theme for lsd" and link
      https://github.com/shythulu/DarkBerry/tree/main/ports/lsd (or the site page
-     https://darkberry.slacklab.ca/), noting the four flavours/tints, MIT licence, and
+     https://darkberry.slacklab.ca), noting the four flavours/tints, MIT licence, and
      the lsd-version caveat (1.1+ needs hex `colors.yaml`; 1.0 needs the `.256.yaml` file).
   4. Optionally attach or embed a preview screenshot (no size requirement observed).
 - **Updates**: edit the discussion post directly; no separate re-submission process.

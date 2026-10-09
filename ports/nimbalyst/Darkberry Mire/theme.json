@@ -2,8 +2,8 @@
   "id": "darkberry-mire",
   "name": "Darkberry Mire",
   "version": "0.3.0",
-  "author": "Darkberry",
-  "description": "The main dark flavour: wine-dark mire with berry accents.",
+  "author": "shythulu",
+  "description": "Dark. The main flavour, berries at full strength. Wine-dark, the overnight dredges.",
   "isDark": true,
   "colors": {
     "bg": "#2a1e26",

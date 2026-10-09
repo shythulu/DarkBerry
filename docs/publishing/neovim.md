@@ -12,12 +12,15 @@ Lua colorscheme (no plugin API, no `setup()`) meant to be copied by hand into `~
 - **URL**: https://github.com/rockerBOO/awesome-neovim (Colorscheme section); contribution rules at
   https://github.com/rockerBOO/awesome-neovim/blob/main/CONTRIBUTING.md
 - **Kind**: community repo (curated "awesome list"); the de facto community index for Neovim plugins.
-- **Accepts**: one Markdown bullet per repo, exact format
-  `- [username/repo](<URL>) - `<TAGS>` <description>.` Tags (use whichever apply, omit ones that don't):
-  `[TS]` Tree-sitter, `[LSP]` LSP semantic tokens, `[L/D]` light+dark variants, `[Lua]` Lua, `[Fnl]` Fennel.
-  Description rules: avoid the words "plugin" and "Neovim" unless essential; if "Neovim" appears it must be
-  capitalised exactly that way (not "nvim"/"Nvim"/"NeoVim"); acronyms (YAML, TOML, JSON, …) must be correctly
-  cased; no emoji.
+- **Accepts**: one Markdown bullet per repo, added by PR.
+- **Fields**: Title (`Add `shythulu/DarkBerry``, exactly); Name (`username/repo`, i.e.
+  `shythulu/DarkBerry`); Summary (the entry's `<description>`: avoid the words "plugin" and "Neovim" unless
+  essential; if "Neovim" appears it must be capitalised exactly that way (not "nvim"/"Nvim"/"NeoVim");
+  acronyms (YAML, TOML, JSON, …) must be correctly cased; no emoji); Repository (the entry's `<URL>`).
+- **Add-ons**: the Colorscheme section; the exact entry format
+  `- [username/repo](<URL>) - `<TAGS>` <description>.`; the tags (use whichever apply, omit ones that
+  don't): `[TS]` Tree-sitter, `[LSP]` LSP semantic tokens, `[L/D]` light+dark variants, `[Lua]` Lua,
+  `[Fnl]` Fennel.
 - **Requirements**: no account beyond a GitHub account to open a PR; no fee, no signing; a human maintainer
   reviews and merges the PR. No explicit licence or star-count requirement was stated in CONTRIBUTING.md.
 - **Steps**:
@@ -40,6 +43,8 @@ Lua colorscheme (no plugin API, no `setup()`) meant to be copied by hand into `~
 - **Kind**: package/plugin registry (read-only; auto-populated).
 - **Accepts**: nothing submitted directly — the site states it scrapes awesome-neovim: "Submit the plugin
   to awesome-neovim… We scrape that repo and [it] is the primary data source for the plugin directory."
+- **Fields**: none of its own; it takes the awesome-neovim entry.
+- **Add-ons**: none.
 - **Requirements**: none of its own; inherits whatever getting into awesome-neovim requires.
 - **Steps**: none beyond the awesome-neovim PR above; the entry appears once neovimcraft's next scrape runs.
 - **Updates**: automatic, tied to awesome-neovim's content.
@@ -55,6 +60,8 @@ Lua colorscheme (no plugin API, no `setup()`) meant to be copied by hand into `~
 - **Accepts**: no plugin submission field exists. Dotfyle indexes plugins it finds while parsing Neovim
   configs that users sync via "Add your configuration" (GitHub sign-in, then it parses that repo's plugin
   manager calls and re-syncs daily). A plugin/colorscheme shows up once some synced config references it.
+- **Fields**: none stated.
+- **Add-ons**: none.
 - **Requirements**: a GitHub account to sign in and sync a config; no fee.
 - **Steps** (indirect — there is no direct listing step):
   1. Sign in to dotfyle.com with GitHub.
@@ -74,8 +81,10 @@ Lua colorscheme (no plugin API, no `setup()`) meant to be copied by hand into `~
 - **URL**: https://vimcolorschemes.com; about page https://vimcolorschemes.com/about
 - **Kind**: community repo (auto-scan, no manual submission form for normal listing).
 - **Accepts**: no format submission — it "scans GitHub every day for color schemes to include." A repo
-  qualifies if it has at least 1 GitHub star and its README or description contains "vim" or "neovim" plus
-  one of theme/color scheme/colour scheme/colorscheme/colourscheme.
+  qualifies if it has at least 1 GitHub star and passes the keyword rule under Fields.
+- **Fields**: Description (the repo's README or description must contain "vim" or "neovim" plus one of
+  theme/color scheme/colour scheme/colorscheme/colourscheme).
+- **Add-ons**: none.
 - **Requirements**: none beyond the above; if a qualifying repo doesn't appear, file a GitHub issue with a
   link to it.
 - **Steps**:
@@ -97,7 +106,9 @@ Lua colorscheme (no plugin API, no `setup()`) meant to be copied by hand into `~
 - **URL**: repo settings at https://github.com/shythulu/DarkBerry (topics field).
 - **Kind**: docs listing / discoverability aid used by GitHub's own topic pages
   (e.g. https://github.com/topics/neovim-colorscheme) and referenced by curated lists.
-- **Accepts**: free-text GitHub topic tags on the repo.
+- **Accepts**: tags on the repo itself, set from its About panel.
+- **Fields**: Keywords (GitHub topics, free text).
+- **Add-ons**: none.
 - **Requirements**: push access to the repo; no review.
 - **Steps**: add topics such as `neovim-colorscheme`, `neovim-theme`, `colorscheme` alongside the existing
   `theme`, `theme-ui`, `themes` topics, from the repo's About panel on GitHub.

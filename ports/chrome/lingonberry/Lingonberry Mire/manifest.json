@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Lingonberry Mire",
   "version": "0.3.0",
-  "description": "Lingonberry for Chrome and Edge. Lingonberry tint of Mire: dark, neutrals leaned toward lingonberry (base #341c23).",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "description": "Lingonberry for Chromium browsers. Dark. The main flavour, berries at full strength. Backgrounds steeped in raspberry red.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [37, 15, 22],

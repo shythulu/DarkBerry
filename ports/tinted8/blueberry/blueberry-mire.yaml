@@ -37,8 +37,8 @@ scheme:
   slug: "blueberry-mire"
   family: "Blueberry"
   style: "Mire"
-  author: "Blueberry (https://darkberry.slacklab.ca/)"
-  description: "Blueberry tint of Mire: dark, neutrals leaned toward blueberry (base #192237)."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Dark. The main flavour, berries at full strength. Backgrounds cooled to a dusty slate blue."
 variant: "dark"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

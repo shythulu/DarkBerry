@@ -109,7 +109,7 @@ fs.writeFileSync(path.join(out, ".nojekyll"), "");
 // are the Safari fallback (96px) and the iOS home-screen icon (180px on the Mire base).
 const COPIES = [
   ["docs/specimen.html", "specimen.html"],
-  ["dist/palette.json", "palette.json"],
+  ["palette.json", "palette.json"],
   ["src/site/icons/favicon.svg", "favicon.svg"],
   ["src/site/icons/favicon.png", "favicon.png"],
   ["src/site/icons/apple-touch-icon.png", "apple-touch-icon.png"],

@@ -3,7 +3,7 @@
   "name": "Darkberry - Blackwater",
   "version": "0.3.0",
   "description": "Darkberry - Blackwater: Darkest. Deeper wine surfaces, same accents as Mire.",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "darkberry-blackwater@darkberry-theme"

@@ -2,8 +2,8 @@
   "id": "crowberry-fen",
   "name": "Crowberry Fen",
   "version": "0.3.0",
-  "author": "Crowberry",
-  "description": "Crowberry tint of Fen: dark, neutrals leaned toward crowberry (base #403654).",
+  "author": "shythulu",
+  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds cooled to inky violet.",
   "isDark": true,
   "colors": {
     "bg": "#403654",

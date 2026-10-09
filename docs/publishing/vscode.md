@@ -1,12 +1,12 @@
 # Publishing the Visual Studio Code port
 
-`ports/vscode/` is a complete VS Code extension (package.json, `themes/*.json`, README, LICENSE) publishing four themes (Darkberry Wisp/Fen/Mire/Blackwater); `ports/vscode/with-tints/` is a second, separately-published extension with all twenty flavour×tint themes. `./package.sh` (repo root) runs `@vscode/vsce package` on both folders to produce `dist/darkberry-theme-<version>.vsix` and `dist/darkberry-with-tints-theme-<version>.vsix`.
+`ports/vscode/` is a complete VS Code extension (package.json, `themes/*.json`, README, LICENSE) publishing four themes (Darkberry Wisp/Fen/Mire/Blackwater); `ports/vscode/with-tints/` is a second, separately-published extension with all twenty flavour×tint themes. `./package.sh` (repo root) runs `@vscode/vsce package` on both folders to produce `ports/vscode/dist/darkberry-theme-<version>.vsix` and `ports/vscode/dist/darkberry-with-tints-theme-<version>.vsix`.
 
 ## Venues
 
 ### Visual Studio Marketplace
 
-**Published 2026-10-06**, version 0.3.0, under publisher `Slacklab`, with `npx @vscode/vsce publish --packagePath dist/<file>.vsix` after `vsce login Slacklab`:
+**Published 2026-10-06**, version 0.3.0, under publisher `Slacklab`, with `npx @vscode/vsce publish --packagePath ports/vscode/dist/<file>.vsix` after `vsce login Slacklab`:
 
 - https://marketplace.visualstudio.com/items?itemName=Slacklab.darkberry-theme
 - https://marketplace.visualstudio.com/items?itemName=Slacklab.darkberry-with-tints-theme
@@ -16,14 +16,16 @@ To update: bump `version` in `src/palette.json` (every variant file carries the 
 
 - **URL**: https://marketplace.visualstudio.com/manage (publisher management), https://marketplace.visualstudio.com/vscode (public gallery)
 - **Kind**: official gallery (the default source VS Code itself queries)
-- **Accepts**: a packaged `.vsix` built by `vsce`/`@vscode/vsce`. Required `package.json` fields: `publisher`, `name`, `version` (semver), `license`, `repository`, `engines.vscode`, `categories` (already `["Themes"]` here). Icon: PNG, minimum 128x128, 256x256+ recommended, SVG icons are rejected; current `package.json` has no `icon` field set (needs adding before publish — see Open questions). Optional `galleryBanner` (1376x80 banner strip) and `galleryBanner.theme`. README.md becomes the marketplace description; image/badge URLs in it must be HTTPS, and badges must come from an allow-listed set of trusted providers (shields.io is allowed). LICENSE and CHANGELOG.md are conventional but not strictly enforced by the tool.
+- **Accepts**: a packaged `.vsix` built by `vsce`/`@vscode/vsce`. LICENSE and CHANGELOG.md are conventional but not strictly enforced by the tool.
+- **Fields**: Name (`package.json` `name`, required); Description (README.md becomes the marketplace description; image/badge URLs in it must be HTTPS, and badges must come from an allow-listed set of trusted providers, shields.io is allowed); Category (`categories`, required, already `["Themes"]` here); Publisher (`publisher`, required); Repository (`repository`, required); Licence (`license`, required); Version (`version`, semver, required); Icon (`icon`: PNG, minimum 128×128, 256×256+ recommended, SVG icons are rejected; current `package.json` has no `icon` field set, needs adding before publish — see Open questions).
+- **Add-ons**: `engines.vscode` (required); optional `galleryBanner` (1376×80 banner strip) and `galleryBanner.theme`.
 - **Requirements**: a Microsoft account; a "publisher" identity created once at the manage page (an `id`, unchangeable, and a display `name`); an Azure DevOps Personal Access Token (PAT) scoped to Marketplace > Manage, created for "All accessible organizations" (a common failure is scoping it to one org). No listing fee. Verified-publisher status (a checkmark next to the publisher name) additionally needs the extension to have been published 6+ months, a domain registered 6+ months, and a TXT-record DNS proof, reviewed within 5 business days — optional, not required to publish. 2FA/MFA requirement on the Microsoft account was not stated in the docs fetched; not confirmed either way (unverified). Global PATs are being retired 2026-12-01 in favour of Entra ID (OIDC/workload-identity) authentication for automated publishing — relevant if publishing from CI after that date.
 - **Steps**:
   1. Create/sign in to a Microsoft account, go to https://marketplace.visualstudio.com/manage, click "Create publisher", set `id` (must match `package.json`'s `publisher`) and `name`.
   2. Get a PAT: https://go.microsoft.com/fwlink/?LinkId=307137 → User settings → Personal access tokens → New Token → Organization "All accessible organizations" → Scopes → Custom defined → Marketplace → Manage.
   3. `npm install -g @vscode/vsce`; `vsce login <publisher-id>` and paste the PAT (or skip login and pass `-p <token>` on publish).
   4. Add an `icon` field to `package.json` pointing at a PNG (both `ports/vscode/` and `ports/vscode/with-tints/`).
-  5. Build with the repo's `./package.sh`, or manually: `cd ports/vscode && vsce publish --packagePath ../../dist/darkberry-theme-<version>.vsix`, and the same for `with-tints`. (Or `vsce package` then `vsce publish -p <token>` from inside each folder.)
+  5. Build with the repo's `./package.sh`, or manually: `cd ports/vscode && vsce publish --packagePath dist/darkberry-theme-<version>.vsix`, and the same for `with-tints`. (Or `vsce package` then `vsce publish -p <token>` from inside each folder.)
   6. Repeat for the `with-tints` extension under its own `name`/`displayName` (already distinct in its `package.json`).
 - **Updates**: bump `version` in `package.json`, rebuild, `vsce publish` again (or `vsce publish minor`/`patch`/`<version>` to bump and publish in one step). No re-review gate was documented for updates beyond the same automated scanning as new submissions.
 - **Contacts**: publisher-management portal's own support link; Microsoft Q&A (learn.microsoft.com/answers) tag `vscode`; no dedicated email found.
@@ -34,15 +36,17 @@ To update: bump `version` in `src/palette.json` (every variant file carries the 
 
 - **URL**: https://open-vsx.org/ ; namespace/ownership issues at https://github.com/EclipseFdn/open-vsx.org/issues/new/choose ; wiki: https://github.com/eclipse-openvsx/openvsx/wiki/Namespace-Access
 - **Kind**: official gallery for non-Microsoft VS Code forks — this is where VSCodium and Cursor's built-in extension search pulls from (Microsoft's marketplace terms restrict use by non-Microsoft VS Code builds), so it's effectively required, not optional, for this port's stated "works in Cursor, VSCodium and Windsurf" claim.
-- **Accepts**: the same `.vsix` built by `vsce`/`ovsx` — Open VSX's `ovsx` CLI packages via `vsce` internally, so the same `package.json` fields apply. Extensions are auto-scanned for secrets, blocklist matches, and namespace-similarity before being accepted.
-- **Requirements**: an eclipse.org account (its GitHub username must match the account used to log into open-vsx.org); a signed Eclipse Publisher Agreement (https://open-vsx.org/publisher-agreement-v1.1); an access token generated on open-vsx.org; a claimed/created namespace matching `package.json`'s `publisher` field ("Slacklab"). No fee. Namespace *creation* (via `ovsx create-namespace`) is separate from namespace *ownership verification* — creating it doesn't make you the verified owner.
+- **Accepts**: the same `.vsix` built by `vsce`/`ovsx`. Extensions are auto-scanned for secrets, blocklist matches, and namespace-similarity before being accepted.
+- **Fields**: the same as the Visual Studio Marketplace above — Open VSX's `ovsx` CLI packages via `vsce` internally, so the same `package.json` fields apply; Publisher (`publisher`, must match the namespace, "Slacklab").
+- **Add-ons**: the same as the Visual Studio Marketplace above; the namespace-claim issue on github.com/EclipseFdn/open-vsx.org (its template fields are unverified, see Confidence).
+- **Requirements**: an eclipse.org account (its GitHub username must match the account used to log into open-vsx.org); a signed Eclipse Publisher Agreement (https://open-vsx.org/publisher-agreement-v1.1); an access token generated on open-vsx.org; a claimed/created namespace matching `package.json`'s `publisher` field ("shythulu"). No fee. Namespace *creation* (via `ovsx create-namespace`) is separate from namespace *ownership verification* — creating it doesn't make you the verified owner.
 - **Steps**:
   1. Register at https://accounts.eclipse.org/user/register with the same username as the GitHub account that will log into open-vsx.org.
   2. Log into https://open-vsx.org via GitHub → Settings → Profile → "Log in with Eclipse" → authorize → accept the Publisher Agreement shown on the profile page.
   3. Settings → Access Tokens → Generate New Token; copy it immediately (shown once).
   4. `npx ovsx create-namespace Slacklab -p <token>` (only needed if the namespace doesn't exist yet).
   5. Claim verified ownership of the `Slacklab` namespace by opening an issue against https://github.com/EclipseFdn/open-vsx.org using its namespace-claim template; the fastest-processed path is "namespace is already a Marketplace publisher with a published extension whose `package.json` has a `repository` field" — true here once the extension is on the VS Marketplace, since `repository` already points at github.com/shythulu/DarkBerry.
-  6. `npx ovsx publish ports/vscode -p <token>` (or `npx ovsx publish dist/darkberry-theme-<version>.vsix -p <token>`); repeat for `ports/vscode/with-tints`.
+  6. `npx ovsx publish ports/vscode -p <token>` (or `npx ovsx publish ports/vscode/dist/darkberry-theme-<version>.vsix -p <token>`); repeat for `ports/vscode/with-tints`.
 - **Updates**: bump version, rebuild, `ovsx publish` again — no separate re-review step documented beyond the same automated scan.
 - **Contacts**: issues at github.com/EclipseFdn/open-vsx.org (namespace/ops) and github.com/eclipse-openvsx/openvsx (registry software); no chat/email found in what was fetched.
 - **Sources**: https://github.com/eclipse-openvsx/openvsx/wiki/Namespace-Access (fetched 2026-09-24); https://open-vsx.org/publisher-agreement-v1.1 (found via search 2026-09-24, not opened); GitHub issues search on `EclipseFdn/open-vsx.org` "Claiming namespace" pattern, e.g. issues #13426, #13310 (fetched 2026-09-24).
@@ -52,7 +56,9 @@ To update: bump `version` in `src/palette.json` (every variant file carries the 
 
 - **URL**: https://vscodethemes.com (source at https://github.com/vscodethemes/web)
 - **Kind**: community gallery, read-only mirror of the Marketplace
-- **Accepts**: nothing submitted directly — it periodically scans the VS Marketplace and indexes any theme whose manifest has a description and whose theme files are `.json` (not `.tmTheme`). This port qualifies once published there.
+- **Accepts**: nothing submitted directly — it periodically scans the VS Marketplace and indexes any theme whose theme files are `.json` (not `.tmTheme`). This port qualifies once published there.
+- **Fields**: Summary (the manifest's `description`; a theme without one is not indexed).
+- **Add-ons**: none.
 - **Requirements**: none beyond being live on the VS Marketplace.
 - **Steps**: none — publish to the VS Marketplace (above) and wait for the next scan; if it doesn't appear, open an issue on github.com/vscodethemes/web or github.com/vscodethemes.
 - **Updates**: automatic on the next scan after a Marketplace update; no manual re-submission.
@@ -64,7 +70,9 @@ To update: bump `version` in `src/palette.json` (every variant file carries the 
 
 - **URL**: https://github.com/viatsko/awesome-vscode (rendered: https://viatsko.github.io/awesome-vscode/)
 - **Kind**: community repo (curated README list), not a store
-- **Accepts**: one Markdown entry per theme, linking to vscodethemes.com if the theme is listed there, otherwise to the Marketplace page. Only one theme entry per publisher is accepted. A screenshot in a house style is requested (a template/sketch file is provided in the repo). Entries must sit in alphabetical order in the themes section.
+- **Accepts**: one Markdown entry per theme. Only one theme entry per publisher is accepted. Entries must sit in alphabetical order in the themes section.
+- **Fields**: Screenshots (one, in a house style; a template/sketch file is provided in the repo).
+- **Add-ons**: the entry's link — to vscodethemes.com if the theme is listed there, otherwise to the Marketplace page.
 - **Requirements**: a GitHub account to open a pull request; no fee, no review body beyond the repo's own PR review.
 - **Steps**: fork the repo, add one alphabetically-placed entry under the themes section linking to the Marketplace (or vscodethemes) page, include a screenshot per the template, open a PR against `master`.
 - **Updates**: a follow-up PR to edit the existing entry (e.g. link or screenshot changes).
@@ -79,8 +87,8 @@ To update: bump `version` in `src/palette.json` (every variant file carries the 
 
 ## Open questions
 
-- `package.json` in both `ports/vscode/` and `ports/vscode/with-tints/` has no `icon` field and there is no dedicated square PNG icon asset in `ports/vscode/assets/` (only `.webp` screenshots) — a submitting agent must add a 256x256+ PNG icon and wire it into both manifests before the first Marketplace/Open VSX publish.
-- The Marketplace publisher is `Slacklab` (created 2026-10-06; the first publish attempt under `shythulu` was refused with "Publisher ID 'shythulu' provided in the extension manifest should match the publisher ID 'Slacklab'"). `build.mjs` sets `publisher: "Slacklab"` in both manifests. The Open VSX namespace should be created under the same name.
+- Settled: both `package.json` files now set `icon: "icon.png"` (the logo PNG at 256 px, see `../COPY.md` *Pictures*).
+- Settled: the publisher is `Slacklab` (`PUBLISHER` in `build.mjs`), the account the two extensions went live under on the Visual Studio Marketplace on 2026-10-06; the Open VSX namespace should match it.
 - Whether the project wants CI-based publishing (relevant to the 2026-12-01 PAT retirement pushing Marketplace auth toward Entra ID/OIDC) or a one-off manual `vsce`/`ovsx publish` — affects which token/setup flow to follow.
 - No CHANGELOG.md currently in `ports/vscode/` — decide whether to add one; not a hard requirement for either registry but conventional.
 - vscodethemes.com and awesome-vscode listing were not confirmed as already covering Darkberry — a submitting agent should check both sites for an existing entry before assuming these are net-new.

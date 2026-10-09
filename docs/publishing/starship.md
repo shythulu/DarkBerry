@@ -1,6 +1,6 @@
 # Publishing the Starship port
 
-The port ships one complete `starship.toml` preset per flavour (`ports/starship/darkberry-{wisp,fen,mire,blackwater}.toml`), each self-contained with its own `[palettes.darkberry]` table, plus four tint subfolders (`ports/starship/{blueberry,cloudberry,crowberry,lingonberry}/`) holding the same four files recoloured. MIT-licensed, repo `shythulu/DarkBerry`, site `https://darkberry.slacklab.ca/`.
+The port ships one complete `starship.toml` preset per flavour (`ports/starship/darkberry-{wisp,fen,mire,blackwater}.toml`), each self-contained with its own `[palettes.darkberry]` table, plus four tint subfolders (`ports/starship/{blueberry,cloudberry,crowberry,lingonberry}/`) holding the same four files recoloured. MIT-licensed, repo `shythulu/DarkBerry`, site `https://darkberry.slacklab.ca`.
 
 ## Venues
 
@@ -8,8 +8,10 @@ The port ships one complete `starship.toml` preset per flavour (`ports/starship/
 
 - **URL**: rendered page https://starship.rs/presets/ ; source https://github.com/starship/starship/blob/master/docs/presets/README.md ; toml directory https://github.com/starship/starship/tree/master/docs/public/presets/toml
 - **Kind**: official gallery, and the same files feed the CLI's built-in `starship preset` command — this is the only sanctioned distribution point for a Starship theme.
-- **Accepts**: a complete `starship.toml` dropped into `docs/public/presets/toml/<name>.toml`; the filename (without extension) becomes the invocable preset name (`starship preset <name>`) — `build.rs` walks that directory at compile time and auto-registers whatever is there, no source-code changes needed. A matching doc page `docs/presets/<name>.md` embeds the toml via VitePress's `<<< @/public/presets/toml/<name>.toml` and shows `starship preset <name> -o ~/.config/starship.toml`. A screenshot goes in `docs/public/presets/img/<name>.png` — existing screenshots range from 538×170 to 2906×1608 PNG, no fixed size or aspect enforced. One `## [<Title>](./<name>.md)` entry (name, 1–2 sentence description, linked screenshot image) is added to `docs/presets/README.md`, in the same style as the existing entries (e.g. Catppuccin Powerline). Filenames don't have to match the doc slug exactly (existing repo is inconsistent: `nerd-font-symbols.toml` → `nerd-font.md`) but keeping them aligned is the norm.
-- **Requirements**: GitHub account; fork + PR; no fee, no signing keys, no CLA/DCO found. PR title must start with a Conventional Commit type (`docs:`, `feat:`, etc. — see `.github/PULL_REQUEST_TEMPLATE.md`). The template has a mandatory **AI-Assistance** checkbox ("Have you used AI-assistance to author this PR? Yes/No" + scope description) per `AI_POLICY.md`. That policy also requires a human-in-the-loop who can "explain what your changes do and defend implementation choices" and answer maintainer questions unaided, and explicitly bans "unsupervised autonomous agents operating in an automated loop" — a human must be the one opening and defending this PR, not an agent acting alone. Maintainer review is otherwise informal (no explicit SLA found).
+- **Accepts**: a complete `starship.toml` dropped into `docs/public/presets/toml/<name>.toml` — `build.rs` walks that directory at compile time and auto-registers whatever is there, no source-code changes needed.
+- **Fields**: Name (`<Title>` in one `## [<Title>](./<name>.md)` entry added to `docs/presets/README.md`, in the same style as the existing entries, e.g. Catppuccin Powerline); Description (1–2 sentences, in that entry); Screenshots (one, in `docs/public/presets/img/<name>.png`, linked from that entry; existing screenshots range from 538×170 to 2906×1608 PNG, no fixed size or aspect enforced); Title (must start with a Conventional Commit type, `docs:`, `feat:`, etc. — see `.github/PULL_REQUEST_TEMPLATE.md`).
+- **Add-ons**: the preset name: the toml filename (without extension) becomes the invocable preset name (`starship preset <name>`); a matching doc page `docs/presets/<name>.md` that embeds the toml via VitePress's `<<< @/public/presets/toml/<name>.toml` and shows `starship preset <name> -o ~/.config/starship.toml` (filenames don't have to match the doc slug exactly — existing repo is inconsistent: `nerd-font-symbols.toml` → `nerd-font.md` — but keeping them aligned is the norm); the PR template's mandatory **AI-Assistance** checkbox ("Have you used AI-assistance to author this PR? Yes/No" + scope description) per `AI_POLICY.md`.
+- **Requirements**: GitHub account; fork + PR; no fee, no signing keys, no CLA/DCO found. `AI_POLICY.md` also requires a human-in-the-loop who can "explain what your changes do and defend implementation choices" and answer maintainer questions unaided, and explicitly bans "unsupervised autonomous agents operating in an automated loop" — a human must be the one opening and defending this PR, not an agent acting alone. Maintainer review is otherwise informal (no explicit SLA found).
 - **Steps**:
   1. Fork `starship/starship`, branch off `master`.
   2. Copy the four flavour files into `docs/public/presets/toml/` as `darkberry-wisp.toml`, `darkberry-fen.toml`, `darkberry-mire.toml`, `darkberry-blackwater.toml` (matches existing local filenames already).
@@ -27,6 +29,8 @@ The port ships one complete `starship.toml` preset per flavour (`ports/starship/
 - **URL**: https://github.com/topics/starship-preset (also `starship-preset-configuration`, `starship-prompt`)
 - **Kind**: community discovery listing, not a submission queue.
 - **Accepts**: any public repo tagged with the topic; no format or metadata requirements beyond the repo being public and having the topic set.
+- **Fields**: Keywords (the repo topic, `starship-preset`; also `starship-preset-configuration`, `starship-prompt`).
+- **Add-ons**: none.
 - **Requirements**: a GitHub account (already have `shythulu/DarkBerry`); no review, no fee.
 - **Steps**: 1. On the DarkBerry repo, open Settings → add topic `starship-preset` (repo topics are also editable from the repo home page's gear icon next to "About"). 2. Repo then appears under that topic's browse/search page.
 - **Updates**: none — stays listed as long as the topic and repo remain public.
@@ -39,6 +43,8 @@ The port ships one complete `starship.toml` preset per flavour (`ports/starship/
 - **URL**: https://github.com/waraga2/sweet-starship-presets ; https://github.com/Maroc02/awesome-starship-prompts
 - **Kind**: unofficial community repos, not affiliated with the Starship project.
 - **Accepts**: `sweet-starship-presets` (GPL-3.0): README says "you're welcomed to share yours in the discussions tab an we just might archive it here" — no stated file format, naming, licence, or preview-image rule. `awesome-starship-prompts`: a gallery of screenshots linking to external config sources; no `CONTRIBUTING.md` or issue/PR template found in either repo as of this date.
+- **Fields**: Name; Screenshots (no preview-image rule stated by `sweet-starship-presets`). Both from Steps, following the existing gallery entries' shape; unverified.
+- **Add-ons**: a link to the config (the Darkberry starship page or toml).
 - **Requirements**: GitHub account only; no fee, no signing; review is informal/maintainer discretion, undocumented.
 - **Steps**: `sweet-starship-presets` — open a new post in its Discussions tab (https://github.com/waraga2/sweet-starship-presets/discussions) linking the Darkberry starship page/toml and a screenshot. `awesome-starship-prompts` — open an issue or PR proposing an entry (no template exists; state name, screenshot, and config link, following the existing gallery entries' shape).
 - **Updates**: edit/re-post the discussion or PR when the preset changes; no versioning scheme.

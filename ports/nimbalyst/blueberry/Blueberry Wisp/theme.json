@@ -2,8 +2,8 @@
   "id": "blueberry-wisp",
   "name": "Blueberry Wisp",
   "version": "0.3.0",
-  "author": "Blueberry",
-  "description": "Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff).",
+  "author": "shythulu",
+  "description": "Light. A pale page, the berries deepened to read on it. Backgrounds cooled to a dusty slate blue.",
   "isDark": false,
   "colors": {
     "bg": "#f2f6ff",

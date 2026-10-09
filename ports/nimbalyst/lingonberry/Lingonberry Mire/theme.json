@@ -2,8 +2,8 @@
   "id": "lingonberry-mire",
   "name": "Lingonberry Mire",
   "version": "0.3.0",
-  "author": "Lingonberry",
-  "description": "Lingonberry tint of Mire: dark, neutrals leaned toward lingonberry (base #341c23).",
+  "author": "shythulu",
+  "description": "Dark. The main flavour, berries at full strength. Backgrounds steeped in raspberry red.",
   "isDark": true,
   "colors": {
     "bg": "#341c23",

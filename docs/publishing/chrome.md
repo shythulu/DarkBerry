@@ -17,12 +17,14 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
 - **Accepts**: a `.zip` (max 2 GB) of one flavour's `manifest.json` + assets, uploaded as a
   separate item per flavour (repetitive-content policy — see Open questions — makes "one item
   per colour variant" risky, but is how most existing colour-family themes are structured
-  anyway). Required images: 128x128 PNG store icon; at least one screenshot at 1280x800 or
-  640x400 (max 5), full-bleed, no padding/border; 440x280 PNG/JPEG small promo tile. Optional:
-  1400x560 marquee promo tile, YouTube video. Listing fields: detailed description, category,
-  language, and a mandatory Privacy tab (single-purpose description, permission justification,
-  remote-code declaration, data-usage certification) even though a static theme requests no
-  permissions and collects no data.
+  anyway).
+- **Fields**: Description (detailed description); Category; Version (`manifest.json` version);
+  Icon (128×128 PNG store icon, required); Screenshots (at least one, max 5, 1280×800 or
+  640×400, full-bleed, no padding/border).
+- **Add-ons**: language; a 440×280 PNG/JPEG small promo tile (required); an optional
+  1400×560 marquee promo tile; an optional YouTube video; a mandatory Privacy tab
+  (single-purpose description, permission justification, remote-code declaration, data-usage
+  certification) even though a static theme requests no permissions and collects no data.
 - **Requirements**: a Google account with 2-Step Verification turned on — mandatory before any
   publish or update; a one-time developer registration fee per account (widely reported as
   US$5, but the exact figure is shown at payment time in the dashboard, not stated on the
@@ -64,12 +66,15 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
   change is dropping any `update_url` (not present here) and rebranding "Chrome" wording used
   in the name or description — Darkberry's Chrome manifests currently say "Darkberry for
   Chrome and Edge" in `description`, which Edge's own porting guide says must be changed to
-  reference Microsoft Edge to pass certification. Upload is a `.zip` per flavour. Per-language
-  listing fields: description (250–10,000 characters, required — the manifest's short
-  description is too short and needs expanding in Partner Center); extension logo (1:1,
-  recommended 300x300, minimum 128x128, required); small promo tile 440x280 (optional); large
-  promo tile 1400x560 (optional); up to 6 screenshots at 640x480 or 1280x800 (optional);
-  category (required); privacy declarations as below.
+  reference Microsoft Edge to pass certification. Upload is a `.zip` per flavour.
+- **Fields**: Name (read from the manifest); Summary (the manifest's short description);
+  Description (per language, 250–10,000 characters, required — the manifest's short
+  description is too short and needs expanding in Partner Center); Category (required);
+  Homepage (website); Support (support contact); Version (manifest version); Icon (extension
+  logo, 1:1, 300×300 recommended, 128×128 minimum, required); Screenshots (up to 6 at 640×480
+  or 1280×800, optional).
+- **Add-ons**: small promo tile 440×280 (optional); large promo tile 1400×560 (optional);
+  privacy declarations (see Requirements); Availability (Public/Hidden, markets).
 - **Requirements**: free registration, no fee; a Partner Center account with a Microsoft
   Account (MSA, or GitHub sign-in that creates one) as Primary Owner, individual or company
   type — individual verification is quick (name-availability check), company verification can

@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Darkberry Blackwater",
   "version": "0.3.0",
-  "description": "Darkberry for Chrome and Edge. Darkest. Deeper wine surfaces, same accents as Mire.",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "description": "Darkberry for Chromium browsers. Darkest. Deeper surfaces, the same berries as Mire. Blood in bog water.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [18, 9, 15],

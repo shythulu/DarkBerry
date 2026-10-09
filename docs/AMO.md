@@ -47,7 +47,7 @@ may make derivatives if they share alike.
 
 ```sh
 ./package.sh
-ls dist/*.xpi
+ls ports/firefox/dist/*.xpi
 ```
 
 **2. Create an account** at [addons.mozilla.org](https://addons.mozilla.org/) and go to the

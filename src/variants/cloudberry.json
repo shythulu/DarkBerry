@@ -2,8 +2,9 @@
   "name": "Darkberry",
   "id": "darkberry",
   "version": "0.3.0",
-  "description": "Darkberry: a four-flavour bog-witch berry theme. Tint: Cloudberry.",
-  "homepage": "https://darkberry.slacklab.ca/",
+  "description": "Darkberry: a bog-witch berry theme in four flavours, one light and three dark. Wine-dark plum with berry accents. Tint: Cloudberry.",
+  "author": "shythulu",
+  "homepage": "https://darkberry.slacklab.ca",
   "repository": "https://github.com/shythulu/DarkBerry",
   "neutralOrder": [
     "text",
@@ -43,6 +44,8 @@
       "name": "Wisp",
       "dark": false,
       "note": "Cloudberry tint of Wisp: light, neutrals leaned toward cloudberry (base #fff4ee).",
+      "description": "Light. A pale page, the berries deepened to read on it.",
+      "tagline": "The light theme that doesn't hurt.",
       "colors": {
         "text": "#55321f",
         "subtext1": "#62402e",
@@ -80,6 +83,8 @@
       "name": "Fen",
       "dark": true,
       "note": "Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524).",
+      "description": "Soft dark. The gentlest dark flavour, a shade above Mire.",
+      "tagline": "Rosy and dusky, for reading at night.",
       "colors": {
         "text": "#f8e6dd",
         "subtext1": "#e3cfc5",
@@ -117,6 +122,8 @@
       "name": "Mire",
       "dark": true,
       "note": "Cloudberry tint of Mire: dark, neutrals leaned toward cloudberry (base #341e13).",
+      "description": "Dark. The main flavour, berries at full strength.",
+      "tagline": "Wine-dark, the overnight dredges.",
       "colors": {
         "text": "#f5e3da",
         "subtext1": "#e2d0c7",
@@ -154,6 +161,8 @@
       "name": "Blackwater",
       "dark": true,
       "note": "Cloudberry tint of Blackwater: dark, neutrals leaned toward cloudberry (base #261207).",
+      "description": "Darkest. Deeper surfaces, the same berries as Mire.",
+      "tagline": "Blood in bog water.",
       "colors": {
         "text": "#f3e1d8",
         "subtext1": "#ddcbc2",

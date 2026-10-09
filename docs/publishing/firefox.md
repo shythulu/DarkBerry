@@ -12,20 +12,24 @@ same four flavours one directory deeper, at `ports/firefox/<tint>/<flavour>/mani
 - **URL**: https://addons.mozilla.org/ (submission at https://addons.mozilla.org/developers/)
 - **Kind**: official gallery — the only Firefox theme store; "Firefox Color" and any other
   theme gallery are AMO listings, not separate venues (see Not applicable).
-- **Accepts**: a `.zip`/`.xpi`/`.crx` up to 200 MB containing `manifest.json` with
-  `browser_specific_settings.gecko.id`, `name`, `version`, `description`, `theme.colors`.
-  AMO-side listing fields on submission: name, add-on URL slug, summary, full description,
-  licence, up to 2 Firefox categories (+2 for Android), support email/website, homepage.
-  Icon: 32x32 and 64x64 PNG/JPEG (SVG scales best). Screenshots: recommended 1280x800,
-  1.6:1 ratio if using another size, PNG/JPEG, no hard limit on count. AMO also auto-generates
-  a colour swatch preview from `theme.colors`, but an actual screenshot ranks better.
+- **Accepts**: a `.zip`/`.xpi`/`.crx` up to 200 MB containing a static-theme `manifest.json`
+  (`theme.colors`). AMO also generates a colour swatch preview from `theme.colors`, but a
+  real screenshot ranks better.
+- **Fields**: Name (manifest `name`); Summary (250 characters); Description; Category (up to
+  2 Firefox categories, Appearance); Licence; Support (email or website); Homepage (prefilled
+  from the manifest's `homepage_url`); Version (manifest `version`); Icon (32×32 and 64×64
+  PNG or JPEG; SVG scales best); Screenshots (1280×800 recommended, 1.6:1 at other sizes,
+  PNG or JPEG, no count limit).
+- **Add-ons**: `browser_specific_settings.gecko.id` in the manifest; the add-on URL slug;
+  up to 2 Firefox for Android categories; the channel, "On this site" (listed) or "On your
+  own".
 - **Requirements**: a Mozilla account (free); listed vs. self-distributed ("On this site" vs
   "On your own") chosen per add-on — this project uses listed, which is what gets Mozilla
   signing and auto-updates; automated review, usually live within minutes for themes since
   they carry no executable code; API credentials (JWT issuer + secret, one-time, secret shown
   once) for the JWT auth `web-ext sign` uses, from the same developer account, no separate fee.
 - **Steps** (per flavour, first submission only — already done for Wisp/Fen/Mire/Blackwater
-  per `docs/AMO.md`): 1. `./package.sh`, take the flavour's `.xpi` from `dist/`. 2. Sign in,
+  per `docs/AMO.md`): 1. `./package.sh`, take the flavour's `.xpi` from `ports/firefox/dist/`. 2. Sign in,
   open the developer hub. 3. *Submit a New Add-on* > "On this site". 4. Upload the `.xpi`.
   5. Set category (Appearance), licence (CC BY-NC-SA 4.0, the only kind AMO offers themes), support
   website `https://darkberry.slacklab.ca/`, summary (prefilled from the manifest in the listing
@@ -49,13 +53,15 @@ same four flavours one directory deeper, at `ports/firefox/<tint>/<flavour>/mani
 - **URL**: https://www.zen-browser.app/mods (marketplace); submissions via
   https://github.com/zen-browser/theme-store (issue-driven)
 - **Kind**: community repo / store, specific to the Zen Browser fork of Firefox.
-- **Accepts**: an issue titled `[create-theme]: <theme-name>` filled from a template with a
-  600x400 PNG screenshot, a README describing the mod, and a JSON preferences block if the
-  theme exposes options. Name must be unique and under 25 characters, description under 100.
+- **Accepts**: an issue titled `[create-theme]: <theme-name>`, filled from a template.
   Whether it accepts a Firefox WebExtension static theme (`manifest.json`/`theme.colors`) as
   submitted, or wants Zen's own mod format instead, could not be confirmed from the docs or
   repo README fetched — Zen mods are commonly userChrome.css-based customisations, which is a
   different mechanism from a WebExtension theme, so the two are not obviously interchangeable.
+- **Fields**: Title (`[create-theme]: <theme-name>`); Name (unique, under 25 characters);
+  Summary (under 100 characters); Description (the README describing the mod); Screenshots
+  (one 600×400 PNG); Licence (CC BY-NC-SA 4.0, fixed by the repo, see Requirements).
+- **Add-ons**: a JSON preferences block, if the theme exposes options.
 - **Requirements**: no account beyond a GitHub account to open the issue; mod must be
   open source; all themes in the repo are put under CC BY-NC-SA 4.0 by submitting, which
   conflicts with Darkberry's MIT licence unless dual-licensing this port specifically is

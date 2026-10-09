@@ -2,8 +2,9 @@
   "name": "Darkberry",
   "id": "darkberry",
   "version": "0.3.0",
-  "description": "Darkberry: a four-flavour bog-witch berry theme.",
-  "homepage": "https://darkberry.slacklab.ca/",
+  "description": "Darkberry: a bog-witch berry theme in four flavours, one light and three dark. Wine-dark plum with berry accents.",
+  "author": "shythulu",
+  "homepage": "https://darkberry.slacklab.ca",
   "repository": "https://github.com/shythulu/DarkBerry",
   "neutralOrder": [
     "text",
@@ -43,6 +44,8 @@
       "name": "Wisp",
       "dark": false,
       "note": "Light. Text is a violet-leaning cousin of the paint colour.",
+      "description": "Light. A pale page, the berries deepened to read on it.",
+      "tagline": "The light theme that doesn't hurt.",
       "colors": {
         "text": "#4f3143",
         "subtext1": "#5a4050",
@@ -80,6 +83,8 @@
       "name": "Fen",
       "dark": true,
       "note": "Soft dark. The background (#4c3342) is within a shade of the paint colour.",
+      "description": "Soft dark. The gentlest dark flavour, a shade above Mire.",
+      "tagline": "Rosy and dusky, for reading at night.",
       "colors": {
         "text": "#f2e6ee",
         "subtext1": "#dfced9",
@@ -117,6 +122,8 @@
       "name": "Mire",
       "dark": true,
       "note": "The main dark flavour: wine-dark mire with berry accents.",
+      "description": "Dark. The main flavour, berries at full strength.",
+      "tagline": "Wine-dark, the overnight dredges.",
       "colors": {
         "text": "#efe3eb",
         "subtext1": "#ddd0d9",
@@ -154,6 +161,8 @@
       "name": "Blackwater",
       "dark": true,
       "note": "Darkest. Deeper wine surfaces, same accents as Mire.",
+      "description": "Darkest. Deeper surfaces, the same berries as Mire.",
+      "tagline": "Blood in bog water.",
       "colors": {
         "text": "#ede1e9",
         "subtext1": "#d8cbd4",

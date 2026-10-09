@@ -1,7 +1,7 @@
 {
   "name": "darkberry-with-tints-theme",
   "displayName": "Darkberry with tints",
-  "description": "Darkberry: a four-flavour bog-witch berry theme. This edition also carries the Lingonberry, Cloudberry, Crowberry, Blueberry tints.",
+  "description": "Darkberry's four flavours in five tints: Darkberry, Lingonberry, Cloudberry, Crowberry and Blueberry. Twenty themes.",
   "version": "0.3.0",
   "publisher": "Slacklab",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "vscode": "^1.70.0"
   },
   "icon": "icon.png",
-  "homepage": "https://darkberry.slacklab.ca/",
+  "homepage": "https://darkberry.slacklab.ca",
   "repository": {
     "type": "git",
     "url": "https://github.com/shythulu/DarkBerry"

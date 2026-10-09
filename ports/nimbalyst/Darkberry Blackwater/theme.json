@@ -2,8 +2,8 @@
   "id": "darkberry-blackwater",
   "name": "Darkberry Blackwater",
   "version": "0.3.0",
-  "author": "Darkberry",
-  "description": "Darkest. Deeper wine surfaces, same accents as Mire.",
+  "author": "shythulu",
+  "description": "Darkest. Deeper surfaces, the same berries as Mire. Blood in bog water.",
   "isDark": true,
   "colors": {
     "bg": "#1d121a",

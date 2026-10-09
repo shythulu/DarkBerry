@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Crowberry Blackwater",
   "version": "0.3.0",
-  "description": "Crowberry for Chrome and Edge. Crowberry tint of Blackwater: dark, neutrals leaned toward crowberry (base #191126).",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "description": "Crowberry for Chromium browsers. Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to inky violet.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [15, 8, 27],

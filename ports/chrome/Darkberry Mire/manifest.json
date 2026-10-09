@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Darkberry Mire",
   "version": "0.3.0",
-  "description": "Darkberry for Chrome and Edge. The main dark flavour: wine-dark mire with berry accents.",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "description": "Darkberry for Chromium browsers. Dark. The main flavour, berries at full strength. Wine-dark, the overnight dredges.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [28, 17, 25],

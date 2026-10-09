@@ -18,7 +18,7 @@ const root = path.dirname(new URL(import.meta.url).pathname);
 const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
 const readJson = (rel) => JSON.parse(read(rel));
 // `node build.mjs --check [palette]` runs every check and writes nothing, so a tint
-// can be verified without overwriting ports/, docs/ and dist/ with its output.
+// can be verified without overwriting ports/, docs/ and palette.json with its output.
 const CHECK_ONLY = process.argv.includes("--check");
 const argPalette = process.argv.slice(2).find((a) => !a.startsWith("--"));
 const out = (rel, data) => {
@@ -47,7 +47,7 @@ const EDITIONS = Object.entries(TINTS).map(([id, t]) => {
 });
 // Where a tint's output goes. Ports keep each tint in a subfolder, except the two whose
 // format holds every tint at once: VS Code's with-tints extension and the GIMP palette file.
-// Everything outside ports/ (docs, dist, assets, README.md) belongs to the default build.
+// Everything outside ports/ (docs, assets, palette.json, README.md) belongs to the default build.
 function route(rel) {
   if (!TINT) return rel;
   const m = rel.match(/^ports\/([^/]+)\/(.*)$/); if (!m) return null;
@@ -56,6 +56,11 @@ function route(rel) {
   if (key === "gpl") return rest === `${P.id}.gpl` ? rel : null;
   return `ports/${key}/${TINT}/${rest}`;
 }
+// Who the listings name (docs/COPY.md): the author is the palette's `author`; the publisher is
+// the Marketplace and Open VSX account the VS Code extensions ship under, and its site.
+const PUBLISHER = "Slacklab";
+const PUBLISHER_URL = "https://www.slacklab.ca";
+const words = (n) => ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"][n] ?? String(n); // listing copy spells small counts (docs/COPY.md)
 const ROLES = readJson("src/roles.json");
 const NON_ACCENT = ["jam", "onjam", "tint"];
 const HEX_LITERAL = /#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/;
@@ -87,6 +92,10 @@ const note = (port, trace) => {
 };
 const meta = (ctx) => ({
   FULL: `${P.name} ${ctx.f.name}`, NAME: P.name, NOTE: ctx.f.note, VERSION: P.version,
+  // The public line (docs/COPY.md): the flavour's catalogue sentence, then Darkberry's own
+  // image for the default tint or the tint's sentence for a tint, which repaints what the image names.
+  DESCRIPTION: `${ctx.f.description} ${TINT ? TINTS[TINT].note : ctx.f.tagline}`,
+  AUTHOR: P.author, PUBLISHER, PUBLISHER_URL, REPOSITORY: P.repository,
   SLUG: `${P.id}-${ctx.id}`, ID: P.id, SCHEME: ctx.f.dark ? "dark" : "light",
   FLAVOUR: ctx.f.name,
   HOMEPAGE: P.homepage,
@@ -147,7 +156,7 @@ const alacrittyT = read("src/ports/alacritty.toml");
 const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/ports/obsidian.json");
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
-const t3codeT = read("src/ports/t3code.json");
+const t3codeT = read("src/ports/t3code.json"), thunderbirdT = read("src/ports/thunderbird.json"), thunderbirdCss = read("src/ports/thunderbird.css");
 const darkReaderT = read("src/ports/dark-reader.txt");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
 const nppT = read("src/ports/notepadpp.xml"), batT = read("src/ports/bat.tmTheme");
@@ -310,6 +319,12 @@ mustBe("t3code", t3codeT, "messageAction", "{ui.fill} under {ui.on.fill}", /"mes
 mustBe("t3code", t3codeT, "focus", "{ui.focus}", /"focus": "\{ui\.focus\}"/);
 mustBe("t3code", t3codeT, "terminalCursor", "{ui.cursor}", /"terminalCursor": "\{ui\.cursor\}"/);
 mustBe("t3code", t3codeT, "errorForeground", "{ui.error} on {ui.error.surface}", /"errorForeground": "\{ui\.error\}",\n\s*"errorSurface": "\{ui\.error\.surface\}"/);
+mustBe("thunderbird", thunderbirdT, "sidebar_highlight", "{ui.fill} under {ui.on.fill} (Thunderbird's row selection and primary buttons)", /"sidebar_highlight": "\{ui\.fill\}",\n\s*"sidebar_highlight_text": "\{ui\.on\.fill\}"/);
+mustBe("thunderbird", thunderbirdT, "popup_highlight", "{ui.fill} under {ui.on.fill}", /"popup_highlight": "\{ui\.fill\}",\n\s*"popup_highlight_text": "\{ui\.on\.fill\}"/);
+mustBe("thunderbird", thunderbirdT, "toolbar_field_highlight", "{ui.selection} under {ui.text}", /"toolbar_field_highlight": "\{ui\.selection\}",\n\s*"toolbar_field_highlight_text": "\{ui\.text\}"/);
+mustBe("thunderbird", thunderbirdT, "toolbar_field_border_focus", "{ui.focus} (Thunderbird's focus outline)", /"toolbar_field_border_focus": "\{ui\.focus\}"/);
+mustBe("thunderbird", thunderbirdT, "tab_line", "an opaque {ui.tab.indicator}", /"tab_line": "\{ui\.tab\.indicator\}"/);
+mustBe("thunderbird", thunderbirdT, "link_color", "{ui.link}", /"link_color": "\{ui\.link\}"/);
 mustBe("t3code", t3codeT, "accent", "{ui.accent} under {ui.on.accent}", /"accent": "\{ui\.accent\}",\n\s*"accentForeground": "\{ui\.on\.accent\}"/);
 for (const [v, t] of [[3, gtk3T], [4, gtk4T]]) {
   mustBe(`gtk-${v}.0`, t, "$selected_bg_color", "{ui.fill} under {ui.on.fill} (rows, buttons, progress bars)", /^\$selected_fg_color: \{ui\.on\.fill\};\n\$selected_bg_color: \{ui\.fill\};$/m);
@@ -373,6 +388,13 @@ for (const ctx of ctxs) {
   const ff = JSON.parse(fill(ctx, firefoxT, "firefox"));
   ff.theme.colors = applyOverrides("firefox", "json", ff.theme.colors, ctx);
   out(`ports/firefox/${ctx.id}/manifest.json`, ff);
+  // A theme manifest is validated against a closed schema, where an unknown key such as
+  // $comment fails the install as "corrupt"; the header stays in the template only.
+  const tb = JSON.parse(fill(ctx, thunderbirdT, "thunderbird"));
+  delete tb.$comment;
+  tb.theme.colors = applyOverrides("thunderbird", "json", tb.theme.colors, ctx);
+  out(`ports/thunderbird/${ctx.id}/manifest.json`, tb);
+  out(`ports/thunderbird/${ctx.id}/theme.css`, fill(ctx, thunderbirdCss, "thunderbird"));
   const nb = JSON.parse(fill(ctx, nimbalystT, "nimbalyst"));
   nb.colors = applyOverrides("nimbalyst", "json", nb.colors, ctx);
   out(`ports/nimbalyst/${full}/theme.json`, nb);
@@ -457,7 +479,7 @@ out(`ports/gpl/${P.id}.gpl`, gpl(P.name, ctxs.flatMap((ctx) => gplOrder.map((k) 
 
 out("ports/vscode/package.json", {
   name: `${P.id}-theme`, displayName: P.name, description: P.description, version: P.version,
-  publisher: "Slacklab", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
+  publisher: PUBLISHER, license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
   homepage: P.homepage, repository: { type: "git", url: P.repository },
   categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
   contributes: { themes: ctxs.map((x) => ({ label: `${P.name} ${x.f.name}`, uiTheme: x.f.dark ? "vs-dark" : "vs", path: `./themes/${P.id}-${x.id}-color-theme.json` })) },
@@ -469,8 +491,8 @@ if (!TINT) {
   const tintNames = EDITIONS.filter((e) => e.id !== "darkberry").map((e) => e.name);
   out("ports/vscode/with-tints/package.json", {
     name: `${P.id}-with-tints-theme`, displayName: `${P.name} with tints`,
-    description: `${P.description} This edition also carries the ${tintNames.join(", ")} tints.`, version: P.version,
-    publisher: "Slacklab", license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
+    description: `${P.name}'s four flavours in ${words(EDITIONS.length)} tints: ${EDITIONS.map((e) => e.name).slice(0, -1).join(", ")} and ${EDITIONS.at(-1).name}. ${words(EDITIONS.length * ctxs.length)[0].toUpperCase()}${words(EDITIONS.length * ctxs.length).slice(1)} themes.`, version: P.version,
+    publisher: PUBLISHER, license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
     homepage: P.homepage, repository: { type: "git", url: P.repository },
     categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
     contributes: { themes: EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
@@ -565,7 +587,7 @@ if (!TINT) {
         // route() sends tint builds' themes here, so this README and package.json are the default build's
         const vsWithTints = { ...port, name: `${port.name} (with tints)` };
         writeReadme(vsWithTints, "with-tints", 3, (e) => e.id === "darkberry" ? "../" : null, `${note}\n\n${usage}`);
-        out("ports/vscode/.vscodeignore", "assets/**\nwith-tints/**\n"); // screenshots belong to the README on GitHub, not inside the .vsix
+        out("ports/vscode/.vscodeignore", "assets/**\ndist/**\nwith-tints/**\n"); // screenshots belong to the README on GitHub, and dist/ holds the built .vsix files
         out("ports/vscode/with-tints/.vscodeignore", "assets/**\n");
       }
     } else if (!allInOne) {
@@ -584,7 +606,7 @@ if (!TINT) {
   }
 }
 
-// ---------- dist/trace.json (what drives every themed key) ----------
+// ---------- docs/trace.json (what drives every themed key) ----------
 const trace = [];
 const traceExpr = (port, key, raw) => {
   for (const m of String(raw).matchAll(/\{([^{}"\s]+)\}([0-9a-f]{2})?/g)) {
@@ -624,6 +646,7 @@ for (const line of btopT.split("\n")) { const m = /^theme\[(\w+)\]="(.*)"$/.exec
   }
 }
 walk("firefox", JSON.parse(firefoxT).theme.colors, "colors");
+walk("thunderbird", JSON.parse(thunderbirdT).theme.colors, "colors");
 walk("chrome", JSON.parse(chromeT).theme.colors, "colors");
 walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "colors");
 walk("t3code", JSON.parse(t3codeT).colors, "colors");
@@ -631,7 +654,7 @@ walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
 for (const { key: port } of REG.ports) if (exists(`src/overrides/${port}.json`)) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
-out("dist/trace.json", trace);
+out("docs/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
 {
@@ -642,14 +665,14 @@ out("dist/trace.json", trace);
   out("docs/studio.html", read("src/studio/studio.html").replace("__DATA__", () => JSON.stringify(data)).replace("__COLOR_LIB__", () => lib));
 }
 
-// ---------- dist/palette.json (Catppuccin palette schema, plus jam and onjam) ----------
+// ---------- palette.json (Catppuccin palette schema, plus jam and onjam) ----------
 const entry = (name, hex, extra) => {
   const [r, g, b] = rgb(hex).map((v) => Math.round(v * 255)); const [h, s, l] = toHsl(hex); const [L, C, H] = toOklch(hex);
   return { name, ...extra, hex, rgb: { r, g, b }, hsl: { h, s, l }, oklch: { l: L, c: C, h: ((H * 180) / Math.PI + 360) % 360 } };
 };
 const order = [...P.accentOrder, ...P.neutralOrder];
 const ansiNames = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"];
-out("dist/palette.json", {
+out("palette.json", {
   version: P.version,
   ...Object.fromEntries(ctxs.map((x, fi) => [x.id, {
     name: x.f.name, emoji: x.f.emoji, order: fi, dark: x.f.dark,

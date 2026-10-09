@@ -3,7 +3,7 @@
   "name": "Darkberry - Wisp",
   "version": "0.3.0",
   "description": "Darkberry - Wisp: Light. Text is a violet-leaning cousin of the paint colour.",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "darkberry-wisp@darkberry-theme"

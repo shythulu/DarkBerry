@@ -2,16 +2,45 @@
 
 One file per port, written 2026-09-24 by research agents from primary sources, for a later
 agent (or person) to submit Darkberry to the places each app's themes are listed. Each file
-has the same shape: **Venues** in order of reach, each with the URL, what it accepts, the
-account and signing requirements, numbered steps, the update path, contacts, sources with
-dates and a confidence level; **Not applicable**, the venues checked and ruled out; and
+has the same shape: **Venues** in order of reach, each with the URL, what it accepts, its
+**Fields** (the common fields below, with only this venue's labels, limits and values) and
+**Add-ons** (the fields only this venue asks for), the account and signing requirements,
+numbered steps, the update path, contacts, sources with dates and a confidence level; **Not applicable**, the venues checked and ruled out; and
 **Open questions**, the decisions a human has to make before submitting. Nothing has been
 submitted anywhere except Firefox (see `../AMO.md`) and, since 2026-10-06, the two VS Code
 extensions on the Visual Studio Marketplace (see `vscode.md`) and the four kitty flavours to
 dexpota/kitty-themes (PR open, see `kitty.md`).
 
-Listing text (names, short and long descriptions, keywords, one-liners) lives in
-`copy/`, one file per port as it gets written; `copy/vscode.md` is the first.
+Listing text (names, one-line and long descriptions, keywords, screenshot sizes) is in
+`../COPY.md`, the copy syllabus: one set of strings for the project, the flavours and the
+tints, and a field map saying which string goes in which venue's form.
+
+## Common fields
+
+Every venue's form, manifest or PR asks for some of these. They are filled the same way
+everywhere, from `../COPY.md` and `src/palette.json`, so a venue's section never repeats
+them: its **Fields** line names only the ones the venue uses, under the venue's own label
+where that differs, with the venue's limit or fixed value. A common field a venue's
+**Fields** line leaves out is one it does not ask for. Anything else the venue wants goes
+under **Add-ons**.
+
+| Field | What it is | Filled with |
+|---|---|---|
+| **Name** | The item's display name | COPY.md *Name*: `<Tint> <Flavour>` for a one-flavour item, `Darkberry` for a bundle |
+| **Summary** | One line, in search results and cards | COPY.md *Line*: `<Name> for <App>. <flavour line>`, or the tint's short for a per-tint item |
+| **Description** | The long text | COPY.md *Paragraph*: the port paragraph, then the flavour or tint paragraph |
+| **Keywords** | Tags or search terms | `theme, dark, light, berry, plum, wine`, plus the app's own word for a theme |
+| **Category** | Where the venue files themes | The venue's own vocabulary (Appearance, Themes, colour schemes) |
+| **Author** | The person | `shythulu` |
+| **Publisher** | The account it ships under, and its site | `Slacklab`, https://www.slacklab.ca |
+| **Homepage** | The theme's link | https://darkberry.slacklab.ca |
+| **Repository** | The source: any field or link labelled repository, source, Git or GitHub | https://github.com/shythulu/DarkBerry, the repository itself, never a fork, a profile or a folder inside it |
+| **Support** | Where problems go | https://github.com/shythulu/DarkBerry/issues |
+| **Licence** | | MIT |
+| **Version** | | `version` in `src/palette.json` |
+| **Icon** | The square mark | `assets/logos/<tint>-logo.svg`, or the PNG beside it, on the tint's `base` |
+| **Screenshots** | Pictures of the theme in use | `ports/<port>/assets/<flavour>.webp` and `preview.webp`, cropped to the venue's size (COPY.md *Pictures*) |
+| **Title** | A PR, issue or forum post title, for venues that take one instead of a form | The venue's pattern if it has one, otherwise COPY.md's field map |
 
 Confidence means: *verified*, read from the venue's own docs or repo; *partly verified*,
 the mechanism is confirmed but some field (an image size, a form label, a review bar) is
@@ -35,7 +64,7 @@ automated fetches outright.
 | [bat](bat.md) | Package Control (verified) | delta themes.gitconfig | bat itself takes no new themes; Package Control needs a dedicated repo |
 | [Neovim](neovim.md) | awesome-neovim (partly) | neovimcraft, dotfyle, vimcolorschemes | Plugin managers need a root `colors/` folder or a mirror repo |
 | [micro](micro.md) | unofficial plugin channel (verified) | Discussion #4167, official channel (stalled) | Core repo no longer takes colorschemes |
-| [VS Code](vscode.md) | Visual Studio Marketplace (partly) | Open VSX, vscodethemes, awesome-vscode | Needs an `icon` in package.json first |
+| [VS Code](vscode.md) | Visual Studio Marketplace (partly) | Open VSX, vscodethemes, awesome-vscode | Live on the Marketplace since 2026-10-06 |
 | [Kate](kate.md) | KSyntaxHighlighting on KDE Invent (verified) | KDE Store | MIT-only bundling rule matches; free KDE Identity account |
 | [Notepad++](notepadpp.md) | nppThemes (partly) | Community forum | **nppThemes relicenses to GPLv3** |
 | [Obsidian](obsidian.md) | community theme directory (partly) | none | One repo per listing; four flavours means four repos or a switcher |
@@ -79,12 +108,12 @@ Settle these once, before any submission:
 
 Fix in the port before submitting, not in the venue:
 
-- VS Code: add an `icon` (a square PNG) to both `package.json` files.
 - Nimbalyst: the port ships `theme.json` per flavour; Nimbalyst's documented loader reads
   an extension `manifest.json` with a `contributions.themes` list. The usage text also
   lacks the on-disk path (`~/.config/Nimbalyst`, `~/Library/Application Support/Nimbalyst`,
   `%APPDATA%\Nimbalyst`).
-- Chrome: the manifest description says "for Chrome and Edge"; Edge Add-ons requires
-  Edge-branded wording.
+- Chrome: the manifest description now says "for Chromium browsers", since Edge Add-ons
+  rejects Chrome-branded wording; whether Partner Center also insists on the word "Edge"
+  in the manifest is unverified.
 - Firefox: the release workflow now signs only folders that hold a manifest, so the tint
   folders are skipped until they have AMO listings.

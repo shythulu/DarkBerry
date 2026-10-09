@@ -37,8 +37,8 @@ scheme:
   slug: "blueberry-wisp"
   family: "Blueberry"
   style: "Wisp"
-  author: "Blueberry (https://darkberry.slacklab.ca/)"
-  description: "Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff)."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Light. A pale page, the berries deepened to read on it. Backgrounds cooled to a dusty slate blue."
 variant: "light"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

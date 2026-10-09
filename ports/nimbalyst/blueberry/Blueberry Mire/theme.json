@@ -2,8 +2,8 @@
   "id": "blueberry-mire",
   "name": "Blueberry Mire",
   "version": "0.3.0",
-  "author": "Blueberry",
-  "description": "Blueberry tint of Mire: dark, neutrals leaned toward blueberry (base #192237).",
+  "author": "shythulu",
+  "description": "Dark. The main flavour, berries at full strength. Backgrounds cooled to a dusty slate blue.",
   "isDark": true,
   "colors": {
     "bg": "#192237",

@@ -75,7 +75,7 @@ const jobs = v ? [[v, +(h || 0), +(c || 0)]] : Object.keys(VARIANTS).map((k) => 
 for (const [name, hs, cs] of jobs) {
   const file = hs || cs ? `src/variants/${name}_h${sign(hs)}_c${sign(cs)}.json` : `src/variants/${name}.json`;
   const out = generate(P, name, hs, cs);
-  out.description = `${P.description} Tint: ${VARIANTS[name].label}.`;
+  out.description = `${P.description} Tint: ${VARIANTS[name].label}.`; // description and tagline per flavour carry over: the build swaps the tagline for the tint's line
   // The default's flavour notes describe its own neutrals, which a tint replaces.
   for (const [fid, f] of Object.entries(out.flavours)) f.note = `${VARIANTS[name].label} tint of ${f.name}: ${f.dark ? "dark" : "light"}, neutrals leaned toward ${name} (base ${f.colors.base}).`;
   delete out.defaultVariant;

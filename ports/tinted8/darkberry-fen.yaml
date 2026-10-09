@@ -37,8 +37,8 @@ scheme:
   slug: "darkberry-fen"
   family: "Darkberry"
   style: "Fen"
-  author: "Darkberry (https://darkberry.slacklab.ca/)"
-  description: "Soft dark. The background (#4c3342) is within a shade of the paint colour."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Soft dark. The gentlest dark flavour, a shade above Mire. Rosy and dusky, for reading at night."
 variant: "dark"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

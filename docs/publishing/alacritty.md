@@ -16,17 +16,21 @@ pulled in with `import = [...]`.
   listed as indrajit/eendroroy, the original author, and Christian Dürr/chrisduerr), accepting
   themes as pull requests. This is Alacritty's de facto theme store; the project ships no other
   gallery, marketplace or package registry.
-- **Accepts**: a `{theme}.toml` file added to the `themes/` directory (existing names are
-  lower_snake_case, e.g. `catppuccin_mocha.toml`, `rose_pine_dawn.toml`, `everforest_dark_hard.toml`
-  — multi-word flavour families are one file per variant, so Darkberry's 16 files fit the
-  existing pattern, e.g. `darkberry_wisp.toml`, `darkberry_lingonberry_wisp.toml`). Also
-  required: a screenshot generated with the repo's own `print_colors.sh` script (prints the 16
-  ANSI colours to the terminal; the contributor screenshots that terminal window — existing
-  images are plain PNGs sized to whatever the contributor's terminal window was, e.g. 701×161 for
-  `catppuccin_mocha.png`, no fixed pixel requirement found), saved as `images/{theme}.png`, and a
-  new row added to the table in `README.md` in alphabetical order (`**_name_**<br>[source](url)`
-  plus the image). No author-name, licence or version metadata fields are used anywhere in the
-  repo's own bookkeeping beyond that optional "source" link to the theme's own upstream repo.
+- **Accepts**: a `{theme}.toml` file added to the `themes/` directory, plus a required
+  screenshot and a new row in the `README.md` table (see Fields). No author-name, licence or
+  version metadata fields are used anywhere in the repo's own bookkeeping beyond the optional
+  "source" link.
+- **Fields**: Name (`**_name_**` in a new row added to the table in `README.md` in alphabetical
+  order, `**_name_**<br>[source](url)` plus the image); Repository (the optional `[source](url)`
+  link in that row, to the theme's own upstream repo); Screenshots (required, generated with
+  the repo's own `print_colors.sh` script, which prints the 16 ANSI colours to the terminal; the
+  contributor screenshots that terminal window, saved as `images/{theme}.png`; existing images
+  are plain PNGs sized to whatever the contributor's terminal window was, e.g. 701×161 for
+  `catppuccin_mocha.png`, no fixed pixel requirement found).
+- **Add-ons**: the `{theme}` filename: existing names are lower_snake_case, e.g.
+  `catppuccin_mocha.toml`, `rose_pine_dawn.toml`, `everforest_dark_hard.toml` — multi-word
+  flavour families are one file per variant, so Darkberry's 16 files fit the existing pattern,
+  e.g. `darkberry_wisp.toml`, `darkberry_lingonberry_wisp.toml`.
 - **Requirements**: no account approval, fee, or signing — a GitHub PR is the whole process.
   The one hard rule: **"submissions by theme authors are not accepted, to ensure there's at
   least some community interest."** This means shythulu (or any DarkBerry maintainer) opening

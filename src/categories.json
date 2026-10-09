@@ -12,5 +12,6 @@
   { "key": "browser_extension", "name": "Browser Extensions", "description": "Add-ons which extend the functionality of web browsers, enhancing the browsing experience.", "emoji": "🧩" },
   { "key": "photo_and_video", "name": "Photo & Video", "description": "Applications for viewing and editing photos and video.", "emoji": "📷" },
   { "key": "note_taking", "name": "Note Taking", "description": "Applications for writing, organising and linking notes.", "emoji": "📝" },
+  { "key": "email_client", "name": "Email Clients", "description": "Applications related to sending and receiving email.", "emoji": "💌" },
   { "key": "analytics", "name": "Analytics", "description": "Tools that monitor or visualise data and system state.", "emoji": "📊" }
 ]

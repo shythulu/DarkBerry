@@ -3,7 +3,7 @@
   "name": "Crowberry - Fen (A Darkberry Tint)",
   "version": "0.3.0",
   "description": "Crowberry tint of Darkberry - Fen: dark, neutrals leaned toward crowberry",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "crowberry-fen@crowberry-theme"

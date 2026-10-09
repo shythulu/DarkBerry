@@ -37,8 +37,8 @@ scheme:
   slug: "darkberry-blackwater"
   family: "Darkberry"
   style: "Blackwater"
-  author: "Darkberry (https://darkberry.slacklab.ca/)"
-  description: "Darkest. Deeper wine surfaces, same accents as Mire."
+  author: "shythulu (https://darkberry.slacklab.ca)"
+  description: "Darkest. Deeper surfaces, the same berries as Mire. Blood in bog water."
 variant: "dark"
 
 # The eight required anchors are Darkberry's ANSI colours, written exactly as the

@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Cloudberry Fen",
   "version": "0.3.0",
-  "description": "Cloudberry for Chrome and Edge. Cloudberry tint of Fen: dark, neutrals leaned toward cloudberry (base #553524).",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "description": "Cloudberry for Chromium browsers. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds warmed toward ripe peach.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [61, 35, 21],

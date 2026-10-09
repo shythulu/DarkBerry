@@ -13,6 +13,8 @@ top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour 
 - **Kind**: docs listing (none exists)
 - **Accepts**: nothing theme-related. The README documents install/config only; it has no examples
   or presets gallery, no "themes" or "community configs" section.
+- **Fields**: none stated.
+- **Add-ons**: none.
 - **Requirements**: n/a
 - **Steps**: n/a — there is no submission path.
 - **Updates**: n/a
@@ -32,13 +34,18 @@ top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour 
 - **Accepts**: screenshots/write-ups of a user's yabai setup, which commonly include border colours
   (JankyBorders is yabai's de facto companion). Not a package feed — nothing is "installed" from
   here, it is just visibility among yabai users.
+- **Fields**: Description (the discussion body); Homepage; Repository
+  (https://github.com/shythulu/DarkBerry; the port folder, `ports/borders/`, can follow it in
+  the body); Licence (MIT, stated in the body); Screenshots (one per flavour); Title
+  (the theme name, e.g. "Darkberry — a JankyBorders/yabai theme, 4 flavours + tints").
+- **Add-ons**: the discussion category, "Show and tell".
 - **Requirements**: a GitHub account; sign in to create a Discussion in that repo.
 - **Steps**:
   1. Go to https://github.com/koekeishiya/yabai/discussions/categories/show-and-tell and click
      "New discussion".
   2. Pick category "Show and tell".
   3. Title it with the theme name (e.g. "Darkberry — a JankyBorders/yabai theme, 4 flavours + tints").
-  4. Body: link the site (https://darkberry.slacklab.ca/) and the port folder
+  4. Body: link the site (https://darkberry.slacklab.ca) and the port folder
      (`ports/borders/`), include a screenshot per flavour, and state the MIT licence.
   5. Post. No approval step — discussions are visible immediately; maintainers may pin notable ones.
 - **Updates**: edit the same discussion post, or reply to it, when the port changes.
@@ -55,6 +62,8 @@ top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour 
 - **Accepts**: full desktop setup showcases; SketchyBar users frequently pair SketchyBar with
   JankyBorders and screenshot both together. Same caveat as yabai: visibility only, not a package
   feed.
+- **Fields**: Homepage; Repository (links, as for yabai); Screenshots; Title.
+- **Add-ons**: the discussion category, "Show and tell".
 - **Requirements**: GitHub account.
 - **Steps**: same shape as yabai's — https://github.com/FelixKratz/SketchyBar/discussions, category
   "Show and tell", "New discussion", title + screenshots + links, post.
@@ -70,9 +79,12 @@ top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour 
 - **Kind**: community repo (informal; no dedicated show-and-tell category)
 - **Accepts**: per the AeroSpace README's "Community, discussions, issues" section, Discussions is
   where users "discuss bugs, propose new features, ask your questions, show off your setup, or just
-  chat." There are 7 channels; the ones fetched are `announcements`, `announcements-releases`,
-  `feature-ideas`, `general`, `potential-bugs`, `questions-and-answers` — no `show-and-tell` slug, so
-  "General" is the fitting channel for a theme showcase.
+  chat."
+- **Fields**: Homepage; Repository (https://github.com/shythulu/DarkBerry); Licence; Screenshots; Title.
+- **Add-ons**: the discussion category, "General". There are 7 channels; the ones fetched are
+  `announcements`, `announcements-releases`, `feature-ideas`, `general`, `potential-bugs`,
+  `questions-and-answers` — no `show-and-tell` slug, so "General" is the fitting channel for a
+  theme showcase.
 - **Requirements**: GitHub account. Note AeroSpace explicitly does not accept Issues directly for
   feature requests — Discussions is the front door — but that process is for AeroSpace itself, not
   relevant to just showing a theme.
@@ -92,12 +104,14 @@ top level (`wisp`, `fen`, `mire`, `blackwater`) plus a tint variant per flavour 
 
 - **URL**: https://github.com/shythulu/DarkBerry (repo settings → Topics)
 - **Kind**: docs listing (self-controlled discovery, not a third-party venue)
-- **Accepts**: any topic tags; the repo currently has `theme`, `theme-ui`, `themes` only (checked via
-  `gh api repos/shythulu/DarkBerry --jq .topics`, 2026-09-24). Adding `yabai`, `jankyborders`,
-  `sketchybar`, `aerospace-wm`, `macos` would surface the repo under
-  https://github.com/topics/jankyborders and similar topic pages, which is the closest thing to a
-  "gallery" that exists for this app (that topic page currently lists only individual dotfiles repos,
-  not a curated theme index).
+- **Accepts**: any topic tags. https://github.com/topics/jankyborders and similar topic pages are
+  the closest thing to a "gallery" that exists for this app (that topic page currently lists only
+  individual dotfiles repos, not a curated theme index).
+- **Fields**: Keywords (GitHub topics: the repo currently has `theme`, `theme-ui`, `themes` only,
+  checked via `gh api repos/shythulu/DarkBerry --jq .topics`, 2026-09-24; adding `yabai`,
+  `jankyborders`, `sketchybar`, `aerospace-wm`, `macos` would surface the repo under those topic
+  pages).
+- **Add-ons**: none.
 - **Requirements**: push access to the DarkBerry repo (already held).
 - **Steps**: repo Settings → add topics (or `gh repo edit shythulu/DarkBerry --add-topic jankyborders
   --add-topic yabai --add-topic sketchybar`). No review/approval.

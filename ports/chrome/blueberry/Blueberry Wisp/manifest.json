@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Blueberry Wisp",
   "version": "0.3.0",
-  "description": "Blueberry for Chrome and Edge. Blueberry tint of Wisp: light, neutrals leaned toward blueberry (base #f2f6ff).",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "description": "Blueberry for Chromium browsers. Light. A pale page, the berries deepened to read on it. Backgrounds cooled to a dusty slate blue.",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "theme": {
     "colors": {
       "frame": [216, 224, 242],

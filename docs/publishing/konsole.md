@@ -8,7 +8,9 @@
 
 - **URL**: https://store.kde.org/browse?cat=462&tag=color-scheme (the "Konsole Color Schemes" category, id `462`; the same listing also appears at https://opendesktop.org/browse?cat=462, part of the same Pling/OCS backend). Submission happens on https://pling.com (account menu → "My Products" from store.kde.org redirects there) or via https://store.kde.org/product/add.
 - **Kind**: official store/marketplace, and it is wired into the app itself — Konsole's Settings > Edit Current Profile > Appearance has a "Get New…" button (a KNewStuff/GHNS dialog) that browses and installs directly from this store.
-- **Accepts**: a downloadable archive containing `.colorscheme` file(s); a title, description, license, category, and at least one preview image. Exact preview pixel dimensions are unverified — Anubis anti-bot protection on store.kde.org and pling.com blocked automated fetches of the upload form's field-level requirements. Existing entries (e.g. "Campbell", store.kde.org/p/1650371) show one preview image and a short description is normal.
+- **Accepts**: a downloadable archive containing `.colorscheme` file(s).
+- **Fields**: Name (title); Description (a short one is normal, per existing entries such as "Campbell", store.kde.org/p/1650371); Category (Konsole Color Schemes, id `462`); Repository (the *source code* field, not the homepage field, see Steps); Licence; Screenshots (at least one preview image; existing entries show one; exact pixel dimensions are unverified — Anubis anti-bot protection on store.kde.org and pling.com blocked automated fetches of the upload form's field-level requirements).
+- **Add-ons**: none.
 - **Requirements**: a free Pling/store.kde.org account (separate from a KDE Identity/GitLab account). One forum report claims Gmail addresses are sometimes rejected at signup — unverified, treat as a fallback if signup fails. No fee to list; Pling pays creators a small amount per download/view rather than charging them. No formal review gate reported — GHNS listings there show up for other users "within minutes to hours."
 - **Steps** (from a KDE Discuss thread and an OpenDesktop forum thread, see Sources):
   1. Create a Pling/store.kde.org account.
@@ -24,7 +26,9 @@
 
 - **URL**: https://invent.kde.org/utilities/konsole, color schemes live at `data/color-schemes/*.colorscheme` (mirrored read-only at https://github.com/KDE/konsole/tree/master/data/color-schemes).
 - **Kind**: official gallery — these ship inside every Konsole install, no download needed.
-- **Accepts**: a `.colorscheme` file in the same INI format Darkberry already uses (confirmed by comparing Darkberry's own `[General]` block — `Description=`, `Opacity=1`, `Wallpaper=` — against upstream's `Breeze.colorscheme`, which has the identical three keys and no `Author` field). Filed directly under `data/color-schemes/`, one file per scheme, named to match its `Description`. Precedent: merge request !1046 added a single new bundled scheme ("Campbell", from Microsoft's Windows Terminal) this way.
+- **Accepts**: a `.colorscheme` file in the same INI format Darkberry already uses (confirmed by comparing Darkberry's own `[General]` block — `Description=`, `Opacity=1`, `Wallpaper=` — against upstream's `Breeze.colorscheme`, which has the identical three keys and no `Author` field). Filed directly under `data/color-schemes/`, one file per scheme. Precedent: merge request !1046 added a single new bundled scheme ("Campbell", from Microsoft's Windows Terminal) this way.
+- **Fields**: Name (`Description=` in the `[General]` block; the file is named to match it).
+- **Add-ons**: none.
 - **Requirements**: a KDE Identity account (https://identity.kde.org) with a real-name-like username, and 2FA (Webauthn or TOTP) enabled for KDE developer accounts; fork the project on invent.kde.org, then open a merge request. Konsole itself is GPL-2.0-or-later; whether upstream will take MIT-licensed data files as-is, or wants relicensing/a note, is an open question — the project's `REUSE.toml` has no per-file license declaration for `data/color-schemes/*.colorscheme`, so there's no established precedent either way to point to.
 - **Steps**:
   1. Create a KDE Identity account and enable 2FA.
@@ -41,7 +45,9 @@
 
 - **URL**: https://github.com/mbadolato/iTerm2-Color-Schemes, Konsole output lives at `konsole/*.colorscheme` in that repo.
 - **Kind**: well-known third-party curated repo — one of the largest cross-terminal theme collections (20+ target formats including Konsole, kitty, Alacritty, Windows Terminal, VS Code).
-- **Accepts**: it does *not* take a pre-built `.colorscheme` directly. Contributors supply one canonical source file — either an iTerm2 `.itermcolors` export at `schemes/<Theme Name>.itermcolors`, or a YAML file at `yaml/<Theme Name>.yml` (their own extension of the Gogh project's format) — named with the exact human-readable display name (no slugifying, no underscores). The repo's `tools/gen.py` then *generates* the `konsole/<Theme Name>.colorscheme` file (and everything else) from that source, plus an optional WCAG contrast check (`tools/wcag_check.py`, 1.75:1 minimum — failing is tolerated) and a generated screenshot (`tools/screenshot_gen`).
+- **Accepts**: it does *not* take a pre-built `.colorscheme` directly. Contributors supply one canonical source file — either an iTerm2 `.itermcolors` export at `schemes/<Theme Name>.itermcolors`, or a YAML file at `yaml/<Theme Name>.yml` (their own extension of the Gogh project's format). The repo's `tools/gen.py` then *generates* the `konsole/<Theme Name>.colorscheme` file (and everything else) from that source, plus an optional WCAG contrast check (`tools/wcag_check.py`, 1.75:1 minimum — failing is tolerated).
+- **Fields**: Name (the source filename, the exact human-readable display name: no slugifying, no underscores); Screenshots (a generated screenshot, `tools/screenshot_gen`, also added to `README.md` with the theme list entry, see Steps).
+- **Add-ons**: an optional `CREDITS.md` entry.
 - **Requirements**: a GitHub account; no fee, no signing. Local tooling to contribute: Python (pinned via `.python-version`/`pyenv`) and `pip install -r requirements.txt`, or a Docker-based `generate-all.sh` that does the same without local Python.
 - **Steps**:
   1. Produce a `schemes/Darkberry <Flavour>.itermcolors` (or `yaml/Darkberry <Flavour>.yml`) file per flavour from Darkberry's palette — this is new authoring work, not a copy of the existing Konsole port.
@@ -58,7 +64,9 @@
 
 - **URL**: https://aur.archlinux.org, package pages e.g. `aur.archlinux.org/packages/<name>`. Precedent exists for exactly this kind of port: `catppuccin-konsole-colorscheme-git` is already an AUR package, alongside `konsole-gruvbox` and `konsole-monokai`.
 - **Kind**: package registry (distro-level), Arch/Manjaro-specific.
-- **Accepts**: a `PKGBUILD` (+ generated `.SRCINFO`) that installs the `.colorscheme` file(s) to `/usr/share/konsole/`; package name convention seen in precedent is `<theme>-konsole-colorscheme[-git]`.
+- **Accepts**: a `PKGBUILD` (+ generated `.SRCINFO`) that installs the `.colorscheme` file(s) to `/usr/share/konsole/`.
+- **Fields**: Version (`pkgver`/`pkgrel` in `PKGBUILD`, see Updates).
+- **Add-ons**: the package name; the convention seen in precedent is `<theme>-konsole-colorscheme[-git]`.
 - **Requirements**: a free AUR account with an SSH public key uploaded to the account for git push access over `ssh://aur@aur.archlinux.org`. No review gate before publishing (anyone can push a new package instantly), but ongoing maintenance is the submitter's own responsibility — an unmaintained/broken package can eventually be orphaned or flagged by other users.
 - **Steps**:
   1. Create an AUR account and add an SSH public key to it.

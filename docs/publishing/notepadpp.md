@@ -12,14 +12,11 @@ Settings > Style Configurator.
 
 - **URL**: https://github.com/notepad-plus-plus/nppThemes
 - **Kind**: official gallery (community repo maintained under the `notepad-plus-plus` GitHub org)
-- **Accepts**: raw Style Configurator XML files dropped into the repo's `themes/` folder.
+- **Accepts**: raw Style Configurator XML files.
   Rules from the README:
   - The XML prolog/declaration (`<?xml version="1.0" encoding="UTF-8" ?>`) must be the first
     line, encoding UTF-8.
-  - A comment block may follow the prolog (theme name, author, date, credits) but **must not**
-    contain a licence or copyright notice that contradicts the collection's licence.
-  - No required preview image, no documented file-naming pattern beyond the XML being a valid,
-    working theme — the filename becomes the name shown in Style Configurator.
+  - No required preview image.
   - A `.validators/` folder (`theme.xsd` + `validator_xml.py`) runs schema validation; a
     `.github/workflows/CI_build.yml` workflow exists but its exact checks were not read.
   - **Licensing conflict to flag**: the README states "Any Theme uploaded to the Collection is
@@ -27,6 +24,14 @@ Settings > Style Configurator.
     LICENSE file." Darkberry is MIT-licensed; submitting here would relicense that one file
     under GPLv3, which the rest of the project is not. This needs a human decision (see Open
     questions).
+- **Fields**: Name (the filename, which becomes the name shown in Style Configurator; also
+  the theme name in the optional comment block that may follow the prolog); Author (in that
+  comment block); Licence (GPL v3, applied automatically, see the licensing conflict above;
+  the comment block **must not** contain a licence or copyright notice that contradicts the
+  collection's licence).
+- **Add-ons**: the file goes in the repo's `themes/` folder, with no documented file-naming
+  pattern beyond the XML being a valid, working theme; the optional comment block may also
+  carry a date and credits.
 - **Requirements**: a GitHub account. No fee, no signing keys, no 2FA requirement stated. Review
   is manual and/or automated by "the Theme Collection team" — acceptance is discretionary, and
   they explicitly disclaim responsibility for maintaining individual themes afterward.
@@ -57,9 +62,12 @@ Settings > Style Configurator.
 - **Kind**: community forum (discovery/discussion, not a formal registry)
 - **Accepts**: no fixed format. Existing theme threads (e.g.
   https://community.notepad-plus-plus.org/topic/26557/3-new-themes,
-  https://community.notepad-plus-plus.org/topic/15421/twodark-theme) post preview screenshots
-  inline, a short description, and a link to the theme's own GitHub repo/download rather than
-  attaching the XML directly. No mandated image size or metadata fields found.
+  https://community.notepad-plus-plus.org/topic/15421/twodark-theme) link out rather than
+  attaching the XML directly.
+- **Fields**: none mandated; existing threads carry Description (short); Repository (a link
+  to the theme's own GitHub repo/download); Screenshots (preview screenshots inline, no
+  mandated image size).
+- **Add-ons**: none.
 - **Requirements**: a forum account (free registration). No fee, no review/approval gate to
   post a topic; moderators can act after the fact per normal forum rules (not read in detail).
 - **Steps**:
@@ -69,7 +77,7 @@ Settings > Style Configurator.
   3. Include preview images (e.g. from `assets/previews/` or `docs/specimen.html`), a short
      description of the four flavours/tints, and links to the GitHub repo
      (https://github.com/shythulu/DarkBerry) and the site
-     (https://darkberry.slacklab.ca/).
+     (https://darkberry.slacklab.ca).
   4. A regular contributor/moderator in past threads (PeterJones) has redirected posters toward
      nppThemes as the preferred central listing — expect the same suggestion.
 - **Updates**: edit the original post or reply in the same topic; the forum has no

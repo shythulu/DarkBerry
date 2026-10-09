@@ -2,11 +2,11 @@
 //   node tools/where.mjs tab          every themed key containing "tab", in every app
 //   node tools/where.mjs ui.badge     every key that uses the ui.badge role
 //   node tools/where.mjs berry        every key that ends up using the palette colour berry
-// Reads dist/trace.json, so run `node build.mjs` first.
+// Reads docs/trace.json, so run `node build.mjs` first.
 import fs from "node:fs";
 const q = (process.argv[2] || "").toLowerCase();
 if (!q) { console.log("usage: node tools/where.mjs <key, role or palette colour>"); process.exit(1); }
-const T = JSON.parse(fs.readFileSync(new URL("../dist/trace.json", import.meta.url), "utf8"));
+const T = JSON.parse(fs.readFileSync(new URL("../docs/trace.json", import.meta.url), "utf8"));
 const hits = T.filter((t) => t.key.toLowerCase().includes(q) || t.roles.some((r) => r.toLowerCase() === q || r.toLowerCase().startsWith(q + ".")) || t.palette.includes(q));
 if (!hits.length) { console.log(`Nothing themed matches "${q}".`); process.exit(0); }
 const flav = Object.keys(hits[0].hex);

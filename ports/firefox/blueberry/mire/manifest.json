@@ -3,7 +3,7 @@
   "name": "Blueberry - Mire (A Darkberry Tint)",
   "version": "0.3.0",
   "description": "Blueberry tint of Darkberry - Mire: dark, neutrals leaned toward blueberry",
-  "homepage_url": "https://darkberry.slacklab.ca/",
+  "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
       "id": "blueberry-mire@blueberry-theme"

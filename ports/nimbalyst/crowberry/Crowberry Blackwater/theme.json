@@ -2,8 +2,8 @@
   "id": "crowberry-blackwater",
   "name": "Crowberry Blackwater",
   "version": "0.3.0",
-  "author": "Crowberry",
-  "description": "Crowberry tint of Blackwater: dark, neutrals leaned toward crowberry (base #191126).",
+  "author": "shythulu",
+  "description": "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to inky violet.",
   "isDark": true,
   "colors": {
     "bg": "#191126",

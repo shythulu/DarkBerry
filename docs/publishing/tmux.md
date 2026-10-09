@@ -12,11 +12,12 @@ syntax, not a TPM plugin package.
 
 - **URL**: https://github.com/rothgar/awesome-tmux
 - **Kind**: community repo (curated "awesome list", not run by the tmux project)
-- **Accepts**: one Markdown list item per theme under the `## Themes` section of `README.md`,
-  format `- [name](repo-url) Description.` (a short one-line description, no required end
-  punctuation style — most entries end in a period, some don't). No preview image, licence
-  badge, or metadata fields are used in the list itself; entries link out to the theme's own
-  repo/README for that.
+- **Accepts**: one Markdown list item per theme in `README.md`, added by PR. No preview image,
+  licence badge, or metadata fields are used in the list itself; entries link out to the
+  theme's own repo/README for that.
+- **Fields**: Name (`name`); Summary (`Description`, a short one-line description, no required
+  end punctuation style — most entries end in a period, some don't); Repository (`repo-url`).
+- **Add-ons**: the `## Themes` section; the format `- [name](repo-url) Description.`
 - **Requirements**: none beyond a working GitHub repo link — no account approval process
   beyond opening a PR, no fee, no signing. The list carries the `awesome.re` badge, implying
   the general "awesome list" quality bar (a real repo, working links), but no CONTRIBUTING.md
@@ -44,12 +45,14 @@ syntax, not a TPM plugin package.
 - **URL**: https://github.com/tmux-plugins/list
 - **Kind**: community repo (curated list run by the `tmux-plugins` GitHub org, which also
   publishes TPM itself; not the tmux project)
-- **Accepts**: one Markdown list item under `## Themes` in `README.md`, format
-  `- [name](repo-url) - Description.` (dash-separated description, ending in a period in
-  existing entries). No preview image or metadata fields in the list; no requirement that the
-  linked repo be a full TPM plugin (existing entries like `tmux-colors-solarized` and
-  `tmux-peacock` are theme repos, not necessarily plugin-manager-installable, though several
-  also ship a thin `.tmux` wrapper for TPM's `prefix + I` flow).
+- **Accepts**: one Markdown list item in `README.md`, added by PR. No preview image or
+  metadata fields in the list; no requirement that the linked repo be a full TPM plugin
+  (existing entries like `tmux-colors-solarized` and `tmux-peacock` are theme repos, not
+  necessarily plugin-manager-installable, though several also ship a thin `.tmux` wrapper for
+  TPM's `prefix + I` flow).
+- **Fields**: Name (`name`); Summary (`Description`, dash-separated, ending in a period in
+  existing entries); Repository (`repo-url`).
+- **Add-ons**: the `## Themes` section; the format `- [name](repo-url) - Description.`
 - **Requirements**: same as awesome-tmux — no account approval beyond a PR, no fee, no
   signing keys. No CONTRIBUTING.md exists in the repo (checked, 404).
 - **Steps**:
@@ -71,10 +74,11 @@ syntax, not a TPM plugin package.
 - **URL**: https://github.com/tmux-plugins/tpm
 - **Kind**: not a gallery or store; it is the install mechanism themes/plugins can optionally
   support. Documented for completeness since it's the de facto "app store" pattern for tmux.
-- **Accepts**: a repo installable via `set -g @plugin 'user/repo'` in `tmux.conf`. TPM sources
-  every `*.tmux` file in the plugin's root on `prefix + I`. Beyond that there is no author
-  metadata, licence field, or preview-image convention that TPM itself checks.
+- **Accepts**: a repo installable via `set -g @plugin 'user/repo'` in `tmux.conf`.
   `docs/how_to_create_plugin.md` in that repo covers the mechanics.
+- **Fields**: none; there is no author metadata, licence field, or preview-image convention
+  that TPM itself checks.
+- **Add-ons**: a `*.tmux` file in the plugin's root; TPM sources every one on `prefix + I`.
 - **Requirements**: none — no registration, no TPM-side review. A plugin only needs to exist
   as a public git repo; nothing is submitted to TPM itself.
 - **Steps** (if the port were to add TPM support later — optional, not required for listing

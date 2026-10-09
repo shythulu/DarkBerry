@@ -24,8 +24,8 @@
 system: "base24"
 name: "%FULL%"
 slug: "%SLUG%"
-author: "%NAME% (%HOMEPAGE%)"
-description: "%NOTE%"
+author: "%AUTHOR% (%HOMEPAGE%)"
+description: "%DESCRIPTION%"
 variant: "%SCHEME%"
 
 palette:

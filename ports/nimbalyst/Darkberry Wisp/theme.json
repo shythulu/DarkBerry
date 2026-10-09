@@ -2,8 +2,8 @@
   "id": "darkberry-wisp",
   "name": "Darkberry Wisp",
   "version": "0.3.0",
-  "author": "Darkberry",
-  "description": "Light. Text is a violet-leaning cousin of the paint colour.",
+  "author": "shythulu",
+  "description": "Light. A pale page, the berries deepened to read on it. The light theme that doesn't hurt.",
   "isDark": false,
   "colors": {
     "bg": "#fbf4f8",

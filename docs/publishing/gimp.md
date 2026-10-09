@@ -8,7 +8,9 @@ Port folder `ports/gimp/` ships one `gimp-dark.css` (or `gimp-light.css` for Wis
 - **URL**: https://www.gnome-look.org/browse?cat=268 (GIMP Themes category; the same listing mirrors to https://pling.com and https://www.opendesktop.org, which share one account and category system)
 - **Kind**: community gallery — the closest thing to a de facto standard theme storefront for this kind of content, but not run by the GIMP project
 - **Accepts**: GIMP theme packages; the category exists and is populated ("Browse Gimp Themes Latest")
-- **Requirements**: free Pling/openDesktop account (registration is network-wide, one account covers all sub-sites); each upload needs a license tag, and MIT is a recognised value on the network (`pling.com/find/?lic=mit-license` is a real, working filter)
+- **Fields** (reconstructed from other uploaders' reports, not confirmed on this category's form — see Confidence): Name (title); Description; Category ("GIMP Themes", cat 268); Licence (a license tag, required on each upload; MIT is a recognised value on the network — `pling.com/find/?lic=mit-license` is a real, working filter); Screenshots
+- **Add-ons**: none
+- **Requirements**: free Pling/openDesktop account (registration is network-wide, one account covers all sub-sites)
 - **Steps** (reconstructed from other uploaders' reports, not confirmed on this exact category page — see Confidence):
   1. Register/log in at pling.com.
   2. Use the site's product-creation ("Add content") flow; uploading to Pling under a category surfaces the listing on the matching sub-site (e.g. GIMP Themes shows on gnome-look.org).
@@ -23,7 +25,9 @@ Port folder `ports/gimp/` ships one `gimp-dark.css` (or `gimp-light.css` for Wis
 ### GIMP Chat forum (gimpchat.com)
 - **URL**: https://gimpchat.com/
 - **Kind**: community repo — a general GIMP help/showcase forum, not a dedicated theme catalog
-- **Accepts**: theme sharing happens informally inside forum threads (e.g. "GIMP Themes - Getting Started", posted under the "Gimp Help" subforum, `f=8`); there is no separate curated theme board
+- **Accepts**: a forum thread — theme sharing happens informally inside forum threads; there is no separate curated theme board
+- **Fields**: Description; Repository (link to the GitHub repo/release); Screenshots
+- **Add-ons**: the subforum — no dedicated theme board exists; past theme threads sit in "Gimp Help" (`f=8`), e.g. "GIMP Themes - Getting Started"
 - **Requirements**: free forum registration (Register/Login on every page)
 - **Steps**:
   1. Register an account.
@@ -38,7 +42,9 @@ Port folder `ports/gimp/` ships one `gimp-dark.css` (or `gimp-light.css` for Wis
 ### pixls.us community forum (discuss.pixls.us)
 - **URL**: https://discuss.pixls.us/c/software/gimp/24
 - **Kind**: community repo — a Discourse forum for Free/Open-Source photography and imaging tools, not run by the GIMP project
-- **Accepts**: finished GIMP themes posted as new topics in the GIMP category; live examples found: "A new neutral grey theme for GIMP 3", "HyperflatGraphite: a new dark theme for GIMP 3.x", "GIMP 'Dracula' inspired theme"
+- **Accepts**: finished GIMP themes posted as new topics; live examples found: "A new neutral grey theme for GIMP 3", "HyperflatGraphite: a new dark theme for GIMP 3.x", "GIMP 'Dracula' inspired theme"
+- **Fields**: Description; Homepage; Repository (link to the GitHub repo/release); Licence (MIT for the CSS; note that it imports the user's own local copy of GIMP's GPL-3 CSS and redistributes nothing GPL); Screenshots; Title (following the pattern of comparable topics, "<Name>: a new theme for GIMP 3")
+- **Add-ons**: the forum category, Software > GIMP (https://discuss.pixls.us/c/software/gimp/24)
 - **Requirements**: free Discourse account; content must be the poster's own work or permitted ("You may not post anything digital that belongs to someone else without permission"); no AI-generated filler content per site guidelines
 - **Steps**:
   1. Register/log in at discuss.pixls.us.
@@ -55,6 +61,8 @@ Port folder `ports/gimp/` ships one `gimp-dark.css` (or `gimp-light.css` for Wis
 - **URL**: https://github.com/topics/gimp-theme and https://github.com/topics/gimp-themes; example list: https://github.com/marekpistorius/awesome-gimp
 - **Kind**: curated list / discovery tag, not a gallery
 - **Accepts**: any public GitHub repo tagged with the topic; awesome-gimp accepts entries by pull request ("Contributions are always welcome!" plus a CONTRIBUTING.md)
+- **Fields**: Keywords (GitHub topics `gimp-theme`, `gimp-themes`, `gimp3` and `gimp` on shythulu/DarkBerry); awesome-gimp's entry fields are not stated (its CONTRIBUTING.md was not read in full, see Confidence)
+- **Add-ons**: none
 - **Requirements**: public GitHub repo (already have one); a GitHub account to open a PR against awesome-gimp
 - **Steps**:
   1. Add `gimp-theme`, `gimp-themes`, `gimp3` and `gimp` as GitHub topics on shythulu/DarkBerry for discoverability.
