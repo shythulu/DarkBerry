@@ -1,8 +1,10 @@
 1. Copy a flavour's `.json` file from this folder into `~/.t3/userdata/themes/` (the `themes`
    folder under your T3 Code state directory if you have moved it). The folder is watched, so
    the theme appears without a restart, and the file name is the theme's id.
-2. Pick it under Settings > Appearance. T3 Code lets you choose a theme per appearance, so a
-   dark flavour can sit under dark mode and Wisp under light mode.
+2. Pick it under Settings > Appearance.
+
+There are three files, Fen, Mire and Blackwater. Each carries Wisp, the light flavour, as its
+light half, so whichever you pick, light mode shows Wisp and dark mode shows that flavour.
 
 Or paste a file's contents into Settings > Appearance > Import theme, which keeps a copy inside
 the app instead of following the file.

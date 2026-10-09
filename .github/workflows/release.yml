@@ -41,6 +41,9 @@ jobs:
           test "$got" = "$want" ||
             { echo "::error::tag $GITHUB_REF_NAME does not match version $want in src/palette.json"; exit 1; }
 
+      - name: Install sassc (the GTK port is compiled with it)
+        run: sudo apt-get update && sudo apt-get install -y sassc
+
       - name: Check the committed ports are current
         run: |
           node build.mjs
@@ -79,7 +82,7 @@ jobs:
             echo
             echo "**KDE Plasma** — unzip \`darkberry-kde-$version.zip\` into \`~/.local/share/color-schemes/\`, then pick a flavour in System Settings > Colors."
             echo
-            echo "**GTK 3** — unzip \`darkberry-gtk-$version.zip\` into \`~/.themes/\`, then select a flavour as your GTK theme."
+            echo "**GTK 3 and 4** — unzip \`darkberry-gtk-$version.zip\` into \`~/.themes/\`, then select a flavour as your GTK theme."
             echo
             echo "**JankyBorders** — unzip \`darkberry-borders-$version.zip\` and copy a flavour over \`~/.config/borders/bordersrc\`, then \`brew services restart borders\`."
             echo
@@ -101,11 +104,13 @@ jobs:
             echo
             echo "**Chrome and Edge** — unzip \`darkberry-chrome-$version.zip\`, then load a flavour folder via Developer mode at \`chrome://extensions\`."
             echo
+            echo "**Dark Reader** — open a dark flavour's file from \`darkberry-dark-reader-$version.zip\` and type its Background, Text and Selection into Dark Reader's See all options > Colors; [the port's README](https://github.com/${{ github.repository }}/tree/main/ports/dark-reader#readme) has the steps."
+            echo
             echo "**Nimbalyst** — unzip \`darkberry-nimbalyst-$version.zip\` into Nimbalyst's themes directory, then pick a flavour under Settings > Themes."
             echo
             echo "**Thunderbird** — download a flavour's \`darkberry-thunderbird-<flavour>-$version.xpi\`, then Tools > Add-ons and Themes > the gear menu > Install Add-on From File. Thunderbird does not require add-ons to be signed, so the file installs as it is."
             echo
-            echo "**T3 Code** — unzip \`darkberry-t3code-$version.zip\` into \`~/.t3/userdata/themes/\`, then pick a flavour under Settings > Appearance."
+            echo "**T3 Code** — unzip \`darkberry-t3code-$version.zip\` into \`~/.t3/userdata/themes/\`, then pick a dark flavour under Settings > Appearance; each file carries Wisp as its light half."
             echo
             echo "**darktable** — unzip \`darkberry-darktable-$version.zip\` and copy a flavour beside darktable's own CSS (each file's header gives the path), then pick it under Preferences > General > Theme."
             echo

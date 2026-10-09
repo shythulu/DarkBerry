@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Lingonberry Wisp",
+  "name": "Lingonberry - Wisp (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Lingonberry for Firefox. Light. A pale page, the berries deepened to read on it. Backgrounds steeped in raspberry red.",
+  "description": "Lingonberry tint of Darkberry - Wisp: light, neutrals leaned toward lingonberry",
   "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {

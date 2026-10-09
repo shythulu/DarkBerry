@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Crowberry Blackwater",
+  "name": "Crowberry - Blackwater (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Crowberry for Firefox. Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to inky violet.",
+  "description": "Crowberry tint of Darkberry - Blackwater: dark, neutrals leaned toward crowberry",
   "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {

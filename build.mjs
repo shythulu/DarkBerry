@@ -6,9 +6,10 @@
 // Templates in src/ports/ and src/vscode/ reference roles (or palette names for
 // structural chrome) inside {braces}. Literal hex values are a build error.
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
-import { rgb, toHsl, toOklch, contrast, deltaE } from "./lib/color.mjs";
+import { rgb, toHsl, fromHsl, toOklch, contrast, deltaE } from "./lib/color.mjs";
 import { indexRoles, flavourContext } from "./lib/resolve.mjs";
 import { fillSettled, FILL_ON_BACKGROUND, TEXT_ON_FILL } from "./lib/derive.mjs";
 import { Canvas } from "./lib/png.mjs";
@@ -25,7 +26,7 @@ const out = (rel, data) => {
   const target = route(rel); if (!target) return;
   const f = path.join(root, target);
   fs.mkdirSync(path.dirname(f), { recursive: true });
-  fs.writeFileSync(f, typeof data === "string" ? data : JSON.stringify(data, null, 2) + "\n");
+  fs.writeFileSync(f, typeof data === "string" || Buffer.isBuffer(data) ? data : JSON.stringify(data, null, 2) + "\n");
 };
 
 const P = readJson(argPalette || "src/palette.json");
@@ -98,10 +99,18 @@ const meta = (ctx) => ({
   SLUG: `${P.id}-${ctx.id}`, ID: P.id, SCHEME: ctx.f.dark ? "dark" : "light",
   FLAVOUR: ctx.f.name,
   HOMEPAGE: P.homepage,
+  // Store-listing name and summary (addons.mozilla.org): "Cloudberry - Blackwater (A Darkberry
+  // Tint)" and "Cloudberry tint of Darkberry - Blackwater: dark, neutrals leaned toward
+  // cloudberry"; the default edition is "Darkberry - Blackwater" with the flavour's note.
+  LISTING: TINT ? `${P.name} - ${ctx.f.name} (A ${TINTS.darkberry.name} Tint)` : `${P.name} - ${ctx.f.name}`,
+  SUMMARY: TINT ? `${P.name} tint of ${TINTS.darkberry.name} - ${ctx.f.name}: ${tintNoteBody(ctx.f.note)}` : `${P.name} - ${ctx.f.name}: ${ctx.f.note}`,
   ISDARK: ctx.f.dark ? "true" : "false",
   ADWAITA: ctx.f.dark ? "-dark" : "", // Adwaita's dark and light stylesheets differ by this suffix
   ...accentHsl(ctx),
 });
+// A tint's flavour note reads "<Tint> tint of <Flavour>: <body> (base #hex)." (tools/variants.mjs
+// writes it); the listing summary wants only the body.
+const tintNoteBody = (n) => (n.match(/^\w+ tint of \w+: (.*?)(?: \(base #[0-9a-fA-F]{6}\))?\.?$/) || [, n])[1];
 // Obsidian builds --color-accent and its hover shades out of these three, so a hex is not enough.
 function accentHsl(ctx) {
   const [H, S, L] = toHsl(ctx.resolve("ui.accent")[0]);
@@ -148,6 +157,7 @@ const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
 const t3codeT = read("src/ports/t3code.json"), thunderbirdT = read("src/ports/thunderbird.json"), thunderbirdCss = read("src/ports/thunderbird.css");
+const darkReaderT = read("src/ports/dark-reader.txt");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
 const nppT = read("src/ports/notepadpp.xml"), batT = read("src/ports/bat.tmTheme");
 const neovimT = read("src/ports/neovim.lua");
@@ -157,7 +167,7 @@ const toArgb = (text) => text.replace(/#([0-9a-f]{6})\b/g, (_, h) => `0xff${h}`)
 const lsColorsT = read("src/ports/ls-colors.txt");
 const tmuxT = read("src/ports/tmux.conf");
 const tinted8T = read("src/ports/tinted8.yaml"), base24T = read("src/ports/base24.yaml");
-const gtkT = read("src/ports/gtk.css"), darktableT = read("src/ports/darktable.css"), gimpT = read("src/ports/gimp.css");
+const gtk3T = read("src/ports/gtk-3.0.scss"), gtk4T = read("src/ports/gtk-4.0.scss"), darktableT = read("src/ports/darktable.css"), gimpT = read("src/ports/gimp.css");
 const btopT = read("src/ports/btop.theme");
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
 const to256 = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => {
@@ -175,6 +185,45 @@ const toRgbArrays = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => "[" + 
 // time this runs fill() has turned every {role} into a hex, which SGR cannot take.
 const sgr = (hex) => "38;2;" + rgb(hex).map((v) => Math.round(v * 255)).join(";");
 const WRAP = 96;
+// The GTK templates are whole SCSS stylesheets over GTK's own Adwaita partials in
+// vendor/adwaita-gtk3 and vendor/adwaita-gtk4, compiled with sassc and the flags GTK's
+// build uses, so an unchanged template reproduces GTK's stylesheet byte for byte. Dart
+// Sass does not: it drops @extend selectors and writes colours GTK 3 cannot parse.
+// --check fills the templates (so their checks run) but compiles nothing.
+function compileGtk(scss, version) {
+  if (CHECK_ONLY) return null;
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "darkberry-gtk-")), entry = path.join(dir, "gtk.scss");
+  try {
+    fs.writeFileSync(entry, scss);
+    const css = execFileSync("sassc", ["-M", "-t", "compact", "-I", path.join(root, `vendor/adwaita-gtk${version}`), entry], { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
+    return css.replace(/^\/\*[\s\S]*?\*\//, scss.match(/^\/\*[\s\S]*?\*\//)[0]); // compact style folds the header onto one line
+  } catch (e) {
+    errors.push(e.code === "ENOENT" ? "gtk: sassc is not installed (brew install sassc, apt install sassc); the GTK port is compiled with it"
+      : `gtk: sassc failed on gtk-${version}.0: ${String(e.stderr || e.message).trim()}`);
+    return null;
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
+}
+// GTK draws the knob of a scale with marks (and GTK 4 the touch text handles) from PNGs
+// in Adwaita's greys. Each is a fill, a one-pixel edge and a black drop shadow, and its
+// states shift those shades a little. Every pixel keeps its place on the line from
+// Default's edge grey to its fill grey, drawn again from `edge` to `fill`, and may run a
+// quarter of the way past either end (a hover a shade lighter, a pressed edge a shade
+// darker); a coloured pixel (GTK 3's blue pressed edge) is edge; the shadow passes through. A disabled knob is drawn at half opacity, as GTK
+// fades disabled widgets. The shapes and the margins GTK sizes for them stay as drawn.
+const GTK_KNOB_REF = { 3: { dark: ["#131314", "#343435"], light: ["#c5c0ba", "#fcfcfc"] }, 4: { dark: ["#202020", "#393939"], light: ["#b9b1a9", "#f4f4f4"] } };
+function recolourKnob(buf, version, dark, edge, fill, disabled) {
+  const cv = Canvas.decode(buf), lum = (r, g, b) => 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  const [e0, f0] = GTK_KNOB_REF[version][dark ? "dark" : "light"].map((h) => lum(...Canvas.hex(h)));
+  const E = Canvas.hex(edge), F = Canvas.hex(fill), p = cv.px;
+  for (let i = 0; i < p.length; i += 4) {
+    if (!p[i + 3] || (p[i + 3] < 128 && Math.max(p[i], p[i + 1], p[i + 2]) < 8)) continue; // empty, or shadow
+    const coloured = Math.max(p[i], p[i + 1], p[i + 2]) - Math.min(p[i], p[i + 1], p[i + 2]) > 40;
+    const t = coloured ? 0 : Math.max(-0.25, Math.min(1.25, (lum(p[i], p[i + 1], p[i + 2]) - e0) / (f0 - e0)));
+    for (let k = 0; k < 3; k++) p[i + k] = Math.max(0, Math.min(255, Math.round(E[k] + (F[k] - E[k]) * t)));
+    if (disabled) p[i + 3] = Math.round(p[i + 3] / 2);
+  }
+  return cv.png();
+}
 function toLsColors(text) {
   const lines = [];
   let first = true;
@@ -262,6 +311,8 @@ mustBe("neovim", neovimT, "PmenuSel", "{ui.on.fill} on {ui.fill}", /^H\.PmenuSel
 mustBe("neovim", neovimT, "ErrorMsg", "{ui.on.error} on {ui.error}", /^H\.ErrorMsg = \{ fg = "\{ui\.on\.error\}", bg = "\{ui\.error\}"/m);
 mustBe("neovim", neovimT, "TabLineSel", "{ui.tab.active} underlined in {ui.tab.indicator}", /^H\.TabLineSel = \{ fg = "\{ui\.text\}", bg = "\{ui\.tab\.active\}", underline = true, sp = "\{ui\.tab\.indicator\}" \}$/m);
 mustBe("neovim", neovimT, "Cursor", "{ui.cursor.text} on {ui.cursor}", /^H\.Cursor = \{ fg = "\{ui\.cursor\.text\}", bg = "\{ui\.cursor\}" \}$/m);
+mustBe("dark-reader", darkReaderT, "Selection", "{ui.selection}", /^Selection = \{ui\.selection\}$/m);
+mustBe("dark-reader", darkReaderT, "Background and Text", "{ui.background} and {ui.text}", /^Background = \{ui\.background\}\nText = \{ui\.text\}$/m);
 mustBe("t3code", t3codeT, "terminalSelection", "{ui.selection}", /"terminalSelection": "\{ui\.selection\}"/);
 mustBe("t3code", t3codeT, "sidebarRowSelected", "{ui.selection} (the sidebar paints its own text over it)", /"sidebarRowSelected": "\{ui\.selection\}"/);
 mustBe("t3code", t3codeT, "messageAction", "{ui.fill} under {ui.on.fill}", /"messageAction": "\{ui\.fill\}",\n\s*"messageActionForeground": "\{ui\.on\.fill\}"/);
@@ -275,6 +326,17 @@ mustBe("thunderbird", thunderbirdT, "toolbar_field_border_focus", "{ui.focus} (T
 mustBe("thunderbird", thunderbirdT, "tab_line", "an opaque {ui.tab.indicator}", /"tab_line": "\{ui\.tab\.indicator\}"/);
 mustBe("thunderbird", thunderbirdT, "link_color", "{ui.link}", /"link_color": "\{ui\.link\}"/);
 mustBe("t3code", t3codeT, "accent", "{ui.accent} under {ui.on.accent}", /"accent": "\{ui\.accent\}",\n\s*"accentForeground": "\{ui\.on\.accent\}"/);
+for (const [v, t] of [[3, gtk3T], [4, gtk4T]]) {
+  mustBe(`gtk-${v}.0`, t, "$selected_bg_color", "{ui.fill} under {ui.on.fill} (rows, buttons, progress bars)", /^\$selected_fg_color: \{ui\.on\.fill\};\n\$selected_bg_color: \{ui\.fill\};$/m);
+  mustBe(`gtk-${v}.0`, t, "$checkradio_bg_color", "{ui.accent} under {ui.on.accent}", /^\$checkradio_bg_color: \{ui\.accent\};\n\$checkradio_fg_color: \{ui\.on\.accent\};$/m);
+  mustBe(`gtk-${v}.0`, t, "$tab_indicator_color", "an opaque {ui.tab.indicator}", /^\$tab_indicator_color: \{ui\.tab\.indicator\};$/m);
+  mustBe(`gtk-${v}.0`, t, "$link_color", "{ui.link}", /^\$link_color: \{ui\.link\};$/m);
+}
+mustBe("gtk-3.0", gtk3T, "$text_selection_bg_color", "{ui.selection} under {ui.text}", /^\$text_selection_bg_color: \{ui\.selection\};\n\$text_selection_fg_color: \{ui\.text\};$/m);
+for (const [v, t] of [[3, gtk3T], [4, gtk4T]]) mustBe(`gtk-${v}.0`, t, "$control_edge_color", "{ui.accent} (build.mjs edges the PNG knobs with the same role)", /^\$control_edge_color: \{ui\.accent\};$/m);
+mustBe("gtk-3.0", gtk3T, "$focus_color", "{ui.focus}", /^\$focus_color: \{ui\.focus\};$/m);
+mustBe("gtk-4.0", gtk4T, "$selected_text_bg_color", "{ui.selection}", /^\$selected_text_bg_color: \{ui\.selection\};$/m);
+mustBe("gtk-4.0", gtk4T, "$focus_border_color", "{ui.focus}", /^\$focus_border_color: \{ui\.focus\};$/m);
 mustBe("neovim", neovimT, "Underlined", "{ui.link}", /^H\.Underlined = \{ fg = "\{ui\.link\}", underline = true \}$/m);
 mustBe("neovim", neovimT, "DiffAdd", "{ui.diff.added}", /^H\.DiffAdd = \{ bg = "\{ui\.diff\.added\}" \}$/m);
 mustBe("neovim", neovimT, "DiffDelete", "{syntax.diff.removed} on {ui.diff.removed}", /^H\.DiffDelete = \{ fg = "\{syntax\.diff\.removed\}", bg = "\{ui\.diff\.removed\}" \}$/m);
@@ -337,9 +399,24 @@ for (const ctx of ctxs) {
   nb.colors = applyOverrides("nimbalyst", "json", nb.colors, ctx);
   out(`ports/nimbalyst/${full}/theme.json`, nb);
   // T3 Code reads the id from the file name, so the slug is the name the reader keeps.
-  const t3 = JSON.parse(fill(ctx, t3codeT, "t3code"));
-  t3.colors = applyOverrides("t3code", "json", t3.colors, ctx);
-  out(`ports/t3code/${slug}.json`, t3);
+  // One file per dark flavour; the light flavour rides along as each file's `variants.light`,
+  // because a T3 Code theme is picked once and shows a half per appearance.
+  if (ctx.f.dark) {
+    const t3 = JSON.parse(fill(ctx, t3codeT, "t3code"));
+    t3.colors = applyOverrides("t3code", "json", t3.colors, ctx);
+    const light = ctxs.find((c) => !c.f.dark);
+    const lightColors = applyOverrides("t3code", "json", JSON.parse(fill(light, t3codeT, "t3code")).colors, light);
+    out(`ports/t3code/${slug}.json`, { ...t3, variants: { light: lightColors } });
+  }
+  // Dark Reader: dark flavours only, one settings sheet each, named as its Color Scheme list names them.
+  // With a custom Selection it paints selected text white under HSL lightness 0.5 and black above,
+  // whatever Text is, so the selection has to stay dark enough for white in every flavour and tint.
+  if (ctx.f.dark) {
+    const dr = applyOverrides("dark-reader", "lines", fill(ctx, darkReaderT, "dark-reader"), ctx);
+    out(`ports/dark-reader/${full}.txt`, dr);
+    const sel = /^Selection = (#[0-9a-f]{6})$/m.exec(dr)?.[1] || "#ffffff";
+    if (toHsl(sel)[2] >= 0.5 || contrast("#ffffff", sel) < 4.5) errors.push(`dark-reader: ${full} Selection ${sel} must take white selected text at 4.5:1 or better (Dark Reader picks white or black by lightness)`);
+  }
   out(`ports/micro/${slug}.micro`, applyOverrides("micro", "lines", fill(ctx, microT, "micro"), ctx));
   const kt = JSON.parse(fill(ctx, kateT, "kate"));
   kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
@@ -356,7 +433,21 @@ for (const ctx of ctxs) {
   out(`ports/borders/${slug}.sh`, toArgb(applyOverrides("borders", "lines", fill(ctx, bordersT, "borders"), ctx)));
   out(`ports/tinted8/${slug}.yaml`, alignYamlNotes(applyOverrides("tinted8", "lines", fill(ctx, tinted8T, "tinted8"), ctx)));
   out(`ports/base24/${slug}.yaml`, alignYamlNotes(applyOverrides("base24", "lines", fill(ctx, base24T, "base24"), ctx)));
-  out(`ports/gtk/${full}/gtk-3.0/gtk.css`, applyOverrides("gtk", "lines", fill(ctx, gtkT, "gtk"), ctx));
+  for (const [v, t] of [[3, gtk3T], [4, gtk4T]]) {
+    const css = compileGtk(applyOverrides("gtk", "lines", fill(ctx, t, "gtk"), ctx), v);
+    if (css !== null) out(`ports/gtk/${full}/gtk-${v}.0/gtk.css`, css);
+    // A flavour ships only the assets its stylesheet names (Adwaita writes the names in
+    // interpolated url()s, so they are read from the compiled CSS): the dark or the light
+    // set, not both. The PNG knobs match the CSS ones: edged in $control_edge_color
+    // (ui.accent) and filled with Adwaita's button colour, lighten($bg_color, 2%).
+    const [H, S, L] = toHsl(ctx.resolve("ui.background")[0]), knobFill = fromHsl(H, S, L + 0.02), knobEdge = ctx.resolve("ui.accent")[0];
+    for (const a of new Set([...(css || "").matchAll(/url\(["']assets\/([^"']+)["']\)/g)].map((m) => m[1]))) {
+      const f = path.join(root, `vendor/adwaita-gtk${v}/assets`, a);
+      if (!fs.existsSync(f)) { errors.push(`gtk-${v}.0: the stylesheet uses assets/${a}, which vendor/adwaita-gtk${v}/assets does not have`); continue; }
+      const knob = /^(slider|text-select)-.*\.png$/.test(a);
+      out(`ports/gtk/${full}/gtk-${v}.0/assets/${a}`, knob ? recolourKnob(fs.readFileSync(f), v, ctx.f.dark, knobEdge, knobFill, a.includes("-insensitive")) : fs.readFileSync(f));
+    }
+  }
   out(`ports/darktable/${slug}.css`, applyOverrides("darktable", "lines", fill(ctx, darktableT, "darktable"), ctx));
   out(`ports/gimp/${slug}.css`, applyOverrides("gimp", "lines", fill(ctx, gimpT, "gimp"), ctx));
   out(`ports/btop/${slug}.theme`, applyOverrides("btop", "lines", fill(ctx, btopT, "btop"), ctx));
@@ -478,7 +569,7 @@ if (!TINT) {
       C_STARS: hexOf("ui.accent"), C_ISSUES: hexOf("ui.warning"), C_CONTRIBUTORS: hexOf("ui.success"),
       TINTS: tintBar(hrefOf),
       PREVIEW: own("preview.webp") ? "assets/preview.webp" : `${previews}/preview.png`,
-      PREVIEWS: ctxs.map((ctx) => `<details>\n<summary>${ctx.f.emoji} ${ctx.f.name}</summary>\n<img src="${own(`${ctx.id}.webp`) ? `assets/${ctx.id}.webp` : `${previews}/${ctx.id}.png`}"/>\n</details>`).join("\n"),
+      PREVIEWS: ctxs.filter((ctx) => ctx.f.dark || !port.darkOnly).map((ctx) => `<details>\n<summary>${ctx.f.emoji} ${ctx.f.name}</summary>\n<img src="${own(`${ctx.id}.webp`) ? `assets/${ctx.id}.webp` : `${previews}/${ctx.id}.png`}"/>\n</details>`).join("\n"),
       USAGE: usage,
       THANKS: [...(port.maintainers || []), ...REG.maintainers].filter((m, i, a) => a.indexOf(m) === i).map((m) => `- [${m}](https://github.com/${m})`).join("\n"),
     };
@@ -527,8 +618,11 @@ const traceExpr = (port, key, raw) => {
 const walk = (port, o, pre = "") => { if (typeof o === "string") return traceExpr(port, pre, o);
   if (Array.isArray(o)) return o.forEach((v, i) => walk(port, v, `${pre}[${v?.name ? JSON.stringify(v.name) : i}]`));
   if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) walk(port, v, pre ? (pre === "colors" || pre.endsWith("colors") ? `${k}` : `${pre}.${k}`) : k); };
-for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritty", alacrittyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["borders", bordersT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["gtk", gtkT], ["darktable", darktableT], ["gimp", gimpT]])
+for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritty", alacrittyT], ["obsidian", obsidianT], ["kde", kdeT], ["konsole", konsoleT], ["micro", microT], ["notepadpp", nppT], ["starship", starshipT], ["borders", bordersT], ["lsd", lsdT], ["tinted8", tinted8T], ["base24", base24T], ["darktable", darktableT], ["gimp", gimpT], ["dark-reader", darkReaderT]])
   for (const line of text.split("\n")) { const m = /^([\w.-]+(?:\s*=\s*\d+)?)\s*=?\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("#")) traceExpr(port, m[1].replace(/\s+/g, " "), m[2]); }
+// The GTK templates are SCSS: `$name: {role};`, traced under the GTK version and variable name.
+for (const [v, t] of [[3, gtk3T], [4, gtk4T]])
+  for (const line of t.split("\n")) { const m = /^\$(\w+):\s*(.*\{.*);/.exec(line); if (m) traceExpr("gtk", `gtk-${v}.0 $${m[1]}`, m[2]); }
 // Neovim's template is Lua: H.Group = { ... } and H["@capture"] = { ... } lines, and
 // the vim.g.terminal_color_N assignments; the key is the group or capture name.
 for (const line of neovimT.split("\n")) { const m = /^(?:H\.|H\[")?([@\w.]+)(?:"\])?\s*=\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("--")) traceExpr("neovim", m[1], m[2]); }

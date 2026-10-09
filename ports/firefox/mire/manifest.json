@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Darkberry Mire",
+  "name": "Darkberry - Mire",
   "version": "0.3.0",
-  "description": "Darkberry for Firefox. Dark. The main flavour, berries at full strength. Wine-dark, the overnight dredges.",
+  "description": "Darkberry - Mire: The main dark flavour: wine-dark mire with berry accents.",
   "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {

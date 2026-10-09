@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Cloudberry Fen",
+  "name": "Cloudberry - Fen (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Cloudberry for Firefox. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds warmed toward ripe peach.",
+  "description": "Cloudberry tint of Darkberry - Fen: dark, neutrals leaned toward cloudberry",
   "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {
