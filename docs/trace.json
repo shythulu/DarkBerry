@@ -9274,328 +9274,6 @@
     }
   },
   {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{ui.pane.secondary}",
-    "roles": [
-      "ui.pane.secondary"
-    ],
-    "palette": [
-      "mantle"
-    ],
-    "hex": {
-      "wisp": "#f3e6ef",
-      "fen": "#402838",
-      "mire": "#23161f",
-      "blackwater": "#170d13"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "color",
-    "expr": "{ui.text}",
-    "roles": [
-      "ui.text"
-    ],
-    "palette": [
-      "text"
-    ],
-    "hex": {
-      "wisp": "#4f3143",
-      "fen": "#f2e6ee",
-      "mire": "#efe3eb",
-      "blackwater": "#ede1e9"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "border-color",
-    "expr": "{ui.border.inactive}",
-    "roles": [
-      "ui.border.inactive"
-    ],
-    "palette": [
-      "overlay1"
-    ],
-    "hex": {
-      "wisp": "#967d8c",
-      "fen": "#a28297",
-      "mire": "#91828b",
-      "blackwater": "#887882"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{ui.pane.tertiary}",
-    "roles": [
-      "ui.pane.tertiary"
-    ],
-    "palette": [
-      "crust"
-    ],
-    "hex": {
-      "wisp": "#ebdae5",
-      "fen": "#35212e",
-      "mire": "#1c1119",
-      "blackwater": "#12090f"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "color",
-    "expr": "{ui.text.muted}",
-    "roles": [
-      "ui.text.muted"
-    ],
-    "palette": [
-      "subtext0"
-    ],
-    "hex": {
-      "wisp": "#694e5f",
-      "fen": "#ccbac5",
-      "mire": "#cbbcc5",
-      "blackwater": "#c6b7c0"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{ui.pane.secondary}",
-    "roles": [
-      "ui.pane.secondary"
-    ],
-    "palette": [
-      "mantle"
-    ],
-    "hex": {
-      "wisp": "#f3e6ef",
-      "fen": "#402838",
-      "mire": "#23161f",
-      "blackwater": "#170d13"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "color",
-    "expr": "{ui.text}",
-    "roles": [
-      "ui.text"
-    ],
-    "palette": [
-      "text"
-    ],
-    "hex": {
-      "wisp": "#4f3143",
-      "fen": "#f2e6ee",
-      "mire": "#efe3eb",
-      "blackwater": "#ede1e9"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "border",
-    "expr": "{ui.border.inactive}",
-    "roles": [
-      "ui.border.inactive"
-    ],
-    "palette": [
-      "overlay1"
-    ],
-    "hex": {
-      "wisp": "#967d8c",
-      "fen": "#a28297",
-      "mire": "#91828b",
-      "blackwater": "#887882"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{ui.pane.tertiary}",
-    "roles": [
-      "ui.pane.tertiary"
-    ],
-    "palette": [
-      "crust"
-    ],
-    "hex": {
-      "wisp": "#ebdae5",
-      "fen": "#35212e",
-      "mire": "#1c1119",
-      "blackwater": "#12090f"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "color",
-    "expr": "{ui.text}",
-    "roles": [
-      "ui.text"
-    ],
-    "palette": [
-      "text"
-    ],
-    "hex": {
-      "wisp": "#4f3143",
-      "fen": "#f2e6ee",
-      "mire": "#efe3eb",
-      "blackwater": "#ede1e9"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{ui.pane.secondary}",
-    "roles": [
-      "ui.pane.secondary"
-    ],
-    "palette": [
-      "mantle"
-    ],
-    "hex": {
-      "wisp": "#f3e6ef",
-      "fen": "#402838",
-      "mire": "#23161f",
-      "blackwater": "#170d13"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "border-color",
-    "expr": "{ui.border.inactive}",
-    "roles": [
-      "ui.border.inactive"
-    ],
-    "palette": [
-      "overlay1"
-    ],
-    "hex": {
-      "wisp": "#967d8c",
-      "fen": "#a28297",
-      "mire": "#91828b",
-      "blackwater": "#887882"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "color",
-    "expr": "{ui.text}",
-    "roles": [
-      "ui.text"
-    ],
-    "palette": [
-      "text"
-    ],
-    "hex": {
-      "wisp": "#4f3143",
-      "fen": "#f2e6ee",
-      "mire": "#efe3eb",
-      "blackwater": "#ede1e9"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "box-shadow",
-    "expr": "{ui.tab.indicator}",
-    "roles": [
-      "ui.tab.indicator"
-    ],
-    "palette": [
-      "tint"
-    ],
-    "hex": {
-      "wisp": "#d21570",
-      "fen": "#fa99b4",
-      "mire": "#fd7ca5",
-      "blackwater": "#fd7ca5"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{ui.selection}",
-    "roles": [
-      "ui.selection",
-      "ui.background"
-    ],
-    "palette": [
-      "base",
-      "berry"
-    ],
-    "hex": {
-      "wisp": "#f0cadd",
-      "fen": "#6e4457",
-      "mire": "#502f3d",
-      "blackwater": "#452533"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "color",
-    "expr": "{ui.text}",
-    "roles": [
-      "ui.text"
-    ],
-    "palette": [
-      "text"
-    ],
-    "hex": {
-      "wisp": "#4f3143",
-      "fen": "#f2e6ee",
-      "mire": "#efe3eb",
-      "blackwater": "#ede1e9"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "outline-color",
-    "expr": "{ui.focus}",
-    "roles": [
-      "ui.focus"
-    ],
-    "palette": [
-      "cherry",
-      "overlay1"
-    ],
-    "hex": {
-      "wisp": "#9e5e70",
-      "fen": "#c496a6",
-      "mire": "#b28a93",
-      "blackwater": "#ae848f"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{overlay0}",
-    "roles": [],
-    "palette": [
-      "overlay0"
-    ],
-    "hex": {
-      "wisp": "#ac93a2",
-      "fen": "#8f6e82",
-      "mire": "#7d6976",
-      "blackwater": "#6b5764"
-    }
-  },
-  {
-    "port": "gtk",
-    "key": "background-color",
-    "expr": "{overlay1}",
-    "roles": [],
-    "palette": [
-      "overlay1"
-    ],
-    "hex": {
-      "wisp": "#967d8c",
-      "fen": "#a28297",
-      "mire": "#91828b",
-      "blackwater": "#887882"
-    }
-  },
-  {
     "port": "dark-reader",
     "key": "Background",
     "expr": "{ui.background}",
@@ -9646,6 +9324,1184 @@
       "fen": "#6e4457",
       "mire": "#502f3d",
       "blackwater": "#452533"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $base_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $text_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $caret_color",
+    "expr": "{ui.cursor}",
+    "roles": [
+      "ui.cursor"
+    ],
+    "palette": [
+      "petal"
+    ],
+    "hex": {
+      "wisp": "#a83570",
+      "fen": "#ffc4dd",
+      "mire": "#feafd4",
+      "blackwater": "#feafd4"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $bg_color",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $fg_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $selected_fg_color",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#35212e",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $selected_bg_color",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $borders_color",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $alt_borders_color",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $link_color",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#026b80",
+      "fen": "#83d4db",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $link_visited_color",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $headerbar_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $menu_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $popover_bg_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $scrollbar_slider_color",
+    "expr": "{overlay0}",
+    "roles": [],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $scrollbar_slider_hover_color",
+    "expr": "{overlay1}",
+    "roles": [],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $scrollbar_slider_active_color",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $warning_color",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $error_color",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $success_color",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $destructive_color",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $osd_fg_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $osd_text_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $osd_bg_color",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $drop_target_color",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $insensitive_fg_color",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $backdrop_fg_color",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $checkradio_bg_color",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $checkradio_fg_color",
+    "expr": "{ui.on.accent}",
+    "roles": [
+      "ui.on.accent",
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#35212e",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $text_selection_bg_color",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
+    "palette": [
+      "base",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $text_selection_fg_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $tab_indicator_color",
+    "expr": "{ui.tab.indicator}",
+    "roles": [
+      "ui.tab.indicator"
+    ],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $focus_color",
+    "expr": "{ui.focus}",
+    "roles": [
+      "ui.focus"
+    ],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#9e5e70",
+      "fen": "#c496a6",
+      "mire": "#b28a93",
+      "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $progress_text_color",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $control_edge_color",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-3.0 $control_outline_color",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $base_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $text_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $bg_color",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $fg_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $selected_fg_color",
+    "expr": "{ui.on.fill}",
+    "roles": [
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#35212e",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $selected_bg_color",
+    "expr": "{ui.fill}",
+    "roles": [
+      "ui.fill"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $selected_text_bg_color",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
+    "palette": [
+      "base",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $borders_color",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $alt_borders_color",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $link_color",
+    "expr": "{ui.link}",
+    "roles": [
+      "ui.link"
+    ],
+    "palette": [
+      "frost"
+    ],
+    "hex": {
+      "wisp": "#026b80",
+      "fen": "#83d4db",
+      "mire": "#86c0cc",
+      "blackwater": "#86c0cc"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $link_visited_color",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $headerbar_bg_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $menu_color",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $scrollbar_slider_color",
+    "expr": "{overlay0}",
+    "roles": [],
+    "palette": [
+      "overlay0"
+    ],
+    "hex": {
+      "wisp": "#ac93a2",
+      "fen": "#8f6e82",
+      "mire": "#7d6976",
+      "blackwater": "#6b5764"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $scrollbar_slider_hover_color",
+    "expr": "{overlay1}",
+    "roles": [],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $scrollbar_slider_active_color",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $warning_color",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $error_color",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $success_color",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $destructive_color",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $osd_fg_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $osd_text_color",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $osd_bg_color",
+    "expr": "{ui.pane.tertiary}",
+    "roles": [
+      "ui.pane.tertiary"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ebdae5",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $drop_target_color",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $insensitive_fg_color",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $backdrop_fg_color",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $checkradio_bg_color",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $checkradio_fg_color",
+    "expr": "{ui.on.accent}",
+    "roles": [
+      "ui.on.accent",
+      "ui.on.fill"
+    ],
+    "palette": [
+      "onjam"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#35212e",
+      "mire": "#ffffff",
+      "blackwater": "#ffffff"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $switch_bg_color",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $focus_border_color",
+    "expr": "{ui.focus}",
+    "roles": [
+      "ui.focus"
+    ],
+    "palette": [
+      "cherry",
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#9e5e70",
+      "fen": "#c496a6",
+      "mire": "#b28a93",
+      "blackwater": "#ae848f"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $tab_indicator_color",
+    "expr": "{ui.tab.indicator}",
+    "roles": [
+      "ui.tab.indicator"
+    ],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $progress_text_color",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $control_edge_color",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "gtk",
+    "key": "gtk-4.0 $control_outline_color",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
     }
   },
   {

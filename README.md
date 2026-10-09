@@ -126,7 +126,7 @@ build them yourself with `./package.sh`, which writes each port's packages into 
 
 ### System
 
-- [GTK 3](ports/gtk#readme)
+- [GTK](ports/gtk#readme)
 - [Base24](ports/base24#readme)
 - [Tinted8](ports/tinted8#readme)
 
