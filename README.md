@@ -23,7 +23,7 @@ src/usage/<port>.md       each port's install steps, the Usage section of its RE
 template/                 the port template (Catppuccin's, adapted): README.md and assets/
 src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
-src/tints.json            the tints in order, with the name, emoji and badge colour each shows in READMEs
+src/tints.json            the tints in order, with the name and badge colour each shows in READMEs
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 lib/derive.mjs            the fill equation that sets jam and onjam, checked by the build
 lib/png.mjs               a small PNG writer for the generated logo, footer and previews

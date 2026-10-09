@@ -553,7 +553,7 @@ if (!TINT) {
   // The tint bar under the badges: one coloured badge per edition, linked to where that
   // edition lives for this port; the edition the README is about is left unlinked.
   const badge = (e) => `<img src="https://img.shields.io/badge/${encodeURIComponent(e.name)}-${e.colour.slice(1)}?style=for-the-badge" alt="${e.name}"/>`;
-  const tintBar = (hrefOf) => `<p align="center">\n${EDITIONS.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${e.emoji} ${badge(e)}</a>` : `\t${e.emoji} ${badge(e)}`; }).join("\n")}\n</p>`;
+  const tintBar = (hrefOf) => `<p align="center">\n${EDITIONS.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${badge(e)}</a>` : `\t${badge(e)}`; }).join("\n")}\n</p>`;
   // dir: the folder the README sits in, relative to ports/<key>/; depth: how far that is below the repo root
   const writeReadme = (port, dir, depth, hrefOf, usage) => {
     // out() routes a tint build into its subfolder itself, so the written path omits it

@@ -25,7 +25,7 @@
 
 %USAGE%
 
-## 💝 Thanks to
+## Created by
 
 %THANKS%
 

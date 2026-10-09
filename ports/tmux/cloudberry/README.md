@@ -12,11 +12,11 @@
 </p>
 
 <p align="center">
-	<a href="../">🫐 <img src="https://img.shields.io/badge/Darkberry-fd7ca5?style=for-the-badge" alt="Darkberry"/></a>
-	<a href="../lingonberry/">🍒 <img src="https://img.shields.io/badge/Lingonberry-f06a6a?style=for-the-badge" alt="Lingonberry"/></a>
-	🍊 <img src="https://img.shields.io/badge/Cloudberry-f7ab84?style=for-the-badge" alt="Cloudberry"/>
-	<a href="../crowberry/">🍇 <img src="https://img.shields.io/badge/Crowberry-ddb0ec?style=for-the-badge" alt="Crowberry"/></a>
-	<a href="../blueberry/">💙 <img src="https://img.shields.io/badge/Blueberry-8fb0f2?style=for-the-badge" alt="Blueberry"/></a>
+	<a href="../"><img src="https://img.shields.io/badge/Darkberry-fd7ca5?style=for-the-badge" alt="Darkberry"/></a>
+	<a href="../lingonberry/"><img src="https://img.shields.io/badge/Lingonberry-f06a6a?style=for-the-badge" alt="Lingonberry"/></a>
+	<img src="https://img.shields.io/badge/Cloudberry-f7ab84?style=for-the-badge" alt="Cloudberry"/>
+	<a href="../crowberry/"><img src="https://img.shields.io/badge/Crowberry-ddb0ec?style=for-the-badge" alt="Crowberry"/></a>
+	<a href="../blueberry/"><img src="https://img.shields.io/badge/Blueberry-8fb0f2?style=for-the-badge" alt="Blueberry"/></a>
 </p>
 
 <p align="center">
@@ -62,7 +62,7 @@ terminal (kitty, Ghostty and Konsole all are); if not, add
 `set -as terminal-features ",xterm-256color:RGB"` to `tmux.conf`. The pane's own text and
 background stay the terminal's, so use it with the kitty, Ghostty or Konsole port.
 
-## 💝 Thanks to
+## Created by
 
 - [shythulu](https://github.com/shythulu)
 

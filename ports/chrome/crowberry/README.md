@@ -12,11 +12,11 @@
 </p>
 
 <p align="center">
-	<a href="../">🫐 <img src="https://img.shields.io/badge/Darkberry-fd7ca5?style=for-the-badge" alt="Darkberry"/></a>
-	<a href="../lingonberry/">🍒 <img src="https://img.shields.io/badge/Lingonberry-f06a6a?style=for-the-badge" alt="Lingonberry"/></a>
-	<a href="../cloudberry/">🍊 <img src="https://img.shields.io/badge/Cloudberry-f7ab84?style=for-the-badge" alt="Cloudberry"/></a>
-	🍇 <img src="https://img.shields.io/badge/Crowberry-ddb0ec?style=for-the-badge" alt="Crowberry"/>
-	<a href="../blueberry/">💙 <img src="https://img.shields.io/badge/Blueberry-8fb0f2?style=for-the-badge" alt="Blueberry"/></a>
+	<a href="../"><img src="https://img.shields.io/badge/Darkberry-fd7ca5?style=for-the-badge" alt="Darkberry"/></a>
+	<a href="../lingonberry/"><img src="https://img.shields.io/badge/Lingonberry-f06a6a?style=for-the-badge" alt="Lingonberry"/></a>
+	<a href="../cloudberry/"><img src="https://img.shields.io/badge/Cloudberry-f7ab84?style=for-the-badge" alt="Cloudberry"/></a>
+	<img src="https://img.shields.io/badge/Crowberry-ddb0ec?style=for-the-badge" alt="Crowberry"/>
+	<a href="../blueberry/"><img src="https://img.shields.io/badge/Blueberry-8fb0f2?style=for-the-badge" alt="Blueberry"/></a>
 </p>
 
 <p align="center">
@@ -52,7 +52,7 @@ Works in Chrome, Edge and any other Chromium browser.
 If the theme isn't available on the extension store you can install it manually, with caveats. Chromium treats a theme as an extension, so a folder loaded this way stays installed
 until you remove it. Don't delete the folder afterwards, or the theme goes with it.
 
-## 💝 Thanks to
+## Created by
 
 - [shythulu](https://github.com/shythulu)
 
