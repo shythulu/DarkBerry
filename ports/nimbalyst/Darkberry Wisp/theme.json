@@ -3,7 +3,8 @@
   "name": "Darkberry Wisp",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Light. A pale page, the berries deepened to read on it. The light theme that doesn't hurt.",
+  "description": "Darkberry for Nimbalyst. Light. A pale page, the berries deepened to read on it. The light theme that doesn't hurt.",
+  "license": "MIT",
   "isDark": false,
   "colors": {
     "bg": "#fbf4f8",

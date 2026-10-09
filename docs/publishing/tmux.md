@@ -25,8 +25,8 @@ syntax, not a TPM plugin package.
 - **Steps**:
   1. Fork https://github.com/rothgar/awesome-tmux.
   2. Edit `README.md`, adding a line under `## Themes`, keeping the existing rough
-     alphabetical order, e.g. `- [darkberry](https://github.com/shythulu/DarkBerry) Four
-     flavours of a berry-dark theme for tmux, in four tints.`
+     alphabetical order, e.g. `- [Darkberry](https://github.com/shythulu/DarkBerry) Darkberry
+     for tmux. A bog-witch berry theme in four flavours, one light and three dark.`
   3. Open a pull request against `master`.
 - **Updates**: same process — a follow-up PR edits the same line if the description or link
   changes. No re-review or versioning beyond that.
@@ -57,8 +57,9 @@ syntax, not a TPM plugin package.
   signing keys. No CONTRIBUTING.md exists in the repo (checked, 404).
 - **Steps**:
   1. Fork https://github.com/tmux-plugins/list.
-  2. Edit `README.md`, adding a line under `## Themes`, e.g. `- [darkberry](https://github.com
-     /shythulu/DarkBerry) - Four berry-dark flavours for tmux, in four tints.`
+  2. Edit `README.md`, adding a line under `## Themes`, e.g. `- [Darkberry](https://github.com
+     /shythulu/DarkBerry) - Darkberry for tmux. A bog-witch berry theme in four flavours, one
+     light and three dark.`
   3. Open a pull request against `master`.
 - **Updates**: a follow-up PR to the same line.
 - **Contacts**: repo issues at https://github.com/tmux-plugins/list/issues; org is

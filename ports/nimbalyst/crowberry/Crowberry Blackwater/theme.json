@@ -3,7 +3,8 @@
   "name": "Crowberry Blackwater",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to inky violet.",
+  "description": "Crowberry for Nimbalyst. Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to inky violet.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#191126",

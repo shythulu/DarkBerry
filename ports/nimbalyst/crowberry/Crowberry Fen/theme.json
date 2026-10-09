@@ -3,7 +3,8 @@
   "name": "Crowberry Fen",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds cooled to inky violet.",
+  "description": "Crowberry for Nimbalyst. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds cooled to inky violet.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#403654",

@@ -62,63 +62,63 @@ jobs:
             echo
             echo "Every port comes twice: the plain Darkberry file and a \`-with-tints\` one that also carries the lingonberry, cloudberry, crowberry and blueberry tints, each in four flavours."
             echo
-            echo "**VS Code** (and Cursor, VSCodium, Windsurf) — \`code --install-extension darkberry-theme-$version.vsix\` (or \`darkberry-with-tints-theme-$version.vsix\` for all twenty themes; install one, not both), or Extensions > ... > Install from VSIX. Pick a flavour with Ctrl+K Ctrl+T."
+            echo "**💜 VS Code** (and Cursor, VSCodium, Windsurf) — \`code --install-extension darkberry-theme-$version.vsix\` (or \`darkberry-with-tints-theme-$version.vsix\` for all twenty themes; install one, not both), or Extensions > ... > Install from VSIX. Pick a flavour with Ctrl+K Ctrl+T."
             echo
-            echo "**Neovim** — unzip \`darkberry-neovim-$version.zip\` into \`~/.config/nvim/colors/\`, then \`:colorscheme darkberry-mire\` (Neovim 0.9+, with \`termguicolors\` on)."
+            echo "**🌙 Neovim** — unzip \`darkberry-neovim-$version.zip\` into \`~/.config/nvim/colors/\`, then \`:colorscheme darkberry-mire\` (Neovim 0.9+, with \`termguicolors\` on)."
             echo
-            echo "**kitty** — unzip \`darkberry-kitty-$version.zip\` into \`~/.config/kitty/themes/\`, then \`kitty +kitten themes\`."
+            echo "**🐱 kitty** — unzip \`darkberry-kitty-$version.zip\` into \`~/.config/kitty/themes/\`, then \`kitty +kitten themes\`."
             echo
-            echo "**Ghostty** — unzip \`darkberry-ghostty-$version.zip\` into \`~/.config/ghostty/themes/\`, keeping the file names, then set \`theme = light:Darkberry Wisp,dark:Darkberry Mire\`."
+            echo "**👻 Ghostty** — unzip \`darkberry-ghostty-$version.zip\` into \`~/.config/ghostty/themes/\`, keeping the file names, then set \`theme = light:Darkberry Wisp,dark:Darkberry Mire\`."
             echo
-            echo "**Alacritty** — unzip \`darkberry-alacritty-$version.zip\` into \`~/.config/alacritty/themes/\`, then list a flavour in \`import\` under \`[general]\` in \`alacritty.toml\` (Alacritty 0.13+)."
+            echo "**⚡ Alacritty** — unzip \`darkberry-alacritty-$version.zip\` into \`~/.config/alacritty/themes/\`, then list a flavour in \`import\` under \`[general]\` in \`alacritty.toml\` (Alacritty 0.13+)."
             echo
-            echo "**tmux** — unzip \`darkberry-tmux-$version.zip\` into \`~/.config/tmux/\`, then \`source-file ~/.config/tmux/darkberry-mire.conf\` from your tmux.conf (tmux 3.2+)."
+            echo "**🪟 tmux** — unzip \`darkberry-tmux-$version.zip\` into \`~/.config/tmux/\`, then \`source-file ~/.config/tmux/darkberry-mire.conf\` from your tmux.conf (tmux 3.2+)."
             echo
-            echo "**btop** — unzip \`darkberry-btop-$version.zip\` into \`~/.config/btop/themes/\`, keeping the file names, then pick a flavour under Esc > Options > Color theme."
+            echo "**📊 btop++** — unzip \`darkberry-btop-$version.zip\` into \`~/.config/btop/themes/\`, keeping the file names, then pick a flavour under Esc > Options > Color theme."
             echo
-            echo "**bat** — unzip \`darkberry-bat-$version.zip\` into \`\$(bat --config-dir)/themes/\`, run \`bat cache --build\`, then \`bat --theme=\"Darkberry Mire\"\`."
+            echo "**🦇 bat** — unzip \`darkberry-bat-$version.zip\` into \`\$(bat --config-dir)/themes/\`, run \`bat cache --build\`, then \`bat --theme=\"Darkberry Mire\"\`."
             echo
-            echo "**Obsidian** — unzip \`darkberry-obsidian-$version.zip\` into your vault's \`.obsidian/themes/\`, then pick a flavour under Settings > Appearance > Themes."
+            echo "**💎 Obsidian** — unzip \`darkberry-obsidian-$version.zip\` into your vault's \`.obsidian/themes/\`, then pick a flavour under Settings > Appearance > Themes."
             echo
-            echo "**KDE Plasma** — unzip \`darkberry-kde-$version.zip\` into \`~/.local/share/color-schemes/\`, then pick a flavour in System Settings > Colors."
+            echo "**🖥️ KDE Plasma** — unzip \`darkberry-kde-$version.zip\` into \`~/.local/share/color-schemes/\`, then pick a flavour in System Settings > Colors."
             echo
-            echo "**GTK 3 and 4** — unzip \`darkberry-gtk-$version.zip\` into \`~/.themes/\`, then select a flavour as your GTK theme."
+            echo "**🧩 GTK 3 and 4** — unzip \`darkberry-gtk-$version.zip\` into \`~/.themes/\`, then select a flavour as your GTK theme."
             echo
-            echo "**JankyBorders** — unzip \`darkberry-borders-$version.zip\` and copy a flavour over \`~/.config/borders/bordersrc\`, then \`brew services restart borders\`."
+            echo "**🔲 JankyBorders** — unzip \`darkberry-borders-$version.zip\` and copy a flavour over \`~/.config/borders/bordersrc\`, then \`brew services restart borders\`."
             echo
-            echo "**Konsole** — unzip \`darkberry-konsole-$version.zip\` into \`~/.local/share/konsole/\`, then Settings > Edit Current Profile > Appearance."
+            echo "**🐚 Konsole** — unzip \`darkberry-konsole-$version.zip\` into \`~/.local/share/konsole/\`, then Settings > Edit Current Profile > Appearance."
             echo
-            echo "**Notepad++** — unzip \`darkberry-notepadpp-$version.zip\` into \`%APPDATA%\\\\Notepad++\\\\themes\\\\\`, restart, then Settings > Style Configurator."
+            echo "**📄 Notepad++** — unzip \`darkberry-notepadpp-$version.zip\` into \`%APPDATA%\\\\Notepad++\\\\themes\\\\\`, restart, then Settings > Style Configurator."
             echo
-            echo "**lsd** — unzip \`darkberry-lsd-$version.zip\` and copy a flavour to \`~/.config/lsd/colors.yaml\`, with \`color: {theme: custom}\` in config.yaml."
+            echo "**📁 lsd** — unzip \`darkberry-lsd-$version.zip\` and copy a flavour to \`~/.config/lsd/colors.yaml\`, with \`color: {theme: custom}\` in config.yaml."
             echo
-            echo "**LS_COLORS** — unzip \`darkberry-ls-colors-$version.zip\` into \`~/.config/darkberry/\`, then source a flavour from your shell rc: \`. ~/.config/darkberry/darkberry-mire.sh\`."
+            echo "**📂 LS_COLORS** — unzip \`darkberry-ls-colors-$version.zip\` into \`~/.config/darkberry/\`, then source a flavour from your shell rc: \`. ~/.config/darkberry/darkberry-mire.sh\`."
             echo
-            echo "**starship** — unzip \`darkberry-starship-$version.zip\` and copy a flavour over \`~/.config/starship.toml\`."
+            echo "**🚀 Starship** — unzip \`darkberry-starship-$version.zip\` and copy a flavour over \`~/.config/starship.toml\`."
             echo
-            echo "**Base24 and Tinted8** — unzip \`darkberry-base24-$version.zip\` or \`darkberry-tinted8-$version.zip\` into a [Tinted Theming](https://github.com/tinted-theming) builder's schemes directory and build; one file themes every app that has a Base24 or Tinted8 template."
+            echo "**🎛️ Base24 and Tinted8** — unzip \`darkberry-base24-$version.zip\` or \`darkberry-tinted8-$version.zip\` into a [Tinted Theming](https://github.com/tinted-theming) builder's schemes directory and build; one file themes every app that has a Base24 or Tinted8 template."
             echo
-            echo "**micro** — unzip \`darkberry-micro-$version.zip\` into \`~/.config/micro/colorschemes/\`, then \`set colorscheme darkberry-mire\`."
+            echo "**✏️ micro** — unzip \`darkberry-micro-$version.zip\` into \`~/.config/micro/colorschemes/\`, then \`set colorscheme darkberry-mire\`."
             echo
-            echo "**Kate** — unzip \`darkberry-kate-$version.zip\`, copy the \`.theme\` files into \`~/.local/share/org.kde.syntax-highlighting/themes/\` and the \`.colors\` files into \`~/.local/share/color-schemes/\`, then pick a flavour under Settings > Window Color Scheme and under Settings > Configure Kate > Fonts & Colors."
+            echo "**🗒️ Kate** — unzip \`darkberry-kate-$version.zip\`, copy the \`.theme\` files into \`~/.local/share/org.kde.syntax-highlighting/themes/\` and the \`.colors\` files into \`~/.local/share/color-schemes/\`, then pick a flavour under Settings > Window Color Scheme and under Settings > Configure Kate > Fonts & Colors."
             echo
-            echo "**Chrome and Edge** — unzip \`darkberry-chrome-$version.zip\`, then load a flavour folder via Developer mode at \`chrome://extensions\`."
+            echo "**🌐 Chrome and Edge** — unzip \`darkberry-chrome-$version.zip\`, then load a flavour folder via Developer mode at \`chrome://extensions\`."
             echo
-            echo "**Dark Reader** — open a dark flavour's file from \`darkberry-dark-reader-$version.zip\` and type its Background, Text and Selection into Dark Reader's See all options > Colors; [the port's README](https://github.com/${{ github.repository }}/tree/main/ports/dark-reader#readme) has the steps."
+            echo "**🕶️ Dark Reader** — open a dark flavour's file from \`darkberry-dark-reader-$version.zip\` and type its Background, Text and Selection into Dark Reader's See all options > Colors; [the port's README](https://github.com/${{ github.repository }}/tree/main/ports/dark-reader#readme) has the steps."
             echo
-            echo "**Nimbalyst** — unzip \`darkberry-nimbalyst-$version.zip\` into Nimbalyst's themes directory, then pick a flavour under Settings > Themes."
+            echo "**☁️ Nimbalyst** — unzip \`darkberry-nimbalyst-$version.zip\` into Nimbalyst's \`themes\` folder (\`~/Library/Application Support/@nimbalyst/electron/themes/\` on macOS; the port's README has Linux and Windows), then pick a flavour under Settings > Themes."
             echo
-            echo "**Thunderbird** — download a flavour's \`darkberry-thunderbird-<flavour>-$version.xpi\`, then Tools > Add-ons and Themes > the gear menu > Install Add-on From File. Thunderbird does not require add-ons to be signed, so the file installs as it is."
+            echo "**🐦 Thunderbird** — download a flavour's \`darkberry-thunderbird-<flavour>-$version.xpi\`, then Tools > Add-ons and Themes > the gear menu > Install Add-on From File. Thunderbird does not require add-ons to be signed, so the file installs as it is."
             echo
-            echo "**T3 Code** — unzip \`darkberry-t3code-$version.zip\` into \`~/.t3/userdata/themes/\`, then pick a dark flavour under Settings > Appearance; each file carries Wisp as its light half."
+            echo "**🤖 T3 Code** — unzip \`darkberry-t3code-$version.zip\` into \`~/.t3/userdata/themes/\`, then pick a dark flavour under Settings > Appearance; each file carries Wisp as its light half."
             echo
-            echo "**darktable** — unzip \`darkberry-darktable-$version.zip\` and copy a flavour beside darktable's own CSS (each file's header gives the path), then pick it under Preferences > General > Theme."
+            echo "**📷 darktable** — unzip \`darkberry-darktable-$version.zip\` and copy a flavour beside darktable's own CSS (each file's header gives the path), then pick it under Preferences > General > Theme."
             echo
-            echo "**GIMP** — the files in \`darkberry-gimp-$version.zip\` sit on top of a copy of GIMP's own \`Default\` theme; follow the steps in [the GIMP port's README](https://github.com/${{ github.repository }}/tree/main/ports/gimp#readme)."
+            echo "**🎨 GIMP** — the files in \`darkberry-gimp-$version.zip\` sit on top of a copy of GIMP's own \`Default\` theme; follow the steps in [the GIMP port's README](https://github.com/${{ github.repository }}/tree/main/ports/gimp#readme)."
             echo
-            echo "**GIMP palette** — \`darkberry-gpl-$version.zip\` holds the palette as \`.gpl\` files, one per flavour and one with all four, for GIMP, Inkscape, Krita, MyPaint and Aseprite to import."
+            echo "**🖌️ GIMP Palette** — \`darkberry-gpl-$version.zip\` holds the palette as \`.gpl\` files, one per flavour and one with all four, for GIMP, Inkscape, Krita, MyPaint and Aseprite to import."
             echo
-            echo "**Firefox** — install from [addons.mozilla.org](https://addons.mozilla.org/firefox/user/20178967/), which is where updates come from. The \`.xpi\` files attached here are the unsigned build output, kept for archival: release Firefox refuses unsigned add-ons, so they install only through \`about:debugging\` > Load Temporary Add-on, or on Developer Edition, Nightly or an unbranded Release/Beta build with \`xpinstall.signatures.required\` set to \`false\`."
+            echo "**🦊 Firefox** — install from [addons.mozilla.org](https://addons.mozilla.org/firefox/user/20178967/), which is where updates come from. The \`.xpi\` files attached here are the unsigned build output, kept for archival: release Firefox refuses unsigned add-ons, so they install only through \`about:debugging\` > Load Temporary Add-on, or on Developer Edition, Nightly or an unbranded Release/Beta build with \`xpinstall.signatures.required\` set to \`false\`."
           } > notes.md
 
       - name: Create the release

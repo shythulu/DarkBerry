@@ -3,7 +3,8 @@
   "name": "Cloudberry Wisp",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Light. A pale page, the berries deepened to read on it. Backgrounds warmed toward ripe peach.",
+  "description": "Cloudberry for Nimbalyst. Light. A pale page, the berries deepened to read on it. Backgrounds warmed toward ripe peach.",
+  "license": "MIT",
   "isDark": false,
   "colors": {
     "bg": "#fff4ee",

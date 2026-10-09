@@ -116,7 +116,7 @@ shape. Every file is a plain shell script that exports a raw `LS_COLORS` string 
 
 - Whether to submit all four Darkberry flavours to eza-themes and vivid in one PR each, or one
   PR per flavour — neither repo's history settles this consistently.
-- Whether eza-themes/vivid maintainers will want the four *tint* variants (blueberry, cloudberry,
+- Whether eza-themes/vivid maintainers will want the four tints (blueberry, cloudberry,
   crowberry, lingonberry) too, or only the base Darkberry flavours — likely only the base four,
   but that's a call for whoever opens the PR.
 - Whose GitHub account opens these PRs (shythulu directly vs. another account) is for the

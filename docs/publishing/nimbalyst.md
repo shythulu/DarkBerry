@@ -1,10 +1,11 @@
 # Publishing the Nimbalyst port
 
 `ports/nimbalyst/<Darkberry Flavour>/theme.json` holds one flat object per flavour (`id`,
-`name`, `version`, `author`, `description`, `isDark`, `colors`, `tags`); Nimbalyst's own
-extension system instead expects a `manifest.json` with those same theme fields nested under
-`contributions.themes[]`, so the port's files need repackaging before any of the venues below
-will accept them.
+`name`, `version`, `author`, `description`, `license`, `isDark`, `colors`, `tags`). Nimbalyst
+0.79.1 loads that file as it is from its user `themes` folder (see *Nimbalyst's on-disk themes
+directory* below), which is the install path the port's README documents. The extension
+venues below want something else: a `manifest.json` with the theme fields nested under
+`contributions.themes[]`, so the port's files need repackaging before those venues accept them.
 
 ## Venues
 
@@ -129,35 +130,29 @@ will accept them.
   https://raw.githubusercontent.com/bglti148/nimbalyst-tokyo-night-theme/main/manifest.json.
 - **Confidence**: verified as a working pattern; not a distinct listing venue.
 
-## Nimbalyst's on-disk themes/extensions directory
+## Nimbalyst's on-disk themes directory
 
-Confirmed application-data root per platform (from official docs, fetched 2026-09-24):
+Read from the Nimbalyst 0.79.1 app bundle for macOS (`app.asar`, 2026-10-09): `getUserThemesDir()`
+is Electron's `userData` path plus `themes`, and `ThemeLoader.discoverThemes()` treats each
+subfolder holding a `theme.json` as a theme. Its required fields are `id` (letters, digits,
+dash and underscore), `name`, `version` (semver), `isDark` (boolean) and `colors`; a theme
+folder may hold only `.json`, images, `.md` and LICENSE/README/NOTICE files, 5 MB at most. The
+built-in themes also carry `author`, `description`, `license` and `tags`. On that install,
+`userData` is `~/Library/Application Support/@nimbalyst/electron`, and its empty `themes`
+folder exists.
 
-- macOS: `~/Library/Application Support/Nimbalyst`
-- Windows: `%APPDATA%\Nimbalyst`
-- Linux: `~/.config/Nimbalyst`
+- macOS: `~/Library/Application Support/@nimbalyst/electron/themes/` (verified)
+- Linux: `~/.config/@nimbalyst/electron/themes/` (Electron's layout; not checked)
+- Windows: `%APPDATA%\@nimbalyst\electron\themes\` (Electron's layout; not checked)
 
-The docs do not name the extensions subfolder directly ("I cannot find information in the
-docs that states the exact on-disk path for the extensions folder under `userData`"). Two
-real community theme repos disagree on it:
+The official docs name the app-data root as `Nimbalyst` (`~/Library/Application Support/Nimbalyst`,
+`%APPDATA%\Nimbalyst`, `~/.config/Nimbalyst`) and do not name the subfolder. The installed
+release uses `@nimbalyst/electron`, as `omartelo/rose-pine-nimbalyst`'s README says;
+`bglti148/nimbalyst-tokyo-night-theme`'s README says `Nimbalyst/extensions/`, which does not
+exist on the 0.79.1 install checked; extensions there go in `@nimbalyst/electron/extensions/`.
 
-- `bglti148/nimbalyst-tokyo-night-theme`'s README: macOS
-  `~/Library/Application Support/Nimbalyst/extensions/` — matches the official app-data root
-  above plus `/extensions`.
-- `omartelo/rose-pine-nimbalyst`'s README: Linux `~/.config/@nimbalyst/electron/extensions`,
-  macOS `~/Library/Application Support/@nimbalyst/electron/extensions`, Windows
-  `$env:APPDATA\@nimbalyst\electron\extensions`.
-
-A separate docs query about this discrepancy returned: "the top-level app data folder name is
-documented as `Nimbalyst` across all platforms. For development builds, an additional
-`@nimbalyst/electron` subfolder exists within the same location." That suggests the
-`@nimbalyst/electron` path is for unpackaged/dev builds and `Nimbalyst/extensions` is correct
-for the released app, but this inference is not itself confirmed in writing anywhere.
-
-**Confidence: partly verified.** Use `Nimbalyst/extensions` (per platform, as above) as the
-working assumption, but a submitting agent should confirm the live path from within a
-released Nimbalyst install (Settings → Extensions → "Install from folder" dialog will show or
-accept the real path) before relying on it in a README or a script.
+**Confidence: partly verified.** The macOS path and the loader are read from the release;
+Linux and Windows follow Electron's `userData` convention and are unchecked.
 
 ## Not applicable
 
@@ -165,13 +160,10 @@ accept the real path) before relying on it in a README or a script.
   are one of several extension contribution types (alongside editors, AI tools, panels),
   checked at https://docs.nimbalyst.com/extensions/extension-system-and-marketplace and
   https://nimbalyst.com/features/extensions/ (fetched 2026-09-24).
-- No standalone `theme.json`-only loading mechanism (separate from an extension's
-  `manifest.json`) is supported — checked against
-  https://docs.nimbalyst.com/extensions/building-extensions/manifest-reference (fetched
-  2026-09-24): "I can't find any docs that define or support a standalone `themes/theme.json`
-  file format that's loaded independently of an extension's `manifest.json`." This means the
-  port's current `theme.json` files, as laid out today, are not in a format Nimbalyst's
-  documented loader recognizes at all.
+- A standalone `theme.json` venue: there is none to submit to, but the loader exists. The docs
+  checked on 2026-09-24 did not describe one; the 0.79.1 app loads `theme.json` folders from
+  its user `themes` directory (see above, 2026-10-09). That is how the port installs today; it
+  is not a listing venue.
 - No package-registry venue (npm, etc.) — Nimbalyst extensions are installed by folder or by
   pointing at a git repo, not published to a package registry; nothing referencing npm/yarn
   installation of a Nimbalyst theme was found in the docs or in either community example repo.
@@ -193,9 +185,8 @@ accept the real path) before relying on it in a README or a script.
   https://github.com/Nimbalyst/nimbalyst before assuming the GitHub-URL-paste path is a
   second-class option next to a "real" marketplace listing — it may currently be the only
   option.
-- Confirm the live extensions directory path (`Nimbalyst/extensions` vs
-  `@nimbalyst/electron/extensions`) against an actual installed copy of Nimbalyst rather than
-  the two conflicting community READMEs cited above.
+- Confirm the Linux and Windows `themes` and `extensions` paths on a real install; macOS is
+  settled (`@nimbalyst/electron`, checked on 0.79.1).
 - Whose GitHub account/repo the manifest should live in and be installed from is already
   settled by the project (`shythulu/DarkBerry`); no separate developer account is needed for
   the GitHub-URL venue since it requires none.

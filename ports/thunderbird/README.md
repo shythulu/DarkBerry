@@ -53,13 +53,16 @@ Not on a theme store yet. The files are in [ports/thunderbird](https://github.co
    gear menu, and pick the file.
 3. Enable the flavour under Themes.
 
+Checked on Thunderbird 157. The manifest accepts 128 or newer, but nothing below 157 has been
+checked.
+
 Thunderbird does not require add-ons to be signed, so the unsigned file installs and stays
 installed. To try a flavour without packaging it, open Tools > Developer Tools > Debug
 Add-ons > Load Temporary Add-on and pick its `manifest.json`; it lasts until Thunderbird
 restarts.
 
-Checked on Thunderbird 157. A theme experiment carries the theme into the folder pane, the
-message list and cards, the Spaces toolbar, the address book and the calendar.
+A theme experiment carries the theme into the folder pane, the message list and cards, the
+Spaces toolbar, the address book and the calendar.
 
 Three things keep their own colours:
 

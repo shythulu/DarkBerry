@@ -3,7 +3,8 @@
   "name": "Darkberry Fen",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Rosy and dusky, for reading at night.",
+  "description": "Darkberry for Nimbalyst. Soft dark. The gentlest dark flavour, a shade above Mire. Rosy and dusky, for reading at night.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#4f3143",

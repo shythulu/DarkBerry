@@ -25,7 +25,7 @@ theme format (shared with bpytop/bashtop), meant to be copied to `~/.config/btop
   Lopardi ... # Adapted by jrebs"); Repository (credited in the same header, see Steps);
   Licence (MIT, in the same header); Screenshots (one preview image, not committed to the
   repo but embedded in the **pull request description**; merged PR #1602 included a `<img>`
-  screenshot inline); Title (e.g. "Add Darkberry theme").
+  screenshot inline); Title (no venue pattern, so COPY.md's default, e.g. "Add Darkberry (4 flavours)").
 - **Add-ons**: `[AI generated]` in the PR title if any code or content was LLM-generated (see
   Requirements and Open questions).
 - **Requirements**: no account beyond a GitHub account to open a PR; no fee; no signing keys;
@@ -51,7 +51,7 @@ theme format (shared with bpytop/bashtop), meant to be copied to `~/.config/btop
   3. Add a short header comment crediting Darkberry, https://github.com/shythulu/DarkBerry, and
      its MIT licence, since the target repo is Apache-2.0 and the earlier rejection turned on
      exactly this being missing.
-  4. Open a PR against `main` titled e.g. "Add Darkberry theme" (add `[AI generated]` only if
+  4. Open a PR against `main` titled per COPY.md, e.g. "Add Darkberry (4 flavours)" (add `[AI generated]` only if
      applicable per the disclosure rule above); body explains the theme, states the submitter
      is the copyright holder under Darkberry's MIT licence and is fine with Apache-2.0
      distribution, and embeds a preview screenshot image (drag-and-drop into the PR body, GitHub

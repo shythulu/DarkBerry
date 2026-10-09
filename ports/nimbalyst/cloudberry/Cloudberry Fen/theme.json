@@ -3,7 +3,8 @@
   "name": "Cloudberry Fen",
   "version": "0.3.0",
   "author": "shythulu",
-  "description": "Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds warmed toward ripe peach.",
+  "description": "Cloudberry for Nimbalyst. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds warmed toward ripe peach.",
+  "license": "MIT",
   "isDark": true,
   "colors": {
     "bg": "#553524",

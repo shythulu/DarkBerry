@@ -2,7 +2,7 @@
 
 `ports/obsidian/<Darkberry Flavour>/` (plus the four tint folders) each hold a self-contained
 Obsidian theme: `manifest.json` (name, version, minAppVersion, author, authorUrl) and
-`theme.css`, one theme per flavour, each painting both of Obsidian's own light/dark modes so
+`theme.css`, one theme per flavour, each painting both of Obsidian's colour schemes, light and dark, so
 Obsidian's Appearance switch never changes the flavour.
 
 ## Venues
@@ -75,7 +75,7 @@ the manifest fetch and the release-asset fetch assume repo root. Checked the liv
 `community-themes.json`/`community-css-themes.json` for a precedent of one repo serving
 several directory entries (as this four-flavour repo would need) — found none. Multi-flavour
 theme authors solve it one of two ways, both present in the current data:
-- **Separate repos per flavour/variant** — e.g. Gruvbox has distinct entries
+- **Separate repos per flavour** — e.g. Gruvbox has distinct entries
   `insanum/obsidian_gruvbox` and `alljavi/material_gruvbox_obsidian`; Everforest has three
   separate repos/entries for its variants.
 - **One repo, one directory entry, flavour switching happens inside the theme** — Catppuccin
@@ -109,6 +109,6 @@ repo per flavour" model but lives in one monorepo subfolder per flavour, not rep
 - Who signs in to `community.obsidian.md` and links GitHub (a personal step, not automatable
   from CI) to actually click "add your theme" for each entry, and who watches for automated
   review feedback on the directory page afterward.
-- Whether to also submit the four tint variants (Blueberry, Cloudberry, Crowberry,
+- Whether to also submit the four other tints (Blueberry, Cloudberry, Crowberry,
   Lingonberry) as directory listings, or keep those install-from-repo only — unresolved here,
   since the task scope was the four core flavours.
