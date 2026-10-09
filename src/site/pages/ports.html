@@ -28,7 +28,7 @@ const PORTS = [
   ["chrome", "Chrome and Edge", `Turn on Developer mode at <code>chrome://extensions</code>, then Load unpacked on a flavour folder:`, () => `chrome://extensions`],
   ["dark-reader", "Dark Reader", `Type a dark flavour&rsquo;s Background, Text and Selection into Dark Reader&rsquo;s See all options &gt; Colors, setting Selection to Custom. There is no light flavour:`, (f) => `${title(f === "wisp" ? "mire" : f)}.txt`],
   ["kde", "KDE Plasma", `Copy the <code>.colors</code> files into <code>~/.local/share/color-schemes/</code>, then pick a flavour in System Settings > Colors:`, (f) => `~/.local/share/color-schemes/${title(f)}.colors`],
-  ["gtk", "GTK 3", `Copy a flavour folder into <code>~/.themes/</code> and select it as your GTK theme. Reaches Inkscape and anything else that follows the system theme:`, (f) => `~/.themes/${title(f)}/`],
+  ["gtk", "GTK", `Copy a flavour folder into <code>~/.themes/</code> and select it as your GTK theme. Reaches GTK 3 and GTK 4 apps that follow the system theme, Inkscape among them:`, (f) => `~/.themes/${title(f)}/`],
   ["gimp", "GIMP", `Copy GIMP's <code>Default</code> theme folder into your own themes folder, drop a flavour in as <code>gimp-dark.css</code>, then Preferences > Interface > Theme:`, (f) => `~/.config/GIMP/3.0/themes/${title(f)}/gimp-dark.css`],
   ["darktable", "darktable", `Copy a flavour beside darktable's own CSS so its <code>@import</code> resolves, then General > Theme:`, (f) => `${slug(f)}.css`],
   ["gpl", "GIMP and Inkscape palettes", `The palette itself as <code>.gpl</code> files, one per flavour and one with all four. Inkscape reads them from its palettes folder; GIMP imports them from the Palettes dialog:`, (f) => `~/.config/inkscape/palettes/${slug(f)}.gpl`],

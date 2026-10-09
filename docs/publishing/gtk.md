@@ -1,9 +1,10 @@
-# Publishing the GTK 3 port
+# Publishing the GTK port
 
-`ports/gtk/<Darkberry Flavour>/gtk-3.0/gtk.css` (four flavours) plus `ports/gtk/<tint>/<Darkberry
-Flavour>/gtk-3.0/gtk.css` (tints) hold one GTK 3 theme folder per flavour that `@import`s Adwaita
-and recolours it via CSS; a user copies a flavour folder into `~/.themes/` and selects it. There is
-no build/package step — the folder itself is the installable unit.
+`ports/gtk/<Darkberry Flavour>/` (four flavours) plus `ports/gtk/<tint>/<Darkberry Flavour>/`
+(tints) hold one theme folder per flavour with `gtk-3.0/` and `gtk-4.0/` in it: GTK's own Adwaita
+stylesheets (vendored under `vendor/`) compiled with Darkberry's colours by `build.mjs` and
+`sassc`. A user copies a flavour folder into `~/.themes/` and selects it. The folder itself is
+the installable unit; there is no packaging step beyond `package.sh`'s zips.
 
 ## Venues
 

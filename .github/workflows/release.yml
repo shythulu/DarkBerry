@@ -41,6 +41,9 @@ jobs:
           test "$got" = "$want" ||
             { echo "::error::tag $GITHUB_REF_NAME does not match version $want in src/palette.json"; exit 1; }
 
+      - name: Install sassc (the GTK port is compiled with it)
+        run: sudo apt-get update && sudo apt-get install -y sassc
+
       - name: Check the committed ports are current
         run: |
           node build.mjs
@@ -79,7 +82,7 @@ jobs:
             echo
             echo "**KDE Plasma** — unzip \`darkberry-kde-$version.zip\` into \`~/.local/share/color-schemes/\`, then pick a flavour in System Settings > Colors."
             echo
-            echo "**GTK 3** — unzip \`darkberry-gtk-$version.zip\` into \`~/.themes/\`, then select a flavour as your GTK theme."
+            echo "**GTK 3 and 4** — unzip \`darkberry-gtk-$version.zip\` into \`~/.themes/\`, then select a flavour as your GTK theme."
             echo
             echo "**JankyBorders** — unzip \`darkberry-borders-$version.zip\` and copy a flavour over \`~/.config/borders/bordersrc\`, then \`brew services restart borders\`."
             echo

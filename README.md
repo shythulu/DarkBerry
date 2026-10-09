@@ -124,7 +124,7 @@ build them yourself with `./package.sh`, which writes the same set into `dist/`.
 
 ### System
 
-- [GTK 3](ports/gtk#readme)
+- [GTK](ports/gtk#readme)
 - [Base24](ports/base24#readme)
 - [Tinted8](ports/tinted8#readme)
 
