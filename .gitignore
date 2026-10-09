@@ -4,3 +4,6 @@ node_modules/
 ports/*/dist/
 .claude/settings.local.json
 .claude/worktrees/
+
+# Chrome writes this beside an unpacked theme it has loaded
+ports/chrome/**/Cached Theme.pak

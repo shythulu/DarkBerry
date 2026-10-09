@@ -17,9 +17,9 @@ for port in $PORTS; do mkdir -p "ports/$port/dist"; done
 # VS Code: the READMEs are generated with paths relative to their folder, which vsce would
 # otherwise resolve against the repository root.
 cp LICENSE ports/vscode/LICENSE; cp LICENSE ports/vscode/with-tints/LICENSE
-(cd ports/vscode && npx --yes @vscode/vsce package --skip-license -o dist/ \
+(cd ports/vscode && npx --yes @vscode/vsce package --no-dependencies --skip-license -o dist/ \
   --baseContentUrl "$REPO/blob/main/ports/vscode" --baseImagesUrl "$REPO/raw/main/ports/vscode")
-(cd ports/vscode/with-tints && npx --yes @vscode/vsce package --skip-license -o ../dist/ \
+(cd ports/vscode/with-tints && npx --yes @vscode/vsce package --no-dependencies --skip-license -o ../dist/ \
   --baseContentUrl "$REPO/blob/main/ports/vscode/with-tints" --baseImagesUrl "$REPO/raw/main/ports/vscode/with-tints")
 
 # Firefox: one theme per .xpi. Tint folders hold a flavour folder each.

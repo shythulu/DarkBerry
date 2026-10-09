@@ -9596,6 +9596,59 @@
     }
   },
   {
+    "port": "dark-reader",
+    "key": "Background",
+    "expr": "{ui.background}",
+    "roles": [
+      "ui.background"
+    ],
+    "palette": [
+      "base"
+    ],
+    "hex": {
+      "wisp": "#fbf4f8",
+      "fen": "#4f3143",
+      "mire": "#2a1e26",
+      "blackwater": "#1d121a"
+    }
+  },
+  {
+    "port": "dark-reader",
+    "key": "Text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "dark-reader",
+    "key": "Selection",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
+    "palette": [
+      "base",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
+    }
+  },
+  {
     "port": "neovim",
     "key": "Normal",
     "expr": "{ui.text}",

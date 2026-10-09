@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Blueberry Blackwater",
+  "name": "Blueberry - Blackwater (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Blueberry for Firefox. Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to a dusty slate blue.",
+  "description": "Blueberry tint of Darkberry - Blackwater: dark, neutrals leaned toward blueberry",
   "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {

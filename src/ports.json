@@ -23,6 +23,7 @@
     { "key": "firefox", "name": "Firefox", "url": "https://www.mozilla.org/firefox/", "emoji": "🦊", "categories": ["browser"], "platform": ["web"] },
     { "key": "thunderbird", "name": "Thunderbird", "url": "https://www.thunderbird.net/", "emoji": "🐦", "categories": ["email_client"], "platform": ["linux", "macos", "windows"] },
     { "key": "chrome", "name": "Google Chrome", "url": "https://www.google.com/chrome/", "emoji": "🌐", "categories": ["browser"], "platform": ["web"] },
+    { "key": "dark-reader", "name": "Dark Reader", "url": "https://darkreader.org", "emoji": "🕶️", "categories": ["browser_extension"], "platform": ["web"], "darkOnly": true },
     { "key": "kde", "name": "KDE Plasma", "url": "https://kde.org/plasma-desktop/", "emoji": "🖥️", "categories": ["desktop_environment", "system"], "platform": ["linux"] },
     { "key": "gtk", "name": "GTK 3", "url": "https://www.gtk.org", "emoji": "🧩", "categories": ["system"], "platform": ["linux"] },
     { "key": "borders", "name": "JankyBorders", "url": "https://github.com/FelixKratz/JankyBorders", "emoji": "🔲", "categories": ["window_manager"], "platform": ["macos"] },

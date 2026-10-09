@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Lingonberry Blackwater",
+  "name": "Lingonberry - Blackwater (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Lingonberry for Firefox. Darkest. Deeper surfaces, the same berries as Mire. Backgrounds steeped in raspberry red.",
+  "description": "Lingonberry tint of Darkberry - Blackwater: dark, neutrals leaned toward lingonberry",
   "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {

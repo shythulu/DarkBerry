@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Blueberry Fen",
+  "name": "Blueberry - Fen (A Darkberry Tint)",
   "version": "0.3.0",
-  "description": "Blueberry for Firefox. Soft dark. The gentlest dark flavour, a shade above Mire. Backgrounds cooled to a dusty slate blue.",
+  "description": "Blueberry tint of Darkberry - Fen: dark, neutrals leaned toward blueberry",
   "homepage_url": "https://darkberry.slacklab.ca",
   "browser_specific_settings": {
     "gecko": {

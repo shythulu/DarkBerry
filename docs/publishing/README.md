@@ -69,6 +69,7 @@ automated fetches outright.
 | [Notepad++](notepadpp.md) | nppThemes (partly) | Community forum | **nppThemes relicenses to GPLv3** |
 | [Obsidian](obsidian.md) | community theme directory (partly) | none | One repo per listing; four flavours means four repos or a switcher |
 | [Nimbalyst](nimbalyst.md) | install from GitHub URL (partly) | marketplace catalog (unverified) | Loader wants an extension manifest, not the flat theme.json the port ships |
+| [T3 Code](t3code.md) | Open VSX via the in-app search (verified) | t3themes.com gallery (verified) | Upstream takes no themes; the in-app search finds the VS Code conversion, not the tuned port; the with-tints extension is on Open VSX, the plain one is not |
 | [Firefox](firefox.md) | AMO (verified) | Zen Browser mods | Already listed; tints would be 16 more listings; Zen wants CC BY-NC-SA |
 | [Chrome](chrome.md) | Chrome Web Store (partly) | Edge Add-ons (verified) | Store policy treats near-identical themes as spam; decide the item count |
 | [KDE Plasma](kde.md) | KDE Store (partly) | none | Upstream ships only first-party schemes |

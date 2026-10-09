@@ -31,7 +31,9 @@ same four flavours one directory deeper, at `ports/firefox/<tint>/<flavour>/mani
 - **Steps** (per flavour, first submission only — already done for Wisp/Fen/Mire/Blackwater
   per `docs/AMO.md`): 1. `./package.sh`, take the flavour's `.xpi` from `ports/firefox/dist/`. 2. Sign in,
   open the developer hub. 3. *Submit a New Add-on* > "On this site". 4. Upload the `.xpi`.
-  5. Set category (Appearance), licence (MIT), homepage, summary, screenshot. 6. Publish.
+  5. Set category (Appearance), licence (CC BY-NC-SA 4.0, the only kind AMO offers themes), support
+  website `https://darkberry.slacklab.ca/`, summary (prefilled from the manifest in the listing
+  shape `docs/AMO.md` describes), screenshot. 6. Publish.
 - **Updates**: CI only — the `amo` job in `.github/workflows/release.yml` runs
   `web-ext sign --channel listed --api-key … --api-secret …` per flavour on every tagged
   release once `AMO_JWT_ISSUER`/`AMO_JWT_SECRET` repo secrets exist; AMO rejects a version
