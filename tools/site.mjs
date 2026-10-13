@@ -50,6 +50,37 @@ for (const [id, pal] of palettes) {
 const REG = json("src/ports.json"), CATS = json("src/categories.json");
 data.ports = CATS.map((c) => [c.name, REG.ports.filter((p) => p.categories[0] === c.key).map((p) => ({ key: p.key, name: p.name, url: p.url, listing: p.listing || null }))]).filter(([, ps]) => ps.length);
 
+// The wallpapers page is built from the file names in wallpapers/:
+//   darkberry_wallpaper_<mark>-<scene>_4k_<16x9|16x10>.png
+// One card per <mark>-<scene>, grouped by mark, with a download link per aspect ratio. A card's
+// preview is wallpapers/previews/<mark>-<scene>.webp, kept in git so the Pages build needs no
+// image tools. A missing preview is made here with ImageMagick from the 16x9 file. To remake
+// one after its wallpaper changes, delete it and build the site again.
+const MARKS = { d: "The D", logo: "The logo" }, RATIOS = ["16x9", "16x10"];
+const walls = new Map();
+for (const f of fs.readdirSync(path.join(root, "wallpapers")).sort()) {
+  const m = f.match(/^darkberry_wallpaper_([a-z0-9]+)-([a-z0-9]+)_4k_(16x9|16x10)\.png$/);
+  if (!m) continue;
+  const [, mark, scene, ratio] = m, id = `${mark}-${scene}`;
+  if (!walls.has(id)) walls.set(id, { id, mark, name: scene[0].toUpperCase() + scene.slice(1), files: {} });
+  walls.get(id).files[ratio] = f;
+}
+for (const w of walls.values()) {
+  const preview = path.join(root, `wallpapers/previews/${w.id}.webp`), from = w.files["16x9"] || w.files["16x10"];
+  if (fs.existsSync(preview)) continue;
+  fs.mkdirSync(path.dirname(preview), { recursive: true });
+  const args = [path.join(root, "wallpapers", from), "-resize", "1200x", "-quality", "86", preview];
+  try { execFileSync("magick", args, { stdio: "ignore" }); }
+  catch (e) { try { execFileSync("convert", args, { stdio: "ignore" }); } catch (e2) { console.error(`Missing wallpapers/previews/${w.id}.webp, and ImageMagick is not here to make it.`); process.exit(1); } }
+  console.log(`Made wallpapers/previews/${w.id}.webp`);
+}
+const wallCard = (w) => {
+  const mark = (MARKS[w.mark] || w.mark).replace(/^The /, "the ");
+  const links = RATIOS.filter((r) => w.files[r]).map((r) => `<a href="wallpapers/${w.files[r]}" download aria-label="Download ${w.name} with ${mark}, ${r.replace("x", ":")}">${r.replace("x", ":")}</a>`).join("");
+  return `<li><img src="wallpapers/previews/${w.id}.webp" alt="${w.name} wallpaper with ${mark}" width="1200" height="675" loading="lazy"><div class="cap"><span class="name">${w.name}</span><span class="links"><span>download</span>${links}</span></div></li>`;
+};
+const WALLPAPERS = [...new Set([...walls.values()].map((w) => w.mark))].map((mark) => `<h3>${MARKS[mark] || mark}</h3><ul>` + [...walls.values()].filter((w) => w.mark === mark).map(wallCard).join("") + "</ul>").join("\n");
+
 // The page's first paint, before the script runs, is Darkberry Blackwater.
 const first = data.tints.darkberry, ROOT = [
   ...Object.entries(first.roles.blackwater).map(([r, v]) => `--${r.replace(/\./g, "-")}:${v}`),
@@ -62,6 +93,7 @@ const SNIPPETS = {
   ORIGIN: read("src/site/snippets/origin.html").trim(),
   ORN: read("src/site/snippets/orn.svg").trim(),
   CORE: read("src/site/core.js").trim(),
+  WALLPAPERS,
   ROOT,
   DATA: JSON.stringify(data),
 };
@@ -75,8 +107,9 @@ const PAGES = [
   ["index", "Darkberry, a bog-witch berry theme", "Darkberry is a berry dark colour theme in four flavours."],
   ["palette", "The Darkberry palette", "Every Darkberry colour in hex, RGB, HSL and OKLCH, for each flavour and tint."],
   ["ports", "Darkberry ports", "Darkberry for terminals, editors, browsers and desktops: where each port is published, and where its files are."],
+  ["wallpapers", "Darkberry wallpapers", "Darkberry wallpapers in 4K, each in 16:9 and 16:10."],
 ];
-const NAV = (current) => [["index", "Home"], ["palette", "Palette"], ["ports", "Ports"]].map(([id, label]) => `<a href="${id}.html"${id === current ? ' aria-current="page"' : ""}>${label}</a>`).join("");
+const NAV = (current) => [["index", "Home"], ["palette", "Palette"], ["ports", "Ports"], ["wallpapers", "Wallpapers"]].map(([id, label]) => `<a href="${id}.html"${id === current ? ' aria-current="page"' : ""}>${label}</a>`).join("");
 
 const out = path.join(root, "site");
 fs.rmSync(out, { recursive: true, force: true });
@@ -116,4 +149,9 @@ for (const [from, to] of COPIES) {
   if (!fs.existsSync(path.join(root, from))) { console.error(`Missing ${from}. Run node build.mjs first.`); process.exit(1); }
   fs.copyFileSync(path.join(root, from), path.join(out, to));
 }
-console.log(`Site built in site/ (${palettes.length} palettes × ${Object.keys(P.flavours).length} flavours, ${REG.ports.length} ports).`);
+// The wallpapers and their previews are served from the site itself: a download link only
+// saves the file when it is on the page's own origin.
+fs.mkdirSync(path.join(out, "wallpapers/previews"), { recursive: true });
+for (const w of walls.values())
+  for (const f of [...Object.values(w.files), `previews/${w.id}.webp`]) fs.copyFileSync(path.join(root, "wallpapers", f), path.join(out, "wallpapers", f), fs.constants.COPYFILE_FICLONE);
+console.log(`Site built in site/ (${palettes.length} palettes × ${Object.keys(P.flavours).length} flavours, ${REG.ports.length} ports, ${walls.size} wallpapers).`);

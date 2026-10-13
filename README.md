@@ -34,6 +34,7 @@ ports/<port>/             generated theme files, a README from template/, assets
 ports/<port>/<tint>/      the same for each tint (VS Code and the GIMP palette carry tints in one unit instead)
 assets/                   the logos, plus the generated footer and fallback palette previews every port README uses
 assets/logos/source/      the one drawn logo; tools/logo.mjs makes every edition's logo from it
+wallpapers/               4K wallpapers, a 16x9 and a 16x10 file each; previews/ holds the small copies the site shows
 ports/gpl/                the palette as GIMP .gpl files, one per flavour and one with all four
 docs/ROLES.md             every role, its value per flavour, and deviations from Catppuccin
 docs/CHECKS.md            contrast and syntax-distinctness results

@@ -97,6 +97,17 @@ table.pal tr.copied td{background:color-mix(in srgb,var(--ui-accent) 14%,transpa
 .portlist .app{font-family:var(--sc);letter-spacing:.06em;font-size:18px;color:var(--ui-text);text-decoration:none}
 .portlist .app:hover{color:var(--ui-accent);text-decoration:underline}
 .portlist .links{margin-left:auto;display:flex;gap:22px;font-family:var(--sc);letter-spacing:.1em;font-size:14px}
+
+/* the wallpapers */
+.walls h3{margin:36px 0 18px;font-size:26px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+.walls h3:first-child{margin-top:0}
+.walls ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
+.walls img{display:block;width:100%;height:auto;border:1px solid var(--rule);box-shadow:0 0 0 5px var(--ui-background),0 0 0 6px var(--rule)}
+.walls .cap{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;padding:16px 6px 0}
+.walls .name{font-family:var(--sc);letter-spacing:.06em;font-size:18px}
+.walls .links{margin-left:auto;display:flex;gap:22px;font-family:var(--sc);letter-spacing:.1em;font-size:14px}
+.walls .links span{color:var(--c-subtext0)}
+
 .teasers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
 .teaser{display:block;text-decoration:none;color:inherit;border:1px solid var(--rule);padding:28px 30px;position:relative;background:color-mix(in srgb,var(--ui-pane-secondary) 80%,transparent)}
 .teaser::before{content:"";position:absolute;inset:5px;border:1px solid color-mix(in srgb,var(--rule) 60%,transparent);pointer-events:none}
@@ -125,4 +136,4 @@ footer a:hover{text-decoration:underline}
 .toast.show{opacity:1}
 @media (prefers-reduced-motion:no-preference){.toast{transition:opacity .25s}}
 @media (max-width:860px){.hero{padding-top:48px}.hero .wrap{grid-template-columns:minmax(0,1fr)}.origin{grid-template-columns:minmax(0,1fr)}.chip{max-width:240px}table.pal .hide-s{display:none}header.top{position:static}}
-@media (max-width:600px){.wrap{padding:0 16px}.portlist .links{margin-left:0;flex-basis:100%}}
+@media (max-width:600px){.wrap{padding:0 16px}.portlist .links{margin-left:0;flex-basis:100%}.walls ul{grid-template-columns:minmax(0,1fr)}}
