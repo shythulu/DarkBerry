@@ -111,7 +111,7 @@ ForegroundPositive={ui.success}
 ForegroundVisited={plum}
 
 [Colors:View]
-BackgroundAlternate={surface0}
+BackgroundAlternate={ui.row.alternate}
 BackgroundNormal={ui.background}
 DecorationFocus={ui.focus}
 DecorationHover={ui.accent}

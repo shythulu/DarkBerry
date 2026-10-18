@@ -1,0 +1,14 @@
+{
+  "input-type": "css",
+  "input-version": 1,
+  "name": "Crowberry Blackwater",
+  "description": "Darkest. Deeper surfaces, the same berries as Mire. Backgrounds cooled to inky violet.",
+  "version": "0.3.0",
+  "license": "MIT AND BSD-2-Clause",
+  "url": "https://darkberry.slacklab.ca",
+  "authors": [
+    "shythulu",
+    "Arjen Hiemstra (Breeze)",
+    "Akseli Lahtinen (Breeze)"
+  ]
+}

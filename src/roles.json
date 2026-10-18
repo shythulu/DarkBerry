@@ -93,6 +93,18 @@
       "catppuccin": "no equivalent (editors tint the line themselves)",
       "why": "The cursor line is a tint of the background rather than a surface step, so syntax colours on the highlighted row keep most of their contrast."
     },
+    "row.alternate": {
+      "value": {
+        "dark": "surface0",
+        "light": "ui.pane.secondary"
+      },
+      "minContrastWith": [
+        "ui.text.muted",
+        4.5
+      ],
+      "catppuccin": "mantle (KDE's View BackgroundAlternate)",
+      "why": "Every other row of a list or table. Wisp takes mantle, as Catppuccin does; surface0 there was a heavy 1.42:1 stripe. The dark flavours keep surface0, which lifts a row off their base by 1.07 to 1.24:1, about what mantle sinks one on Wisp (1.12:1)."
+    },
     "link": {
       "value": "frost",
       "catppuccin": "blue",
@@ -161,6 +173,18 @@
       ],
       "catppuccin": "no equivalent (alerts tint the status colour themselves)",
       "why": "The info counterpart of ui.error.surface: T3 Code's update banner, at the same 6%."
+    },
+    "success.surface": {
+      "value": {
+        "dark": "mix(ui.pane.secondary,ui.success,0.06)",
+        "light": "mix(ui.background,ui.success,0.06)"
+      },
+      "minContrastWith": [
+        "ui.success",
+        4.5
+      ],
+      "catppuccin": "no equivalent (alerts tint the status colour themselves)",
+      "why": "The success counterpart of ui.error.surface: the Union style's positive inline messages, at the same 6%."
     },
     "bell": {
       "value": "honey",
