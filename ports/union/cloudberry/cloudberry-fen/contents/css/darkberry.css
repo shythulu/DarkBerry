@@ -24,6 +24,10 @@
  * shades Breeze mixes from them (hover, pressed, checked, tracks) are its own
  * arithmetic, kept as written. Shapes, spacing and sizes are Breeze's.
  *
+ * Every variable carries the style's id as a prefix, so --kcs-* reads --cloudberry-fen-kcs-*
+ * in the installed files. Union 6.8 shares variables across every style an app loads,
+ * so without the prefix its Application Style page shows each preview in one flavour.
+ *
  * Deliberately left as Breeze has it:
  *   shadows: black at 10 to 30%, lighting rather than colour.
  *   the menu-item hover fill: Breeze paints it with its focus colour at 30%.
@@ -40,71 +44,71 @@
 
 :root {
     /* Window: dialogs, toolbars, the chrome around content. */
-    --kcs-active-window-background-normal: #472b1c;
-    --kcs-active-window-background-alternate: #634331; /* alternating rows in chrome lists */
-    --kcs-active-window-foreground-text: #f8e6dd;
-    --kcs-active-window-decoration-frame: #825f4d; /* hairlines between panels */
-    --kcs-active-window-decoration-focus: #c69895;
-    --kcs-inactive-window-background-normal: #472b1c;
-    --kcs-inactive-window-foreground-text: #f8e6dd;
-    --kcs-inactive-window-decoration-frame: #825f4d; /* hairlines between panels */
-    --kcs-disabled-window-background-normal: #472b1c;
-    --kcs-disabled-window-foreground-text: #a58575;
-    --kcs-disabled-window-decoration-frame: #73513f; /* a disabled control's outline */
+    --cloudberry-fen-kcs-active-window-background-normal: #472b1c;
+    --cloudberry-fen-kcs-active-window-background-alternate: #634331; /* alternating rows in chrome lists */
+    --cloudberry-fen-kcs-active-window-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-active-window-decoration-frame: #825f4d; /* hairlines between panels */
+    --cloudberry-fen-kcs-active-window-decoration-focus: #c69895;
+    --cloudberry-fen-kcs-inactive-window-background-normal: #472b1c;
+    --cloudberry-fen-kcs-inactive-window-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-inactive-window-decoration-frame: #825f4d; /* hairlines between panels */
+    --cloudberry-fen-kcs-disabled-window-background-normal: #472b1c;
+    --cloudberry-fen-kcs-disabled-window-foreground-text: #a58575;
+    --cloudberry-fen-kcs-disabled-window-decoration-frame: #73513f; /* a disabled control's outline */
 
     /* View: lists, text fields, the content areas. */
-    --kcs-active-view-background-normal: #553524;
-    --kcs-active-view-background-alternate: #634331;
-    --kcs-active-view-foreground-text: #f8e6dd;
-    --kcs-active-view-decoration-frame: #a58575;
-    --kcs-disabled-view-background-normal: #553524;
-    --kcs-disabled-view-foreground-text: #a58575;
-    --kcs-disabled-view-decoration-frame: #73513f; /* a disabled control's outline */
-    --kcs-active-view-foreground-positive: #bbe5b3;
-    --kcs-active-view-foreground-neutral: #f0d6a0;
-    --kcs-active-view-foreground-negative: #fd8c85;
-    --kcs-active-view-background-positive: #4e3625;
-    --kcs-active-view-background-neutral: #513524;
-    --kcs-active-view-background-negative: #523122;
+    --cloudberry-fen-kcs-active-view-background-normal: #553524;
+    --cloudberry-fen-kcs-active-view-background-alternate: #634331;
+    --cloudberry-fen-kcs-active-view-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-active-view-decoration-frame: #a58575;
+    --cloudberry-fen-kcs-disabled-view-background-normal: #553524;
+    --cloudberry-fen-kcs-disabled-view-foreground-text: #a58575;
+    --cloudberry-fen-kcs-disabled-view-decoration-frame: #73513f; /* a disabled control's outline */
+    --cloudberry-fen-kcs-active-view-foreground-positive: #bbe5b3;
+    --cloudberry-fen-kcs-active-view-foreground-neutral: #f0d6a0;
+    --cloudberry-fen-kcs-active-view-foreground-negative: #fd8c85;
+    --cloudberry-fen-kcs-active-view-background-positive: #4e3625;
+    --cloudberry-fen-kcs-active-view-background-neutral: #513524;
+    --cloudberry-fen-kcs-active-view-background-negative: #523122;
 
     /* Header: title bars, the strip above a page. */
-    --kcs-active-header-background-normal: #472b1c;
-    --kcs-active-header-foreground-text: #f8e6dd;
-    --kcs-active-header-decoration-frame: #825f4d; /* hairlines between panels */
-    --kcs-inactive-header-background-normal: #3d2315;
-    --kcs-inactive-header-foreground-text: #cfbbb1;
-    --kcs-inactive-header-decoration-frame: #825f4d; /* hairlines between panels */
-    --kcs-disabled-header-background-normal: #472b1c;
-    --kcs-disabled-header-foreground-text: #a58575;
-    --kcs-disabled-header-decoration-frame: #73513f; /* a disabled control's outline */
+    --cloudberry-fen-kcs-active-header-background-normal: #472b1c;
+    --cloudberry-fen-kcs-active-header-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-active-header-decoration-frame: #825f4d; /* hairlines between panels */
+    --cloudberry-fen-kcs-inactive-header-background-normal: #3d2315;
+    --cloudberry-fen-kcs-inactive-header-foreground-text: #cfbbb1;
+    --cloudberry-fen-kcs-inactive-header-decoration-frame: #825f4d; /* hairlines between panels */
+    --cloudberry-fen-kcs-disabled-header-background-normal: #472b1c;
+    --cloudberry-fen-kcs-disabled-header-foreground-text: #a58575;
+    --cloudberry-fen-kcs-disabled-header-decoration-frame: #73513f; /* a disabled control's outline */
 
     /* Button: push buttons, combo boxes, check and switch indicators. */
-    --kcs-active-button-background-normal: #634331; /* a button's face, as in the KDE scheme */
-    --kcs-active-button-foreground-text: #f8e6dd;
-    --kcs-active-button-decoration-frame: #a58575;
-    --kcs-active-button-decoration-focus: #c69895;
-    --kcs-inactive-button-background-normal: #634331; /* a button's face, as in the KDE scheme */
-    --kcs-inactive-button-foreground-text: #f8e6dd;
-    --kcs-inactive-button-decoration-frame: #a58575;
-    --kcs-disabled-button-background-normal: #634331; /* a button's face, as in the KDE scheme */
-    --kcs-disabled-button-foreground-text: #a58575;
-    --kcs-disabled-button-decoration-frame: #73513f; /* a disabled control's outline */
+    --cloudberry-fen-kcs-active-button-background-normal: #634331; /* a button's face, as in the KDE scheme */
+    --cloudberry-fen-kcs-active-button-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-active-button-decoration-frame: #a58575;
+    --cloudberry-fen-kcs-active-button-decoration-focus: #c69895;
+    --cloudberry-fen-kcs-inactive-button-background-normal: #634331; /* a button's face, as in the KDE scheme */
+    --cloudberry-fen-kcs-inactive-button-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-inactive-button-decoration-frame: #a58575;
+    --cloudberry-fen-kcs-disabled-button-background-normal: #634331; /* a button's face, as in the KDE scheme */
+    --cloudberry-fen-kcs-disabled-button-foreground-text: #a58575;
+    --cloudberry-fen-kcs-disabled-button-decoration-frame: #73513f; /* a disabled control's outline */
 
     /* Complementary: the dark strip some apps put beside light content. */
-    --kcs-active-complementary-background-normal: #3d2315;
-    --kcs-active-complementary-foreground-text: #f8e6dd;
-    --kcs-disabled-complementary-foreground-text: #a58575;
+    --cloudberry-fen-kcs-active-complementary-background-normal: #3d2315;
+    --cloudberry-fen-kcs-active-complementary-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-disabled-complementary-foreground-text: #a58575;
 
     /* Selection: Breeze's highlight. Selected rows, pressed buttons, checked boxes. */
-    --kcs-active-selection-background-normal: #dc67a7;
-    --kcs-active-selection-foreground-text: #3d2315;
+    --cloudberry-fen-kcs-active-selection-background-normal: #dc67a7;
+    --cloudberry-fen-kcs-active-selection-foreground-text: #3d2315;
 
     /* Tooltip. */
-    --kcs-active-tooltip-background-normal: #472b1c;
-    --kcs-active-tooltip-foreground-text: #f8e6dd;
-    --kcs-active-tooltip-decoration-frame: #825f4d; /* the tooltip's hairline */
+    --cloudberry-fen-kcs-active-tooltip-background-normal: #472b1c;
+    --cloudberry-fen-kcs-active-tooltip-foreground-text: #f8e6dd;
+    --cloudberry-fen-kcs-active-tooltip-decoration-frame: #825f4d; /* the tooltip's hairline */
 
     /* Darkberry's own, used through the rewrites in build.mjs (UNION_REWRITES). */
-    --tab-indicator-color: #f9a374;
-    --focus-ring-color: #c69895;
+    --cloudberry-fen-tab-indicator-color: #f9a374;
+    --cloudberry-fen-focus-ring-color: #c69895;
 }

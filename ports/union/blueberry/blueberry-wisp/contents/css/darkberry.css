@@ -24,6 +24,10 @@
  * shades Breeze mixes from them (hover, pressed, checked, tracks) are its own
  * arithmetic, kept as written. Shapes, spacing and sizes are Breeze's.
  *
+ * Every variable carries the style's id as a prefix, so --kcs-* reads --blueberry-wisp-kcs-*
+ * in the installed files. Union 6.8 shares variables across every style an app loads,
+ * so without the prefix its Application Style page shows each preview in one flavour.
+ *
  * Deliberately left as Breeze has it:
  *   shadows: black at 10 to 30%, lighting rather than colour.
  *   the menu-item hover fill: Breeze paints it with its focus colour at 30%.
@@ -40,71 +44,71 @@
 
 :root {
     /* Window: dialogs, toolbars, the chrome around content. */
-    --kcs-active-window-background-normal: #e3eafb;
-    --kcs-active-window-background-alternate: #c9d2e5; /* alternating rows in chrome lists */
-    --kcs-active-window-foreground-text: #2f3b58;
-    --kcs-active-window-decoration-frame: #aab3c7; /* hairlines between panels */
-    --kcs-active-window-decoration-focus: #90627a;
-    --kcs-inactive-window-background-normal: #e3eafb;
-    --kcs-inactive-window-foreground-text: #2f3b58;
-    --kcs-inactive-window-decoration-frame: #aab3c7; /* hairlines between panels */
-    --kcs-disabled-window-background-normal: #e3eafb;
-    --kcs-disabled-window-foreground-text: #7a859f;
-    --kcs-disabled-window-decoration-frame: #b9c1d5; /* a disabled control's outline */
+    --blueberry-wisp-kcs-active-window-background-normal: #e3eafb;
+    --blueberry-wisp-kcs-active-window-background-alternate: #c9d2e5; /* alternating rows in chrome lists */
+    --blueberry-wisp-kcs-active-window-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-active-window-decoration-frame: #aab3c7; /* hairlines between panels */
+    --blueberry-wisp-kcs-active-window-decoration-focus: #90627a;
+    --blueberry-wisp-kcs-inactive-window-background-normal: #e3eafb;
+    --blueberry-wisp-kcs-inactive-window-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-inactive-window-decoration-frame: #aab3c7; /* hairlines between panels */
+    --blueberry-wisp-kcs-disabled-window-background-normal: #e3eafb;
+    --blueberry-wisp-kcs-disabled-window-foreground-text: #7a859f;
+    --blueberry-wisp-kcs-disabled-window-decoration-frame: #b9c1d5; /* a disabled control's outline */
 
     /* View: lists, text fields, the content areas. */
-    --kcs-active-view-background-normal: #f2f6ff;
-    --kcs-active-view-background-alternate: #e3eafb;
-    --kcs-active-view-foreground-text: #2f3b58;
-    --kcs-active-view-decoration-frame: #7a859f;
-    --kcs-disabled-view-background-normal: #f2f6ff;
-    --kcs-disabled-view-foreground-text: #7a859f;
-    --kcs-disabled-view-decoration-frame: #b9c1d5; /* a disabled control's outline */
-    --kcs-active-view-foreground-positive: #2c6f2d;
-    --kcs-active-view-foreground-neutral: #815b02;
-    --kcs-active-view-foreground-negative: #bb262a;
-    --kcs-active-view-background-positive: #e6eef2;
-    --kcs-active-view-background-neutral: #ebedf0;
-    --kcs-active-view-background-negative: #efeaf2;
+    --blueberry-wisp-kcs-active-view-background-normal: #f2f6ff;
+    --blueberry-wisp-kcs-active-view-background-alternate: #e3eafb;
+    --blueberry-wisp-kcs-active-view-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-active-view-decoration-frame: #7a859f;
+    --blueberry-wisp-kcs-disabled-view-background-normal: #f2f6ff;
+    --blueberry-wisp-kcs-disabled-view-foreground-text: #7a859f;
+    --blueberry-wisp-kcs-disabled-view-decoration-frame: #b9c1d5; /* a disabled control's outline */
+    --blueberry-wisp-kcs-active-view-foreground-positive: #2c6f2d;
+    --blueberry-wisp-kcs-active-view-foreground-neutral: #815b02;
+    --blueberry-wisp-kcs-active-view-foreground-negative: #bb262a;
+    --blueberry-wisp-kcs-active-view-background-positive: #e6eef2;
+    --blueberry-wisp-kcs-active-view-background-neutral: #ebedf0;
+    --blueberry-wisp-kcs-active-view-background-negative: #efeaf2;
 
     /* Header: title bars, the strip above a page. */
-    --kcs-active-header-background-normal: #e3eafb;
-    --kcs-active-header-foreground-text: #2f3b58;
-    --kcs-active-header-decoration-frame: #aab3c7; /* hairlines between panels */
-    --kcs-inactive-header-background-normal: #d8e0f2;
-    --kcs-inactive-header-foreground-text: #4a5774;
-    --kcs-inactive-header-decoration-frame: #aab3c7; /* hairlines between panels */
-    --kcs-disabled-header-background-normal: #e3eafb;
-    --kcs-disabled-header-foreground-text: #7a859f;
-    --kcs-disabled-header-decoration-frame: #b9c1d5; /* a disabled control's outline */
+    --blueberry-wisp-kcs-active-header-background-normal: #e3eafb;
+    --blueberry-wisp-kcs-active-header-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-active-header-decoration-frame: #aab3c7; /* hairlines between panels */
+    --blueberry-wisp-kcs-inactive-header-background-normal: #d8e0f2;
+    --blueberry-wisp-kcs-inactive-header-foreground-text: #4a5774;
+    --blueberry-wisp-kcs-inactive-header-decoration-frame: #aab3c7; /* hairlines between panels */
+    --blueberry-wisp-kcs-disabled-header-background-normal: #e3eafb;
+    --blueberry-wisp-kcs-disabled-header-foreground-text: #7a859f;
+    --blueberry-wisp-kcs-disabled-header-decoration-frame: #b9c1d5; /* a disabled control's outline */
 
     /* Button: push buttons, combo boxes, check and switch indicators. */
-    --kcs-active-button-background-normal: #c9d2e5; /* a button's face, as in the KDE scheme */
-    --kcs-active-button-foreground-text: #2f3b58;
-    --kcs-active-button-decoration-frame: #7a859f;
-    --kcs-active-button-decoration-focus: #90627a;
-    --kcs-inactive-button-background-normal: #c9d2e5; /* a button's face, as in the KDE scheme */
-    --kcs-inactive-button-foreground-text: #2f3b58;
-    --kcs-inactive-button-decoration-frame: #7a859f;
-    --kcs-disabled-button-background-normal: #c9d2e5; /* a button's face, as in the KDE scheme */
-    --kcs-disabled-button-foreground-text: #7a859f;
-    --kcs-disabled-button-decoration-frame: #b9c1d5; /* a disabled control's outline */
+    --blueberry-wisp-kcs-active-button-background-normal: #c9d2e5; /* a button's face, as in the KDE scheme */
+    --blueberry-wisp-kcs-active-button-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-active-button-decoration-frame: #7a859f;
+    --blueberry-wisp-kcs-active-button-decoration-focus: #90627a;
+    --blueberry-wisp-kcs-inactive-button-background-normal: #c9d2e5; /* a button's face, as in the KDE scheme */
+    --blueberry-wisp-kcs-inactive-button-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-inactive-button-decoration-frame: #7a859f;
+    --blueberry-wisp-kcs-disabled-button-background-normal: #c9d2e5; /* a button's face, as in the KDE scheme */
+    --blueberry-wisp-kcs-disabled-button-foreground-text: #7a859f;
+    --blueberry-wisp-kcs-disabled-button-decoration-frame: #b9c1d5; /* a disabled control's outline */
 
     /* Complementary: the dark strip some apps put beside light content. */
-    --kcs-active-complementary-background-normal: #d8e0f2;
-    --kcs-active-complementary-foreground-text: #2f3b58;
-    --kcs-disabled-complementary-foreground-text: #7a859f;
+    --blueberry-wisp-kcs-active-complementary-background-normal: #d8e0f2;
+    --blueberry-wisp-kcs-active-complementary-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-disabled-complementary-foreground-text: #7a859f;
 
     /* Selection: Breeze's highlight. Selected rows, pressed buttons, checked boxes. */
-    --kcs-active-selection-background-normal: #b9488b;
-    --kcs-active-selection-foreground-text: #ffffff;
+    --blueberry-wisp-kcs-active-selection-background-normal: #b9488b;
+    --blueberry-wisp-kcs-active-selection-foreground-text: #ffffff;
 
     /* Tooltip. */
-    --kcs-active-tooltip-background-normal: #e3eafb;
-    --kcs-active-tooltip-foreground-text: #2f3b58;
-    --kcs-active-tooltip-decoration-frame: #aab3c7; /* the tooltip's hairline */
+    --blueberry-wisp-kcs-active-tooltip-background-normal: #e3eafb;
+    --blueberry-wisp-kcs-active-tooltip-foreground-text: #2f3b58;
+    --blueberry-wisp-kcs-active-tooltip-decoration-frame: #aab3c7; /* the tooltip's hairline */
 
     /* Darkberry's own, used through the rewrites in build.mjs (UNION_REWRITES). */
-    --tab-indicator-color: #335adf;
-    --focus-ring-color: #90627a;
+    --blueberry-wisp-tab-indicator-color: #335adf;
+    --blueberry-wisp-focus-ring-color: #90627a;
 }

@@ -9,102 +9,102 @@
 
 :root {
     /* Standard Sizes */
-    --minimal-spacing: 2px;
-    --small-spacing: 4px;
-    --medium-spacing: 6px;
-    --large-spacing: 8px;
-    --grid-unit: 18px;
-    --corner-radius: 5px;
+    --darkberry-wisp-minimal-spacing: 2px;
+    --darkberry-wisp-small-spacing: 4px;
+    --darkberry-wisp-medium-spacing: 6px;
+    --darkberry-wisp-large-spacing: 8px;
+    --darkberry-wisp-grid-unit: 18px;
+    --darkberry-wisp-corner-radius: 5px;
 
     /* Icon sizes */
-    --icon-size-small: 16px;
-    --icon-size-smallmedium: 22px;
-    --icon-size-medium: 32px;
-    --icon-size-large: 48px;
+    --darkberry-wisp-icon-size-small: 16px;
+    --darkberry-wisp-icon-size-smallmedium: 22px;
+    --darkberry-wisp-icon-size-medium: 32px;
+    --darkberry-wisp-icon-size-large: 48px;
 
     /* Default item sizes */
-    --small-element-size: 16px;
-    --medium-element-size: 24px;
-    --large-element-size: 32px;
-    --scrollbar-size: 20px;
-    --non-interactive-scrollbar-size: 10px;
-    --menu-item-width: 150px;
-    --text-field-width: 200px;
+    --darkberry-wisp-small-element-size: 16px;
+    --darkberry-wisp-medium-element-size: 24px;
+    --darkberry-wisp-large-element-size: 32px;
+    --darkberry-wisp-scrollbar-size: 20px;
+    --darkberry-wisp-non-interactive-scrollbar-size: 10px;
+    --darkberry-wisp-menu-item-width: 150px;
+    --darkberry-wisp-text-field-width: 200px;
 
     /* Colors */
-    --highlight-color: var(--kcs-active-selection-background-normal);
-    --highlight-text-color: var(--kcs-active-selection-foreground-text);
-    --highlight-hover-color: modify-color(var(--highlight-color) set-alpha 0.3);
+    --darkberry-wisp-highlight-color: var(--darkberry-wisp-kcs-active-selection-background-normal);
+    --darkberry-wisp-highlight-text-color: var(--darkberry-wisp-kcs-active-selection-foreground-text);
+    --darkberry-wisp-highlight-hover-color: modify-color(var(--darkberry-wisp-highlight-color) set-alpha 0.3);
 
-    --window-text-color: var(--kcs-active-window-foreground-text);
-    --window-background-color: var(--kcs-active-window-background-normal);
-    --window-background-alternate-color: var(--kcs-active-window-background-alternate);
-    --window-border-color: var(--kcs-active-window-decoration-frame);
-    --window-highlight-color: mix(var(--window-background-color), var(--highlight-color), 0.5);
-    --window-border-highlight-color: var(--highlight-color);
+    --darkberry-wisp-window-text-color: var(--darkberry-wisp-kcs-active-window-foreground-text);
+    --darkberry-wisp-window-background-color: var(--darkberry-wisp-kcs-active-window-background-normal);
+    --darkberry-wisp-window-background-alternate-color: var(--darkberry-wisp-kcs-active-window-background-alternate);
+    --darkberry-wisp-window-border-color: var(--darkberry-wisp-kcs-active-window-decoration-frame);
+    --darkberry-wisp-window-highlight-color: mix(var(--darkberry-wisp-window-background-color), var(--darkberry-wisp-highlight-color), 0.5);
+    --darkberry-wisp-window-border-highlight-color: var(--darkberry-wisp-highlight-color);
 
-    --view-text-color: var(--kcs-active-view-foreground-text);
-    --view-background-color: var(--kcs-active-view-background-normal);
-    --view-background-alternate-color: var(--kcs-active-view-background-alternate);
-    --view-border-color: var(--kcs-active-view-decoration-frame);
-    --view-highlight-color: mix(var(--view-background-color), var(--highlight-color), 0.5);
+    --darkberry-wisp-view-text-color: var(--darkberry-wisp-kcs-active-view-foreground-text);
+    --darkberry-wisp-view-background-color: var(--darkberry-wisp-kcs-active-view-background-normal);
+    --darkberry-wisp-view-background-alternate-color: var(--darkberry-wisp-kcs-active-view-background-alternate);
+    --darkberry-wisp-view-border-color: var(--darkberry-wisp-kcs-active-view-decoration-frame);
+    --darkberry-wisp-view-highlight-color: mix(var(--darkberry-wisp-view-background-color), var(--darkberry-wisp-highlight-color), 0.5);
 
-    --header-text-color: var(--kcs-active-header-foreground-text);
-    --header-background-color: var(--kcs-active-header-background-normal);
-    --header-background-inactive-color: var(--kcs-inactive-header-background-normal);
-    --header-border-color: var(--kcs-active-header-decoration-frame);
+    --darkberry-wisp-header-text-color: var(--darkberry-wisp-kcs-active-header-foreground-text);
+    --darkberry-wisp-header-background-color: var(--darkberry-wisp-kcs-active-header-background-normal);
+    --darkberry-wisp-header-background-inactive-color: var(--darkberry-wisp-kcs-inactive-header-background-normal);
+    --darkberry-wisp-header-border-color: var(--darkberry-wisp-kcs-active-header-decoration-frame);
 
-    --complementary-text-color: var(--kcs-active-complementary-foreground-text);
-    --complementary-background-color: var(--kcs-active-complementary-background-normal);
+    --darkberry-wisp-complementary-text-color: var(--darkberry-wisp-kcs-active-complementary-foreground-text);
+    --darkberry-wisp-complementary-background-color: var(--darkberry-wisp-kcs-active-complementary-background-normal);
 
-    --positive-text: var(--kcs-active-view-foreground-positive);
-    --neutral-text: var(--kcs-active-view-foreground-neutral);
-    --negative-text: var(--kcs-active-view-foreground-negative);
-    --positive-background: var(--kcs-active-view-background-positive);
-    --neutral-background: var(--kcs-active-view-background-neutral);
-    --negative-background: var(--kcs-active-view-background-negative);
+    --darkberry-wisp-positive-text: var(--darkberry-wisp-kcs-active-view-foreground-positive);
+    --darkberry-wisp-neutral-text: var(--darkberry-wisp-kcs-active-view-foreground-neutral);
+    --darkberry-wisp-negative-text: var(--darkberry-wisp-kcs-active-view-foreground-negative);
+    --darkberry-wisp-positive-background: var(--darkberry-wisp-kcs-active-view-background-positive);
+    --darkberry-wisp-neutral-background: var(--darkberry-wisp-kcs-active-view-background-neutral);
+    --darkberry-wisp-negative-background: var(--darkberry-wisp-kcs-active-view-background-negative);
 
-    --changed-foreground: var(--neutral-text);
-    --changed-background: var(--neutral-background);
+    --darkberry-wisp-changed-foreground: var(--darkberry-wisp-neutral-text);
+    --darkberry-wisp-changed-background: var(--darkberry-wisp-neutral-background);
 
-    --card-background-color: var(--view-background-color);
-    --card-text-color: var(--view-text-color);
-    --card-border-color: var(--view-border-color);
-    --card-hover-color: mix(var(--card-background-color), var(--highlight-color), 0.1);
-    --card-pressed-color: mix(var(--card-background-color), var(--highlight-color), 0.3);
+    --darkberry-wisp-card-background-color: var(--darkberry-wisp-view-background-color);
+    --darkberry-wisp-card-text-color: var(--darkberry-wisp-view-text-color);
+    --darkberry-wisp-card-border-color: var(--darkberry-wisp-view-border-color);
+    --darkberry-wisp-card-hover-color: mix(var(--darkberry-wisp-card-background-color), var(--darkberry-wisp-highlight-color), 0.1);
+    --darkberry-wisp-card-pressed-color: mix(var(--darkberry-wisp-card-background-color), var(--darkberry-wisp-highlight-color), 0.3);
 
-    --focus-outline-alpha: 0.3;
-    --focus-color: modify-color(var(--kcs-active-window-decoration-focus) set-alpha var(--focus-outline-alpha));
+    --darkberry-wisp-focus-outline-alpha: 0.3;
+    --darkberry-wisp-focus-color: modify-color(var(--darkberry-wisp-kcs-active-window-decoration-focus) set-alpha var(--darkberry-wisp-focus-outline-alpha));
 
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --darkberry-wisp-shadow-color: rgba(0, 0, 0, 0.1);
 
     /* Disabled colors */
-    --window-disabled-text-color: var(--kcs-disabled-window-foreground-text);
-    --window-disabled-background-color: var(--kcs-disabled-window-background-normal);
-    --window-disabled-border-color: var(--kcs-disabled-window-decoration-frame);
+    --darkberry-wisp-window-disabled-text-color: var(--darkberry-wisp-kcs-disabled-window-foreground-text);
+    --darkberry-wisp-window-disabled-background-color: var(--darkberry-wisp-kcs-disabled-window-background-normal);
+    --darkberry-wisp-window-disabled-border-color: var(--darkberry-wisp-kcs-disabled-window-decoration-frame);
 
-    --view-disabled-text-color: var(--kcs-disabled-view-foreground-text);
-    --view-disabled-background-color: var(--kcs-disabled-view-background-normal);
-    --view-disabled-border-color: var(--kcs-disabled-view-decoration-frame);
+    --darkberry-wisp-view-disabled-text-color: var(--darkberry-wisp-kcs-disabled-view-foreground-text);
+    --darkberry-wisp-view-disabled-background-color: var(--darkberry-wisp-kcs-disabled-view-background-normal);
+    --darkberry-wisp-view-disabled-border-color: var(--darkberry-wisp-kcs-disabled-view-decoration-frame);
 
-    --header-disabled-text-color: var(--kcs-disabled-header-foreground-text);
-    --header-disabled-background-color: var(--kcs-disabled-header-background-normal);
-    --header-disabled-border-color: var(--kcs-disabled-header-decoration-frame);
+    --darkberry-wisp-header-disabled-text-color: var(--darkberry-wisp-kcs-disabled-header-foreground-text);
+    --darkberry-wisp-header-disabled-background-color: var(--darkberry-wisp-kcs-disabled-header-background-normal);
+    --darkberry-wisp-header-disabled-border-color: var(--darkberry-wisp-kcs-disabled-header-decoration-frame);
 
-    --complementary-disabled-text-color: var(--kcs-disabled-complementary-foreground-text);
+    --darkberry-wisp-complementary-disabled-text-color: var(--darkberry-wisp-kcs-disabled-complementary-foreground-text);
 
-    --highlight-disabled-color: mix(var(--window-disabled-background-color), var(--highlight-color), 0.2);
-    --highlight-disabled-text-color: mix(var(--window-disabled-text-color), var(--highlight-text-color), 0.2);
+    --darkberry-wisp-highlight-disabled-color: mix(var(--darkberry-wisp-window-disabled-background-color), var(--darkberry-wisp-highlight-color), 0.2);
+    --darkberry-wisp-highlight-disabled-text-color: mix(var(--darkberry-wisp-window-disabled-text-color), var(--darkberry-wisp-highlight-text-color), 0.2);
 
-    --card-disabled-background-color: var(--view-disabled-background-color);
-    --card-disabled-text-color: var(--view-disabled-text-color);
-    --card-disabled-border-color: var(--view-disabled-border-color);
+    --darkberry-wisp-card-disabled-background-color: var(--darkberry-wisp-view-disabled-background-color);
+    --darkberry-wisp-card-disabled-text-color: var(--darkberry-wisp-view-disabled-text-color);
+    --darkberry-wisp-card-disabled-border-color: var(--darkberry-wisp-view-disabled-border-color);
 
     /* Standard Elements */
-    --focus-outline: 2px solid var(--focus-ring-color);
-    --dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+    --darkberry-wisp-focus-outline: 2px solid var(--darkberry-wisp-focus-ring-color);
+    --darkberry-wisp-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
 
-    --indicator-color: modify-color(var(--window-text-color) set-alpha 0.4);
-    --indicator-press-color: modify-color(var(--window-text-color) set-alpha 0.7);
-    --indicator-current-color: modify-color(var(--window-text-color) set-alpha 0.95);
+    --darkberry-wisp-indicator-color: modify-color(var(--darkberry-wisp-window-text-color) set-alpha 0.4);
+    --darkberry-wisp-indicator-press-color: modify-color(var(--darkberry-wisp-window-text-color) set-alpha 0.7);
+    --darkberry-wisp-indicator-current-color: modify-color(var(--darkberry-wisp-window-text-color) set-alpha 0.95);
 }

@@ -9,102 +9,102 @@
 
 :root {
     /* Standard Sizes */
-    --minimal-spacing: 2px;
-    --small-spacing: 4px;
-    --medium-spacing: 6px;
-    --large-spacing: 8px;
-    --grid-unit: 18px;
-    --corner-radius: 5px;
+    --blueberry-wisp-minimal-spacing: 2px;
+    --blueberry-wisp-small-spacing: 4px;
+    --blueberry-wisp-medium-spacing: 6px;
+    --blueberry-wisp-large-spacing: 8px;
+    --blueberry-wisp-grid-unit: 18px;
+    --blueberry-wisp-corner-radius: 5px;
 
     /* Icon sizes */
-    --icon-size-small: 16px;
-    --icon-size-smallmedium: 22px;
-    --icon-size-medium: 32px;
-    --icon-size-large: 48px;
+    --blueberry-wisp-icon-size-small: 16px;
+    --blueberry-wisp-icon-size-smallmedium: 22px;
+    --blueberry-wisp-icon-size-medium: 32px;
+    --blueberry-wisp-icon-size-large: 48px;
 
     /* Default item sizes */
-    --small-element-size: 16px;
-    --medium-element-size: 24px;
-    --large-element-size: 32px;
-    --scrollbar-size: 20px;
-    --non-interactive-scrollbar-size: 10px;
-    --menu-item-width: 150px;
-    --text-field-width: 200px;
+    --blueberry-wisp-small-element-size: 16px;
+    --blueberry-wisp-medium-element-size: 24px;
+    --blueberry-wisp-large-element-size: 32px;
+    --blueberry-wisp-scrollbar-size: 20px;
+    --blueberry-wisp-non-interactive-scrollbar-size: 10px;
+    --blueberry-wisp-menu-item-width: 150px;
+    --blueberry-wisp-text-field-width: 200px;
 
     /* Colors */
-    --highlight-color: var(--kcs-active-selection-background-normal);
-    --highlight-text-color: var(--kcs-active-selection-foreground-text);
-    --highlight-hover-color: modify-color(var(--highlight-color) set-alpha 0.3);
+    --blueberry-wisp-highlight-color: var(--blueberry-wisp-kcs-active-selection-background-normal);
+    --blueberry-wisp-highlight-text-color: var(--blueberry-wisp-kcs-active-selection-foreground-text);
+    --blueberry-wisp-highlight-hover-color: modify-color(var(--blueberry-wisp-highlight-color) set-alpha 0.3);
 
-    --window-text-color: var(--kcs-active-window-foreground-text);
-    --window-background-color: var(--kcs-active-window-background-normal);
-    --window-background-alternate-color: var(--kcs-active-window-background-alternate);
-    --window-border-color: var(--kcs-active-window-decoration-frame);
-    --window-highlight-color: mix(var(--window-background-color), var(--highlight-color), 0.5);
-    --window-border-highlight-color: var(--highlight-color);
+    --blueberry-wisp-window-text-color: var(--blueberry-wisp-kcs-active-window-foreground-text);
+    --blueberry-wisp-window-background-color: var(--blueberry-wisp-kcs-active-window-background-normal);
+    --blueberry-wisp-window-background-alternate-color: var(--blueberry-wisp-kcs-active-window-background-alternate);
+    --blueberry-wisp-window-border-color: var(--blueberry-wisp-kcs-active-window-decoration-frame);
+    --blueberry-wisp-window-highlight-color: mix(var(--blueberry-wisp-window-background-color), var(--blueberry-wisp-highlight-color), 0.5);
+    --blueberry-wisp-window-border-highlight-color: var(--blueberry-wisp-highlight-color);
 
-    --view-text-color: var(--kcs-active-view-foreground-text);
-    --view-background-color: var(--kcs-active-view-background-normal);
-    --view-background-alternate-color: var(--kcs-active-view-background-alternate);
-    --view-border-color: var(--kcs-active-view-decoration-frame);
-    --view-highlight-color: mix(var(--view-background-color), var(--highlight-color), 0.5);
+    --blueberry-wisp-view-text-color: var(--blueberry-wisp-kcs-active-view-foreground-text);
+    --blueberry-wisp-view-background-color: var(--blueberry-wisp-kcs-active-view-background-normal);
+    --blueberry-wisp-view-background-alternate-color: var(--blueberry-wisp-kcs-active-view-background-alternate);
+    --blueberry-wisp-view-border-color: var(--blueberry-wisp-kcs-active-view-decoration-frame);
+    --blueberry-wisp-view-highlight-color: mix(var(--blueberry-wisp-view-background-color), var(--blueberry-wisp-highlight-color), 0.5);
 
-    --header-text-color: var(--kcs-active-header-foreground-text);
-    --header-background-color: var(--kcs-active-header-background-normal);
-    --header-background-inactive-color: var(--kcs-inactive-header-background-normal);
-    --header-border-color: var(--kcs-active-header-decoration-frame);
+    --blueberry-wisp-header-text-color: var(--blueberry-wisp-kcs-active-header-foreground-text);
+    --blueberry-wisp-header-background-color: var(--blueberry-wisp-kcs-active-header-background-normal);
+    --blueberry-wisp-header-background-inactive-color: var(--blueberry-wisp-kcs-inactive-header-background-normal);
+    --blueberry-wisp-header-border-color: var(--blueberry-wisp-kcs-active-header-decoration-frame);
 
-    --complementary-text-color: var(--kcs-active-complementary-foreground-text);
-    --complementary-background-color: var(--kcs-active-complementary-background-normal);
+    --blueberry-wisp-complementary-text-color: var(--blueberry-wisp-kcs-active-complementary-foreground-text);
+    --blueberry-wisp-complementary-background-color: var(--blueberry-wisp-kcs-active-complementary-background-normal);
 
-    --positive-text: var(--kcs-active-view-foreground-positive);
-    --neutral-text: var(--kcs-active-view-foreground-neutral);
-    --negative-text: var(--kcs-active-view-foreground-negative);
-    --positive-background: var(--kcs-active-view-background-positive);
-    --neutral-background: var(--kcs-active-view-background-neutral);
-    --negative-background: var(--kcs-active-view-background-negative);
+    --blueberry-wisp-positive-text: var(--blueberry-wisp-kcs-active-view-foreground-positive);
+    --blueberry-wisp-neutral-text: var(--blueberry-wisp-kcs-active-view-foreground-neutral);
+    --blueberry-wisp-negative-text: var(--blueberry-wisp-kcs-active-view-foreground-negative);
+    --blueberry-wisp-positive-background: var(--blueberry-wisp-kcs-active-view-background-positive);
+    --blueberry-wisp-neutral-background: var(--blueberry-wisp-kcs-active-view-background-neutral);
+    --blueberry-wisp-negative-background: var(--blueberry-wisp-kcs-active-view-background-negative);
 
-    --changed-foreground: var(--neutral-text);
-    --changed-background: var(--neutral-background);
+    --blueberry-wisp-changed-foreground: var(--blueberry-wisp-neutral-text);
+    --blueberry-wisp-changed-background: var(--blueberry-wisp-neutral-background);
 
-    --card-background-color: var(--view-background-color);
-    --card-text-color: var(--view-text-color);
-    --card-border-color: var(--view-border-color);
-    --card-hover-color: mix(var(--card-background-color), var(--highlight-color), 0.1);
-    --card-pressed-color: mix(var(--card-background-color), var(--highlight-color), 0.3);
+    --blueberry-wisp-card-background-color: var(--blueberry-wisp-view-background-color);
+    --blueberry-wisp-card-text-color: var(--blueberry-wisp-view-text-color);
+    --blueberry-wisp-card-border-color: var(--blueberry-wisp-view-border-color);
+    --blueberry-wisp-card-hover-color: mix(var(--blueberry-wisp-card-background-color), var(--blueberry-wisp-highlight-color), 0.1);
+    --blueberry-wisp-card-pressed-color: mix(var(--blueberry-wisp-card-background-color), var(--blueberry-wisp-highlight-color), 0.3);
 
-    --focus-outline-alpha: 0.3;
-    --focus-color: modify-color(var(--kcs-active-window-decoration-focus) set-alpha var(--focus-outline-alpha));
+    --blueberry-wisp-focus-outline-alpha: 0.3;
+    --blueberry-wisp-focus-color: modify-color(var(--blueberry-wisp-kcs-active-window-decoration-focus) set-alpha var(--blueberry-wisp-focus-outline-alpha));
 
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --blueberry-wisp-shadow-color: rgba(0, 0, 0, 0.1);
 
     /* Disabled colors */
-    --window-disabled-text-color: var(--kcs-disabled-window-foreground-text);
-    --window-disabled-background-color: var(--kcs-disabled-window-background-normal);
-    --window-disabled-border-color: var(--kcs-disabled-window-decoration-frame);
+    --blueberry-wisp-window-disabled-text-color: var(--blueberry-wisp-kcs-disabled-window-foreground-text);
+    --blueberry-wisp-window-disabled-background-color: var(--blueberry-wisp-kcs-disabled-window-background-normal);
+    --blueberry-wisp-window-disabled-border-color: var(--blueberry-wisp-kcs-disabled-window-decoration-frame);
 
-    --view-disabled-text-color: var(--kcs-disabled-view-foreground-text);
-    --view-disabled-background-color: var(--kcs-disabled-view-background-normal);
-    --view-disabled-border-color: var(--kcs-disabled-view-decoration-frame);
+    --blueberry-wisp-view-disabled-text-color: var(--blueberry-wisp-kcs-disabled-view-foreground-text);
+    --blueberry-wisp-view-disabled-background-color: var(--blueberry-wisp-kcs-disabled-view-background-normal);
+    --blueberry-wisp-view-disabled-border-color: var(--blueberry-wisp-kcs-disabled-view-decoration-frame);
 
-    --header-disabled-text-color: var(--kcs-disabled-header-foreground-text);
-    --header-disabled-background-color: var(--kcs-disabled-header-background-normal);
-    --header-disabled-border-color: var(--kcs-disabled-header-decoration-frame);
+    --blueberry-wisp-header-disabled-text-color: var(--blueberry-wisp-kcs-disabled-header-foreground-text);
+    --blueberry-wisp-header-disabled-background-color: var(--blueberry-wisp-kcs-disabled-header-background-normal);
+    --blueberry-wisp-header-disabled-border-color: var(--blueberry-wisp-kcs-disabled-header-decoration-frame);
 
-    --complementary-disabled-text-color: var(--kcs-disabled-complementary-foreground-text);
+    --blueberry-wisp-complementary-disabled-text-color: var(--blueberry-wisp-kcs-disabled-complementary-foreground-text);
 
-    --highlight-disabled-color: mix(var(--window-disabled-background-color), var(--highlight-color), 0.2);
-    --highlight-disabled-text-color: mix(var(--window-disabled-text-color), var(--highlight-text-color), 0.2);
+    --blueberry-wisp-highlight-disabled-color: mix(var(--blueberry-wisp-window-disabled-background-color), var(--blueberry-wisp-highlight-color), 0.2);
+    --blueberry-wisp-highlight-disabled-text-color: mix(var(--blueberry-wisp-window-disabled-text-color), var(--blueberry-wisp-highlight-text-color), 0.2);
 
-    --card-disabled-background-color: var(--view-disabled-background-color);
-    --card-disabled-text-color: var(--view-disabled-text-color);
-    --card-disabled-border-color: var(--view-disabled-border-color);
+    --blueberry-wisp-card-disabled-background-color: var(--blueberry-wisp-view-disabled-background-color);
+    --blueberry-wisp-card-disabled-text-color: var(--blueberry-wisp-view-disabled-text-color);
+    --blueberry-wisp-card-disabled-border-color: var(--blueberry-wisp-view-disabled-border-color);
 
     /* Standard Elements */
-    --focus-outline: 2px solid var(--focus-ring-color);
-    --dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+    --blueberry-wisp-focus-outline: 2px solid var(--blueberry-wisp-focus-ring-color);
+    --blueberry-wisp-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
 
-    --indicator-color: modify-color(var(--window-text-color) set-alpha 0.4);
-    --indicator-press-color: modify-color(var(--window-text-color) set-alpha 0.7);
-    --indicator-current-color: modify-color(var(--window-text-color) set-alpha 0.95);
+    --blueberry-wisp-indicator-color: modify-color(var(--blueberry-wisp-window-text-color) set-alpha 0.4);
+    --blueberry-wisp-indicator-press-color: modify-color(var(--blueberry-wisp-window-text-color) set-alpha 0.7);
+    --blueberry-wisp-indicator-current-color: modify-color(var(--blueberry-wisp-window-text-color) set-alpha 0.95);
 }

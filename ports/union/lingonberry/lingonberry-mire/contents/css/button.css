@@ -8,44 +8,44 @@
  */
 
 :root {
-    --button-active-text-color: var(--kcs-active-button-foreground-text);
-    --button-active-background-color: var(--kcs-active-button-background-normal);
-    --button-active-border-color: var(--kcs-active-button-decoration-frame);
-    --button-active-highlight-color: mix(var(--button-active-background-color), var(--highlight-color), 0.333);
-    --button-active-border-highlight-color: var(--highlight-color);
-    --button-active-checked-color: mix(var(--button-active-background-color), var(--button-active-text-color), 0.125);
-    --button-active-focus-color: modify-color(var(--kcs-active-button-decoration-focus) set-alpha var(--focus-outline-alpha));
+    --lingonberry-mire-button-active-text-color: var(--lingonberry-mire-kcs-active-button-foreground-text);
+    --lingonberry-mire-button-active-background-color: var(--lingonberry-mire-kcs-active-button-background-normal);
+    --lingonberry-mire-button-active-border-color: var(--lingonberry-mire-kcs-active-button-decoration-frame);
+    --lingonberry-mire-button-active-highlight-color: mix(var(--lingonberry-mire-button-active-background-color), var(--lingonberry-mire-highlight-color), 0.333);
+    --lingonberry-mire-button-active-border-highlight-color: var(--lingonberry-mire-highlight-color);
+    --lingonberry-mire-button-active-checked-color: mix(var(--lingonberry-mire-button-active-background-color), var(--lingonberry-mire-button-active-text-color), 0.125);
+    --lingonberry-mire-button-active-focus-color: modify-color(var(--lingonberry-mire-kcs-active-button-decoration-focus) set-alpha var(--lingonberry-mire-focus-outline-alpha));
 
-    --button-active-header-border-color: var(--kcs-active-header-decoration-frame);
-    --button-active-header-highlight-color: mix(var(--header-background-color), var(--highlight-color), 0.333);
-    --button-active-header-checked-color: mix(var(--header-background-color), var(--header-text-color), 0.125);
+    --lingonberry-mire-button-active-header-border-color: var(--lingonberry-mire-kcs-active-header-decoration-frame);
+    --lingonberry-mire-button-active-header-highlight-color: mix(var(--lingonberry-mire-header-background-color), var(--lingonberry-mire-highlight-color), 0.333);
+    --lingonberry-mire-button-active-header-checked-color: mix(var(--lingonberry-mire-header-background-color), var(--lingonberry-mire-header-text-color), 0.125);
 
-    --button-inactive-text-color: var(--kcs-inactive-button-foreground-text);
-    --button-inactive-background-color: var(--kcs-inactive-button-background-normal);
-    --button-inactive-border-color: var(--kcs-inactive-button-decoration-frame);
-    --button-inactive-highlight-color: mix(var(--button-inactive-background-color), var(--highlight-color), 0.5);
-    --button-inactive-checked-color: mix(var(--button-inactive-background-color), var(--button-inactive-text-color), 0.2);
+    --lingonberry-mire-button-inactive-text-color: var(--lingonberry-mire-kcs-inactive-button-foreground-text);
+    --lingonberry-mire-button-inactive-background-color: var(--lingonberry-mire-kcs-inactive-button-background-normal);
+    --lingonberry-mire-button-inactive-border-color: var(--lingonberry-mire-kcs-inactive-button-decoration-frame);
+    --lingonberry-mire-button-inactive-highlight-color: mix(var(--lingonberry-mire-button-inactive-background-color), var(--lingonberry-mire-highlight-color), 0.5);
+    --lingonberry-mire-button-inactive-checked-color: mix(var(--lingonberry-mire-button-inactive-background-color), var(--lingonberry-mire-button-inactive-text-color), 0.2);
 
-    --button-disabled-text-color: var(--kcs-disabled-button-foreground-text);
-    --button-disabled-background-color: var(--kcs-disabled-button-background-normal);
-    --button-disabled-border-color: var(--kcs-disabled-button-decoration-frame);
-    --button-disabled-highlight-color: mix(var(--button-disabled-background-color), var(--highlight-color), 0.333);
+    --lingonberry-mire-button-disabled-text-color: var(--lingonberry-mire-kcs-disabled-button-foreground-text);
+    --lingonberry-mire-button-disabled-background-color: var(--lingonberry-mire-kcs-disabled-button-background-normal);
+    --lingonberry-mire-button-disabled-border-color: var(--lingonberry-mire-kcs-disabled-button-decoration-frame);
+    --lingonberry-mire-button-disabled-highlight-color: mix(var(--lingonberry-mire-button-disabled-background-color), var(--lingonberry-mire-highlight-color), 0.333);
 
-    --button-border: 1px solid var(--button-active-border-color);
-    --button-border-highlight: 1px solid var(--button-active-border-highlight-color);
-    --button-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
-    --button-focus: 2px solid var(--focus-ring-color);
+    --lingonberry-mire-button-border: 1px solid var(--lingonberry-mire-button-active-border-color);
+    --lingonberry-mire-button-border-highlight: 1px solid var(--lingonberry-mire-button-active-border-highlight-color);
+    --lingonberry-mire-button-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    --lingonberry-mire-button-focus: 2px solid var(--lingonberry-mire-focus-ring-color);
 
     /* Values derived from Breeze QStyle metrics */
-    --button-default-size: 32px; /* 16 + 2 * 6 + 2 * 2  */
-    --button-padding: 8px; /* 6 + 2 */
-    --button-spacing: 4px;
-    --toolbutton-menu-padding: 2px;
+    --lingonberry-mire-button-default-size: 32px; /* 16 + 2 * 6 + 2 * 2  */
+    --lingonberry-mire-button-padding: 8px; /* 6 + 2 */
+    --lingonberry-mire-button-spacing: 4px;
+    --lingonberry-mire-toolbutton-menu-padding: 2px;
 
     /* Match Breeze QStyle color */
-    --combobox-popup-background-color: mix(var(--window-background-color), var(--view-background-color), 0.3);
-    --combobox-popup-highlight-color: mix(var(--combobox-popup-background-color), var(--highlight-color), 0.333);
-    --combobox-popup-text-color: var(--window-text-color);
+    --lingonberry-mire-combobox-popup-background-color: mix(var(--lingonberry-mire-window-background-color), var(--lingonberry-mire-view-background-color), 0.3);
+    --lingonberry-mire-combobox-popup-highlight-color: mix(var(--lingonberry-mire-combobox-popup-background-color), var(--lingonberry-mire-highlight-color), 0.333);
+    --lingonberry-mire-combobox-popup-text-color: var(--lingonberry-mire-window-text-color);
 }
 
 button,
@@ -55,55 +55,55 @@ roundbutton,
 delaybutton,
 toolbutton.raised
 {
-    width: var(--button-default-size);
-    height: var(--button-default-size);
-    spacing: var(--button-spacing);
-    padding: var(--button-padding);
-    border-radius: var(--corner-radius);
+    width: var(--lingonberry-mire-button-default-size);
+    height: var(--lingonberry-mire-button-default-size);
+    spacing: var(--lingonberry-mire-button-spacing);
+    padding: var(--lingonberry-mire-button-padding);
+    border-radius: var(--lingonberry-mire-corner-radius);
 
     layout-alignment: content fill fill 0;
     text-alignment-horizontal: center;
     icon-alignment-horizontal: center;
 
-    color: var(--button-active-text-color);
-    border: var(--button-border);
-    background-color: var(--button-active-background-color);
+    color: var(--lingonberry-mire-button-active-text-color);
+    border: var(--lingonberry-mire-button-border);
+    background-color: var(--lingonberry-mire-button-active-background-color);
 
     &:checked
     {
-        border: var(--button-border);
-        background-color: var(--button-active-checked-color);
+        border: var(--lingonberry-mire-button-border);
+        background-color: var(--lingonberry-mire-button-active-checked-color);
     }
 
     &:hovered
     {
-        border-color: var(--button-active-border-highlight-color);
+        border-color: var(--lingonberry-mire-button-active-border-highlight-color);
     }
 
     &:visual-focus
     {
-        border-color: var(--button-active-border-highlight-color);
-        outline: var(--button-focus);
+        border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+        outline: var(--lingonberry-mire-button-focus);
     }
 
     &:disabled
     {
-        color: var(--button-disabled-text-color);
-        background-color: var(--button-disabled-background-color);
-        border-color: var(--button-disabled-border-color);
+        color: var(--lingonberry-mire-button-disabled-text-color);
+        background-color: var(--lingonberry-mire-button-disabled-background-color);
+        border-color: var(--lingonberry-mire-button-disabled-border-color);
         box-shadow: none;
     }
 
     &.with-menu > indicator {
         visibility: visible;
         layout-alignment: content end center 0;
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        width: var(--lingonberry-mire-icon-size-small);
+        height: var(--lingonberry-mire-icon-size-small);
         /* half of small-spacing */
-        padding-left: var(--toolbutton-menu-padding);
-        padding-right: var(--toolbutton-menu-padding);
+        padding-left: var(--lingonberry-mire-toolbutton-menu-padding);
+        padding-right: var(--lingonberry-mire-toolbutton-menu-padding);
         icon-name: "arrow-down";
-        icon-color: var(--button-active-text-color);
+        icon-color: var(--lingonberry-mire-button-active-text-color);
     }
 
     &.with-inline-arrow > indicator {
@@ -113,28 +113,28 @@ toolbutton.raised
         height: 8px;
         padding: 1px;
         icon-name: "arrow-down";
-        icon-color: var(--button-active-text-color);
+        icon-color: var(--lingonberry-mire-button-active-text-color);
     }
 
     &.with-menu-button > indicator {
         visibility: visible;
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        width: var(--lingonberry-mire-icon-size-small);
+        height: var(--lingonberry-mire-icon-size-small);
         /* half of small-spacing */
-        padding-left: var(--toolbutton-menu-padding);
-        padding-right: var(--toolbutton-menu-padding);
+        padding-left: var(--lingonberry-mire-toolbutton-menu-padding);
+        padding-right: var(--lingonberry-mire-toolbutton-menu-padding);
         layout-alignment: content end fill 0;
         icon-name: "arrow-down";
-        icon-color: var(--button-active-text-color);
-        border-left:  var(--button-border);
+        icon-color: var(--lingonberry-mire-button-active-text-color);
+        border-left:  var(--lingonberry-mire-button-border);
     }
 
     &.menu-open {
-        border: var(--button-border-highlight);
+        border: var(--lingonberry-mire-button-border-highlight);
         & > indicator {
-            border: var(--button-border-highlight);
-            background-color: var(--button-active-highlight-color);
-            border-radius: var(--corner-radius);
+            border: var(--lingonberry-mire-button-border-highlight);
+            background-color: var(--lingonberry-mire-button-active-highlight-color);
+            border-radius: var(--lingonberry-mire-corner-radius);
             border-top-left-radius: 0px;
             border-bottom-left-radius: 0px;
         }
@@ -154,7 +154,7 @@ button,
 roundbutton,
 delaybutton
 {
-    box-shadow: var(--button-shadow);
+    box-shadow: var(--lingonberry-mire-button-shadow);
 }
 
 button:pressed,
@@ -164,8 +164,8 @@ roundbutton:pressed,
 delaybutton:pressed,
 toolbutton.raised:pressed
 {
-    border-color: var(--button-active-border-highlight-color);
-    background-color: var(--button-active-highlight-color);
+    border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+    background-color: var(--lingonberry-mire-button-active-highlight-color);
     box-shadow: none;
 }
 
@@ -185,29 +185,29 @@ roundbutton.flat
     box-shadow: none;
 
     &:hovered {
-        border: var(--button-border-highlight);
+        border: var(--lingonberry-mire-button-border-highlight);
     }
 
     &:visual-focus {
-        border: var(--button-border-highlight);
+        border: var(--lingonberry-mire-button-border-highlight);
     }
 
     &:pressed {
-        border: var(--button-border-highlight);
-        background-color: var(--button-active-highlight-color);
+        border: var(--lingonberry-mire-button-border-highlight);
+        background-color: var(--lingonberry-mire-button-active-highlight-color);
     }
 
     toolbar.header &:checked,
     applicationheader &:checked
     {
-        border-color: var(--button-active-header-border-color);
-        background-color: var(--button-active-header-checked-color);
+        border-color: var(--lingonberry-mire-button-active-header-border-color);
+        background-color: var(--lingonberry-mire-button-active-header-checked-color);
     }
 
     toolbar.header &:pressed,
     applicationheader &:pressed
     {
-        background-color: var(--button-active-header-highlight-color);
+        background-color: var(--lingonberry-mire-button-active-header-highlight-color);
     }
 
     &:disabled {
@@ -218,53 +218,53 @@ roundbutton.flat
     &.with-menu-button > indicator {
         border-left: none;
         &:hovered {
-            border-left: var(--button-border-highlight);
+            border-left: var(--lingonberry-mire-button-border-highlight);
         }
     }
 
     &.menu-open {
         & > indicator {
-            border-left: var(--button-border-highlight);
+            border-left: var(--lingonberry-mire-button-border-highlight);
         }
     }
 
     &[colorset="window"],
     [colorset="window"] &
     {
-        color: var(--window-text-color);
+        color: var(--lingonberry-mire-window-text-color);
 
         &:disabled {
-            color: var(--window-disabled-text-color);
+            color: var(--lingonberry-mire-window-disabled-text-color);
         }
     }
 
     &[colorset="view"],
     [colorset="view"] &
     {
-        color: var(--view-text-color);
+        color: var(--lingonberry-mire-view-text-color);
 
         &:disabled {
-            color: var(--view-disabled-text-color);
+            color: var(--lingonberry-mire-view-disabled-text-color);
         }
     }
 
     &[colorset="complementary"],
     [colorset="complementary"] &
     {
-        color: var(--complementary-text-color);
+        color: var(--lingonberry-mire-complementary-text-color);
 
         &:disabled {
-            color: var(--complementary-disabled-text-color);
+            color: var(--lingonberry-mire-complementary-disabled-text-color);
         }
     }
 
     &[colorset="header"],
     [colorset="header"] &
     {
-        color: var(--header-text-color);
+        color: var(--lingonberry-mire-header-text-color);
 
         &:disabled {
-            color: var(--header-disabled-text-color);
+            color: var(--lingonberry-mire-header-disabled-text-color);
         }
     }
 }
@@ -273,18 +273,18 @@ toolbutton
 {
     /* Ensure default toolbuttons end up with 32px height, not 34px. */
     icon-size: 24px;
-    padding: var(--medium-spacing) var(--small-spacing);
+    padding: var(--lingonberry-mire-medium-spacing) var(--lingonberry-mire-small-spacing);
 }
 
 toolbutton.raised
 {
-    icon-size: var(--icon-size-small);
-    padding: var(--button-padding);
+    icon-size: var(--lingonberry-mire-icon-size-small);
+    padding: var(--lingonberry-mire-button-padding);
 }
 
 roundbutton
 {
-    border-radius: var(--button-default-size);
+    border-radius: var(--lingonberry-mire-button-default-size);
 }
 
 combobox
@@ -292,47 +292,47 @@ combobox
     layout-alignment: content fill center 0;
     text-alignment: content fill center 0;
     icon-alignment: content start center 0;
-    box-shadow: var(--button-shadow);
+    box-shadow: var(--lingonberry-mire-button-shadow);
     text-wrap-mode: no-wrap;
     text-elide: right;
 
     & > indicator {
         layout-alignment: content end center 0;
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        width: var(--lingonberry-mire-icon-size-small);
+        height: var(--lingonberry-mire-icon-size-small);
         icon-name: "arrow-down-symbolic";
-        icon-color: var(--button-active-text-color);
+        icon-color: var(--lingonberry-mire-button-active-text-color);
         visibility: visible;
     }
 
     &.editable,
     &.flat.editable
     {
-        background-color: var(--view-background-color);
-        border: 1px solid var(--view-border-color);
+        background-color: var(--lingonberry-mire-view-background-color);
+        border: 1px solid var(--lingonberry-mire-view-border-color);
         box-shadow: none;
         text-elide: none;
 
         &:hovered {
-            border-color: var(--button-active-border-highlight-color);
+            border-color: var(--lingonberry-mire-button-active-border-highlight-color);
         }
 
         &:pressed {
-            border-color: var(--button-active-border-highlight-color);
+            border-color: var(--lingonberry-mire-button-active-border-highlight-color);
 
             & > indicator {
-                icon-color: var(--button-active-border-highlight-color);
+                icon-color: var(--lingonberry-mire-button-active-border-highlight-color);
             }
         }
 
         &:visual-focus {
-            border-color: var(--button-active-border-highlight-color);
+            border-color: var(--lingonberry-mire-button-active-border-highlight-color);
         }
 
         &:disabled {
-            background-color: var(--view-disabled-background-color);
-            color: var(--view-disabled-text-color);
-            border-color: var(--view-disabled-border-color);
+            background-color: var(--lingonberry-mire-view-disabled-background-color);
+            color: var(--lingonberry-mire-view-disabled-text-color);
+            border-color: var(--lingonberry-mire-view-disabled-border-color);
         }
     }
 }
@@ -340,58 +340,58 @@ combobox
 popup.combobox
 {
     padding: 0px;
-    background-color: var(--combobox-popup-background-color);
-    border-radius: var(--corner-radius);
+    background-color: var(--lingonberry-mire-combobox-popup-background-color);
+    border-radius: var(--lingonberry-mire-corner-radius);
 
     itemviewitem:highlight,
     itemdelegate:highlight {
-        background-color: var(--combobox-popup-highlight-color);
-        border-color: var(--highlight-color);
-        color: var(--combobox-popup-text-color);
+        background-color: var(--lingonberry-mire-combobox-popup-highlight-color);
+        border-color: var(--lingonberry-mire-highlight-color);
+        color: var(--lingonberry-mire-combobox-popup-text-color);
     }
 }
 
 toolseparator {
-    background-color: var(--button-active-border-color);
+    background-color: var(--lingonberry-mire-button-active-border-color);
 
     &.horizontal {
-        width: var(--large-element-size);
+        width: var(--lingonberry-mire-large-element-size);
         height: 1px;
-        inset: 0px var(--small-spacing);
+        inset: 0px var(--lingonberry-mire-small-spacing);
     }
 
     &.vertical {
         width: 1px;
-        height: var(--large-element-size);
-        inset: var(--small-spacing) 0px;
+        height: var(--lingonberry-mire-large-element-size);
+        inset: var(--lingonberry-mire-small-spacing) 0px;
     }
 
     toolbar.header &,
     applicationheader &
     {
-        background-color: var(--button-active-header-border-color);
+        background-color: var(--lingonberry-mire-button-active-header-border-color);
     }
 }
 
 delaybutton {
     & > fill {
-        border-radius: var(--corner-radius);
-        border: var(--button-border-highlight);
-        background-color: var(--highlight-color);
+        border-radius: var(--lingonberry-mire-corner-radius);
+        border: var(--lingonberry-mire-button-border-highlight);
+        background-color: var(--lingonberry-mire-highlight-color);
     }
 }
 
 tumbler {
     width: 60px;
     height: 200px;
-    background-color: var(--view-background-color);
+    background-color: var(--lingonberry-mire-view-background-color);
 
     text {
         text-alignment-horizontal: center;
-        color: mix(var(--view-background-color), var(--view-text-color), 0.75);
+        color: mix(var(--lingonberry-mire-view-background-color), var(--lingonberry-mire-view-text-color), 0.75);
 
         &:highlighted {
-            color: mix(var(--highlight-color), var(--view-text-color), 0.6);
+            color: mix(var(--lingonberry-mire-highlight-color), var(--lingonberry-mire-view-text-color), 0.6);
         }
     }
 }
@@ -401,8 +401,8 @@ toolbutton.changed,
 combobox.changed,
 roundbutton.changed,
 delaybutton.changed {
-    background-color: var(--changed-background);
-    border: 1px solid var(--changed-foreground);
+    background-color: var(--lingonberry-mire-changed-background);
+    border: 1px solid var(--lingonberry-mire-changed-foreground);
 }
 
 
@@ -410,6 +410,6 @@ tabscrollbutton {
     icon-alignment: content fill fill 0;
     layout-alignment: content center center 0;
     icon-size: 16px;
-    width: var(--button-default-size);
-    height: var(--button-default-size);
+    width: var(--lingonberry-mire-button-default-size);
+    height: var(--lingonberry-mire-button-default-size);
 }

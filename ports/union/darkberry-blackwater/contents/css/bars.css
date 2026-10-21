@@ -9,41 +9,41 @@
  */
 
 :root {
-    --bar-active-background-color: mix(var(--window-background-color), var(--window-text-color), 0.075);
-    --bar-active-border-color: var(--window-border-color);
-    --bar-track-active-background-color: mix(var(--window-background-color), var(--highlight-color), 0.333);
-    --bar-track-active-border-color: var(--highlight-color);
-    --bar-handle-active-background-color: var(--button-active-background-color);
-    --bar-handle-active-border-color: var(--button-active-border-color);
+    --darkberry-blackwater-bar-active-background-color: mix(var(--darkberry-blackwater-window-background-color), var(--darkberry-blackwater-window-text-color), 0.075);
+    --darkberry-blackwater-bar-active-border-color: var(--darkberry-blackwater-window-border-color);
+    --darkberry-blackwater-bar-track-active-background-color: mix(var(--darkberry-blackwater-window-background-color), var(--darkberry-blackwater-highlight-color), 0.333);
+    --darkberry-blackwater-bar-track-active-border-color: var(--darkberry-blackwater-highlight-color);
+    --darkberry-blackwater-bar-handle-active-background-color: var(--darkberry-blackwater-button-active-background-color);
+    --darkberry-blackwater-bar-handle-active-border-color: var(--darkberry-blackwater-button-active-border-color);
 
-    --bar-handle-active-highlight-color: var(--button-active-highlight-color);
-    --bar-handle-active-highlight-border-color: var(--button-active-border-highlight-color);
+    --darkberry-blackwater-bar-handle-active-highlight-color: var(--darkberry-blackwater-button-active-highlight-color);
+    --darkberry-blackwater-bar-handle-active-highlight-border-color: var(--darkberry-blackwater-button-active-border-highlight-color);
 
-    --bar-disabled-background-color: var(--window-disabled-background-color);
-    --bar-disabled-border-color: var(--window-disabled-border-color);
-    --bar-track-disabled-background-color: mix(var(--window-disabled-background-color), var(--window-background-color), 0.75);
-    --bar-track-disabled-border-color: var(--window-disabled-border-color);
-    --bar-handle-disabled-background-color: var(--button-disabled-background-color);
-    --bar-handle-disabled-border-color: var(--button-disabled-border-color);
+    --darkberry-blackwater-bar-disabled-background-color: var(--darkberry-blackwater-window-disabled-background-color);
+    --darkberry-blackwater-bar-disabled-border-color: var(--darkberry-blackwater-window-disabled-border-color);
+    --darkberry-blackwater-bar-track-disabled-background-color: mix(var(--darkberry-blackwater-window-disabled-background-color), var(--darkberry-blackwater-window-background-color), 0.75);
+    --darkberry-blackwater-bar-track-disabled-border-color: var(--darkberry-blackwater-window-disabled-border-color);
+    --darkberry-blackwater-bar-handle-disabled-background-color: var(--darkberry-blackwater-button-disabled-background-color);
+    --darkberry-blackwater-bar-handle-disabled-border-color: var(--darkberry-blackwater-button-disabled-border-color);
 
-    --bar-handle-size: 20px;
-    --bar-tickmark-thickness: 2px;
-    --bar-tickmark-length: 8px;
-    --bar-tickmark-margin: 1px;
+    --darkberry-blackwater-bar-handle-size: 20px;
+    --darkberry-blackwater-bar-tickmark-thickness: 2px;
+    --darkberry-blackwater-bar-tickmark-length: 8px;
+    --darkberry-blackwater-bar-tickmark-margin: 1px;
 
-    --dial-inactive-background-color: mix(var(--button-inactive-background-color), var(--window-background-color), 0.5);
-    --dial-inactive-border-color: var(--button-inactive-border-color);
-    --dial-active-background-color: mix(var(--button-active-background-color), var(--window-background-color), 0.5);
-    --dial-active-border-color: var(--button-active-border-color);
-    --dial-disabled-background-color: mix(var(--button-disabled-background-color), var(--window-background-color), 0.5);
-    --dial-disabled-border-color: var(--button-disabled-border-color);
+    --darkberry-blackwater-dial-inactive-background-color: mix(var(--darkberry-blackwater-button-inactive-background-color), var(--darkberry-blackwater-window-background-color), 0.5);
+    --darkberry-blackwater-dial-inactive-border-color: var(--darkberry-blackwater-button-inactive-border-color);
+    --darkberry-blackwater-dial-active-background-color: mix(var(--darkberry-blackwater-button-active-background-color), var(--darkberry-blackwater-window-background-color), 0.5);
+    --darkberry-blackwater-dial-active-border-color: var(--darkberry-blackwater-button-active-border-color);
+    --darkberry-blackwater-dial-disabled-background-color: mix(var(--darkberry-blackwater-button-disabled-background-color), var(--darkberry-blackwater-window-background-color), 0.5);
+    --darkberry-blackwater-dial-disabled-border-color: var(--darkberry-blackwater-button-disabled-border-color);
 
-    --dial-handle-inactive-background-color: var(--button-inactive-background-color);
-    --dial-handle-inactive-border-color: var(--button-inactive-border-color);
-    --dial-handle-active-background-color:  mix(var(--button-active-background-color), var(--highlight-color), 0.5);
-    --dial-handle-active-border-color: mix(var(--button-active-border-color), var(--highlight-color), 0.5);
-    --dial-handle-disabled-background-color: var(--button-disabled-background-color);
-    --dial-handle-disabled-border-color: var(--button-disabled-border-color);
+    --darkberry-blackwater-dial-handle-inactive-background-color: var(--darkberry-blackwater-button-inactive-background-color);
+    --darkberry-blackwater-dial-handle-inactive-border-color: var(--darkberry-blackwater-button-inactive-border-color);
+    --darkberry-blackwater-dial-handle-active-background-color:  mix(var(--darkberry-blackwater-button-active-background-color), var(--darkberry-blackwater-highlight-color), 0.5);
+    --darkberry-blackwater-dial-handle-active-border-color: mix(var(--darkberry-blackwater-button-active-border-color), var(--darkberry-blackwater-highlight-color), 0.5);
+    --darkberry-blackwater-dial-handle-disabled-background-color: var(--darkberry-blackwater-button-disabled-background-color);
+    --darkberry-blackwater-dial-handle-disabled-border-color: var(--darkberry-blackwater-button-disabled-border-color);
 }
 
 busyindicator
@@ -55,32 +55,32 @@ busyindicator
 
 progressbar
 {
-    padding: 0px var(--large-spacing);
-    inset: 0px var(--large-spacing);
+    padding: 0px var(--darkberry-blackwater-large-spacing);
+    inset: 0px var(--darkberry-blackwater-large-spacing);
     text-alignment: content center center 0;
 
-    background-color: var(--bar-active-background-color);
-    border: 1px solid var(--bar-active-border-color);
-    border-radius: var(--corner-radius);
+    background-color: var(--darkberry-blackwater-bar-active-background-color);
+    border: 1px solid var(--darkberry-blackwater-bar-active-border-color);
+    border-radius: var(--darkberry-blackwater-corner-radius);
 
     &.horizontal
     {
         width: 200px;
-        height: var(--medium-spacing);
+        height: var(--darkberry-blackwater-medium-spacing);
     }
 
     &.vertical
     {
-        width: var(--medium-spacing);
+        width: var(--darkberry-blackwater-medium-spacing);
         height: 200px;
     }
 
 
     & > track,
     & > chunk {
-        background-color: var(--bar-track-active-background-color);
-        border: 1px solid var(--bar-track-active-border-color);
-        border-radius: var(--corner-radius);
+        background-color: var(--darkberry-blackwater-bar-track-active-background-color);
+        border: 1px solid var(--darkberry-blackwater-bar-track-active-border-color);
+        border-radius: var(--darkberry-blackwater-corner-radius);
     }
 
     & > chunk {
@@ -88,13 +88,13 @@ progressbar
     }
 
     &:disabled {
-        background-color: var(--bar-disabled-background-color);
-        border-color: var(--bar-disabled-border-color);
+        background-color: var(--darkberry-blackwater-bar-disabled-background-color);
+        border-color: var(--darkberry-blackwater-bar-disabled-border-color);
 
         & > track,
         & > chunk {
-            background-color: var(--bar-track-disabled-background-color);
-            border-color: var(--bar-track-disabled-border-color);
+            background-color: var(--darkberry-blackwater-bar-track-disabled-background-color);
+            border-color: var(--darkberry-blackwater-bar-track-disabled-border-color);
         }
     }
 }
@@ -103,27 +103,27 @@ slider,
 rangeslider,
 dial
 {
-    background-color: var(--bar-active-background-color);
-    border: 1px solid var(--bar-active-border-color);
-    border-radius: var(--corner-radius);
+    background-color: var(--darkberry-blackwater-bar-active-background-color);
+    border: 1px solid var(--darkberry-blackwater-bar-active-border-color);
+    border-radius: var(--darkberry-blackwater-corner-radius);
 
     & > fill {
-        background-color: var(--bar-track-active-background-color);
-        border: 1px solid var(--bar-track-active-border-color);
-        border-radius: var(--corner-radius);
+        background-color: var(--darkberry-blackwater-bar-track-active-background-color);
+        border: 1px solid var(--darkberry-blackwater-bar-track-active-border-color);
+        border-radius: var(--darkberry-blackwater-corner-radius);
     }
 
     & > handle {
-        width: var(--bar-handle-size);
-        height: var(--bar-handle-size);
-        background-color: var(--bar-handle-active-background-color);
-        border: 1px solid var(--bar-handle-active-border-color);
+        width: var(--darkberry-blackwater-bar-handle-size);
+        height: var(--darkberry-blackwater-bar-handle-size);
+        background-color: var(--darkberry-blackwater-bar-handle-active-background-color);
+        border: 1px solid var(--darkberry-blackwater-bar-handle-active-border-color);
         border-radius: 10px;
-        box-shadow: var(--button-shadow);
+        box-shadow: var(--darkberry-blackwater-button-shadow);
 
         &:hovered
         {
-            border-color: var(--bar-handle-active-highlight-border-color);
+            border-color: var(--darkberry-blackwater-bar-handle-active-highlight-border-color);
         }
 
         &:pressed
@@ -134,10 +134,10 @@ dial
 
     & > tickmark
     {
-        background-color: var(--bar-active-border-color);
+        background-color: var(--darkberry-blackwater-bar-active-border-color);
 
         &.active {
-            background-color: var(--bar-track-active-border-color);
+            background-color: var(--darkberry-blackwater-bar-track-active-border-color);
         }
     }
 
@@ -147,9 +147,9 @@ dial
         height: 6px;
 
         & > tickmark {
-            width: var(--bar-tickmark-thickness);
-            height: var(--bar-tickmark-length);
-            margin-top: var(--bar-tickmark-margin);
+            width: var(--darkberry-blackwater-bar-tickmark-thickness);
+            height: var(--darkberry-blackwater-bar-tickmark-length);
+            margin-top: var(--darkberry-blackwater-bar-tickmark-margin);
         }
     }
 
@@ -159,30 +159,30 @@ dial
         height: 200px;
 
         & > tickmark {
-            width: var(--bar-tickmark-length);
-            height: var(--bar-tickmark-thickness);
-            margin-left: var(--bar-tickmark-margin);
+            width: var(--darkberry-blackwater-bar-tickmark-length);
+            height: var(--darkberry-blackwater-bar-tickmark-thickness);
+            margin-left: var(--darkberry-blackwater-bar-tickmark-margin);
         }
     }
 
     &:disabled {
-        background-color: var(--bar-disabled-background-color);
-        border: 1px solid var(--bar-disabled-border-color);
+        background-color: var(--darkberry-blackwater-bar-disabled-background-color);
+        border: 1px solid var(--darkberry-blackwater-bar-disabled-border-color);
 
         & > fill {
-            background-color: var(--bar-track-disabled-background-color);
-            border-color: var(--bar-track-disabled-border-color);
+            background-color: var(--darkberry-blackwater-bar-track-disabled-background-color);
+            border-color: var(--darkberry-blackwater-bar-track-disabled-border-color);
         }
 
         & > handle {
-            background-color: var(--bar-handle-disabled-background-color);
-            border-color: var(--bar-handle-disabled-border-color);
+            background-color: var(--darkberry-blackwater-bar-handle-disabled-background-color);
+            border-color: var(--darkberry-blackwater-bar-handle-disabled-border-color);
             box-shadow: none;
         }
 
         & > tickmark,
         & > tickmark.active {
-            background-color: var(--bar-disabled-border-color);
+            background-color: var(--darkberry-blackwater-bar-disabled-border-color);
         }
     }
 }
@@ -190,59 +190,59 @@ dial
 slider:visual-focus > handle,
 rangeslider > handle:active-focus
 {
-    border-color: var(--bar-handle-active-highlight-border-color);
-    outline: var(--focus-outline);
+    border-color: var(--darkberry-blackwater-bar-handle-active-highlight-border-color);
+    outline: var(--darkberry-blackwater-focus-outline);
 }
 
 slider:pressed > handle,
 rangeslider > handle:pressed
 {
-    background-color: var(--bar-handle-active-highlight-color);
-    border-color: var(--bar-handle-active-highlight-border-color);
+    background-color: var(--darkberry-blackwater-bar-handle-active-highlight-color);
+    border-color: var(--darkberry-blackwater-bar-handle-active-highlight-border-color);
 }
 
 scrollbar
 {
-    width: var(--scrollbar-size);
-    height: var(--scrollbar-size);
+    width: var(--darkberry-blackwater-scrollbar-size);
+    height: var(--darkberry-blackwater-scrollbar-size);
 
-    padding: var(--medium-spacing);
+    padding: var(--darkberry-blackwater-medium-spacing);
 
     &.horizontal
     {
-        border-top: 1px solid var(--bar-active-border-color);
+        border-top: 1px solid var(--darkberry-blackwater-bar-active-border-color);
     }
 
     &.vertical
     {
-        border-left: 1px solid var(--bar-active-border-color);
+        border-left: 1px solid var(--darkberry-blackwater-bar-active-border-color);
     }
 
     & > handle {
-        background-color: var(--bar-active-background-color);
-        border: 1px solid var(--bar-active-border-color);
-        border-radius: var(--small-element-size);
+        background-color: var(--darkberry-blackwater-bar-active-background-color);
+        border: 1px solid var(--darkberry-blackwater-bar-active-border-color);
+        border-radius: var(--darkberry-blackwater-small-element-size);
 
         &:hovered,
         &:pressed
         {
-            background-color: var(--bar-track-active-background-color);
-            border-color: var(--bar-track-active-border-color);
+            background-color: var(--darkberry-blackwater-bar-track-active-background-color);
+            border-color: var(--darkberry-blackwater-bar-track-active-border-color);
         }
 
         &:disabled {
-            background-color: var(--bar-disabled-background-color);
-            border: 1px solid var(--bar-disabled-border-color);
+            background-color: var(--darkberry-blackwater-bar-disabled-background-color);
+            border: 1px solid var(--darkberry-blackwater-bar-disabled-border-color);
         }
     }
 
     &.noninteractive {
-        width: var(--non-interactive-scrollbar-size);
+        width: var(--darkberry-blackwater-non-interactive-scrollbar-size);
         border-left: none;
-        padding: var(--small-spacing);
+        padding: var(--darkberry-blackwater-small-spacing);
         & > handle {
-            background-color: var(--bar-handle-disabled-background-color);
-            border: 1px solid var(--bar-handle-disabled-border-color);
+            background-color: var(--darkberry-blackwater-bar-handle-disabled-background-color);
+            border: 1px solid var(--darkberry-blackwater-bar-handle-disabled-border-color);
         }
     }
 }
@@ -251,50 +251,50 @@ dial {
     width: 128px;
     height: 128px;
     border-radius: 64px; /* use half of width */
-    background-color: var(--dial-inactive-background-color);
-    border-color: var(--dial-inactive-border-color);
+    background-color: var(--darkberry-blackwater-dial-inactive-background-color);
+    border-color: var(--darkberry-blackwater-dial-inactive-border-color);
 
     &:hovered {
-        background-color: var(--dial-active-background-color);
-        border-color: var(--dial-active-border-color);
+        background-color: var(--darkberry-blackwater-dial-active-background-color);
+        border-color: var(--darkberry-blackwater-dial-active-border-color);
     }
 
     &:pressed {
-        border-color: var(--highlight-color);
+        border-color: var(--darkberry-blackwater-highlight-color);
     }
 
     &:disabled {
-        background-color: var(--dial-disabled-background-color);
-        border-color: var(--dial-disabled-border-color);
+        background-color: var(--darkberry-blackwater-dial-disabled-background-color);
+        border-color: var(--darkberry-blackwater-dial-disabled-border-color);
     }
 
     & > handle {
-        background-color: var(--dial-handle-inactive-background-color);
-        border-color: var(--dial-handle-inactive-border-color);
+        background-color: var(--darkberry-blackwater-dial-handle-inactive-background-color);
+        border-color: var(--darkberry-blackwater-dial-handle-inactive-border-color);
 
         &:hovered {
-            background-color: var(--dial-handle-active-background-color);
-            border-color: var(--dial-handle-active-border-color);
+            background-color: var(--darkberry-blackwater-dial-handle-active-background-color);
+            border-color: var(--darkberry-blackwater-dial-handle-active-border-color);
         }
 
         &:pressed {
-            background-color: var(--highlight-color);
-            border-color: var(--highlight-color);
+            background-color: var(--darkberry-blackwater-highlight-color);
+            border-color: var(--darkberry-blackwater-highlight-color);
         }
 
         &:disabled {
-            background-color: var(--dial-handle-disabled-background-color);
-            border-color: var(--dial-handle-disabled-border-color);
+            background-color: var(--darkberry-blackwater-dial-handle-disabled-background-color);
+            border-color: var(--darkberry-blackwater-dial-handle-disabled-border-color);
         }
     }
 }
 
 slider.changed {
     & > fill {
-        background-color: var(--changed-background);
-        border: 1px solid var(--changed-foreground);
+        background-color: var(--darkberry-blackwater-changed-background);
+        border: 1px solid var(--darkberry-blackwater-changed-foreground);
     }
     & > tickmark.active {
-        background-color: var(--changed-foreground);
+        background-color: var(--darkberry-blackwater-changed-foreground);
     }
 }

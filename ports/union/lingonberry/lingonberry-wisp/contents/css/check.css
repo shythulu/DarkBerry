@@ -9,31 +9,31 @@
 
 :root
 {
-    --checkable-indicator-active-background-color: var(--button-active-background-color);
-    --checkable-indicator-active-text-color: var(--button-active-text-color);
-    --checkable-indicator-active-border-color: var(--button-active-border-color);
-    --checkable-indicator-active-highlight-color: var(--button-active-highlight-color);
-    --checkable-indicator-active-highlight-border-color: var(--button-active-border-highlight-color);
+    --lingonberry-wisp-checkable-indicator-active-background-color: var(--lingonberry-wisp-button-active-background-color);
+    --lingonberry-wisp-checkable-indicator-active-text-color: var(--lingonberry-wisp-button-active-text-color);
+    --lingonberry-wisp-checkable-indicator-active-border-color: var(--lingonberry-wisp-button-active-border-color);
+    --lingonberry-wisp-checkable-indicator-active-highlight-color: var(--lingonberry-wisp-button-active-highlight-color);
+    --lingonberry-wisp-checkable-indicator-active-highlight-border-color: var(--lingonberry-wisp-button-active-border-highlight-color);
 
-    --checkable-disabled-text-color: var(--window-disabled-text-color);
-    --checkable-indicator-disabled-background-color: var(--button-disabled-background-color);
-    --checkable-indicator-disabled-text-color: var(--button-disabled-text-color);
-    --checkable-indicator-disabled-border-color: var(--button-disabled-border-color);
+    --lingonberry-wisp-checkable-disabled-text-color: var(--lingonberry-wisp-window-disabled-text-color);
+    --lingonberry-wisp-checkable-indicator-disabled-background-color: var(--lingonberry-wisp-button-disabled-background-color);
+    --lingonberry-wisp-checkable-indicator-disabled-text-color: var(--lingonberry-wisp-button-disabled-text-color);
+    --lingonberry-wisp-checkable-indicator-disabled-border-color: var(--lingonberry-wisp-button-disabled-border-color);
 
-    --switch-indicator-active-background-color: mix(var(--button-active-background-color), var(--button-active-text-color), 0.1);
-    --switch-indicator-active-border-color: var(--button-active-border-color);
-    --switch-indicator-active-highlight-color: var(--button-active-highlight-color);
-    --switch-indicator-active-highlight-border-color: var(--button-active-border-highlight-color);
+    --lingonberry-wisp-switch-indicator-active-background-color: mix(var(--lingonberry-wisp-button-active-background-color), var(--lingonberry-wisp-button-active-text-color), 0.1);
+    --lingonberry-wisp-switch-indicator-active-border-color: var(--lingonberry-wisp-button-active-border-color);
+    --lingonberry-wisp-switch-indicator-active-highlight-color: var(--lingonberry-wisp-button-active-highlight-color);
+    --lingonberry-wisp-switch-indicator-active-highlight-border-color: var(--lingonberry-wisp-button-active-border-highlight-color);
 
-    --switch-handle-active-background-color: var(--button-active-background-color);
-    --switch-handle-active-border-color: var(--button-active-border-color);
-    --switch-handle-active-highlight-border-color: var(--button-active-border-highlight-color);
+    --lingonberry-wisp-switch-handle-active-background-color: var(--lingonberry-wisp-button-active-background-color);
+    --lingonberry-wisp-switch-handle-active-border-color: var(--lingonberry-wisp-button-active-border-color);
+    --lingonberry-wisp-switch-handle-active-highlight-border-color: var(--lingonberry-wisp-button-active-border-highlight-color);
 
-    --switch-disabled-text-color: var(--window-disabled-text-color);
-    --switch-indicator-disabled-background-color: var(--window-disabled-background-color);
-    --switch-indicator-disabled-border-color: var(--button-disabled-border-color);
-    --switch-handle-disabled-background-color: var(--button-disabled-background-color);
-    --switch-handle-disabled-border-color: var(--button-disabled-border-color);
+    --lingonberry-wisp-switch-disabled-text-color: var(--lingonberry-wisp-window-disabled-text-color);
+    --lingonberry-wisp-switch-indicator-disabled-background-color: var(--lingonberry-wisp-window-disabled-background-color);
+    --lingonberry-wisp-switch-indicator-disabled-border-color: var(--lingonberry-wisp-button-disabled-border-color);
+    --lingonberry-wisp-switch-handle-disabled-background-color: var(--lingonberry-wisp-button-disabled-background-color);
+    --lingonberry-wisp-switch-handle-disabled-border-color: var(--lingonberry-wisp-button-disabled-border-color);
 }
 
 checkbox,
@@ -43,10 +43,10 @@ switch
     icon-alignment-horizontal: start;
     text-wrap-mode: wrap;
 
-    padding: 0px var(--small-spacing);
-    spacing: var(--small-spacing);
+    padding: 0px var(--lingonberry-wisp-small-spacing);
+    spacing: var(--lingonberry-wisp-small-spacing);
 
-    color: var(--window-text-color);
+    color: var(--lingonberry-wisp-window-text-color);
 
     text-alignment: content fill center 0;
 }
@@ -57,56 +57,56 @@ menuitem,
 radiobutton,
 radiodelegate
 {
-    width: var(--medium-element-size);
-    height: var(--medium-element-size);
+    width: var(--lingonberry-wisp-medium-element-size);
+    height: var(--lingonberry-wisp-medium-element-size);
     & > indicator
     {
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        width: var(--lingonberry-wisp-icon-size-small);
+        height: var(--lingonberry-wisp-icon-size-small);
 
         layout-alignment-container: content;
         layout-alignment-horizontal: start;
         layout-alignment-order: -1;
 
-        background-color: var(--checkable-indicator-active-background-color);
-        border: 1px solid var(--checkable-indicator-active-border-color);
-        color: var(--checkable-indicator-active-text-color);
-        border-radius: var(--corner-radius);
+        background-color: var(--lingonberry-wisp-checkable-indicator-active-background-color);
+        border: 1px solid var(--lingonberry-wisp-checkable-indicator-active-border-color);
+        color: var(--lingonberry-wisp-checkable-indicator-active-text-color);
+        border-radius: var(--lingonberry-wisp-corner-radius);
     }
 
     &:hovered > indicator
     {
-        border-color: var(--checkable-indicator-active-highlight-border-color);
+        border-color: var(--lingonberry-wisp-checkable-indicator-active-highlight-border-color);
     }
 
     &:checked > indicator
     {
-        background-color: var(--checkable-indicator-active-highlight-color);
-        border-color: var(--checkable-indicator-active-highlight-border-color);
+        background-color: var(--lingonberry-wisp-checkable-indicator-active-highlight-color);
+        border-color: var(--lingonberry-wisp-checkable-indicator-active-highlight-border-color);
     }
 
     &:visual-focus > indicator
     {
-        outline: var(--focus-outline);
-        border-color: var(--checkable-indicator-active-highlight-border-color);
+        outline: var(--lingonberry-wisp-focus-outline);
+        border-color: var(--lingonberry-wisp-checkable-indicator-active-highlight-border-color);
     }
 
     &:disabled
     {
-        color: var(--checkable-disabled-text-color);
+        color: var(--lingonberry-wisp-checkable-disabled-text-color);
 
         & > indicator
         {
-            border: 1px solid var(--checkable-indicator-disabled-border-color);
-            color: var(--checkable-indicator-disabled-text-color);
-            background-color: var(--checkable-indicator-disabled-background-color);
+            border: 1px solid var(--lingonberry-wisp-checkable-indicator-disabled-border-color);
+            color: var(--lingonberry-wisp-checkable-indicator-disabled-text-color);
+            background-color: var(--lingonberry-wisp-checkable-indicator-disabled-background-color);
         }
     }
 
     &:checked:disabled > indicator
     {
-        background-color: var(--checkable-indicator-disabled-background-color);
-        background-image-mask-color: var(--checkable-indicator-disabled-text-color);
+        background-color: var(--lingonberry-wisp-checkable-indicator-disabled-background-color);
+        background-image-mask-color: var(--lingonberry-wisp-checkable-indicator-disabled-text-color);
     }
 }
 
@@ -116,10 +116,10 @@ menuitem
 {
     &:checked > indicator
     {
-        background-image: url("../images/checkmark.svg") mask var(--checkable-indicator-active-text-color);
+        background-image: url("../images/checkmark.svg") mask var(--lingonberry-wisp-checkable-indicator-active-text-color);
     }
     &.indeterminate > indicator {
-        background-image: url("../images/indeterminate.svg") mask var(--checkable-indicator-active-text-color);
+        background-image: url("../images/indeterminate.svg") mask var(--lingonberry-wisp-checkable-indicator-active-text-color);
     }
 }
 
@@ -134,7 +134,7 @@ menuitem.exclusive
 
     &:checked > indicator
     {
-        background-image: url("../images/radio.svg") mask var(--checkable-indicator-active-text-color);
+        background-image: url("../images/radio.svg") mask var(--lingonberry-wisp-checkable-indicator-active-text-color);
     }
 }
 
@@ -150,17 +150,17 @@ switchdelegate
         height: 12px;
         border-radius: 6px;
 
-        background-color: var(--switch-indicator-active-background-color);
-        border: 1px solid var(--switch-indicator-active-border-color);
+        background-color: var(--lingonberry-wisp-switch-indicator-active-background-color);
+        border: 1px solid var(--lingonberry-wisp-switch-indicator-active-border-color);
 
         & > handle
         {
-            width: var(--grid-unit);
-            height: var(--grid-unit);
+            width: var(--lingonberry-wisp-grid-unit);
+            height: var(--lingonberry-wisp-grid-unit);
             border-radius: 9px; /* grid-unit / 2 */
 
-            background-color: var(--switch-handle-active-background-color);
-            border: 1px solid var(--switch-handle-active-border-color);
+            background-color: var(--lingonberry-wisp-switch-handle-active-background-color);
+            border: 1px solid var(--lingonberry-wisp-switch-handle-active-border-color);
         }
     }
 
@@ -168,37 +168,37 @@ switchdelegate
     {
         & > indicator
         {
-            border-color: var(--switch-indicator-active-highlight-border-color);
+            border-color: var(--lingonberry-wisp-switch-indicator-active-highlight-border-color);
 
             & > handle
             {
-                border-color: var(--switch-handle-active-highlight-border-color);
+                border-color: var(--lingonberry-wisp-switch-handle-active-highlight-border-color);
             }
         }
     }
 
     &:checked > indicator
     {
-        background-color: var(--switch-indicator-active-highlight-color);
-        border-color: var(--switch-indicator-active-highlight-border-color);
+        background-color: var(--lingonberry-wisp-switch-indicator-active-highlight-color);
+        border-color: var(--lingonberry-wisp-switch-indicator-active-highlight-border-color);
     }
 
     &:visual-focus > indicator > handle
     {
-        outline: var(--focus-outline);
+        outline: var(--lingonberry-wisp-focus-outline);
     }
 
     &:disabled
     {
-        color: var(--switch-disabled-text-color);
+        color: var(--lingonberry-wisp-switch-disabled-text-color);
 
         & > indicator {
-            border-color: var(--switch-indicator-disabled-border-color);
-            background-color: var(--switch-indicator-disabled-background-color);
+            border-color: var(--lingonberry-wisp-switch-indicator-disabled-border-color);
+            background-color: var(--lingonberry-wisp-switch-indicator-disabled-background-color);
 
             & > handle {
-                border-color: var(--switch-handle-disabled-border-color);
-                background-color: var(--switch-handle-disabled-background-color);
+                border-color: var(--lingonberry-wisp-switch-handle-disabled-border-color);
+                background-color: var(--lingonberry-wisp-switch-handle-disabled-background-color);
             }
         }
     }
@@ -210,7 +210,7 @@ checkbox.changed,
 checkdelegate.changed,
 switch.changed {
     indicator {
-        background-color: var(--changed-background);
-        border: 1px solid var(--changed-foreground);
+        background-color: var(--lingonberry-wisp-changed-background);
+        border: 1px solid var(--lingonberry-wisp-changed-foreground);
     }
 }

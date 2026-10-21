@@ -3,49 +3,49 @@
  * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
  */
 
-@property --color-group {
+@property --cloudberry-mire-color-group {
     syntax: "<string>";
     inherits: true;
     initial-value: "active";
 }
 
-@property --color-set {
+@property --cloudberry-mire-color-set {
     syntax: "<string>";
     inherits: true;
 }
 
 .inactive {
-    --color-group: "inactive";
+    --cloudberry-mire-color-group: "inactive";
 }
 
 :disabled {
-    --color-group: "disabled";
+    --cloudberry-mire-color-group: "disabled";
 }
 
 [color-set="window"] {
-    --color-set: "window";
+    --cloudberry-mire-color-set: "window";
 }
 
 [color-set="button"] {
-    --color-set: "button";
+    --cloudberry-mire-color-set: "button";
 }
 
 [color-set="view"] {
-    --color-set: "view";
+    --cloudberry-mire-color-set: "view";
 }
 
 [color-set="selection"] {
-    --color-set: "selection";
+    --cloudberry-mire-color-set: "selection";
 }
 
 [color-set="tooltip"] {
-    --color-set: "tooltip";
+    --cloudberry-mire-color-set: "tooltip";
 }
 
 [color-set="complementary"] {
-    --color-set: "complementary";
+    --cloudberry-mire-color-set: "complementary";
 }
 
 [color-set="header"] {
-    --color-set: "header";
+    --cloudberry-mire-color-set: "header";
 }

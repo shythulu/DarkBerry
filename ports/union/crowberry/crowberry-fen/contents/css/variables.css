@@ -9,102 +9,102 @@
 
 :root {
     /* Standard Sizes */
-    --minimal-spacing: 2px;
-    --small-spacing: 4px;
-    --medium-spacing: 6px;
-    --large-spacing: 8px;
-    --grid-unit: 18px;
-    --corner-radius: 5px;
+    --crowberry-fen-minimal-spacing: 2px;
+    --crowberry-fen-small-spacing: 4px;
+    --crowberry-fen-medium-spacing: 6px;
+    --crowberry-fen-large-spacing: 8px;
+    --crowberry-fen-grid-unit: 18px;
+    --crowberry-fen-corner-radius: 5px;
 
     /* Icon sizes */
-    --icon-size-small: 16px;
-    --icon-size-smallmedium: 22px;
-    --icon-size-medium: 32px;
-    --icon-size-large: 48px;
+    --crowberry-fen-icon-size-small: 16px;
+    --crowberry-fen-icon-size-smallmedium: 22px;
+    --crowberry-fen-icon-size-medium: 32px;
+    --crowberry-fen-icon-size-large: 48px;
 
     /* Default item sizes */
-    --small-element-size: 16px;
-    --medium-element-size: 24px;
-    --large-element-size: 32px;
-    --scrollbar-size: 20px;
-    --non-interactive-scrollbar-size: 10px;
-    --menu-item-width: 150px;
-    --text-field-width: 200px;
+    --crowberry-fen-small-element-size: 16px;
+    --crowberry-fen-medium-element-size: 24px;
+    --crowberry-fen-large-element-size: 32px;
+    --crowberry-fen-scrollbar-size: 20px;
+    --crowberry-fen-non-interactive-scrollbar-size: 10px;
+    --crowberry-fen-menu-item-width: 150px;
+    --crowberry-fen-text-field-width: 200px;
 
     /* Colors */
-    --highlight-color: var(--kcs-active-selection-background-normal);
-    --highlight-text-color: var(--kcs-active-selection-foreground-text);
-    --highlight-hover-color: modify-color(var(--highlight-color) set-alpha 0.3);
+    --crowberry-fen-highlight-color: var(--crowberry-fen-kcs-active-selection-background-normal);
+    --crowberry-fen-highlight-text-color: var(--crowberry-fen-kcs-active-selection-foreground-text);
+    --crowberry-fen-highlight-hover-color: modify-color(var(--crowberry-fen-highlight-color) set-alpha 0.3);
 
-    --window-text-color: var(--kcs-active-window-foreground-text);
-    --window-background-color: var(--kcs-active-window-background-normal);
-    --window-background-alternate-color: var(--kcs-active-window-background-alternate);
-    --window-border-color: var(--kcs-active-window-decoration-frame);
-    --window-highlight-color: mix(var(--window-background-color), var(--highlight-color), 0.5);
-    --window-border-highlight-color: var(--highlight-color);
+    --crowberry-fen-window-text-color: var(--crowberry-fen-kcs-active-window-foreground-text);
+    --crowberry-fen-window-background-color: var(--crowberry-fen-kcs-active-window-background-normal);
+    --crowberry-fen-window-background-alternate-color: var(--crowberry-fen-kcs-active-window-background-alternate);
+    --crowberry-fen-window-border-color: var(--crowberry-fen-kcs-active-window-decoration-frame);
+    --crowberry-fen-window-highlight-color: mix(var(--crowberry-fen-window-background-color), var(--crowberry-fen-highlight-color), 0.5);
+    --crowberry-fen-window-border-highlight-color: var(--crowberry-fen-highlight-color);
 
-    --view-text-color: var(--kcs-active-view-foreground-text);
-    --view-background-color: var(--kcs-active-view-background-normal);
-    --view-background-alternate-color: var(--kcs-active-view-background-alternate);
-    --view-border-color: var(--kcs-active-view-decoration-frame);
-    --view-highlight-color: mix(var(--view-background-color), var(--highlight-color), 0.5);
+    --crowberry-fen-view-text-color: var(--crowberry-fen-kcs-active-view-foreground-text);
+    --crowberry-fen-view-background-color: var(--crowberry-fen-kcs-active-view-background-normal);
+    --crowberry-fen-view-background-alternate-color: var(--crowberry-fen-kcs-active-view-background-alternate);
+    --crowberry-fen-view-border-color: var(--crowberry-fen-kcs-active-view-decoration-frame);
+    --crowberry-fen-view-highlight-color: mix(var(--crowberry-fen-view-background-color), var(--crowberry-fen-highlight-color), 0.5);
 
-    --header-text-color: var(--kcs-active-header-foreground-text);
-    --header-background-color: var(--kcs-active-header-background-normal);
-    --header-background-inactive-color: var(--kcs-inactive-header-background-normal);
-    --header-border-color: var(--kcs-active-header-decoration-frame);
+    --crowberry-fen-header-text-color: var(--crowberry-fen-kcs-active-header-foreground-text);
+    --crowberry-fen-header-background-color: var(--crowberry-fen-kcs-active-header-background-normal);
+    --crowberry-fen-header-background-inactive-color: var(--crowberry-fen-kcs-inactive-header-background-normal);
+    --crowberry-fen-header-border-color: var(--crowberry-fen-kcs-active-header-decoration-frame);
 
-    --complementary-text-color: var(--kcs-active-complementary-foreground-text);
-    --complementary-background-color: var(--kcs-active-complementary-background-normal);
+    --crowberry-fen-complementary-text-color: var(--crowberry-fen-kcs-active-complementary-foreground-text);
+    --crowberry-fen-complementary-background-color: var(--crowberry-fen-kcs-active-complementary-background-normal);
 
-    --positive-text: var(--kcs-active-view-foreground-positive);
-    --neutral-text: var(--kcs-active-view-foreground-neutral);
-    --negative-text: var(--kcs-active-view-foreground-negative);
-    --positive-background: var(--kcs-active-view-background-positive);
-    --neutral-background: var(--kcs-active-view-background-neutral);
-    --negative-background: var(--kcs-active-view-background-negative);
+    --crowberry-fen-positive-text: var(--crowberry-fen-kcs-active-view-foreground-positive);
+    --crowberry-fen-neutral-text: var(--crowberry-fen-kcs-active-view-foreground-neutral);
+    --crowberry-fen-negative-text: var(--crowberry-fen-kcs-active-view-foreground-negative);
+    --crowberry-fen-positive-background: var(--crowberry-fen-kcs-active-view-background-positive);
+    --crowberry-fen-neutral-background: var(--crowberry-fen-kcs-active-view-background-neutral);
+    --crowberry-fen-negative-background: var(--crowberry-fen-kcs-active-view-background-negative);
 
-    --changed-foreground: var(--neutral-text);
-    --changed-background: var(--neutral-background);
+    --crowberry-fen-changed-foreground: var(--crowberry-fen-neutral-text);
+    --crowberry-fen-changed-background: var(--crowberry-fen-neutral-background);
 
-    --card-background-color: var(--view-background-color);
-    --card-text-color: var(--view-text-color);
-    --card-border-color: var(--view-border-color);
-    --card-hover-color: mix(var(--card-background-color), var(--highlight-color), 0.1);
-    --card-pressed-color: mix(var(--card-background-color), var(--highlight-color), 0.3);
+    --crowberry-fen-card-background-color: var(--crowberry-fen-view-background-color);
+    --crowberry-fen-card-text-color: var(--crowberry-fen-view-text-color);
+    --crowberry-fen-card-border-color: var(--crowberry-fen-view-border-color);
+    --crowberry-fen-card-hover-color: mix(var(--crowberry-fen-card-background-color), var(--crowberry-fen-highlight-color), 0.1);
+    --crowberry-fen-card-pressed-color: mix(var(--crowberry-fen-card-background-color), var(--crowberry-fen-highlight-color), 0.3);
 
-    --focus-outline-alpha: 0.3;
-    --focus-color: modify-color(var(--kcs-active-window-decoration-focus) set-alpha var(--focus-outline-alpha));
+    --crowberry-fen-focus-outline-alpha: 0.3;
+    --crowberry-fen-focus-color: modify-color(var(--crowberry-fen-kcs-active-window-decoration-focus) set-alpha var(--crowberry-fen-focus-outline-alpha));
 
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --crowberry-fen-shadow-color: rgba(0, 0, 0, 0.1);
 
     /* Disabled colors */
-    --window-disabled-text-color: var(--kcs-disabled-window-foreground-text);
-    --window-disabled-background-color: var(--kcs-disabled-window-background-normal);
-    --window-disabled-border-color: var(--kcs-disabled-window-decoration-frame);
+    --crowberry-fen-window-disabled-text-color: var(--crowberry-fen-kcs-disabled-window-foreground-text);
+    --crowberry-fen-window-disabled-background-color: var(--crowberry-fen-kcs-disabled-window-background-normal);
+    --crowberry-fen-window-disabled-border-color: var(--crowberry-fen-kcs-disabled-window-decoration-frame);
 
-    --view-disabled-text-color: var(--kcs-disabled-view-foreground-text);
-    --view-disabled-background-color: var(--kcs-disabled-view-background-normal);
-    --view-disabled-border-color: var(--kcs-disabled-view-decoration-frame);
+    --crowberry-fen-view-disabled-text-color: var(--crowberry-fen-kcs-disabled-view-foreground-text);
+    --crowberry-fen-view-disabled-background-color: var(--crowberry-fen-kcs-disabled-view-background-normal);
+    --crowberry-fen-view-disabled-border-color: var(--crowberry-fen-kcs-disabled-view-decoration-frame);
 
-    --header-disabled-text-color: var(--kcs-disabled-header-foreground-text);
-    --header-disabled-background-color: var(--kcs-disabled-header-background-normal);
-    --header-disabled-border-color: var(--kcs-disabled-header-decoration-frame);
+    --crowberry-fen-header-disabled-text-color: var(--crowberry-fen-kcs-disabled-header-foreground-text);
+    --crowberry-fen-header-disabled-background-color: var(--crowberry-fen-kcs-disabled-header-background-normal);
+    --crowberry-fen-header-disabled-border-color: var(--crowberry-fen-kcs-disabled-header-decoration-frame);
 
-    --complementary-disabled-text-color: var(--kcs-disabled-complementary-foreground-text);
+    --crowberry-fen-complementary-disabled-text-color: var(--crowberry-fen-kcs-disabled-complementary-foreground-text);
 
-    --highlight-disabled-color: mix(var(--window-disabled-background-color), var(--highlight-color), 0.2);
-    --highlight-disabled-text-color: mix(var(--window-disabled-text-color), var(--highlight-text-color), 0.2);
+    --crowberry-fen-highlight-disabled-color: mix(var(--crowberry-fen-window-disabled-background-color), var(--crowberry-fen-highlight-color), 0.2);
+    --crowberry-fen-highlight-disabled-text-color: mix(var(--crowberry-fen-window-disabled-text-color), var(--crowberry-fen-highlight-text-color), 0.2);
 
-    --card-disabled-background-color: var(--view-disabled-background-color);
-    --card-disabled-text-color: var(--view-disabled-text-color);
-    --card-disabled-border-color: var(--view-disabled-border-color);
+    --crowberry-fen-card-disabled-background-color: var(--crowberry-fen-view-disabled-background-color);
+    --crowberry-fen-card-disabled-text-color: var(--crowberry-fen-view-disabled-text-color);
+    --crowberry-fen-card-disabled-border-color: var(--crowberry-fen-view-disabled-border-color);
 
     /* Standard Elements */
-    --focus-outline: 2px solid var(--focus-ring-color);
-    --dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+    --crowberry-fen-focus-outline: 2px solid var(--crowberry-fen-focus-ring-color);
+    --crowberry-fen-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
 
-    --indicator-color: modify-color(var(--window-text-color) set-alpha 0.4);
-    --indicator-press-color: modify-color(var(--window-text-color) set-alpha 0.7);
-    --indicator-current-color: modify-color(var(--window-text-color) set-alpha 0.95);
+    --crowberry-fen-indicator-color: modify-color(var(--crowberry-fen-window-text-color) set-alpha 0.4);
+    --crowberry-fen-indicator-press-color: modify-color(var(--crowberry-fen-window-text-color) set-alpha 0.7);
+    --crowberry-fen-indicator-current-color: modify-color(var(--crowberry-fen-window-text-color) set-alpha 0.95);
 }

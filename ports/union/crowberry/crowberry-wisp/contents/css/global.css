@@ -3,49 +3,49 @@
  * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
  */
 
-@property --color-group {
+@property --crowberry-wisp-color-group {
     syntax: "<string>";
     inherits: true;
     initial-value: "active";
 }
 
-@property --color-set {
+@property --crowberry-wisp-color-set {
     syntax: "<string>";
     inherits: true;
 }
 
 .inactive {
-    --color-group: "inactive";
+    --crowberry-wisp-color-group: "inactive";
 }
 
 :disabled {
-    --color-group: "disabled";
+    --crowberry-wisp-color-group: "disabled";
 }
 
 [color-set="window"] {
-    --color-set: "window";
+    --crowberry-wisp-color-set: "window";
 }
 
 [color-set="button"] {
-    --color-set: "button";
+    --crowberry-wisp-color-set: "button";
 }
 
 [color-set="view"] {
-    --color-set: "view";
+    --crowberry-wisp-color-set: "view";
 }
 
 [color-set="selection"] {
-    --color-set: "selection";
+    --crowberry-wisp-color-set: "selection";
 }
 
 [color-set="tooltip"] {
-    --color-set: "tooltip";
+    --crowberry-wisp-color-set: "tooltip";
 }
 
 [color-set="complementary"] {
-    --color-set: "complementary";
+    --crowberry-wisp-color-set: "complementary";
 }
 
 [color-set="header"] {
-    --color-set: "header";
+    --crowberry-wisp-color-set: "header";
 }

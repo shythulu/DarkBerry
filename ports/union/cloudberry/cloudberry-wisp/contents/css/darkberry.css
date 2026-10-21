@@ -24,6 +24,10 @@
  * shades Breeze mixes from them (hover, pressed, checked, tracks) are its own
  * arithmetic, kept as written. Shapes, spacing and sizes are Breeze's.
  *
+ * Every variable carries the style's id as a prefix, so --kcs-* reads --cloudberry-wisp-kcs-*
+ * in the installed files. Union 6.8 shares variables across every style an app loads,
+ * so without the prefix its Application Style page shows each preview in one flavour.
+ *
  * Deliberately left as Breeze has it:
  *   shadows: black at 10 to 30%, lighting rather than colour.
  *   the menu-item hover fill: Breeze paints it with its focus colour at 30%.
@@ -40,71 +44,71 @@
 
 :root {
     /* Window: dialogs, toolbars, the chrome around content. */
-    --kcs-active-window-background-normal: #f8e6dd;
-    --kcs-active-window-background-alternate: #e2cdc2; /* alternating rows in chrome lists */
-    --kcs-active-window-foreground-text: #55321f;
-    --kcs-active-window-decoration-frame: #c4aea2; /* hairlines between panels */
-    --kcs-active-window-decoration-focus: #a05f62;
-    --kcs-inactive-window-background-normal: #f8e6dd;
-    --kcs-inactive-window-foreground-text: #55321f;
-    --kcs-inactive-window-decoration-frame: #c4aea2; /* hairlines between panels */
-    --kcs-disabled-window-background-normal: #f8e6dd;
-    --kcs-disabled-window-foreground-text: #9b7f70;
-    --kcs-disabled-window-decoration-frame: #d2bcb1; /* a disabled control's outline */
+    --cloudberry-wisp-kcs-active-window-background-normal: #f8e6dd;
+    --cloudberry-wisp-kcs-active-window-background-alternate: #e2cdc2; /* alternating rows in chrome lists */
+    --cloudberry-wisp-kcs-active-window-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-active-window-decoration-frame: #c4aea2; /* hairlines between panels */
+    --cloudberry-wisp-kcs-active-window-decoration-focus: #a05f62;
+    --cloudberry-wisp-kcs-inactive-window-background-normal: #f8e6dd;
+    --cloudberry-wisp-kcs-inactive-window-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-inactive-window-decoration-frame: #c4aea2; /* hairlines between panels */
+    --cloudberry-wisp-kcs-disabled-window-background-normal: #f8e6dd;
+    --cloudberry-wisp-kcs-disabled-window-foreground-text: #9b7f70;
+    --cloudberry-wisp-kcs-disabled-window-decoration-frame: #d2bcb1; /* a disabled control's outline */
 
     /* View: lists, text fields, the content areas. */
-    --kcs-active-view-background-normal: #fff4ee;
-    --kcs-active-view-background-alternate: #f8e6dd;
-    --kcs-active-view-foreground-text: #55321f;
-    --kcs-active-view-decoration-frame: #9b7f70;
-    --kcs-disabled-view-background-normal: #fff4ee;
-    --kcs-disabled-view-foreground-text: #9b7f70;
-    --kcs-disabled-view-decoration-frame: #d2bcb1; /* a disabled control's outline */
-    --kcs-active-view-foreground-positive: #2c6f2d;
-    --kcs-active-view-foreground-neutral: #815b02;
-    --kcs-active-view-foreground-negative: #bb262a;
-    --kcs-active-view-background-positive: #f2ece2;
-    --kcs-active-view-background-neutral: #f7ebe0;
-    --kcs-active-view-background-negative: #fbe8e2;
+    --cloudberry-wisp-kcs-active-view-background-normal: #fff4ee;
+    --cloudberry-wisp-kcs-active-view-background-alternate: #f8e6dd;
+    --cloudberry-wisp-kcs-active-view-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-active-view-decoration-frame: #9b7f70;
+    --cloudberry-wisp-kcs-disabled-view-background-normal: #fff4ee;
+    --cloudberry-wisp-kcs-disabled-view-foreground-text: #9b7f70;
+    --cloudberry-wisp-kcs-disabled-view-decoration-frame: #d2bcb1; /* a disabled control's outline */
+    --cloudberry-wisp-kcs-active-view-foreground-positive: #2c6f2d;
+    --cloudberry-wisp-kcs-active-view-foreground-neutral: #815b02;
+    --cloudberry-wisp-kcs-active-view-foreground-negative: #bb262a;
+    --cloudberry-wisp-kcs-active-view-background-positive: #f2ece2;
+    --cloudberry-wisp-kcs-active-view-background-neutral: #f7ebe0;
+    --cloudberry-wisp-kcs-active-view-background-negative: #fbe8e2;
 
     /* Header: title bars, the strip above a page. */
-    --kcs-active-header-background-normal: #f8e6dd;
-    --kcs-active-header-foreground-text: #55321f;
-    --kcs-active-header-decoration-frame: #c4aea2; /* hairlines between panels */
-    --kcs-inactive-header-background-normal: #efdbd1;
-    --kcs-inactive-header-foreground-text: #714e3c;
-    --kcs-inactive-header-decoration-frame: #c4aea2; /* hairlines between panels */
-    --kcs-disabled-header-background-normal: #f8e6dd;
-    --kcs-disabled-header-foreground-text: #9b7f70;
-    --kcs-disabled-header-decoration-frame: #d2bcb1; /* a disabled control's outline */
+    --cloudberry-wisp-kcs-active-header-background-normal: #f8e6dd;
+    --cloudberry-wisp-kcs-active-header-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-active-header-decoration-frame: #c4aea2; /* hairlines between panels */
+    --cloudberry-wisp-kcs-inactive-header-background-normal: #efdbd1;
+    --cloudberry-wisp-kcs-inactive-header-foreground-text: #714e3c;
+    --cloudberry-wisp-kcs-inactive-header-decoration-frame: #c4aea2; /* hairlines between panels */
+    --cloudberry-wisp-kcs-disabled-header-background-normal: #f8e6dd;
+    --cloudberry-wisp-kcs-disabled-header-foreground-text: #9b7f70;
+    --cloudberry-wisp-kcs-disabled-header-decoration-frame: #d2bcb1; /* a disabled control's outline */
 
     /* Button: push buttons, combo boxes, check and switch indicators. */
-    --kcs-active-button-background-normal: #e2cdc2; /* a button's face, as in the KDE scheme */
-    --kcs-active-button-foreground-text: #55321f;
-    --kcs-active-button-decoration-frame: #9b7f70;
-    --kcs-active-button-decoration-focus: #a05f62;
-    --kcs-inactive-button-background-normal: #e2cdc2; /* a button's face, as in the KDE scheme */
-    --kcs-inactive-button-foreground-text: #55321f;
-    --kcs-inactive-button-decoration-frame: #9b7f70;
-    --kcs-disabled-button-background-normal: #e2cdc2; /* a button's face, as in the KDE scheme */
-    --kcs-disabled-button-foreground-text: #9b7f70;
-    --kcs-disabled-button-decoration-frame: #d2bcb1; /* a disabled control's outline */
+    --cloudberry-wisp-kcs-active-button-background-normal: #e2cdc2; /* a button's face, as in the KDE scheme */
+    --cloudberry-wisp-kcs-active-button-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-active-button-decoration-frame: #9b7f70;
+    --cloudberry-wisp-kcs-active-button-decoration-focus: #a05f62;
+    --cloudberry-wisp-kcs-inactive-button-background-normal: #e2cdc2; /* a button's face, as in the KDE scheme */
+    --cloudberry-wisp-kcs-inactive-button-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-inactive-button-decoration-frame: #9b7f70;
+    --cloudberry-wisp-kcs-disabled-button-background-normal: #e2cdc2; /* a button's face, as in the KDE scheme */
+    --cloudberry-wisp-kcs-disabled-button-foreground-text: #9b7f70;
+    --cloudberry-wisp-kcs-disabled-button-decoration-frame: #d2bcb1; /* a disabled control's outline */
 
     /* Complementary: the dark strip some apps put beside light content. */
-    --kcs-active-complementary-background-normal: #efdbd1;
-    --kcs-active-complementary-foreground-text: #55321f;
-    --kcs-disabled-complementary-foreground-text: #9b7f70;
+    --cloudberry-wisp-kcs-active-complementary-background-normal: #efdbd1;
+    --cloudberry-wisp-kcs-active-complementary-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-disabled-complementary-foreground-text: #9b7f70;
 
     /* Selection: Breeze's highlight. Selected rows, pressed buttons, checked boxes. */
-    --kcs-active-selection-background-normal: #b9488b;
-    --kcs-active-selection-foreground-text: #ffffff;
+    --cloudberry-wisp-kcs-active-selection-background-normal: #b9488b;
+    --cloudberry-wisp-kcs-active-selection-foreground-text: #ffffff;
 
     /* Tooltip. */
-    --kcs-active-tooltip-background-normal: #f8e6dd;
-    --kcs-active-tooltip-foreground-text: #55321f;
-    --kcs-active-tooltip-decoration-frame: #c4aea2; /* the tooltip's hairline */
+    --cloudberry-wisp-kcs-active-tooltip-background-normal: #f8e6dd;
+    --cloudberry-wisp-kcs-active-tooltip-foreground-text: #55321f;
+    --cloudberry-wisp-kcs-active-tooltip-decoration-frame: #c4aea2; /* the tooltip's hairline */
 
     /* Darkberry's own, used through the rewrites in build.mjs (UNION_REWRITES). */
-    --tab-indicator-color: #a74c06;
-    --focus-ring-color: #a05f62;
+    --cloudberry-wisp-tab-indicator-color: #a74c06;
+    --cloudberry-wisp-focus-ring-color: #a05f62;
 }

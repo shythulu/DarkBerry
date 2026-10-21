@@ -24,6 +24,10 @@
  * shades Breeze mixes from them (hover, pressed, checked, tracks) are its own
  * arithmetic, kept as written. Shapes, spacing and sizes are Breeze's.
  *
+ * Every variable carries the style's id as a prefix, so --kcs-* reads --crowberry-fen-kcs-*
+ * in the installed files. Union 6.8 shares variables across every style an app loads,
+ * so without the prefix its Application Style page shows each preview in one flavour.
+ *
  * Deliberately left as Breeze has it:
  *   shadows: black at 10 to 30%, lighting rather than colour.
  *   the menu-item hover fill: Breeze paints it with its focus colour at 30%.
@@ -40,71 +44,71 @@
 
 :root {
     /* Window: dialogs, toolbars, the chrome around content. */
-    --kcs-active-window-background-normal: #352b47;
-    --kcs-active-window-background-alternate: #4d4362; /* alternating rows in chrome lists */
-    --kcs-active-window-foreground-text: #ece7f7;
-    --kcs-active-window-decoration-frame: #6a5f80; /* hairlines between panels */
-    --kcs-active-window-decoration-focus: #bc99ae;
-    --kcs-inactive-window-background-normal: #352b47;
-    --kcs-inactive-window-foreground-text: #ece7f7;
-    --kcs-inactive-window-decoration-frame: #6a5f80; /* hairlines between panels */
-    --kcs-disabled-window-background-normal: #352b47;
-    --kcs-disabled-window-foreground-text: #9187a6;
-    --kcs-disabled-window-decoration-frame: #5c5172; /* a disabled control's outline */
+    --crowberry-fen-kcs-active-window-background-normal: #352b47;
+    --crowberry-fen-kcs-active-window-background-alternate: #4d4362; /* alternating rows in chrome lists */
+    --crowberry-fen-kcs-active-window-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-active-window-decoration-frame: #6a5f80; /* hairlines between panels */
+    --crowberry-fen-kcs-active-window-decoration-focus: #bc99ae;
+    --crowberry-fen-kcs-inactive-window-background-normal: #352b47;
+    --crowberry-fen-kcs-inactive-window-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-inactive-window-decoration-frame: #6a5f80; /* hairlines between panels */
+    --crowberry-fen-kcs-disabled-window-background-normal: #352b47;
+    --crowberry-fen-kcs-disabled-window-foreground-text: #9187a6;
+    --crowberry-fen-kcs-disabled-window-decoration-frame: #5c5172; /* a disabled control's outline */
 
     /* View: lists, text fields, the content areas. */
-    --kcs-active-view-background-normal: #403654;
-    --kcs-active-view-background-alternate: #4d4362;
-    --kcs-active-view-foreground-text: #ece7f7;
-    --kcs-active-view-decoration-frame: #9187a6;
-    --kcs-disabled-view-background-normal: #403654;
-    --kcs-disabled-view-foreground-text: #9187a6;
-    --kcs-disabled-view-decoration-frame: #5c5172; /* a disabled control's outline */
-    --kcs-active-view-foreground-positive: #bbe5b3;
-    --kcs-active-view-foreground-neutral: #f0d6a0;
-    --kcs-active-view-foreground-negative: #fd8c85;
-    --kcs-active-view-background-positive: #3d364d;
-    --kcs-active-view-background-neutral: #40354c;
-    --kcs-active-view-background-negative: #41314b;
+    --crowberry-fen-kcs-active-view-background-normal: #403654;
+    --crowberry-fen-kcs-active-view-background-alternate: #4d4362;
+    --crowberry-fen-kcs-active-view-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-active-view-decoration-frame: #9187a6;
+    --crowberry-fen-kcs-disabled-view-background-normal: #403654;
+    --crowberry-fen-kcs-disabled-view-foreground-text: #9187a6;
+    --crowberry-fen-kcs-disabled-view-decoration-frame: #5c5172; /* a disabled control's outline */
+    --crowberry-fen-kcs-active-view-foreground-positive: #bbe5b3;
+    --crowberry-fen-kcs-active-view-foreground-neutral: #f0d6a0;
+    --crowberry-fen-kcs-active-view-foreground-negative: #fd8c85;
+    --crowberry-fen-kcs-active-view-background-positive: #3d364d;
+    --crowberry-fen-kcs-active-view-background-neutral: #40354c;
+    --crowberry-fen-kcs-active-view-background-negative: #41314b;
 
     /* Header: title bars, the strip above a page. */
-    --kcs-active-header-background-normal: #352b47;
-    --kcs-active-header-foreground-text: #ece7f7;
-    --kcs-active-header-decoration-frame: #6a5f80; /* hairlines between panels */
-    --kcs-inactive-header-background-normal: #2c233d;
-    --kcs-inactive-header-foreground-text: #c2bdce;
-    --kcs-inactive-header-decoration-frame: #6a5f80; /* hairlines between panels */
-    --kcs-disabled-header-background-normal: #352b47;
-    --kcs-disabled-header-foreground-text: #9187a6;
-    --kcs-disabled-header-decoration-frame: #5c5172; /* a disabled control's outline */
+    --crowberry-fen-kcs-active-header-background-normal: #352b47;
+    --crowberry-fen-kcs-active-header-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-active-header-decoration-frame: #6a5f80; /* hairlines between panels */
+    --crowberry-fen-kcs-inactive-header-background-normal: #2c233d;
+    --crowberry-fen-kcs-inactive-header-foreground-text: #c2bdce;
+    --crowberry-fen-kcs-inactive-header-decoration-frame: #6a5f80; /* hairlines between panels */
+    --crowberry-fen-kcs-disabled-header-background-normal: #352b47;
+    --crowberry-fen-kcs-disabled-header-foreground-text: #9187a6;
+    --crowberry-fen-kcs-disabled-header-decoration-frame: #5c5172; /* a disabled control's outline */
 
     /* Button: push buttons, combo boxes, check and switch indicators. */
-    --kcs-active-button-background-normal: #4d4362; /* a button's face, as in the KDE scheme */
-    --kcs-active-button-foreground-text: #ece7f7;
-    --kcs-active-button-decoration-frame: #9187a6;
-    --kcs-active-button-decoration-focus: #bc99ae;
-    --kcs-inactive-button-background-normal: #4d4362; /* a button's face, as in the KDE scheme */
-    --kcs-inactive-button-foreground-text: #ece7f7;
-    --kcs-inactive-button-decoration-frame: #9187a6;
-    --kcs-disabled-button-background-normal: #4d4362; /* a button's face, as in the KDE scheme */
-    --kcs-disabled-button-foreground-text: #9187a6;
-    --kcs-disabled-button-decoration-frame: #5c5172; /* a disabled control's outline */
+    --crowberry-fen-kcs-active-button-background-normal: #4d4362; /* a button's face, as in the KDE scheme */
+    --crowberry-fen-kcs-active-button-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-active-button-decoration-frame: #9187a6;
+    --crowberry-fen-kcs-active-button-decoration-focus: #bc99ae;
+    --crowberry-fen-kcs-inactive-button-background-normal: #4d4362; /* a button's face, as in the KDE scheme */
+    --crowberry-fen-kcs-inactive-button-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-inactive-button-decoration-frame: #9187a6;
+    --crowberry-fen-kcs-disabled-button-background-normal: #4d4362; /* a button's face, as in the KDE scheme */
+    --crowberry-fen-kcs-disabled-button-foreground-text: #9187a6;
+    --crowberry-fen-kcs-disabled-button-decoration-frame: #5c5172; /* a disabled control's outline */
 
     /* Complementary: the dark strip some apps put beside light content. */
-    --kcs-active-complementary-background-normal: #2c233d;
-    --kcs-active-complementary-foreground-text: #ece7f7;
-    --kcs-disabled-complementary-foreground-text: #9187a6;
+    --crowberry-fen-kcs-active-complementary-background-normal: #2c233d;
+    --crowberry-fen-kcs-active-complementary-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-disabled-complementary-foreground-text: #9187a6;
 
     /* Selection: Breeze's highlight. Selected rows, pressed buttons, checked boxes. */
-    --kcs-active-selection-background-normal: #dc67a7;
-    --kcs-active-selection-foreground-text: #2c233d;
+    --crowberry-fen-kcs-active-selection-background-normal: #dc67a7;
+    --crowberry-fen-kcs-active-selection-foreground-text: #2c233d;
 
     /* Tooltip. */
-    --kcs-active-tooltip-background-normal: #352b47;
-    --kcs-active-tooltip-foreground-text: #ece7f7;
-    --kcs-active-tooltip-decoration-frame: #6a5f80; /* the tooltip's hairline */
+    --crowberry-fen-kcs-active-tooltip-background-normal: #352b47;
+    --crowberry-fen-kcs-active-tooltip-foreground-text: #ece7f7;
+    --crowberry-fen-kcs-active-tooltip-decoration-frame: #6a5f80; /* the tooltip's hairline */
 
     /* Darkberry's own, used through the rewrites in build.mjs (UNION_REWRITES). */
-    --tab-indicator-color: #c6a9fc;
-    --focus-ring-color: #bc99ae;
+    --crowberry-fen-tab-indicator-color: #c6a9fc;
+    --crowberry-fen-focus-ring-color: #bc99ae;
 }

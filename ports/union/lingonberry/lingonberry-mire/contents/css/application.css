@@ -8,96 +8,96 @@
  */
 
 :root {
-    --window-active-background-color: var(--kcs-active-window-background-normal);
-    --window-active-text-color: var(--kcs-active-window-foreground-text);
-    --window-active-border-color: var(--kcs-active-window-decoration-frame);
+    --lingonberry-mire-window-active-background-color: var(--lingonberry-mire-kcs-active-window-background-normal);
+    --lingonberry-mire-window-active-text-color: var(--lingonberry-mire-kcs-active-window-foreground-text);
+    --lingonberry-mire-window-active-border-color: var(--lingonberry-mire-kcs-active-window-decoration-frame);
 
-    --window-inactive-background-color: var(--kcs-inactive-window-background-normal);
-    --window-inactive-text-color: var(--kcs-inactive-window-foreground-text);
-    --window-inactive-border-color: var(--kcs-inactive-window-decoration-frame);
+    --lingonberry-mire-window-inactive-background-color: var(--lingonberry-mire-kcs-inactive-window-background-normal);
+    --lingonberry-mire-window-inactive-text-color: var(--lingonberry-mire-kcs-inactive-window-foreground-text);
+    --lingonberry-mire-window-inactive-border-color: var(--lingonberry-mire-kcs-inactive-window-decoration-frame);
 
-    --header-active-background-color: var(--kcs-active-header-background-normal);
-    --header-active-text-color: var(--kcs-active-header-foreground-text);
-    --header-active-border-color: var(--kcs-active-header-decoration-frame);
+    --lingonberry-mire-header-active-background-color: var(--lingonberry-mire-kcs-active-header-background-normal);
+    --lingonberry-mire-header-active-text-color: var(--lingonberry-mire-kcs-active-header-foreground-text);
+    --lingonberry-mire-header-active-border-color: var(--lingonberry-mire-kcs-active-header-decoration-frame);
 
-    --header-inactive-background-color: var(--kcs-inactive-header-background-normal);
-    --header-inactive-text-color: var(--kcs-inactive-header-foreground-text);
-    --header-inactive-border-color: var(--kcs-inactive-header-decoration-frame);
+    --lingonberry-mire-header-inactive-background-color: var(--lingonberry-mire-kcs-inactive-header-background-normal);
+    --lingonberry-mire-header-inactive-text-color: var(--lingonberry-mire-kcs-inactive-header-foreground-text);
+    --lingonberry-mire-header-inactive-border-color: var(--lingonberry-mire-kcs-inactive-header-decoration-frame);
 
-    --complementary-active-background-color: var(--kcs-active-header-background-normal);
-    --complementary-active-text-color: var(--kcs-active-header-foreground-text);
-    --complementary-active-border-color: var(--kcs-active-header-decoration-frame);
+    --lingonberry-mire-complementary-active-background-color: var(--lingonberry-mire-kcs-active-header-background-normal);
+    --lingonberry-mire-complementary-active-text-color: var(--lingonberry-mire-kcs-active-header-foreground-text);
+    --lingonberry-mire-complementary-active-border-color: var(--lingonberry-mire-kcs-active-header-decoration-frame);
 
-    --complementary-inactive-background-color: var(--kcs-inactive-header-background-normal);
-    --complementary-inactive-text-color: var(--kcs-inactive-header-foreground-text);
-    --complementary-inactive-border-color: var(--kcs-inactive-header-decoration-frame);
+    --lingonberry-mire-complementary-inactive-background-color: var(--lingonberry-mire-kcs-inactive-header-background-normal);
+    --lingonberry-mire-complementary-inactive-text-color: var(--lingonberry-mire-kcs-inactive-header-foreground-text);
+    --lingonberry-mire-complementary-inactive-border-color: var(--lingonberry-mire-kcs-inactive-header-decoration-frame);
 }
 
 applicationwindow
 {
-    background-color: var(--window-active-background-color);
-    color: var(--window-active-text-color);
+    background-color: var(--lingonberry-mire-window-active-background-color);
+    color: var(--lingonberry-mire-window-active-text-color);
 
     &.inactive {
-        background-color: var(--window-inactive-background-color);
-        color: var(--window-inactive-text-color);
+        background-color: var(--lingonberry-mire-window-inactive-background-color);
+        color: var(--lingonberry-mire-window-inactive-text-color);
     }
 }
 
 page
 {
-    background-color: var(--window-background-color);
-    color: var(--window-text-color);
+    background-color: var(--lingonberry-mire-window-background-color);
+    color: var(--lingonberry-mire-window-text-color);
 
     .inactive & {
-        background-color: var(--window-inactive-background-color);
-        color: var(--window-inactive-text-color);
+        background-color: var(--lingonberry-mire-window-inactive-background-color);
+        color: var(--lingonberry-mire-window-inactive-text-color);
     }
 }
 
 toolbar
 {
     height: 46px; /* large-element-size + medium-spacing + large-spacing */
-    padding: var(--small-spacing);
-    padding-top: var(--medium-spacing);
-    padding-bottom: var(--large-spacing);
-    color: var(--window-active-text-color);
-    background-color: var(--window-active-background-color);
+    padding: var(--lingonberry-mire-small-spacing);
+    padding-top: var(--lingonberry-mire-medium-spacing);
+    padding-bottom: var(--lingonberry-mire-large-spacing);
+    color: var(--lingonberry-mire-window-active-text-color);
+    background-color: var(--lingonberry-mire-window-active-background-color);
 
     &.footer {
-        border-top: 1px solid var(--window-active-border-color);
+        border-top: 1px solid var(--lingonberry-mire-window-active-border-color);
     }
 
     &.header {
-        border-bottom: 1px solid var(--window-active-border-color);
+        border-bottom: 1px solid var(--lingonberry-mire-window-active-border-color);
     }
 
     .inactive & {
-        background-color: var(--window-inactive-background-color);
-        border-color: var(--window-inactive-border-color);
+        background-color: var(--lingonberry-mire-window-inactive-background-color);
+        border-color: var(--lingonberry-mire-window-inactive-border-color);
     }
 
     &.header,
     &[colorset="header"],
     [colorset="header"] &
     {
-        background-color: var(--header-active-background-color);
-        border-color: var(--header-active-border-color);
+        background-color: var(--lingonberry-mire-header-active-background-color);
+        border-color: var(--lingonberry-mire-header-active-border-color);
 
         .inactive & {
-            background-color: var(--header-inactive-background-color);
-            border-color: var(--header-inactive-border-color);
+            background-color: var(--lingonberry-mire-header-inactive-background-color);
+            border-color: var(--lingonberry-mire-header-inactive-border-color);
         }
     }
 
     &.header[colorset="window"]
     {
-        background-color: var(--window-active-background-color);
-        border-color: var(--window-active-border-color);
+        background-color: var(--lingonberry-mire-window-active-background-color);
+        border-color: var(--lingonberry-mire-window-active-border-color);
 
         .inactive & {
-            background-color: var(--window-inactive-background-color);
-            border-color: var(--window-inactive-border-color);
+            background-color: var(--lingonberry-mire-window-inactive-background-color);
+            border-color: var(--lingonberry-mire-window-inactive-border-color);
         }
     }
 
@@ -105,14 +105,14 @@ toolbar
     [colorset="complementary"] &,
     &.header[colorset="complementary"]
     {
-        background-color: var(--complementary-active-background-color);
-        color: var(--complementary-active-text-color);
-        border-color: var(--complementary-active-border-color);
+        background-color: var(--lingonberry-mire-complementary-active-background-color);
+        color: var(--lingonberry-mire-complementary-active-text-color);
+        border-color: var(--lingonberry-mire-complementary-active-border-color);
 
         .inactive & {
-            background-color: var(--complementary-inactive-background-color);
-            color: var(--complementary-inactive-text-color);
-            border-color: var(--complementary-active-border-color);
+            background-color: var(--lingonberry-mire-complementary-inactive-background-color);
+            color: var(--lingonberry-mire-complementary-inactive-text-color);
+            border-color: var(--lingonberry-mire-complementary-active-border-color);
         }
     }
 
@@ -121,7 +121,7 @@ toolbar
         height: 1px;
         border: none;
         border-radius: 0px;
-        background-color: var(--window-border-color);
+        background-color: var(--lingonberry-mire-window-border-color);
         padding: 0px;
     }
 
@@ -130,41 +130,41 @@ toolbar
         height: 4px;
         border: none;
         border-radius: 0px;
-        border-left: 1px solid var(--window-border-color);
-        border-right: 1px solid var(--window-border-color);
+        border-left: 1px solid var(--lingonberry-mire-window-border-color);
+        border-right: 1px solid var(--lingonberry-mire-window-border-color);
         padding: 0px;
     }
 }
 
 drawer
 {
-    color: var(--view-text-color);
-    background-color: var(--view-background-color);
+    color: var(--lingonberry-mire-view-text-color);
+    background-color: var(--lingonberry-mire-view-background-color);
 
     &.modal {
-        color: var(--window-text-color);
-        background-color: var(--window-active-background-color);
+        color: var(--lingonberry-mire-window-text-color);
+        background-color: var(--lingonberry-mire-window-active-background-color);
 
         .inactive & {
-            background-color: var(--window-inactive-background-color);
+            background-color: var(--lingonberry-mire-window-inactive-background-color);
         }
     }
 }
 
 scrollview {
     &.vertical-scroll {
-        padding-right: var(--scrollbar-size);
+        padding-right: var(--lingonberry-mire-scrollbar-size);
     }
 
     &.horizontal-scroll {
-        padding-bottom: var(--scrollbar-size);
+        padding-bottom: var(--lingonberry-mire-scrollbar-size);
     }
 
     &.framed-background
     {
-        background-color: var(--view-background-color);
-        border: 1px solid var(--view-border-color);
-        border-radius: var(--corner-radius);
+        background-color: var(--lingonberry-mire-view-background-color);
+        border: 1px solid var(--lingonberry-mire-view-border-color);
+        border-radius: var(--lingonberry-mire-corner-radius);
     }
 }
 
@@ -172,7 +172,7 @@ splitview {
     & handle {
         width: 1px;
         height: 1px;
-        background-color: var(--window-border-color);
+        background-color: var(--lingonberry-mire-window-border-color);
     }
 
     &.horizontal handle {
@@ -187,28 +187,28 @@ splitview {
 }
 
 pageindicator {
-    spacing: var(--small-spacing);
+    spacing: var(--lingonberry-mire-small-spacing);
 }
 
 pageindicatordelegate {
-    background-color: var(--indicator-color);
+    background-color: var(--lingonberry-mire-indicator-color);
     width: 8px;
     height: 8px;
     border-radius: 4px;
 
     &:pressed {
-        background-color: var(--indicator-press-color);
+        background-color: var(--lingonberry-mire-indicator-press-color);
     }
 
     &.current {
-        background-color: var(--indicator-current-color);
+        background-color: var(--lingonberry-mire-indicator-current-color);
     }
 }
 
 pane
 {
-    padding: var(--large-spacing);
-    background-color: var(--window-background-color);
+    padding: var(--lingonberry-mire-large-spacing);
+    background-color: var(--lingonberry-mire-window-background-color);
 }
 
 frame,
@@ -216,17 +216,17 @@ groupbox,
 framemenu,
 framewindow
 {
-    padding: var(--large-spacing);
-    border: 1px solid var(--window-border-color);
-    border-radius: var(--corner-radius);
+    padding: var(--lingonberry-mire-large-spacing);
+    border: 1px solid var(--lingonberry-mire-window-border-color);
+    border-radius: var(--lingonberry-mire-corner-radius);
     .inactive & {
-        border-color: var(--window-inactive-border-color);
+        border-color: var(--lingonberry-mire-window-inactive-border-color);
     }
 }
 
 splitter {
     width: 1px;
-    background-color: var(--window-border-color);
+    background-color: var(--lingonberry-mire-window-border-color);
 }
 
 frame,
@@ -238,27 +238,27 @@ scrollview,
 textfield,
 textarea {
     &:visual-focus {
-        border: 1px solid var(--highlight-color);
+        border: 1px solid var(--lingonberry-mire-highlight-color);
     }
     &[shape="no-frame"] {
         border: none;
     }
     &[shape="panel"],
     &[shape="box"] {
-        border-radius: var(--corner-radius);
-        border: 1px solid var(--window-border-color);
-        background-color: var(--view-background-color);
+        border-radius: var(--lingonberry-mire-corner-radius);
+        border: 1px solid var(--lingonberry-mire-window-border-color);
+        background-color: var(--lingonberry-mire-view-background-color);
 
         .inactive & {
-            background-color: var(--window-inactive-background-color);
-            border-color: var(--window-inactive-border-color);
+            background-color: var(--lingonberry-mire-window-inactive-background-color);
+            border-color: var(--lingonberry-mire-window-inactive-border-color);
         }
     }
     &[shape="vertical-line"],
     &[shape="horizontal-line"] {
         border-radius: 0px;
         border: none;
-        background-color: var(--window-border-color);
+        background-color: var(--lingonberry-mire-window-border-color);
         padding: 0px;
         inset: 1px;
     }
@@ -281,53 +281,53 @@ textarea {
         border-radius: 0px;
     }
     &.left-edge {
-        border-left: 1px solid var(--window-border-color);
+        border-left: 1px solid var(--lingonberry-mire-window-border-color);
     }
     &.right-edge {
-        border-right: 1px solid var(--window-border-color);
+        border-right: 1px solid var(--lingonberry-mire-window-border-color);
     }
     &.top-edge {
-        border-top: 1px solid var(--window-border-color);
+        border-top: 1px solid var(--lingonberry-mire-window-border-color);
     }
     &.bottom-edge {
-        border-bottom: 1px solid var(--window-border-color);
+        border-bottom: 1px solid var(--lingonberry-mire-window-border-color);
     }
 }
 
 groupbox {
-    padding: var(--small-spacing);
-    border: 1px solid var(--window-border-color);
-    border-radius: var(--corner-radius);
-    color: var(--window-text-color);
-    background-color: var(--window-background-color);
+    padding: var(--lingonberry-mire-small-spacing);
+    border: 1px solid var(--lingonberry-mire-window-border-color);
+    border-radius: var(--lingonberry-mire-corner-radius);
+    color: var(--lingonberry-mire-window-text-color);
+    background-color: var(--lingonberry-mire-window-background-color);
 
     & > header {
-        color: var(--window-text-color);
+        color: var(--lingonberry-mire-window-text-color);
     }
     icon-alignment: content start start 0;
     text-alignment: content center start 0;
-    spacing: var(--small-spacing);
+    spacing: var(--lingonberry-mire-small-spacing);
     width: 200px;
 }
 
 
 dockwidget {
-    width: var(--small-element-size);
-    height: var(--small-element-size);
-    color: var(--header-text-color);
-    background-color: var(--header-background-color);
+    width: var(--lingonberry-mire-small-element-size);
+    height: var(--lingonberry-mire-small-element-size);
+    color: var(--lingonberry-mire-header-text-color);
+    background-color: var(--lingonberry-mire-header-background-color);
     icon-alignment: content center center 0;
     text-alignment: content center center 1;
-    padding: var(--small-spacing);
+    padding: var(--lingonberry-mire-small-spacing);
     &:visual-focus,
     &:active-focus {
-        border: 1px solid var(--highlight-color);
+        border: 1px solid var(--lingonberry-mire-highlight-color);
     }
 
     floatbutton,
     closebutton {
-        width: var(--small-element-size);
-        height: var(--small-element-size);
+        width: var(--lingonberry-mire-small-element-size);
+        height: var(--lingonberry-mire-small-element-size);
     }
 
     floatbutton {
@@ -342,8 +342,8 @@ dockwidget {
 }
 
 scrollareacorner {
-    background-color: var(--window-background-color);
-    color: var(--window-text-color);
+    background-color: var(--lingonberry-mire-window-background-color);
+    color: var(--lingonberry-mire-window-text-color);
 }
 
 panel,
@@ -355,19 +355,19 @@ groupbox {
 }
 
 rubberband {
-    background-color: var(--highlight-hover-color);
-    border: 1px solid var(--highlight-color);
-    border-radius: var(--corner-radius);
+    background-color: var(--lingonberry-mire-highlight-hover-color);
+    border: 1px solid var(--lingonberry-mire-highlight-color);
+    border-radius: var(--lingonberry-mire-corner-radius);
 }
 
 titlebar {
-    width: var(--small-element-size);
-    height: var(--small-element-size);
-    color: var(--header-text-color);
-    background-color: var(--header-background-color);
+    width: var(--lingonberry-mire-small-element-size);
+    height: var(--lingonberry-mire-small-element-size);
+    color: var(--lingonberry-mire-header-text-color);
+    background-color: var(--lingonberry-mire-header-background-color);
     icon-alignment: content center fill 0;
     text-alignment: content center fill 1;
-    icon-size: var(--icon-size-small);
+    icon-size: var(--lingonberry-mire-icon-size-small);
 
     systemmenu,
     minimizebutton,
@@ -376,8 +376,8 @@ titlebar {
     normalbutton,
     shadebutton,
     helpbutton {
-        width: var(--small-element-size);
-        height: var(--small-element-size);
+        width: var(--lingonberry-mire-small-element-size);
+        height: var(--lingonberry-mire-small-element-size);
     }
 
     systemmenu {

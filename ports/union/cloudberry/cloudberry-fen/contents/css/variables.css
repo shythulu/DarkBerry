@@ -9,102 +9,102 @@
 
 :root {
     /* Standard Sizes */
-    --minimal-spacing: 2px;
-    --small-spacing: 4px;
-    --medium-spacing: 6px;
-    --large-spacing: 8px;
-    --grid-unit: 18px;
-    --corner-radius: 5px;
+    --cloudberry-fen-minimal-spacing: 2px;
+    --cloudberry-fen-small-spacing: 4px;
+    --cloudberry-fen-medium-spacing: 6px;
+    --cloudberry-fen-large-spacing: 8px;
+    --cloudberry-fen-grid-unit: 18px;
+    --cloudberry-fen-corner-radius: 5px;
 
     /* Icon sizes */
-    --icon-size-small: 16px;
-    --icon-size-smallmedium: 22px;
-    --icon-size-medium: 32px;
-    --icon-size-large: 48px;
+    --cloudberry-fen-icon-size-small: 16px;
+    --cloudberry-fen-icon-size-smallmedium: 22px;
+    --cloudberry-fen-icon-size-medium: 32px;
+    --cloudberry-fen-icon-size-large: 48px;
 
     /* Default item sizes */
-    --small-element-size: 16px;
-    --medium-element-size: 24px;
-    --large-element-size: 32px;
-    --scrollbar-size: 20px;
-    --non-interactive-scrollbar-size: 10px;
-    --menu-item-width: 150px;
-    --text-field-width: 200px;
+    --cloudberry-fen-small-element-size: 16px;
+    --cloudberry-fen-medium-element-size: 24px;
+    --cloudberry-fen-large-element-size: 32px;
+    --cloudberry-fen-scrollbar-size: 20px;
+    --cloudberry-fen-non-interactive-scrollbar-size: 10px;
+    --cloudberry-fen-menu-item-width: 150px;
+    --cloudberry-fen-text-field-width: 200px;
 
     /* Colors */
-    --highlight-color: var(--kcs-active-selection-background-normal);
-    --highlight-text-color: var(--kcs-active-selection-foreground-text);
-    --highlight-hover-color: modify-color(var(--highlight-color) set-alpha 0.3);
+    --cloudberry-fen-highlight-color: var(--cloudberry-fen-kcs-active-selection-background-normal);
+    --cloudberry-fen-highlight-text-color: var(--cloudberry-fen-kcs-active-selection-foreground-text);
+    --cloudberry-fen-highlight-hover-color: modify-color(var(--cloudberry-fen-highlight-color) set-alpha 0.3);
 
-    --window-text-color: var(--kcs-active-window-foreground-text);
-    --window-background-color: var(--kcs-active-window-background-normal);
-    --window-background-alternate-color: var(--kcs-active-window-background-alternate);
-    --window-border-color: var(--kcs-active-window-decoration-frame);
-    --window-highlight-color: mix(var(--window-background-color), var(--highlight-color), 0.5);
-    --window-border-highlight-color: var(--highlight-color);
+    --cloudberry-fen-window-text-color: var(--cloudberry-fen-kcs-active-window-foreground-text);
+    --cloudberry-fen-window-background-color: var(--cloudberry-fen-kcs-active-window-background-normal);
+    --cloudberry-fen-window-background-alternate-color: var(--cloudberry-fen-kcs-active-window-background-alternate);
+    --cloudberry-fen-window-border-color: var(--cloudberry-fen-kcs-active-window-decoration-frame);
+    --cloudberry-fen-window-highlight-color: mix(var(--cloudberry-fen-window-background-color), var(--cloudberry-fen-highlight-color), 0.5);
+    --cloudberry-fen-window-border-highlight-color: var(--cloudberry-fen-highlight-color);
 
-    --view-text-color: var(--kcs-active-view-foreground-text);
-    --view-background-color: var(--kcs-active-view-background-normal);
-    --view-background-alternate-color: var(--kcs-active-view-background-alternate);
-    --view-border-color: var(--kcs-active-view-decoration-frame);
-    --view-highlight-color: mix(var(--view-background-color), var(--highlight-color), 0.5);
+    --cloudberry-fen-view-text-color: var(--cloudberry-fen-kcs-active-view-foreground-text);
+    --cloudberry-fen-view-background-color: var(--cloudberry-fen-kcs-active-view-background-normal);
+    --cloudberry-fen-view-background-alternate-color: var(--cloudberry-fen-kcs-active-view-background-alternate);
+    --cloudberry-fen-view-border-color: var(--cloudberry-fen-kcs-active-view-decoration-frame);
+    --cloudberry-fen-view-highlight-color: mix(var(--cloudberry-fen-view-background-color), var(--cloudberry-fen-highlight-color), 0.5);
 
-    --header-text-color: var(--kcs-active-header-foreground-text);
-    --header-background-color: var(--kcs-active-header-background-normal);
-    --header-background-inactive-color: var(--kcs-inactive-header-background-normal);
-    --header-border-color: var(--kcs-active-header-decoration-frame);
+    --cloudberry-fen-header-text-color: var(--cloudberry-fen-kcs-active-header-foreground-text);
+    --cloudberry-fen-header-background-color: var(--cloudberry-fen-kcs-active-header-background-normal);
+    --cloudberry-fen-header-background-inactive-color: var(--cloudberry-fen-kcs-inactive-header-background-normal);
+    --cloudberry-fen-header-border-color: var(--cloudberry-fen-kcs-active-header-decoration-frame);
 
-    --complementary-text-color: var(--kcs-active-complementary-foreground-text);
-    --complementary-background-color: var(--kcs-active-complementary-background-normal);
+    --cloudberry-fen-complementary-text-color: var(--cloudberry-fen-kcs-active-complementary-foreground-text);
+    --cloudberry-fen-complementary-background-color: var(--cloudberry-fen-kcs-active-complementary-background-normal);
 
-    --positive-text: var(--kcs-active-view-foreground-positive);
-    --neutral-text: var(--kcs-active-view-foreground-neutral);
-    --negative-text: var(--kcs-active-view-foreground-negative);
-    --positive-background: var(--kcs-active-view-background-positive);
-    --neutral-background: var(--kcs-active-view-background-neutral);
-    --negative-background: var(--kcs-active-view-background-negative);
+    --cloudberry-fen-positive-text: var(--cloudberry-fen-kcs-active-view-foreground-positive);
+    --cloudberry-fen-neutral-text: var(--cloudberry-fen-kcs-active-view-foreground-neutral);
+    --cloudberry-fen-negative-text: var(--cloudberry-fen-kcs-active-view-foreground-negative);
+    --cloudberry-fen-positive-background: var(--cloudberry-fen-kcs-active-view-background-positive);
+    --cloudberry-fen-neutral-background: var(--cloudberry-fen-kcs-active-view-background-neutral);
+    --cloudberry-fen-negative-background: var(--cloudberry-fen-kcs-active-view-background-negative);
 
-    --changed-foreground: var(--neutral-text);
-    --changed-background: var(--neutral-background);
+    --cloudberry-fen-changed-foreground: var(--cloudberry-fen-neutral-text);
+    --cloudberry-fen-changed-background: var(--cloudberry-fen-neutral-background);
 
-    --card-background-color: var(--view-background-color);
-    --card-text-color: var(--view-text-color);
-    --card-border-color: var(--view-border-color);
-    --card-hover-color: mix(var(--card-background-color), var(--highlight-color), 0.1);
-    --card-pressed-color: mix(var(--card-background-color), var(--highlight-color), 0.3);
+    --cloudberry-fen-card-background-color: var(--cloudberry-fen-view-background-color);
+    --cloudberry-fen-card-text-color: var(--cloudberry-fen-view-text-color);
+    --cloudberry-fen-card-border-color: var(--cloudberry-fen-view-border-color);
+    --cloudberry-fen-card-hover-color: mix(var(--cloudberry-fen-card-background-color), var(--cloudberry-fen-highlight-color), 0.1);
+    --cloudberry-fen-card-pressed-color: mix(var(--cloudberry-fen-card-background-color), var(--cloudberry-fen-highlight-color), 0.3);
 
-    --focus-outline-alpha: 0.3;
-    --focus-color: modify-color(var(--kcs-active-window-decoration-focus) set-alpha var(--focus-outline-alpha));
+    --cloudberry-fen-focus-outline-alpha: 0.3;
+    --cloudberry-fen-focus-color: modify-color(var(--cloudberry-fen-kcs-active-window-decoration-focus) set-alpha var(--cloudberry-fen-focus-outline-alpha));
 
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --cloudberry-fen-shadow-color: rgba(0, 0, 0, 0.1);
 
     /* Disabled colors */
-    --window-disabled-text-color: var(--kcs-disabled-window-foreground-text);
-    --window-disabled-background-color: var(--kcs-disabled-window-background-normal);
-    --window-disabled-border-color: var(--kcs-disabled-window-decoration-frame);
+    --cloudberry-fen-window-disabled-text-color: var(--cloudberry-fen-kcs-disabled-window-foreground-text);
+    --cloudberry-fen-window-disabled-background-color: var(--cloudberry-fen-kcs-disabled-window-background-normal);
+    --cloudberry-fen-window-disabled-border-color: var(--cloudberry-fen-kcs-disabled-window-decoration-frame);
 
-    --view-disabled-text-color: var(--kcs-disabled-view-foreground-text);
-    --view-disabled-background-color: var(--kcs-disabled-view-background-normal);
-    --view-disabled-border-color: var(--kcs-disabled-view-decoration-frame);
+    --cloudberry-fen-view-disabled-text-color: var(--cloudberry-fen-kcs-disabled-view-foreground-text);
+    --cloudberry-fen-view-disabled-background-color: var(--cloudberry-fen-kcs-disabled-view-background-normal);
+    --cloudberry-fen-view-disabled-border-color: var(--cloudberry-fen-kcs-disabled-view-decoration-frame);
 
-    --header-disabled-text-color: var(--kcs-disabled-header-foreground-text);
-    --header-disabled-background-color: var(--kcs-disabled-header-background-normal);
-    --header-disabled-border-color: var(--kcs-disabled-header-decoration-frame);
+    --cloudberry-fen-header-disabled-text-color: var(--cloudberry-fen-kcs-disabled-header-foreground-text);
+    --cloudberry-fen-header-disabled-background-color: var(--cloudberry-fen-kcs-disabled-header-background-normal);
+    --cloudberry-fen-header-disabled-border-color: var(--cloudberry-fen-kcs-disabled-header-decoration-frame);
 
-    --complementary-disabled-text-color: var(--kcs-disabled-complementary-foreground-text);
+    --cloudberry-fen-complementary-disabled-text-color: var(--cloudberry-fen-kcs-disabled-complementary-foreground-text);
 
-    --highlight-disabled-color: mix(var(--window-disabled-background-color), var(--highlight-color), 0.2);
-    --highlight-disabled-text-color: mix(var(--window-disabled-text-color), var(--highlight-text-color), 0.2);
+    --cloudberry-fen-highlight-disabled-color: mix(var(--cloudberry-fen-window-disabled-background-color), var(--cloudberry-fen-highlight-color), 0.2);
+    --cloudberry-fen-highlight-disabled-text-color: mix(var(--cloudberry-fen-window-disabled-text-color), var(--cloudberry-fen-highlight-text-color), 0.2);
 
-    --card-disabled-background-color: var(--view-disabled-background-color);
-    --card-disabled-text-color: var(--view-disabled-text-color);
-    --card-disabled-border-color: var(--view-disabled-border-color);
+    --cloudberry-fen-card-disabled-background-color: var(--cloudberry-fen-view-disabled-background-color);
+    --cloudberry-fen-card-disabled-text-color: var(--cloudberry-fen-view-disabled-text-color);
+    --cloudberry-fen-card-disabled-border-color: var(--cloudberry-fen-view-disabled-border-color);
 
     /* Standard Elements */
-    --focus-outline: 2px solid var(--focus-ring-color);
-    --dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+    --cloudberry-fen-focus-outline: 2px solid var(--cloudberry-fen-focus-ring-color);
+    --cloudberry-fen-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
 
-    --indicator-color: modify-color(var(--window-text-color) set-alpha 0.4);
-    --indicator-press-color: modify-color(var(--window-text-color) set-alpha 0.7);
-    --indicator-current-color: modify-color(var(--window-text-color) set-alpha 0.95);
+    --cloudberry-fen-indicator-color: modify-color(var(--cloudberry-fen-window-text-color) set-alpha 0.4);
+    --cloudberry-fen-indicator-press-color: modify-color(var(--cloudberry-fen-window-text-color) set-alpha 0.7);
+    --cloudberry-fen-indicator-current-color: modify-color(var(--cloudberry-fen-window-text-color) set-alpha 0.95);
 }

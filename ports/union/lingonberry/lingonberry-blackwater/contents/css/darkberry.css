@@ -24,6 +24,10 @@
  * shades Breeze mixes from them (hover, pressed, checked, tracks) are its own
  * arithmetic, kept as written. Shapes, spacing and sizes are Breeze's.
  *
+ * Every variable carries the style's id as a prefix, so --kcs-* reads --lingonberry-blackwater-kcs-*
+ * in the installed files. Union 6.8 shares variables across every style an app loads,
+ * so without the prefix its Application Style page shows each preview in one flavour.
+ *
  * Deliberately left as Breeze has it:
  *   shadows: black at 10 to 30%, lighting rather than colour.
  *   the menu-item hover fill: Breeze paints it with its focus colour at 30%.
@@ -40,71 +44,71 @@
 
 :root {
     /* Window: dialogs, toolbars, the chrome around content. */
-    --kcs-active-window-background-normal: #200b12;
-    --kcs-active-window-background-alternate: #301820; /* alternating rows in chrome lists */
-    --kcs-active-window-foreground-text: #f5dee4;
-    --kcs-active-window-decoration-frame: #4b2c35; /* hairlines between panels */
-    --kcs-active-window-decoration-focus: #b2838c;
-    --kcs-inactive-window-background-normal: #200b12;
-    --kcs-inactive-window-foreground-text: #f5dee4;
-    --kcs-inactive-window-decoration-frame: #4b2c35; /* hairlines between panels */
-    --kcs-disabled-window-background-normal: #200b12;
-    --kcs-disabled-window-foreground-text: #90757c;
-    --kcs-disabled-window-decoration-frame: #3d212a; /* a disabled control's outline */
+    --lingonberry-blackwater-kcs-active-window-background-normal: #200b12;
+    --lingonberry-blackwater-kcs-active-window-background-alternate: #301820; /* alternating rows in chrome lists */
+    --lingonberry-blackwater-kcs-active-window-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-active-window-decoration-frame: #4b2c35; /* hairlines between panels */
+    --lingonberry-blackwater-kcs-active-window-decoration-focus: #b2838c;
+    --lingonberry-blackwater-kcs-inactive-window-background-normal: #200b12;
+    --lingonberry-blackwater-kcs-inactive-window-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-inactive-window-decoration-frame: #4b2c35; /* hairlines between panels */
+    --lingonberry-blackwater-kcs-disabled-window-background-normal: #200b12;
+    --lingonberry-blackwater-kcs-disabled-window-foreground-text: #90757c;
+    --lingonberry-blackwater-kcs-disabled-window-decoration-frame: #3d212a; /* a disabled control's outline */
 
     /* View: lists, text fields, the content areas. */
-    --kcs-active-view-background-normal: #261017;
-    --kcs-active-view-background-alternate: #301820;
-    --kcs-active-view-foreground-text: #f5dee4;
-    --kcs-active-view-decoration-frame: #90757c;
-    --kcs-disabled-view-background-normal: #261017;
-    --kcs-disabled-view-foreground-text: #90757c;
-    --kcs-disabled-view-decoration-frame: #3d212a; /* a disabled control's outline */
-    --kcs-active-view-foreground-positive: #a3daa3;
-    --kcs-active-view-foreground-neutral: #e8c98a;
-    --kcs-active-view-foreground-negative: #f06a6a;
-    --kcs-active-view-background-positive: #28171b;
-    --kcs-active-view-background-neutral: #2c1619;
-    --kcs-active-view-background-negative: #2c1117;
+    --lingonberry-blackwater-kcs-active-view-background-normal: #261017;
+    --lingonberry-blackwater-kcs-active-view-background-alternate: #301820;
+    --lingonberry-blackwater-kcs-active-view-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-active-view-decoration-frame: #90757c;
+    --lingonberry-blackwater-kcs-disabled-view-background-normal: #261017;
+    --lingonberry-blackwater-kcs-disabled-view-foreground-text: #90757c;
+    --lingonberry-blackwater-kcs-disabled-view-decoration-frame: #3d212a; /* a disabled control's outline */
+    --lingonberry-blackwater-kcs-active-view-foreground-positive: #a3daa3;
+    --lingonberry-blackwater-kcs-active-view-foreground-neutral: #e8c98a;
+    --lingonberry-blackwater-kcs-active-view-foreground-negative: #f06a6a;
+    --lingonberry-blackwater-kcs-active-view-background-positive: #28171b;
+    --lingonberry-blackwater-kcs-active-view-background-neutral: #2c1619;
+    --lingonberry-blackwater-kcs-active-view-background-negative: #2c1117;
 
     /* Header: title bars, the strip above a page. */
-    --kcs-active-header-background-normal: #200b12;
-    --kcs-active-header-foreground-text: #f5dee4;
-    --kcs-active-header-decoration-frame: #4b2c35; /* hairlines between panels */
-    --kcs-inactive-header-background-normal: #1a070d;
-    --kcs-inactive-header-foreground-text: #ccb5bb;
-    --kcs-inactive-header-decoration-frame: #4b2c35; /* hairlines between panels */
-    --kcs-disabled-header-background-normal: #200b12;
-    --kcs-disabled-header-foreground-text: #90757c;
-    --kcs-disabled-header-decoration-frame: #3d212a; /* a disabled control's outline */
+    --lingonberry-blackwater-kcs-active-header-background-normal: #200b12;
+    --lingonberry-blackwater-kcs-active-header-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-active-header-decoration-frame: #4b2c35; /* hairlines between panels */
+    --lingonberry-blackwater-kcs-inactive-header-background-normal: #1a070d;
+    --lingonberry-blackwater-kcs-inactive-header-foreground-text: #ccb5bb;
+    --lingonberry-blackwater-kcs-inactive-header-decoration-frame: #4b2c35; /* hairlines between panels */
+    --lingonberry-blackwater-kcs-disabled-header-background-normal: #200b12;
+    --lingonberry-blackwater-kcs-disabled-header-foreground-text: #90757c;
+    --lingonberry-blackwater-kcs-disabled-header-decoration-frame: #3d212a; /* a disabled control's outline */
 
     /* Button: push buttons, combo boxes, check and switch indicators. */
-    --kcs-active-button-background-normal: #301820; /* a button's face, as in the KDE scheme */
-    --kcs-active-button-foreground-text: #f5dee4;
-    --kcs-active-button-decoration-frame: #90757c;
-    --kcs-active-button-decoration-focus: #b2838c;
-    --kcs-inactive-button-background-normal: #301820; /* a button's face, as in the KDE scheme */
-    --kcs-inactive-button-foreground-text: #f5dee4;
-    --kcs-inactive-button-decoration-frame: #90757c;
-    --kcs-disabled-button-background-normal: #301820; /* a button's face, as in the KDE scheme */
-    --kcs-disabled-button-foreground-text: #90757c;
-    --kcs-disabled-button-decoration-frame: #3d212a; /* a disabled control's outline */
+    --lingonberry-blackwater-kcs-active-button-background-normal: #301820; /* a button's face, as in the KDE scheme */
+    --lingonberry-blackwater-kcs-active-button-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-active-button-decoration-frame: #90757c;
+    --lingonberry-blackwater-kcs-active-button-decoration-focus: #b2838c;
+    --lingonberry-blackwater-kcs-inactive-button-background-normal: #301820; /* a button's face, as in the KDE scheme */
+    --lingonberry-blackwater-kcs-inactive-button-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-inactive-button-decoration-frame: #90757c;
+    --lingonberry-blackwater-kcs-disabled-button-background-normal: #301820; /* a button's face, as in the KDE scheme */
+    --lingonberry-blackwater-kcs-disabled-button-foreground-text: #90757c;
+    --lingonberry-blackwater-kcs-disabled-button-decoration-frame: #3d212a; /* a disabled control's outline */
 
     /* Complementary: the dark strip some apps put beside light content. */
-    --kcs-active-complementary-background-normal: #1a070d;
-    --kcs-active-complementary-foreground-text: #f5dee4;
-    --kcs-disabled-complementary-foreground-text: #90757c;
+    --lingonberry-blackwater-kcs-active-complementary-background-normal: #1a070d;
+    --lingonberry-blackwater-kcs-active-complementary-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-disabled-complementary-foreground-text: #90757c;
 
     /* Selection: Breeze's highlight. Selected rows, pressed buttons, checked boxes. */
-    --kcs-active-selection-background-normal: #ba4889;
-    --kcs-active-selection-foreground-text: #ffffff;
+    --lingonberry-blackwater-kcs-active-selection-background-normal: #ba4889;
+    --lingonberry-blackwater-kcs-active-selection-foreground-text: #ffffff;
 
     /* Tooltip. */
-    --kcs-active-tooltip-background-normal: #200b12;
-    --kcs-active-tooltip-foreground-text: #f5dee4;
-    --kcs-active-tooltip-decoration-frame: #4b2c35; /* the tooltip's hairline */
+    --lingonberry-blackwater-kcs-active-tooltip-background-normal: #200b12;
+    --lingonberry-blackwater-kcs-active-tooltip-foreground-text: #f5dee4;
+    --lingonberry-blackwater-kcs-active-tooltip-decoration-frame: #4b2c35; /* the tooltip's hairline */
 
     /* Darkberry's own, used through the rewrites in build.mjs (UNION_REWRITES). */
-    --tab-indicator-color: #fc7ca8;
-    --focus-ring-color: #b2838c;
+    --lingonberry-blackwater-tab-indicator-color: #fc7ca8;
+    --lingonberry-blackwater-focus-ring-color: #b2838c;
 }

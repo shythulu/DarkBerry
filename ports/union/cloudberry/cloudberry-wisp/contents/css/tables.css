@@ -5,55 +5,55 @@
 
 treeviewdelegate,
 tableviewdelegate {
-    width: var(--medium-element-size);
-    height: var(--medium-element-size);
+    width: var(--cloudberry-wisp-medium-element-size);
+    height: var(--cloudberry-wisp-medium-element-size);
 
-    padding: var(--small-spacing);
-    spacing: var(--small-spacing);
+    padding: var(--cloudberry-wisp-small-spacing);
+    spacing: var(--cloudberry-wisp-small-spacing);
     border-radius: 0px;
 
     layout-alignment: content fill center 0;
     icon-alignment: content start center 1;
     text-alignment: content fill center 2;
 
-    icon-width: var(--icon-size-small);
-    icon-height: var(--icon-size-small);
+    icon-width: var(--cloudberry-wisp-icon-size-small);
+    icon-height: var(--cloudberry-wisp-icon-size-small);
 
-    color: var(--view-text-color);
-    background-color: var(--view-background-color);
+    color: var(--cloudberry-wisp-view-text-color);
+    background-color: var(--cloudberry-wisp-view-background-color);
 
     &.alternating-colors {
-        background-color: var(--view-background-alternate-color);
+        background-color: var(--cloudberry-wisp-view-background-alternate-color);
     }
 
     &:hovered,
     &:active-focus {
-        border: 1px solid var(--highlight-color);
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
         background-color: transparent;
     }
 
     &:visual-focus {
-        outline: 1px solid var(--focus-ring-color);
+        outline: 1px solid var(--cloudberry-wisp-focus-ring-color);
     }
 
     &:highlighted,
     &.selected {
-        color: var(--highlight-text-color);
-        border: 1px solid var(--highlight-color);
-        background-color: var(--highlight-color);
+        color: var(--cloudberry-wisp-highlight-text-color);
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
+        background-color: var(--cloudberry-wisp-highlight-color);
     }
 
     &.selected > label {
-        color: var(--highlight-text-color);
+        color: var(--cloudberry-wisp-highlight-text-color);
     }
 
     &.editing {
-        border: 1px solid var(--highlight-color);
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
     }
 
     &:disabled {
-        color: var(--view-disabled-text-color);
-        background-color: var(--view-disabled-background-color);
+        color: var(--cloudberry-wisp-view-disabled-text-color);
+        background-color: var(--cloudberry-wisp-view-disabled-background-color);
     }
 }
 
@@ -67,14 +67,14 @@ treeviewdelegate {
     }
 
     & > indentation {
-        width: var(--medium-element-size);
+        width: var(--cloudberry-wisp-medium-element-size);
         layout-alignment: item start center 0;
     }
 
     & > indicator {
-        width: var(--medium-element-size);
-        height: var(--icon-size-small);
-        color: var(--view-text-color);
+        width: var(--cloudberry-wisp-medium-element-size);
+        height: var(--cloudberry-wisp-icon-size-small);
+        color: var(--cloudberry-wisp-view-text-color);
         icon-name: "arrow-right-symbolic";
         layout-alignment: item start center 1;
     }
@@ -92,26 +92,26 @@ treeviewdelegate {
     }
 
     &:disabled {
-        color: var(--view-disabled-text-color);
-        background-color: var(--view-disabled-background-color);
+        color: var(--cloudberry-wisp-view-disabled-text-color);
+        background-color: var(--cloudberry-wisp-view-disabled-background-color);
 
         & > indicator {
-            color: var(--view-disabled-text-color);
+            color: var(--cloudberry-wisp-view-disabled-text-color);
         }
     }
 }
 
 headerviewdelegate
 {
-    width: var(--large-element-size);
-    height: var(--large-element-size);
-    padding: var(--small-spacing);
+    width: var(--cloudberry-wisp-large-element-size);
+    height: var(--cloudberry-wisp-large-element-size);
+    padding: var(--cloudberry-wisp-small-spacing);
 
-    border-bottom: 1px solid var(--button-active-border-color);
-    border-right: 1px solid var(--button-active-border-color);
+    border-bottom: 1px solid var(--cloudberry-wisp-button-active-border-color);
+    border-right: 1px solid var(--cloudberry-wisp-button-active-border-color);
 
-    background-color: var(--button-active-background-color);
-    color: var(--button-active-text-color);
+    background-color: var(--cloudberry-wisp-button-active-background-color);
+    color: var(--cloudberry-wisp-button-active-text-color);
 
     layout-alignment: content fill center 0;
     icon-alignment: content center center 0;
@@ -119,12 +119,12 @@ headerviewdelegate
     text-wrap-mode: no-wrap;
     text-elide: right;
 
-    icon-size: var(--icon-size-small);
+    icon-size: var(--cloudberry-wisp-icon-size-small);
 
     & > indicator {
-        color: var(--button-active-text-color);
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        color: var(--cloudberry-wisp-button-active-text-color);
+        width: var(--cloudberry-wisp-icon-size-small);
+        height: var(--cloudberry-wisp-icon-size-small);
         layout-alignment: content end center 0;
     }
 
@@ -140,40 +140,40 @@ headerviewdelegate
 
     &:disabled
     {
-        border: 1px solid var(--button-disabled-border-color);
-        color: var(--button-disabled-text-color);
-        background-color: var(--button-disabled-background-color);
+        border: 1px solid var(--cloudberry-wisp-button-disabled-border-color);
+        color: var(--cloudberry-wisp-button-disabled-text-color);
+        background-color: var(--cloudberry-wisp-button-disabled-background-color);
     }
 }
 
 selectionrectangle {
-    color: var(--highlight-color);
-    border: 1px solid var(--highlight-color);
-    border-radius: var(--corner-radius);
-    background-color: var(--highlight-color);
+    color: var(--cloudberry-wisp-highlight-color);
+    border: 1px solid var(--cloudberry-wisp-highlight-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+    background-color: var(--cloudberry-wisp-highlight-color);
 
     &:disabled {
-        border: 1px solid var(--highlight-disabled-color);
-        color: var(--highlight-disabled-color);
-        background-color: var(--highlight-disabled-color);
+        border: 1px solid var(--cloudberry-wisp-highlight-disabled-color);
+        color: var(--cloudberry-wisp-highlight-disabled-color);
+        background-color: var(--cloudberry-wisp-highlight-disabled-color);
     }
 }
 
 selectionrectanglehandle {
-    width: var(--small-element-size);
-    height: var(--small-element-size);
-    background-color: var(--bar-handle-active-background-color);
-    border: 1px solid var(--bar-active-border-color);
-    border-radius: var(--small-element-size);
+    width: var(--cloudberry-wisp-small-element-size);
+    height: var(--cloudberry-wisp-small-element-size);
+    background-color: var(--cloudberry-wisp-bar-handle-active-background-color);
+    border: 1px solid var(--cloudberry-wisp-bar-active-border-color);
+    border-radius: var(--cloudberry-wisp-small-element-size);
 
     &:visual-focus {
-        border-color: var(--highlight-color);
-        outline: var(--focus-outline);
+        border-color: var(--cloudberry-wisp-highlight-color);
+        outline: var(--cloudberry-wisp-focus-outline);
     }
 
     &:disabled {
-        color: var(--highlight-disabled-color);
-        background-color: var(--bar-handle-disabled-background-color);
-        border: 1px solid var(--bar-disabled-border-color);
+        color: var(--cloudberry-wisp-highlight-disabled-color);
+        background-color: var(--cloudberry-wisp-bar-handle-disabled-background-color);
+        border: 1px solid var(--cloudberry-wisp-bar-disabled-border-color);
     }
 }

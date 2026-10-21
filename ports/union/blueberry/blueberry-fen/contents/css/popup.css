@@ -11,26 +11,26 @@
 
 :root
 {
-    --tooltip-text-color: var(--kcs-active-tooltip-foreground-text);
-    --tooltip-background-color: var(--kcs-active-tooltip-background-normal);
-    --tooltip-border-color: var(--kcs-active-tooltip-decoration-frame);
+    --blueberry-fen-tooltip-text-color: var(--blueberry-fen-kcs-active-tooltip-foreground-text);
+    --blueberry-fen-tooltip-background-color: var(--blueberry-fen-kcs-active-tooltip-background-normal);
+    --blueberry-fen-tooltip-border-color: var(--blueberry-fen-kcs-active-tooltip-decoration-frame);
 
-    --popup-shadow-size: 20px;
+    --blueberry-fen-popup-shadow-size: 20px;
 }
 
 menu, popup
 {
-    border-radius: var(--corner-radius);
+    border-radius: var(--blueberry-fen-corner-radius);
 
-    background-color: var(--window-background-color);
-    border: 1px solid var(--window-border-color);
-    color: var(--window-text-color);
-    box-shadow: 0px 2px var(--popup-shadow-size) 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--blueberry-fen-window-background-color);
+    border: 1px solid var(--blueberry-fen-window-border-color);
+    color: var(--blueberry-fen-window-text-color);
+    box-shadow: 0px 2px var(--blueberry-fen-popup-shadow-size) 0px rgba(0, 0, 0, 0.2);
 
     &:disabled {
-        color: var(--window-disabled-text-color);
-        background-color: var(--window-disabled-background-color);
-        border: 1px solid var(--window-disabled-border-color);
+        color: var(--blueberry-fen-window-disabled-text-color);
+        background-color: var(--blueberry-fen-window-disabled-background-color);
+        border: 1px solid var(--blueberry-fen-window-disabled-border-color);
     }
 }
 
@@ -41,20 +41,20 @@ overlay.modal
 
 menu
 {
-    padding: var(--small-spacing);
-    margin: var(--popup-shadow-size);
+    padding: var(--blueberry-fen-small-spacing);
+    margin: var(--blueberry-fen-popup-shadow-size);
 }
 
 menuitem
 {
-    height: var(--large-element-size);
-    width: var(--menu-item-width);
-    padding: var(--medium-spacing);
-    spacing: var(--small-spacing);
+    height: var(--blueberry-fen-large-element-size);
+    width: var(--blueberry-fen-menu-item-width);
+    padding: var(--blueberry-fen-medium-spacing);
+    spacing: var(--blueberry-fen-small-spacing);
 
-    border-radius: var(--corner-radius);
+    border-radius: var(--blueberry-fen-corner-radius);
 
-    color: var(--window-text-color);
+    color: var(--blueberry-fen-window-text-color);
 
     icon-alignment: content start center 0;
     text-alignment: content start center 1;
@@ -69,44 +69,44 @@ menuitem
     &:hovered,
     &.with-submenu:highlighted
     {
-        background-color: var(--focus-color);
-        border: 1px solid var(--highlight-color);
+        background-color: var(--blueberry-fen-focus-color);
+        border: 1px solid var(--blueberry-fen-highlight-color);
     }
 
     &:pressed,
     &.with-submenu:pressed
     {
-        border: 1px solid var(--highlight-color);
-        background-color: var(--highlight-color);
-        color: var(--highlight-text-color);
+        border: 1px solid var(--blueberry-fen-highlight-color);
+        background-color: var(--blueberry-fen-highlight-color);
+        color: var(--blueberry-fen-highlight-text-color);
     }
 
     &:disabled {
         border: none;
         background: none;
-        color: var(--window-disabled-text-color);
+        color: var(--blueberry-fen-window-disabled-text-color);
     }
 
     arrow {
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        width: var(--blueberry-fen-icon-size-small);
+        height: var(--blueberry-fen-icon-size-small);
         layout-alignment: content end center 1;
         icon-name: "arrow-right-symbolic";
     }
 
     indicator
     {
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        width: var(--blueberry-fen-icon-size-small);
+        height: var(--blueberry-fen-icon-size-small);
         layout-alignment: content start center -1;
     }
 
     shortcuttext {
         spacing: 40px;
-        color: mix(var(--window-background-color), var(--window-text-color), 0.5);
+        color: mix(var(--blueberry-fen-window-background-color), var(--blueberry-fen-window-text-color), 0.5);
         text-alignment: content end center 0;
         &:disabled {
-            color: mix(var(--window-background-color), var(--window-disabled-text-color), 0.5);
+            color: mix(var(--blueberry-fen-window-background-color), var(--blueberry-fen-window-disabled-text-color), 0.5);
         }
     }
 
@@ -120,55 +120,55 @@ overlay {
  * same as itemdelegate in those cases */
 popup.combobox itemviewitem,
 popup.combobox menuitem {
-    padding: var(--large-spacing);
-    inset: var(--small-spacing);
+    padding: var(--blueberry-fen-large-spacing);
+    inset: var(--blueberry-fen-small-spacing);
 }
 
 menuseparator {
     layout-alignment-horizontal: fill;
     height: 1px;
-    background-color: var(--window-border-color);
-    inset: var(--small-spacing);
+    background-color: var(--blueberry-fen-window-border-color);
+    inset: var(--blueberry-fen-small-spacing);
 
     &.with-title {
-        height: var(--large-element-size);
+        height: var(--blueberry-fen-large-element-size);
         text-alignment: content start center 0;
         layout-alignment-horizontal: end;
         background-color: transparent;
-        padding: var(--small-spacing);
+        padding: var(--blueberry-fen-small-spacing);
         /* Make the separator bit wider than rest of the content */
         inset-left: -2px;
         inset-right: -2px;
         /* TODO: italic, underline, or separator next to the text */
         font-weight: bold;
 
-        color: mix(var(--window-background-color), var(--window-text-color), 0.5);
-        border-bottom: 1px solid var(--window-border-color);
+        color: mix(var(--blueberry-fen-window-background-color), var(--blueberry-fen-window-text-color), 0.5);
+        border-bottom: 1px solid var(--blueberry-fen-window-border-color);
 
         &:disabled {
-            color: mix(var(--window-background-color), var(--window-disabled-text-color), 0.5);
+            color: mix(var(--blueberry-fen-window-background-color), var(--blueberry-fen-window-disabled-text-color), 0.5);
         }
     }
 }
 
 menubar
 {
-    background-color: var(--header-background-color);
+    background-color: var(--blueberry-fen-header-background-color);
     .inactive & {
-        background-color: var(--header-background-inactive-color);
+        background-color: var(--blueberry-fen-header-background-inactive-color);
     }
 }
 
 menubaritem
 {
-    width: var(--medium-element-size);
-    height: var(--medium-element-size);
-    padding: var(--small-spacing);
-    spacing: var(--small-spacing);
+    width: var(--blueberry-fen-medium-element-size);
+    height: var(--blueberry-fen-medium-element-size);
+    padding: var(--blueberry-fen-small-spacing);
+    spacing: var(--blueberry-fen-small-spacing);
 
-    border-radius: var(--corner-radius);
+    border-radius: var(--blueberry-fen-corner-radius);
 
-    color: var(--window-text-color);
+    color: var(--blueberry-fen-window-text-color);
 
     text-alignment-horizontal: center;
     text-alignment-vertical: center;
@@ -176,33 +176,33 @@ menubaritem
     &:hovered,
     &:highlighted
     {
-        background-color: var(--focus-color);
-        border: 1px solid var(--highlight-color);
+        background-color: var(--blueberry-fen-focus-color);
+        border: 1px solid var(--blueberry-fen-highlight-color);
     }
     &:pressed
     {
-        background-color: var(--highlight-color);
-        color: var(--highlight-text-color);
+        background-color: var(--blueberry-fen-highlight-color);
+        color: var(--blueberry-fen-highlight-text-color);
     }
 }
 
 dialog
 {
-    spacing: var(--small-spacing);
-    padding: var(--large-spacing);
-    border-radius: var(--corner-radius);
+    spacing: var(--blueberry-fen-small-spacing);
+    padding: var(--blueberry-fen-large-spacing);
+    border-radius: var(--blueberry-fen-corner-radius);
 
     text-alignment-horizontal: center;
     icon-alignment-horizontal: center;
 
-    color: var(--view-text-color);
-    border: 1px solid var(--view-border-color);
-    background-color: var(--view-background-color);
-    box-shadow: var(--dialog-shadow);
+    color: var(--blueberry-fen-view-text-color);
+    border: 1px solid var(--blueberry-fen-view-border-color);
+    background-color: var(--blueberry-fen-view-background-color);
+    box-shadow: var(--blueberry-fen-dialog-shadow);
 
     .header {
         font-size: 20px;
-        padding: var(--large-spacing);
+        padding: var(--blueberry-fen-large-spacing);
     }
 
     listview {
@@ -212,33 +212,33 @@ dialog
         &.panel-right {
             border: none;
             border-radius: 0px;
-            background-color: var(--view-background-color);
+            background-color: var(--blueberry-fen-view-background-color);
         }
 
         &.panel-left {
-            border-right: 1px solid var(--window-border-color);
+            border-right: 1px solid var(--blueberry-fen-window-border-color);
         }
 
         &.panel-right {
-            border-left: 1px solid var(--window-border-color);
+            border-left: 1px solid var(--blueberry-fen-window-border-color);
         }
     }
 }
 
 dialogbuttonbox
 {
-    spacing: var(--medium-spacing);
-    padding: var(--large-spacing);
+    spacing: var(--blueberry-fen-medium-spacing);
+    padding: var(--blueberry-fen-large-spacing);
 }
 
 tooltip
 {
-    width: var(--medium-element-size);
-    height: var(--medium-element-size);
-    padding: var(--large-spacing);
-    color: var(--tooltip-text-color);
-    background-color: var(--tooltip-background-color);
-    border-radius: var(--corner-radius);
-    border: 1px solid var(--tooltip-border-color);
+    width: var(--blueberry-fen-medium-element-size);
+    height: var(--blueberry-fen-medium-element-size);
+    padding: var(--blueberry-fen-large-spacing);
+    color: var(--blueberry-fen-tooltip-text-color);
+    background-color: var(--blueberry-fen-tooltip-background-color);
+    border-radius: var(--blueberry-fen-corner-radius);
+    border: 1px solid var(--blueberry-fen-tooltip-border-color);
     box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
 }

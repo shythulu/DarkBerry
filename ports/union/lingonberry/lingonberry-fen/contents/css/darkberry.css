@@ -24,6 +24,10 @@
  * shades Breeze mixes from them (hover, pressed, checked, tracks) are its own
  * arithmetic, kept as written. Shapes, spacing and sizes are Breeze's.
  *
+ * Every variable carries the style's id as a prefix, so --kcs-* reads --lingonberry-fen-kcs-*
+ * in the installed files. Union 6.8 shares variables across every style an app loads,
+ * so without the prefix its Application Style page shows each preview in one flavour.
+ *
  * Deliberately left as Breeze has it:
  *   shadows: black at 10 to 30%, lighting rather than colour.
  *   the menu-item hover fill: Breeze paints it with its focus colour at 30%.
@@ -40,71 +44,71 @@
 
 :root {
     /* Window: dialogs, toolbars, the chrome around content. */
-    --kcs-active-window-background-normal: #482832;
-    --kcs-active-window-background-alternate: #643f4a; /* alternating rows in chrome lists */
-    --kcs-active-window-foreground-text: #fae3e9;
-    --kcs-active-window-decoration-frame: #825b67; /* hairlines between panels */
-    --kcs-active-window-decoration-focus: #c796a1;
-    --kcs-inactive-window-background-normal: #482832;
-    --kcs-inactive-window-foreground-text: #fae3e9;
-    --kcs-inactive-window-decoration-frame: #825b67; /* hairlines between panels */
-    --kcs-disabled-window-background-normal: #482832;
-    --kcs-disabled-window-foreground-text: #a6828c;
-    --kcs-disabled-window-decoration-frame: #734d58; /* a disabled control's outline */
+    --lingonberry-fen-kcs-active-window-background-normal: #482832;
+    --lingonberry-fen-kcs-active-window-background-alternate: #643f4a; /* alternating rows in chrome lists */
+    --lingonberry-fen-kcs-active-window-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-active-window-decoration-frame: #825b67; /* hairlines between panels */
+    --lingonberry-fen-kcs-active-window-decoration-focus: #c796a1;
+    --lingonberry-fen-kcs-inactive-window-background-normal: #482832;
+    --lingonberry-fen-kcs-inactive-window-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-inactive-window-decoration-frame: #825b67; /* hairlines between panels */
+    --lingonberry-fen-kcs-disabled-window-background-normal: #482832;
+    --lingonberry-fen-kcs-disabled-window-foreground-text: #a6828c;
+    --lingonberry-fen-kcs-disabled-window-decoration-frame: #734d58; /* a disabled control's outline */
 
     /* View: lists, text fields, the content areas. */
-    --kcs-active-view-background-normal: #55323d;
-    --kcs-active-view-background-alternate: #643f4a;
-    --kcs-active-view-foreground-text: #fae3e9;
-    --kcs-active-view-decoration-frame: #a6828c;
-    --kcs-disabled-view-background-normal: #55323d;
-    --kcs-disabled-view-foreground-text: #a6828c;
-    --kcs-disabled-view-decoration-frame: #734d58; /* a disabled control's outline */
-    --kcs-active-view-foreground-positive: #bbe5b3;
-    --kcs-active-view-foreground-neutral: #f0d6a0;
-    --kcs-active-view-foreground-negative: #fd8c85;
-    --kcs-active-view-background-positive: #4f333a;
-    --kcs-active-view-background-neutral: #523239;
-    --kcs-active-view-background-negative: #532e37;
+    --lingonberry-fen-kcs-active-view-background-normal: #55323d;
+    --lingonberry-fen-kcs-active-view-background-alternate: #643f4a;
+    --lingonberry-fen-kcs-active-view-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-active-view-decoration-frame: #a6828c;
+    --lingonberry-fen-kcs-disabled-view-background-normal: #55323d;
+    --lingonberry-fen-kcs-disabled-view-foreground-text: #a6828c;
+    --lingonberry-fen-kcs-disabled-view-decoration-frame: #734d58; /* a disabled control's outline */
+    --lingonberry-fen-kcs-active-view-foreground-positive: #bbe5b3;
+    --lingonberry-fen-kcs-active-view-foreground-neutral: #f0d6a0;
+    --lingonberry-fen-kcs-active-view-foreground-negative: #fd8c85;
+    --lingonberry-fen-kcs-active-view-background-positive: #4f333a;
+    --lingonberry-fen-kcs-active-view-background-neutral: #523239;
+    --lingonberry-fen-kcs-active-view-background-negative: #532e37;
 
     /* Header: title bars, the strip above a page. */
-    --kcs-active-header-background-normal: #482832;
-    --kcs-active-header-foreground-text: #fae3e9;
-    --kcs-active-header-decoration-frame: #825b67; /* hairlines between panels */
-    --kcs-inactive-header-background-normal: #3d2029;
-    --kcs-inactive-header-foreground-text: #d2b8bf;
-    --kcs-inactive-header-decoration-frame: #825b67; /* hairlines between panels */
-    --kcs-disabled-header-background-normal: #482832;
-    --kcs-disabled-header-foreground-text: #a6828c;
-    --kcs-disabled-header-decoration-frame: #734d58; /* a disabled control's outline */
+    --lingonberry-fen-kcs-active-header-background-normal: #482832;
+    --lingonberry-fen-kcs-active-header-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-active-header-decoration-frame: #825b67; /* hairlines between panels */
+    --lingonberry-fen-kcs-inactive-header-background-normal: #3d2029;
+    --lingonberry-fen-kcs-inactive-header-foreground-text: #d2b8bf;
+    --lingonberry-fen-kcs-inactive-header-decoration-frame: #825b67; /* hairlines between panels */
+    --lingonberry-fen-kcs-disabled-header-background-normal: #482832;
+    --lingonberry-fen-kcs-disabled-header-foreground-text: #a6828c;
+    --lingonberry-fen-kcs-disabled-header-decoration-frame: #734d58; /* a disabled control's outline */
 
     /* Button: push buttons, combo boxes, check and switch indicators. */
-    --kcs-active-button-background-normal: #643f4a; /* a button's face, as in the KDE scheme */
-    --kcs-active-button-foreground-text: #fae3e9;
-    --kcs-active-button-decoration-frame: #a6828c;
-    --kcs-active-button-decoration-focus: #c796a1;
-    --kcs-inactive-button-background-normal: #643f4a; /* a button's face, as in the KDE scheme */
-    --kcs-inactive-button-foreground-text: #fae3e9;
-    --kcs-inactive-button-decoration-frame: #a6828c;
-    --kcs-disabled-button-background-normal: #643f4a; /* a button's face, as in the KDE scheme */
-    --kcs-disabled-button-foreground-text: #a6828c;
-    --kcs-disabled-button-decoration-frame: #734d58; /* a disabled control's outline */
+    --lingonberry-fen-kcs-active-button-background-normal: #643f4a; /* a button's face, as in the KDE scheme */
+    --lingonberry-fen-kcs-active-button-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-active-button-decoration-frame: #a6828c;
+    --lingonberry-fen-kcs-active-button-decoration-focus: #c796a1;
+    --lingonberry-fen-kcs-inactive-button-background-normal: #643f4a; /* a button's face, as in the KDE scheme */
+    --lingonberry-fen-kcs-inactive-button-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-inactive-button-decoration-frame: #a6828c;
+    --lingonberry-fen-kcs-disabled-button-background-normal: #643f4a; /* a button's face, as in the KDE scheme */
+    --lingonberry-fen-kcs-disabled-button-foreground-text: #a6828c;
+    --lingonberry-fen-kcs-disabled-button-decoration-frame: #734d58; /* a disabled control's outline */
 
     /* Complementary: the dark strip some apps put beside light content. */
-    --kcs-active-complementary-background-normal: #3d2029;
-    --kcs-active-complementary-foreground-text: #fae3e9;
-    --kcs-disabled-complementary-foreground-text: #a6828c;
+    --lingonberry-fen-kcs-active-complementary-background-normal: #3d2029;
+    --lingonberry-fen-kcs-active-complementary-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-disabled-complementary-foreground-text: #a6828c;
 
     /* Selection: Breeze's highlight. Selected rows, pressed buttons, checked boxes. */
-    --kcs-active-selection-background-normal: #dc67a7;
-    --kcs-active-selection-foreground-text: #3d2029;
+    --lingonberry-fen-kcs-active-selection-background-normal: #dc67a7;
+    --lingonberry-fen-kcs-active-selection-foreground-text: #3d2029;
 
     /* Tooltip. */
-    --kcs-active-tooltip-background-normal: #482832;
-    --kcs-active-tooltip-foreground-text: #fae3e9;
-    --kcs-active-tooltip-decoration-frame: #825b67; /* the tooltip's hairline */
+    --lingonberry-fen-kcs-active-tooltip-background-normal: #482832;
+    --lingonberry-fen-kcs-active-tooltip-foreground-text: #fae3e9;
+    --lingonberry-fen-kcs-active-tooltip-decoration-frame: #825b67; /* the tooltip's hairline */
 
     /* Darkberry's own, used through the rewrites in build.mjs (UNION_REWRITES). */
-    --tab-indicator-color: #f999b7;
-    --focus-ring-color: #c796a1;
+    --lingonberry-fen-tab-indicator-color: #f999b7;
+    --lingonberry-fen-focus-ring-color: #c796a1;
 }

@@ -9,102 +9,102 @@
 
 :root {
     /* Standard Sizes */
-    --minimal-spacing: 2px;
-    --small-spacing: 4px;
-    --medium-spacing: 6px;
-    --large-spacing: 8px;
-    --grid-unit: 18px;
-    --corner-radius: 5px;
+    --lingonberry-blackwater-minimal-spacing: 2px;
+    --lingonberry-blackwater-small-spacing: 4px;
+    --lingonberry-blackwater-medium-spacing: 6px;
+    --lingonberry-blackwater-large-spacing: 8px;
+    --lingonberry-blackwater-grid-unit: 18px;
+    --lingonberry-blackwater-corner-radius: 5px;
 
     /* Icon sizes */
-    --icon-size-small: 16px;
-    --icon-size-smallmedium: 22px;
-    --icon-size-medium: 32px;
-    --icon-size-large: 48px;
+    --lingonberry-blackwater-icon-size-small: 16px;
+    --lingonberry-blackwater-icon-size-smallmedium: 22px;
+    --lingonberry-blackwater-icon-size-medium: 32px;
+    --lingonberry-blackwater-icon-size-large: 48px;
 
     /* Default item sizes */
-    --small-element-size: 16px;
-    --medium-element-size: 24px;
-    --large-element-size: 32px;
-    --scrollbar-size: 20px;
-    --non-interactive-scrollbar-size: 10px;
-    --menu-item-width: 150px;
-    --text-field-width: 200px;
+    --lingonberry-blackwater-small-element-size: 16px;
+    --lingonberry-blackwater-medium-element-size: 24px;
+    --lingonberry-blackwater-large-element-size: 32px;
+    --lingonberry-blackwater-scrollbar-size: 20px;
+    --lingonberry-blackwater-non-interactive-scrollbar-size: 10px;
+    --lingonberry-blackwater-menu-item-width: 150px;
+    --lingonberry-blackwater-text-field-width: 200px;
 
     /* Colors */
-    --highlight-color: var(--kcs-active-selection-background-normal);
-    --highlight-text-color: var(--kcs-active-selection-foreground-text);
-    --highlight-hover-color: modify-color(var(--highlight-color) set-alpha 0.3);
+    --lingonberry-blackwater-highlight-color: var(--lingonberry-blackwater-kcs-active-selection-background-normal);
+    --lingonberry-blackwater-highlight-text-color: var(--lingonberry-blackwater-kcs-active-selection-foreground-text);
+    --lingonberry-blackwater-highlight-hover-color: modify-color(var(--lingonberry-blackwater-highlight-color) set-alpha 0.3);
 
-    --window-text-color: var(--kcs-active-window-foreground-text);
-    --window-background-color: var(--kcs-active-window-background-normal);
-    --window-background-alternate-color: var(--kcs-active-window-background-alternate);
-    --window-border-color: var(--kcs-active-window-decoration-frame);
-    --window-highlight-color: mix(var(--window-background-color), var(--highlight-color), 0.5);
-    --window-border-highlight-color: var(--highlight-color);
+    --lingonberry-blackwater-window-text-color: var(--lingonberry-blackwater-kcs-active-window-foreground-text);
+    --lingonberry-blackwater-window-background-color: var(--lingonberry-blackwater-kcs-active-window-background-normal);
+    --lingonberry-blackwater-window-background-alternate-color: var(--lingonberry-blackwater-kcs-active-window-background-alternate);
+    --lingonberry-blackwater-window-border-color: var(--lingonberry-blackwater-kcs-active-window-decoration-frame);
+    --lingonberry-blackwater-window-highlight-color: mix(var(--lingonberry-blackwater-window-background-color), var(--lingonberry-blackwater-highlight-color), 0.5);
+    --lingonberry-blackwater-window-border-highlight-color: var(--lingonberry-blackwater-highlight-color);
 
-    --view-text-color: var(--kcs-active-view-foreground-text);
-    --view-background-color: var(--kcs-active-view-background-normal);
-    --view-background-alternate-color: var(--kcs-active-view-background-alternate);
-    --view-border-color: var(--kcs-active-view-decoration-frame);
-    --view-highlight-color: mix(var(--view-background-color), var(--highlight-color), 0.5);
+    --lingonberry-blackwater-view-text-color: var(--lingonberry-blackwater-kcs-active-view-foreground-text);
+    --lingonberry-blackwater-view-background-color: var(--lingonberry-blackwater-kcs-active-view-background-normal);
+    --lingonberry-blackwater-view-background-alternate-color: var(--lingonberry-blackwater-kcs-active-view-background-alternate);
+    --lingonberry-blackwater-view-border-color: var(--lingonberry-blackwater-kcs-active-view-decoration-frame);
+    --lingonberry-blackwater-view-highlight-color: mix(var(--lingonberry-blackwater-view-background-color), var(--lingonberry-blackwater-highlight-color), 0.5);
 
-    --header-text-color: var(--kcs-active-header-foreground-text);
-    --header-background-color: var(--kcs-active-header-background-normal);
-    --header-background-inactive-color: var(--kcs-inactive-header-background-normal);
-    --header-border-color: var(--kcs-active-header-decoration-frame);
+    --lingonberry-blackwater-header-text-color: var(--lingonberry-blackwater-kcs-active-header-foreground-text);
+    --lingonberry-blackwater-header-background-color: var(--lingonberry-blackwater-kcs-active-header-background-normal);
+    --lingonberry-blackwater-header-background-inactive-color: var(--lingonberry-blackwater-kcs-inactive-header-background-normal);
+    --lingonberry-blackwater-header-border-color: var(--lingonberry-blackwater-kcs-active-header-decoration-frame);
 
-    --complementary-text-color: var(--kcs-active-complementary-foreground-text);
-    --complementary-background-color: var(--kcs-active-complementary-background-normal);
+    --lingonberry-blackwater-complementary-text-color: var(--lingonberry-blackwater-kcs-active-complementary-foreground-text);
+    --lingonberry-blackwater-complementary-background-color: var(--lingonberry-blackwater-kcs-active-complementary-background-normal);
 
-    --positive-text: var(--kcs-active-view-foreground-positive);
-    --neutral-text: var(--kcs-active-view-foreground-neutral);
-    --negative-text: var(--kcs-active-view-foreground-negative);
-    --positive-background: var(--kcs-active-view-background-positive);
-    --neutral-background: var(--kcs-active-view-background-neutral);
-    --negative-background: var(--kcs-active-view-background-negative);
+    --lingonberry-blackwater-positive-text: var(--lingonberry-blackwater-kcs-active-view-foreground-positive);
+    --lingonberry-blackwater-neutral-text: var(--lingonberry-blackwater-kcs-active-view-foreground-neutral);
+    --lingonberry-blackwater-negative-text: var(--lingonberry-blackwater-kcs-active-view-foreground-negative);
+    --lingonberry-blackwater-positive-background: var(--lingonberry-blackwater-kcs-active-view-background-positive);
+    --lingonberry-blackwater-neutral-background: var(--lingonberry-blackwater-kcs-active-view-background-neutral);
+    --lingonberry-blackwater-negative-background: var(--lingonberry-blackwater-kcs-active-view-background-negative);
 
-    --changed-foreground: var(--neutral-text);
-    --changed-background: var(--neutral-background);
+    --lingonberry-blackwater-changed-foreground: var(--lingonberry-blackwater-neutral-text);
+    --lingonberry-blackwater-changed-background: var(--lingonberry-blackwater-neutral-background);
 
-    --card-background-color: var(--view-background-color);
-    --card-text-color: var(--view-text-color);
-    --card-border-color: var(--view-border-color);
-    --card-hover-color: mix(var(--card-background-color), var(--highlight-color), 0.1);
-    --card-pressed-color: mix(var(--card-background-color), var(--highlight-color), 0.3);
+    --lingonberry-blackwater-card-background-color: var(--lingonberry-blackwater-view-background-color);
+    --lingonberry-blackwater-card-text-color: var(--lingonberry-blackwater-view-text-color);
+    --lingonberry-blackwater-card-border-color: var(--lingonberry-blackwater-view-border-color);
+    --lingonberry-blackwater-card-hover-color: mix(var(--lingonberry-blackwater-card-background-color), var(--lingonberry-blackwater-highlight-color), 0.1);
+    --lingonberry-blackwater-card-pressed-color: mix(var(--lingonberry-blackwater-card-background-color), var(--lingonberry-blackwater-highlight-color), 0.3);
 
-    --focus-outline-alpha: 0.3;
-    --focus-color: modify-color(var(--kcs-active-window-decoration-focus) set-alpha var(--focus-outline-alpha));
+    --lingonberry-blackwater-focus-outline-alpha: 0.3;
+    --lingonberry-blackwater-focus-color: modify-color(var(--lingonberry-blackwater-kcs-active-window-decoration-focus) set-alpha var(--lingonberry-blackwater-focus-outline-alpha));
 
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --lingonberry-blackwater-shadow-color: rgba(0, 0, 0, 0.1);
 
     /* Disabled colors */
-    --window-disabled-text-color: var(--kcs-disabled-window-foreground-text);
-    --window-disabled-background-color: var(--kcs-disabled-window-background-normal);
-    --window-disabled-border-color: var(--kcs-disabled-window-decoration-frame);
+    --lingonberry-blackwater-window-disabled-text-color: var(--lingonberry-blackwater-kcs-disabled-window-foreground-text);
+    --lingonberry-blackwater-window-disabled-background-color: var(--lingonberry-blackwater-kcs-disabled-window-background-normal);
+    --lingonberry-blackwater-window-disabled-border-color: var(--lingonberry-blackwater-kcs-disabled-window-decoration-frame);
 
-    --view-disabled-text-color: var(--kcs-disabled-view-foreground-text);
-    --view-disabled-background-color: var(--kcs-disabled-view-background-normal);
-    --view-disabled-border-color: var(--kcs-disabled-view-decoration-frame);
+    --lingonberry-blackwater-view-disabled-text-color: var(--lingonberry-blackwater-kcs-disabled-view-foreground-text);
+    --lingonberry-blackwater-view-disabled-background-color: var(--lingonberry-blackwater-kcs-disabled-view-background-normal);
+    --lingonberry-blackwater-view-disabled-border-color: var(--lingonberry-blackwater-kcs-disabled-view-decoration-frame);
 
-    --header-disabled-text-color: var(--kcs-disabled-header-foreground-text);
-    --header-disabled-background-color: var(--kcs-disabled-header-background-normal);
-    --header-disabled-border-color: var(--kcs-disabled-header-decoration-frame);
+    --lingonberry-blackwater-header-disabled-text-color: var(--lingonberry-blackwater-kcs-disabled-header-foreground-text);
+    --lingonberry-blackwater-header-disabled-background-color: var(--lingonberry-blackwater-kcs-disabled-header-background-normal);
+    --lingonberry-blackwater-header-disabled-border-color: var(--lingonberry-blackwater-kcs-disabled-header-decoration-frame);
 
-    --complementary-disabled-text-color: var(--kcs-disabled-complementary-foreground-text);
+    --lingonberry-blackwater-complementary-disabled-text-color: var(--lingonberry-blackwater-kcs-disabled-complementary-foreground-text);
 
-    --highlight-disabled-color: mix(var(--window-disabled-background-color), var(--highlight-color), 0.2);
-    --highlight-disabled-text-color: mix(var(--window-disabled-text-color), var(--highlight-text-color), 0.2);
+    --lingonberry-blackwater-highlight-disabled-color: mix(var(--lingonberry-blackwater-window-disabled-background-color), var(--lingonberry-blackwater-highlight-color), 0.2);
+    --lingonberry-blackwater-highlight-disabled-text-color: mix(var(--lingonberry-blackwater-window-disabled-text-color), var(--lingonberry-blackwater-highlight-text-color), 0.2);
 
-    --card-disabled-background-color: var(--view-disabled-background-color);
-    --card-disabled-text-color: var(--view-disabled-text-color);
-    --card-disabled-border-color: var(--view-disabled-border-color);
+    --lingonberry-blackwater-card-disabled-background-color: var(--lingonberry-blackwater-view-disabled-background-color);
+    --lingonberry-blackwater-card-disabled-text-color: var(--lingonberry-blackwater-view-disabled-text-color);
+    --lingonberry-blackwater-card-disabled-border-color: var(--lingonberry-blackwater-view-disabled-border-color);
 
     /* Standard Elements */
-    --focus-outline: 2px solid var(--focus-ring-color);
-    --dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+    --lingonberry-blackwater-focus-outline: 2px solid var(--lingonberry-blackwater-focus-ring-color);
+    --lingonberry-blackwater-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
 
-    --indicator-color: modify-color(var(--window-text-color) set-alpha 0.4);
-    --indicator-press-color: modify-color(var(--window-text-color) set-alpha 0.7);
-    --indicator-current-color: modify-color(var(--window-text-color) set-alpha 0.95);
+    --lingonberry-blackwater-indicator-color: modify-color(var(--lingonberry-blackwater-window-text-color) set-alpha 0.4);
+    --lingonberry-blackwater-indicator-press-color: modify-color(var(--lingonberry-blackwater-window-text-color) set-alpha 0.7);
+    --lingonberry-blackwater-indicator-current-color: modify-color(var(--lingonberry-blackwater-window-text-color) set-alpha 0.95);
 }

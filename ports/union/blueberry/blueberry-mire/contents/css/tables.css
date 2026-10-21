@@ -5,55 +5,55 @@
 
 treeviewdelegate,
 tableviewdelegate {
-    width: var(--medium-element-size);
-    height: var(--medium-element-size);
+    width: var(--blueberry-mire-medium-element-size);
+    height: var(--blueberry-mire-medium-element-size);
 
-    padding: var(--small-spacing);
-    spacing: var(--small-spacing);
+    padding: var(--blueberry-mire-small-spacing);
+    spacing: var(--blueberry-mire-small-spacing);
     border-radius: 0px;
 
     layout-alignment: content fill center 0;
     icon-alignment: content start center 1;
     text-alignment: content fill center 2;
 
-    icon-width: var(--icon-size-small);
-    icon-height: var(--icon-size-small);
+    icon-width: var(--blueberry-mire-icon-size-small);
+    icon-height: var(--blueberry-mire-icon-size-small);
 
-    color: var(--view-text-color);
-    background-color: var(--view-background-color);
+    color: var(--blueberry-mire-view-text-color);
+    background-color: var(--blueberry-mire-view-background-color);
 
     &.alternating-colors {
-        background-color: var(--view-background-alternate-color);
+        background-color: var(--blueberry-mire-view-background-alternate-color);
     }
 
     &:hovered,
     &:active-focus {
-        border: 1px solid var(--highlight-color);
+        border: 1px solid var(--blueberry-mire-highlight-color);
         background-color: transparent;
     }
 
     &:visual-focus {
-        outline: 1px solid var(--focus-ring-color);
+        outline: 1px solid var(--blueberry-mire-focus-ring-color);
     }
 
     &:highlighted,
     &.selected {
-        color: var(--highlight-text-color);
-        border: 1px solid var(--highlight-color);
-        background-color: var(--highlight-color);
+        color: var(--blueberry-mire-highlight-text-color);
+        border: 1px solid var(--blueberry-mire-highlight-color);
+        background-color: var(--blueberry-mire-highlight-color);
     }
 
     &.selected > label {
-        color: var(--highlight-text-color);
+        color: var(--blueberry-mire-highlight-text-color);
     }
 
     &.editing {
-        border: 1px solid var(--highlight-color);
+        border: 1px solid var(--blueberry-mire-highlight-color);
     }
 
     &:disabled {
-        color: var(--view-disabled-text-color);
-        background-color: var(--view-disabled-background-color);
+        color: var(--blueberry-mire-view-disabled-text-color);
+        background-color: var(--blueberry-mire-view-disabled-background-color);
     }
 }
 
@@ -67,14 +67,14 @@ treeviewdelegate {
     }
 
     & > indentation {
-        width: var(--medium-element-size);
+        width: var(--blueberry-mire-medium-element-size);
         layout-alignment: item start center 0;
     }
 
     & > indicator {
-        width: var(--medium-element-size);
-        height: var(--icon-size-small);
-        color: var(--view-text-color);
+        width: var(--blueberry-mire-medium-element-size);
+        height: var(--blueberry-mire-icon-size-small);
+        color: var(--blueberry-mire-view-text-color);
         icon-name: "arrow-right-symbolic";
         layout-alignment: item start center 1;
     }
@@ -92,26 +92,26 @@ treeviewdelegate {
     }
 
     &:disabled {
-        color: var(--view-disabled-text-color);
-        background-color: var(--view-disabled-background-color);
+        color: var(--blueberry-mire-view-disabled-text-color);
+        background-color: var(--blueberry-mire-view-disabled-background-color);
 
         & > indicator {
-            color: var(--view-disabled-text-color);
+            color: var(--blueberry-mire-view-disabled-text-color);
         }
     }
 }
 
 headerviewdelegate
 {
-    width: var(--large-element-size);
-    height: var(--large-element-size);
-    padding: var(--small-spacing);
+    width: var(--blueberry-mire-large-element-size);
+    height: var(--blueberry-mire-large-element-size);
+    padding: var(--blueberry-mire-small-spacing);
 
-    border-bottom: 1px solid var(--button-active-border-color);
-    border-right: 1px solid var(--button-active-border-color);
+    border-bottom: 1px solid var(--blueberry-mire-button-active-border-color);
+    border-right: 1px solid var(--blueberry-mire-button-active-border-color);
 
-    background-color: var(--button-active-background-color);
-    color: var(--button-active-text-color);
+    background-color: var(--blueberry-mire-button-active-background-color);
+    color: var(--blueberry-mire-button-active-text-color);
 
     layout-alignment: content fill center 0;
     icon-alignment: content center center 0;
@@ -119,12 +119,12 @@ headerviewdelegate
     text-wrap-mode: no-wrap;
     text-elide: right;
 
-    icon-size: var(--icon-size-small);
+    icon-size: var(--blueberry-mire-icon-size-small);
 
     & > indicator {
-        color: var(--button-active-text-color);
-        width: var(--icon-size-small);
-        height: var(--icon-size-small);
+        color: var(--blueberry-mire-button-active-text-color);
+        width: var(--blueberry-mire-icon-size-small);
+        height: var(--blueberry-mire-icon-size-small);
         layout-alignment: content end center 0;
     }
 
@@ -140,40 +140,40 @@ headerviewdelegate
 
     &:disabled
     {
-        border: 1px solid var(--button-disabled-border-color);
-        color: var(--button-disabled-text-color);
-        background-color: var(--button-disabled-background-color);
+        border: 1px solid var(--blueberry-mire-button-disabled-border-color);
+        color: var(--blueberry-mire-button-disabled-text-color);
+        background-color: var(--blueberry-mire-button-disabled-background-color);
     }
 }
 
 selectionrectangle {
-    color: var(--highlight-color);
-    border: 1px solid var(--highlight-color);
-    border-radius: var(--corner-radius);
-    background-color: var(--highlight-color);
+    color: var(--blueberry-mire-highlight-color);
+    border: 1px solid var(--blueberry-mire-highlight-color);
+    border-radius: var(--blueberry-mire-corner-radius);
+    background-color: var(--blueberry-mire-highlight-color);
 
     &:disabled {
-        border: 1px solid var(--highlight-disabled-color);
-        color: var(--highlight-disabled-color);
-        background-color: var(--highlight-disabled-color);
+        border: 1px solid var(--blueberry-mire-highlight-disabled-color);
+        color: var(--blueberry-mire-highlight-disabled-color);
+        background-color: var(--blueberry-mire-highlight-disabled-color);
     }
 }
 
 selectionrectanglehandle {
-    width: var(--small-element-size);
-    height: var(--small-element-size);
-    background-color: var(--bar-handle-active-background-color);
-    border: 1px solid var(--bar-active-border-color);
-    border-radius: var(--small-element-size);
+    width: var(--blueberry-mire-small-element-size);
+    height: var(--blueberry-mire-small-element-size);
+    background-color: var(--blueberry-mire-bar-handle-active-background-color);
+    border: 1px solid var(--blueberry-mire-bar-active-border-color);
+    border-radius: var(--blueberry-mire-small-element-size);
 
     &:visual-focus {
-        border-color: var(--highlight-color);
-        outline: var(--focus-outline);
+        border-color: var(--blueberry-mire-highlight-color);
+        outline: var(--blueberry-mire-focus-outline);
     }
 
     &:disabled {
-        color: var(--highlight-disabled-color);
-        background-color: var(--bar-handle-disabled-background-color);
-        border: 1px solid var(--bar-disabled-border-color);
+        color: var(--blueberry-mire-highlight-disabled-color);
+        background-color: var(--blueberry-mire-bar-handle-disabled-background-color);
+        border: 1px solid var(--blueberry-mire-bar-disabled-border-color);
     }
 }

@@ -210,6 +210,24 @@ const unionVendor = (() => {
   }
   return files;
 })();
+// Union 6.8's CSS parser (cxx-rust-cssparser 1.1.0) keeps one table of custom properties per
+// process, and the first style to define a name wins. So an app that loads two Darkberry
+// styles, such as the Application Style page drawing its previews, paints them all in one
+// flavour. Prefixing every custom property a style defines with the style's id keeps the
+// twenty styles apart. Upstream scopes them per stylesheet from cxx-rust-cssparser 8556191,
+// after 1.1.0; this can go once Plasma ships a release with it.
+const scopeUnionVars = (id, files) => {
+  const css = Object.entries(files).filter(([f]) => f.endsWith(".css")).map(([f, d]) => [f, Buffer.isBuffer(d) ? d.toString("utf8") : d]);
+  const defined = new Set();
+  for (const [, text] of css) for (const m of text.matchAll(/(?:@property\s+|(?:^|[{;])\s*)(--[a-z][\w-]*)\s*(?=[:{])/gm)) defined.add(m[1]);
+  const scoped = { ...files };
+  for (const [f, text] of css) {
+    scoped[f] = text.replace(/(?<![\w-])--[a-z][\w-]*(?![\w-])/g, (name) => defined.has(name) ? `--${id}-${name.slice(2)}` : name);
+    const code = scoped[f].replace(/\/\*[\s\S]*?\*\//g, "");
+    for (const m of code.matchAll(new RegExp(`(?<![\\w-])--(?!${id}-)[a-z][\\w-]*`, "g"))) errors.push(`union: ${f} uses ${m[0]}, which no file in the ${id} style defines`);
+  }
+  return scoped;
+};
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
 const to256 = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => {
   const [r, g, b] = rgb("#" + h).map((v) => v * 255), steps = [0, 95, 135, 175, 215, 255];
@@ -515,8 +533,8 @@ for (const ctx of ctxs) {
     "input-type": "css", "input-version": 1, name: full, description: meta(ctx).DESCRIPTION, version: P.version,
     license: "MIT AND BSD-2-Clause", url: P.homepage, authors: [P.author, "Arjen Hiemstra (Breeze)", "Akseli Lahtinen (Breeze)"],
   });
-  out(`ports/union/${slug}/contents/css/darkberry.css`, applyOverrides("union", "lines", fill(ctx, unionT, "union"), ctx));
-  for (const [f, data] of Object.entries(unionVendor)) out(`ports/union/${slug}/contents/${f}`, data);
+  const unionCss = scopeUnionVars(slug, { "css/darkberry.css": applyOverrides("union", "lines", fill(ctx, unionT, "union"), ctx), ...unionVendor });
+  for (const [f, data] of Object.entries(unionCss)) out(`ports/union/${slug}/contents/${f}`, data);
   out(`ports/union/${slug}/LICENSE.Breeze`, fs.readFileSync(path.join(root, "vendor/union-breeze/LICENSE")));
   // The edition's drawn logo, in the folder Union's docs name for a style's images. Union 6.8's
   // metadata.json has no icon key yet, so nothing shows it; it travels with the style for when one does.
