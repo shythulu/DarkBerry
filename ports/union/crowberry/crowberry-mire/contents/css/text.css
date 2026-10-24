@@ -1,0 +1,228 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Text display and input related controls.
+ */
+
+label {
+    color: var(--crowberry-mire-window-text-color);
+
+    &:disabled {
+        color: var(--crowberry-mire-window-disabled-text-color);
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &
+    {
+        color: var(--crowberry-mire-complementary-text-color);
+    }
+}
+
+textfield,
+textarea,
+spinbox,
+searchfield
+{
+    height: var(--crowberry-mire-large-element-size);
+    padding: var(--crowberry-mire-medium-spacing);
+    border-radius: var(--crowberry-mire-corner-radius);
+
+    border: 1px solid var(--crowberry-mire-view-border-color);
+    background-color: var(--crowberry-mire-view-background-color);
+    color: var(--crowberry-mire-view-text-color);
+
+    &:hovered,
+    &:active-focus {
+        border: 1px solid var(--crowberry-mire-highlight-color);
+    }
+
+    &:visual-focus {
+        outline: 2px solid var(--crowberry-mire-focus-ring-color);
+    }
+
+    & > .placeholder
+    {
+        color: mix(var(--crowberry-mire-view-text-color), var(--crowberry-mire-view-background-color), 0.3);
+    }
+
+    &:disabled {
+        color: var(--crowberry-mire-view-disabled-text-color);
+        background-color: var(--crowberry-mire-view-disabled-background-color);
+        border: 1px solid var(--crowberry-mire-view-disabled-border-color);
+
+        & > .placeholder
+        {
+            color: mix(var(--crowberry-mire-view-text-color), var(--crowberry-mire-view-background-color), 0.7);
+        }
+    }
+}
+
+textfield,
+searchfield {
+    text-alignment: content start center 0;
+    width: var(--crowberry-mire-text-field-width);
+    &.inside-table {
+        border: none;
+        border-radius: 0px;
+        background-color: var(--crowberry-mire-view-background-alternate-color);
+    }
+}
+
+textarea
+{
+    text-alignment: content start start 0;
+    width: var(--crowberry-mire-text-field-width);
+}
+
+spinbox
+{
+    width: var(--crowberry-mire-medium-element-size);
+    height: var(--crowberry-mire-large-element-size);
+    layout-alignment: content fill fill 0;
+    text-alignment: content center fill 0;
+    padding-left: var(--crowberry-mire-large-spacing);
+    padding-right: var(--crowberry-mire-large-spacing);
+    padding-top: var(--crowberry-mire-small-spacing);
+    padding-bottom: var(--crowberry-mire-small-spacing);
+
+    color: var(--crowberry-mire-button-active-text-color);
+
+    & > indicator
+    {
+        width: var(--crowberry-mire-large-element-size);
+        height: var(--crowberry-mire-small-element-size);
+        border-radius: var(--crowberry-mire-corner-radius);
+        color: var(--crowberry-mire-button-active-text-color);
+
+        margin-top: var(--crowberry-mire-corner-radius);
+        margin-bottom: var(--crowberry-mire-corner-radius);
+
+        layout-alignment-container: item;
+        layout-alignment-vertical: fill;
+
+        &:hovered,
+        &:pressed
+        {
+            height: var(--crowberry-mire-medium-element-size);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        &:hovered
+        {
+            border: 1px solid var(--crowberry-mire-highlight-color);
+        }
+
+        &:pressed
+        {
+            background-color: var(--crowberry-mire-button-active-highlight-color);
+            border: 1px solid var(--crowberry-mire-highlight-color);
+        }
+
+        &:disabled
+        {
+            color: var(--crowberry-mire-button-disabled-text-color);
+        }
+
+        &.decrease
+        {
+            layout-alignment-horizontal: start;
+            icon-name: "spinbox-decrease";
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-right: 1px solid var(--crowberry-mire-button-active-border-color);
+
+            &:hovered,
+            &:pressed
+            {
+                border-right: 1px solid var(--crowberry-mire-highlight-color);
+                border-top-right-radius: var(--crowberry-mire-corner-radius);
+                border-bottom-right-radius: var(--crowberry-mire-corner-radius);
+            }
+        }
+
+        &.increase
+        {
+            layout-alignment-horizontal: end;
+            icon-name: "spinbox-increase";
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-left: 1px solid var(--crowberry-mire-button-active-border-color);
+
+            &:hovered,
+            &:pressed
+            {
+                border-left: 1px solid var(--crowberry-mire-highlight-color);
+                border-top-left-radius: var(--crowberry-mire-corner-radius);
+                border-bottom-left-radius: var(--crowberry-mire-corner-radius);
+            }
+        }
+    }
+
+    &.constrained {
+        layout-alignment: item start fill 0;
+        text-alignment: item start fill 0;
+        margin-left: var(--crowberry-mire-small-spacing);
+    }
+
+    &.constrained > indicator {
+        layout-alignment: item end stack-fill 0;
+
+        width: var(--crowberry-mire-medium-element-size);
+        height: var(--crowberry-mire-small-element-size);
+
+        border: none;
+        margin: 0px;
+        margin-right: var(--crowberry-mire-minimal-spacing);
+
+        &:hover,
+        &:pressed
+        {
+            border: none;
+            background: none;
+            icon-color: var(--crowberry-mire-highlight-color);
+        }
+
+        &.decrease {
+            layout-alignment-order: 1;
+            icon-name: "arrow-down";
+        }
+
+        &.increase {
+            icon-name: "arrow-up";
+        }
+    }
+}
+
+searchfield {
+    height: var(--crowberry-mire-large-element-size);
+    layout-alignment: content fill fill 1;
+    text-alignment: content fill center 0;
+    & > searchindicator, & > clearindicator {
+        width: var(--crowberry-mire-icon-size-smallmedium);
+        height: var(--crowberry-mire-icon-size-smallmedium);
+    }
+
+    & > searchindicator {
+        layout-alignment: content start fill 0;
+        icon-name: "search";
+        margin-right: var(--crowberry-mire-small-spacing);
+    }
+
+    & > clearindicator {
+        layout-alignment: content end fill 2;
+        icon-name: "edit-clear";
+        margin-left: var(--crowberry-mire-small-spacing);
+    }
+    
+}
+
+textfield.changed,
+textarea.changed,
+spinbox.changed {
+    background-color: var(--crowberry-mire-changed-background);
+    border: 1px solid var(--crowberry-mire-changed-foreground);
+}

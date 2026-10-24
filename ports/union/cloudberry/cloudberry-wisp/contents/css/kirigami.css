@@ -1,0 +1,279 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Kirigami-specific controls
+ */
+
+:root {
+    --cloudberry-wisp-chip-background-color: var(--cloudberry-wisp-window-background-alternate-color);
+}
+
+applicationheader
+{
+    background-color: var(--cloudberry-wisp-header-active-background-color);
+    color: var(--cloudberry-wisp-header-active-text-color);
+
+    &[colorset="window"]
+    {
+        background-color: var(--cloudberry-wisp-window-background-color);
+        color: var(--cloudberry-wisp-window-text-color);
+    }
+
+    &.with-separator
+    {
+        border-bottom: 1px solid var(--cloudberry-wisp-header-active-border-color);
+    }
+
+    .inactive &
+    {
+        background-color: var(--cloudberry-wisp-header-inactive-background-color);
+        border-color: var(--cloudberry-wisp-header-inactive-border-color);
+        color: var(--cloudberry-wisp-header-inactive-text-color);
+    }
+}
+
+card
+{
+    background-color: var(--cloudberry-wisp-card-background-color);
+    border: 1px solid var(--cloudberry-wisp-card-border-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+    box-shadow: 0px 2px var(--cloudberry-wisp-grid-unit) 0px rgba(0, 0, 0, 0.1);
+    color: var(--cloudberry-wisp-card-text-color);
+
+    &:hovered {
+        background-color: var(--cloudberry-wisp-card-hover-color);
+    }
+
+    &:pressed {
+        background-color: var(--cloudberry-wisp-card-pressed-color);
+    }
+}
+
+chip
+{
+    width: var(--cloudberry-wisp-medium-element-size);
+    height: var(--cloudberry-wisp-medium-element-size);
+    padding: var(--cloudberry-wisp-medium-spacing);
+
+    layout-alignment: content fill fill 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+
+    background-color: var(--cloudberry-wisp-chip-background-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+    border: 1px solid var(--cloudberry-wisp-button-active-border-color);
+    color: var(--cloudberry-wisp-button-active-text-color);
+
+    spacing: var(--cloudberry-wisp-small-spacing);
+
+    & > .indicator
+    {
+        width: var(--cloudberry-wisp-small-element-size);
+        height: var(--cloudberry-wisp-small-element-size);
+
+        icon-name: "edit-delete-remove";
+        icon-width: var(--cloudberry-wisp-icon-size-small);
+        icon-height: var(--cloudberry-wisp-icon-size-small);
+
+        layout-alignment: item end center 0;
+    }
+
+    &:hovered
+    {
+        border-color: var(--cloudberry-wisp-highlight-color);
+    }
+
+    &:pressed
+    {
+        border-color: var(--cloudberry-wisp-highlight-color);
+        background-color: var(--cloudberry-wisp-button-active-highlight-color);
+    }
+}
+
+heading
+{
+    color: var(--cloudberry-wisp-window-text-color);
+
+    &.primary
+    {
+        font-weight: 600;
+    }
+
+    &.level-1
+    {
+        font-size: 135%;
+    }
+
+    &.primary.level-1
+    {
+        font-size: 135%;
+        font-weight: 600;
+    }
+
+    &.level-2
+    {
+        font-size: 120%;
+    }
+
+    &.primary.level-2
+    {
+        font-size: 120%;
+        font-weight: 600;
+    }
+
+    &.level-3
+    {
+        font-size: 115%;
+    }
+
+    &.primary.level-3
+    {
+        font-size: 115%;
+        font-weight: 600;
+    }
+
+    &.level-4
+    {
+        font-size: 110%;
+    }
+
+    &.primary.level-4
+    {
+        font-size: 110%;
+        font-weight: 600;
+    }
+
+    &.secondary
+    {
+        color: modify-color(var(--cloudberry-wisp-window-text-color) set-alpha 0.75);
+    }
+}
+
+inlinemessage
+{
+    padding: var(--cloudberry-wisp-small-spacing);
+
+    background-color: mix(var(--cloudberry-wisp-window-background-color), var(--cloudberry-wisp-highlight-color), 0.2);
+    border: 1px solid var(--cloudberry-wisp-highlight-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+    color: var(--cloudberry-wisp-window-text-color);
+
+    &[type="positive"] {
+        background-color: var(--cloudberry-wisp-positive-background);
+        border: 1px solid var(--cloudberry-wisp-positive-text);
+    }
+
+    &[type="warning"] {
+        background-color: var(--cloudberry-wisp-neutral-background);
+        border: 1px solid var(--cloudberry-wisp-neutral-text);
+    }
+
+    &[type="error"] {
+        background-color: var(--cloudberry-wisp-negative-background);
+        border: 1px solid var(--cloudberry-wisp-negative-text);
+    }
+
+    &[position="header"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    &[position="footer"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+navigationtabbar {
+    background-color: var(--cloudberry-wisp-window-background-color);
+
+    &.header {
+        border-bottom: 1px solid var(--cloudberry-wisp-window-border-color);
+    }
+
+    &.footer {
+        border-top: 1px solid var(--cloudberry-wisp-window-border-color);
+    }
+}
+
+navigationtabbutton {
+    height: 54px; /* grid-unit * 3 */
+    padding: var(--cloudberry-wisp-small-spacing);
+    inset: var(--cloudberry-wisp-small-spacing);
+    spacing: var(--cloudberry-wisp-small-spacing);
+
+    icon-size: var(--cloudberry-wisp-icon-size-smallmedium);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: start;
+    icon-alignment-horizontal: start;
+
+    color: var(--cloudberry-wisp-window-text-color);
+
+    &:disabled {
+        color: var(--cloudberry-wisp-window-disabled-text-color);
+    }
+
+    &:hovered
+    {
+        background-color: var(--cloudberry-wisp-highlight-hover-color);
+    }
+
+    &:pressed
+    {
+        background-color: var(--cloudberry-wisp-highlight-hover-color);
+        border-color: var(--cloudberry-wisp-highlight-color);
+        box-shadow: none;
+    }
+
+    &:checked
+    {
+        color: var(--cloudberry-wisp-window-text-color);
+        background-color: var(--cloudberry-wisp-highlight-hover-color);
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
+    }
+
+    &[display="text-beside-icon"] {
+        height: 0px;
+        padding: 12px var(--cloudberry-wisp-small-spacing) 12px var(--cloudberry-wisp-grid-unit); /* small-spacing + large-spacing */
+        spacing: var(--cloudberry-wisp-grid-unit);
+        icon-size: var(--cloudberry-wisp-icon-size-small);
+    }
+
+    &[display="text-under-icon"] {
+        icon-alignment: content center stack-center 0;
+        text-alignment: content center stack-center 1;
+    }
+}
+
+overlaydrawer
+{
+    background-color: var(--cloudberry-wisp-view-background-color);
+    color: var(--cloudberry-wisp-view-text-color);
+
+    &.modal
+    {
+        background-color: var(--cloudberry-wisp-window-background-color);
+        color: var(--cloudberry-wisp-window-text-color);
+    }
+
+    /* Collapsible sidebar expects 32px in Kirigami by default */
+    itemdelegate {
+        width: var(--cloudberry-wisp-icon-size-medium);
+        height: var(--cloudberry-wisp-icon-size-medium);
+    }
+
+    &[colorset="window"]
+    {
+        background-color: var(--cloudberry-wisp-window-background-color);
+        color: var(--cloudberry-wisp-window-text-color);
+    }
+}

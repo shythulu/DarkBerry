@@ -1,0 +1,28 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Akseli Lahtinen <akselmo@akselmo.dev>
+ */
+
+monthgrid, dayofweekrow, weeknumbercolumn  {
+	background-color: var(--lingonberry-fen-view-background-color);
+	border: 1px solid var(--lingonberry-fen-view-border-color);
+	& > label {
+		outline: 1px solid var(--lingonberry-fen-view-border-color);
+		text-alignment-horizontal: center;
+		text-alignment-vertical: center;
+		color: var(--lingonberry-fen-view-text-color);
+		background-color: var(--lingonberry-fen-view-disabled-background-color);
+	}
+}
+
+monthgrid label {
+	color: var(--lingonberry-fen-view-disabled-text-color);
+	&.current-month {
+		color: var(--lingonberry-fen-view-text-color);
+	}
+
+	&.today {
+		background-color: var(--lingonberry-fen-highlight-color);
+		color: var(--lingonberry-fen-highlight-text-color);
+	}
+}

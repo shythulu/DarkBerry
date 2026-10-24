@@ -1,0 +1,74 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Akseli Lahtinen <akselmo@akselmo.dev>
+ */
+
+/* Holds data for basic primitives such as arrow indicators. These are only the names for them,
+and they're mapped to PE_IndicatorArrowLeft etc. */
+
+/* Plain widget element */
+widget {
+    background-color: var(--darkberry-blackwater-window-background-color);
+}
+
+statusbar {
+    background-color: var(--darkberry-blackwater-window-background-color);
+    border-top: 1px solid var(--darkberry-blackwater-window-active-border-color);
+}
+
+toolbox {
+    tabbutton {
+        border-radius: var(--darkberry-blackwater-corner-radius);
+    }
+}
+
+/* Primitive Elements */
+
+indicatorarrowup {
+    icon-name: "arrow-up-symbolic";
+    color: var(--darkberry-blackwater-window-text-color);
+}
+
+indicatorarrowdown {
+    icon-name: "arrow-down-symbolic";
+    color: var(--darkberry-blackwater-window-text-color);
+}
+
+indicatorarrowleft {
+    icon-name: "arrow-left-symbolic";
+    color: var(--darkberry-blackwater-window-text-color);
+}
+
+indicatorarrowright {
+    icon-name: "arrow-right-symbolic";
+    color: var(--darkberry-blackwater-window-text-color);
+}
+
+indicatorbuttondropdown {
+    icon-name: "arrow-down-symbolic";
+    color: var(--darkberry-blackwater-window-text-color);
+}
+
+/* Pixel Metrics. Anything named "size" only uses Width property */
+
+smalliconsize {
+    width: var(--darkberry-blackwater-icon-size-small);
+}
+
+listviewiconsize {
+    width: var(--darkberry-blackwater-icon-size-smallmedium);
+}
+
+iconviewiconsize {
+    width: var(--darkberry-blackwater-icon-size-medium);
+}
+
+largeiconsize,
+messageboxiconsize {
+    width: var(--darkberry-blackwater-icon-size-large);
+}
+
+textcursorwidth {
+    width: 1px;
+}
+

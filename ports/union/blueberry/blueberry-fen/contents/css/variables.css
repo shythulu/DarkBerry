@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --blueberry-fen-minimal-spacing: 2px;
+    --blueberry-fen-small-spacing: 4px;
+    --blueberry-fen-medium-spacing: 6px;
+    --blueberry-fen-large-spacing: 8px;
+    --blueberry-fen-grid-unit: 18px;
+    --blueberry-fen-corner-radius: 5px;
+
+    /* Icon sizes */
+    --blueberry-fen-icon-size-small: 16px;
+    --blueberry-fen-icon-size-smallmedium: 22px;
+    --blueberry-fen-icon-size-medium: 32px;
+    --blueberry-fen-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --blueberry-fen-small-element-size: 16px;
+    --blueberry-fen-medium-element-size: 24px;
+    --blueberry-fen-large-element-size: 32px;
+    --blueberry-fen-scrollbar-size: 20px;
+    --blueberry-fen-non-interactive-scrollbar-size: 10px;
+    --blueberry-fen-menu-item-width: 150px;
+    --blueberry-fen-text-field-width: 200px;
+
+    /* Colors */
+    --blueberry-fen-highlight-color: var(--blueberry-fen-kcs-active-selection-background-normal);
+    --blueberry-fen-highlight-text-color: var(--blueberry-fen-kcs-active-selection-foreground-text);
+    --blueberry-fen-highlight-hover-color: modify-color(var(--blueberry-fen-highlight-color) set-alpha 0.3);
+
+    --blueberry-fen-window-text-color: var(--blueberry-fen-kcs-active-window-foreground-text);
+    --blueberry-fen-window-background-color: var(--blueberry-fen-kcs-active-window-background-normal);
+    --blueberry-fen-window-background-alternate-color: var(--blueberry-fen-kcs-active-window-background-alternate);
+    --blueberry-fen-window-border-color: var(--blueberry-fen-kcs-active-window-decoration-frame);
+    --blueberry-fen-window-highlight-color: mix(var(--blueberry-fen-window-background-color), var(--blueberry-fen-highlight-color), 0.5);
+    --blueberry-fen-window-border-highlight-color: var(--blueberry-fen-highlight-color);
+
+    --blueberry-fen-view-text-color: var(--blueberry-fen-kcs-active-view-foreground-text);
+    --blueberry-fen-view-background-color: var(--blueberry-fen-kcs-active-view-background-normal);
+    --blueberry-fen-view-background-alternate-color: var(--blueberry-fen-kcs-active-view-background-alternate);
+    --blueberry-fen-view-border-color: var(--blueberry-fen-kcs-active-view-decoration-frame);
+    --blueberry-fen-view-highlight-color: mix(var(--blueberry-fen-view-background-color), var(--blueberry-fen-highlight-color), 0.5);
+
+    --blueberry-fen-header-text-color: var(--blueberry-fen-kcs-active-header-foreground-text);
+    --blueberry-fen-header-background-color: var(--blueberry-fen-kcs-active-header-background-normal);
+    --blueberry-fen-header-background-inactive-color: var(--blueberry-fen-kcs-inactive-header-background-normal);
+    --blueberry-fen-header-border-color: var(--blueberry-fen-kcs-active-header-decoration-frame);
+
+    --blueberry-fen-complementary-text-color: var(--blueberry-fen-kcs-active-complementary-foreground-text);
+    --blueberry-fen-complementary-background-color: var(--blueberry-fen-kcs-active-complementary-background-normal);
+
+    --blueberry-fen-positive-text: var(--blueberry-fen-kcs-active-view-foreground-positive);
+    --blueberry-fen-neutral-text: var(--blueberry-fen-kcs-active-view-foreground-neutral);
+    --blueberry-fen-negative-text: var(--blueberry-fen-kcs-active-view-foreground-negative);
+    --blueberry-fen-positive-background: var(--blueberry-fen-kcs-active-view-background-positive);
+    --blueberry-fen-neutral-background: var(--blueberry-fen-kcs-active-view-background-neutral);
+    --blueberry-fen-negative-background: var(--blueberry-fen-kcs-active-view-background-negative);
+
+    --blueberry-fen-changed-foreground: var(--blueberry-fen-neutral-text);
+    --blueberry-fen-changed-background: var(--blueberry-fen-neutral-background);
+
+    --blueberry-fen-card-background-color: var(--blueberry-fen-view-background-color);
+    --blueberry-fen-card-text-color: var(--blueberry-fen-view-text-color);
+    --blueberry-fen-card-border-color: var(--blueberry-fen-view-border-color);
+    --blueberry-fen-card-hover-color: mix(var(--blueberry-fen-card-background-color), var(--blueberry-fen-highlight-color), 0.1);
+    --blueberry-fen-card-pressed-color: mix(var(--blueberry-fen-card-background-color), var(--blueberry-fen-highlight-color), 0.3);
+
+    --blueberry-fen-focus-outline-alpha: 0.3;
+    --blueberry-fen-focus-color: modify-color(var(--blueberry-fen-kcs-active-window-decoration-focus) set-alpha var(--blueberry-fen-focus-outline-alpha));
+
+    --blueberry-fen-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --blueberry-fen-window-disabled-text-color: var(--blueberry-fen-kcs-disabled-window-foreground-text);
+    --blueberry-fen-window-disabled-background-color: var(--blueberry-fen-kcs-disabled-window-background-normal);
+    --blueberry-fen-window-disabled-border-color: var(--blueberry-fen-kcs-disabled-window-decoration-frame);
+
+    --blueberry-fen-view-disabled-text-color: var(--blueberry-fen-kcs-disabled-view-foreground-text);
+    --blueberry-fen-view-disabled-background-color: var(--blueberry-fen-kcs-disabled-view-background-normal);
+    --blueberry-fen-view-disabled-border-color: var(--blueberry-fen-kcs-disabled-view-decoration-frame);
+
+    --blueberry-fen-header-disabled-text-color: var(--blueberry-fen-kcs-disabled-header-foreground-text);
+    --blueberry-fen-header-disabled-background-color: var(--blueberry-fen-kcs-disabled-header-background-normal);
+    --blueberry-fen-header-disabled-border-color: var(--blueberry-fen-kcs-disabled-header-decoration-frame);
+
+    --blueberry-fen-complementary-disabled-text-color: var(--blueberry-fen-kcs-disabled-complementary-foreground-text);
+
+    --blueberry-fen-highlight-disabled-color: mix(var(--blueberry-fen-window-disabled-background-color), var(--blueberry-fen-highlight-color), 0.2);
+    --blueberry-fen-highlight-disabled-text-color: mix(var(--blueberry-fen-window-disabled-text-color), var(--blueberry-fen-highlight-text-color), 0.2);
+
+    --blueberry-fen-card-disabled-background-color: var(--blueberry-fen-view-disabled-background-color);
+    --blueberry-fen-card-disabled-text-color: var(--blueberry-fen-view-disabled-text-color);
+    --blueberry-fen-card-disabled-border-color: var(--blueberry-fen-view-disabled-border-color);
+
+    /* Standard Elements */
+    --blueberry-fen-focus-outline: 2px solid var(--blueberry-fen-focus-ring-color);
+    --blueberry-fen-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --blueberry-fen-indicator-color: modify-color(var(--blueberry-fen-window-text-color) set-alpha 0.4);
+    --blueberry-fen-indicator-press-color: modify-color(var(--blueberry-fen-window-text-color) set-alpha 0.7);
+    --blueberry-fen-indicator-current-color: modify-color(var(--blueberry-fen-window-text-color) set-alpha 0.95);
+}

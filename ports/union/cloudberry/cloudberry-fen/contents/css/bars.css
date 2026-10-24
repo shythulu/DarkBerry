@@ -1,0 +1,300 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ * SPDX-FileCopyrightText: 2025 Akseli Lahtinen <akselmo@akselmo.dev>
+ */
+
+/*
+ * Bar-like controls such as progress bars and sliders.
+ */
+
+:root {
+    --cloudberry-fen-bar-active-background-color: mix(var(--cloudberry-fen-window-background-color), var(--cloudberry-fen-window-text-color), 0.075);
+    --cloudberry-fen-bar-active-border-color: var(--cloudberry-fen-window-border-color);
+    --cloudberry-fen-bar-track-active-background-color: mix(var(--cloudberry-fen-window-background-color), var(--cloudberry-fen-highlight-color), 0.333);
+    --cloudberry-fen-bar-track-active-border-color: var(--cloudberry-fen-highlight-color);
+    --cloudberry-fen-bar-handle-active-background-color: var(--cloudberry-fen-button-active-background-color);
+    --cloudberry-fen-bar-handle-active-border-color: var(--cloudberry-fen-button-active-border-color);
+
+    --cloudberry-fen-bar-handle-active-highlight-color: var(--cloudberry-fen-button-active-highlight-color);
+    --cloudberry-fen-bar-handle-active-highlight-border-color: var(--cloudberry-fen-button-active-border-highlight-color);
+
+    --cloudberry-fen-bar-disabled-background-color: var(--cloudberry-fen-window-disabled-background-color);
+    --cloudberry-fen-bar-disabled-border-color: var(--cloudberry-fen-window-disabled-border-color);
+    --cloudberry-fen-bar-track-disabled-background-color: mix(var(--cloudberry-fen-window-disabled-background-color), var(--cloudberry-fen-window-background-color), 0.75);
+    --cloudberry-fen-bar-track-disabled-border-color: var(--cloudberry-fen-window-disabled-border-color);
+    --cloudberry-fen-bar-handle-disabled-background-color: var(--cloudberry-fen-button-disabled-background-color);
+    --cloudberry-fen-bar-handle-disabled-border-color: var(--cloudberry-fen-button-disabled-border-color);
+
+    --cloudberry-fen-bar-handle-size: 20px;
+    --cloudberry-fen-bar-tickmark-thickness: 2px;
+    --cloudberry-fen-bar-tickmark-length: 8px;
+    --cloudberry-fen-bar-tickmark-margin: 1px;
+
+    --cloudberry-fen-dial-inactive-background-color: mix(var(--cloudberry-fen-button-inactive-background-color), var(--cloudberry-fen-window-background-color), 0.5);
+    --cloudberry-fen-dial-inactive-border-color: var(--cloudberry-fen-button-inactive-border-color);
+    --cloudberry-fen-dial-active-background-color: mix(var(--cloudberry-fen-button-active-background-color), var(--cloudberry-fen-window-background-color), 0.5);
+    --cloudberry-fen-dial-active-border-color: var(--cloudberry-fen-button-active-border-color);
+    --cloudberry-fen-dial-disabled-background-color: mix(var(--cloudberry-fen-button-disabled-background-color), var(--cloudberry-fen-window-background-color), 0.5);
+    --cloudberry-fen-dial-disabled-border-color: var(--cloudberry-fen-button-disabled-border-color);
+
+    --cloudberry-fen-dial-handle-inactive-background-color: var(--cloudberry-fen-button-inactive-background-color);
+    --cloudberry-fen-dial-handle-inactive-border-color: var(--cloudberry-fen-button-inactive-border-color);
+    --cloudberry-fen-dial-handle-active-background-color:  mix(var(--cloudberry-fen-button-active-background-color), var(--cloudberry-fen-highlight-color), 0.5);
+    --cloudberry-fen-dial-handle-active-border-color: mix(var(--cloudberry-fen-button-active-border-color), var(--cloudberry-fen-highlight-color), 0.5);
+    --cloudberry-fen-dial-handle-disabled-background-color: var(--cloudberry-fen-button-disabled-background-color);
+    --cloudberry-fen-dial-handle-disabled-border-color: var(--cloudberry-fen-button-disabled-border-color);
+}
+
+busyindicator
+{
+    width: 36px;
+    height: 36px;
+    icon-name: "process-working-symbolic";
+}
+
+progressbar
+{
+    padding: 0px var(--cloudberry-fen-large-spacing);
+    inset: 0px var(--cloudberry-fen-large-spacing);
+    text-alignment: content center center 0;
+
+    background-color: var(--cloudberry-fen-bar-active-background-color);
+    border: 1px solid var(--cloudberry-fen-bar-active-border-color);
+    border-radius: var(--cloudberry-fen-corner-radius);
+
+    &.horizontal
+    {
+        width: 200px;
+        height: var(--cloudberry-fen-medium-spacing);
+    }
+
+    &.vertical
+    {
+        width: var(--cloudberry-fen-medium-spacing);
+        height: 200px;
+    }
+
+
+    & > track,
+    & > chunk {
+        background-color: var(--cloudberry-fen-bar-track-active-background-color);
+        border: 1px solid var(--cloudberry-fen-bar-track-active-border-color);
+        border-radius: var(--cloudberry-fen-corner-radius);
+    }
+
+    & > chunk {
+        width: 32px;
+    }
+
+    &:disabled {
+        background-color: var(--cloudberry-fen-bar-disabled-background-color);
+        border-color: var(--cloudberry-fen-bar-disabled-border-color);
+
+        & > track,
+        & > chunk {
+            background-color: var(--cloudberry-fen-bar-track-disabled-background-color);
+            border-color: var(--cloudberry-fen-bar-track-disabled-border-color);
+        }
+    }
+}
+
+slider,
+rangeslider,
+dial
+{
+    background-color: var(--cloudberry-fen-bar-active-background-color);
+    border: 1px solid var(--cloudberry-fen-bar-active-border-color);
+    border-radius: var(--cloudberry-fen-corner-radius);
+
+    & > fill {
+        background-color: var(--cloudberry-fen-bar-track-active-background-color);
+        border: 1px solid var(--cloudberry-fen-bar-track-active-border-color);
+        border-radius: var(--cloudberry-fen-corner-radius);
+    }
+
+    & > handle {
+        width: var(--cloudberry-fen-bar-handle-size);
+        height: var(--cloudberry-fen-bar-handle-size);
+        background-color: var(--cloudberry-fen-bar-handle-active-background-color);
+        border: 1px solid var(--cloudberry-fen-bar-handle-active-border-color);
+        border-radius: 10px;
+        box-shadow: var(--cloudberry-fen-button-shadow);
+
+        &:hovered
+        {
+            border-color: var(--cloudberry-fen-bar-handle-active-highlight-border-color);
+        }
+
+        &:pressed
+        {
+            box-shadow: none;
+        }
+    }
+
+    & > tickmark
+    {
+        background-color: var(--cloudberry-fen-bar-active-border-color);
+
+        &.active {
+            background-color: var(--cloudberry-fen-bar-track-active-border-color);
+        }
+    }
+
+    &.horizontal
+    {
+        width: 200px;
+        height: 6px;
+
+        & > tickmark {
+            width: var(--cloudberry-fen-bar-tickmark-thickness);
+            height: var(--cloudberry-fen-bar-tickmark-length);
+            margin-top: var(--cloudberry-fen-bar-tickmark-margin);
+        }
+    }
+
+    &.vertical
+    {
+        width: 6px;
+        height: 200px;
+
+        & > tickmark {
+            width: var(--cloudberry-fen-bar-tickmark-length);
+            height: var(--cloudberry-fen-bar-tickmark-thickness);
+            margin-left: var(--cloudberry-fen-bar-tickmark-margin);
+        }
+    }
+
+    &:disabled {
+        background-color: var(--cloudberry-fen-bar-disabled-background-color);
+        border: 1px solid var(--cloudberry-fen-bar-disabled-border-color);
+
+        & > fill {
+            background-color: var(--cloudberry-fen-bar-track-disabled-background-color);
+            border-color: var(--cloudberry-fen-bar-track-disabled-border-color);
+        }
+
+        & > handle {
+            background-color: var(--cloudberry-fen-bar-handle-disabled-background-color);
+            border-color: var(--cloudberry-fen-bar-handle-disabled-border-color);
+            box-shadow: none;
+        }
+
+        & > tickmark,
+        & > tickmark.active {
+            background-color: var(--cloudberry-fen-bar-disabled-border-color);
+        }
+    }
+}
+
+slider:visual-focus > handle,
+rangeslider > handle:active-focus
+{
+    border-color: var(--cloudberry-fen-bar-handle-active-highlight-border-color);
+    outline: var(--cloudberry-fen-focus-outline);
+}
+
+slider:pressed > handle,
+rangeslider > handle:pressed
+{
+    background-color: var(--cloudberry-fen-bar-handle-active-highlight-color);
+    border-color: var(--cloudberry-fen-bar-handle-active-highlight-border-color);
+}
+
+scrollbar
+{
+    width: var(--cloudberry-fen-scrollbar-size);
+    height: var(--cloudberry-fen-scrollbar-size);
+
+    padding: var(--cloudberry-fen-medium-spacing);
+
+    &.horizontal
+    {
+        border-top: 1px solid var(--cloudberry-fen-bar-active-border-color);
+    }
+
+    &.vertical
+    {
+        border-left: 1px solid var(--cloudberry-fen-bar-active-border-color);
+    }
+
+    & > handle {
+        background-color: var(--cloudberry-fen-bar-active-background-color);
+        border: 1px solid var(--cloudberry-fen-bar-active-border-color);
+        border-radius: var(--cloudberry-fen-small-element-size);
+
+        &:hovered,
+        &:pressed
+        {
+            background-color: var(--cloudberry-fen-bar-track-active-background-color);
+            border-color: var(--cloudberry-fen-bar-track-active-border-color);
+        }
+
+        &:disabled {
+            background-color: var(--cloudberry-fen-bar-disabled-background-color);
+            border: 1px solid var(--cloudberry-fen-bar-disabled-border-color);
+        }
+    }
+
+    &.noninteractive {
+        width: var(--cloudberry-fen-non-interactive-scrollbar-size);
+        border-left: none;
+        padding: var(--cloudberry-fen-small-spacing);
+        & > handle {
+            background-color: var(--cloudberry-fen-bar-handle-disabled-background-color);
+            border: 1px solid var(--cloudberry-fen-bar-handle-disabled-border-color);
+        }
+    }
+}
+
+dial {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px; /* use half of width */
+    background-color: var(--cloudberry-fen-dial-inactive-background-color);
+    border-color: var(--cloudberry-fen-dial-inactive-border-color);
+
+    &:hovered {
+        background-color: var(--cloudberry-fen-dial-active-background-color);
+        border-color: var(--cloudberry-fen-dial-active-border-color);
+    }
+
+    &:pressed {
+        border-color: var(--cloudberry-fen-highlight-color);
+    }
+
+    &:disabled {
+        background-color: var(--cloudberry-fen-dial-disabled-background-color);
+        border-color: var(--cloudberry-fen-dial-disabled-border-color);
+    }
+
+    & > handle {
+        background-color: var(--cloudberry-fen-dial-handle-inactive-background-color);
+        border-color: var(--cloudberry-fen-dial-handle-inactive-border-color);
+
+        &:hovered {
+            background-color: var(--cloudberry-fen-dial-handle-active-background-color);
+            border-color: var(--cloudberry-fen-dial-handle-active-border-color);
+        }
+
+        &:pressed {
+            background-color: var(--cloudberry-fen-highlight-color);
+            border-color: var(--cloudberry-fen-highlight-color);
+        }
+
+        &:disabled {
+            background-color: var(--cloudberry-fen-dial-handle-disabled-background-color);
+            border-color: var(--cloudberry-fen-dial-handle-disabled-border-color);
+        }
+    }
+}
+
+slider.changed {
+    & > fill {
+        background-color: var(--cloudberry-fen-changed-background);
+        border: 1px solid var(--cloudberry-fen-changed-foreground);
+    }
+    & > tickmark.active {
+        background-color: var(--cloudberry-fen-changed-foreground);
+    }
+}

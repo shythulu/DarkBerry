@@ -1,0 +1,51 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+@property --cloudberry-fen-color-group {
+    syntax: "<string>";
+    inherits: true;
+    initial-value: "active";
+}
+
+@property --cloudberry-fen-color-set {
+    syntax: "<string>";
+    inherits: true;
+}
+
+.inactive {
+    --cloudberry-fen-color-group: "inactive";
+}
+
+:disabled {
+    --cloudberry-fen-color-group: "disabled";
+}
+
+[color-set="window"] {
+    --cloudberry-fen-color-set: "window";
+}
+
+[color-set="button"] {
+    --cloudberry-fen-color-set: "button";
+}
+
+[color-set="view"] {
+    --cloudberry-fen-color-set: "view";
+}
+
+[color-set="selection"] {
+    --cloudberry-fen-color-set: "selection";
+}
+
+[color-set="tooltip"] {
+    --cloudberry-fen-color-set: "tooltip";
+}
+
+[color-set="complementary"] {
+    --cloudberry-fen-color-set: "complementary";
+}
+
+[color-set="header"] {
+    --cloudberry-fen-color-set: "header";
+}

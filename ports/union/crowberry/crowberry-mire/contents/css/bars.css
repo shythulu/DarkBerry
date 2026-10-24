@@ -1,0 +1,300 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ * SPDX-FileCopyrightText: 2025 Akseli Lahtinen <akselmo@akselmo.dev>
+ */
+
+/*
+ * Bar-like controls such as progress bars and sliders.
+ */
+
+:root {
+    --crowberry-mire-bar-active-background-color: mix(var(--crowberry-mire-window-background-color), var(--crowberry-mire-window-text-color), 0.075);
+    --crowberry-mire-bar-active-border-color: var(--crowberry-mire-window-border-color);
+    --crowberry-mire-bar-track-active-background-color: mix(var(--crowberry-mire-window-background-color), var(--crowberry-mire-highlight-color), 0.333);
+    --crowberry-mire-bar-track-active-border-color: var(--crowberry-mire-highlight-color);
+    --crowberry-mire-bar-handle-active-background-color: var(--crowberry-mire-button-active-background-color);
+    --crowberry-mire-bar-handle-active-border-color: var(--crowberry-mire-button-active-border-color);
+
+    --crowberry-mire-bar-handle-active-highlight-color: var(--crowberry-mire-button-active-highlight-color);
+    --crowberry-mire-bar-handle-active-highlight-border-color: var(--crowberry-mire-button-active-border-highlight-color);
+
+    --crowberry-mire-bar-disabled-background-color: var(--crowberry-mire-window-disabled-background-color);
+    --crowberry-mire-bar-disabled-border-color: var(--crowberry-mire-window-disabled-border-color);
+    --crowberry-mire-bar-track-disabled-background-color: mix(var(--crowberry-mire-window-disabled-background-color), var(--crowberry-mire-window-background-color), 0.75);
+    --crowberry-mire-bar-track-disabled-border-color: var(--crowberry-mire-window-disabled-border-color);
+    --crowberry-mire-bar-handle-disabled-background-color: var(--crowberry-mire-button-disabled-background-color);
+    --crowberry-mire-bar-handle-disabled-border-color: var(--crowberry-mire-button-disabled-border-color);
+
+    --crowberry-mire-bar-handle-size: 20px;
+    --crowberry-mire-bar-tickmark-thickness: 2px;
+    --crowberry-mire-bar-tickmark-length: 8px;
+    --crowberry-mire-bar-tickmark-margin: 1px;
+
+    --crowberry-mire-dial-inactive-background-color: mix(var(--crowberry-mire-button-inactive-background-color), var(--crowberry-mire-window-background-color), 0.5);
+    --crowberry-mire-dial-inactive-border-color: var(--crowberry-mire-button-inactive-border-color);
+    --crowberry-mire-dial-active-background-color: mix(var(--crowberry-mire-button-active-background-color), var(--crowberry-mire-window-background-color), 0.5);
+    --crowberry-mire-dial-active-border-color: var(--crowberry-mire-button-active-border-color);
+    --crowberry-mire-dial-disabled-background-color: mix(var(--crowberry-mire-button-disabled-background-color), var(--crowberry-mire-window-background-color), 0.5);
+    --crowberry-mire-dial-disabled-border-color: var(--crowberry-mire-button-disabled-border-color);
+
+    --crowberry-mire-dial-handle-inactive-background-color: var(--crowberry-mire-button-inactive-background-color);
+    --crowberry-mire-dial-handle-inactive-border-color: var(--crowberry-mire-button-inactive-border-color);
+    --crowberry-mire-dial-handle-active-background-color:  mix(var(--crowberry-mire-button-active-background-color), var(--crowberry-mire-highlight-color), 0.5);
+    --crowberry-mire-dial-handle-active-border-color: mix(var(--crowberry-mire-button-active-border-color), var(--crowberry-mire-highlight-color), 0.5);
+    --crowberry-mire-dial-handle-disabled-background-color: var(--crowberry-mire-button-disabled-background-color);
+    --crowberry-mire-dial-handle-disabled-border-color: var(--crowberry-mire-button-disabled-border-color);
+}
+
+busyindicator
+{
+    width: 36px;
+    height: 36px;
+    icon-name: "process-working-symbolic";
+}
+
+progressbar
+{
+    padding: 0px var(--crowberry-mire-large-spacing);
+    inset: 0px var(--crowberry-mire-large-spacing);
+    text-alignment: content center center 0;
+
+    background-color: var(--crowberry-mire-bar-active-background-color);
+    border: 1px solid var(--crowberry-mire-bar-active-border-color);
+    border-radius: var(--crowberry-mire-corner-radius);
+
+    &.horizontal
+    {
+        width: 200px;
+        height: var(--crowberry-mire-medium-spacing);
+    }
+
+    &.vertical
+    {
+        width: var(--crowberry-mire-medium-spacing);
+        height: 200px;
+    }
+
+
+    & > track,
+    & > chunk {
+        background-color: var(--crowberry-mire-bar-track-active-background-color);
+        border: 1px solid var(--crowberry-mire-bar-track-active-border-color);
+        border-radius: var(--crowberry-mire-corner-radius);
+    }
+
+    & > chunk {
+        width: 32px;
+    }
+
+    &:disabled {
+        background-color: var(--crowberry-mire-bar-disabled-background-color);
+        border-color: var(--crowberry-mire-bar-disabled-border-color);
+
+        & > track,
+        & > chunk {
+            background-color: var(--crowberry-mire-bar-track-disabled-background-color);
+            border-color: var(--crowberry-mire-bar-track-disabled-border-color);
+        }
+    }
+}
+
+slider,
+rangeslider,
+dial
+{
+    background-color: var(--crowberry-mire-bar-active-background-color);
+    border: 1px solid var(--crowberry-mire-bar-active-border-color);
+    border-radius: var(--crowberry-mire-corner-radius);
+
+    & > fill {
+        background-color: var(--crowberry-mire-bar-track-active-background-color);
+        border: 1px solid var(--crowberry-mire-bar-track-active-border-color);
+        border-radius: var(--crowberry-mire-corner-radius);
+    }
+
+    & > handle {
+        width: var(--crowberry-mire-bar-handle-size);
+        height: var(--crowberry-mire-bar-handle-size);
+        background-color: var(--crowberry-mire-bar-handle-active-background-color);
+        border: 1px solid var(--crowberry-mire-bar-handle-active-border-color);
+        border-radius: 10px;
+        box-shadow: var(--crowberry-mire-button-shadow);
+
+        &:hovered
+        {
+            border-color: var(--crowberry-mire-bar-handle-active-highlight-border-color);
+        }
+
+        &:pressed
+        {
+            box-shadow: none;
+        }
+    }
+
+    & > tickmark
+    {
+        background-color: var(--crowberry-mire-bar-active-border-color);
+
+        &.active {
+            background-color: var(--crowberry-mire-bar-track-active-border-color);
+        }
+    }
+
+    &.horizontal
+    {
+        width: 200px;
+        height: 6px;
+
+        & > tickmark {
+            width: var(--crowberry-mire-bar-tickmark-thickness);
+            height: var(--crowberry-mire-bar-tickmark-length);
+            margin-top: var(--crowberry-mire-bar-tickmark-margin);
+        }
+    }
+
+    &.vertical
+    {
+        width: 6px;
+        height: 200px;
+
+        & > tickmark {
+            width: var(--crowberry-mire-bar-tickmark-length);
+            height: var(--crowberry-mire-bar-tickmark-thickness);
+            margin-left: var(--crowberry-mire-bar-tickmark-margin);
+        }
+    }
+
+    &:disabled {
+        background-color: var(--crowberry-mire-bar-disabled-background-color);
+        border: 1px solid var(--crowberry-mire-bar-disabled-border-color);
+
+        & > fill {
+            background-color: var(--crowberry-mire-bar-track-disabled-background-color);
+            border-color: var(--crowberry-mire-bar-track-disabled-border-color);
+        }
+
+        & > handle {
+            background-color: var(--crowberry-mire-bar-handle-disabled-background-color);
+            border-color: var(--crowberry-mire-bar-handle-disabled-border-color);
+            box-shadow: none;
+        }
+
+        & > tickmark,
+        & > tickmark.active {
+            background-color: var(--crowberry-mire-bar-disabled-border-color);
+        }
+    }
+}
+
+slider:visual-focus > handle,
+rangeslider > handle:active-focus
+{
+    border-color: var(--crowberry-mire-bar-handle-active-highlight-border-color);
+    outline: var(--crowberry-mire-focus-outline);
+}
+
+slider:pressed > handle,
+rangeslider > handle:pressed
+{
+    background-color: var(--crowberry-mire-bar-handle-active-highlight-color);
+    border-color: var(--crowberry-mire-bar-handle-active-highlight-border-color);
+}
+
+scrollbar
+{
+    width: var(--crowberry-mire-scrollbar-size);
+    height: var(--crowberry-mire-scrollbar-size);
+
+    padding: var(--crowberry-mire-medium-spacing);
+
+    &.horizontal
+    {
+        border-top: 1px solid var(--crowberry-mire-bar-active-border-color);
+    }
+
+    &.vertical
+    {
+        border-left: 1px solid var(--crowberry-mire-bar-active-border-color);
+    }
+
+    & > handle {
+        background-color: var(--crowberry-mire-bar-active-background-color);
+        border: 1px solid var(--crowberry-mire-bar-active-border-color);
+        border-radius: var(--crowberry-mire-small-element-size);
+
+        &:hovered,
+        &:pressed
+        {
+            background-color: var(--crowberry-mire-bar-track-active-background-color);
+            border-color: var(--crowberry-mire-bar-track-active-border-color);
+        }
+
+        &:disabled {
+            background-color: var(--crowberry-mire-bar-disabled-background-color);
+            border: 1px solid var(--crowberry-mire-bar-disabled-border-color);
+        }
+    }
+
+    &.noninteractive {
+        width: var(--crowberry-mire-non-interactive-scrollbar-size);
+        border-left: none;
+        padding: var(--crowberry-mire-small-spacing);
+        & > handle {
+            background-color: var(--crowberry-mire-bar-handle-disabled-background-color);
+            border: 1px solid var(--crowberry-mire-bar-handle-disabled-border-color);
+        }
+    }
+}
+
+dial {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px; /* use half of width */
+    background-color: var(--crowberry-mire-dial-inactive-background-color);
+    border-color: var(--crowberry-mire-dial-inactive-border-color);
+
+    &:hovered {
+        background-color: var(--crowberry-mire-dial-active-background-color);
+        border-color: var(--crowberry-mire-dial-active-border-color);
+    }
+
+    &:pressed {
+        border-color: var(--crowberry-mire-highlight-color);
+    }
+
+    &:disabled {
+        background-color: var(--crowberry-mire-dial-disabled-background-color);
+        border-color: var(--crowberry-mire-dial-disabled-border-color);
+    }
+
+    & > handle {
+        background-color: var(--crowberry-mire-dial-handle-inactive-background-color);
+        border-color: var(--crowberry-mire-dial-handle-inactive-border-color);
+
+        &:hovered {
+            background-color: var(--crowberry-mire-dial-handle-active-background-color);
+            border-color: var(--crowberry-mire-dial-handle-active-border-color);
+        }
+
+        &:pressed {
+            background-color: var(--crowberry-mire-highlight-color);
+            border-color: var(--crowberry-mire-highlight-color);
+        }
+
+        &:disabled {
+            background-color: var(--crowberry-mire-dial-handle-disabled-background-color);
+            border-color: var(--crowberry-mire-dial-handle-disabled-border-color);
+        }
+    }
+}
+
+slider.changed {
+    & > fill {
+        background-color: var(--crowberry-mire-changed-background);
+        border: 1px solid var(--crowberry-mire-changed-foreground);
+    }
+    & > tickmark.active {
+        background-color: var(--crowberry-mire-changed-foreground);
+    }
+}

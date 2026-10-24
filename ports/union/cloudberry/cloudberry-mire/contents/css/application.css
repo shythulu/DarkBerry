@@ -1,0 +1,424 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Application-structural elements like windows, drawers, etc.
+ */
+
+:root {
+    --cloudberry-mire-window-active-background-color: var(--cloudberry-mire-kcs-active-window-background-normal);
+    --cloudberry-mire-window-active-text-color: var(--cloudberry-mire-kcs-active-window-foreground-text);
+    --cloudberry-mire-window-active-border-color: var(--cloudberry-mire-kcs-active-window-decoration-frame);
+
+    --cloudberry-mire-window-inactive-background-color: var(--cloudberry-mire-kcs-inactive-window-background-normal);
+    --cloudberry-mire-window-inactive-text-color: var(--cloudberry-mire-kcs-inactive-window-foreground-text);
+    --cloudberry-mire-window-inactive-border-color: var(--cloudberry-mire-kcs-inactive-window-decoration-frame);
+
+    --cloudberry-mire-header-active-background-color: var(--cloudberry-mire-kcs-active-header-background-normal);
+    --cloudberry-mire-header-active-text-color: var(--cloudberry-mire-kcs-active-header-foreground-text);
+    --cloudberry-mire-header-active-border-color: var(--cloudberry-mire-kcs-active-header-decoration-frame);
+
+    --cloudberry-mire-header-inactive-background-color: var(--cloudberry-mire-kcs-inactive-header-background-normal);
+    --cloudberry-mire-header-inactive-text-color: var(--cloudberry-mire-kcs-inactive-header-foreground-text);
+    --cloudberry-mire-header-inactive-border-color: var(--cloudberry-mire-kcs-inactive-header-decoration-frame);
+
+    --cloudberry-mire-complementary-active-background-color: var(--cloudberry-mire-kcs-active-header-background-normal);
+    --cloudberry-mire-complementary-active-text-color: var(--cloudberry-mire-kcs-active-header-foreground-text);
+    --cloudberry-mire-complementary-active-border-color: var(--cloudberry-mire-kcs-active-header-decoration-frame);
+
+    --cloudberry-mire-complementary-inactive-background-color: var(--cloudberry-mire-kcs-inactive-header-background-normal);
+    --cloudberry-mire-complementary-inactive-text-color: var(--cloudberry-mire-kcs-inactive-header-foreground-text);
+    --cloudberry-mire-complementary-inactive-border-color: var(--cloudberry-mire-kcs-inactive-header-decoration-frame);
+}
+
+applicationwindow
+{
+    background-color: var(--cloudberry-mire-window-active-background-color);
+    color: var(--cloudberry-mire-window-active-text-color);
+
+    &.inactive {
+        background-color: var(--cloudberry-mire-window-inactive-background-color);
+        color: var(--cloudberry-mire-window-inactive-text-color);
+    }
+}
+
+page
+{
+    background-color: var(--cloudberry-mire-window-background-color);
+    color: var(--cloudberry-mire-window-text-color);
+
+    .inactive & {
+        background-color: var(--cloudberry-mire-window-inactive-background-color);
+        color: var(--cloudberry-mire-window-inactive-text-color);
+    }
+}
+
+toolbar
+{
+    height: 46px; /* large-element-size + medium-spacing + large-spacing */
+    padding: var(--cloudberry-mire-small-spacing);
+    padding-top: var(--cloudberry-mire-medium-spacing);
+    padding-bottom: var(--cloudberry-mire-large-spacing);
+    color: var(--cloudberry-mire-window-active-text-color);
+    background-color: var(--cloudberry-mire-window-active-background-color);
+
+    &.footer {
+        border-top: 1px solid var(--cloudberry-mire-window-active-border-color);
+    }
+
+    &.header {
+        border-bottom: 1px solid var(--cloudberry-mire-window-active-border-color);
+    }
+
+    .inactive & {
+        background-color: var(--cloudberry-mire-window-inactive-background-color);
+        border-color: var(--cloudberry-mire-window-inactive-border-color);
+    }
+
+    &.header,
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        background-color: var(--cloudberry-mire-header-active-background-color);
+        border-color: var(--cloudberry-mire-header-active-border-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-mire-header-inactive-background-color);
+            border-color: var(--cloudberry-mire-header-inactive-border-color);
+        }
+    }
+
+    &.header[colorset="window"]
+    {
+        background-color: var(--cloudberry-mire-window-active-background-color);
+        border-color: var(--cloudberry-mire-window-active-border-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-mire-window-inactive-background-color);
+            border-color: var(--cloudberry-mire-window-inactive-border-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &,
+    &.header[colorset="complementary"]
+    {
+        background-color: var(--cloudberry-mire-complementary-active-background-color);
+        color: var(--cloudberry-mire-complementary-active-text-color);
+        border-color: var(--cloudberry-mire-complementary-active-border-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-mire-complementary-inactive-background-color);
+            color: var(--cloudberry-mire-complementary-inactive-text-color);
+            border-color: var(--cloudberry-mire-complementary-active-border-color);
+        }
+    }
+
+    & > separator {
+        width: 1px;
+        height: 1px;
+        border: none;
+        border-radius: 0px;
+        background-color: var(--cloudberry-mire-window-border-color);
+        padding: 0px;
+    }
+
+    & > handle {
+        width: 4px;
+        height: 4px;
+        border: none;
+        border-radius: 0px;
+        border-left: 1px solid var(--cloudberry-mire-window-border-color);
+        border-right: 1px solid var(--cloudberry-mire-window-border-color);
+        padding: 0px;
+    }
+}
+
+drawer
+{
+    color: var(--cloudberry-mire-view-text-color);
+    background-color: var(--cloudberry-mire-view-background-color);
+
+    &.modal {
+        color: var(--cloudberry-mire-window-text-color);
+        background-color: var(--cloudberry-mire-window-active-background-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-mire-window-inactive-background-color);
+        }
+    }
+}
+
+scrollview {
+    &.vertical-scroll {
+        padding-right: var(--cloudberry-mire-scrollbar-size);
+    }
+
+    &.horizontal-scroll {
+        padding-bottom: var(--cloudberry-mire-scrollbar-size);
+    }
+
+    &.framed-background
+    {
+        background-color: var(--cloudberry-mire-view-background-color);
+        border: 1px solid var(--cloudberry-mire-view-border-color);
+        border-radius: var(--cloudberry-mire-corner-radius);
+    }
+}
+
+splitview {
+    & handle {
+        width: 1px;
+        height: 1px;
+        background-color: var(--cloudberry-mire-window-border-color);
+    }
+
+    &.horizontal handle {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    &.vertical handle {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
+
+pageindicator {
+    spacing: var(--cloudberry-mire-small-spacing);
+}
+
+pageindicatordelegate {
+    background-color: var(--cloudberry-mire-indicator-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    &:pressed {
+        background-color: var(--cloudberry-mire-indicator-press-color);
+    }
+
+    &.current {
+        background-color: var(--cloudberry-mire-indicator-current-color);
+    }
+}
+
+pane
+{
+    padding: var(--cloudberry-mire-large-spacing);
+    background-color: var(--cloudberry-mire-window-background-color);
+}
+
+frame,
+groupbox,
+framemenu,
+framewindow
+{
+    padding: var(--cloudberry-mire-large-spacing);
+    border: 1px solid var(--cloudberry-mire-window-border-color);
+    border-radius: var(--cloudberry-mire-corner-radius);
+    .inactive & {
+        border-color: var(--cloudberry-mire-window-inactive-border-color);
+    }
+}
+
+splitter {
+    width: 1px;
+    background-color: var(--cloudberry-mire-window-border-color);
+}
+
+frame,
+listview,
+treeview,
+tableview,
+columnview,
+scrollview,
+textfield,
+textarea {
+    &:visual-focus {
+        border: 1px solid var(--cloudberry-mire-highlight-color);
+    }
+    &[shape="no-frame"] {
+        border: none;
+    }
+    &[shape="panel"],
+    &[shape="box"] {
+        border-radius: var(--cloudberry-mire-corner-radius);
+        border: 1px solid var(--cloudberry-mire-window-border-color);
+        background-color: var(--cloudberry-mire-view-background-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-mire-window-inactive-background-color);
+            border-color: var(--cloudberry-mire-window-inactive-border-color);
+        }
+    }
+    &[shape="vertical-line"],
+    &[shape="horizontal-line"] {
+        border-radius: 0px;
+        border: none;
+        background-color: var(--cloudberry-mire-window-border-color);
+        padding: 0px;
+        inset: 1px;
+    }
+    &[shape="vertical-line"] {
+        width: 1px;
+    }
+    &[shape="horizontal-line"] {
+        height: 1px;
+    }
+    /* Legacy hints that applications use to drive Breeze style */
+    &.dock-left,
+    &.dock-right,
+    &.dock-top,
+    &.dock-bottom,
+    &.left-edge,
+    &.right-edge,
+    &.top-edge,
+    &.bottom-edge {
+        border: none;
+        border-radius: 0px;
+    }
+    &.left-edge {
+        border-left: 1px solid var(--cloudberry-mire-window-border-color);
+    }
+    &.right-edge {
+        border-right: 1px solid var(--cloudberry-mire-window-border-color);
+    }
+    &.top-edge {
+        border-top: 1px solid var(--cloudberry-mire-window-border-color);
+    }
+    &.bottom-edge {
+        border-bottom: 1px solid var(--cloudberry-mire-window-border-color);
+    }
+}
+
+groupbox {
+    padding: var(--cloudberry-mire-small-spacing);
+    border: 1px solid var(--cloudberry-mire-window-border-color);
+    border-radius: var(--cloudberry-mire-corner-radius);
+    color: var(--cloudberry-mire-window-text-color);
+    background-color: var(--cloudberry-mire-window-background-color);
+
+    & > header {
+        color: var(--cloudberry-mire-window-text-color);
+    }
+    icon-alignment: content start start 0;
+    text-alignment: content center start 0;
+    spacing: var(--cloudberry-mire-small-spacing);
+    width: 200px;
+}
+
+
+dockwidget {
+    width: var(--cloudberry-mire-small-element-size);
+    height: var(--cloudberry-mire-small-element-size);
+    color: var(--cloudberry-mire-header-text-color);
+    background-color: var(--cloudberry-mire-header-background-color);
+    icon-alignment: content center center 0;
+    text-alignment: content center center 1;
+    padding: var(--cloudberry-mire-small-spacing);
+    &:visual-focus,
+    &:active-focus {
+        border: 1px solid var(--cloudberry-mire-highlight-color);
+    }
+
+    floatbutton,
+    closebutton {
+        width: var(--cloudberry-mire-small-element-size);
+        height: var(--cloudberry-mire-small-element-size);
+    }
+
+    floatbutton {
+        layout-alignment: content start center 0;
+        icon-name: "window-restore";
+    }
+
+    closebutton {
+        layout-alignment: content end center 0;
+        icon-name: "window-close-symbolic";
+    }
+}
+
+scrollareacorner {
+    background-color: var(--cloudberry-mire-window-background-color);
+    color: var(--cloudberry-mire-window-text-color);
+}
+
+panel,
+groupbox {
+    &.flat {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+rubberband {
+    background-color: var(--cloudberry-mire-highlight-hover-color);
+    border: 1px solid var(--cloudberry-mire-highlight-color);
+    border-radius: var(--cloudberry-mire-corner-radius);
+}
+
+titlebar {
+    width: var(--cloudberry-mire-small-element-size);
+    height: var(--cloudberry-mire-small-element-size);
+    color: var(--cloudberry-mire-header-text-color);
+    background-color: var(--cloudberry-mire-header-background-color);
+    icon-alignment: content center fill 0;
+    text-alignment: content center fill 1;
+    icon-size: var(--cloudberry-mire-icon-size-small);
+
+    systemmenu,
+    minimizebutton,
+    maximizebutton,
+    closebutton,
+    normalbutton,
+    shadebutton,
+    helpbutton {
+        width: var(--cloudberry-mire-small-element-size);
+        height: var(--cloudberry-mire-small-element-size);
+    }
+
+    systemmenu {
+        layout-alignment: content start fill 0;
+        icon-name: "application-menu-symbolic";
+    }
+    minimizebutton {
+        layout-alignment: content end fill 0;
+        icon-name: "window-minimize-symbolic";
+    }
+    maximizebutton {
+        layout-alignment: content end fill 1;
+        icon-name: "window-maximize-symbolic";
+    }
+    closebutton {
+        layout-alignment: content end fill 2;
+        icon-name: "window-close-symbolic";
+    }
+    shadebutton {
+        layout-alignment: content start fill 2;
+        icon-name: "window-shade-symbolic";
+    }
+    helpbutton {
+        layout-alignment: content start fill -1;
+        icon-name: "help-contextual-symbolic";
+    }
+
+    normalbutton {
+        layout-alignment: content start fill 1;
+    }
+
+    &.maximized {
+        maximizebutton {
+            icon-name: "window-restore-symbolic";
+        }
+    }
+
+    &.minimized {
+        minimizebutton {
+            icon-name: "empty";
+        }
+    }
+
+}

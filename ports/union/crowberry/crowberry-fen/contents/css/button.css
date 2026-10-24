@@ -1,0 +1,415 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Buttons and button-like controls.
+ */
+
+:root {
+    --crowberry-fen-button-active-text-color: var(--crowberry-fen-kcs-active-button-foreground-text);
+    --crowberry-fen-button-active-background-color: var(--crowberry-fen-kcs-active-button-background-normal);
+    --crowberry-fen-button-active-border-color: var(--crowberry-fen-kcs-active-button-decoration-frame);
+    --crowberry-fen-button-active-highlight-color: mix(var(--crowberry-fen-button-active-background-color), var(--crowberry-fen-highlight-color), 0.333);
+    --crowberry-fen-button-active-border-highlight-color: var(--crowberry-fen-highlight-color);
+    --crowberry-fen-button-active-checked-color: mix(var(--crowberry-fen-button-active-background-color), var(--crowberry-fen-button-active-text-color), 0.125);
+    --crowberry-fen-button-active-focus-color: modify-color(var(--crowberry-fen-kcs-active-button-decoration-focus) set-alpha var(--crowberry-fen-focus-outline-alpha));
+
+    --crowberry-fen-button-active-header-border-color: var(--crowberry-fen-kcs-active-header-decoration-frame);
+    --crowberry-fen-button-active-header-highlight-color: mix(var(--crowberry-fen-header-background-color), var(--crowberry-fen-highlight-color), 0.333);
+    --crowberry-fen-button-active-header-checked-color: mix(var(--crowberry-fen-header-background-color), var(--crowberry-fen-header-text-color), 0.125);
+
+    --crowberry-fen-button-inactive-text-color: var(--crowberry-fen-kcs-inactive-button-foreground-text);
+    --crowberry-fen-button-inactive-background-color: var(--crowberry-fen-kcs-inactive-button-background-normal);
+    --crowberry-fen-button-inactive-border-color: var(--crowberry-fen-kcs-inactive-button-decoration-frame);
+    --crowberry-fen-button-inactive-highlight-color: mix(var(--crowberry-fen-button-inactive-background-color), var(--crowberry-fen-highlight-color), 0.5);
+    --crowberry-fen-button-inactive-checked-color: mix(var(--crowberry-fen-button-inactive-background-color), var(--crowberry-fen-button-inactive-text-color), 0.2);
+
+    --crowberry-fen-button-disabled-text-color: var(--crowberry-fen-kcs-disabled-button-foreground-text);
+    --crowberry-fen-button-disabled-background-color: var(--crowberry-fen-kcs-disabled-button-background-normal);
+    --crowberry-fen-button-disabled-border-color: var(--crowberry-fen-kcs-disabled-button-decoration-frame);
+    --crowberry-fen-button-disabled-highlight-color: mix(var(--crowberry-fen-button-disabled-background-color), var(--crowberry-fen-highlight-color), 0.333);
+
+    --crowberry-fen-button-border: 1px solid var(--crowberry-fen-button-active-border-color);
+    --crowberry-fen-button-border-highlight: 1px solid var(--crowberry-fen-button-active-border-highlight-color);
+    --crowberry-fen-button-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    --crowberry-fen-button-focus: 2px solid var(--crowberry-fen-focus-ring-color);
+
+    /* Values derived from Breeze QStyle metrics */
+    --crowberry-fen-button-default-size: 32px; /* 16 + 2 * 6 + 2 * 2  */
+    --crowberry-fen-button-padding: 8px; /* 6 + 2 */
+    --crowberry-fen-button-spacing: 4px;
+    --crowberry-fen-toolbutton-menu-padding: 2px;
+
+    /* Match Breeze QStyle color */
+    --crowberry-fen-combobox-popup-background-color: mix(var(--crowberry-fen-window-background-color), var(--crowberry-fen-view-background-color), 0.3);
+    --crowberry-fen-combobox-popup-highlight-color: mix(var(--crowberry-fen-combobox-popup-background-color), var(--crowberry-fen-highlight-color), 0.333);
+    --crowberry-fen-combobox-popup-text-color: var(--crowberry-fen-window-text-color);
+}
+
+button,
+toolbutton,
+combobox,
+roundbutton,
+delaybutton,
+toolbutton.raised
+{
+    width: var(--crowberry-fen-button-default-size);
+    height: var(--crowberry-fen-button-default-size);
+    spacing: var(--crowberry-fen-button-spacing);
+    padding: var(--crowberry-fen-button-padding);
+    border-radius: var(--crowberry-fen-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: center;
+    icon-alignment-horizontal: center;
+
+    color: var(--crowberry-fen-button-active-text-color);
+    border: var(--crowberry-fen-button-border);
+    background-color: var(--crowberry-fen-button-active-background-color);
+
+    &:checked
+    {
+        border: var(--crowberry-fen-button-border);
+        background-color: var(--crowberry-fen-button-active-checked-color);
+    }
+
+    &:hovered
+    {
+        border-color: var(--crowberry-fen-button-active-border-highlight-color);
+    }
+
+    &:visual-focus
+    {
+        border-color: var(--crowberry-fen-button-active-border-highlight-color);
+        outline: var(--crowberry-fen-button-focus);
+    }
+
+    &:disabled
+    {
+        color: var(--crowberry-fen-button-disabled-text-color);
+        background-color: var(--crowberry-fen-button-disabled-background-color);
+        border-color: var(--crowberry-fen-button-disabled-border-color);
+        box-shadow: none;
+    }
+
+    &.with-menu > indicator {
+        visibility: visible;
+        layout-alignment: content end center 0;
+        width: var(--crowberry-fen-icon-size-small);
+        height: var(--crowberry-fen-icon-size-small);
+        /* half of small-spacing */
+        padding-left: var(--crowberry-fen-toolbutton-menu-padding);
+        padding-right: var(--crowberry-fen-toolbutton-menu-padding);
+        icon-name: "arrow-down";
+        icon-color: var(--crowberry-fen-button-active-text-color);
+    }
+
+    &.with-inline-arrow > indicator {
+        visibility: visible;
+        layout-alignment: content end end 0;
+        width: 8px;
+        height: 8px;
+        padding: 1px;
+        icon-name: "arrow-down";
+        icon-color: var(--crowberry-fen-button-active-text-color);
+    }
+
+    &.with-menu-button > indicator {
+        visibility: visible;
+        width: var(--crowberry-fen-icon-size-small);
+        height: var(--crowberry-fen-icon-size-small);
+        /* half of small-spacing */
+        padding-left: var(--crowberry-fen-toolbutton-menu-padding);
+        padding-right: var(--crowberry-fen-toolbutton-menu-padding);
+        layout-alignment: content end fill 0;
+        icon-name: "arrow-down";
+        icon-color: var(--crowberry-fen-button-active-text-color);
+        border-left:  var(--crowberry-fen-button-border);
+    }
+
+    &.menu-open {
+        border: var(--crowberry-fen-button-border-highlight);
+        & > indicator {
+            border: var(--crowberry-fen-button-border-highlight);
+            background-color: var(--crowberry-fen-button-active-highlight-color);
+            border-radius: var(--crowberry-fen-corner-radius);
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+
+    &[display="icon-only"].with-menu > indicator {
+        visibility: hidden;
+    }
+
+    &[display="text-under-icon"] {
+        text-alignment-vertical: stack-center;
+        icon-alignment-vertical: stack-center;
+    }
+}
+
+button,
+roundbutton,
+delaybutton
+{
+    box-shadow: var(--crowberry-fen-button-shadow);
+}
+
+button:pressed,
+toolbutton:pressed,
+combobox:pressed,
+roundbutton:pressed,
+delaybutton:pressed,
+toolbutton.raised:pressed
+{
+    border-color: var(--crowberry-fen-button-active-border-highlight-color);
+    background-color: var(--crowberry-fen-button-active-highlight-color);
+    box-shadow: none;
+}
+
+button:checked,
+roundbutton:checked
+{
+    box-shadow: none;
+}
+
+toolbutton,
+button.flat,
+combobox.flat,
+roundbutton.flat
+{
+    border: none;
+    background: none;
+    box-shadow: none;
+
+    &:hovered {
+        border: var(--crowberry-fen-button-border-highlight);
+    }
+
+    &:visual-focus {
+        border: var(--crowberry-fen-button-border-highlight);
+    }
+
+    &:pressed {
+        border: var(--crowberry-fen-button-border-highlight);
+        background-color: var(--crowberry-fen-button-active-highlight-color);
+    }
+
+    toolbar.header &:checked,
+    applicationheader &:checked
+    {
+        border-color: var(--crowberry-fen-button-active-header-border-color);
+        background-color: var(--crowberry-fen-button-active-header-checked-color);
+    }
+
+    toolbar.header &:pressed,
+    applicationheader &:pressed
+    {
+        background-color: var(--crowberry-fen-button-active-header-highlight-color);
+    }
+
+    &:disabled {
+        border: none;
+        background: none;
+    }
+
+    &.with-menu-button > indicator {
+        border-left: none;
+        &:hovered {
+            border-left: var(--crowberry-fen-button-border-highlight);
+        }
+    }
+
+    &.menu-open {
+        & > indicator {
+            border-left: var(--crowberry-fen-button-border-highlight);
+        }
+    }
+
+    &[colorset="window"],
+    [colorset="window"] &
+    {
+        color: var(--crowberry-fen-window-text-color);
+
+        &:disabled {
+            color: var(--crowberry-fen-window-disabled-text-color);
+        }
+    }
+
+    &[colorset="view"],
+    [colorset="view"] &
+    {
+        color: var(--crowberry-fen-view-text-color);
+
+        &:disabled {
+            color: var(--crowberry-fen-view-disabled-text-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &
+    {
+        color: var(--crowberry-fen-complementary-text-color);
+
+        &:disabled {
+            color: var(--crowberry-fen-complementary-disabled-text-color);
+        }
+    }
+
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        color: var(--crowberry-fen-header-text-color);
+
+        &:disabled {
+            color: var(--crowberry-fen-header-disabled-text-color);
+        }
+    }
+}
+
+toolbutton
+{
+    /* Ensure default toolbuttons end up with 32px height, not 34px. */
+    icon-size: 24px;
+    padding: var(--crowberry-fen-medium-spacing) var(--crowberry-fen-small-spacing);
+}
+
+toolbutton.raised
+{
+    icon-size: var(--crowberry-fen-icon-size-small);
+    padding: var(--crowberry-fen-button-padding);
+}
+
+roundbutton
+{
+    border-radius: var(--crowberry-fen-button-default-size);
+}
+
+combobox
+{
+    layout-alignment: content fill center 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+    box-shadow: var(--crowberry-fen-button-shadow);
+    text-wrap-mode: no-wrap;
+    text-elide: right;
+
+    & > indicator {
+        layout-alignment: content end center 0;
+        width: var(--crowberry-fen-icon-size-small);
+        height: var(--crowberry-fen-icon-size-small);
+        icon-name: "arrow-down-symbolic";
+        icon-color: var(--crowberry-fen-button-active-text-color);
+        visibility: visible;
+    }
+
+    &.editable,
+    &.flat.editable
+    {
+        background-color: var(--crowberry-fen-view-background-color);
+        border: 1px solid var(--crowberry-fen-view-border-color);
+        box-shadow: none;
+        text-elide: none;
+
+        &:hovered {
+            border-color: var(--crowberry-fen-button-active-border-highlight-color);
+        }
+
+        &:pressed {
+            border-color: var(--crowberry-fen-button-active-border-highlight-color);
+
+            & > indicator {
+                icon-color: var(--crowberry-fen-button-active-border-highlight-color);
+            }
+        }
+
+        &:visual-focus {
+            border-color: var(--crowberry-fen-button-active-border-highlight-color);
+        }
+
+        &:disabled {
+            background-color: var(--crowberry-fen-view-disabled-background-color);
+            color: var(--crowberry-fen-view-disabled-text-color);
+            border-color: var(--crowberry-fen-view-disabled-border-color);
+        }
+    }
+}
+
+popup.combobox
+{
+    padding: 0px;
+    background-color: var(--crowberry-fen-combobox-popup-background-color);
+    border-radius: var(--crowberry-fen-corner-radius);
+
+    itemviewitem:highlight,
+    itemdelegate:highlight {
+        background-color: var(--crowberry-fen-combobox-popup-highlight-color);
+        border-color: var(--crowberry-fen-highlight-color);
+        color: var(--crowberry-fen-combobox-popup-text-color);
+    }
+}
+
+toolseparator {
+    background-color: var(--crowberry-fen-button-active-border-color);
+
+    &.horizontal {
+        width: var(--crowberry-fen-large-element-size);
+        height: 1px;
+        inset: 0px var(--crowberry-fen-small-spacing);
+    }
+
+    &.vertical {
+        width: 1px;
+        height: var(--crowberry-fen-large-element-size);
+        inset: var(--crowberry-fen-small-spacing) 0px;
+    }
+
+    toolbar.header &,
+    applicationheader &
+    {
+        background-color: var(--crowberry-fen-button-active-header-border-color);
+    }
+}
+
+delaybutton {
+    & > fill {
+        border-radius: var(--crowberry-fen-corner-radius);
+        border: var(--crowberry-fen-button-border-highlight);
+        background-color: var(--crowberry-fen-highlight-color);
+    }
+}
+
+tumbler {
+    width: 60px;
+    height: 200px;
+    background-color: var(--crowberry-fen-view-background-color);
+
+    text {
+        text-alignment-horizontal: center;
+        color: mix(var(--crowberry-fen-view-background-color), var(--crowberry-fen-view-text-color), 0.75);
+
+        &:highlighted {
+            color: mix(var(--crowberry-fen-highlight-color), var(--crowberry-fen-view-text-color), 0.6);
+        }
+    }
+}
+
+button.changed,
+toolbutton.changed,
+combobox.changed,
+roundbutton.changed,
+delaybutton.changed {
+    background-color: var(--crowberry-fen-changed-background);
+    border: 1px solid var(--crowberry-fen-changed-foreground);
+}
+
+
+tabscrollbutton {
+    icon-alignment: content fill fill 0;
+    layout-alignment: content center center 0;
+    icon-size: 16px;
+    width: var(--crowberry-fen-button-default-size);
+    height: var(--crowberry-fen-button-default-size);
+}

@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --darkberry-wisp-minimal-spacing: 2px;
+    --darkberry-wisp-small-spacing: 4px;
+    --darkberry-wisp-medium-spacing: 6px;
+    --darkberry-wisp-large-spacing: 8px;
+    --darkberry-wisp-grid-unit: 18px;
+    --darkberry-wisp-corner-radius: 5px;
+
+    /* Icon sizes */
+    --darkberry-wisp-icon-size-small: 16px;
+    --darkberry-wisp-icon-size-smallmedium: 22px;
+    --darkberry-wisp-icon-size-medium: 32px;
+    --darkberry-wisp-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --darkberry-wisp-small-element-size: 16px;
+    --darkberry-wisp-medium-element-size: 24px;
+    --darkberry-wisp-large-element-size: 32px;
+    --darkberry-wisp-scrollbar-size: 20px;
+    --darkberry-wisp-non-interactive-scrollbar-size: 10px;
+    --darkberry-wisp-menu-item-width: 150px;
+    --darkberry-wisp-text-field-width: 200px;
+
+    /* Colors */
+    --darkberry-wisp-highlight-color: var(--darkberry-wisp-kcs-active-selection-background-normal);
+    --darkberry-wisp-highlight-text-color: var(--darkberry-wisp-kcs-active-selection-foreground-text);
+    --darkberry-wisp-highlight-hover-color: modify-color(var(--darkberry-wisp-highlight-color) set-alpha 0.3);
+
+    --darkberry-wisp-window-text-color: var(--darkberry-wisp-kcs-active-window-foreground-text);
+    --darkberry-wisp-window-background-color: var(--darkberry-wisp-kcs-active-window-background-normal);
+    --darkberry-wisp-window-background-alternate-color: var(--darkberry-wisp-kcs-active-window-background-alternate);
+    --darkberry-wisp-window-border-color: var(--darkberry-wisp-kcs-active-window-decoration-frame);
+    --darkberry-wisp-window-highlight-color: mix(var(--darkberry-wisp-window-background-color), var(--darkberry-wisp-highlight-color), 0.5);
+    --darkberry-wisp-window-border-highlight-color: var(--darkberry-wisp-highlight-color);
+
+    --darkberry-wisp-view-text-color: var(--darkberry-wisp-kcs-active-view-foreground-text);
+    --darkberry-wisp-view-background-color: var(--darkberry-wisp-kcs-active-view-background-normal);
+    --darkberry-wisp-view-background-alternate-color: var(--darkberry-wisp-kcs-active-view-background-alternate);
+    --darkberry-wisp-view-border-color: var(--darkberry-wisp-kcs-active-view-decoration-frame);
+    --darkberry-wisp-view-highlight-color: mix(var(--darkberry-wisp-view-background-color), var(--darkberry-wisp-highlight-color), 0.5);
+
+    --darkberry-wisp-header-text-color: var(--darkberry-wisp-kcs-active-header-foreground-text);
+    --darkberry-wisp-header-background-color: var(--darkberry-wisp-kcs-active-header-background-normal);
+    --darkberry-wisp-header-background-inactive-color: var(--darkberry-wisp-kcs-inactive-header-background-normal);
+    --darkberry-wisp-header-border-color: var(--darkberry-wisp-kcs-active-header-decoration-frame);
+
+    --darkberry-wisp-complementary-text-color: var(--darkberry-wisp-kcs-active-complementary-foreground-text);
+    --darkberry-wisp-complementary-background-color: var(--darkberry-wisp-kcs-active-complementary-background-normal);
+
+    --darkberry-wisp-positive-text: var(--darkberry-wisp-kcs-active-view-foreground-positive);
+    --darkberry-wisp-neutral-text: var(--darkberry-wisp-kcs-active-view-foreground-neutral);
+    --darkberry-wisp-negative-text: var(--darkberry-wisp-kcs-active-view-foreground-negative);
+    --darkberry-wisp-positive-background: var(--darkberry-wisp-kcs-active-view-background-positive);
+    --darkberry-wisp-neutral-background: var(--darkberry-wisp-kcs-active-view-background-neutral);
+    --darkberry-wisp-negative-background: var(--darkberry-wisp-kcs-active-view-background-negative);
+
+    --darkberry-wisp-changed-foreground: var(--darkberry-wisp-neutral-text);
+    --darkberry-wisp-changed-background: var(--darkberry-wisp-neutral-background);
+
+    --darkberry-wisp-card-background-color: var(--darkberry-wisp-view-background-color);
+    --darkberry-wisp-card-text-color: var(--darkberry-wisp-view-text-color);
+    --darkberry-wisp-card-border-color: var(--darkberry-wisp-view-border-color);
+    --darkberry-wisp-card-hover-color: mix(var(--darkberry-wisp-card-background-color), var(--darkberry-wisp-highlight-color), 0.1);
+    --darkberry-wisp-card-pressed-color: mix(var(--darkberry-wisp-card-background-color), var(--darkberry-wisp-highlight-color), 0.3);
+
+    --darkberry-wisp-focus-outline-alpha: 0.3;
+    --darkberry-wisp-focus-color: modify-color(var(--darkberry-wisp-kcs-active-window-decoration-focus) set-alpha var(--darkberry-wisp-focus-outline-alpha));
+
+    --darkberry-wisp-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --darkberry-wisp-window-disabled-text-color: var(--darkberry-wisp-kcs-disabled-window-foreground-text);
+    --darkberry-wisp-window-disabled-background-color: var(--darkberry-wisp-kcs-disabled-window-background-normal);
+    --darkberry-wisp-window-disabled-border-color: var(--darkberry-wisp-kcs-disabled-window-decoration-frame);
+
+    --darkberry-wisp-view-disabled-text-color: var(--darkberry-wisp-kcs-disabled-view-foreground-text);
+    --darkberry-wisp-view-disabled-background-color: var(--darkberry-wisp-kcs-disabled-view-background-normal);
+    --darkberry-wisp-view-disabled-border-color: var(--darkberry-wisp-kcs-disabled-view-decoration-frame);
+
+    --darkberry-wisp-header-disabled-text-color: var(--darkberry-wisp-kcs-disabled-header-foreground-text);
+    --darkberry-wisp-header-disabled-background-color: var(--darkberry-wisp-kcs-disabled-header-background-normal);
+    --darkberry-wisp-header-disabled-border-color: var(--darkberry-wisp-kcs-disabled-header-decoration-frame);
+
+    --darkberry-wisp-complementary-disabled-text-color: var(--darkberry-wisp-kcs-disabled-complementary-foreground-text);
+
+    --darkberry-wisp-highlight-disabled-color: mix(var(--darkberry-wisp-window-disabled-background-color), var(--darkberry-wisp-highlight-color), 0.2);
+    --darkberry-wisp-highlight-disabled-text-color: mix(var(--darkberry-wisp-window-disabled-text-color), var(--darkberry-wisp-highlight-text-color), 0.2);
+
+    --darkberry-wisp-card-disabled-background-color: var(--darkberry-wisp-view-disabled-background-color);
+    --darkberry-wisp-card-disabled-text-color: var(--darkberry-wisp-view-disabled-text-color);
+    --darkberry-wisp-card-disabled-border-color: var(--darkberry-wisp-view-disabled-border-color);
+
+    /* Standard Elements */
+    --darkberry-wisp-focus-outline: 2px solid var(--darkberry-wisp-focus-ring-color);
+    --darkberry-wisp-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --darkberry-wisp-indicator-color: modify-color(var(--darkberry-wisp-window-text-color) set-alpha 0.4);
+    --darkberry-wisp-indicator-press-color: modify-color(var(--darkberry-wisp-window-text-color) set-alpha 0.7);
+    --darkberry-wisp-indicator-current-color: modify-color(var(--darkberry-wisp-window-text-color) set-alpha 0.95);
+}

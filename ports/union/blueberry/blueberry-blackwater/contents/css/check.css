@@ -1,0 +1,216 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Checkable controls like checkboxes and radio buttons.
+ */
+
+:root
+{
+    --blueberry-blackwater-checkable-indicator-active-background-color: var(--blueberry-blackwater-button-active-background-color);
+    --blueberry-blackwater-checkable-indicator-active-text-color: var(--blueberry-blackwater-button-active-text-color);
+    --blueberry-blackwater-checkable-indicator-active-border-color: var(--blueberry-blackwater-button-active-border-color);
+    --blueberry-blackwater-checkable-indicator-active-highlight-color: var(--blueberry-blackwater-button-active-highlight-color);
+    --blueberry-blackwater-checkable-indicator-active-highlight-border-color: var(--blueberry-blackwater-button-active-border-highlight-color);
+
+    --blueberry-blackwater-checkable-disabled-text-color: var(--blueberry-blackwater-window-disabled-text-color);
+    --blueberry-blackwater-checkable-indicator-disabled-background-color: var(--blueberry-blackwater-button-disabled-background-color);
+    --blueberry-blackwater-checkable-indicator-disabled-text-color: var(--blueberry-blackwater-button-disabled-text-color);
+    --blueberry-blackwater-checkable-indicator-disabled-border-color: var(--blueberry-blackwater-button-disabled-border-color);
+
+    --blueberry-blackwater-switch-indicator-active-background-color: mix(var(--blueberry-blackwater-button-active-background-color), var(--blueberry-blackwater-button-active-text-color), 0.1);
+    --blueberry-blackwater-switch-indicator-active-border-color: var(--blueberry-blackwater-button-active-border-color);
+    --blueberry-blackwater-switch-indicator-active-highlight-color: var(--blueberry-blackwater-button-active-highlight-color);
+    --blueberry-blackwater-switch-indicator-active-highlight-border-color: var(--blueberry-blackwater-button-active-border-highlight-color);
+
+    --blueberry-blackwater-switch-handle-active-background-color: var(--blueberry-blackwater-button-active-background-color);
+    --blueberry-blackwater-switch-handle-active-border-color: var(--blueberry-blackwater-button-active-border-color);
+    --blueberry-blackwater-switch-handle-active-highlight-border-color: var(--blueberry-blackwater-button-active-border-highlight-color);
+
+    --blueberry-blackwater-switch-disabled-text-color: var(--blueberry-blackwater-window-disabled-text-color);
+    --blueberry-blackwater-switch-indicator-disabled-background-color: var(--blueberry-blackwater-window-disabled-background-color);
+    --blueberry-blackwater-switch-indicator-disabled-border-color: var(--blueberry-blackwater-button-disabled-border-color);
+    --blueberry-blackwater-switch-handle-disabled-background-color: var(--blueberry-blackwater-button-disabled-background-color);
+    --blueberry-blackwater-switch-handle-disabled-border-color: var(--blueberry-blackwater-button-disabled-border-color);
+}
+
+checkbox,
+radiobutton,
+switch
+{
+    icon-alignment-horizontal: start;
+    text-wrap-mode: wrap;
+
+    padding: 0px var(--blueberry-blackwater-small-spacing);
+    spacing: var(--blueberry-blackwater-small-spacing);
+
+    color: var(--blueberry-blackwater-window-text-color);
+
+    text-alignment: content fill center 0;
+}
+
+checkbox,
+checkdelegate,
+menuitem,
+radiobutton,
+radiodelegate
+{
+    width: var(--blueberry-blackwater-medium-element-size);
+    height: var(--blueberry-blackwater-medium-element-size);
+    & > indicator
+    {
+        width: var(--blueberry-blackwater-icon-size-small);
+        height: var(--blueberry-blackwater-icon-size-small);
+
+        layout-alignment-container: content;
+        layout-alignment-horizontal: start;
+        layout-alignment-order: -1;
+
+        background-color: var(--blueberry-blackwater-checkable-indicator-active-background-color);
+        border: 1px solid var(--blueberry-blackwater-checkable-indicator-active-border-color);
+        color: var(--blueberry-blackwater-checkable-indicator-active-text-color);
+        border-radius: var(--blueberry-blackwater-corner-radius);
+    }
+
+    &:hovered > indicator
+    {
+        border-color: var(--blueberry-blackwater-checkable-indicator-active-highlight-border-color);
+    }
+
+    &:checked > indicator
+    {
+        background-color: var(--blueberry-blackwater-checkable-indicator-active-highlight-color);
+        border-color: var(--blueberry-blackwater-checkable-indicator-active-highlight-border-color);
+    }
+
+    &:visual-focus > indicator
+    {
+        outline: var(--blueberry-blackwater-focus-outline);
+        border-color: var(--blueberry-blackwater-checkable-indicator-active-highlight-border-color);
+    }
+
+    &:disabled
+    {
+        color: var(--blueberry-blackwater-checkable-disabled-text-color);
+
+        & > indicator
+        {
+            border: 1px solid var(--blueberry-blackwater-checkable-indicator-disabled-border-color);
+            color: var(--blueberry-blackwater-checkable-indicator-disabled-text-color);
+            background-color: var(--blueberry-blackwater-checkable-indicator-disabled-background-color);
+        }
+    }
+
+    &:checked:disabled > indicator
+    {
+        background-color: var(--blueberry-blackwater-checkable-indicator-disabled-background-color);
+        background-image-mask-color: var(--blueberry-blackwater-checkable-indicator-disabled-text-color);
+    }
+}
+
+checkbox,
+checkdelegate,
+menuitem
+{
+    &:checked > indicator
+    {
+        background-image: url("../images/checkmark.svg") mask var(--blueberry-blackwater-checkable-indicator-active-text-color);
+    }
+    &.indeterminate > indicator {
+        background-image: url("../images/indeterminate.svg") mask var(--blueberry-blackwater-checkable-indicator-active-text-color);
+    }
+}
+
+radiobutton,
+radiodelegate,
+menuitem.exclusive
+{
+    & > indicator
+    {
+        border-radius: 8px;
+    }
+
+    &:checked > indicator
+    {
+        background-image: url("../images/radio.svg") mask var(--blueberry-blackwater-checkable-indicator-active-text-color);
+    }
+}
+
+switch,
+switchdelegate
+{
+    & > indicator
+    {
+        layout-alignment-container: content;
+        layout-alignment-horizontal: start;
+
+        width: 36px;
+        height: 12px;
+        border-radius: 6px;
+
+        background-color: var(--blueberry-blackwater-switch-indicator-active-background-color);
+        border: 1px solid var(--blueberry-blackwater-switch-indicator-active-border-color);
+
+        & > handle
+        {
+            width: var(--blueberry-blackwater-grid-unit);
+            height: var(--blueberry-blackwater-grid-unit);
+            border-radius: 9px; /* grid-unit / 2 */
+
+            background-color: var(--blueberry-blackwater-switch-handle-active-background-color);
+            border: 1px solid var(--blueberry-blackwater-switch-handle-active-border-color);
+        }
+    }
+
+    &:hovered
+    {
+        & > indicator
+        {
+            border-color: var(--blueberry-blackwater-switch-indicator-active-highlight-border-color);
+
+            & > handle
+            {
+                border-color: var(--blueberry-blackwater-switch-handle-active-highlight-border-color);
+            }
+        }
+    }
+
+    &:checked > indicator
+    {
+        background-color: var(--blueberry-blackwater-switch-indicator-active-highlight-color);
+        border-color: var(--blueberry-blackwater-switch-indicator-active-highlight-border-color);
+    }
+
+    &:visual-focus > indicator > handle
+    {
+        outline: var(--blueberry-blackwater-focus-outline);
+    }
+
+    &:disabled
+    {
+        color: var(--blueberry-blackwater-switch-disabled-text-color);
+
+        & > indicator {
+            border-color: var(--blueberry-blackwater-switch-indicator-disabled-border-color);
+            background-color: var(--blueberry-blackwater-switch-indicator-disabled-background-color);
+
+            & > handle {
+                border-color: var(--blueberry-blackwater-switch-handle-disabled-border-color);
+                background-color: var(--blueberry-blackwater-switch-handle-disabled-background-color);
+            }
+        }
+    }
+}
+
+radiobutton.changed,
+radiodelegate.changed,
+checkbox.changed,
+checkdelegate.changed,
+switch.changed {
+    indicator {
+        background-color: var(--blueberry-blackwater-changed-background);
+        border: 1px solid var(--blueberry-blackwater-changed-foreground);
+    }
+}

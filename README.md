@@ -134,6 +134,7 @@ build them yourself with `./package.sh`, which writes each port's packages into 
 ### Desktop Environments
 
 - [KDE Plasma](ports/kde#readme)
+- [Union](ports/union#readme)
 
 ### Window Managers
 

@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --blueberry-blackwater-minimal-spacing: 2px;
+    --blueberry-blackwater-small-spacing: 4px;
+    --blueberry-blackwater-medium-spacing: 6px;
+    --blueberry-blackwater-large-spacing: 8px;
+    --blueberry-blackwater-grid-unit: 18px;
+    --blueberry-blackwater-corner-radius: 5px;
+
+    /* Icon sizes */
+    --blueberry-blackwater-icon-size-small: 16px;
+    --blueberry-blackwater-icon-size-smallmedium: 22px;
+    --blueberry-blackwater-icon-size-medium: 32px;
+    --blueberry-blackwater-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --blueberry-blackwater-small-element-size: 16px;
+    --blueberry-blackwater-medium-element-size: 24px;
+    --blueberry-blackwater-large-element-size: 32px;
+    --blueberry-blackwater-scrollbar-size: 20px;
+    --blueberry-blackwater-non-interactive-scrollbar-size: 10px;
+    --blueberry-blackwater-menu-item-width: 150px;
+    --blueberry-blackwater-text-field-width: 200px;
+
+    /* Colors */
+    --blueberry-blackwater-highlight-color: var(--blueberry-blackwater-kcs-active-selection-background-normal);
+    --blueberry-blackwater-highlight-text-color: var(--blueberry-blackwater-kcs-active-selection-foreground-text);
+    --blueberry-blackwater-highlight-hover-color: modify-color(var(--blueberry-blackwater-highlight-color) set-alpha 0.3);
+
+    --blueberry-blackwater-window-text-color: var(--blueberry-blackwater-kcs-active-window-foreground-text);
+    --blueberry-blackwater-window-background-color: var(--blueberry-blackwater-kcs-active-window-background-normal);
+    --blueberry-blackwater-window-background-alternate-color: var(--blueberry-blackwater-kcs-active-window-background-alternate);
+    --blueberry-blackwater-window-border-color: var(--blueberry-blackwater-kcs-active-window-decoration-frame);
+    --blueberry-blackwater-window-highlight-color: mix(var(--blueberry-blackwater-window-background-color), var(--blueberry-blackwater-highlight-color), 0.5);
+    --blueberry-blackwater-window-border-highlight-color: var(--blueberry-blackwater-highlight-color);
+
+    --blueberry-blackwater-view-text-color: var(--blueberry-blackwater-kcs-active-view-foreground-text);
+    --blueberry-blackwater-view-background-color: var(--blueberry-blackwater-kcs-active-view-background-normal);
+    --blueberry-blackwater-view-background-alternate-color: var(--blueberry-blackwater-kcs-active-view-background-alternate);
+    --blueberry-blackwater-view-border-color: var(--blueberry-blackwater-kcs-active-view-decoration-frame);
+    --blueberry-blackwater-view-highlight-color: mix(var(--blueberry-blackwater-view-background-color), var(--blueberry-blackwater-highlight-color), 0.5);
+
+    --blueberry-blackwater-header-text-color: var(--blueberry-blackwater-kcs-active-header-foreground-text);
+    --blueberry-blackwater-header-background-color: var(--blueberry-blackwater-kcs-active-header-background-normal);
+    --blueberry-blackwater-header-background-inactive-color: var(--blueberry-blackwater-kcs-inactive-header-background-normal);
+    --blueberry-blackwater-header-border-color: var(--blueberry-blackwater-kcs-active-header-decoration-frame);
+
+    --blueberry-blackwater-complementary-text-color: var(--blueberry-blackwater-kcs-active-complementary-foreground-text);
+    --blueberry-blackwater-complementary-background-color: var(--blueberry-blackwater-kcs-active-complementary-background-normal);
+
+    --blueberry-blackwater-positive-text: var(--blueberry-blackwater-kcs-active-view-foreground-positive);
+    --blueberry-blackwater-neutral-text: var(--blueberry-blackwater-kcs-active-view-foreground-neutral);
+    --blueberry-blackwater-negative-text: var(--blueberry-blackwater-kcs-active-view-foreground-negative);
+    --blueberry-blackwater-positive-background: var(--blueberry-blackwater-kcs-active-view-background-positive);
+    --blueberry-blackwater-neutral-background: var(--blueberry-blackwater-kcs-active-view-background-neutral);
+    --blueberry-blackwater-negative-background: var(--blueberry-blackwater-kcs-active-view-background-negative);
+
+    --blueberry-blackwater-changed-foreground: var(--blueberry-blackwater-neutral-text);
+    --blueberry-blackwater-changed-background: var(--blueberry-blackwater-neutral-background);
+
+    --blueberry-blackwater-card-background-color: var(--blueberry-blackwater-view-background-color);
+    --blueberry-blackwater-card-text-color: var(--blueberry-blackwater-view-text-color);
+    --blueberry-blackwater-card-border-color: var(--blueberry-blackwater-view-border-color);
+    --blueberry-blackwater-card-hover-color: mix(var(--blueberry-blackwater-card-background-color), var(--blueberry-blackwater-highlight-color), 0.1);
+    --blueberry-blackwater-card-pressed-color: mix(var(--blueberry-blackwater-card-background-color), var(--blueberry-blackwater-highlight-color), 0.3);
+
+    --blueberry-blackwater-focus-outline-alpha: 0.3;
+    --blueberry-blackwater-focus-color: modify-color(var(--blueberry-blackwater-kcs-active-window-decoration-focus) set-alpha var(--blueberry-blackwater-focus-outline-alpha));
+
+    --blueberry-blackwater-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --blueberry-blackwater-window-disabled-text-color: var(--blueberry-blackwater-kcs-disabled-window-foreground-text);
+    --blueberry-blackwater-window-disabled-background-color: var(--blueberry-blackwater-kcs-disabled-window-background-normal);
+    --blueberry-blackwater-window-disabled-border-color: var(--blueberry-blackwater-kcs-disabled-window-decoration-frame);
+
+    --blueberry-blackwater-view-disabled-text-color: var(--blueberry-blackwater-kcs-disabled-view-foreground-text);
+    --blueberry-blackwater-view-disabled-background-color: var(--blueberry-blackwater-kcs-disabled-view-background-normal);
+    --blueberry-blackwater-view-disabled-border-color: var(--blueberry-blackwater-kcs-disabled-view-decoration-frame);
+
+    --blueberry-blackwater-header-disabled-text-color: var(--blueberry-blackwater-kcs-disabled-header-foreground-text);
+    --blueberry-blackwater-header-disabled-background-color: var(--blueberry-blackwater-kcs-disabled-header-background-normal);
+    --blueberry-blackwater-header-disabled-border-color: var(--blueberry-blackwater-kcs-disabled-header-decoration-frame);
+
+    --blueberry-blackwater-complementary-disabled-text-color: var(--blueberry-blackwater-kcs-disabled-complementary-foreground-text);
+
+    --blueberry-blackwater-highlight-disabled-color: mix(var(--blueberry-blackwater-window-disabled-background-color), var(--blueberry-blackwater-highlight-color), 0.2);
+    --blueberry-blackwater-highlight-disabled-text-color: mix(var(--blueberry-blackwater-window-disabled-text-color), var(--blueberry-blackwater-highlight-text-color), 0.2);
+
+    --blueberry-blackwater-card-disabled-background-color: var(--blueberry-blackwater-view-disabled-background-color);
+    --blueberry-blackwater-card-disabled-text-color: var(--blueberry-blackwater-view-disabled-text-color);
+    --blueberry-blackwater-card-disabled-border-color: var(--blueberry-blackwater-view-disabled-border-color);
+
+    /* Standard Elements */
+    --blueberry-blackwater-focus-outline: 2px solid var(--blueberry-blackwater-focus-ring-color);
+    --blueberry-blackwater-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --blueberry-blackwater-indicator-color: modify-color(var(--blueberry-blackwater-window-text-color) set-alpha 0.4);
+    --blueberry-blackwater-indicator-press-color: modify-color(var(--blueberry-blackwater-window-text-color) set-alpha 0.7);
+    --blueberry-blackwater-indicator-current-color: modify-color(var(--blueberry-blackwater-window-text-color) set-alpha 0.95);
+}

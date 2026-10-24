@@ -1,0 +1,14 @@
+{
+  "input-type": "css",
+  "input-version": 1,
+  "name": "Darkberry Wisp",
+  "description": "Light. A pale page, the berries deepened to read on it. The light theme that doesn't hurt.",
+  "version": "0.3.0",
+  "license": "MIT AND BSD-2-Clause",
+  "url": "https://darkberry.slacklab.ca",
+  "authors": [
+    "shythulu",
+    "Arjen Hiemstra (Breeze)",
+    "Akseli Lahtinen (Breeze)"
+  ]
+}

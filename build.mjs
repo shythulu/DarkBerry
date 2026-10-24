@@ -169,6 +169,65 @@ const tmuxT = read("src/ports/tmux.conf");
 const tinted8T = read("src/ports/tinted8.yaml"), base24T = read("src/ports/base24.yaml");
 const gtk3T = read("src/ports/gtk-3.0.scss"), gtk4T = read("src/ports/gtk-4.0.scss"), darktableT = read("src/ports/darktable.css"), gimpT = read("src/ports/gimp.css");
 const btopT = read("src/ports/btop.theme");
+// Union (KDE Plasma 6.8+): Breeze's own Union style from vendor/union-breeze/, made
+// independent of the active colour scheme. Every custom-color("kcolorscheme", ...) lookup
+// becomes a var(--kcs-...) that the template defines, and UNION_REWRITES makes the few
+// changes a variable cannot. The vendored text is the same for every flavour, so it is
+// transformed once; only darkberry.css (the filled template) differs per flavour.
+const unionT = read("src/ports/union.css");
+const UNION_VENDOR = "vendor/union-breeze/contents";
+const UNION_REWRITES = [
+  // [file, pattern, replacement, places it must change, why]
+  ["css/style.css", /^@import "variables\.css";$/m, '@import "darkberry.css";\n\n@import "variables.css";', 1,
+    "the --kcs-* variables have to exist before Breeze's own variables read them"],
+  ["css/tabs.css", /^(\s*border-(?:top|bottom|left|right)-color: )var\(--highlight-color\);$/gm, "$1var(--tab-indicator-color);", 4,
+    "the active tab's stripe is the tab indicator in every Darkberry port, not the selection fill"],
+  ["css/tabs.css", /^(\s*--tab-highlight-border: var\(--tab-highlight-size\) solid )var\(--highlight-color\);$/m, "$1var(--tab-indicator-color);", 1,
+    "the same stripe on Qt Widgets tab bars"],
+  ["css/*", /(outline: \d+px solid |--focus-outline: 2px solid |--button-focus: 2px solid )var\(--(?:button-active-)?focus-color\);/g, "$1var(--focus-ring-color);", 5,
+    "Breeze draws focus rings at 30% of the focus colour, under the 3:1 that ui.focus has to reach"],
+];
+const unionVendor = (() => {
+  const files = {}, base = path.join(root, UNION_VENDOR);
+  const walkDir = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const f = path.join(d, e.name); if (e.isDirectory()) walkDir(f); else files[path.relative(base, f)] = fs.readFileSync(f); } };
+  walkDir(base);
+  const defined = new Set([...unionT.matchAll(/^\s*(--kcs-[\w-]+):/gm)].map((m) => m[1])), used = new Set();
+  for (const [f, buf] of Object.entries(files)) {
+    if (!f.endsWith(".css")) continue;
+    files[f] = buf.toString("utf8").replace(/custom-color\(\s*"kcolorscheme"\s*,\s*"(\w+)"\s*,\s*"(\w+)"\s*,\s*"(\w+)"\s*,\s*"(\w+)"\s*\)/g, (_, ...parts) => {
+      const name = `--kcs-${parts.slice(0, 4).join("-")}`; used.add(name);
+      if (!defined.has(name)) errors.push(`union: ${f} looks up ${name.slice(6)} in the colour scheme, and src/ports/union.css does not define ${name}`);
+      return `var(${name})`;
+    });
+    if (/custom-color\(/.test(files[f])) errors.push(`union: ${f} has a custom-color() lookup build.mjs does not recognise`);
+  }
+  for (const name of defined) if (!used.has(name)) errors.push(`union: src/ports/union.css defines ${name}, which Breeze no longer looks up`);
+  for (const [glob, re, to, want, why] of UNION_REWRITES) {
+    let n = 0;
+    for (const f of Object.keys(files).filter((f) => glob.endsWith("*") ? f.startsWith(glob.slice(0, -1)) && f.endsWith(".css") : f === glob))
+      files[f] = files[f].replace(re, (...m) => { n++; return to.replace(/\$(\d)/g, (_, i) => m[i]); });
+    if (n !== want) errors.push(`union: the rewrite in ${glob} (${why}) changed ${n} places, not ${want}; Breeze has changed, so check the rewrite against vendor/union-breeze/`);
+  }
+  return files;
+})();
+// Union 6.8's CSS parser (cxx-rust-cssparser 1.1.0) keeps one table of custom properties per
+// process, and the first style to define a name wins. So an app that loads two Darkberry
+// styles, such as the Application Style page drawing its previews, paints them all in one
+// flavour. Prefixing every custom property a style defines with the style's id keeps the
+// twenty styles apart. Upstream scopes them per stylesheet from cxx-rust-cssparser 8556191,
+// after 1.1.0; this can go once Plasma ships a release with it.
+const scopeUnionVars = (id, files) => {
+  const css = Object.entries(files).filter(([f]) => f.endsWith(".css")).map(([f, d]) => [f, Buffer.isBuffer(d) ? d.toString("utf8") : d]);
+  const defined = new Set();
+  for (const [, text] of css) for (const m of text.matchAll(/(?:@property\s+|(?:^|[{;])\s*)(--[a-z][\w-]*)\s*(?=[:{])/gm)) defined.add(m[1]);
+  const scoped = { ...files };
+  for (const [f, text] of css) {
+    scoped[f] = text.replace(/(?<![\w-])--[a-z][\w-]*(?![\w-])/g, (name) => defined.has(name) ? `--${id}-${name.slice(2)}` : name);
+    const code = scoped[f].replace(/\/\*[\s\S]*?\*\//g, "");
+    for (const m of code.matchAll(new RegExp(`(?<![\\w-])--(?!${id}-)[a-z][\\w-]*`, "g"))) errors.push(`union: ${f} uses ${m[0]}, which no file in the ${id} style defines`);
+  }
+  return scoped;
+};
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
 const to256 = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => {
   const [r, g, b] = rgb("#" + h).map((v) => v * 255), steps = [0, 95, 135, 175, 215, 255];
@@ -374,6 +433,15 @@ mustBe("tmux", tmuxT, "status-left", "{ui.on.fill} on {ui.fill} (the session bad
 mustBe("tmux", tmuxT, "menu-selected-style", "{ui.on.fill} on {ui.fill}", /^set -gq? menu-selected-style "fg=\{ui\.on\.fill\},bg=\{ui\.fill\}"$/m);
 mustBe("tmux", tmuxT, "pane-active-border-style", "{ui.border.active}", /^set -g pane-active-border-style "fg=\{ui\.border\.active\}"$/m);
 mustBe("tmux", tmuxT, "pane-border-style", "{ui.border.inactive}", /^set -g pane-border-style "fg=\{ui\.border\.inactive\}"$/m);
+mustBe("union", unionT, "--kcs-active-selection-*", "{ui.fill} under {ui.on.fill} (Breeze's highlight: selected rows, pressed and checked controls)", /^\s*--kcs-active-selection-background-normal: \{ui\.fill\};\n\s*--kcs-active-selection-foreground-text: \{ui\.on\.fill\};$/m);
+mustBe("union", unionT, "--kcs-active-view-background-normal", "{ui.background}", /^\s*--kcs-active-view-background-normal: \{ui\.background\};$/m);
+mustBe("union", unionT, "--kcs-active-view-background-alternate", "{ui.row.alternate}", /^\s*--kcs-active-view-background-alternate: \{ui\.row\.alternate\};$/m);
+mustBe("kde", kdeT, "[Colors:View] BackgroundAlternate", "{ui.row.alternate}", /\[Colors:View\]\nBackgroundAlternate=\{ui\.row\.alternate\}$/m);
+mustBe("union", unionT, "--kcs-active-view-foreground-text", "{ui.text}", /^\s*--kcs-active-view-foreground-text: \{ui\.text\};$/m);
+mustBe("union", unionT, "--kcs-active-*-decoration-focus", "{ui.focus}", /^(?![\s\S]*decoration-focus: (?!\{ui\.focus\};))/);
+mustBe("union", unionT, "--focus-ring-color", "{ui.focus}", /^\s*--focus-ring-color: \{ui\.focus\};$/m);
+mustBe("union", unionT, "--tab-indicator-color", "an opaque {ui.tab.indicator}", /^\s*--tab-indicator-color: \{ui\.tab\.indicator\};$/m);
+mustBe("union", unionT, "status foregrounds and backgrounds", "{ui.success}/{ui.warning}/{ui.error} on their .surface roles", /--kcs-active-view-foreground-positive: \{ui\.success\};\n\s*--kcs-active-view-foreground-neutral: \{ui\.warning\};\n\s*--kcs-active-view-foreground-negative: \{ui\.error\};\n\s*--kcs-active-view-background-positive: \{ui\.success\.surface\};\n\s*--kcs-active-view-background-neutral: \{ui\.warning\.surface\};\n\s*--kcs-active-view-background-negative: \{ui\.error\.surface\};/);
 mustBe("tmux", tmuxT, "copy-mode-current-match-style", "{ui.mark.text} on {ui.mark1}", /^set -g copy-mode-current-match-style "fg=\{ui\.mark\.text\},bg=\{ui\.mark1\}"$/m);
 
 for (const t of VS.tokenColors) for (const v of [t.settings.foreground, t.settings.background].filter(Boolean))
@@ -459,7 +527,24 @@ for (const ctx of ctxs) {
   // Kate's window takes a KDE colour scheme and its editor a syntax theme; the port ships
   // both, so Kate is themed whole without changing the desktop's colours.
   out(`ports/kate/${full}.colors`, kdeColors);
-  out(`ports/konsole/${full}.colorscheme`, toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
+  // A Union style is a folder named by its id: metadata.json, then contents/ with the CSS
+  // and images. The id is what kdeglobals' unionStyle and UNION_STYLE_NAME take.
+  out(`ports/union/${slug}/metadata.json`, {
+    "input-type": "css", "input-version": 1, name: full, description: meta(ctx).DESCRIPTION, version: P.version,
+    license: "MIT AND BSD-2-Clause", url: P.homepage, authors: [P.author, "Arjen Hiemstra (Breeze)", "Akseli Lahtinen (Breeze)"],
+  });
+  const unionCss = scopeUnionVars(slug, { "css/darkberry.css": applyOverrides("union", "lines", fill(ctx, unionT, "union"), ctx), ...unionVendor });
+  for (const [f, data] of Object.entries(unionCss)) out(`ports/union/${slug}/contents/${f}`, data);
+  out(`ports/union/${slug}/LICENSE.Breeze`, fs.readFileSync(path.join(root, "vendor/union-breeze/LICENSE")));
+  // The edition's drawn logo, in the folder Union's docs name for a style's images. Union 6.8's
+  // metadata.json has no icon key yet, so nothing shows it; it travels with the style for when one does.
+  // SVG only: Qt reads it, and the 390 KB PNG copied into twenty styles would add 8 MB to ports/.
+  for (const ext of ["svg"]) {
+    const logo = path.join(root, `assets/logos/${P.id}-logo.${ext}`);
+    if (!fs.existsSync(logo)) errors.push(`union: assets/logos/${P.id}-logo.${ext} is missing (node tools/logo.mjs draws it)`);
+    else out(`ports/union/${slug}/contents/images/${P.id}-logo.${ext}`, fs.readFileSync(logo));
+  }
+  out(`ports/konsole/${full}.colorscheme`,toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
   out(`ports/obsidian/${full}/theme.css`, applyOverrides("obsidian", "lines", fill(ctx, obsidianT, "obsidian"), ctx));
   out(`ports/obsidian/${full}/manifest.json`, JSON.parse(fill(ctx, obsidianManifestT, "obsidian")));
   const vs = JSON.parse(fill(ctx, vscodeT, "vscode"));
@@ -633,6 +718,8 @@ for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritt
 // The GTK templates are SCSS: `$name: {role};`, traced under the GTK version and variable name.
 for (const [v, t] of [[3, gtk3T], [4, gtk4T]])
   for (const line of t.split("\n")) { const m = /^\$(\w+):\s*(.*\{.*);/.exec(line); if (m) traceExpr("gtk", `gtk-${v}.0 $${m[1]}`, m[2]); }
+// The Union template is one CSS :root block: `--name: {role};`, traced under the variable name.
+for (const line of unionT.split("\n")) { const m = /^\s*(--[\w-]+):\s*(.*\{.*?);/.exec(line); if (m) traceExpr("union", m[1], m[2]); }
 // Neovim's template is Lua: H.Group = { ... } and H["@capture"] = { ... } lines, and
 // the vim.g.terminal_color_N assignments; the key is the group or capture name.
 for (const line of neovimT.split("\n")) { const m = /^(?:H\.|H\[")?([@\w.]+)(?:"\])?\s*=\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("--")) traceExpr("neovim", m[1], m[2]); }

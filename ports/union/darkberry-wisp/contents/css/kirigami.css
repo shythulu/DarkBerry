@@ -1,0 +1,279 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Kirigami-specific controls
+ */
+
+:root {
+    --darkberry-wisp-chip-background-color: var(--darkberry-wisp-window-background-alternate-color);
+}
+
+applicationheader
+{
+    background-color: var(--darkberry-wisp-header-active-background-color);
+    color: var(--darkberry-wisp-header-active-text-color);
+
+    &[colorset="window"]
+    {
+        background-color: var(--darkberry-wisp-window-background-color);
+        color: var(--darkberry-wisp-window-text-color);
+    }
+
+    &.with-separator
+    {
+        border-bottom: 1px solid var(--darkberry-wisp-header-active-border-color);
+    }
+
+    .inactive &
+    {
+        background-color: var(--darkberry-wisp-header-inactive-background-color);
+        border-color: var(--darkberry-wisp-header-inactive-border-color);
+        color: var(--darkberry-wisp-header-inactive-text-color);
+    }
+}
+
+card
+{
+    background-color: var(--darkberry-wisp-card-background-color);
+    border: 1px solid var(--darkberry-wisp-card-border-color);
+    border-radius: var(--darkberry-wisp-corner-radius);
+    box-shadow: 0px 2px var(--darkberry-wisp-grid-unit) 0px rgba(0, 0, 0, 0.1);
+    color: var(--darkberry-wisp-card-text-color);
+
+    &:hovered {
+        background-color: var(--darkberry-wisp-card-hover-color);
+    }
+
+    &:pressed {
+        background-color: var(--darkberry-wisp-card-pressed-color);
+    }
+}
+
+chip
+{
+    width: var(--darkberry-wisp-medium-element-size);
+    height: var(--darkberry-wisp-medium-element-size);
+    padding: var(--darkberry-wisp-medium-spacing);
+
+    layout-alignment: content fill fill 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+
+    background-color: var(--darkberry-wisp-chip-background-color);
+    border-radius: var(--darkberry-wisp-corner-radius);
+    border: 1px solid var(--darkberry-wisp-button-active-border-color);
+    color: var(--darkberry-wisp-button-active-text-color);
+
+    spacing: var(--darkberry-wisp-small-spacing);
+
+    & > .indicator
+    {
+        width: var(--darkberry-wisp-small-element-size);
+        height: var(--darkberry-wisp-small-element-size);
+
+        icon-name: "edit-delete-remove";
+        icon-width: var(--darkberry-wisp-icon-size-small);
+        icon-height: var(--darkberry-wisp-icon-size-small);
+
+        layout-alignment: item end center 0;
+    }
+
+    &:hovered
+    {
+        border-color: var(--darkberry-wisp-highlight-color);
+    }
+
+    &:pressed
+    {
+        border-color: var(--darkberry-wisp-highlight-color);
+        background-color: var(--darkberry-wisp-button-active-highlight-color);
+    }
+}
+
+heading
+{
+    color: var(--darkberry-wisp-window-text-color);
+
+    &.primary
+    {
+        font-weight: 600;
+    }
+
+    &.level-1
+    {
+        font-size: 135%;
+    }
+
+    &.primary.level-1
+    {
+        font-size: 135%;
+        font-weight: 600;
+    }
+
+    &.level-2
+    {
+        font-size: 120%;
+    }
+
+    &.primary.level-2
+    {
+        font-size: 120%;
+        font-weight: 600;
+    }
+
+    &.level-3
+    {
+        font-size: 115%;
+    }
+
+    &.primary.level-3
+    {
+        font-size: 115%;
+        font-weight: 600;
+    }
+
+    &.level-4
+    {
+        font-size: 110%;
+    }
+
+    &.primary.level-4
+    {
+        font-size: 110%;
+        font-weight: 600;
+    }
+
+    &.secondary
+    {
+        color: modify-color(var(--darkberry-wisp-window-text-color) set-alpha 0.75);
+    }
+}
+
+inlinemessage
+{
+    padding: var(--darkberry-wisp-small-spacing);
+
+    background-color: mix(var(--darkberry-wisp-window-background-color), var(--darkberry-wisp-highlight-color), 0.2);
+    border: 1px solid var(--darkberry-wisp-highlight-color);
+    border-radius: var(--darkberry-wisp-corner-radius);
+    color: var(--darkberry-wisp-window-text-color);
+
+    &[type="positive"] {
+        background-color: var(--darkberry-wisp-positive-background);
+        border: 1px solid var(--darkberry-wisp-positive-text);
+    }
+
+    &[type="warning"] {
+        background-color: var(--darkberry-wisp-neutral-background);
+        border: 1px solid var(--darkberry-wisp-neutral-text);
+    }
+
+    &[type="error"] {
+        background-color: var(--darkberry-wisp-negative-background);
+        border: 1px solid var(--darkberry-wisp-negative-text);
+    }
+
+    &[position="header"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    &[position="footer"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+navigationtabbar {
+    background-color: var(--darkberry-wisp-window-background-color);
+
+    &.header {
+        border-bottom: 1px solid var(--darkberry-wisp-window-border-color);
+    }
+
+    &.footer {
+        border-top: 1px solid var(--darkberry-wisp-window-border-color);
+    }
+}
+
+navigationtabbutton {
+    height: 54px; /* grid-unit * 3 */
+    padding: var(--darkberry-wisp-small-spacing);
+    inset: var(--darkberry-wisp-small-spacing);
+    spacing: var(--darkberry-wisp-small-spacing);
+
+    icon-size: var(--darkberry-wisp-icon-size-smallmedium);
+    border-radius: var(--darkberry-wisp-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: start;
+    icon-alignment-horizontal: start;
+
+    color: var(--darkberry-wisp-window-text-color);
+
+    &:disabled {
+        color: var(--darkberry-wisp-window-disabled-text-color);
+    }
+
+    &:hovered
+    {
+        background-color: var(--darkberry-wisp-highlight-hover-color);
+    }
+
+    &:pressed
+    {
+        background-color: var(--darkberry-wisp-highlight-hover-color);
+        border-color: var(--darkberry-wisp-highlight-color);
+        box-shadow: none;
+    }
+
+    &:checked
+    {
+        color: var(--darkberry-wisp-window-text-color);
+        background-color: var(--darkberry-wisp-highlight-hover-color);
+        border: 1px solid var(--darkberry-wisp-highlight-color);
+    }
+
+    &[display="text-beside-icon"] {
+        height: 0px;
+        padding: 12px var(--darkberry-wisp-small-spacing) 12px var(--darkberry-wisp-grid-unit); /* small-spacing + large-spacing */
+        spacing: var(--darkberry-wisp-grid-unit);
+        icon-size: var(--darkberry-wisp-icon-size-small);
+    }
+
+    &[display="text-under-icon"] {
+        icon-alignment: content center stack-center 0;
+        text-alignment: content center stack-center 1;
+    }
+}
+
+overlaydrawer
+{
+    background-color: var(--darkberry-wisp-view-background-color);
+    color: var(--darkberry-wisp-view-text-color);
+
+    &.modal
+    {
+        background-color: var(--darkberry-wisp-window-background-color);
+        color: var(--darkberry-wisp-window-text-color);
+    }
+
+    /* Collapsible sidebar expects 32px in Kirigami by default */
+    itemdelegate {
+        width: var(--darkberry-wisp-icon-size-medium);
+        height: var(--darkberry-wisp-icon-size-medium);
+    }
+
+    &[colorset="window"]
+    {
+        background-color: var(--darkberry-wisp-window-background-color);
+        color: var(--darkberry-wisp-window-text-color);
+    }
+}

@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --darkberry-blackwater-minimal-spacing: 2px;
+    --darkberry-blackwater-small-spacing: 4px;
+    --darkberry-blackwater-medium-spacing: 6px;
+    --darkberry-blackwater-large-spacing: 8px;
+    --darkberry-blackwater-grid-unit: 18px;
+    --darkberry-blackwater-corner-radius: 5px;
+
+    /* Icon sizes */
+    --darkberry-blackwater-icon-size-small: 16px;
+    --darkberry-blackwater-icon-size-smallmedium: 22px;
+    --darkberry-blackwater-icon-size-medium: 32px;
+    --darkberry-blackwater-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --darkberry-blackwater-small-element-size: 16px;
+    --darkberry-blackwater-medium-element-size: 24px;
+    --darkberry-blackwater-large-element-size: 32px;
+    --darkberry-blackwater-scrollbar-size: 20px;
+    --darkberry-blackwater-non-interactive-scrollbar-size: 10px;
+    --darkberry-blackwater-menu-item-width: 150px;
+    --darkberry-blackwater-text-field-width: 200px;
+
+    /* Colors */
+    --darkberry-blackwater-highlight-color: var(--darkberry-blackwater-kcs-active-selection-background-normal);
+    --darkberry-blackwater-highlight-text-color: var(--darkberry-blackwater-kcs-active-selection-foreground-text);
+    --darkberry-blackwater-highlight-hover-color: modify-color(var(--darkberry-blackwater-highlight-color) set-alpha 0.3);
+
+    --darkberry-blackwater-window-text-color: var(--darkberry-blackwater-kcs-active-window-foreground-text);
+    --darkberry-blackwater-window-background-color: var(--darkberry-blackwater-kcs-active-window-background-normal);
+    --darkberry-blackwater-window-background-alternate-color: var(--darkberry-blackwater-kcs-active-window-background-alternate);
+    --darkberry-blackwater-window-border-color: var(--darkberry-blackwater-kcs-active-window-decoration-frame);
+    --darkberry-blackwater-window-highlight-color: mix(var(--darkberry-blackwater-window-background-color), var(--darkberry-blackwater-highlight-color), 0.5);
+    --darkberry-blackwater-window-border-highlight-color: var(--darkberry-blackwater-highlight-color);
+
+    --darkberry-blackwater-view-text-color: var(--darkberry-blackwater-kcs-active-view-foreground-text);
+    --darkberry-blackwater-view-background-color: var(--darkberry-blackwater-kcs-active-view-background-normal);
+    --darkberry-blackwater-view-background-alternate-color: var(--darkberry-blackwater-kcs-active-view-background-alternate);
+    --darkberry-blackwater-view-border-color: var(--darkberry-blackwater-kcs-active-view-decoration-frame);
+    --darkberry-blackwater-view-highlight-color: mix(var(--darkberry-blackwater-view-background-color), var(--darkberry-blackwater-highlight-color), 0.5);
+
+    --darkberry-blackwater-header-text-color: var(--darkberry-blackwater-kcs-active-header-foreground-text);
+    --darkberry-blackwater-header-background-color: var(--darkberry-blackwater-kcs-active-header-background-normal);
+    --darkberry-blackwater-header-background-inactive-color: var(--darkberry-blackwater-kcs-inactive-header-background-normal);
+    --darkberry-blackwater-header-border-color: var(--darkberry-blackwater-kcs-active-header-decoration-frame);
+
+    --darkberry-blackwater-complementary-text-color: var(--darkberry-blackwater-kcs-active-complementary-foreground-text);
+    --darkberry-blackwater-complementary-background-color: var(--darkberry-blackwater-kcs-active-complementary-background-normal);
+
+    --darkberry-blackwater-positive-text: var(--darkberry-blackwater-kcs-active-view-foreground-positive);
+    --darkberry-blackwater-neutral-text: var(--darkberry-blackwater-kcs-active-view-foreground-neutral);
+    --darkberry-blackwater-negative-text: var(--darkberry-blackwater-kcs-active-view-foreground-negative);
+    --darkberry-blackwater-positive-background: var(--darkberry-blackwater-kcs-active-view-background-positive);
+    --darkberry-blackwater-neutral-background: var(--darkberry-blackwater-kcs-active-view-background-neutral);
+    --darkberry-blackwater-negative-background: var(--darkberry-blackwater-kcs-active-view-background-negative);
+
+    --darkberry-blackwater-changed-foreground: var(--darkberry-blackwater-neutral-text);
+    --darkberry-blackwater-changed-background: var(--darkberry-blackwater-neutral-background);
+
+    --darkberry-blackwater-card-background-color: var(--darkberry-blackwater-view-background-color);
+    --darkberry-blackwater-card-text-color: var(--darkberry-blackwater-view-text-color);
+    --darkberry-blackwater-card-border-color: var(--darkberry-blackwater-view-border-color);
+    --darkberry-blackwater-card-hover-color: mix(var(--darkberry-blackwater-card-background-color), var(--darkberry-blackwater-highlight-color), 0.1);
+    --darkberry-blackwater-card-pressed-color: mix(var(--darkberry-blackwater-card-background-color), var(--darkberry-blackwater-highlight-color), 0.3);
+
+    --darkberry-blackwater-focus-outline-alpha: 0.3;
+    --darkberry-blackwater-focus-color: modify-color(var(--darkberry-blackwater-kcs-active-window-decoration-focus) set-alpha var(--darkberry-blackwater-focus-outline-alpha));
+
+    --darkberry-blackwater-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --darkberry-blackwater-window-disabled-text-color: var(--darkberry-blackwater-kcs-disabled-window-foreground-text);
+    --darkberry-blackwater-window-disabled-background-color: var(--darkberry-blackwater-kcs-disabled-window-background-normal);
+    --darkberry-blackwater-window-disabled-border-color: var(--darkberry-blackwater-kcs-disabled-window-decoration-frame);
+
+    --darkberry-blackwater-view-disabled-text-color: var(--darkberry-blackwater-kcs-disabled-view-foreground-text);
+    --darkberry-blackwater-view-disabled-background-color: var(--darkberry-blackwater-kcs-disabled-view-background-normal);
+    --darkberry-blackwater-view-disabled-border-color: var(--darkberry-blackwater-kcs-disabled-view-decoration-frame);
+
+    --darkberry-blackwater-header-disabled-text-color: var(--darkberry-blackwater-kcs-disabled-header-foreground-text);
+    --darkberry-blackwater-header-disabled-background-color: var(--darkberry-blackwater-kcs-disabled-header-background-normal);
+    --darkberry-blackwater-header-disabled-border-color: var(--darkberry-blackwater-kcs-disabled-header-decoration-frame);
+
+    --darkberry-blackwater-complementary-disabled-text-color: var(--darkberry-blackwater-kcs-disabled-complementary-foreground-text);
+
+    --darkberry-blackwater-highlight-disabled-color: mix(var(--darkberry-blackwater-window-disabled-background-color), var(--darkberry-blackwater-highlight-color), 0.2);
+    --darkberry-blackwater-highlight-disabled-text-color: mix(var(--darkberry-blackwater-window-disabled-text-color), var(--darkberry-blackwater-highlight-text-color), 0.2);
+
+    --darkberry-blackwater-card-disabled-background-color: var(--darkberry-blackwater-view-disabled-background-color);
+    --darkberry-blackwater-card-disabled-text-color: var(--darkberry-blackwater-view-disabled-text-color);
+    --darkberry-blackwater-card-disabled-border-color: var(--darkberry-blackwater-view-disabled-border-color);
+
+    /* Standard Elements */
+    --darkberry-blackwater-focus-outline: 2px solid var(--darkberry-blackwater-focus-ring-color);
+    --darkberry-blackwater-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --darkberry-blackwater-indicator-color: modify-color(var(--darkberry-blackwater-window-text-color) set-alpha 0.4);
+    --darkberry-blackwater-indicator-press-color: modify-color(var(--darkberry-blackwater-window-text-color) set-alpha 0.7);
+    --darkberry-blackwater-indicator-current-color: modify-color(var(--darkberry-blackwater-window-text-color) set-alpha 0.95);
+}

@@ -1,0 +1,279 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Kirigami-specific controls
+ */
+
+:root {
+    --darkberry-fen-chip-background-color: var(--darkberry-fen-window-background-alternate-color);
+}
+
+applicationheader
+{
+    background-color: var(--darkberry-fen-header-active-background-color);
+    color: var(--darkberry-fen-header-active-text-color);
+
+    &[colorset="window"]
+    {
+        background-color: var(--darkberry-fen-window-background-color);
+        color: var(--darkberry-fen-window-text-color);
+    }
+
+    &.with-separator
+    {
+        border-bottom: 1px solid var(--darkberry-fen-header-active-border-color);
+    }
+
+    .inactive &
+    {
+        background-color: var(--darkberry-fen-header-inactive-background-color);
+        border-color: var(--darkberry-fen-header-inactive-border-color);
+        color: var(--darkberry-fen-header-inactive-text-color);
+    }
+}
+
+card
+{
+    background-color: var(--darkberry-fen-card-background-color);
+    border: 1px solid var(--darkberry-fen-card-border-color);
+    border-radius: var(--darkberry-fen-corner-radius);
+    box-shadow: 0px 2px var(--darkberry-fen-grid-unit) 0px rgba(0, 0, 0, 0.1);
+    color: var(--darkberry-fen-card-text-color);
+
+    &:hovered {
+        background-color: var(--darkberry-fen-card-hover-color);
+    }
+
+    &:pressed {
+        background-color: var(--darkberry-fen-card-pressed-color);
+    }
+}
+
+chip
+{
+    width: var(--darkberry-fen-medium-element-size);
+    height: var(--darkberry-fen-medium-element-size);
+    padding: var(--darkberry-fen-medium-spacing);
+
+    layout-alignment: content fill fill 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+
+    background-color: var(--darkberry-fen-chip-background-color);
+    border-radius: var(--darkberry-fen-corner-radius);
+    border: 1px solid var(--darkberry-fen-button-active-border-color);
+    color: var(--darkberry-fen-button-active-text-color);
+
+    spacing: var(--darkberry-fen-small-spacing);
+
+    & > .indicator
+    {
+        width: var(--darkberry-fen-small-element-size);
+        height: var(--darkberry-fen-small-element-size);
+
+        icon-name: "edit-delete-remove";
+        icon-width: var(--darkberry-fen-icon-size-small);
+        icon-height: var(--darkberry-fen-icon-size-small);
+
+        layout-alignment: item end center 0;
+    }
+
+    &:hovered
+    {
+        border-color: var(--darkberry-fen-highlight-color);
+    }
+
+    &:pressed
+    {
+        border-color: var(--darkberry-fen-highlight-color);
+        background-color: var(--darkberry-fen-button-active-highlight-color);
+    }
+}
+
+heading
+{
+    color: var(--darkberry-fen-window-text-color);
+
+    &.primary
+    {
+        font-weight: 600;
+    }
+
+    &.level-1
+    {
+        font-size: 135%;
+    }
+
+    &.primary.level-1
+    {
+        font-size: 135%;
+        font-weight: 600;
+    }
+
+    &.level-2
+    {
+        font-size: 120%;
+    }
+
+    &.primary.level-2
+    {
+        font-size: 120%;
+        font-weight: 600;
+    }
+
+    &.level-3
+    {
+        font-size: 115%;
+    }
+
+    &.primary.level-3
+    {
+        font-size: 115%;
+        font-weight: 600;
+    }
+
+    &.level-4
+    {
+        font-size: 110%;
+    }
+
+    &.primary.level-4
+    {
+        font-size: 110%;
+        font-weight: 600;
+    }
+
+    &.secondary
+    {
+        color: modify-color(var(--darkberry-fen-window-text-color) set-alpha 0.75);
+    }
+}
+
+inlinemessage
+{
+    padding: var(--darkberry-fen-small-spacing);
+
+    background-color: mix(var(--darkberry-fen-window-background-color), var(--darkberry-fen-highlight-color), 0.2);
+    border: 1px solid var(--darkberry-fen-highlight-color);
+    border-radius: var(--darkberry-fen-corner-radius);
+    color: var(--darkberry-fen-window-text-color);
+
+    &[type="positive"] {
+        background-color: var(--darkberry-fen-positive-background);
+        border: 1px solid var(--darkberry-fen-positive-text);
+    }
+
+    &[type="warning"] {
+        background-color: var(--darkberry-fen-neutral-background);
+        border: 1px solid var(--darkberry-fen-neutral-text);
+    }
+
+    &[type="error"] {
+        background-color: var(--darkberry-fen-negative-background);
+        border: 1px solid var(--darkberry-fen-negative-text);
+    }
+
+    &[position="header"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    &[position="footer"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+navigationtabbar {
+    background-color: var(--darkberry-fen-window-background-color);
+
+    &.header {
+        border-bottom: 1px solid var(--darkberry-fen-window-border-color);
+    }
+
+    &.footer {
+        border-top: 1px solid var(--darkberry-fen-window-border-color);
+    }
+}
+
+navigationtabbutton {
+    height: 54px; /* grid-unit * 3 */
+    padding: var(--darkberry-fen-small-spacing);
+    inset: var(--darkberry-fen-small-spacing);
+    spacing: var(--darkberry-fen-small-spacing);
+
+    icon-size: var(--darkberry-fen-icon-size-smallmedium);
+    border-radius: var(--darkberry-fen-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: start;
+    icon-alignment-horizontal: start;
+
+    color: var(--darkberry-fen-window-text-color);
+
+    &:disabled {
+        color: var(--darkberry-fen-window-disabled-text-color);
+    }
+
+    &:hovered
+    {
+        background-color: var(--darkberry-fen-highlight-hover-color);
+    }
+
+    &:pressed
+    {
+        background-color: var(--darkberry-fen-highlight-hover-color);
+        border-color: var(--darkberry-fen-highlight-color);
+        box-shadow: none;
+    }
+
+    &:checked
+    {
+        color: var(--darkberry-fen-window-text-color);
+        background-color: var(--darkberry-fen-highlight-hover-color);
+        border: 1px solid var(--darkberry-fen-highlight-color);
+    }
+
+    &[display="text-beside-icon"] {
+        height: 0px;
+        padding: 12px var(--darkberry-fen-small-spacing) 12px var(--darkberry-fen-grid-unit); /* small-spacing + large-spacing */
+        spacing: var(--darkberry-fen-grid-unit);
+        icon-size: var(--darkberry-fen-icon-size-small);
+    }
+
+    &[display="text-under-icon"] {
+        icon-alignment: content center stack-center 0;
+        text-alignment: content center stack-center 1;
+    }
+}
+
+overlaydrawer
+{
+    background-color: var(--darkberry-fen-view-background-color);
+    color: var(--darkberry-fen-view-text-color);
+
+    &.modal
+    {
+        background-color: var(--darkberry-fen-window-background-color);
+        color: var(--darkberry-fen-window-text-color);
+    }
+
+    /* Collapsible sidebar expects 32px in Kirigami by default */
+    itemdelegate {
+        width: var(--darkberry-fen-icon-size-medium);
+        height: var(--darkberry-fen-icon-size-medium);
+    }
+
+    &[colorset="window"]
+    {
+        background-color: var(--darkberry-fen-window-background-color);
+        color: var(--darkberry-fen-window-text-color);
+    }
+}

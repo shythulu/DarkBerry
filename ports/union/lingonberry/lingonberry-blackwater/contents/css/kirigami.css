@@ -1,0 +1,279 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Kirigami-specific controls
+ */
+
+:root {
+    --lingonberry-blackwater-chip-background-color: var(--lingonberry-blackwater-window-background-alternate-color);
+}
+
+applicationheader
+{
+    background-color: var(--lingonberry-blackwater-header-active-background-color);
+    color: var(--lingonberry-blackwater-header-active-text-color);
+
+    &[colorset="window"]
+    {
+        background-color: var(--lingonberry-blackwater-window-background-color);
+        color: var(--lingonberry-blackwater-window-text-color);
+    }
+
+    &.with-separator
+    {
+        border-bottom: 1px solid var(--lingonberry-blackwater-header-active-border-color);
+    }
+
+    .inactive &
+    {
+        background-color: var(--lingonberry-blackwater-header-inactive-background-color);
+        border-color: var(--lingonberry-blackwater-header-inactive-border-color);
+        color: var(--lingonberry-blackwater-header-inactive-text-color);
+    }
+}
+
+card
+{
+    background-color: var(--lingonberry-blackwater-card-background-color);
+    border: 1px solid var(--lingonberry-blackwater-card-border-color);
+    border-radius: var(--lingonberry-blackwater-corner-radius);
+    box-shadow: 0px 2px var(--lingonberry-blackwater-grid-unit) 0px rgba(0, 0, 0, 0.1);
+    color: var(--lingonberry-blackwater-card-text-color);
+
+    &:hovered {
+        background-color: var(--lingonberry-blackwater-card-hover-color);
+    }
+
+    &:pressed {
+        background-color: var(--lingonberry-blackwater-card-pressed-color);
+    }
+}
+
+chip
+{
+    width: var(--lingonberry-blackwater-medium-element-size);
+    height: var(--lingonberry-blackwater-medium-element-size);
+    padding: var(--lingonberry-blackwater-medium-spacing);
+
+    layout-alignment: content fill fill 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+
+    background-color: var(--lingonberry-blackwater-chip-background-color);
+    border-radius: var(--lingonberry-blackwater-corner-radius);
+    border: 1px solid var(--lingonberry-blackwater-button-active-border-color);
+    color: var(--lingonberry-blackwater-button-active-text-color);
+
+    spacing: var(--lingonberry-blackwater-small-spacing);
+
+    & > .indicator
+    {
+        width: var(--lingonberry-blackwater-small-element-size);
+        height: var(--lingonberry-blackwater-small-element-size);
+
+        icon-name: "edit-delete-remove";
+        icon-width: var(--lingonberry-blackwater-icon-size-small);
+        icon-height: var(--lingonberry-blackwater-icon-size-small);
+
+        layout-alignment: item end center 0;
+    }
+
+    &:hovered
+    {
+        border-color: var(--lingonberry-blackwater-highlight-color);
+    }
+
+    &:pressed
+    {
+        border-color: var(--lingonberry-blackwater-highlight-color);
+        background-color: var(--lingonberry-blackwater-button-active-highlight-color);
+    }
+}
+
+heading
+{
+    color: var(--lingonberry-blackwater-window-text-color);
+
+    &.primary
+    {
+        font-weight: 600;
+    }
+
+    &.level-1
+    {
+        font-size: 135%;
+    }
+
+    &.primary.level-1
+    {
+        font-size: 135%;
+        font-weight: 600;
+    }
+
+    &.level-2
+    {
+        font-size: 120%;
+    }
+
+    &.primary.level-2
+    {
+        font-size: 120%;
+        font-weight: 600;
+    }
+
+    &.level-3
+    {
+        font-size: 115%;
+    }
+
+    &.primary.level-3
+    {
+        font-size: 115%;
+        font-weight: 600;
+    }
+
+    &.level-4
+    {
+        font-size: 110%;
+    }
+
+    &.primary.level-4
+    {
+        font-size: 110%;
+        font-weight: 600;
+    }
+
+    &.secondary
+    {
+        color: modify-color(var(--lingonberry-blackwater-window-text-color) set-alpha 0.75);
+    }
+}
+
+inlinemessage
+{
+    padding: var(--lingonberry-blackwater-small-spacing);
+
+    background-color: mix(var(--lingonberry-blackwater-window-background-color), var(--lingonberry-blackwater-highlight-color), 0.2);
+    border: 1px solid var(--lingonberry-blackwater-highlight-color);
+    border-radius: var(--lingonberry-blackwater-corner-radius);
+    color: var(--lingonberry-blackwater-window-text-color);
+
+    &[type="positive"] {
+        background-color: var(--lingonberry-blackwater-positive-background);
+        border: 1px solid var(--lingonberry-blackwater-positive-text);
+    }
+
+    &[type="warning"] {
+        background-color: var(--lingonberry-blackwater-neutral-background);
+        border: 1px solid var(--lingonberry-blackwater-neutral-text);
+    }
+
+    &[type="error"] {
+        background-color: var(--lingonberry-blackwater-negative-background);
+        border: 1px solid var(--lingonberry-blackwater-negative-text);
+    }
+
+    &[position="header"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    &[position="footer"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+navigationtabbar {
+    background-color: var(--lingonberry-blackwater-window-background-color);
+
+    &.header {
+        border-bottom: 1px solid var(--lingonberry-blackwater-window-border-color);
+    }
+
+    &.footer {
+        border-top: 1px solid var(--lingonberry-blackwater-window-border-color);
+    }
+}
+
+navigationtabbutton {
+    height: 54px; /* grid-unit * 3 */
+    padding: var(--lingonberry-blackwater-small-spacing);
+    inset: var(--lingonberry-blackwater-small-spacing);
+    spacing: var(--lingonberry-blackwater-small-spacing);
+
+    icon-size: var(--lingonberry-blackwater-icon-size-smallmedium);
+    border-radius: var(--lingonberry-blackwater-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: start;
+    icon-alignment-horizontal: start;
+
+    color: var(--lingonberry-blackwater-window-text-color);
+
+    &:disabled {
+        color: var(--lingonberry-blackwater-window-disabled-text-color);
+    }
+
+    &:hovered
+    {
+        background-color: var(--lingonberry-blackwater-highlight-hover-color);
+    }
+
+    &:pressed
+    {
+        background-color: var(--lingonberry-blackwater-highlight-hover-color);
+        border-color: var(--lingonberry-blackwater-highlight-color);
+        box-shadow: none;
+    }
+
+    &:checked
+    {
+        color: var(--lingonberry-blackwater-window-text-color);
+        background-color: var(--lingonberry-blackwater-highlight-hover-color);
+        border: 1px solid var(--lingonberry-blackwater-highlight-color);
+    }
+
+    &[display="text-beside-icon"] {
+        height: 0px;
+        padding: 12px var(--lingonberry-blackwater-small-spacing) 12px var(--lingonberry-blackwater-grid-unit); /* small-spacing + large-spacing */
+        spacing: var(--lingonberry-blackwater-grid-unit);
+        icon-size: var(--lingonberry-blackwater-icon-size-small);
+    }
+
+    &[display="text-under-icon"] {
+        icon-alignment: content center stack-center 0;
+        text-alignment: content center stack-center 1;
+    }
+}
+
+overlaydrawer
+{
+    background-color: var(--lingonberry-blackwater-view-background-color);
+    color: var(--lingonberry-blackwater-view-text-color);
+
+    &.modal
+    {
+        background-color: var(--lingonberry-blackwater-window-background-color);
+        color: var(--lingonberry-blackwater-window-text-color);
+    }
+
+    /* Collapsible sidebar expects 32px in Kirigami by default */
+    itemdelegate {
+        width: var(--lingonberry-blackwater-icon-size-medium);
+        height: var(--lingonberry-blackwater-icon-size-medium);
+    }
+
+    &[colorset="window"]
+    {
+        background-color: var(--lingonberry-blackwater-window-background-color);
+        color: var(--lingonberry-blackwater-window-text-color);
+    }
+}

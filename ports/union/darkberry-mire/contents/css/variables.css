@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --darkberry-mire-minimal-spacing: 2px;
+    --darkberry-mire-small-spacing: 4px;
+    --darkberry-mire-medium-spacing: 6px;
+    --darkberry-mire-large-spacing: 8px;
+    --darkberry-mire-grid-unit: 18px;
+    --darkberry-mire-corner-radius: 5px;
+
+    /* Icon sizes */
+    --darkberry-mire-icon-size-small: 16px;
+    --darkberry-mire-icon-size-smallmedium: 22px;
+    --darkberry-mire-icon-size-medium: 32px;
+    --darkberry-mire-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --darkberry-mire-small-element-size: 16px;
+    --darkberry-mire-medium-element-size: 24px;
+    --darkberry-mire-large-element-size: 32px;
+    --darkberry-mire-scrollbar-size: 20px;
+    --darkberry-mire-non-interactive-scrollbar-size: 10px;
+    --darkberry-mire-menu-item-width: 150px;
+    --darkberry-mire-text-field-width: 200px;
+
+    /* Colors */
+    --darkberry-mire-highlight-color: var(--darkberry-mire-kcs-active-selection-background-normal);
+    --darkberry-mire-highlight-text-color: var(--darkberry-mire-kcs-active-selection-foreground-text);
+    --darkberry-mire-highlight-hover-color: modify-color(var(--darkberry-mire-highlight-color) set-alpha 0.3);
+
+    --darkberry-mire-window-text-color: var(--darkberry-mire-kcs-active-window-foreground-text);
+    --darkberry-mire-window-background-color: var(--darkberry-mire-kcs-active-window-background-normal);
+    --darkberry-mire-window-background-alternate-color: var(--darkberry-mire-kcs-active-window-background-alternate);
+    --darkberry-mire-window-border-color: var(--darkberry-mire-kcs-active-window-decoration-frame);
+    --darkberry-mire-window-highlight-color: mix(var(--darkberry-mire-window-background-color), var(--darkberry-mire-highlight-color), 0.5);
+    --darkberry-mire-window-border-highlight-color: var(--darkberry-mire-highlight-color);
+
+    --darkberry-mire-view-text-color: var(--darkberry-mire-kcs-active-view-foreground-text);
+    --darkberry-mire-view-background-color: var(--darkberry-mire-kcs-active-view-background-normal);
+    --darkberry-mire-view-background-alternate-color: var(--darkberry-mire-kcs-active-view-background-alternate);
+    --darkberry-mire-view-border-color: var(--darkberry-mire-kcs-active-view-decoration-frame);
+    --darkberry-mire-view-highlight-color: mix(var(--darkberry-mire-view-background-color), var(--darkberry-mire-highlight-color), 0.5);
+
+    --darkberry-mire-header-text-color: var(--darkberry-mire-kcs-active-header-foreground-text);
+    --darkberry-mire-header-background-color: var(--darkberry-mire-kcs-active-header-background-normal);
+    --darkberry-mire-header-background-inactive-color: var(--darkberry-mire-kcs-inactive-header-background-normal);
+    --darkberry-mire-header-border-color: var(--darkberry-mire-kcs-active-header-decoration-frame);
+
+    --darkberry-mire-complementary-text-color: var(--darkberry-mire-kcs-active-complementary-foreground-text);
+    --darkberry-mire-complementary-background-color: var(--darkberry-mire-kcs-active-complementary-background-normal);
+
+    --darkberry-mire-positive-text: var(--darkberry-mire-kcs-active-view-foreground-positive);
+    --darkberry-mire-neutral-text: var(--darkberry-mire-kcs-active-view-foreground-neutral);
+    --darkberry-mire-negative-text: var(--darkberry-mire-kcs-active-view-foreground-negative);
+    --darkberry-mire-positive-background: var(--darkberry-mire-kcs-active-view-background-positive);
+    --darkberry-mire-neutral-background: var(--darkberry-mire-kcs-active-view-background-neutral);
+    --darkberry-mire-negative-background: var(--darkberry-mire-kcs-active-view-background-negative);
+
+    --darkberry-mire-changed-foreground: var(--darkberry-mire-neutral-text);
+    --darkberry-mire-changed-background: var(--darkberry-mire-neutral-background);
+
+    --darkberry-mire-card-background-color: var(--darkberry-mire-view-background-color);
+    --darkberry-mire-card-text-color: var(--darkberry-mire-view-text-color);
+    --darkberry-mire-card-border-color: var(--darkberry-mire-view-border-color);
+    --darkberry-mire-card-hover-color: mix(var(--darkberry-mire-card-background-color), var(--darkberry-mire-highlight-color), 0.1);
+    --darkberry-mire-card-pressed-color: mix(var(--darkberry-mire-card-background-color), var(--darkberry-mire-highlight-color), 0.3);
+
+    --darkberry-mire-focus-outline-alpha: 0.3;
+    --darkberry-mire-focus-color: modify-color(var(--darkberry-mire-kcs-active-window-decoration-focus) set-alpha var(--darkberry-mire-focus-outline-alpha));
+
+    --darkberry-mire-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --darkberry-mire-window-disabled-text-color: var(--darkberry-mire-kcs-disabled-window-foreground-text);
+    --darkberry-mire-window-disabled-background-color: var(--darkberry-mire-kcs-disabled-window-background-normal);
+    --darkberry-mire-window-disabled-border-color: var(--darkberry-mire-kcs-disabled-window-decoration-frame);
+
+    --darkberry-mire-view-disabled-text-color: var(--darkberry-mire-kcs-disabled-view-foreground-text);
+    --darkberry-mire-view-disabled-background-color: var(--darkberry-mire-kcs-disabled-view-background-normal);
+    --darkberry-mire-view-disabled-border-color: var(--darkberry-mire-kcs-disabled-view-decoration-frame);
+
+    --darkberry-mire-header-disabled-text-color: var(--darkberry-mire-kcs-disabled-header-foreground-text);
+    --darkberry-mire-header-disabled-background-color: var(--darkberry-mire-kcs-disabled-header-background-normal);
+    --darkberry-mire-header-disabled-border-color: var(--darkberry-mire-kcs-disabled-header-decoration-frame);
+
+    --darkberry-mire-complementary-disabled-text-color: var(--darkberry-mire-kcs-disabled-complementary-foreground-text);
+
+    --darkberry-mire-highlight-disabled-color: mix(var(--darkberry-mire-window-disabled-background-color), var(--darkberry-mire-highlight-color), 0.2);
+    --darkberry-mire-highlight-disabled-text-color: mix(var(--darkberry-mire-window-disabled-text-color), var(--darkberry-mire-highlight-text-color), 0.2);
+
+    --darkberry-mire-card-disabled-background-color: var(--darkberry-mire-view-disabled-background-color);
+    --darkberry-mire-card-disabled-text-color: var(--darkberry-mire-view-disabled-text-color);
+    --darkberry-mire-card-disabled-border-color: var(--darkberry-mire-view-disabled-border-color);
+
+    /* Standard Elements */
+    --darkberry-mire-focus-outline: 2px solid var(--darkberry-mire-focus-ring-color);
+    --darkberry-mire-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --darkberry-mire-indicator-color: modify-color(var(--darkberry-mire-window-text-color) set-alpha 0.4);
+    --darkberry-mire-indicator-press-color: modify-color(var(--darkberry-mire-window-text-color) set-alpha 0.7);
+    --darkberry-mire-indicator-current-color: modify-color(var(--darkberry-mire-window-text-color) set-alpha 0.95);
+}

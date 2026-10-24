@@ -1,0 +1,424 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Application-structural elements like windows, drawers, etc.
+ */
+
+:root {
+    --blueberry-fen-window-active-background-color: var(--blueberry-fen-kcs-active-window-background-normal);
+    --blueberry-fen-window-active-text-color: var(--blueberry-fen-kcs-active-window-foreground-text);
+    --blueberry-fen-window-active-border-color: var(--blueberry-fen-kcs-active-window-decoration-frame);
+
+    --blueberry-fen-window-inactive-background-color: var(--blueberry-fen-kcs-inactive-window-background-normal);
+    --blueberry-fen-window-inactive-text-color: var(--blueberry-fen-kcs-inactive-window-foreground-text);
+    --blueberry-fen-window-inactive-border-color: var(--blueberry-fen-kcs-inactive-window-decoration-frame);
+
+    --blueberry-fen-header-active-background-color: var(--blueberry-fen-kcs-active-header-background-normal);
+    --blueberry-fen-header-active-text-color: var(--blueberry-fen-kcs-active-header-foreground-text);
+    --blueberry-fen-header-active-border-color: var(--blueberry-fen-kcs-active-header-decoration-frame);
+
+    --blueberry-fen-header-inactive-background-color: var(--blueberry-fen-kcs-inactive-header-background-normal);
+    --blueberry-fen-header-inactive-text-color: var(--blueberry-fen-kcs-inactive-header-foreground-text);
+    --blueberry-fen-header-inactive-border-color: var(--blueberry-fen-kcs-inactive-header-decoration-frame);
+
+    --blueberry-fen-complementary-active-background-color: var(--blueberry-fen-kcs-active-header-background-normal);
+    --blueberry-fen-complementary-active-text-color: var(--blueberry-fen-kcs-active-header-foreground-text);
+    --blueberry-fen-complementary-active-border-color: var(--blueberry-fen-kcs-active-header-decoration-frame);
+
+    --blueberry-fen-complementary-inactive-background-color: var(--blueberry-fen-kcs-inactive-header-background-normal);
+    --blueberry-fen-complementary-inactive-text-color: var(--blueberry-fen-kcs-inactive-header-foreground-text);
+    --blueberry-fen-complementary-inactive-border-color: var(--blueberry-fen-kcs-inactive-header-decoration-frame);
+}
+
+applicationwindow
+{
+    background-color: var(--blueberry-fen-window-active-background-color);
+    color: var(--blueberry-fen-window-active-text-color);
+
+    &.inactive {
+        background-color: var(--blueberry-fen-window-inactive-background-color);
+        color: var(--blueberry-fen-window-inactive-text-color);
+    }
+}
+
+page
+{
+    background-color: var(--blueberry-fen-window-background-color);
+    color: var(--blueberry-fen-window-text-color);
+
+    .inactive & {
+        background-color: var(--blueberry-fen-window-inactive-background-color);
+        color: var(--blueberry-fen-window-inactive-text-color);
+    }
+}
+
+toolbar
+{
+    height: 46px; /* large-element-size + medium-spacing + large-spacing */
+    padding: var(--blueberry-fen-small-spacing);
+    padding-top: var(--blueberry-fen-medium-spacing);
+    padding-bottom: var(--blueberry-fen-large-spacing);
+    color: var(--blueberry-fen-window-active-text-color);
+    background-color: var(--blueberry-fen-window-active-background-color);
+
+    &.footer {
+        border-top: 1px solid var(--blueberry-fen-window-active-border-color);
+    }
+
+    &.header {
+        border-bottom: 1px solid var(--blueberry-fen-window-active-border-color);
+    }
+
+    .inactive & {
+        background-color: var(--blueberry-fen-window-inactive-background-color);
+        border-color: var(--blueberry-fen-window-inactive-border-color);
+    }
+
+    &.header,
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        background-color: var(--blueberry-fen-header-active-background-color);
+        border-color: var(--blueberry-fen-header-active-border-color);
+
+        .inactive & {
+            background-color: var(--blueberry-fen-header-inactive-background-color);
+            border-color: var(--blueberry-fen-header-inactive-border-color);
+        }
+    }
+
+    &.header[colorset="window"]
+    {
+        background-color: var(--blueberry-fen-window-active-background-color);
+        border-color: var(--blueberry-fen-window-active-border-color);
+
+        .inactive & {
+            background-color: var(--blueberry-fen-window-inactive-background-color);
+            border-color: var(--blueberry-fen-window-inactive-border-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &,
+    &.header[colorset="complementary"]
+    {
+        background-color: var(--blueberry-fen-complementary-active-background-color);
+        color: var(--blueberry-fen-complementary-active-text-color);
+        border-color: var(--blueberry-fen-complementary-active-border-color);
+
+        .inactive & {
+            background-color: var(--blueberry-fen-complementary-inactive-background-color);
+            color: var(--blueberry-fen-complementary-inactive-text-color);
+            border-color: var(--blueberry-fen-complementary-active-border-color);
+        }
+    }
+
+    & > separator {
+        width: 1px;
+        height: 1px;
+        border: none;
+        border-radius: 0px;
+        background-color: var(--blueberry-fen-window-border-color);
+        padding: 0px;
+    }
+
+    & > handle {
+        width: 4px;
+        height: 4px;
+        border: none;
+        border-radius: 0px;
+        border-left: 1px solid var(--blueberry-fen-window-border-color);
+        border-right: 1px solid var(--blueberry-fen-window-border-color);
+        padding: 0px;
+    }
+}
+
+drawer
+{
+    color: var(--blueberry-fen-view-text-color);
+    background-color: var(--blueberry-fen-view-background-color);
+
+    &.modal {
+        color: var(--blueberry-fen-window-text-color);
+        background-color: var(--blueberry-fen-window-active-background-color);
+
+        .inactive & {
+            background-color: var(--blueberry-fen-window-inactive-background-color);
+        }
+    }
+}
+
+scrollview {
+    &.vertical-scroll {
+        padding-right: var(--blueberry-fen-scrollbar-size);
+    }
+
+    &.horizontal-scroll {
+        padding-bottom: var(--blueberry-fen-scrollbar-size);
+    }
+
+    &.framed-background
+    {
+        background-color: var(--blueberry-fen-view-background-color);
+        border: 1px solid var(--blueberry-fen-view-border-color);
+        border-radius: var(--blueberry-fen-corner-radius);
+    }
+}
+
+splitview {
+    & handle {
+        width: 1px;
+        height: 1px;
+        background-color: var(--blueberry-fen-window-border-color);
+    }
+
+    &.horizontal handle {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    &.vertical handle {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
+
+pageindicator {
+    spacing: var(--blueberry-fen-small-spacing);
+}
+
+pageindicatordelegate {
+    background-color: var(--blueberry-fen-indicator-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    &:pressed {
+        background-color: var(--blueberry-fen-indicator-press-color);
+    }
+
+    &.current {
+        background-color: var(--blueberry-fen-indicator-current-color);
+    }
+}
+
+pane
+{
+    padding: var(--blueberry-fen-large-spacing);
+    background-color: var(--blueberry-fen-window-background-color);
+}
+
+frame,
+groupbox,
+framemenu,
+framewindow
+{
+    padding: var(--blueberry-fen-large-spacing);
+    border: 1px solid var(--blueberry-fen-window-border-color);
+    border-radius: var(--blueberry-fen-corner-radius);
+    .inactive & {
+        border-color: var(--blueberry-fen-window-inactive-border-color);
+    }
+}
+
+splitter {
+    width: 1px;
+    background-color: var(--blueberry-fen-window-border-color);
+}
+
+frame,
+listview,
+treeview,
+tableview,
+columnview,
+scrollview,
+textfield,
+textarea {
+    &:visual-focus {
+        border: 1px solid var(--blueberry-fen-highlight-color);
+    }
+    &[shape="no-frame"] {
+        border: none;
+    }
+    &[shape="panel"],
+    &[shape="box"] {
+        border-radius: var(--blueberry-fen-corner-radius);
+        border: 1px solid var(--blueberry-fen-window-border-color);
+        background-color: var(--blueberry-fen-view-background-color);
+
+        .inactive & {
+            background-color: var(--blueberry-fen-window-inactive-background-color);
+            border-color: var(--blueberry-fen-window-inactive-border-color);
+        }
+    }
+    &[shape="vertical-line"],
+    &[shape="horizontal-line"] {
+        border-radius: 0px;
+        border: none;
+        background-color: var(--blueberry-fen-window-border-color);
+        padding: 0px;
+        inset: 1px;
+    }
+    &[shape="vertical-line"] {
+        width: 1px;
+    }
+    &[shape="horizontal-line"] {
+        height: 1px;
+    }
+    /* Legacy hints that applications use to drive Breeze style */
+    &.dock-left,
+    &.dock-right,
+    &.dock-top,
+    &.dock-bottom,
+    &.left-edge,
+    &.right-edge,
+    &.top-edge,
+    &.bottom-edge {
+        border: none;
+        border-radius: 0px;
+    }
+    &.left-edge {
+        border-left: 1px solid var(--blueberry-fen-window-border-color);
+    }
+    &.right-edge {
+        border-right: 1px solid var(--blueberry-fen-window-border-color);
+    }
+    &.top-edge {
+        border-top: 1px solid var(--blueberry-fen-window-border-color);
+    }
+    &.bottom-edge {
+        border-bottom: 1px solid var(--blueberry-fen-window-border-color);
+    }
+}
+
+groupbox {
+    padding: var(--blueberry-fen-small-spacing);
+    border: 1px solid var(--blueberry-fen-window-border-color);
+    border-radius: var(--blueberry-fen-corner-radius);
+    color: var(--blueberry-fen-window-text-color);
+    background-color: var(--blueberry-fen-window-background-color);
+
+    & > header {
+        color: var(--blueberry-fen-window-text-color);
+    }
+    icon-alignment: content start start 0;
+    text-alignment: content center start 0;
+    spacing: var(--blueberry-fen-small-spacing);
+    width: 200px;
+}
+
+
+dockwidget {
+    width: var(--blueberry-fen-small-element-size);
+    height: var(--blueberry-fen-small-element-size);
+    color: var(--blueberry-fen-header-text-color);
+    background-color: var(--blueberry-fen-header-background-color);
+    icon-alignment: content center center 0;
+    text-alignment: content center center 1;
+    padding: var(--blueberry-fen-small-spacing);
+    &:visual-focus,
+    &:active-focus {
+        border: 1px solid var(--blueberry-fen-highlight-color);
+    }
+
+    floatbutton,
+    closebutton {
+        width: var(--blueberry-fen-small-element-size);
+        height: var(--blueberry-fen-small-element-size);
+    }
+
+    floatbutton {
+        layout-alignment: content start center 0;
+        icon-name: "window-restore";
+    }
+
+    closebutton {
+        layout-alignment: content end center 0;
+        icon-name: "window-close-symbolic";
+    }
+}
+
+scrollareacorner {
+    background-color: var(--blueberry-fen-window-background-color);
+    color: var(--blueberry-fen-window-text-color);
+}
+
+panel,
+groupbox {
+    &.flat {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+rubberband {
+    background-color: var(--blueberry-fen-highlight-hover-color);
+    border: 1px solid var(--blueberry-fen-highlight-color);
+    border-radius: var(--blueberry-fen-corner-radius);
+}
+
+titlebar {
+    width: var(--blueberry-fen-small-element-size);
+    height: var(--blueberry-fen-small-element-size);
+    color: var(--blueberry-fen-header-text-color);
+    background-color: var(--blueberry-fen-header-background-color);
+    icon-alignment: content center fill 0;
+    text-alignment: content center fill 1;
+    icon-size: var(--blueberry-fen-icon-size-small);
+
+    systemmenu,
+    minimizebutton,
+    maximizebutton,
+    closebutton,
+    normalbutton,
+    shadebutton,
+    helpbutton {
+        width: var(--blueberry-fen-small-element-size);
+        height: var(--blueberry-fen-small-element-size);
+    }
+
+    systemmenu {
+        layout-alignment: content start fill 0;
+        icon-name: "application-menu-symbolic";
+    }
+    minimizebutton {
+        layout-alignment: content end fill 0;
+        icon-name: "window-minimize-symbolic";
+    }
+    maximizebutton {
+        layout-alignment: content end fill 1;
+        icon-name: "window-maximize-symbolic";
+    }
+    closebutton {
+        layout-alignment: content end fill 2;
+        icon-name: "window-close-symbolic";
+    }
+    shadebutton {
+        layout-alignment: content start fill 2;
+        icon-name: "window-shade-symbolic";
+    }
+    helpbutton {
+        layout-alignment: content start fill -1;
+        icon-name: "help-contextual-symbolic";
+    }
+
+    normalbutton {
+        layout-alignment: content start fill 1;
+    }
+
+    &.maximized {
+        maximizebutton {
+            icon-name: "window-restore-symbolic";
+        }
+    }
+
+    &.minimized {
+        minimizebutton {
+            icon-name: "empty";
+        }
+    }
+
+}

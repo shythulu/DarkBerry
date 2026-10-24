@@ -1,0 +1,51 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+@property --crowberry-wisp-color-group {
+    syntax: "<string>";
+    inherits: true;
+    initial-value: "active";
+}
+
+@property --crowberry-wisp-color-set {
+    syntax: "<string>";
+    inherits: true;
+}
+
+.inactive {
+    --crowberry-wisp-color-group: "inactive";
+}
+
+:disabled {
+    --crowberry-wisp-color-group: "disabled";
+}
+
+[color-set="window"] {
+    --crowberry-wisp-color-set: "window";
+}
+
+[color-set="button"] {
+    --crowberry-wisp-color-set: "button";
+}
+
+[color-set="view"] {
+    --crowberry-wisp-color-set: "view";
+}
+
+[color-set="selection"] {
+    --crowberry-wisp-color-set: "selection";
+}
+
+[color-set="tooltip"] {
+    --crowberry-wisp-color-set: "tooltip";
+}
+
+[color-set="complementary"] {
+    --crowberry-wisp-color-set: "complementary";
+}
+
+[color-set="header"] {
+    --crowberry-wisp-color-set: "header";
+}

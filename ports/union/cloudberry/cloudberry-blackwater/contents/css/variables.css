@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --cloudberry-blackwater-minimal-spacing: 2px;
+    --cloudberry-blackwater-small-spacing: 4px;
+    --cloudberry-blackwater-medium-spacing: 6px;
+    --cloudberry-blackwater-large-spacing: 8px;
+    --cloudberry-blackwater-grid-unit: 18px;
+    --cloudberry-blackwater-corner-radius: 5px;
+
+    /* Icon sizes */
+    --cloudberry-blackwater-icon-size-small: 16px;
+    --cloudberry-blackwater-icon-size-smallmedium: 22px;
+    --cloudberry-blackwater-icon-size-medium: 32px;
+    --cloudberry-blackwater-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --cloudberry-blackwater-small-element-size: 16px;
+    --cloudberry-blackwater-medium-element-size: 24px;
+    --cloudberry-blackwater-large-element-size: 32px;
+    --cloudberry-blackwater-scrollbar-size: 20px;
+    --cloudberry-blackwater-non-interactive-scrollbar-size: 10px;
+    --cloudberry-blackwater-menu-item-width: 150px;
+    --cloudberry-blackwater-text-field-width: 200px;
+
+    /* Colors */
+    --cloudberry-blackwater-highlight-color: var(--cloudberry-blackwater-kcs-active-selection-background-normal);
+    --cloudberry-blackwater-highlight-text-color: var(--cloudberry-blackwater-kcs-active-selection-foreground-text);
+    --cloudberry-blackwater-highlight-hover-color: modify-color(var(--cloudberry-blackwater-highlight-color) set-alpha 0.3);
+
+    --cloudberry-blackwater-window-text-color: var(--cloudberry-blackwater-kcs-active-window-foreground-text);
+    --cloudberry-blackwater-window-background-color: var(--cloudberry-blackwater-kcs-active-window-background-normal);
+    --cloudberry-blackwater-window-background-alternate-color: var(--cloudberry-blackwater-kcs-active-window-background-alternate);
+    --cloudberry-blackwater-window-border-color: var(--cloudberry-blackwater-kcs-active-window-decoration-frame);
+    --cloudberry-blackwater-window-highlight-color: mix(var(--cloudberry-blackwater-window-background-color), var(--cloudberry-blackwater-highlight-color), 0.5);
+    --cloudberry-blackwater-window-border-highlight-color: var(--cloudberry-blackwater-highlight-color);
+
+    --cloudberry-blackwater-view-text-color: var(--cloudberry-blackwater-kcs-active-view-foreground-text);
+    --cloudberry-blackwater-view-background-color: var(--cloudberry-blackwater-kcs-active-view-background-normal);
+    --cloudberry-blackwater-view-background-alternate-color: var(--cloudberry-blackwater-kcs-active-view-background-alternate);
+    --cloudberry-blackwater-view-border-color: var(--cloudberry-blackwater-kcs-active-view-decoration-frame);
+    --cloudberry-blackwater-view-highlight-color: mix(var(--cloudberry-blackwater-view-background-color), var(--cloudberry-blackwater-highlight-color), 0.5);
+
+    --cloudberry-blackwater-header-text-color: var(--cloudberry-blackwater-kcs-active-header-foreground-text);
+    --cloudberry-blackwater-header-background-color: var(--cloudberry-blackwater-kcs-active-header-background-normal);
+    --cloudberry-blackwater-header-background-inactive-color: var(--cloudberry-blackwater-kcs-inactive-header-background-normal);
+    --cloudberry-blackwater-header-border-color: var(--cloudberry-blackwater-kcs-active-header-decoration-frame);
+
+    --cloudberry-blackwater-complementary-text-color: var(--cloudberry-blackwater-kcs-active-complementary-foreground-text);
+    --cloudberry-blackwater-complementary-background-color: var(--cloudberry-blackwater-kcs-active-complementary-background-normal);
+
+    --cloudberry-blackwater-positive-text: var(--cloudberry-blackwater-kcs-active-view-foreground-positive);
+    --cloudberry-blackwater-neutral-text: var(--cloudberry-blackwater-kcs-active-view-foreground-neutral);
+    --cloudberry-blackwater-negative-text: var(--cloudberry-blackwater-kcs-active-view-foreground-negative);
+    --cloudberry-blackwater-positive-background: var(--cloudberry-blackwater-kcs-active-view-background-positive);
+    --cloudberry-blackwater-neutral-background: var(--cloudberry-blackwater-kcs-active-view-background-neutral);
+    --cloudberry-blackwater-negative-background: var(--cloudberry-blackwater-kcs-active-view-background-negative);
+
+    --cloudberry-blackwater-changed-foreground: var(--cloudberry-blackwater-neutral-text);
+    --cloudberry-blackwater-changed-background: var(--cloudberry-blackwater-neutral-background);
+
+    --cloudberry-blackwater-card-background-color: var(--cloudberry-blackwater-view-background-color);
+    --cloudberry-blackwater-card-text-color: var(--cloudberry-blackwater-view-text-color);
+    --cloudberry-blackwater-card-border-color: var(--cloudberry-blackwater-view-border-color);
+    --cloudberry-blackwater-card-hover-color: mix(var(--cloudberry-blackwater-card-background-color), var(--cloudberry-blackwater-highlight-color), 0.1);
+    --cloudberry-blackwater-card-pressed-color: mix(var(--cloudberry-blackwater-card-background-color), var(--cloudberry-blackwater-highlight-color), 0.3);
+
+    --cloudberry-blackwater-focus-outline-alpha: 0.3;
+    --cloudberry-blackwater-focus-color: modify-color(var(--cloudberry-blackwater-kcs-active-window-decoration-focus) set-alpha var(--cloudberry-blackwater-focus-outline-alpha));
+
+    --cloudberry-blackwater-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --cloudberry-blackwater-window-disabled-text-color: var(--cloudberry-blackwater-kcs-disabled-window-foreground-text);
+    --cloudberry-blackwater-window-disabled-background-color: var(--cloudberry-blackwater-kcs-disabled-window-background-normal);
+    --cloudberry-blackwater-window-disabled-border-color: var(--cloudberry-blackwater-kcs-disabled-window-decoration-frame);
+
+    --cloudberry-blackwater-view-disabled-text-color: var(--cloudberry-blackwater-kcs-disabled-view-foreground-text);
+    --cloudberry-blackwater-view-disabled-background-color: var(--cloudberry-blackwater-kcs-disabled-view-background-normal);
+    --cloudberry-blackwater-view-disabled-border-color: var(--cloudberry-blackwater-kcs-disabled-view-decoration-frame);
+
+    --cloudberry-blackwater-header-disabled-text-color: var(--cloudberry-blackwater-kcs-disabled-header-foreground-text);
+    --cloudberry-blackwater-header-disabled-background-color: var(--cloudberry-blackwater-kcs-disabled-header-background-normal);
+    --cloudberry-blackwater-header-disabled-border-color: var(--cloudberry-blackwater-kcs-disabled-header-decoration-frame);
+
+    --cloudberry-blackwater-complementary-disabled-text-color: var(--cloudberry-blackwater-kcs-disabled-complementary-foreground-text);
+
+    --cloudberry-blackwater-highlight-disabled-color: mix(var(--cloudberry-blackwater-window-disabled-background-color), var(--cloudberry-blackwater-highlight-color), 0.2);
+    --cloudberry-blackwater-highlight-disabled-text-color: mix(var(--cloudberry-blackwater-window-disabled-text-color), var(--cloudberry-blackwater-highlight-text-color), 0.2);
+
+    --cloudberry-blackwater-card-disabled-background-color: var(--cloudberry-blackwater-view-disabled-background-color);
+    --cloudberry-blackwater-card-disabled-text-color: var(--cloudberry-blackwater-view-disabled-text-color);
+    --cloudberry-blackwater-card-disabled-border-color: var(--cloudberry-blackwater-view-disabled-border-color);
+
+    /* Standard Elements */
+    --cloudberry-blackwater-focus-outline: 2px solid var(--cloudberry-blackwater-focus-ring-color);
+    --cloudberry-blackwater-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --cloudberry-blackwater-indicator-color: modify-color(var(--cloudberry-blackwater-window-text-color) set-alpha 0.4);
+    --cloudberry-blackwater-indicator-press-color: modify-color(var(--cloudberry-blackwater-window-text-color) set-alpha 0.7);
+    --cloudberry-blackwater-indicator-current-color: modify-color(var(--cloudberry-blackwater-window-text-color) set-alpha 0.95);
+}

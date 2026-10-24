@@ -1,0 +1,51 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+@property --darkberry-blackwater-color-group {
+    syntax: "<string>";
+    inherits: true;
+    initial-value: "active";
+}
+
+@property --darkberry-blackwater-color-set {
+    syntax: "<string>";
+    inherits: true;
+}
+
+.inactive {
+    --darkberry-blackwater-color-group: "inactive";
+}
+
+:disabled {
+    --darkberry-blackwater-color-group: "disabled";
+}
+
+[color-set="window"] {
+    --darkberry-blackwater-color-set: "window";
+}
+
+[color-set="button"] {
+    --darkberry-blackwater-color-set: "button";
+}
+
+[color-set="view"] {
+    --darkberry-blackwater-color-set: "view";
+}
+
+[color-set="selection"] {
+    --darkberry-blackwater-color-set: "selection";
+}
+
+[color-set="tooltip"] {
+    --darkberry-blackwater-color-set: "tooltip";
+}
+
+[color-set="complementary"] {
+    --darkberry-blackwater-color-set: "complementary";
+}
+
+[color-set="header"] {
+    --darkberry-blackwater-color-set: "header";
+}

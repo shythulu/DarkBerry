@@ -1,0 +1,179 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Akseli Lahtinen <akselmo@akselmo.dev>
+ */
+
+treeviewdelegate,
+tableviewdelegate {
+    width: var(--cloudberry-wisp-medium-element-size);
+    height: var(--cloudberry-wisp-medium-element-size);
+
+    padding: var(--cloudberry-wisp-small-spacing);
+    spacing: var(--cloudberry-wisp-small-spacing);
+    border-radius: 0px;
+
+    layout-alignment: content fill center 0;
+    icon-alignment: content start center 1;
+    text-alignment: content fill center 2;
+
+    icon-width: var(--cloudberry-wisp-icon-size-small);
+    icon-height: var(--cloudberry-wisp-icon-size-small);
+
+    color: var(--cloudberry-wisp-view-text-color);
+    background-color: var(--cloudberry-wisp-view-background-color);
+
+    &.alternating-colors {
+        background-color: var(--cloudberry-wisp-view-background-alternate-color);
+    }
+
+    &:hovered,
+    &:active-focus {
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
+        background-color: transparent;
+    }
+
+    &:visual-focus {
+        outline: 1px solid var(--cloudberry-wisp-focus-ring-color);
+    }
+
+    &:highlighted,
+    &.selected {
+        color: var(--cloudberry-wisp-highlight-text-color);
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
+        background-color: var(--cloudberry-wisp-highlight-color);
+    }
+
+    &.selected > label {
+        color: var(--cloudberry-wisp-highlight-text-color);
+    }
+
+    &.editing {
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
+    }
+
+    &:disabled {
+        color: var(--cloudberry-wisp-view-disabled-text-color);
+        background-color: var(--cloudberry-wisp-view-disabled-background-color);
+    }
+}
+
+treeviewdelegate {
+    spacing: 0px;
+    text-wrap-mode: no-wrap;
+    text-elide: right;
+
+    & > * {
+        layout-alignment: content fill fill 0;
+    }
+
+    & > indentation {
+        width: var(--cloudberry-wisp-medium-element-size);
+        layout-alignment: item start center 0;
+    }
+
+    & > indicator {
+        width: var(--cloudberry-wisp-medium-element-size);
+        height: var(--cloudberry-wisp-icon-size-small);
+        color: var(--cloudberry-wisp-view-text-color);
+        icon-name: "arrow-right-symbolic";
+        layout-alignment: item start center 1;
+    }
+
+    & > radiobutton,
+    & > checkbox {
+        text-wrap-mode: no-wrap;
+        layout-alignment: content fill center 0;
+        icon-alignment: content start center 1;
+        text-alignment: content fill center 2;
+    }
+
+    &.expanded > indicator {
+        icon-name: "arrow-down-symbolic"
+    }
+
+    &:disabled {
+        color: var(--cloudberry-wisp-view-disabled-text-color);
+        background-color: var(--cloudberry-wisp-view-disabled-background-color);
+
+        & > indicator {
+            color: var(--cloudberry-wisp-view-disabled-text-color);
+        }
+    }
+}
+
+headerviewdelegate
+{
+    width: var(--cloudberry-wisp-large-element-size);
+    height: var(--cloudberry-wisp-large-element-size);
+    padding: var(--cloudberry-wisp-small-spacing);
+
+    border-bottom: 1px solid var(--cloudberry-wisp-button-active-border-color);
+    border-right: 1px solid var(--cloudberry-wisp-button-active-border-color);
+
+    background-color: var(--cloudberry-wisp-button-active-background-color);
+    color: var(--cloudberry-wisp-button-active-text-color);
+
+    layout-alignment: content fill center 0;
+    icon-alignment: content center center 0;
+    text-alignment: content center center 1;
+    text-wrap-mode: no-wrap;
+    text-elide: right;
+
+    icon-size: var(--cloudberry-wisp-icon-size-small);
+
+    & > indicator {
+        color: var(--cloudberry-wisp-button-active-text-color);
+        width: var(--cloudberry-wisp-icon-size-small);
+        height: var(--cloudberry-wisp-icon-size-small);
+        layout-alignment: content end center 0;
+    }
+
+    &.sort-ascending > indicator
+    {
+        icon-name: "arrow-up-symbolic";
+    }
+
+    &.sort-descending > indicator
+    {
+        icon-name: "arrow-down-symbolic";
+    }
+
+    &:disabled
+    {
+        border: 1px solid var(--cloudberry-wisp-button-disabled-border-color);
+        color: var(--cloudberry-wisp-button-disabled-text-color);
+        background-color: var(--cloudberry-wisp-button-disabled-background-color);
+    }
+}
+
+selectionrectangle {
+    color: var(--cloudberry-wisp-highlight-color);
+    border: 1px solid var(--cloudberry-wisp-highlight-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+    background-color: var(--cloudberry-wisp-highlight-color);
+
+    &:disabled {
+        border: 1px solid var(--cloudberry-wisp-highlight-disabled-color);
+        color: var(--cloudberry-wisp-highlight-disabled-color);
+        background-color: var(--cloudberry-wisp-highlight-disabled-color);
+    }
+}
+
+selectionrectanglehandle {
+    width: var(--cloudberry-wisp-small-element-size);
+    height: var(--cloudberry-wisp-small-element-size);
+    background-color: var(--cloudberry-wisp-bar-handle-active-background-color);
+    border: 1px solid var(--cloudberry-wisp-bar-active-border-color);
+    border-radius: var(--cloudberry-wisp-small-element-size);
+
+    &:visual-focus {
+        border-color: var(--cloudberry-wisp-highlight-color);
+        outline: var(--cloudberry-wisp-focus-outline);
+    }
+
+    &:disabled {
+        color: var(--cloudberry-wisp-highlight-disabled-color);
+        background-color: var(--cloudberry-wisp-bar-handle-disabled-background-color);
+        border: 1px solid var(--cloudberry-wisp-bar-disabled-border-color);
+    }
+}

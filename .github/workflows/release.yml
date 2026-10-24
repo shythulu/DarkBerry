@@ -82,6 +82,8 @@ jobs:
             echo
             echo "**🖥️ KDE Plasma** — unzip \`darkberry-kde-$version.zip\` into \`~/.local/share/color-schemes/\`, then pick a flavour in System Settings > Colors."
             echo
+            echo "**🪢 Union (Plasma 6.8+)** — apply the KDE Plasma colour scheme first, unzip \`darkberry-union-$version.zip\` into \`~/.local/share/union/styles/\`, then pick the same flavour in System Settings > Application Style and restart your apps."
+            echo
             echo "**🧩 GTK 3 and 4** — unzip \`darkberry-gtk-$version.zip\` into \`~/.themes/\`, then select a flavour as your GTK theme."
             echo
             echo "**🔲 JankyBorders** — unzip \`darkberry-borders-$version.zip\` and copy a flavour over \`~/.config/borders/bordersrc\`, then \`brew services restart borders\`."
