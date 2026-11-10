@@ -114,6 +114,8 @@ jobs:
             echo
             echo "**🤖 T3 Code** — unzip \`darkberry-t3code-$version.zip\` into \`~/.t3/userdata/themes/\`, then pick a dark flavour under Settings > Appearance; each file carries Wisp as its light half."
             echo
+            echo "**✳️ Claude Code** — unzip \`darkberry-claude-code-$version.zip\` into \`~/.claude/themes/\`, then pick a flavour with \`/theme\`; pair it with the same flavour in your terminal, which owns the background."
+            echo
             echo "**📷 darktable** — unzip \`darkberry-darktable-$version.zip\` and copy a flavour beside darktable's own CSS (each file's header gives the path), then pick it under Preferences > General > Theme."
             echo
             echo "**🎨 GIMP** — the files in \`darkberry-gimp-$version.zip\` sit on top of a copy of GIMP's own \`Default\` theme; follow the steps in [the GIMP port's README](https://github.com/${{ github.repository }}/tree/main/ports/gimp#readme)."

@@ -103,6 +103,7 @@ build them yourself with `./package.sh`, which writes each port's packages into 
 
 ### Artificial Intelligence
 
+- [Claude Code](ports/claude-code#readme)
 - [T3 Code](ports/t3code#readme)
 
 ### Libraries
