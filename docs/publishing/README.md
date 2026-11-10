@@ -76,7 +76,7 @@ automated fetches outright.
 | [T3 Code](t3code.md) | Open VSX via the in-app search (verified) | t3themes.com gallery (verified) | Upstream takes no themes; the in-app search finds the VS Code conversion, not the tuned port; the with-tints extension is on Open VSX, the plain one is not |
 | [Firefox](firefox.md) | AMO (verified) | Zen Browser mods | Already listed; tints would be 16 more listings; Zen wants CC BY-NC-SA |
 | [Thunderbird](thunderbird.md) | addons.thunderbird.net (unverified) | none | Not submitted; whether ATN takes a theme_experiment theme is open |
-| [Chrome](chrome.md) | Chrome Web Store (partly) | Edge Add-ons (verified) | Store policy treats near-identical themes as spam; decide the item count |
+| [Chrome](chrome.md) | Chrome Web Store (partly) | Edge Add-ons (verified) | Store policy treats near-identical themes as spam; the four Darkberry flavours go first, tints undecided |
 | [Dark Reader](dark-reader.md) | Dark Reader's Color Scheme list (partly) | none | Background and Text only; Selection stays a manual step |
 | [KDE Plasma](kde.md) | KDE Store (partly) | none | Upstream ships only first-party schemes |
 | [GTK 3](gtk.md) | gnome-look.org (partly) | Flathub GTK3 theme extension (opt-in) | Pling site blocks automated fetches; one product per flavour or one bundle is undecided |

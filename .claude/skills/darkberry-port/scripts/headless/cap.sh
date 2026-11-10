@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Headless port screenshots on a Linux box with no display. Usage: ./cap.sh <port> [flavour ...]
-# Every capture runs in its own Xvfb at 1200x750 with a throwaway HOME per flavour, so the
+# Every capture runs in its own Xvfb at 1200x750 (SHOT_W and SHOT_H change that) with a
+# throwaway HOME per flavour, so the
 # apps read only the Darkberry files copied into it. Run mksample.sh once first.
 # Output: $SHOTS/out/<port>/<flavour>.png, or $SHOTS/out/<tint>/<port>/ with TINT set.
 # Apps that are not packages are found through FIREFOX (the firefox binary), CHROMIUM (a
@@ -10,7 +11,7 @@ export LIBGL_ALWAYS_SOFTWARE=1
 SH=$(cd "$(dirname "$0")" && pwd); ROOT=$(git -C "$SH" rev-parse --show-toplevel); PORTS=$ROOT/ports
 SITE=${SITE_URL:-file://$ROOT/site} # the built site the browser shots open; a local server keeps paths out of the address bar
 WORK=${SHOTS:-$HOME/.cache/darkberry-shots}; OUT=$WORK/out; SAMPLE=$WORK/sample
-W=1200; H=750; FONT="JetBrainsMono Nerd Font"; FS=13
+W=${SHOT_W:-1200}; H=${SHOT_H:-750}; FONT="JetBrainsMono Nerd Font"; FS=13
 declare -A FULL=([wisp]="Darkberry Wisp" [fen]="Darkberry Fen" [mire]="Darkberry Mire" [blackwater]="Darkberry Blackwater")
 declare -A DARK=([wisp]=0 [fen]=1 [mire]=1 [blackwater]=1)
 

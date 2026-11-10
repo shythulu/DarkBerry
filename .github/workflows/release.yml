@@ -104,7 +104,7 @@ jobs:
             echo
             echo "**🗒️ Kate** — unzip \`darkberry-kate-$version.zip\`, copy the \`.theme\` files into \`~/.local/share/org.kde.syntax-highlighting/themes/\` and the \`.colors\` files into \`~/.local/share/color-schemes/\`, then pick a flavour under Settings > Window Color Scheme and under Settings > Configure Kate > Fonts & Colors."
             echo
-            echo "**🌐 Chrome and Edge** — unzip \`darkberry-chrome-$version.zip\`, then load a flavour folder via Developer mode at \`chrome://extensions\`."
+            echo "**🌐 Chrome and Edge** — every flavour of every tint has a zip of its own (\`darkberry-chrome-mire-$version.zip\`, \`lingonberry-chrome-mire-$version.zip\` and so on). Unzip one into a folder you'll keep, then Load unpacked on that folder via Developer mode at \`chrome://extensions\`."
             echo
             echo "**🕶️ Dark Reader** — open a dark flavour's file from \`darkberry-dark-reader-$version.zip\` and type its Background, Text and Selection into Dark Reader's See all options > Colors; [the port's README](https://github.com/${{ github.repository }}/tree/main/ports/dark-reader#readme) has the steps."
             echo

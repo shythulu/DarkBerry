@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 # Build everything, then package each port into its own ports/<port>/dist/. Every port gets
 # two zips: the plain Darkberry one (the port's top-level files) and a with-tints one that
-# also carries the <tint>/ subfolders. VS Code gets two .vsix files the same way, and Firefox
-# and Thunderbird an .xpi per flavour of every tint. Screenshots (assets/) and earlier
-# packages (dist/) stay out of every package.
+# also carries the <tint>/ subfolders. VS Code gets two .vsix files the same way, Firefox
+# and Thunderbird an .xpi per flavour of every tint, and Chrome a zip per flavour of every
+# tint. Screenshots (assets/) and earlier packages (dist/) stay out of every package.
 set -e
 cd "$(dirname "$0")"
 rm -rf ports/*/dist
@@ -50,12 +50,19 @@ for dir in ports/thunderbird/*/; do
   fi
 done
 
+# Chrome: the Web Store takes one theme per zip, with manifest.json at its root, so every
+# flavour of every tint gets its own. "Lingonberry Fen" becomes lingonberry-chrome-fen.
+for manifest in ports/chrome/*/manifest.json ports/chrome/*/*/manifest.json; do
+  slug=$(basename "$(dirname "$manifest")" | tr 'A-Z ' 'a-z-')
+  zip -qj "ports/chrome/dist/${slug%%-*}-chrome-${slug#*-}-$VERSION.zip" "$manifest"
+done
+
 # Every other port: the plain zip takes the port's top-level entries except assets/, dist/ and the
-# tint folders (a theme can itself be a folder, as Chrome's and Obsidian's are); the
+# tint folders (a theme can itself be a folder, as Obsidian's is); the
 # with-tints zip takes everything but the screenshots and dist/.
 skip=$(printf '%s\n' assets dist $TINTS)
 for port in $PORTS; do
-  [ "$port" = vscode ] || [ "$port" = firefox ] || [ "$port" = thunderbird ] && continue
+  [ "$port" = vscode ] || [ "$port" = firefox ] || [ "$port" = thunderbird ] || [ "$port" = chrome ] && continue
   (cd "ports/$port" && ls | grep -vxF "$skip" | tr '\n' '\0' | xargs -0 zip -qr "dist/darkberry-$port-$VERSION.zip")
   (cd "ports/$port" && zip -qr "dist/darkberry-$port-with-tints-$VERSION.zip" . -x "assets/*" "*/assets/*" "dist/*")
 done

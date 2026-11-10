@@ -3,9 +3,29 @@
 `ports/chrome/<Flavour>/manifest.json` (Darkberry Wisp/Fen/Mire/Blackwater) is a Manifest V3
 Chrome theme extension (`theme.colors`, no code or permissions); the four tints repeat the
 same four flavours one directory deeper, at `ports/chrome/<tint>/<Flavour>/manifest.json`,
-giving up to 20 near-identical items. No packaging script currently zips a flavour on its own
-for a store upload — the release workflow only zips the whole `ports/chrome` tree for manual
-"Load unpacked" installs.
+giving up to 20 near-identical items. Chrome takes one manifest per extension, so `package.sh`
+zips each flavour on its own with `manifest.json` at the zip root:
+`ports/chrome/dist/<tint>-chrome-<flavour>-<version>.zip` (`darkberry-chrome-mire-0.3.0.zip`), 20 in all.
+Those zips are what both stores take, and the release attaches them for "Load unpacked"
+installs too.
+
+## Store images
+
+`assets/store/chrome/` holds what the Web Store listing asks for besides the zip, ready to
+upload for each of the four Darkberry flavours:
+
+- `icon-128.png`: the store icon, the logo at 96x96 inside 128x128 of transparent padding;
+  the same for every flavour.
+- `<flavour>/screenshot-1280x800.png`: Chrome wearing the flavour, open on the live site.
+  Captured with the headless harness at the store's size:
+  `SHOT_W=1280 SHOT_H=800 SITE_URL=https://darkberry.slacklab.ca CHROMIUM=... cap.sh chrome`
+  (see the darkberry-port skill's `references/capture.md`), then saved without alpha.
+- `<flavour>/promo-440x280.png`: the small promo tile, drawn by `node tools/store-images.mjs`
+  from the palette, the logo and the site's fonts (it needs headless Chrome, `rsvg-convert`
+  and ImageMagick). Rerun it after a palette change.
+
+Edge takes the same 1280x800 screenshots and 440x280 tile; its logo is 300x300, which these
+files don't include yet.
 
 ## Venues
 
@@ -29,14 +49,21 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
   publish or update; a one-time developer registration fee per account (widely reported as
   US$5, but the exact figure is shown at payment time in the dashboard, not stated on the
   docs page itself — treat the amount as unverified); review before the item goes live
-  (themes are lower-risk than code-bearing extensions but not exempt from review).
+  (themes are lower-risk than code-bearing extensions but not exempt from review). A new
+  publisher may have at most two published extensions until Google raises the limit, but the
+  limit does not apply to themes, so it puts no cap on how many flavours get listed; the
+  repetitive-content policy below is the only thing that does.
 - **Steps**: 1. Register the developer account once and pay the fee at the dashboard link
-  above; enable 2-Step Verification on that Google account first. 2. Zip one flavour's
-  `manifest.json` and its assets. 3. Dashboard → *New Item* → upload the zip. 4. Fill Store
+  above; enable 2-Step Verification on that Google account first. 2. Take the flavour's
+  zip from `ports/chrome/dist/`. 3. Dashboard → *Add new item* → *Choose file* → the zip
+  → *Upload*; a zip whose manifest is not at its root is refused here. 4. Fill Store
   Listing (description, category, language, icon, ≥1 screenshot, small promo tile).
   5. Fill the Privacy tab (single purpose, no permissions/remote code, no data collected).
-  6. Set Distribution (visibility, regions). 7. Submit for review (or stage for deferred
-  publish). 8. Repeat per flavour — and per tint, if those are also submitted.
+  6. Set Distribution (visibility, regions); the Test instructions tab is only for items
+  that need credentials, so a theme leaves it empty. 7. *Submit for Review*. Unticking the
+  checkbox in the confirmation dialog defers publishing: the item is staged after review and
+  has to be published by hand within 30 days, or it falls back to a draft that needs
+  reviewing again. 8. Repeat per flavour — and per tint, if those are also submitted.
 - **Updates**: upload a new package with an incremented `manifest.json` version to the same
   item via the dashboard (or the Chrome Web Store Publish API for automation); goes through
   review again. No CI job exists for this yet, unlike the Firefox `amo` job in
@@ -48,7 +75,8 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
   amount not stated); https://developer.chrome.com/docs/webstore/images (fetched 2026-09-24,
   icon/screenshot/promo sizes); https://developer.chrome.com/docs/webstore/cws-dashboard-listing
   (fetched 2026-09-24, listing fields); https://developer.chrome.com/docs/webstore/publish
-  (fetched 2026-09-24, zip/size limit, review flow); https://developer.chrome.com/docs/webstore/program-policies/two-step-verification
+  (fetched 2026-09-24, zip/size limit, review flow; read again 2026-10-06 for the
+  two-item limit that exempts themes and the 30-day staged-publish window); https://developer.chrome.com/docs/webstore/program-policies/two-step-verification
   (fetched 2026-09-24, 2SV mandatory); https://developer.chrome.com/docs/webstore/program-policies/spam-faq/
   (fetched 2026-09-24, repetitive-content wording).
 - **Confidence**: partly verified — every field, size and process step above is confirmed on
@@ -127,17 +155,19 @@ for a store upload — the release workflow only zips the whole `ports/chrome` t
   confirm a working, browsable themes section exists today; this is marked unverified rather
   than a confirmed non-venue.
 
+## Decided
+
+- **Item count (2026-10-06)**: the four Darkberry flavours go up first, as four items:
+  `darkberry-chrome-{wisp,fen,mire,blackwater}-<version>.zip`. Chrome's spam policy names
+  "multiple extensions which merely provide different wallpapers" as a repetitive-content
+  violation, so four is still some risk, but far less than all 20. A single item with an
+  in-extension flavour picker was the other option; a declarative MV3 theme cannot switch
+  itself, so it would need a background service worker and a rebuilt port.
+
 ## Open questions
 
-- Chrome's spam policy names "multiple extensions which merely provide different wallpapers"
-  as a repetitive-content violation that should be one item. The Chrome port is 4 flavours ×
-  5 tints (Darkberry plus 4 more) = up to 20 near-identical items. A human needs to decide
-  before submitting anything: list only the 4 base Darkberry flavours (still some risk), list
-  all 20, or build a single item with an in-extension flavour picker (not straightforward for
-  a declarative MV3 theme — would need a background service worker swapping the applied theme,
-  a real architecture change to this port).
-- Whether the 4 tints get listed on either store at all, independent of the policy question
-  above — mirrors the same open question already raised in `docs/publishing/firefox.md`.
+- Whether the 16 tint zips follow once the four Darkberry items are through review, and on
+  which store; mirrors the same open question in `docs/publishing/firefox.md`.
 - Whose Google account (2-Step Verification required, pays the one-time fee) and whose
   Microsoft/Partner Center account (individual vs. company) submissions go through.
 - The Edge rebranding requirement: the manifests' `description` says "Darkberry for Chromium

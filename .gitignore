@@ -5,8 +5,11 @@ ports/*/dist/
 .claude/settings.local.json
 .claude/worktrees/
 
-# Chrome writes this beside an unpacked theme it has loaded
-ports/chrome/**/Cached Theme.pak
+# Chrome writes these beside an unpacked theme: the cache it builds on load, and what
+# Pack extension produces (the .pem is the private key that fixes the extension ID).
+*.crx
+*.pem
+Cached Theme.pak
 
 # Packages from older builds or downloaded releases; package.sh writes to ports/*/dist/
 /dist/
