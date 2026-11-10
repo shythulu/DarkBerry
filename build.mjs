@@ -13,6 +13,7 @@ import { rgb, toHsl, fromHsl, toOklch, contrast, deltaE } from "./lib/color.mjs"
 import { indexRoles, flavourContext } from "./lib/resolve.mjs";
 import { fillSettled, FILL_ON_BACKGROUND, TEXT_ON_FILL } from "./lib/derive.mjs";
 import { Canvas } from "./lib/png.mjs";
+import { zip } from "./lib/zip.mjs";
 
 const root = path.dirname(new URL(import.meta.url).pathname);
 const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
@@ -28,6 +29,7 @@ const out = (rel, data) => {
   fs.mkdirSync(path.dirname(f), { recursive: true });
   fs.writeFileSync(f, typeof data === "string" || Buffer.isBuffer(data) ? data : JSON.stringify(data, null, 2) + "\n");
 };
+const outBin = (rel, buf) => { if (CHECK_ONLY) return; const target = route(rel); if (!target) return; const f = path.join(root, target); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, buf); };
 
 const P = readJson(argPalette || "src/palette.json");
 const errors = [], warnings = [];
@@ -560,6 +562,36 @@ const label = (k) => k[0].toUpperCase() + k.slice(1);
 const gplOrder = [...P.accentOrder, ...P.neutralOrder];
 for (const ctx of ctxs)
   out(`ports/gpl/${P.id}-${ctx.id}.gpl`, gpl(`${P.name} ${ctx.f.name}`, gplOrder.map((k) => [ctx.f.colors[k], label(k)])));
+// Procreate (.swatches): a ZIP holding Swatches.json, one palette of at most 30 colours per
+// file, each colour as hue, saturation and brightness from 0 to 1. Every flavour's colours
+// fit, in the GIMP palette's order. The JSON is the shape catppuccin/palette writes.
+const hsb = (hex) => {
+  const [r, g, b] = rgb(hex), mx = Math.max(r, g, b), d = mx - Math.min(r, g, b);
+  const h = !d ? 0 : mx === r ? ((g - b) / d + 6) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4;
+  const six = (v) => Math.round(v * 1e6) / 1e6;
+  return { hue: six(h / 6), saturation: six(mx ? d / mx : 0), brightness: six(mx) };
+};
+if (gplOrder.length > 30) errors.push(`procreate: a flavour has ${gplOrder.length} colours, but a Procreate palette holds 30`);
+// Adobe Swatch Exchange (.ase), for Linearity Curve: a big-endian header, then one block per
+// colour holding its name (UTF-16, terminated), "RGB " and three floats; it keeps the colour
+// names, which .swatches has no field for.
+const ase = (rows) => {
+  const blocks = rows.map(([hex, name]) => {
+    const n = Buffer.from(name + "\0", "utf16le").swap16(), body = Buffer.alloc(2 + n.length + 4 + 12 + 2);
+    let o = body.writeUInt16BE(n.length / 2, 0); o += n.copy(body, o); o += body.write("RGB ", o, "ascii");
+    for (const v of rgb(hex)) o = body.writeFloatBE(v, o);
+    body.writeUInt16BE(2, o); // 2 = a normal colour, neither global nor spot
+    const head = Buffer.alloc(6); head.writeUInt16BE(0x0001, 0); head.writeUInt32BE(body.length, 2);
+    return Buffer.concat([head, body]);
+  });
+  const header = Buffer.alloc(12); header.write("ASEF", 0, "ascii"); header.writeUInt16BE(1, 4); header.writeUInt16BE(0, 6); header.writeUInt32BE(blocks.length, 8);
+  return Buffer.concat([header, ...blocks]);
+};
+for (const ctx of ctxs) {
+  const full = `${P.name} ${ctx.f.name}`, rows = gplOrder.map((k) => [ctx.f.colors[k], label(k)]);
+  outBin(`ports/procreate/${full}.swatches`, zip({ "Swatches.json": JSON.stringify({ name: full, swatches: rows.map(([hex]) => ({ ...hsb(hex), alpha: 1, colorSpace: 0 })) }) }));
+  outBin(`ports/linearity/${full}.ase`, ase(rows));
+}
 out(`ports/gpl/${P.id}.gpl`, gpl(P.name, ctxs.flatMap((ctx) => gplOrder.map((k) => [ctx.f.colors[k], `${ctx.f.name} ${label(k)}`]))));
 
 out("ports/vscode/package.json", {
@@ -593,7 +625,6 @@ if (!TINT) {
 // assets/ at the root holds the drawn logos (assets/logos/, kept in git), the generated footer
 // and the fallback palette previews.
 const REG = readJson("src/ports.json"), CATS = readJson("src/categories.json");
-const outBin = (rel, buf) => { if (CHECK_ONLY || !route(rel)) return; const f = path.join(root, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, buf); };
 const exists = (rel) => fs.existsSync(path.join(root, rel));
 if (!TINT) {
   const cols = [...P.neutralOrder, ...P.accentOrder], W = 1200, H = 120;

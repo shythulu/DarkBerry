@@ -50,6 +50,7 @@ tools/apply-patch.mjs     applies a patch exported from Darkberry Studio, then r
 tools/site.mjs            builds the GitHub Pages showcase into site/
 tools/npp-template.mjs    rebuilds src/ports/notepadpp.xml from Notepad++'s stylers.model.xml
 lib/resolve.mjs           role resolution shared by the build and the site
+lib/zip.mjs               a small ZIP writer for the Procreate swatches, with fixed timestamps so builds repeat
 STYLE_GUIDE.md            the rules
 docs/PORT_CREATION.md     how a port is laid out and added, after Catppuccin's port-creation guide
 ```
@@ -108,6 +109,8 @@ build them yourself with `./package.sh`, which writes each port's packages into 
 ### Libraries
 
 - [GIMP Palette](ports/gpl#readme)
+- [Procreate](ports/procreate#readme)
+- [Linearity Curve](ports/linearity#readme)
 
 ### CLI Tools
 

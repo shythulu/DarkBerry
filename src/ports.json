@@ -33,6 +33,8 @@
     { "key": "darktable", "name": "darktable", "url": "https://www.darktable.org", "emoji": "📷", "categories": ["photo_and_video"], "platform": ["linux", "macos", "windows"] },
     { "key": "gimp", "name": "GIMP", "url": "https://www.gimp.org", "emoji": "🎨", "categories": ["photo_and_video"], "platform": ["linux", "macos", "windows"] },
     { "key": "gpl", "name": "GIMP Palette", "url": "https://docs.gimp.org/en/gimp-concepts-palettes.html", "emoji": "🖌️", "categories": ["library", "photo_and_video"], "platform": ["linux", "macos", "windows"] },
+    { "key": "procreate", "name": "Procreate", "url": "https://procreate.com/ipad", "emoji": "🖍️", "categories": ["library"], "platform": ["ios"] },
+    { "key": "linearity", "name": "Linearity Curve", "url": "https://www.linearity.io", "emoji": "✒️", "categories": ["library"], "platform": ["ios", "macos"] },
     { "key": "base24", "name": "Base24", "url": "https://github.com/tinted-theming/base24", "emoji": "🎛️", "categories": ["system"], "platform": [] },
     { "key": "tinted8", "name": "Tinted8", "url": "https://github.com/tinted-theming", "emoji": "🎚️", "categories": ["system"], "platform": [] }
   ]

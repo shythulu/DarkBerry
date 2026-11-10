@@ -120,6 +120,10 @@ jobs:
             echo
             echo "**🖌️ GIMP Palette** — \`darkberry-gpl-$version.zip\` holds the palette as \`.gpl\` files, one per flavour and one with all four, for GIMP, Inkscape, Krita, MyPaint and Aseprite to import."
             echo
+            echo "**🖍️ Procreate** — unzip \`darkberry-procreate-$version.zip\`, get a flavour's \`.swatches\` onto the iPad (AirDrop, iCloud Drive or Files), then in Procreate open Palettes, tap + and choose New from File."
+            echo
+            echo "**✒️ Linearity Curve** — unzip \`darkberry-linearity-$version.zip\`, get a flavour's \`.ase\` onto the iPad or Mac, then in Curve open the Color Widget, Palettes, + and Import."
+            echo
             echo "**🦊 Firefox** — install from [addons.mozilla.org](https://addons.mozilla.org/firefox/user/20178967/), which is where updates come from. The \`.xpi\` files attached here are the unsigned build output, kept for archival: release Firefox refuses unsigned add-ons, so they install only through \`about:debugging\` > Load Temporary Add-on, or on Developer Edition, Nightly or an unbranded Release/Beta build with \`xpinstall.signatures.required\` set to \`false\`."
           } > notes.md
 
