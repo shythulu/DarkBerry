@@ -84,6 +84,10 @@ Each role's minimum is set in `src/roles.json` (4.5 for text you read, 3.0 for s
 | syntax on ui.diff.changed | 65% of each role’s own minimum | ok | ok | ok | ok |
 | syntax on ui.diff.removed | 65% of each role’s own minimum | ok | ok | ok | ok |
 | syntax on ui.diff.text | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.added.word | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.removed.word | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.added.dimmed | 65% of each role’s own minimum | ok | ok | ok | ok |
+| syntax on ui.diff.removed.dimmed | 65% of each role’s own minimum | ok | ok | ok | ok |
 | *non-text UI on ui.background* | |  |  |  |  |
 | ui.accent | 3 | 4.45 | 3.53 | 3.51 | 3.79 |
 | ui.focus | 3 | 4.52 | 4.46 | 5.30 | 5.63 |

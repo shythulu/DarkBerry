@@ -156,6 +156,7 @@ const alacrittyT = read("src/ports/alacritty.toml");
 const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/ports/obsidian.json");
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
+const claudeCodeT = read("src/ports/claude-code.json");
 const t3codeT = read("src/ports/t3code.json"), thunderbirdT = read("src/ports/thunderbird.json"), thunderbirdCss = read("src/ports/thunderbird.css");
 const darkReaderT = read("src/ports/dark-reader.txt");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
@@ -378,6 +379,12 @@ mustBe("t3code", t3codeT, "messageAction", "{ui.fill} under {ui.on.fill}", /"mes
 mustBe("t3code", t3codeT, "focus", "{ui.focus}", /"focus": "\{ui\.focus\}"/);
 mustBe("t3code", t3codeT, "terminalCursor", "{ui.cursor}", /"terminalCursor": "\{ui\.cursor\}"/);
 mustBe("t3code", t3codeT, "errorForeground", "{ui.error} on {ui.error.surface}", /"errorForeground": "\{ui\.error\}",\n\s*"errorSurface": "\{ui\.error\.surface\}"/);
+mustBe("claude-code", claudeCodeT, "text", "{ui.text}", /"text": "\{ui\.text\}"/);
+mustBe("claude-code", claudeCodeT, "selectionBg", "{ui.selection}", /"selectionBg": "\{ui\.selection\}"/);
+mustBe("claude-code", claudeCodeT, "status", "{ui.success}, {ui.error}, {ui.warning}", /"success": "\{ui\.success\}",\n\s*"error": "\{ui\.error\}",\n\s*"warning": "\{ui\.warning\}"/);
+mustBe("claude-code", claudeCodeT, "diff lines", "{ui.diff.added} and {ui.diff.removed}", /"diffAdded": "\{ui\.diff\.added\}",\n\s*"diffRemoved": "\{ui\.diff\.removed\}"/);
+mustBe("claude-code", claudeCodeT, "inverseText", "{ui.on.error} (text on any status fill)", /"inverseText": "\{ui\.on\.error\}"/);
+mustBe("claude-code", claudeCodeT, "promptBorder", "{ui.border.inactive}", /"promptBorder": "\{ui\.border\.inactive\}"/);
 mustBe("thunderbird", thunderbirdT, "sidebar_highlight", "{ui.fill} under {ui.on.fill} (Thunderbird's row selection and primary buttons)", /"sidebar_highlight": "\{ui\.fill\}",\n\s*"sidebar_highlight_text": "\{ui\.on\.fill\}"/);
 mustBe("thunderbird", thunderbirdT, "popup_highlight", "{ui.fill} under {ui.on.fill}", /"popup_highlight": "\{ui\.fill\}",\n\s*"popup_highlight_text": "\{ui\.on\.fill\}"/);
 mustBe("thunderbird", thunderbirdT, "toolbar_field_highlight", "{ui.selection} under {ui.text}", /"toolbar_field_highlight": "\{ui\.selection\}",\n\s*"toolbar_field_highlight_text": "\{ui\.text\}"/);
@@ -476,6 +483,10 @@ for (const ctx of ctxs) {
     const lightColors = applyOverrides("t3code", "json", JSON.parse(fill(light, t3codeT, "t3code")).colors, light);
     out(`ports/t3code/${slug}.json`, { ...t3, variants: { light: lightColors } });
   }
+  // Claude Code stores the file name as the theme's slug (custom:<slug>), so the slug is the name.
+  const cc = JSON.parse(fill(ctx, claudeCodeT, "claude-code"));
+  cc.overrides = applyOverrides("claude-code", "json", cc.overrides, ctx);
+  out(`ports/claude-code/${slug}.json`, cc);
   // Dark Reader: dark flavours only, one settings sheet each, named as its Color Scheme list names them.
   // With a custom Selection it paints selected text white under HSL lightness 0.5 and black above,
   // whatever Text is, so the selection has to stay dark enough for white in every flavour and tint.
@@ -747,6 +758,7 @@ walk("thunderbird", JSON.parse(thunderbirdT).theme.colors, "colors");
 walk("chrome", JSON.parse(chromeT).theme.colors, "colors");
 walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "colors");
 walk("t3code", JSON.parse(t3codeT).colors, "colors");
+walk("claude-code", JSON.parse(claudeCodeT).overrides, "overrides");
 walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
