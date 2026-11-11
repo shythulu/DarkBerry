@@ -1,0 +1,23 @@
+<section id="tints"><div class="wrap">
+  <h2><small>the variations</small>Tints</h2>
+  <p class="intro">A tint steeps the backgrounds in a different berry. It recolours the twelve neutrals and the active tab. The accents stay put, apart from a few that Wisp and Fen adjust. Every port ships all five. Pick one to wear it across the site.</p>
+  <div class="pickbar pickers">__PICK_FLAVOUR__</div>
+  <div class="tintgrid" id="tintgrid" role="group" aria-label="Tints"></div>
+</div></section>
+<!--script-->
+// Each card wears its own tint in the chosen flavour, so the five sit side by side for comparison.
+// The twelve neutrals, darkest to lightest on a dark flavour (D.order ends with them, text first).
+const NEUTRALS = D.order.slice(-12).reverse();
+page.push(function tints() {
+  $("tintgrid").innerHTML = TINTS.map((id) => {
+    const t = D.tints[id], cols = t.colors[fl], c = (k) => cols[D.order.indexOf(k)];
+    const vars = `--t-base:${c("base")};--t-crust:${c("crust")};--t-text:${c("text")};--t-sub:${c("subtext0")};--t-rule:${c("overlay0")};--t-tab:${t.roles[fl]["ui.tab.indicator"]}`;
+    const strip = NEUTRALS.map((k) => `<span style="background:${c(k)}" title="${k} ${c(k)}"></span>`).join("");
+    return `<button class="tcard" data-t="${id}" aria-pressed="${id === tn}" style="${vars}">
+      <span class="tabs" aria-hidden="true"><span class="on">${t.name.toLowerCase()}.json</span><span>roles.json</span></span>
+      <span class="tbody"><span class="tname">${t.name}</span><span class="tnote">${t.note}</span>
+      <span class="strip" aria-hidden="true">${strip}</span><span class="wear">${id === tn ? "wearing now" : "wear this tint"}</span></span>
+    </button>`;
+  }).join("");
+  $("tintgrid").querySelectorAll(".tcard").forEach((b) => b.onclick = () => { tn = b.dataset.t; apply(); });
+});
