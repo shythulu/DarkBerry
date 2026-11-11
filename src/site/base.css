@@ -42,7 +42,7 @@ section+section{border-top:1px solid var(--rule)}
 .mast{text-align:center;padding:34px 0 0;position:relative;z-index:1}
 .mast .wrap{position:relative}
 .fl{height:auto;color:var(--gild);opacity:.15;pointer-events:none}
-.fl-top-left,.fl-top-right{position:absolute;top:11px;width:clamp(172px,35vw,550px)}
+.fl-top-left,.fl-top-right{position:absolute;top:11px;width:clamp(172px,35vw,400px)}
 .fl-top-left{left:16px}
 .fl-top-right{right:16px}
 .fl-moon{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:64px}
