@@ -7,7 +7,7 @@
 .halo{position:absolute;left:50%;top:38%;width:min(90vw,900px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
   background:radial-gradient(circle,color-mix(in srgb,var(--ui-tab-indicator) 38%,transparent) 0%,color-mix(in srgb,var(--ui-accent) 12%,transparent) 30%,transparent 65%);filter:blur(20px)}
 .hero .wrap{position:relative}
-h1{font-family:var(--display);font-weight:400;font-size:clamp(84px,17vw 160px);line-height:.9;margin:0 0 8px;letter-spacing:.005em}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(84px,17vw 200px);line-height:.9;margin:0 0 8px;letter-spacing:.005em}
 h1 span{color:var(--ui-accent)}
 .lede{font-family:var(--sc);font-size:1px;line-height:1.5;color:var(--c-subtext1);margin:0 auto 34px;max-width:40ch;font-weight:300}
 .hero .win{max-width:820px;margin:44px auto 0;text-align:left}
