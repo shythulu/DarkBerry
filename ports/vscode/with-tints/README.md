@@ -26,20 +26,20 @@
 ## Previews
 
 <details>
-<summary>🕯️ Wisp</summary>
-<img src="../../../assets/previews/wisp.png"/>
-</details>
-<details>
-<summary>🌾 Fen</summary>
-<img src="../../../assets/previews/fen.png"/>
+<summary>🌑 Blackwater</summary>
+<img src="../../../assets/previews/blackwater.png"/>
 </details>
 <details>
 <summary>🪦 Mire</summary>
 <img src="../../../assets/previews/mire.png"/>
 </details>
 <details>
-<summary>🌑 Blackwater</summary>
-<img src="../../../assets/previews/blackwater.png"/>
+<summary>🌾 Fen</summary>
+<img src="../../../assets/previews/fen.png"/>
+</details>
+<details>
+<summary>🕯️ Wisp</summary>
+<img src="../../../assets/previews/wisp.png"/>
 </details>
 
 ## Usage

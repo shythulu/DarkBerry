@@ -2,74 +2,74 @@
 
 Generated from `src/roles.json`. Every port references these names.
 
-| Role | Value | Wisp | Fen | Mire | Blackwater | Catppuccin |
+| Role | Value | Blackwater | Mire | Fen | Wisp | Catppuccin |
 |---|---|---|---|---|---|---|
-| `ui.background` | `base` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` | same |
-| `ui.pane.secondary` | `mantle` | `#f3e6ef` | `#402838` | `#23161f` | `#170d13` | same |
-| `ui.pane.tertiary` | `crust` | `#ebdae5` | `#35212e` | `#1c1119` | `#12090f` | same |
-| `ui.text` | `text` | `#4f3143` | `#f2e6ee` | `#efe3eb` | `#ede1e9` | same |
-| `ui.text.muted` | `subtext0` | `#694e5f` | `#ccbac5` | `#cbbcc5` | `#c6b7c0` | same |
-| `ui.text.subtle` | `overlay1` | `#967d8c` | `#a28297` | `#91828b` | `#887882` | same |
-| `ui.accent` | `jam` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` | lavender (terminal borders), blue (tags) |
-| `ui.on.accent` | `ui.on.fill` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` | base (text on accent) |
-| `ui.fill` | `jam` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` | no equivalent (accents are used as fills directly) |
-| `ui.on.fill` | `onjam` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` | base (text on accent) |
-| `ui.focus` | `mix(cherry,overlay1,0.5)` | `#9e5e70` | `#c496a6` | `#b28a93` | `#ae848f` | lavender |
-| `ui.border.active` | `ui.accent` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` | lavender |
-| `ui.border.inactive` | `overlay1` | `#967d8c` | `#a28297` | `#91828b` | `#887882` | overlay0 |
-| `ui.cursor` | `petal` | `#a83570` | `#ffc4dd` | `#feafd4` | `#feafd4` | rosewater |
-| `ui.cursor.text` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
-| `ui.selection` | `mix(ui.background,berry,0.18)` | `#f0cadd` | `#6e4457` | `#502f3d` | `#452533` | overlay2 at 20-30% opacity |
-| `ui.line.current` | `mix(ui.background,surface0,0.35)` | `#f1e6ed` | `#543648` | `#2d1f28` | `#21151d` | no equivalent (editors tint the line themselves) |
-| `ui.row.alternate` | `dark: surface0, light: ui.pane.secondary` | `#f3e6ef` | `#5d3e51` | `#32222c` | `#271a23` | mantle (KDE's View BackgroundAlternate) |
-| `ui.link` | `frost` | `#026b80` | `#83d4db` | `#86c0cc` | `#86c0cc` | blue |
-| `ui.success` | `gooseberry` | `#2c6f2d` | `#b7e6b7` | `#a3daa3` | `#a3daa3` | same |
-| `ui.warning` | `honey` | `#815b02` | `#f0d6a0` | `#e8c98a` | `#e8c98a` | same |
-| `ui.error` | `cranberry` | `#bb262a` | `#ff8a8a` | `#f06a6a` | `#f06a6a` | same |
-| `ui.on.error` | `dark: crust, light: onjam` | `#ffffff` | `#35212e` | `#1c1119` | `#12090f` | no equivalent |
-| `ui.info` | `juniper` | `#006f5f` | `#b0dfd9` | `#9ed0c4` | `#9ed0c4` | same |
-| `ui.error.surface` | `dark: mix(ui.pane.secondary,ui.error,0.06), light: mix(ui.background,ui.error,0.06)` | `#f7e8ec` | `#4b2e3d` | `#2f1b24` | `#241318` | no equivalent (alerts tint the status colour themselves) |
-| `ui.warning.surface` | `dark: mix(ui.pane.secondary,ui.warning,0.06), light: mix(ui.background,ui.warning,0.06)` | `#f4ebe9` | `#4b323e` | `#2f2125` | `#24181a` | no equivalent (alerts tint the status colour themselves) |
-| `ui.info.surface` | `dark: mix(ui.pane.secondary,ui.info,0.06), light: mix(ui.background,ui.info,0.06)` | `#ececef` | `#473342` | `#2a2129` | `#1f191e` | no equivalent (alerts tint the status colour themselves) |
-| `ui.success.surface` | `dark: mix(ui.pane.secondary,ui.success,0.06), light: mix(ui.background,ui.success,0.06)` | `#efecec` | `#473340` | `#2b2227` | `#1f191c` | no equivalent (alerts tint the status colour themselves) |
-| `ui.bell` | `honey` | `#815b02` | `#f0d6a0` | `#e8c98a` | `#e8c98a` | same |
-| `ui.mark1` | `lavender` | `#7350a8` | `#c9b0e8` | `#baa8dc` | `#baa8dc` | same |
-| `ui.mark2` | `plum` | `#8c3eb2` | `#ecbcfc` | `#ddb0ec` | `#ddb0ec` | same |
-| `ui.mark3` | `bilberry` | `#1d64a4` | `#9cc6ea` | `#7fb4e0` | `#7fb4e0` | same |
-| `ui.mark.text` | `ui.cursor.text` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
-| `ui.tab.active` | `ui.background` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` |  |
-| `ui.tab.inactive` | `ui.pane.secondary` | `#f3e6ef` | `#402838` | `#23161f` | `#170d13` |  |
-| `ui.tab.indicator` | `tint` | `#d21570` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` |  |
-| `ui.on.tab.indicator` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` |  |
-| `ui.badge` | `ui.fill` | `#b9488b` | `#dc67a7` | `#be4c8d` | `#ba4889` |  |
-| `ui.on.badge` | `ui.on.fill` | `#ffffff` | `#35212e` | `#ffffff` | `#ffffff` |  |
-| `ui.emphasis` | `cherry` | `#a53f54` | `#e7aab5` | `#d3919c` | `#d3919c` | no single colour (nvim PmenuMatch: text bold; Title: blue) |
-| `ui.search.matches` | `mix(ui.background,ui.mark1,0.22)` | `#ddd0e6` | `#6a4d67` | `#4a3c4e` | `#403345` | sky at 30% into base (nvim Search) |
-| `ui.diff.added` | `mix(ui.background,ui.success,0.18)` | `#d6dcd3` | `#625258` | `#40403d` | `#353633` | same |
-| `ui.diff.changed` | `mix(ui.background,ui.warning,0.1)` | `#efe5df` | `#5f424c` | `#3d2f30` | `#312425` | blue at 7% into base |
-| `ui.diff.removed` | `mix(ui.background,syntax.diff.removed,0.18)` | `#ead4cf` | `#6e4652` | `#4e3235` | `#43282b` | red at 18% into base |
-| `ui.diff.text` | `mix(ui.background,ui.warning,0.18)` | `#e5d8cc` | `#6c4f54` | `#4c3d38` | `#42332e` | blue at 30% into base |
-| `terminal.color16` | `apricot` | `#a24712` | `#f7bf9e` | `#f2ad8a` | `#f2ad8a` | same |
-| `terminal.color17` | `blossom` | `#934b66` | `#eaafd6` | `#e7c5d8` | `#e7c5d8` | same |
-| `syntax.text` | `text` | `#4f3143` | `#f2e6ee` | `#efe3eb` | `#ede1e9` | same |
-| `syntax.keyword` | `berry` | `#bf0b64` | `#fa99b4` | `#fd7ca5` | `#fd7ca5` | mauve |
-| `syntax.function` | `petal` | `#a83570` | `#ffc4dd` | `#feafd4` | `#feafd4` | blue |
-| `syntax.type` | `plum` | `#8c3eb2` | `#ecbcfc` | `#ddb0ec` | `#ddb0ec` | yellow |
-| `syntax.namespace` | `lavender` | `#7350a8` | `#c9b0e8` | `#baa8dc` | `#baa8dc` | yellow (as types) |
-| `syntax.constant` | `blueberry` | `#3659ca` | `#a4c3f6` | `#8fb0f2` | `#8fb0f2` | peach |
-| `syntax.number` | `honey` | `#815b02` | `#f0d6a0` | `#e8c98a` | `#e8c98a` | peach |
-| `syntax.string` | `gooseberry` | `#2c6f2d` | `#b7e6b7` | `#a3daa3` | `#a3daa3` | same |
-| `syntax.regex` | `juniper` | `#006f5f` | `#b0dfd9` | `#9ed0c4` | `#9ed0c4` | pink |
-| `syntax.variable` | `blossom` | `#934b66` | `#eaafd6` | `#e7c5d8` | `#e7c5d8` | text (maroon for parameters) |
-| `syntax.property` | `dark: mix(apricot,subtext0,0.3), light: mix(bilberry,subtext0,0.5)` | `#435982` | `#eabeaa` | `#e6b29c` | `#e5b09a` | blue |
-| `syntax.operator` | `dark: subtext0, light: mix(subtext0,subtext1,0.6)` | `#604656` | `#ccbac5` | `#cbbcc5` | `#c6b7c0` | sky |
-| `syntax.punctuation` | `dark: overlay1, light: mix(overlay1,overlay2,0.2)` | `#8f7685` | `#a28297` | `#91828b` | `#887882` | overlay2 |
-| `syntax.comment` | `overlay2` | `#745b6a` | `#bd9fb1` | `#ad8da2` | `#a58799` | same |
-| `syntax.link` | `ui.link` | `#026b80` | `#83d4db` | `#86c0cc` | `#86c0cc` | blue |
-| `syntax.error` | `ui.error` | `#bb262a` | `#ff8a8a` | `#f06a6a` | `#f06a6a` | same |
-| `syntax.deprecated` | `syntax.comment` | `#745b6a` | `#bd9fb1` | `#ad8da2` | `#a58799` | no equivalent |
-| `syntax.unimplemented` | `syntax.comment` | `#745b6a` | `#bd9fb1` | `#ad8da2` | `#a58799` | no equivalent |
-| `syntax.diff.removed` | `light: mix(cranberry,honey,0.5), dark: mix(cranberry,apricot,0.5)` | `#9e4116` | `#fba494` | `#f18c7a` | `#f18c7a` | red |
+| `ui.background` | `base` | `#1d121a` | `#2a1e26` | `#4f3143` | `#fbf4f8` | same |
+| `ui.pane.secondary` | `mantle` | `#170d13` | `#23161f` | `#402838` | `#f3e6ef` | same |
+| `ui.pane.tertiary` | `crust` | `#12090f` | `#1c1119` | `#35212e` | `#ebdae5` | same |
+| `ui.text` | `text` | `#ede1e9` | `#efe3eb` | `#f2e6ee` | `#4f3143` | same |
+| `ui.text.muted` | `subtext0` | `#c6b7c0` | `#cbbcc5` | `#ccbac5` | `#694e5f` | same |
+| `ui.text.subtle` | `overlay1` | `#887882` | `#91828b` | `#a28297` | `#967d8c` | same |
+| `ui.accent` | `jam` | `#ba4889` | `#be4c8d` | `#dc67a7` | `#b9488b` | lavender (terminal borders), blue (tags) |
+| `ui.on.accent` | `ui.on.fill` | `#ffffff` | `#ffffff` | `#35212e` | `#ffffff` | base (text on accent) |
+| `ui.fill` | `jam` | `#ba4889` | `#be4c8d` | `#dc67a7` | `#b9488b` | no equivalent (accents are used as fills directly) |
+| `ui.on.fill` | `onjam` | `#ffffff` | `#ffffff` | `#35212e` | `#ffffff` | base (text on accent) |
+| `ui.focus` | `mix(cherry,overlay1,0.5)` | `#ae848f` | `#b28a93` | `#c496a6` | `#9e5e70` | lavender |
+| `ui.border.active` | `ui.accent` | `#ba4889` | `#be4c8d` | `#dc67a7` | `#b9488b` | lavender |
+| `ui.border.inactive` | `overlay1` | `#887882` | `#91828b` | `#a28297` | `#967d8c` | overlay0 |
+| `ui.cursor` | `petal` | `#feafd4` | `#feafd4` | `#ffc4dd` | `#a83570` | rosewater |
+| `ui.cursor.text` | `dark: crust, light: base` | `#12090f` | `#1c1119` | `#35212e` | `#fbf4f8` | same |
+| `ui.selection` | `mix(ui.background,berry,0.18)` | `#452533` | `#502f3d` | `#6e4457` | `#f0cadd` | overlay2 at 20-30% opacity |
+| `ui.line.current` | `mix(ui.background,surface0,0.35)` | `#21151d` | `#2d1f28` | `#543648` | `#f1e6ed` | no equivalent (editors tint the line themselves) |
+| `ui.row.alternate` | `dark: surface0, light: ui.pane.secondary` | `#271a23` | `#32222c` | `#5d3e51` | `#f3e6ef` | mantle (KDE's View BackgroundAlternate) |
+| `ui.link` | `frost` | `#86c0cc` | `#86c0cc` | `#83d4db` | `#026b80` | blue |
+| `ui.success` | `gooseberry` | `#a3daa3` | `#a3daa3` | `#b7e6b7` | `#2c6f2d` | same |
+| `ui.warning` | `honey` | `#e8c98a` | `#e8c98a` | `#f0d6a0` | `#815b02` | same |
+| `ui.error` | `cranberry` | `#f06a6a` | `#f06a6a` | `#ff8a8a` | `#bb262a` | same |
+| `ui.on.error` | `dark: crust, light: onjam` | `#12090f` | `#1c1119` | `#35212e` | `#ffffff` | no equivalent |
+| `ui.info` | `juniper` | `#9ed0c4` | `#9ed0c4` | `#b0dfd9` | `#006f5f` | same |
+| `ui.error.surface` | `dark: mix(ui.pane.secondary,ui.error,0.06), light: mix(ui.background,ui.error,0.06)` | `#241318` | `#2f1b24` | `#4b2e3d` | `#f7e8ec` | no equivalent (alerts tint the status colour themselves) |
+| `ui.warning.surface` | `dark: mix(ui.pane.secondary,ui.warning,0.06), light: mix(ui.background,ui.warning,0.06)` | `#24181a` | `#2f2125` | `#4b323e` | `#f4ebe9` | no equivalent (alerts tint the status colour themselves) |
+| `ui.info.surface` | `dark: mix(ui.pane.secondary,ui.info,0.06), light: mix(ui.background,ui.info,0.06)` | `#1f191e` | `#2a2129` | `#473342` | `#ececef` | no equivalent (alerts tint the status colour themselves) |
+| `ui.success.surface` | `dark: mix(ui.pane.secondary,ui.success,0.06), light: mix(ui.background,ui.success,0.06)` | `#1f191c` | `#2b2227` | `#473340` | `#efecec` | no equivalent (alerts tint the status colour themselves) |
+| `ui.bell` | `honey` | `#e8c98a` | `#e8c98a` | `#f0d6a0` | `#815b02` | same |
+| `ui.mark1` | `lavender` | `#baa8dc` | `#baa8dc` | `#c9b0e8` | `#7350a8` | same |
+| `ui.mark2` | `plum` | `#ddb0ec` | `#ddb0ec` | `#ecbcfc` | `#8c3eb2` | same |
+| `ui.mark3` | `bilberry` | `#7fb4e0` | `#7fb4e0` | `#9cc6ea` | `#1d64a4` | same |
+| `ui.mark.text` | `ui.cursor.text` | `#12090f` | `#1c1119` | `#35212e` | `#fbf4f8` | same |
+| `ui.tab.active` | `ui.background` | `#1d121a` | `#2a1e26` | `#4f3143` | `#fbf4f8` |  |
+| `ui.tab.inactive` | `ui.pane.secondary` | `#170d13` | `#23161f` | `#402838` | `#f3e6ef` |  |
+| `ui.tab.indicator` | `tint` | `#fd7ca5` | `#fd7ca5` | `#fa99b4` | `#d21570` |  |
+| `ui.on.tab.indicator` | `dark: crust, light: base` | `#12090f` | `#1c1119` | `#35212e` | `#fbf4f8` |  |
+| `ui.badge` | `ui.fill` | `#ba4889` | `#be4c8d` | `#dc67a7` | `#b9488b` |  |
+| `ui.on.badge` | `ui.on.fill` | `#ffffff` | `#ffffff` | `#35212e` | `#ffffff` |  |
+| `ui.emphasis` | `cherry` | `#d3919c` | `#d3919c` | `#e7aab5` | `#a53f54` | no single colour (nvim PmenuMatch: text bold; Title: blue) |
+| `ui.search.matches` | `mix(ui.background,ui.mark1,0.22)` | `#403345` | `#4a3c4e` | `#6a4d67` | `#ddd0e6` | sky at 30% into base (nvim Search) |
+| `ui.diff.added` | `mix(ui.background,ui.success,0.18)` | `#353633` | `#40403d` | `#625258` | `#d6dcd3` | same |
+| `ui.diff.changed` | `mix(ui.background,ui.warning,0.1)` | `#312425` | `#3d2f30` | `#5f424c` | `#efe5df` | blue at 7% into base |
+| `ui.diff.removed` | `mix(ui.background,syntax.diff.removed,0.18)` | `#43282b` | `#4e3235` | `#6e4652` | `#ead4cf` | red at 18% into base |
+| `ui.diff.text` | `mix(ui.background,ui.warning,0.18)` | `#42332e` | `#4c3d38` | `#6c4f54` | `#e5d8cc` | blue at 30% into base |
+| `terminal.color16` | `apricot` | `#f2ad8a` | `#f2ad8a` | `#f7bf9e` | `#a24712` | same |
+| `terminal.color17` | `blossom` | `#e7c5d8` | `#e7c5d8` | `#eaafd6` | `#934b66` | same |
+| `syntax.text` | `text` | `#ede1e9` | `#efe3eb` | `#f2e6ee` | `#4f3143` | same |
+| `syntax.keyword` | `berry` | `#fd7ca5` | `#fd7ca5` | `#fa99b4` | `#bf0b64` | mauve |
+| `syntax.function` | `petal` | `#feafd4` | `#feafd4` | `#ffc4dd` | `#a83570` | blue |
+| `syntax.type` | `plum` | `#ddb0ec` | `#ddb0ec` | `#ecbcfc` | `#8c3eb2` | yellow |
+| `syntax.namespace` | `lavender` | `#baa8dc` | `#baa8dc` | `#c9b0e8` | `#7350a8` | yellow (as types) |
+| `syntax.constant` | `blueberry` | `#8fb0f2` | `#8fb0f2` | `#a4c3f6` | `#3659ca` | peach |
+| `syntax.number` | `honey` | `#e8c98a` | `#e8c98a` | `#f0d6a0` | `#815b02` | peach |
+| `syntax.string` | `gooseberry` | `#a3daa3` | `#a3daa3` | `#b7e6b7` | `#2c6f2d` | same |
+| `syntax.regex` | `juniper` | `#9ed0c4` | `#9ed0c4` | `#b0dfd9` | `#006f5f` | pink |
+| `syntax.variable` | `blossom` | `#e7c5d8` | `#e7c5d8` | `#eaafd6` | `#934b66` | text (maroon for parameters) |
+| `syntax.property` | `dark: mix(apricot,subtext0,0.3), light: mix(bilberry,subtext0,0.5)` | `#e5b09a` | `#e6b29c` | `#eabeaa` | `#435982` | blue |
+| `syntax.operator` | `dark: subtext0, light: mix(subtext0,subtext1,0.6)` | `#c6b7c0` | `#cbbcc5` | `#ccbac5` | `#604656` | sky |
+| `syntax.punctuation` | `dark: overlay1, light: mix(overlay1,overlay2,0.2)` | `#887882` | `#91828b` | `#a28297` | `#8f7685` | overlay2 |
+| `syntax.comment` | `overlay2` | `#a58799` | `#ad8da2` | `#bd9fb1` | `#745b6a` | same |
+| `syntax.link` | `ui.link` | `#86c0cc` | `#86c0cc` | `#83d4db` | `#026b80` | blue |
+| `syntax.error` | `ui.error` | `#f06a6a` | `#f06a6a` | `#ff8a8a` | `#bb262a` | same |
+| `syntax.deprecated` | `syntax.comment` | `#a58799` | `#ad8da2` | `#bd9fb1` | `#745b6a` | no equivalent |
+| `syntax.unimplemented` | `syntax.comment` | `#a58799` | `#ad8da2` | `#bd9fb1` | `#745b6a` | no equivalent |
+| `syntax.diff.removed` | `light: mix(cranberry,honey,0.5), dark: mix(cranberry,apricot,0.5)` | `#f18c7a` | `#f18c7a` | `#fba494` | `#9e4116` | red |
 
 ## Deviations from Catppuccin
 
