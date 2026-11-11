@@ -1,7 +1,7 @@
 <section id="palette"><div class="wrap">
   <h2><small>the colours</small>The palette</h2>
   <p class="intro">Fourteen accents, twelve neutrals, a jam for the buttons and a tint for the active tab. Click a swatch to copy its hex, or any value in the row to copy that form.</p>
-  <div class="pickbar" style="padding:0 0 28px"><div class="wrap" style="padding:0">__PICKERS__</div></div>
+  <div class="pickbar">__PICKERS__</div>
   <div class="scroll"><table class="pal" id="pal"></table></div>
 </div></section>
 <!--script-->
@@ -16,6 +16,6 @@ page.push(function palette() {
     const head = i === 0 ? `<tr class="grp"><td colspan="7">Accents</td></tr>` : k === "jam" ? `<tr class="grp"><td colspan="7">Darkberry's own</td></tr>` : k === "text" ? `<tr class="grp"><td colspan="7">Neutrals</td></tr>` : "";
     return head + `<tr><td><button class="sw" style="background:${h}" data-v="${h}" aria-label="Copy ${k} ${h}"></button></td><td class="name">${k[0].toUpperCase() + k.slice(1)}</td>${val(k, h)}${val(k, `rgb(${r}, ${g}, ${b})`, "hide-s")}${val(k, `hsl(${H}, ${S}%, ${L}%)`, "hide-s")}${val(k, oklch[i])}<td class="job">${JOB[k] || ""}</td></tr>`;
   }).join("");
-  $("pal").innerHTML = `<thead><tr><th><span style="position:absolute;left:-9999px">Swatch</span></th><th>${D.flavours[fl].emoji} ${D.tints[tn].name} ${D.flavours[fl].name}</th><th>Hex</th><th class="hide-s">RGB</th><th class="hide-s">HSL</th><th>OKLCH</th><th>Used for</th></tr></thead><tbody>${rows}</tbody>`;
+  $("pal").innerHTML = `<thead><tr><th><span class="sr-only">Swatch</span></th><th>${D.flavours[fl].emoji} ${D.tints[tn].name} ${D.flavours[fl].name}</th><th>Hex</th><th class="hide-s">RGB</th><th class="hide-s">HSL</th><th>OKLCH</th><th>Used for</th></tr></thead><tbody>${rows}</tbody>`;
   $("pal").querySelectorAll("button.sw, button.v").forEach((b) => b.onclick = () => copy(b.dataset.v, b.closest("tr")));
 });

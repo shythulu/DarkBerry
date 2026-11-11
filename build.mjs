@@ -3,7 +3,7 @@
 // Layer 1  src/palette.json            what each colour is
 // Layer 2  src/roles.json              what each colour means (shared by every port)
 // Layer 3  src/overrides/<port>.json   rare, logged, port-only exceptions
-// Templates in src/ports/ and src/vscode/ reference roles (or palette names for
+// Templates in src/ports/ reference roles (or palette names for
 // structural chrome) inside {braces}. Literal hex values are a build error.
 import fs from "node:fs";
 import os from "node:os";
@@ -13,6 +13,7 @@ import { rgb, toHsl, fromHsl, toOklch, contrast, deltaE } from "./lib/color.mjs"
 import { indexRoles, flavourContext } from "./lib/resolve.mjs";
 import { fillSettled, FILL_ON_BACKGROUND, TEXT_ON_FILL } from "./lib/derive.mjs";
 import { Canvas } from "./lib/png.mjs";
+import { loadTints, NON_ACCENT } from "./lib/tints.mjs";
 
 const root = path.dirname(new URL(import.meta.url).pathname);
 const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
@@ -40,10 +41,9 @@ const TINTS = readJson("src/tints.json"); delete TINTS.$comment;
 const TINT = P.variant ? P.variant.name : null;
 if (TINT && !TINTS[TINT]) { console.error(`error: ${argPalette} is the variant "${TINT}", which src/tints.json does not list`); process.exit(1); }
 if (TINT) { P.id = TINT; P.name = TINTS[TINT].name; }
-const EDITIONS = Object.entries(TINTS).map(([id, t]) => {
-  const pal = id === "darkberry" ? readJson("src/palette.json") : readJson(`src/variants/${id}.json`);
-  if (id !== "darkberry" && pal.variant?.name !== id) errors.push(`src/variants/${id}.json is the variant "${pal.variant?.name}", not "${id}"`);
-  return { id, ...t, pal, colour: pal.flavours.mire.colors[t.swatch] || pal.flavours.mire.colors.tint };
+const TINT_LIST = loadTints().map((t) => {
+  if (t.id !== "darkberry" && t.pal.variant?.name !== t.id) errors.push(`src/variants/${t.id}.json is the variant "${t.pal.variant?.name}", not "${t.id}"`);
+  return { ...t, colour: t.pal.flavours.mire.colors[t.swatch] || t.pal.flavours.mire.colors.tint };
 });
 // Where a tint's output goes. Ports keep each tint in a subfolder, except the two whose
 // format holds every tint at once: VS Code's with-tints extension and the GIMP palette file.
@@ -62,7 +62,6 @@ const PUBLISHER = "Slacklab";
 const PUBLISHER_URL = "https://www.slacklab.ca";
 const words = (n) => ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"][n] ?? String(n); // listing copy spells small counts (docs/COPY.md)
 const ROLES = readJson("src/roles.json");
-const NON_ACCENT = ["jam", "onjam", "tint"];
 const HEX_LITERAL = /#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/;
 
 // ---------- roles ----------
@@ -126,8 +125,10 @@ function fill(ctx, text, port) {
       catch (e) { errors.push(`${port}: ${e.message}`); return "#000000"; }
     });
 }
+// A port with no src/overrides/<port>.json has no overrides.
+const overridesOf = (port) => { const rel = `src/overrides/${port}.json`; return fs.existsSync(path.join(root, rel)) ? readJson(rel).overrides || [] : []; };
 function applyOverrides(port, kind, content, ctx) {
-  const list = readJson(`src/overrides/${port}.json`).overrides || [];
+  const list = overridesOf(port);
   for (const o of list) {
     if (!o.why) errors.push(`override ${port}/${o.key} has no 'why'`);
     if (HEX_LITERAL.test(o.value)) errors.push(`override ${port}/${o.key} uses a literal hex value`);
@@ -328,7 +329,7 @@ const alignYamlNotes = (text) => {
   return lines.join("\n");
 };
 const toTriplets = (text) => text.replace(/#([0-9a-f]{6})/g, (_, h) => rgb("#" + h).map((v) => Math.round(v * 255)).join(","));
-const vscodeT = read("src/vscode/template.json");
+const vscodeT = read("src/ports/vscode.json");
 
 // VS Code lint: syntax colours and key UI colours must go through roles
 const VS = JSON.parse(vscodeT);
@@ -489,7 +490,9 @@ for (const ctx of ctxs) {
   const kt = JSON.parse(fill(ctx, kateT, "kate"));
   kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
   out(`ports/kate/${slug}.theme`, kt);
-  out(`ports/chrome/${full}/manifest.json`, toRgbArrays(fill(ctx, chromeT, "chrome")));
+  const cm = JSON.parse(fill(ctx, chromeT, "chrome"));
+  cm.theme.colors = applyOverrides("chrome", "json", cm.theme.colors, ctx);
+  out(`ports/chrome/${full}/manifest.json`, toRgbArrays(JSON.stringify(cm, null, 2) + "\n"));
   const lsdOut = applyOverrides("lsd", "lines", fill(ctx, lsdT, "lsd"), ctx);
   out(`ports/lsd/${slug}.yaml`, lsdOut);
   // lsd below 1.1 rejects hex strings and then drops the whole theme without a word
@@ -573,17 +576,17 @@ if (!TINT) {
   // The two formats that hold every tint in one unit: a second VS Code extension with all
   // twenty themes (each tint build adds its four under with-tints/themes/), and one GIMP
   // palette file with every tint's colours.
-  const tintNames = EDITIONS.filter((e) => e.id !== "darkberry").map((e) => e.name);
+  const tintNames = TINT_LIST.filter((e) => e.id !== "darkberry").map((e) => e.name);
   out("ports/vscode/with-tints/package.json", {
     name: `${P.id}-with-tints-theme`, displayName: `${P.name} with tints`,
-    description: `${P.name}'s four flavours in ${words(EDITIONS.length)} tints: ${EDITIONS.map((e) => e.name).slice(0, -1).join(", ")} and ${EDITIONS.at(-1).name}. ${words(EDITIONS.length * ctxs.length)[0].toUpperCase()}${words(EDITIONS.length * ctxs.length).slice(1)} themes.`, version: P.version,
+    description: `${P.name}'s four flavours in ${words(TINT_LIST.length)} tints: ${TINT_LIST.map((e) => e.name).slice(0, -1).join(", ")} and ${TINT_LIST.at(-1).name}. ${words(TINT_LIST.length * ctxs.length)[0].toUpperCase()}${words(TINT_LIST.length * ctxs.length).slice(1)} themes.`, version: P.version,
     publisher: PUBLISHER, license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
     homepage: P.homepage, repository: { type: "git", url: P.repository },
     categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
-    contributes: { themes: EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
+    contributes: { themes: TINT_LIST.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
   });
   for (const ctx of ctxs) out(`ports/vscode/with-tints/themes/${P.id}-${ctx.id}-color-theme.json`, vsThemes[`${P.id}-${ctx.id}`]);
-  out(`ports/gpl/${P.id}-with-tints.gpl`, gpl(`${P.name} with tints`, EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).flatMap(([, f]) => gplOrder.map((k) => [f.colors[k], `${e.name} ${f.name} ${label(k)}`])))));
+  out(`ports/gpl/${P.id}-with-tints.gpl`, gpl(`${P.name} with tints`, TINT_LIST.flatMap((e) => Object.entries(e.pal.flavours).flatMap(([, f]) => gplOrder.map((k) => [f.colors[k], `${e.name} ${f.name} ${label(k)}`])))));
 }
 
 // ---------- ports/<key>/README.md, assets/ and the README port list ----------
@@ -604,7 +607,7 @@ if (!TINT) {
   };
   // Palette strips per flavour and all four together, for the default and for every tint
   // (a tint's go under assets/previews/<tint>/), the fallback when a port has no screenshot.
-  for (const e of EDITIONS) {
+  for (const e of TINT_LIST) {
     const dir = e.id === "darkberry" ? "assets/previews" : `assets/previews/${e.id}`, fls = Object.entries(e.pal.flavours);
     const all = new Canvas(W, H * fls.length);
     fls.forEach(([fid, f], i) => { strip(all, f, i * H); const one = new Canvas(W, H); strip(one, f, 0); outBin(`${dir}/${fid}.png`, one.png()); });
@@ -638,7 +641,7 @@ if (!TINT) {
   // The tint bar under the badges: one coloured badge per edition, linked to where that
   // edition lives for this port; the edition the README is about is left unlinked.
   const badge = (e) => `<img src="https://img.shields.io/badge/${encodeURIComponent(e.name)}-${e.colour.slice(1)}?style=for-the-badge" alt="${e.name}"/>`;
-  const tintBar = (hrefOf) => `<p align="center">\n${EDITIONS.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${badge(e)}</a>` : `\t${badge(e)}`; }).join("\n")}\n</p>`;
+  const tintBar = (hrefOf) => `<p align="center">\n${TINT_LIST.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${badge(e)}</a>` : `\t${badge(e)}`; }).join("\n")}\n</p>`;
   // Every README's Usage opens with where the port is published, or with the folder its files
   // are in when it is not published anywhere yet; the hand-install steps from src/usage/ follow.
   // A tinted edition links the listing's tints URL when that is a separate item.
@@ -678,7 +681,7 @@ if (!TINT) {
     if (!TINT) {
       writeReadme(port, "", 2, (e) => e.id === "darkberry" ? null : port.key === "vscode" ? "with-tints/" : port.key === "gpl" ? `${e.id}.gpl` : `${e.id}/`, usage);
       if (port.key === "vscode") {
-        const note = `This extension carries every tint: ${EDITIONS.map((e) => e.name).join(", ")}, four flavours each. Install it instead of the plain ${P.name} extension, not beside it, or the ${P.name} themes are listed twice. The packaged file is \`${P.id}-with-tints-theme-<version>.vsix\`.`;
+        const note = `This extension carries every tint: ${TINT_LIST.map((e) => e.name).join(", ")}, four flavours each. Install it instead of the plain ${P.name} extension, not beside it, or the ${P.name} themes are listed twice. The packaged file is \`${P.id}-with-tints-theme-<version>.vsix\`.`;
         // route() sends tint builds' themes here, so this README and package.json are the default build's
         const vsWithTints = { ...port, name: `${port.name} (with tints)` };
         writeReadme(vsWithTints, "with-tints", 3, (e) => e.id === "darkberry" ? "../" : null, `${note}\n\n${usage}`);
@@ -750,13 +753,16 @@ walk("t3code", JSON.parse(t3codeT).colors, "colors");
 walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
-for (const { key: port } of REG.ports) if (exists(`src/overrides/${port}.json`)) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const { key: port } of REG.ports) for (const o of overridesOf(port)) traceExpr(port, `${o.key} (override)`, o.value);
 out("docs/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
 {
-  const vo = readJson("src/overrides/vscode.json").overrides || [];
-  const tl = vo.find((o) => o.key === "tab.activeBorderTop" && !/\}00$/.test(o.value)) ? "top" : vo.find((o) => o.key === "tab.activeBorder" && !/\}00$/.test(o.value)) ? "bottom" : "none";
+  // The tab line the VS Code theme ends up with: the template's value, unless an override replaces it.
+  // A value ending in 00 is fully transparent, so that line is off.
+  const tab = { ...VS.colors, ...Object.fromEntries(overridesOf("vscode").map((o) => [o.key, o.value])) };
+  const lineOn = (k) => tab[k] && !/\}00$/.test(tab[k]);
+  const tl = lineOn("tab.activeBorderTop") ? "top" : lineOn("tab.activeBorder") ? "bottom" : "none";
   const data = { version: P.version, palette: P, roles: ROLES, tabLine: tl, bindings: trace.map((t) => [t.port, t.key, t.expr]) };
   const lib = read("lib/color.mjs").replace(/^export /gm, "");
   out("docs/studio.html", read("src/studio/studio.html").replace("__DATA__", () => JSON.stringify(data)).replace("__COLOR_LIB__", () => lib));
@@ -904,4 +910,4 @@ console.log(CHECK_ONLY ? `Checked ${path.basename(argPalette || "src/palette.jso
   : TINT ? `Built ${P.name} (${ctxs.length} flavours) into ports/*/${TINT}/. ${warnings.length} warning(s).`
   : `Built ${ctxs.length} flavours. ${warnings.length} warning(s). See docs/CHECKS.md, docs/ROLES.md, docs/USAGE.md, docs/specimen.html.`);
 if (!TINT && !CHECK_ONLY && !process.argv.includes("--no-tints"))
-  for (const e of EDITIONS) if (e.id !== "darkberry") execFileSync(process.execPath, [path.join(root, "build.mjs"), `src/variants/${e.id}.json`], { stdio: "inherit", cwd: root });
+  for (const e of TINT_LIST) if (e.id !== "darkberry") execFileSync(process.execPath, [path.join(root, "build.mjs"), `src/variants/${e.id}.json`], { stdio: "inherit", cwd: root });

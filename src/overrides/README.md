@@ -1,6 +1,7 @@
 # Port overrides (layer 3)
 
-One JSON file per port, named after the port (`kitty.json`, `vscode.json`, and so on); every port has one and most are empty.
+One JSON file per port that needs an exception, named after the port (`kitty.json`, `vscode.json`, and so on).
+A port with no file has no overrides, so most ports have none.
 Each entry replaces one key in that port's output:
 
 ```json

@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:wght@400;600&family=Manufacturing+Consent&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:ital,wght@0,400;1,400&family=Manufacturing+Consent&display=swap" rel="stylesheet">
 <style>:root{
 __ROOT__
 }</style>
@@ -22,9 +22,12 @@ __CSS__
 </style>
 </head>
 <body>
-<header class="mast steep"><div class="wrap">
-  <a class="brand" href="index.html">Darkberry</a>
-  <nav class="links" aria-label="Pages">__NAV__<a id="gh" href="#">GitHub</a></nav>
+<header class="mast steep">
+  __FLOURISH_RIGHT__
+  __FLOURISH_LEFT__
+  __MOON__
+  <div class="wrap">
+  <nav class="links" aria-label="Pages">__NAV__<a href="__REPO__">GitHub</a></nav>
 </div></header>
 
 <main id="top">
@@ -32,8 +35,8 @@ __BODY__
 </main>
 
 <footer class="steep"><div class="wrap">
-  <span>Darkberry <span id="ver"></span>. MIT licensed. Modelled on Catppuccin.</span>
-  <nav aria-label="More"><a href="specimen.html">Specimen</a><a href="palette.json">palette.json</a><a id="gh2" href="#">Source</a></nav>
+  <span>Darkberry v__VERSION__. MIT licensed. Modelled on Catppuccin.</span>
+  <nav aria-label="More"><a href="specimen.html">Specimen</a><a href="palette.json">palette.json</a><a href="__REPO__">Source</a></nav>
 </div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 

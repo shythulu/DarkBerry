@@ -15,20 +15,19 @@ A bog-witch berry theme in four flavours
 ```
 src/palette.json          layer 1: the untinted default palette, 12 neutrals + 14 accents + jam/onjam per flavour
 src/roles.json            layer 2: what each colour means, shared by every port, with Catppuccin comparison
-src/overrides/            layer 3: rare port-only exceptions, each with a reason
-src/ports/                every port's template: terminals, editors, browsers, shells (roles in {braces}, no hex)
+src/overrides/            layer 3: rare port-only exceptions, each with a reason (a file only for a port that has one)
+src/ports/                every port's template: terminals, editors, browsers, shells, VS Code (roles in {braces}, no hex)
 src/ports.json            the port registry (name, app URL, categories, platforms), in the shape of Catppuccin's ports.yml
 src/categories.json       the port categories, Catppuccin's keys and emoji
 src/usage/<port>.md       each port's install steps, the Usage section of its README
 template/                 the port template (Catppuccin's, adapted): README.md and assets/
-src/vscode/template.json  VS Code template (every syntax rule uses a syntax.* role)
 src/variants/             nature tints of Darkberry: lingonberry, cloudberry, crowberry, blueberry
 src/tints.json            the tints in order, with the name and badge colour each shows in READMEs
 lib/color.mjs             colour maths, including Catppuccin's bright-ANSI formula
 lib/derive.mjs            the fill equation that sets jam and onjam, checked by the build
 lib/png.mjs               a small PNG writer for the generated logo, footer and previews
 build.mjs                 generates everything below and enforces the rules (Node 18+, no dependencies)
-package.json              devDependencies for the site build only: the Tailwind CLI. build.mjs needs nothing from it
+package.json              npm run build and npm run site; there is nothing to install
 palette.json              Catppuccin-schema palette: hex, rgb, hsl, oklch, ANSI normal and bright
 ports/<port>/             generated theme files, a README from template/, assets/ for screenshots, dist/ for packages (gitignored)
 ports/<port>/<tint>/      the same for each tint (VS Code and the GIMP palette carry tints in one unit instead)
@@ -64,7 +63,7 @@ A showcase site is generated from the palette and published to GitHub Pages by `
 2. In the repository's Settings > Pages, set the source to **GitHub Actions**.
 3. Push to `main`. The site appears at `https://<your-name>.github.io/<repo>/`.
 
-To preview locally: `npm ci` once, then `node build.mjs && node tools/site.mjs` (or `npm run site`) and open `site/index.html`. The site's CSS goes through the Tailwind CLI: `src/site/tailwind.css` is the input, and every role and palette colour is a utility (`bg-ui-background`, `text-jam`). The `site/` folder is generated and ignored by git.
+To preview locally: `node build.mjs && node tools/site.mjs` (or `npm run site`), then open `site/index.html`. The site's CSS is plain: `src/site/base.css` holds what every page shares and `src/site/page.css` one block per page, and both are inlined into every page. The `site/` folder is generated and ignored by git.
 
 ## Adjusting colours
 
@@ -167,4 +166,4 @@ build them yourself with `./package.sh`, which writes each port's packages into 
 ## Credits
 
 Darkberry was inspired the colour I painted my walls! 'Dark Purple' by Benjamin Moore. The idea for building a fullsome theme was aided by [PixelBerry] (https://github.com/germainelry/pixel-berry-vscode-themes) and modelled on [Catppuccin](https://github.com/catppuccin) (MIT)! I liked its four-flavour structure, naming, palette file format, style-guide approach, etc... Like everything. Also it's really pretty! Deliberate differences from Catppuccin are listed in `docs/ROLES.md`. *There needs to be more standardization in these things!*  Colour math is in `lib/color.mjs`.
-The one piece of inherited code is the list of syntax rules in `src/vscode/template.json`, which began as a derivative of Pixel Berry by germainelry (MIT).
+The one piece of inherited code is the list of syntax rules in `src/ports/vscode.json`, which began as a derivative of Pixel Berry by germainelry (MIT).

@@ -1,14 +1,10 @@
 {
   "name": "darkberry",
   "private": true,
-  "description": "Build tooling for the Darkberry showcase site. The theme build itself (build.mjs) needs nothing from here.",
+  "description": "Shortcuts for building Darkberry. Nothing to install: build.mjs and tools/site.mjs need only Node.",
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
     "site": "node build.mjs && node tools/site.mjs"
-  },
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
   }
 }

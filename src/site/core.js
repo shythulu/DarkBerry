@@ -8,9 +8,9 @@ let tn = TINTS.includes(store.get("darkberry-tint")) ? store.get("darkberry-tint
 const [hf, ht] = location.hash.slice(1).split("/");
 if (FLS.includes(hf)) fl = hf;
 if (TINTS.includes(ht)) tn = ht;
-const repo = D.config.repo.replace(/\/$/, ""), tree = `${repo}/tree/${D.config.branch}`;
-const raw = repo.replace("https://github.com/", "https://raw.githubusercontent.com/") + "/" + D.config.branch;
-const slug = (f) => `darkberry-${f}`, title = (f) => `Darkberry ${D.flavours[f].name}`;
+// The repository's tree on the published branch: the Ports page links each port's folder under it.
+const tree = D.tree;
+// Each page script pushes a render function here; apply() calls them after every flavour or tint change.
 const page = [];
 
 function apply() {
@@ -18,13 +18,12 @@ function apply() {
   for (const [r, v] of Object.entries(roles)) s.setProperty("--" + r.replace(/\./g, "-"), v);
   D.order.forEach((k, i) => s.setProperty("--c-" + k, t.colors[fl][i]));
   document.documentElement.dataset.theme = D.flavours[fl].dark ? "dark" : "light";
-  document.documentElement.style.colorScheme = D.flavours[fl].dark ? "dark" : "light";
   document.querySelector('meta[name="theme-color"]')?.remove();
   document.head.insertAdjacentHTML("beforeend", `<meta name="theme-color" content="${roles["ui.pane.secondary"]}">`);
   store.set("darkberry-flavour", fl); store.set("darkberry-tint", tn);
   if ($("tintnote")) $("tintnote").textContent = t.note;
-  document.querySelectorAll("#flavours button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === fl));
-  document.querySelectorAll("#tints button").forEach((b) => { b.setAttribute("aria-pressed", b.dataset.t === tn); b.querySelector("i").style.background = D.tints[b.dataset.t].roles[fl]["ui.tab.indicator"]; });
+  document.querySelectorAll("#pick-flavour button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === fl));
+  document.querySelectorAll("#pick-tint button").forEach((b) => { b.setAttribute("aria-pressed", b.dataset.t === tn); b.querySelector("i").style.background = D.tints[b.dataset.t].roles[fl]["ui.tab.indicator"]; });
   page.forEach((f) => f());
 }
 function copy(text, row) {
@@ -33,10 +32,12 @@ function copy(text, row) {
 }
 let tt; function toast(msg) { const t = $("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("show"), 1400); }
 
-$("gh").href = repo; $("gh2").href = repo; $("ver").textContent = "v" + D.version;
-if ($("flavours")) {
-  $("flavours").innerHTML = FLS.map((f) => `<button data-f="${f}" aria-pressed="false">${D.flavours[f].emoji} ${D.flavours[f].name}</button>`).join("");
-  $("tints").innerHTML = TINTS.map((t) => `<button data-t="${t}" aria-pressed="false"><i></i>${D.tints[t].name}</button>`).join("");
-  document.querySelectorAll("#flavours button").forEach((b) => b.onclick = () => { fl = b.dataset.f; apply(); });
-  document.querySelectorAll("#tints button").forEach((b) => b.onclick = () => { tn = b.dataset.t; apply(); });
+// A page can carry either picker on its own: the home page has only the flavours.
+if ($("pick-flavour")) {
+  $("pick-flavour").innerHTML = FLS.map((f) => `<button data-f="${f}" aria-pressed="false">${D.flavours[f].emoji} ${D.flavours[f].name}</button>`).join("");
+  document.querySelectorAll("#pick-flavour button").forEach((b) => b.onclick = () => { fl = b.dataset.f; apply(); });
+}
+if ($("pick-tint")) {
+  $("pick-tint").innerHTML = TINTS.map((t) => `<button data-t="${t}" aria-pressed="false"><i></i>${D.tints[t].name}</button>`).join("");
+  document.querySelectorAll("#pick-tint button").forEach((b) => b.onclick = () => { tn = b.dataset.t; apply(); });
 }

@@ -210,7 +210,7 @@ H.debugPC = { bg = "#f5e6df" }
 H.debugBreakpoint = { fg = "#bb262a", bg = "#f8e6dd" }
 
 -- Syntax -----------------------------------------------------------------------
--- The scope to role mapping of src/vscode/template.json, so int is syntax.type here
+-- The scope to role mapping of src/ports/vscode.json, so int is syntax.type here
 -- as in every other editor.
 H.Comment = { fg = "#785d4f", italic = true }
 H.SpecialComment = { fg = "#785d4f", italic = true }

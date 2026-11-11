@@ -1,9 +1,9 @@
 // Draws every Darkberry logo from one editable source.
 //   node tools/logo.mjs [source.svg] [outdir]
-//   -> <outdir>/<edition>-logo.{svg,png} and <edition>-logo-words.{svg,png} for every edition in src/tints.json
+//   -> <outdir>/<tint>-logo.{svg,png} and <tint>-logo-words.{svg,png} for every tint in src/tints.json
 // The source (assets/logos/source/darkberry-logo.svg) is drawn in Mire, with the letter as live
-// text (id text120) in Manufacturing Consent. Each edition gets its own initial in that letter's
-// place, centred where the D sits, and the -words logo adds the edition's name under it; every
+// text (id text120) in Manufacturing Consent. Each tint gets its own initial in that letter's
+// place, centred where the D sits, and the -words logo adds the tint's name under it; every
 // name is set at one size, chosen so the longest fits. A tint's Mire neutrals (crust, mantle,
 // surface2, overlay2) and tint swap to the tint's own Mire values. Every other colour keeps its
 // OKLCH lightness and chroma and turns by the same angle the tint turns Mire's neutrals, so the
@@ -16,14 +16,15 @@ import os from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { toOklch, fromOklch } from "../lib/color.mjs";
+import { loadTints } from "../lib/tints.mjs";
 
 const src = process.argv[2] || "assets/logos/source/darkberry-logo.svg", out = process.argv[3] || "assets/logos";
 const source = fs.readFileSync(src, "utf8");
-const tints = JSON.parse(fs.readFileSync("src/tints.json", "utf8"));
-const mireOf = (t) => JSON.parse(fs.readFileSync(t === "darkberry" ? "src/palette.json" : `src/variants/${t}.json`, "utf8")).flavours.mire.colors;
+const TINTS = loadTints();
+const mireOf = (id) => TINTS.find((t) => t.id === id).pal.flavours.mire.colors;
 const SWAP = ["crust", "mantle", "surface2", "overlay2", "tint"];
 const base = mireOf("darkberry"), hue = (h) => toOklch(h)[2];
-const editions = Object.keys(tints).filter((k) => k[0] !== "$").map((id) => ({ id, name: tints[id].name, letter: tints[id].name[0] }));
+const marks = TINTS.map(({ id, name }) => ({ id, name, letter: name[0] }));
 
 // The name under the mark: centred on the page, its lowest point BOTTOM px from the top, the
 // longest name NAME_W px wide. Spacing and stroke scale with the size, as in the drawn letter.
@@ -42,13 +43,13 @@ const inkscape = (...args) => execFileSync("inkscape", args, { encoding: "utf8",
 
 // Measure: every initial, the D moved 1000 units (to learn the letter group's scale), and every
 // name at REF px from the origin, all in one document.
-const probes = [...new Set(editions.map((e) => e.letter))].map((ch) => letterAt(ch, X0, `m-${ch}`)).join("") + letterAt("D", X0 + 1000, "m-shift");
-const names = editions.map((e) => nameText(e.name, 0, 0, REF, `m-name-${e.id}`)).join("");
+const probes = [...new Set(marks.map((e) => e.letter))].map((ch) => letterAt(ch, X0, `m-${ch}`)).join("") + letterAt("D", X0 + 1000, "m-shift");
+const names = marks.map((e) => nameText(e.name, 0, 0, REF, `m-name-${e.id}`)).join("");
 fs.writeFileSync(path.join(tmp, "measure.svg"), source.replace(LETTER, LETTER + probes).replace(/<\/svg>\s*$/, `${names}</svg>`));
 const box = Object.fromEntries(inkscape("--query-all", path.join(tmp, "measure.svg")).trim().split("\n").map((l) => { const [id, ...n] = l.split(","); return [id, n.map(Number)]; }));
 const centre = (id) => box[id][0] + box[id][2] / 2;
 const scale = (centre("m-shift-text") - centre("text120")) / 1000;
-const size = REF * Math.min(...editions.map((e) => NAME_W / box[`m-name-${e.id}`][2]));
+const size = REF * Math.min(...marks.map((e) => NAME_W / box[`m-name-${e.id}`][2]));
 
 const recolourer = (t) => {
   if (t === "darkberry") return (h) => h;
@@ -62,7 +63,7 @@ const recolourer = (t) => {
 };
 
 fs.mkdirSync(out, { recursive: true });
-for (const e of editions) {
+for (const e of marks) {
   const x = +(X0 + (centre("text120") - centre(`m-${e.letter}-text`)) / scale).toFixed(4), recolour = recolourer(e.id);
   const [nx, ny, nw, nh] = box[`m-name-${e.id}`].map((v) => v * size / REF);
   const name = nameText(e.name, +(PAGE / 2 - nx - nw / 2).toFixed(4), +(BOTTOM - ny - nh).toFixed(4), +size.toFixed(4), "name");
