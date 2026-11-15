@@ -2,7 +2,8 @@
   --serif:"Bodoni Moda",ui-serif,Georgia,"Times New Roman",serif;
   --sc:"Bodoni Moda SC",ui-serif,Georgia,"Times New Roman",serif;
   --display:"Manufacturing Consent","Bodoni Moda SC",ui-serif,Georgia,serif;
-  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --mono:"FiraCode Nerd Font","Fira Code",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --ui-mono:"FiraMono Nerd Font","Fira Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --rule:color-mix(in srgb,var(--c-overlay0) 55%,transparent);
   --gild:color-mix(in srgb,var(--ui-accent) 70%,var(--c-overlay2));
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
@@ -64,7 +65,7 @@ p.drop::first-letter{font-family:var(--display);font-size:3.1em;line-height:.8;f
 .win .bar{display:flex;align-items:center;gap:7px;padding:9px 12px;background:var(--ui-pane-tertiary)}
 .win .bar b{width:9px;height:9px;transform:rotate(45deg);background:var(--c-surface2)}
 .win .tabs{display:flex;background:var(--ui-pane-secondary)}
-.win .tab{font:13px var(--mono);padding:8px 16px;color:var(--c-subtext0);border-right:1px solid var(--c-surface1)}
+.win .tab{font:13px var(--ui-mono);padding:8px 16px;color:var(--c-subtext0);border-right:1px solid var(--c-surface1)}
 .win .tab.on{background:var(--ui-background);color:var(--ui-text);box-shadow:inset 0 2px 0 var(--ui-tab-indicator)}
 pre.code{margin:0;padding:16px 0;background:var(--ui-background);font:14px/1.7 var(--mono);overflow-x:auto;color:var(--syntax-text)}
 pre.code .ln{display:inline-block;width:3em;padding-right:1.2em;text-align:right;color:var(--ui-text-subtle);user-select:none}
@@ -113,7 +114,7 @@ table.ports td.c{color:var(--c-subtext0);font-size:14px}
 table.ports td:last-child a{font-family:var(--sc);letter-spacing:.1em;font-size:14px}
 table.ports .none{color:var(--c-overlay1);font-style:italic;font-size:14px}
 .plats{display:flex;gap:6px;flex-wrap:wrap}
-.plat{font:11px var(--mono);letter-spacing:.04em;padding:1px 6px;border:1px solid var(--rule);color:var(--c-subtext0)}
+.plat{font:11px var(--ui-mono);letter-spacing:.04em;padding:1px 6px;border:1px solid var(--rule);color:var(--c-subtext0)}
 .badge{display:inline-block;font:13px var(--serif);padding:2px 8px;background:color-mix(in srgb,var(--ui-accent) 18%,transparent);border:1px solid color-mix(in srgb,var(--ui-accent) 50%,transparent);color:var(--ui-text);text-decoration:none}
 .badge:hover{background:color-mix(in srgb,var(--ui-accent) 30%,transparent);color:var(--ui-text)}
 .peek{position:fixed;left:0;top:0;z-index:20;width:min(400px,80vw);margin:0;pointer-events:none;border:1px solid var(--rule);background:var(--ui-pane-tertiary);box-shadow:0 0 0 4px var(--ui-background),0 0 0 5px var(--rule),0 24px 48px -24px #000;opacity:0}
