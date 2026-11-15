@@ -14,7 +14,7 @@ a port. Read it whole before touching `src/`.
 | 2. Roles | `src/roles.json` | What each colour **means**: `ui.*`, `syntax.*`, `terminal.*`, the ANSI mapping | Every app that shows that meaning |
 | 3. Overrides | `src/overrides/<port>.json` | Rare, port-only exceptions, each with a `why` | One app |
 
-Templates in `src/ports/` and `src/vscode/template.json` reference roles inside
+Templates in `src/ports/` (VS Code's is `src/ports/vscode.json`) reference roles inside
 `{braces}`. A template may name a palette colour only for **structural chrome**: a
 surface or decoration that carries no meaning any other port shares (a scrollbar track, a
 hairline between panels, a template placeholder, a box outline, a sparkline). Anything a
@@ -176,7 +176,7 @@ install line in two more places, a notes file, and a verified screenshot per fla
      all (the value is on the next line) and has its own kind.
 8. **Agree with the reference ports.** ANSI: `{ansi.0}`..`{ansi.15}` and
    `{terminal.color16}`/`{terminal.color17}` exactly as `src/ports/kitty.conf`. Syntax:
-   the scope → `syntax.*` mapping in `src/vscode/template.json`, so `int` is
+   the scope → `syntax.*` mapping in `src/ports/vscode.json`, so `int` is
    `syntax.type` in every editor and a decorator is the same colour in Kate as in VS Code
    (booleans are `constant.language` → `syntax.keyword`, not the number colour; a
    `markup.bold` scope is `syntax.constant`, where terminal bold is `ui.text`). Where
@@ -219,8 +219,8 @@ install line in two more places, a notes file, and a verified screenshot per fla
       `docs/trace.json`, `docs/studio.html` and `tools/where.mjs`.
     - Add `"foo"` to the override port list below the trace (one array), and to the
       `usageMd` header string and the port array of its row template.
-    - Create `src/overrides/foo.json` as `{ "overrides": [] }`, then prove the `lines`
-      key spelling with a throwaway override before emptying it.
+    - No override file is needed. To prove the `lines` key spelling, add
+      `src/overrides/foo.json` with a throwaway override, build, then delete the file.
 11. **Port assertions.** For every key that carries a shared meaning, add a `mustBe()` line
     beside the existing ones, so the mapping cannot drift back: text selection →
     `{ui.selection}`, current line → `{ui.line.current}`, a button, badge or row

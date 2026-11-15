@@ -188,7 +188,7 @@ File naming follows STYLE_GUIDE step 9, third case. The app reads the name from 
 2. In the flavour loop: parse `fill(ctx, wtT, "windows-terminal")`, run `applyOverrides("windows-terminal", "json", obj.schemes[0], ctx)`, then `out(\`ports/windows-terminal/${full}.json\`, obj)`. Same for the theme file with kind `"json"` on the three sub-objects, or a small loop over `tab`, `tabRow`, `window`.
 3. `route()` needs no change: the port is one-theme-per-file, so tints go to `ports/windows-terminal/<tint>/`.
 4. Trace: `walk("windows-terminal", JSON.parse(wtT).schemes[0], "schemes")` and the same for the theme.
-5. `src/overrides/windows-terminal.json` as `{ "overrides": [] }`.
+5. No override file: the build reads a missing `src/overrides/windows-terminal.json` as no overrides.
 6. Assertions, one `mustBe()` each:
    - `selectionBackground` is `{ui.selection}`
    - `cursorColor` is `{ui.cursor}`

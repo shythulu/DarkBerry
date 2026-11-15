@@ -2,7 +2,7 @@
 
 Generated from `src/roles.json`. Every port references these names.
 
-| Role | Value | Wisp | Fen | Mire | Blackwater | Catppuccin |
+| Role | Value | Blackwater | Mire | Fen | Wisp | Catppuccin |
 |---|---|---|---|---|---|---|
 | `ui.background` | `base` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` | same |
 | `ui.pane.secondary` | `mantle` | `#f3e6ef` | `#402838` | `#23161f` | `#170d13` | same |
