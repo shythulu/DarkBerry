@@ -1,0 +1,415 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Buttons and button-like controls.
+ */
+
+:root {
+    --lingonberry-mire-button-active-text-color: var(--lingonberry-mire-kcs-active-button-foreground-text);
+    --lingonberry-mire-button-active-background-color: var(--lingonberry-mire-kcs-active-button-background-normal);
+    --lingonberry-mire-button-active-border-color: var(--lingonberry-mire-kcs-active-button-decoration-frame);
+    --lingonberry-mire-button-active-highlight-color: mix(var(--lingonberry-mire-button-active-background-color), var(--lingonberry-mire-highlight-color), 0.333);
+    --lingonberry-mire-button-active-border-highlight-color: var(--lingonberry-mire-highlight-color);
+    --lingonberry-mire-button-active-checked-color: mix(var(--lingonberry-mire-button-active-background-color), var(--lingonberry-mire-button-active-text-color), 0.125);
+    --lingonberry-mire-button-active-focus-color: modify-color(var(--lingonberry-mire-kcs-active-button-decoration-focus) set-alpha var(--lingonberry-mire-focus-outline-alpha));
+
+    --lingonberry-mire-button-active-header-border-color: var(--lingonberry-mire-kcs-active-header-decoration-frame);
+    --lingonberry-mire-button-active-header-highlight-color: mix(var(--lingonberry-mire-header-background-color), var(--lingonberry-mire-highlight-color), 0.333);
+    --lingonberry-mire-button-active-header-checked-color: mix(var(--lingonberry-mire-header-background-color), var(--lingonberry-mire-header-text-color), 0.125);
+
+    --lingonberry-mire-button-inactive-text-color: var(--lingonberry-mire-kcs-inactive-button-foreground-text);
+    --lingonberry-mire-button-inactive-background-color: var(--lingonberry-mire-kcs-inactive-button-background-normal);
+    --lingonberry-mire-button-inactive-border-color: var(--lingonberry-mire-kcs-inactive-button-decoration-frame);
+    --lingonberry-mire-button-inactive-highlight-color: mix(var(--lingonberry-mire-button-inactive-background-color), var(--lingonberry-mire-highlight-color), 0.5);
+    --lingonberry-mire-button-inactive-checked-color: mix(var(--lingonberry-mire-button-inactive-background-color), var(--lingonberry-mire-button-inactive-text-color), 0.2);
+
+    --lingonberry-mire-button-disabled-text-color: var(--lingonberry-mire-kcs-disabled-button-foreground-text);
+    --lingonberry-mire-button-disabled-background-color: var(--lingonberry-mire-kcs-disabled-button-background-normal);
+    --lingonberry-mire-button-disabled-border-color: var(--lingonberry-mire-kcs-disabled-button-decoration-frame);
+    --lingonberry-mire-button-disabled-highlight-color: mix(var(--lingonberry-mire-button-disabled-background-color), var(--lingonberry-mire-highlight-color), 0.333);
+
+    --lingonberry-mire-button-border: 1px solid var(--lingonberry-mire-button-active-border-color);
+    --lingonberry-mire-button-border-highlight: 1px solid var(--lingonberry-mire-button-active-border-highlight-color);
+    --lingonberry-mire-button-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    --lingonberry-mire-button-focus: 2px solid var(--lingonberry-mire-focus-ring-color);
+
+    /* Values derived from Breeze QStyle metrics */
+    --lingonberry-mire-button-default-size: 32px; /* 16 + 2 * 6 + 2 * 2  */
+    --lingonberry-mire-button-padding: 8px; /* 6 + 2 */
+    --lingonberry-mire-button-spacing: 4px;
+    --lingonberry-mire-toolbutton-menu-padding: 2px;
+
+    /* Match Breeze QStyle color */
+    --lingonberry-mire-combobox-popup-background-color: mix(var(--lingonberry-mire-window-background-color), var(--lingonberry-mire-view-background-color), 0.3);
+    --lingonberry-mire-combobox-popup-highlight-color: mix(var(--lingonberry-mire-combobox-popup-background-color), var(--lingonberry-mire-highlight-color), 0.333);
+    --lingonberry-mire-combobox-popup-text-color: var(--lingonberry-mire-window-text-color);
+}
+
+button,
+toolbutton,
+combobox,
+roundbutton,
+delaybutton,
+toolbutton.raised
+{
+    width: var(--lingonberry-mire-button-default-size);
+    height: var(--lingonberry-mire-button-default-size);
+    spacing: var(--lingonberry-mire-button-spacing);
+    padding: var(--lingonberry-mire-button-padding);
+    border-radius: var(--lingonberry-mire-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: center;
+    icon-alignment-horizontal: center;
+
+    color: var(--lingonberry-mire-button-active-text-color);
+    border: var(--lingonberry-mire-button-border);
+    background-color: var(--lingonberry-mire-button-active-background-color);
+
+    &:checked
+    {
+        border: var(--lingonberry-mire-button-border);
+        background-color: var(--lingonberry-mire-button-active-checked-color);
+    }
+
+    &:hovered
+    {
+        border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+    }
+
+    &:visual-focus
+    {
+        border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+        outline: var(--lingonberry-mire-button-focus);
+    }
+
+    &:disabled
+    {
+        color: var(--lingonberry-mire-button-disabled-text-color);
+        background-color: var(--lingonberry-mire-button-disabled-background-color);
+        border-color: var(--lingonberry-mire-button-disabled-border-color);
+        box-shadow: none;
+    }
+
+    &.with-menu > indicator {
+        visibility: visible;
+        layout-alignment: content end center 0;
+        width: var(--lingonberry-mire-icon-size-small);
+        height: var(--lingonberry-mire-icon-size-small);
+        /* half of small-spacing */
+        padding-left: var(--lingonberry-mire-toolbutton-menu-padding);
+        padding-right: var(--lingonberry-mire-toolbutton-menu-padding);
+        icon-name: "arrow-down";
+        icon-color: var(--lingonberry-mire-button-active-text-color);
+    }
+
+    &.with-inline-arrow > indicator {
+        visibility: visible;
+        layout-alignment: content end end 0;
+        width: 8px;
+        height: 8px;
+        padding: 1px;
+        icon-name: "arrow-down";
+        icon-color: var(--lingonberry-mire-button-active-text-color);
+    }
+
+    &.with-menu-button > indicator {
+        visibility: visible;
+        width: var(--lingonberry-mire-icon-size-small);
+        height: var(--lingonberry-mire-icon-size-small);
+        /* half of small-spacing */
+        padding-left: var(--lingonberry-mire-toolbutton-menu-padding);
+        padding-right: var(--lingonberry-mire-toolbutton-menu-padding);
+        layout-alignment: content end fill 0;
+        icon-name: "arrow-down";
+        icon-color: var(--lingonberry-mire-button-active-text-color);
+        border-left:  var(--lingonberry-mire-button-border);
+    }
+
+    &.menu-open {
+        border: var(--lingonberry-mire-button-border-highlight);
+        & > indicator {
+            border: var(--lingonberry-mire-button-border-highlight);
+            background-color: var(--lingonberry-mire-button-active-highlight-color);
+            border-radius: var(--lingonberry-mire-corner-radius);
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+
+    &[display="icon-only"].with-menu > indicator {
+        visibility: hidden;
+    }
+
+    &[display="text-under-icon"] {
+        text-alignment-vertical: stack-center;
+        icon-alignment-vertical: stack-center;
+    }
+}
+
+button,
+roundbutton,
+delaybutton
+{
+    box-shadow: var(--lingonberry-mire-button-shadow);
+}
+
+button:pressed,
+toolbutton:pressed,
+combobox:pressed,
+roundbutton:pressed,
+delaybutton:pressed,
+toolbutton.raised:pressed
+{
+    border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+    background-color: var(--lingonberry-mire-button-active-highlight-color);
+    box-shadow: none;
+}
+
+button:checked,
+roundbutton:checked
+{
+    box-shadow: none;
+}
+
+toolbutton,
+button.flat,
+combobox.flat,
+roundbutton.flat
+{
+    border: none;
+    background: none;
+    box-shadow: none;
+
+    &:hovered {
+        border: var(--lingonberry-mire-button-border-highlight);
+    }
+
+    &:visual-focus {
+        border: var(--lingonberry-mire-button-border-highlight);
+    }
+
+    &:pressed {
+        border: var(--lingonberry-mire-button-border-highlight);
+        background-color: var(--lingonberry-mire-button-active-highlight-color);
+    }
+
+    toolbar.header &:checked,
+    applicationheader &:checked
+    {
+        border-color: var(--lingonberry-mire-button-active-header-border-color);
+        background-color: var(--lingonberry-mire-button-active-header-checked-color);
+    }
+
+    toolbar.header &:pressed,
+    applicationheader &:pressed
+    {
+        background-color: var(--lingonberry-mire-button-active-header-highlight-color);
+    }
+
+    &:disabled {
+        border: none;
+        background: none;
+    }
+
+    &.with-menu-button > indicator {
+        border-left: none;
+        &:hovered {
+            border-left: var(--lingonberry-mire-button-border-highlight);
+        }
+    }
+
+    &.menu-open {
+        & > indicator {
+            border-left: var(--lingonberry-mire-button-border-highlight);
+        }
+    }
+
+    &[colorset="window"],
+    [colorset="window"] &
+    {
+        color: var(--lingonberry-mire-window-text-color);
+
+        &:disabled {
+            color: var(--lingonberry-mire-window-disabled-text-color);
+        }
+    }
+
+    &[colorset="view"],
+    [colorset="view"] &
+    {
+        color: var(--lingonberry-mire-view-text-color);
+
+        &:disabled {
+            color: var(--lingonberry-mire-view-disabled-text-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &
+    {
+        color: var(--lingonberry-mire-complementary-text-color);
+
+        &:disabled {
+            color: var(--lingonberry-mire-complementary-disabled-text-color);
+        }
+    }
+
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        color: var(--lingonberry-mire-header-text-color);
+
+        &:disabled {
+            color: var(--lingonberry-mire-header-disabled-text-color);
+        }
+    }
+}
+
+toolbutton
+{
+    /* Ensure default toolbuttons end up with 32px height, not 34px. */
+    icon-size: 24px;
+    padding: var(--lingonberry-mire-medium-spacing) var(--lingonberry-mire-small-spacing);
+}
+
+toolbutton.raised
+{
+    icon-size: var(--lingonberry-mire-icon-size-small);
+    padding: var(--lingonberry-mire-button-padding);
+}
+
+roundbutton
+{
+    border-radius: var(--lingonberry-mire-button-default-size);
+}
+
+combobox
+{
+    layout-alignment: content fill center 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+    box-shadow: var(--lingonberry-mire-button-shadow);
+    text-wrap-mode: no-wrap;
+    text-elide: right;
+
+    & > indicator {
+        layout-alignment: content end center 0;
+        width: var(--lingonberry-mire-icon-size-small);
+        height: var(--lingonberry-mire-icon-size-small);
+        icon-name: "arrow-down-symbolic";
+        icon-color: var(--lingonberry-mire-button-active-text-color);
+        visibility: visible;
+    }
+
+    &.editable,
+    &.flat.editable
+    {
+        background-color: var(--lingonberry-mire-view-background-color);
+        border: 1px solid var(--lingonberry-mire-view-border-color);
+        box-shadow: none;
+        text-elide: none;
+
+        &:hovered {
+            border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+        }
+
+        &:pressed {
+            border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+
+            & > indicator {
+                icon-color: var(--lingonberry-mire-button-active-border-highlight-color);
+            }
+        }
+
+        &:visual-focus {
+            border-color: var(--lingonberry-mire-button-active-border-highlight-color);
+        }
+
+        &:disabled {
+            background-color: var(--lingonberry-mire-view-disabled-background-color);
+            color: var(--lingonberry-mire-view-disabled-text-color);
+            border-color: var(--lingonberry-mire-view-disabled-border-color);
+        }
+    }
+}
+
+popup.combobox
+{
+    padding: 0px;
+    background-color: var(--lingonberry-mire-combobox-popup-background-color);
+    border-radius: var(--lingonberry-mire-corner-radius);
+
+    itemviewitem:highlight,
+    itemdelegate:highlight {
+        background-color: var(--lingonberry-mire-combobox-popup-highlight-color);
+        border-color: var(--lingonberry-mire-highlight-color);
+        color: var(--lingonberry-mire-combobox-popup-text-color);
+    }
+}
+
+toolseparator {
+    background-color: var(--lingonberry-mire-button-active-border-color);
+
+    &.horizontal {
+        width: var(--lingonberry-mire-large-element-size);
+        height: 1px;
+        inset: 0px var(--lingonberry-mire-small-spacing);
+    }
+
+    &.vertical {
+        width: 1px;
+        height: var(--lingonberry-mire-large-element-size);
+        inset: var(--lingonberry-mire-small-spacing) 0px;
+    }
+
+    toolbar.header &,
+    applicationheader &
+    {
+        background-color: var(--lingonberry-mire-button-active-header-border-color);
+    }
+}
+
+delaybutton {
+    & > fill {
+        border-radius: var(--lingonberry-mire-corner-radius);
+        border: var(--lingonberry-mire-button-border-highlight);
+        background-color: var(--lingonberry-mire-highlight-color);
+    }
+}
+
+tumbler {
+    width: 60px;
+    height: 200px;
+    background-color: var(--lingonberry-mire-view-background-color);
+
+    text {
+        text-alignment-horizontal: center;
+        color: mix(var(--lingonberry-mire-view-background-color), var(--lingonberry-mire-view-text-color), 0.75);
+
+        &:highlighted {
+            color: mix(var(--lingonberry-mire-highlight-color), var(--lingonberry-mire-view-text-color), 0.6);
+        }
+    }
+}
+
+button.changed,
+toolbutton.changed,
+combobox.changed,
+roundbutton.changed,
+delaybutton.changed {
+    background-color: var(--lingonberry-mire-changed-background);
+    border: 1px solid var(--lingonberry-mire-changed-foreground);
+}
+
+
+tabscrollbutton {
+    icon-alignment: content fill fill 0;
+    layout-alignment: content center center 0;
+    icon-size: 16px;
+    width: var(--lingonberry-mire-button-default-size);
+    height: var(--lingonberry-mire-button-default-size);
+}

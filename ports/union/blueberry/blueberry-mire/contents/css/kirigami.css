@@ -1,0 +1,279 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Kirigami-specific controls
+ */
+
+:root {
+    --blueberry-mire-chip-background-color: var(--blueberry-mire-window-background-alternate-color);
+}
+
+applicationheader
+{
+    background-color: var(--blueberry-mire-header-active-background-color);
+    color: var(--blueberry-mire-header-active-text-color);
+
+    &[colorset="window"]
+    {
+        background-color: var(--blueberry-mire-window-background-color);
+        color: var(--blueberry-mire-window-text-color);
+    }
+
+    &.with-separator
+    {
+        border-bottom: 1px solid var(--blueberry-mire-header-active-border-color);
+    }
+
+    .inactive &
+    {
+        background-color: var(--blueberry-mire-header-inactive-background-color);
+        border-color: var(--blueberry-mire-header-inactive-border-color);
+        color: var(--blueberry-mire-header-inactive-text-color);
+    }
+}
+
+card
+{
+    background-color: var(--blueberry-mire-card-background-color);
+    border: 1px solid var(--blueberry-mire-card-border-color);
+    border-radius: var(--blueberry-mire-corner-radius);
+    box-shadow: 0px 2px var(--blueberry-mire-grid-unit) 0px rgba(0, 0, 0, 0.1);
+    color: var(--blueberry-mire-card-text-color);
+
+    &:hovered {
+        background-color: var(--blueberry-mire-card-hover-color);
+    }
+
+    &:pressed {
+        background-color: var(--blueberry-mire-card-pressed-color);
+    }
+}
+
+chip
+{
+    width: var(--blueberry-mire-medium-element-size);
+    height: var(--blueberry-mire-medium-element-size);
+    padding: var(--blueberry-mire-medium-spacing);
+
+    layout-alignment: content fill fill 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+
+    background-color: var(--blueberry-mire-chip-background-color);
+    border-radius: var(--blueberry-mire-corner-radius);
+    border: 1px solid var(--blueberry-mire-button-active-border-color);
+    color: var(--blueberry-mire-button-active-text-color);
+
+    spacing: var(--blueberry-mire-small-spacing);
+
+    & > .indicator
+    {
+        width: var(--blueberry-mire-small-element-size);
+        height: var(--blueberry-mire-small-element-size);
+
+        icon-name: "edit-delete-remove";
+        icon-width: var(--blueberry-mire-icon-size-small);
+        icon-height: var(--blueberry-mire-icon-size-small);
+
+        layout-alignment: item end center 0;
+    }
+
+    &:hovered
+    {
+        border-color: var(--blueberry-mire-highlight-color);
+    }
+
+    &:pressed
+    {
+        border-color: var(--blueberry-mire-highlight-color);
+        background-color: var(--blueberry-mire-button-active-highlight-color);
+    }
+}
+
+heading
+{
+    color: var(--blueberry-mire-window-text-color);
+
+    &.primary
+    {
+        font-weight: 600;
+    }
+
+    &.level-1
+    {
+        font-size: 135%;
+    }
+
+    &.primary.level-1
+    {
+        font-size: 135%;
+        font-weight: 600;
+    }
+
+    &.level-2
+    {
+        font-size: 120%;
+    }
+
+    &.primary.level-2
+    {
+        font-size: 120%;
+        font-weight: 600;
+    }
+
+    &.level-3
+    {
+        font-size: 115%;
+    }
+
+    &.primary.level-3
+    {
+        font-size: 115%;
+        font-weight: 600;
+    }
+
+    &.level-4
+    {
+        font-size: 110%;
+    }
+
+    &.primary.level-4
+    {
+        font-size: 110%;
+        font-weight: 600;
+    }
+
+    &.secondary
+    {
+        color: modify-color(var(--blueberry-mire-window-text-color) set-alpha 0.75);
+    }
+}
+
+inlinemessage
+{
+    padding: var(--blueberry-mire-small-spacing);
+
+    background-color: mix(var(--blueberry-mire-window-background-color), var(--blueberry-mire-highlight-color), 0.2);
+    border: 1px solid var(--blueberry-mire-highlight-color);
+    border-radius: var(--blueberry-mire-corner-radius);
+    color: var(--blueberry-mire-window-text-color);
+
+    &[type="positive"] {
+        background-color: var(--blueberry-mire-positive-background);
+        border: 1px solid var(--blueberry-mire-positive-text);
+    }
+
+    &[type="warning"] {
+        background-color: var(--blueberry-mire-neutral-background);
+        border: 1px solid var(--blueberry-mire-neutral-text);
+    }
+
+    &[type="error"] {
+        background-color: var(--blueberry-mire-negative-background);
+        border: 1px solid var(--blueberry-mire-negative-text);
+    }
+
+    &[position="header"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    &[position="footer"] {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+navigationtabbar {
+    background-color: var(--blueberry-mire-window-background-color);
+
+    &.header {
+        border-bottom: 1px solid var(--blueberry-mire-window-border-color);
+    }
+
+    &.footer {
+        border-top: 1px solid var(--blueberry-mire-window-border-color);
+    }
+}
+
+navigationtabbutton {
+    height: 54px; /* grid-unit * 3 */
+    padding: var(--blueberry-mire-small-spacing);
+    inset: var(--blueberry-mire-small-spacing);
+    spacing: var(--blueberry-mire-small-spacing);
+
+    icon-size: var(--blueberry-mire-icon-size-smallmedium);
+    border-radius: var(--blueberry-mire-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: start;
+    icon-alignment-horizontal: start;
+
+    color: var(--blueberry-mire-window-text-color);
+
+    &:disabled {
+        color: var(--blueberry-mire-window-disabled-text-color);
+    }
+
+    &:hovered
+    {
+        background-color: var(--blueberry-mire-highlight-hover-color);
+    }
+
+    &:pressed
+    {
+        background-color: var(--blueberry-mire-highlight-hover-color);
+        border-color: var(--blueberry-mire-highlight-color);
+        box-shadow: none;
+    }
+
+    &:checked
+    {
+        color: var(--blueberry-mire-window-text-color);
+        background-color: var(--blueberry-mire-highlight-hover-color);
+        border: 1px solid var(--blueberry-mire-highlight-color);
+    }
+
+    &[display="text-beside-icon"] {
+        height: 0px;
+        padding: 12px var(--blueberry-mire-small-spacing) 12px var(--blueberry-mire-grid-unit); /* small-spacing + large-spacing */
+        spacing: var(--blueberry-mire-grid-unit);
+        icon-size: var(--blueberry-mire-icon-size-small);
+    }
+
+    &[display="text-under-icon"] {
+        icon-alignment: content center stack-center 0;
+        text-alignment: content center stack-center 1;
+    }
+}
+
+overlaydrawer
+{
+    background-color: var(--blueberry-mire-view-background-color);
+    color: var(--blueberry-mire-view-text-color);
+
+    &.modal
+    {
+        background-color: var(--blueberry-mire-window-background-color);
+        color: var(--blueberry-mire-window-text-color);
+    }
+
+    /* Collapsible sidebar expects 32px in Kirigami by default */
+    itemdelegate {
+        width: var(--blueberry-mire-icon-size-medium);
+        height: var(--blueberry-mire-icon-size-medium);
+    }
+
+    &[colorset="window"]
+    {
+        background-color: var(--blueberry-mire-window-background-color);
+        color: var(--blueberry-mire-window-text-color);
+    }
+}

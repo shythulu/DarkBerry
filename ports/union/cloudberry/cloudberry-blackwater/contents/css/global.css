@@ -1,0 +1,51 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+@property --cloudberry-blackwater-color-group {
+    syntax: "<string>";
+    inherits: true;
+    initial-value: "active";
+}
+
+@property --cloudberry-blackwater-color-set {
+    syntax: "<string>";
+    inherits: true;
+}
+
+.inactive {
+    --cloudberry-blackwater-color-group: "inactive";
+}
+
+:disabled {
+    --cloudberry-blackwater-color-group: "disabled";
+}
+
+[color-set="window"] {
+    --cloudberry-blackwater-color-set: "window";
+}
+
+[color-set="button"] {
+    --cloudberry-blackwater-color-set: "button";
+}
+
+[color-set="view"] {
+    --cloudberry-blackwater-color-set: "view";
+}
+
+[color-set="selection"] {
+    --cloudberry-blackwater-color-set: "selection";
+}
+
+[color-set="tooltip"] {
+    --cloudberry-blackwater-color-set: "tooltip";
+}
+
+[color-set="complementary"] {
+    --cloudberry-blackwater-color-set: "complementary";
+}
+
+[color-set="header"] {
+    --cloudberry-blackwater-color-set: "header";
+}

@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --crowberry-fen-minimal-spacing: 2px;
+    --crowberry-fen-small-spacing: 4px;
+    --crowberry-fen-medium-spacing: 6px;
+    --crowberry-fen-large-spacing: 8px;
+    --crowberry-fen-grid-unit: 18px;
+    --crowberry-fen-corner-radius: 5px;
+
+    /* Icon sizes */
+    --crowberry-fen-icon-size-small: 16px;
+    --crowberry-fen-icon-size-smallmedium: 22px;
+    --crowberry-fen-icon-size-medium: 32px;
+    --crowberry-fen-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --crowberry-fen-small-element-size: 16px;
+    --crowberry-fen-medium-element-size: 24px;
+    --crowberry-fen-large-element-size: 32px;
+    --crowberry-fen-scrollbar-size: 20px;
+    --crowberry-fen-non-interactive-scrollbar-size: 10px;
+    --crowberry-fen-menu-item-width: 150px;
+    --crowberry-fen-text-field-width: 200px;
+
+    /* Colors */
+    --crowberry-fen-highlight-color: var(--crowberry-fen-kcs-active-selection-background-normal);
+    --crowberry-fen-highlight-text-color: var(--crowberry-fen-kcs-active-selection-foreground-text);
+    --crowberry-fen-highlight-hover-color: modify-color(var(--crowberry-fen-highlight-color) set-alpha 0.3);
+
+    --crowberry-fen-window-text-color: var(--crowberry-fen-kcs-active-window-foreground-text);
+    --crowberry-fen-window-background-color: var(--crowberry-fen-kcs-active-window-background-normal);
+    --crowberry-fen-window-background-alternate-color: var(--crowberry-fen-kcs-active-window-background-alternate);
+    --crowberry-fen-window-border-color: var(--crowberry-fen-kcs-active-window-decoration-frame);
+    --crowberry-fen-window-highlight-color: mix(var(--crowberry-fen-window-background-color), var(--crowberry-fen-highlight-color), 0.5);
+    --crowberry-fen-window-border-highlight-color: var(--crowberry-fen-highlight-color);
+
+    --crowberry-fen-view-text-color: var(--crowberry-fen-kcs-active-view-foreground-text);
+    --crowberry-fen-view-background-color: var(--crowberry-fen-kcs-active-view-background-normal);
+    --crowberry-fen-view-background-alternate-color: var(--crowberry-fen-kcs-active-view-background-alternate);
+    --crowberry-fen-view-border-color: var(--crowberry-fen-kcs-active-view-decoration-frame);
+    --crowberry-fen-view-highlight-color: mix(var(--crowberry-fen-view-background-color), var(--crowberry-fen-highlight-color), 0.5);
+
+    --crowberry-fen-header-text-color: var(--crowberry-fen-kcs-active-header-foreground-text);
+    --crowberry-fen-header-background-color: var(--crowberry-fen-kcs-active-header-background-normal);
+    --crowberry-fen-header-background-inactive-color: var(--crowberry-fen-kcs-inactive-header-background-normal);
+    --crowberry-fen-header-border-color: var(--crowberry-fen-kcs-active-header-decoration-frame);
+
+    --crowberry-fen-complementary-text-color: var(--crowberry-fen-kcs-active-complementary-foreground-text);
+    --crowberry-fen-complementary-background-color: var(--crowberry-fen-kcs-active-complementary-background-normal);
+
+    --crowberry-fen-positive-text: var(--crowberry-fen-kcs-active-view-foreground-positive);
+    --crowberry-fen-neutral-text: var(--crowberry-fen-kcs-active-view-foreground-neutral);
+    --crowberry-fen-negative-text: var(--crowberry-fen-kcs-active-view-foreground-negative);
+    --crowberry-fen-positive-background: var(--crowberry-fen-kcs-active-view-background-positive);
+    --crowberry-fen-neutral-background: var(--crowberry-fen-kcs-active-view-background-neutral);
+    --crowberry-fen-negative-background: var(--crowberry-fen-kcs-active-view-background-negative);
+
+    --crowberry-fen-changed-foreground: var(--crowberry-fen-neutral-text);
+    --crowberry-fen-changed-background: var(--crowberry-fen-neutral-background);
+
+    --crowberry-fen-card-background-color: var(--crowberry-fen-view-background-color);
+    --crowberry-fen-card-text-color: var(--crowberry-fen-view-text-color);
+    --crowberry-fen-card-border-color: var(--crowberry-fen-view-border-color);
+    --crowberry-fen-card-hover-color: mix(var(--crowberry-fen-card-background-color), var(--crowberry-fen-highlight-color), 0.1);
+    --crowberry-fen-card-pressed-color: mix(var(--crowberry-fen-card-background-color), var(--crowberry-fen-highlight-color), 0.3);
+
+    --crowberry-fen-focus-outline-alpha: 0.3;
+    --crowberry-fen-focus-color: modify-color(var(--crowberry-fen-kcs-active-window-decoration-focus) set-alpha var(--crowberry-fen-focus-outline-alpha));
+
+    --crowberry-fen-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --crowberry-fen-window-disabled-text-color: var(--crowberry-fen-kcs-disabled-window-foreground-text);
+    --crowberry-fen-window-disabled-background-color: var(--crowberry-fen-kcs-disabled-window-background-normal);
+    --crowberry-fen-window-disabled-border-color: var(--crowberry-fen-kcs-disabled-window-decoration-frame);
+
+    --crowberry-fen-view-disabled-text-color: var(--crowberry-fen-kcs-disabled-view-foreground-text);
+    --crowberry-fen-view-disabled-background-color: var(--crowberry-fen-kcs-disabled-view-background-normal);
+    --crowberry-fen-view-disabled-border-color: var(--crowberry-fen-kcs-disabled-view-decoration-frame);
+
+    --crowberry-fen-header-disabled-text-color: var(--crowberry-fen-kcs-disabled-header-foreground-text);
+    --crowberry-fen-header-disabled-background-color: var(--crowberry-fen-kcs-disabled-header-background-normal);
+    --crowberry-fen-header-disabled-border-color: var(--crowberry-fen-kcs-disabled-header-decoration-frame);
+
+    --crowberry-fen-complementary-disabled-text-color: var(--crowberry-fen-kcs-disabled-complementary-foreground-text);
+
+    --crowberry-fen-highlight-disabled-color: mix(var(--crowberry-fen-window-disabled-background-color), var(--crowberry-fen-highlight-color), 0.2);
+    --crowberry-fen-highlight-disabled-text-color: mix(var(--crowberry-fen-window-disabled-text-color), var(--crowberry-fen-highlight-text-color), 0.2);
+
+    --crowberry-fen-card-disabled-background-color: var(--crowberry-fen-view-disabled-background-color);
+    --crowberry-fen-card-disabled-text-color: var(--crowberry-fen-view-disabled-text-color);
+    --crowberry-fen-card-disabled-border-color: var(--crowberry-fen-view-disabled-border-color);
+
+    /* Standard Elements */
+    --crowberry-fen-focus-outline: 2px solid var(--crowberry-fen-focus-ring-color);
+    --crowberry-fen-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --crowberry-fen-indicator-color: modify-color(var(--crowberry-fen-window-text-color) set-alpha 0.4);
+    --crowberry-fen-indicator-press-color: modify-color(var(--crowberry-fen-window-text-color) set-alpha 0.7);
+    --crowberry-fen-indicator-current-color: modify-color(var(--crowberry-fen-window-text-color) set-alpha 0.95);
+}

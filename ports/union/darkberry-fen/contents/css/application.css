@@ -1,0 +1,424 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Application-structural elements like windows, drawers, etc.
+ */
+
+:root {
+    --darkberry-fen-window-active-background-color: var(--darkberry-fen-kcs-active-window-background-normal);
+    --darkberry-fen-window-active-text-color: var(--darkberry-fen-kcs-active-window-foreground-text);
+    --darkberry-fen-window-active-border-color: var(--darkberry-fen-kcs-active-window-decoration-frame);
+
+    --darkberry-fen-window-inactive-background-color: var(--darkberry-fen-kcs-inactive-window-background-normal);
+    --darkberry-fen-window-inactive-text-color: var(--darkberry-fen-kcs-inactive-window-foreground-text);
+    --darkberry-fen-window-inactive-border-color: var(--darkberry-fen-kcs-inactive-window-decoration-frame);
+
+    --darkberry-fen-header-active-background-color: var(--darkberry-fen-kcs-active-header-background-normal);
+    --darkberry-fen-header-active-text-color: var(--darkberry-fen-kcs-active-header-foreground-text);
+    --darkberry-fen-header-active-border-color: var(--darkberry-fen-kcs-active-header-decoration-frame);
+
+    --darkberry-fen-header-inactive-background-color: var(--darkberry-fen-kcs-inactive-header-background-normal);
+    --darkberry-fen-header-inactive-text-color: var(--darkberry-fen-kcs-inactive-header-foreground-text);
+    --darkberry-fen-header-inactive-border-color: var(--darkberry-fen-kcs-inactive-header-decoration-frame);
+
+    --darkberry-fen-complementary-active-background-color: var(--darkberry-fen-kcs-active-header-background-normal);
+    --darkberry-fen-complementary-active-text-color: var(--darkberry-fen-kcs-active-header-foreground-text);
+    --darkberry-fen-complementary-active-border-color: var(--darkberry-fen-kcs-active-header-decoration-frame);
+
+    --darkberry-fen-complementary-inactive-background-color: var(--darkberry-fen-kcs-inactive-header-background-normal);
+    --darkberry-fen-complementary-inactive-text-color: var(--darkberry-fen-kcs-inactive-header-foreground-text);
+    --darkberry-fen-complementary-inactive-border-color: var(--darkberry-fen-kcs-inactive-header-decoration-frame);
+}
+
+applicationwindow
+{
+    background-color: var(--darkberry-fen-window-active-background-color);
+    color: var(--darkberry-fen-window-active-text-color);
+
+    &.inactive {
+        background-color: var(--darkberry-fen-window-inactive-background-color);
+        color: var(--darkberry-fen-window-inactive-text-color);
+    }
+}
+
+page
+{
+    background-color: var(--darkberry-fen-window-background-color);
+    color: var(--darkberry-fen-window-text-color);
+
+    .inactive & {
+        background-color: var(--darkberry-fen-window-inactive-background-color);
+        color: var(--darkberry-fen-window-inactive-text-color);
+    }
+}
+
+toolbar
+{
+    height: 46px; /* large-element-size + medium-spacing + large-spacing */
+    padding: var(--darkberry-fen-small-spacing);
+    padding-top: var(--darkberry-fen-medium-spacing);
+    padding-bottom: var(--darkberry-fen-large-spacing);
+    color: var(--darkberry-fen-window-active-text-color);
+    background-color: var(--darkberry-fen-window-active-background-color);
+
+    &.footer {
+        border-top: 1px solid var(--darkberry-fen-window-active-border-color);
+    }
+
+    &.header {
+        border-bottom: 1px solid var(--darkberry-fen-window-active-border-color);
+    }
+
+    .inactive & {
+        background-color: var(--darkberry-fen-window-inactive-background-color);
+        border-color: var(--darkberry-fen-window-inactive-border-color);
+    }
+
+    &.header,
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        background-color: var(--darkberry-fen-header-active-background-color);
+        border-color: var(--darkberry-fen-header-active-border-color);
+
+        .inactive & {
+            background-color: var(--darkberry-fen-header-inactive-background-color);
+            border-color: var(--darkberry-fen-header-inactive-border-color);
+        }
+    }
+
+    &.header[colorset="window"]
+    {
+        background-color: var(--darkberry-fen-window-active-background-color);
+        border-color: var(--darkberry-fen-window-active-border-color);
+
+        .inactive & {
+            background-color: var(--darkberry-fen-window-inactive-background-color);
+            border-color: var(--darkberry-fen-window-inactive-border-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &,
+    &.header[colorset="complementary"]
+    {
+        background-color: var(--darkberry-fen-complementary-active-background-color);
+        color: var(--darkberry-fen-complementary-active-text-color);
+        border-color: var(--darkberry-fen-complementary-active-border-color);
+
+        .inactive & {
+            background-color: var(--darkberry-fen-complementary-inactive-background-color);
+            color: var(--darkberry-fen-complementary-inactive-text-color);
+            border-color: var(--darkberry-fen-complementary-active-border-color);
+        }
+    }
+
+    & > separator {
+        width: 1px;
+        height: 1px;
+        border: none;
+        border-radius: 0px;
+        background-color: var(--darkberry-fen-window-border-color);
+        padding: 0px;
+    }
+
+    & > handle {
+        width: 4px;
+        height: 4px;
+        border: none;
+        border-radius: 0px;
+        border-left: 1px solid var(--darkberry-fen-window-border-color);
+        border-right: 1px solid var(--darkberry-fen-window-border-color);
+        padding: 0px;
+    }
+}
+
+drawer
+{
+    color: var(--darkberry-fen-view-text-color);
+    background-color: var(--darkberry-fen-view-background-color);
+
+    &.modal {
+        color: var(--darkberry-fen-window-text-color);
+        background-color: var(--darkberry-fen-window-active-background-color);
+
+        .inactive & {
+            background-color: var(--darkberry-fen-window-inactive-background-color);
+        }
+    }
+}
+
+scrollview {
+    &.vertical-scroll {
+        padding-right: var(--darkberry-fen-scrollbar-size);
+    }
+
+    &.horizontal-scroll {
+        padding-bottom: var(--darkberry-fen-scrollbar-size);
+    }
+
+    &.framed-background
+    {
+        background-color: var(--darkberry-fen-view-background-color);
+        border: 1px solid var(--darkberry-fen-view-border-color);
+        border-radius: var(--darkberry-fen-corner-radius);
+    }
+}
+
+splitview {
+    & handle {
+        width: 1px;
+        height: 1px;
+        background-color: var(--darkberry-fen-window-border-color);
+    }
+
+    &.horizontal handle {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    &.vertical handle {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
+
+pageindicator {
+    spacing: var(--darkberry-fen-small-spacing);
+}
+
+pageindicatordelegate {
+    background-color: var(--darkberry-fen-indicator-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    &:pressed {
+        background-color: var(--darkberry-fen-indicator-press-color);
+    }
+
+    &.current {
+        background-color: var(--darkberry-fen-indicator-current-color);
+    }
+}
+
+pane
+{
+    padding: var(--darkberry-fen-large-spacing);
+    background-color: var(--darkberry-fen-window-background-color);
+}
+
+frame,
+groupbox,
+framemenu,
+framewindow
+{
+    padding: var(--darkberry-fen-large-spacing);
+    border: 1px solid var(--darkberry-fen-window-border-color);
+    border-radius: var(--darkberry-fen-corner-radius);
+    .inactive & {
+        border-color: var(--darkberry-fen-window-inactive-border-color);
+    }
+}
+
+splitter {
+    width: 1px;
+    background-color: var(--darkberry-fen-window-border-color);
+}
+
+frame,
+listview,
+treeview,
+tableview,
+columnview,
+scrollview,
+textfield,
+textarea {
+    &:visual-focus {
+        border: 1px solid var(--darkberry-fen-highlight-color);
+    }
+    &[shape="no-frame"] {
+        border: none;
+    }
+    &[shape="panel"],
+    &[shape="box"] {
+        border-radius: var(--darkberry-fen-corner-radius);
+        border: 1px solid var(--darkberry-fen-window-border-color);
+        background-color: var(--darkberry-fen-view-background-color);
+
+        .inactive & {
+            background-color: var(--darkberry-fen-window-inactive-background-color);
+            border-color: var(--darkberry-fen-window-inactive-border-color);
+        }
+    }
+    &[shape="vertical-line"],
+    &[shape="horizontal-line"] {
+        border-radius: 0px;
+        border: none;
+        background-color: var(--darkberry-fen-window-border-color);
+        padding: 0px;
+        inset: 1px;
+    }
+    &[shape="vertical-line"] {
+        width: 1px;
+    }
+    &[shape="horizontal-line"] {
+        height: 1px;
+    }
+    /* Legacy hints that applications use to drive Breeze style */
+    &.dock-left,
+    &.dock-right,
+    &.dock-top,
+    &.dock-bottom,
+    &.left-edge,
+    &.right-edge,
+    &.top-edge,
+    &.bottom-edge {
+        border: none;
+        border-radius: 0px;
+    }
+    &.left-edge {
+        border-left: 1px solid var(--darkberry-fen-window-border-color);
+    }
+    &.right-edge {
+        border-right: 1px solid var(--darkberry-fen-window-border-color);
+    }
+    &.top-edge {
+        border-top: 1px solid var(--darkberry-fen-window-border-color);
+    }
+    &.bottom-edge {
+        border-bottom: 1px solid var(--darkberry-fen-window-border-color);
+    }
+}
+
+groupbox {
+    padding: var(--darkberry-fen-small-spacing);
+    border: 1px solid var(--darkberry-fen-window-border-color);
+    border-radius: var(--darkberry-fen-corner-radius);
+    color: var(--darkberry-fen-window-text-color);
+    background-color: var(--darkberry-fen-window-background-color);
+
+    & > header {
+        color: var(--darkberry-fen-window-text-color);
+    }
+    icon-alignment: content start start 0;
+    text-alignment: content center start 0;
+    spacing: var(--darkberry-fen-small-spacing);
+    width: 200px;
+}
+
+
+dockwidget {
+    width: var(--darkberry-fen-small-element-size);
+    height: var(--darkberry-fen-small-element-size);
+    color: var(--darkberry-fen-header-text-color);
+    background-color: var(--darkberry-fen-header-background-color);
+    icon-alignment: content center center 0;
+    text-alignment: content center center 1;
+    padding: var(--darkberry-fen-small-spacing);
+    &:visual-focus,
+    &:active-focus {
+        border: 1px solid var(--darkberry-fen-highlight-color);
+    }
+
+    floatbutton,
+    closebutton {
+        width: var(--darkberry-fen-small-element-size);
+        height: var(--darkberry-fen-small-element-size);
+    }
+
+    floatbutton {
+        layout-alignment: content start center 0;
+        icon-name: "window-restore";
+    }
+
+    closebutton {
+        layout-alignment: content end center 0;
+        icon-name: "window-close-symbolic";
+    }
+}
+
+scrollareacorner {
+    background-color: var(--darkberry-fen-window-background-color);
+    color: var(--darkberry-fen-window-text-color);
+}
+
+panel,
+groupbox {
+    &.flat {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+rubberband {
+    background-color: var(--darkberry-fen-highlight-hover-color);
+    border: 1px solid var(--darkberry-fen-highlight-color);
+    border-radius: var(--darkberry-fen-corner-radius);
+}
+
+titlebar {
+    width: var(--darkberry-fen-small-element-size);
+    height: var(--darkberry-fen-small-element-size);
+    color: var(--darkberry-fen-header-text-color);
+    background-color: var(--darkberry-fen-header-background-color);
+    icon-alignment: content center fill 0;
+    text-alignment: content center fill 1;
+    icon-size: var(--darkberry-fen-icon-size-small);
+
+    systemmenu,
+    minimizebutton,
+    maximizebutton,
+    closebutton,
+    normalbutton,
+    shadebutton,
+    helpbutton {
+        width: var(--darkberry-fen-small-element-size);
+        height: var(--darkberry-fen-small-element-size);
+    }
+
+    systemmenu {
+        layout-alignment: content start fill 0;
+        icon-name: "application-menu-symbolic";
+    }
+    minimizebutton {
+        layout-alignment: content end fill 0;
+        icon-name: "window-minimize-symbolic";
+    }
+    maximizebutton {
+        layout-alignment: content end fill 1;
+        icon-name: "window-maximize-symbolic";
+    }
+    closebutton {
+        layout-alignment: content end fill 2;
+        icon-name: "window-close-symbolic";
+    }
+    shadebutton {
+        layout-alignment: content start fill 2;
+        icon-name: "window-shade-symbolic";
+    }
+    helpbutton {
+        layout-alignment: content start fill -1;
+        icon-name: "help-contextual-symbolic";
+    }
+
+    normalbutton {
+        layout-alignment: content start fill 1;
+    }
+
+    &.maximized {
+        maximizebutton {
+            icon-name: "window-restore-symbolic";
+        }
+    }
+
+    &.minimized {
+        minimizebutton {
+            icon-name: "empty";
+        }
+    }
+
+}

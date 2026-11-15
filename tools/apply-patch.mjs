@@ -47,12 +47,17 @@ for (const [role, change] of Object.entries(patch.roles || {})) {
   log.push(`role ${role}: ${JSON.stringify(old)} → ${JSON.stringify(change.value)}`);
 }
 
+// The VS Code template sets both tab lines itself. An override is written only for a line whose
+// wanted state differs from the template's; a value ending in 00 is transparent, so that line is off.
+const OVR = "src/overrides/vscode.json";
 if (patch.vscodeTabLine) {
-  const O = read("src/overrides/vscode.json");
-  O.overrides = (O.overrides || []).filter((o) => !["tab.activeBorderTop", "tab.activeBorder"].includes(o.key));
-  if (patch.vscodeTabLine !== "none") {
-    const key = patch.vscodeTabLine === "top" ? "tab.activeBorderTop" : "tab.activeBorder";
-    O.overrides.push({ key, value: "{ui.tab.indicator}", why: `Show the active-tab highlight as a ${patch.vscodeTabLine} line, matching Firefox and kitty.` });
+  const O = fs.existsSync(OVR) ? read(OVR) : { overrides: [] };
+  const lines = { top: "tab.activeBorderTop", bottom: "tab.activeBorder" };
+  const T = read("src/ports/vscode.json").colors;
+  O.overrides = (O.overrides || []).filter((o) => !Object.values(lines).includes(o.key));
+  for (const [side, key] of Object.entries(lines)) {
+    const value = side === patch.vscodeTabLine ? "{ui.tab.indicator}" : "{ui.tab.indicator}00";
+    if (T[key] !== value) O.overrides.push({ key, value, why: patch.vscodeTabLine === "none" ? "No active-tab line, chosen in Darkberry Studio." : `Show the active-tab highlight as a ${patch.vscodeTabLine} line, chosen in Darkberry Studio.` });
   }
   var tabOverrides = O;
   log.push(`VS Code tab line: ${patch.vscodeTabLine}`);
@@ -60,6 +65,7 @@ if (patch.vscodeTabLine) {
 
 if (errors.length) { errors.forEach((e) => console.error("error:", e)); console.error("Nothing was written."); process.exit(1); }
 write("src/palette.json", P); write("src/roles.json", R);
-if (tabOverrides) write("src/overrides/vscode.json", tabOverrides);
+// An empty override list is no file at all: the build reads a missing file as no overrides.
+if (tabOverrides) { if (tabOverrides.overrides.length) write(OVR, tabOverrides); else if (fs.existsSync(OVR)) fs.rmSync(OVR); }
 log.forEach((l) => console.log(l));
 if (flag !== "--no-build") execFileSync("node", ["build.mjs"], { stdio: "inherit" });

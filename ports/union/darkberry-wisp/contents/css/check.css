@@ -1,0 +1,216 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Checkable controls like checkboxes and radio buttons.
+ */
+
+:root
+{
+    --darkberry-wisp-checkable-indicator-active-background-color: var(--darkberry-wisp-button-active-background-color);
+    --darkberry-wisp-checkable-indicator-active-text-color: var(--darkberry-wisp-button-active-text-color);
+    --darkberry-wisp-checkable-indicator-active-border-color: var(--darkberry-wisp-button-active-border-color);
+    --darkberry-wisp-checkable-indicator-active-highlight-color: var(--darkberry-wisp-button-active-highlight-color);
+    --darkberry-wisp-checkable-indicator-active-highlight-border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+
+    --darkberry-wisp-checkable-disabled-text-color: var(--darkberry-wisp-window-disabled-text-color);
+    --darkberry-wisp-checkable-indicator-disabled-background-color: var(--darkberry-wisp-button-disabled-background-color);
+    --darkberry-wisp-checkable-indicator-disabled-text-color: var(--darkberry-wisp-button-disabled-text-color);
+    --darkberry-wisp-checkable-indicator-disabled-border-color: var(--darkberry-wisp-button-disabled-border-color);
+
+    --darkberry-wisp-switch-indicator-active-background-color: mix(var(--darkberry-wisp-button-active-background-color), var(--darkberry-wisp-button-active-text-color), 0.1);
+    --darkberry-wisp-switch-indicator-active-border-color: var(--darkberry-wisp-button-active-border-color);
+    --darkberry-wisp-switch-indicator-active-highlight-color: var(--darkberry-wisp-button-active-highlight-color);
+    --darkberry-wisp-switch-indicator-active-highlight-border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+
+    --darkberry-wisp-switch-handle-active-background-color: var(--darkberry-wisp-button-active-background-color);
+    --darkberry-wisp-switch-handle-active-border-color: var(--darkberry-wisp-button-active-border-color);
+    --darkberry-wisp-switch-handle-active-highlight-border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+
+    --darkberry-wisp-switch-disabled-text-color: var(--darkberry-wisp-window-disabled-text-color);
+    --darkberry-wisp-switch-indicator-disabled-background-color: var(--darkberry-wisp-window-disabled-background-color);
+    --darkberry-wisp-switch-indicator-disabled-border-color: var(--darkberry-wisp-button-disabled-border-color);
+    --darkberry-wisp-switch-handle-disabled-background-color: var(--darkberry-wisp-button-disabled-background-color);
+    --darkberry-wisp-switch-handle-disabled-border-color: var(--darkberry-wisp-button-disabled-border-color);
+}
+
+checkbox,
+radiobutton,
+switch
+{
+    icon-alignment-horizontal: start;
+    text-wrap-mode: wrap;
+
+    padding: 0px var(--darkberry-wisp-small-spacing);
+    spacing: var(--darkberry-wisp-small-spacing);
+
+    color: var(--darkberry-wisp-window-text-color);
+
+    text-alignment: content fill center 0;
+}
+
+checkbox,
+checkdelegate,
+menuitem,
+radiobutton,
+radiodelegate
+{
+    width: var(--darkberry-wisp-medium-element-size);
+    height: var(--darkberry-wisp-medium-element-size);
+    & > indicator
+    {
+        width: var(--darkberry-wisp-icon-size-small);
+        height: var(--darkberry-wisp-icon-size-small);
+
+        layout-alignment-container: content;
+        layout-alignment-horizontal: start;
+        layout-alignment-order: -1;
+
+        background-color: var(--darkberry-wisp-checkable-indicator-active-background-color);
+        border: 1px solid var(--darkberry-wisp-checkable-indicator-active-border-color);
+        color: var(--darkberry-wisp-checkable-indicator-active-text-color);
+        border-radius: var(--darkberry-wisp-corner-radius);
+    }
+
+    &:hovered > indicator
+    {
+        border-color: var(--darkberry-wisp-checkable-indicator-active-highlight-border-color);
+    }
+
+    &:checked > indicator
+    {
+        background-color: var(--darkberry-wisp-checkable-indicator-active-highlight-color);
+        border-color: var(--darkberry-wisp-checkable-indicator-active-highlight-border-color);
+    }
+
+    &:visual-focus > indicator
+    {
+        outline: var(--darkberry-wisp-focus-outline);
+        border-color: var(--darkberry-wisp-checkable-indicator-active-highlight-border-color);
+    }
+
+    &:disabled
+    {
+        color: var(--darkberry-wisp-checkable-disabled-text-color);
+
+        & > indicator
+        {
+            border: 1px solid var(--darkberry-wisp-checkable-indicator-disabled-border-color);
+            color: var(--darkberry-wisp-checkable-indicator-disabled-text-color);
+            background-color: var(--darkberry-wisp-checkable-indicator-disabled-background-color);
+        }
+    }
+
+    &:checked:disabled > indicator
+    {
+        background-color: var(--darkberry-wisp-checkable-indicator-disabled-background-color);
+        background-image-mask-color: var(--darkberry-wisp-checkable-indicator-disabled-text-color);
+    }
+}
+
+checkbox,
+checkdelegate,
+menuitem
+{
+    &:checked > indicator
+    {
+        background-image: url("../images/checkmark.svg") mask var(--darkberry-wisp-checkable-indicator-active-text-color);
+    }
+    &.indeterminate > indicator {
+        background-image: url("../images/indeterminate.svg") mask var(--darkberry-wisp-checkable-indicator-active-text-color);
+    }
+}
+
+radiobutton,
+radiodelegate,
+menuitem.exclusive
+{
+    & > indicator
+    {
+        border-radius: 8px;
+    }
+
+    &:checked > indicator
+    {
+        background-image: url("../images/radio.svg") mask var(--darkberry-wisp-checkable-indicator-active-text-color);
+    }
+}
+
+switch,
+switchdelegate
+{
+    & > indicator
+    {
+        layout-alignment-container: content;
+        layout-alignment-horizontal: start;
+
+        width: 36px;
+        height: 12px;
+        border-radius: 6px;
+
+        background-color: var(--darkberry-wisp-switch-indicator-active-background-color);
+        border: 1px solid var(--darkberry-wisp-switch-indicator-active-border-color);
+
+        & > handle
+        {
+            width: var(--darkberry-wisp-grid-unit);
+            height: var(--darkberry-wisp-grid-unit);
+            border-radius: 9px; /* grid-unit / 2 */
+
+            background-color: var(--darkberry-wisp-switch-handle-active-background-color);
+            border: 1px solid var(--darkberry-wisp-switch-handle-active-border-color);
+        }
+    }
+
+    &:hovered
+    {
+        & > indicator
+        {
+            border-color: var(--darkberry-wisp-switch-indicator-active-highlight-border-color);
+
+            & > handle
+            {
+                border-color: var(--darkberry-wisp-switch-handle-active-highlight-border-color);
+            }
+        }
+    }
+
+    &:checked > indicator
+    {
+        background-color: var(--darkberry-wisp-switch-indicator-active-highlight-color);
+        border-color: var(--darkberry-wisp-switch-indicator-active-highlight-border-color);
+    }
+
+    &:visual-focus > indicator > handle
+    {
+        outline: var(--darkberry-wisp-focus-outline);
+    }
+
+    &:disabled
+    {
+        color: var(--darkberry-wisp-switch-disabled-text-color);
+
+        & > indicator {
+            border-color: var(--darkberry-wisp-switch-indicator-disabled-border-color);
+            background-color: var(--darkberry-wisp-switch-indicator-disabled-background-color);
+
+            & > handle {
+                border-color: var(--darkberry-wisp-switch-handle-disabled-border-color);
+                background-color: var(--darkberry-wisp-switch-handle-disabled-background-color);
+            }
+        }
+    }
+}
+
+radiobutton.changed,
+radiodelegate.changed,
+checkbox.changed,
+checkdelegate.changed,
+switch.changed {
+    indicator {
+        background-color: var(--darkberry-wisp-changed-background);
+        border: 1px solid var(--darkberry-wisp-changed-foreground);
+    }
+}

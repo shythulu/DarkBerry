@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --crowberry-wisp-minimal-spacing: 2px;
+    --crowberry-wisp-small-spacing: 4px;
+    --crowberry-wisp-medium-spacing: 6px;
+    --crowberry-wisp-large-spacing: 8px;
+    --crowberry-wisp-grid-unit: 18px;
+    --crowberry-wisp-corner-radius: 5px;
+
+    /* Icon sizes */
+    --crowberry-wisp-icon-size-small: 16px;
+    --crowberry-wisp-icon-size-smallmedium: 22px;
+    --crowberry-wisp-icon-size-medium: 32px;
+    --crowberry-wisp-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --crowberry-wisp-small-element-size: 16px;
+    --crowberry-wisp-medium-element-size: 24px;
+    --crowberry-wisp-large-element-size: 32px;
+    --crowberry-wisp-scrollbar-size: 20px;
+    --crowberry-wisp-non-interactive-scrollbar-size: 10px;
+    --crowberry-wisp-menu-item-width: 150px;
+    --crowberry-wisp-text-field-width: 200px;
+
+    /* Colors */
+    --crowberry-wisp-highlight-color: var(--crowberry-wisp-kcs-active-selection-background-normal);
+    --crowberry-wisp-highlight-text-color: var(--crowberry-wisp-kcs-active-selection-foreground-text);
+    --crowberry-wisp-highlight-hover-color: modify-color(var(--crowberry-wisp-highlight-color) set-alpha 0.3);
+
+    --crowberry-wisp-window-text-color: var(--crowberry-wisp-kcs-active-window-foreground-text);
+    --crowberry-wisp-window-background-color: var(--crowberry-wisp-kcs-active-window-background-normal);
+    --crowberry-wisp-window-background-alternate-color: var(--crowberry-wisp-kcs-active-window-background-alternate);
+    --crowberry-wisp-window-border-color: var(--crowberry-wisp-kcs-active-window-decoration-frame);
+    --crowberry-wisp-window-highlight-color: mix(var(--crowberry-wisp-window-background-color), var(--crowberry-wisp-highlight-color), 0.5);
+    --crowberry-wisp-window-border-highlight-color: var(--crowberry-wisp-highlight-color);
+
+    --crowberry-wisp-view-text-color: var(--crowberry-wisp-kcs-active-view-foreground-text);
+    --crowberry-wisp-view-background-color: var(--crowberry-wisp-kcs-active-view-background-normal);
+    --crowberry-wisp-view-background-alternate-color: var(--crowberry-wisp-kcs-active-view-background-alternate);
+    --crowberry-wisp-view-border-color: var(--crowberry-wisp-kcs-active-view-decoration-frame);
+    --crowberry-wisp-view-highlight-color: mix(var(--crowberry-wisp-view-background-color), var(--crowberry-wisp-highlight-color), 0.5);
+
+    --crowberry-wisp-header-text-color: var(--crowberry-wisp-kcs-active-header-foreground-text);
+    --crowberry-wisp-header-background-color: var(--crowberry-wisp-kcs-active-header-background-normal);
+    --crowberry-wisp-header-background-inactive-color: var(--crowberry-wisp-kcs-inactive-header-background-normal);
+    --crowberry-wisp-header-border-color: var(--crowberry-wisp-kcs-active-header-decoration-frame);
+
+    --crowberry-wisp-complementary-text-color: var(--crowberry-wisp-kcs-active-complementary-foreground-text);
+    --crowberry-wisp-complementary-background-color: var(--crowberry-wisp-kcs-active-complementary-background-normal);
+
+    --crowberry-wisp-positive-text: var(--crowberry-wisp-kcs-active-view-foreground-positive);
+    --crowberry-wisp-neutral-text: var(--crowberry-wisp-kcs-active-view-foreground-neutral);
+    --crowberry-wisp-negative-text: var(--crowberry-wisp-kcs-active-view-foreground-negative);
+    --crowberry-wisp-positive-background: var(--crowberry-wisp-kcs-active-view-background-positive);
+    --crowberry-wisp-neutral-background: var(--crowberry-wisp-kcs-active-view-background-neutral);
+    --crowberry-wisp-negative-background: var(--crowberry-wisp-kcs-active-view-background-negative);
+
+    --crowberry-wisp-changed-foreground: var(--crowberry-wisp-neutral-text);
+    --crowberry-wisp-changed-background: var(--crowberry-wisp-neutral-background);
+
+    --crowberry-wisp-card-background-color: var(--crowberry-wisp-view-background-color);
+    --crowberry-wisp-card-text-color: var(--crowberry-wisp-view-text-color);
+    --crowberry-wisp-card-border-color: var(--crowberry-wisp-view-border-color);
+    --crowberry-wisp-card-hover-color: mix(var(--crowberry-wisp-card-background-color), var(--crowberry-wisp-highlight-color), 0.1);
+    --crowberry-wisp-card-pressed-color: mix(var(--crowberry-wisp-card-background-color), var(--crowberry-wisp-highlight-color), 0.3);
+
+    --crowberry-wisp-focus-outline-alpha: 0.3;
+    --crowberry-wisp-focus-color: modify-color(var(--crowberry-wisp-kcs-active-window-decoration-focus) set-alpha var(--crowberry-wisp-focus-outline-alpha));
+
+    --crowberry-wisp-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --crowberry-wisp-window-disabled-text-color: var(--crowberry-wisp-kcs-disabled-window-foreground-text);
+    --crowberry-wisp-window-disabled-background-color: var(--crowberry-wisp-kcs-disabled-window-background-normal);
+    --crowberry-wisp-window-disabled-border-color: var(--crowberry-wisp-kcs-disabled-window-decoration-frame);
+
+    --crowberry-wisp-view-disabled-text-color: var(--crowberry-wisp-kcs-disabled-view-foreground-text);
+    --crowberry-wisp-view-disabled-background-color: var(--crowberry-wisp-kcs-disabled-view-background-normal);
+    --crowberry-wisp-view-disabled-border-color: var(--crowberry-wisp-kcs-disabled-view-decoration-frame);
+
+    --crowberry-wisp-header-disabled-text-color: var(--crowberry-wisp-kcs-disabled-header-foreground-text);
+    --crowberry-wisp-header-disabled-background-color: var(--crowberry-wisp-kcs-disabled-header-background-normal);
+    --crowberry-wisp-header-disabled-border-color: var(--crowberry-wisp-kcs-disabled-header-decoration-frame);
+
+    --crowberry-wisp-complementary-disabled-text-color: var(--crowberry-wisp-kcs-disabled-complementary-foreground-text);
+
+    --crowberry-wisp-highlight-disabled-color: mix(var(--crowberry-wisp-window-disabled-background-color), var(--crowberry-wisp-highlight-color), 0.2);
+    --crowberry-wisp-highlight-disabled-text-color: mix(var(--crowberry-wisp-window-disabled-text-color), var(--crowberry-wisp-highlight-text-color), 0.2);
+
+    --crowberry-wisp-card-disabled-background-color: var(--crowberry-wisp-view-disabled-background-color);
+    --crowberry-wisp-card-disabled-text-color: var(--crowberry-wisp-view-disabled-text-color);
+    --crowberry-wisp-card-disabled-border-color: var(--crowberry-wisp-view-disabled-border-color);
+
+    /* Standard Elements */
+    --crowberry-wisp-focus-outline: 2px solid var(--crowberry-wisp-focus-ring-color);
+    --crowberry-wisp-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --crowberry-wisp-indicator-color: modify-color(var(--crowberry-wisp-window-text-color) set-alpha 0.4);
+    --crowberry-wisp-indicator-press-color: modify-color(var(--crowberry-wisp-window-text-color) set-alpha 0.7);
+    --crowberry-wisp-indicator-current-color: modify-color(var(--crowberry-wisp-window-text-color) set-alpha 0.95);
+}

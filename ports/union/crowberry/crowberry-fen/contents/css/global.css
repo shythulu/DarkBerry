@@ -1,0 +1,51 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+@property --crowberry-fen-color-group {
+    syntax: "<string>";
+    inherits: true;
+    initial-value: "active";
+}
+
+@property --crowberry-fen-color-set {
+    syntax: "<string>";
+    inherits: true;
+}
+
+.inactive {
+    --crowberry-fen-color-group: "inactive";
+}
+
+:disabled {
+    --crowberry-fen-color-group: "disabled";
+}
+
+[color-set="window"] {
+    --crowberry-fen-color-set: "window";
+}
+
+[color-set="button"] {
+    --crowberry-fen-color-set: "button";
+}
+
+[color-set="view"] {
+    --crowberry-fen-color-set: "view";
+}
+
+[color-set="selection"] {
+    --crowberry-fen-color-set: "selection";
+}
+
+[color-set="tooltip"] {
+    --crowberry-fen-color-set: "tooltip";
+}
+
+[color-set="complementary"] {
+    --crowberry-fen-color-set: "complementary";
+}
+
+[color-set="header"] {
+    --crowberry-fen-color-set: "header";
+}

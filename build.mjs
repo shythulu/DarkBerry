@@ -3,7 +3,7 @@
 // Layer 1  src/palette.json            what each colour is
 // Layer 2  src/roles.json              what each colour means (shared by every port)
 // Layer 3  src/overrides/<port>.json   rare, logged, port-only exceptions
-// Templates in src/ports/ and src/vscode/ reference roles (or palette names for
+// Templates in src/ports/ reference roles (or palette names for
 // structural chrome) inside {braces}. Literal hex values are a build error.
 import fs from "node:fs";
 import os from "node:os";
@@ -13,6 +13,7 @@ import { rgb, toHsl, fromHsl, toOklch, contrast, deltaE } from "./lib/color.mjs"
 import { indexRoles, flavourContext } from "./lib/resolve.mjs";
 import { fillSettled, FILL_ON_BACKGROUND, TEXT_ON_FILL } from "./lib/derive.mjs";
 import { Canvas } from "./lib/png.mjs";
+import { loadTints, NON_ACCENT } from "./lib/tints.mjs";
 
 const root = path.dirname(new URL(import.meta.url).pathname);
 const read = (rel) => fs.readFileSync(path.resolve(root, rel), "utf8");
@@ -40,10 +41,9 @@ const TINTS = readJson("src/tints.json"); delete TINTS.$comment;
 const TINT = P.variant ? P.variant.name : null;
 if (TINT && !TINTS[TINT]) { console.error(`error: ${argPalette} is the variant "${TINT}", which src/tints.json does not list`); process.exit(1); }
 if (TINT) { P.id = TINT; P.name = TINTS[TINT].name; }
-const EDITIONS = Object.entries(TINTS).map(([id, t]) => {
-  const pal = id === "darkberry" ? readJson("src/palette.json") : readJson(`src/variants/${id}.json`);
-  if (id !== "darkberry" && pal.variant?.name !== id) errors.push(`src/variants/${id}.json is the variant "${pal.variant?.name}", not "${id}"`);
-  return { id, ...t, pal, colour: pal.flavours.mire.colors[t.swatch] || pal.flavours.mire.colors.tint };
+const TINT_LIST = loadTints().map((t) => {
+  if (t.id !== "darkberry" && t.pal.variant?.name !== t.id) errors.push(`src/variants/${t.id}.json is the variant "${t.pal.variant?.name}", not "${t.id}"`);
+  return { ...t, colour: t.pal.flavours.mire.colors[t.swatch] || t.pal.flavours.mire.colors.tint };
 });
 // Where a tint's output goes. Ports keep each tint in a subfolder, except the two whose
 // format holds every tint at once: VS Code's with-tints extension and the GIMP palette file.
@@ -62,7 +62,6 @@ const PUBLISHER = "Slacklab";
 const PUBLISHER_URL = "https://www.slacklab.ca";
 const words = (n) => ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"][n] ?? String(n); // listing copy spells small counts (docs/COPY.md)
 const ROLES = readJson("src/roles.json");
-const NON_ACCENT = ["jam", "onjam", "tint"];
 const HEX_LITERAL = /#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/;
 
 // ---------- roles ----------
@@ -126,8 +125,10 @@ function fill(ctx, text, port) {
       catch (e) { errors.push(`${port}: ${e.message}`); return "#000000"; }
     });
 }
+// A port with no src/overrides/<port>.json has no overrides.
+const overridesOf = (port) => { const rel = `src/overrides/${port}.json`; return fs.existsSync(path.join(root, rel)) ? readJson(rel).overrides || [] : []; };
 function applyOverrides(port, kind, content, ctx) {
-  const list = readJson(`src/overrides/${port}.json`).overrides || [];
+  const list = overridesOf(port);
   for (const o of list) {
     if (!o.why) errors.push(`override ${port}/${o.key} has no 'why'`);
     if (HEX_LITERAL.test(o.value)) errors.push(`override ${port}/${o.key} uses a literal hex value`);
@@ -156,6 +157,7 @@ const alacrittyT = read("src/ports/alacritty.toml");
 const obsidianT = read("src/ports/obsidian.css"), obsidianManifestT = read("src/ports/obsidian.json");
 const kdeT = read("src/ports/kde.colors"), konsoleT = read("src/ports/konsole.colorscheme");
 const nimbalystT = read("src/ports/nimbalyst.json"), microT = read("src/ports/micro.micro");
+const claudeCodeT = read("src/ports/claude-code.json");
 const t3codeT = read("src/ports/t3code.json"), thunderbirdT = read("src/ports/thunderbird.json"), thunderbirdCss = read("src/ports/thunderbird.css");
 const darkReaderT = read("src/ports/dark-reader.txt");
 const kateT = read("src/ports/kate.theme"), chromeT = read("src/ports/chrome.json");
@@ -169,6 +171,65 @@ const tmuxT = read("src/ports/tmux.conf");
 const tinted8T = read("src/ports/tinted8.yaml"), base24T = read("src/ports/base24.yaml");
 const gtk3T = read("src/ports/gtk-3.0.scss"), gtk4T = read("src/ports/gtk-4.0.scss"), darktableT = read("src/ports/darktable.css"), gimpT = read("src/ports/gimp.css");
 const btopT = read("src/ports/btop.theme");
+// Union (KDE Plasma 6.8+): Breeze's own Union style from vendor/union-breeze/, made
+// independent of the active colour scheme. Every custom-color("kcolorscheme", ...) lookup
+// becomes a var(--kcs-...) that the template defines, and UNION_REWRITES makes the few
+// changes a variable cannot. The vendored text is the same for every flavour, so it is
+// transformed once; only darkberry.css (the filled template) differs per flavour.
+const unionT = read("src/ports/union.css");
+const UNION_VENDOR = "vendor/union-breeze/contents";
+const UNION_REWRITES = [
+  // [file, pattern, replacement, places it must change, why]
+  ["css/style.css", /^@import "variables\.css";$/m, '@import "darkberry.css";\n\n@import "variables.css";', 1,
+    "the --kcs-* variables have to exist before Breeze's own variables read them"],
+  ["css/tabs.css", /^(\s*border-(?:top|bottom|left|right)-color: )var\(--highlight-color\);$/gm, "$1var(--tab-indicator-color);", 4,
+    "the active tab's stripe is the tab indicator in every Darkberry port, not the selection fill"],
+  ["css/tabs.css", /^(\s*--tab-highlight-border: var\(--tab-highlight-size\) solid )var\(--highlight-color\);$/m, "$1var(--tab-indicator-color);", 1,
+    "the same stripe on Qt Widgets tab bars"],
+  ["css/*", /(outline: \d+px solid |--focus-outline: 2px solid |--button-focus: 2px solid )var\(--(?:button-active-)?focus-color\);/g, "$1var(--focus-ring-color);", 5,
+    "Breeze draws focus rings at 30% of the focus colour, under the 3:1 that ui.focus has to reach"],
+];
+const unionVendor = (() => {
+  const files = {}, base = path.join(root, UNION_VENDOR);
+  const walkDir = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const f = path.join(d, e.name); if (e.isDirectory()) walkDir(f); else files[path.relative(base, f)] = fs.readFileSync(f); } };
+  walkDir(base);
+  const defined = new Set([...unionT.matchAll(/^\s*(--kcs-[\w-]+):/gm)].map((m) => m[1])), used = new Set();
+  for (const [f, buf] of Object.entries(files)) {
+    if (!f.endsWith(".css")) continue;
+    files[f] = buf.toString("utf8").replace(/custom-color\(\s*"kcolorscheme"\s*,\s*"(\w+)"\s*,\s*"(\w+)"\s*,\s*"(\w+)"\s*,\s*"(\w+)"\s*\)/g, (_, ...parts) => {
+      const name = `--kcs-${parts.slice(0, 4).join("-")}`; used.add(name);
+      if (!defined.has(name)) errors.push(`union: ${f} looks up ${name.slice(6)} in the colour scheme, and src/ports/union.css does not define ${name}`);
+      return `var(${name})`;
+    });
+    if (/custom-color\(/.test(files[f])) errors.push(`union: ${f} has a custom-color() lookup build.mjs does not recognise`);
+  }
+  for (const name of defined) if (!used.has(name)) errors.push(`union: src/ports/union.css defines ${name}, which Breeze no longer looks up`);
+  for (const [glob, re, to, want, why] of UNION_REWRITES) {
+    let n = 0;
+    for (const f of Object.keys(files).filter((f) => glob.endsWith("*") ? f.startsWith(glob.slice(0, -1)) && f.endsWith(".css") : f === glob))
+      files[f] = files[f].replace(re, (...m) => { n++; return to.replace(/\$(\d)/g, (_, i) => m[i]); });
+    if (n !== want) errors.push(`union: the rewrite in ${glob} (${why}) changed ${n} places, not ${want}; Breeze has changed, so check the rewrite against vendor/union-breeze/`);
+  }
+  return files;
+})();
+// Union 6.8's CSS parser (cxx-rust-cssparser 1.1.0) keeps one table of custom properties per
+// process, and the first style to define a name wins. So an app that loads two Darkberry
+// styles, such as the Application Style page drawing its previews, paints them all in one
+// flavour. Prefixing every custom property a style defines with the style's id keeps the
+// twenty styles apart. Upstream scopes them per stylesheet from cxx-rust-cssparser 8556191,
+// after 1.1.0; this can go once Plasma ships a release with it.
+const scopeUnionVars = (id, files) => {
+  const css = Object.entries(files).filter(([f]) => f.endsWith(".css")).map(([f, d]) => [f, Buffer.isBuffer(d) ? d.toString("utf8") : d]);
+  const defined = new Set();
+  for (const [, text] of css) for (const m of text.matchAll(/(?:@property\s+|(?:^|[{;])\s*)(--[a-z][\w-]*)\s*(?=[:{])/gm)) defined.add(m[1]);
+  const scoped = { ...files };
+  for (const [f, text] of css) {
+    scoped[f] = text.replace(/(?<![\w-])--[a-z][\w-]*(?![\w-])/g, (name) => defined.has(name) ? `--${id}-${name.slice(2)}` : name);
+    const code = scoped[f].replace(/\/\*[\s\S]*?\*\//g, "");
+    for (const m of code.matchAll(new RegExp(`(?<![\\w-])--(?!${id}-)[a-z][\\w-]*`, "g"))) errors.push(`union: ${f} uses ${m[0]}, which no file in the ${id} style defines`);
+  }
+  return scoped;
+};
 // KDE and Konsole take decimal triplets, not hex, so the filled text is converted at the end.
 const to256 = (text) => text.replace(/"#([0-9a-f]{6})"/g, (_, h) => {
   const [r, g, b] = rgb("#" + h).map((v) => v * 255), steps = [0, 95, 135, 175, 215, 255];
@@ -269,7 +330,7 @@ const alignYamlNotes = (text) => {
   return lines.join("\n");
 };
 const toTriplets = (text) => text.replace(/#([0-9a-f]{6})/g, (_, h) => rgb("#" + h).map((v) => Math.round(v * 255)).join(","));
-const vscodeT = read("src/vscode/template.json");
+const vscodeT = read("src/ports/vscode.json");
 
 // VS Code lint: syntax colours and key UI colours must go through roles
 const VS = JSON.parse(vscodeT);
@@ -319,6 +380,12 @@ mustBe("t3code", t3codeT, "messageAction", "{ui.fill} under {ui.on.fill}", /"mes
 mustBe("t3code", t3codeT, "focus", "{ui.focus}", /"focus": "\{ui\.focus\}"/);
 mustBe("t3code", t3codeT, "terminalCursor", "{ui.cursor}", /"terminalCursor": "\{ui\.cursor\}"/);
 mustBe("t3code", t3codeT, "errorForeground", "{ui.error} on {ui.error.surface}", /"errorForeground": "\{ui\.error\}",\n\s*"errorSurface": "\{ui\.error\.surface\}"/);
+mustBe("claude-code", claudeCodeT, "text", "{ui.text}", /"text": "\{ui\.text\}"/);
+mustBe("claude-code", claudeCodeT, "selectionBg", "{ui.selection}", /"selectionBg": "\{ui\.selection\}"/);
+mustBe("claude-code", claudeCodeT, "status", "{ui.success}, {ui.error}, {ui.warning}", /"success": "\{ui\.success\}",\n\s*"error": "\{ui\.error\}",\n\s*"warning": "\{ui\.warning\}"/);
+mustBe("claude-code", claudeCodeT, "diff lines", "{ui.diff.added} and {ui.diff.removed}", /"diffAdded": "\{ui\.diff\.added\}",\n\s*"diffRemoved": "\{ui\.diff\.removed\}"/);
+mustBe("claude-code", claudeCodeT, "inverseText", "{ui.on.error} (text on any status fill)", /"inverseText": "\{ui\.on\.error\}"/);
+mustBe("claude-code", claudeCodeT, "promptBorder", "{ui.border.inactive}", /"promptBorder": "\{ui\.border\.inactive\}"/);
 mustBe("thunderbird", thunderbirdT, "sidebar_highlight", "{ui.fill} under {ui.on.fill} (Thunderbird's row selection and primary buttons)", /"sidebar_highlight": "\{ui\.fill\}",\n\s*"sidebar_highlight_text": "\{ui\.on\.fill\}"/);
 mustBe("thunderbird", thunderbirdT, "popup_highlight", "{ui.fill} under {ui.on.fill}", /"popup_highlight": "\{ui\.fill\}",\n\s*"popup_highlight_text": "\{ui\.on\.fill\}"/);
 mustBe("thunderbird", thunderbirdT, "toolbar_field_highlight", "{ui.selection} under {ui.text}", /"toolbar_field_highlight": "\{ui\.selection\}",\n\s*"toolbar_field_highlight_text": "\{ui\.text\}"/);
@@ -374,6 +441,15 @@ mustBe("tmux", tmuxT, "status-left", "{ui.on.fill} on {ui.fill} (the session bad
 mustBe("tmux", tmuxT, "menu-selected-style", "{ui.on.fill} on {ui.fill}", /^set -gq? menu-selected-style "fg=\{ui\.on\.fill\},bg=\{ui\.fill\}"$/m);
 mustBe("tmux", tmuxT, "pane-active-border-style", "{ui.border.active}", /^set -g pane-active-border-style "fg=\{ui\.border\.active\}"$/m);
 mustBe("tmux", tmuxT, "pane-border-style", "{ui.border.inactive}", /^set -g pane-border-style "fg=\{ui\.border\.inactive\}"$/m);
+mustBe("union", unionT, "--kcs-active-selection-*", "{ui.fill} under {ui.on.fill} (Breeze's highlight: selected rows, pressed and checked controls)", /^\s*--kcs-active-selection-background-normal: \{ui\.fill\};\n\s*--kcs-active-selection-foreground-text: \{ui\.on\.fill\};$/m);
+mustBe("union", unionT, "--kcs-active-view-background-normal", "{ui.background}", /^\s*--kcs-active-view-background-normal: \{ui\.background\};$/m);
+mustBe("union", unionT, "--kcs-active-view-background-alternate", "{ui.row.alternate}", /^\s*--kcs-active-view-background-alternate: \{ui\.row\.alternate\};$/m);
+mustBe("kde", kdeT, "[Colors:View] BackgroundAlternate", "{ui.row.alternate}", /\[Colors:View\]\nBackgroundAlternate=\{ui\.row\.alternate\}$/m);
+mustBe("union", unionT, "--kcs-active-view-foreground-text", "{ui.text}", /^\s*--kcs-active-view-foreground-text: \{ui\.text\};$/m);
+mustBe("union", unionT, "--kcs-active-*-decoration-focus", "{ui.focus}", /^(?![\s\S]*decoration-focus: (?!\{ui\.focus\};))/);
+mustBe("union", unionT, "--focus-ring-color", "{ui.focus}", /^\s*--focus-ring-color: \{ui\.focus\};$/m);
+mustBe("union", unionT, "--tab-indicator-color", "an opaque {ui.tab.indicator}", /^\s*--tab-indicator-color: \{ui\.tab\.indicator\};$/m);
+mustBe("union", unionT, "status foregrounds and backgrounds", "{ui.success}/{ui.warning}/{ui.error} on their .surface roles", /--kcs-active-view-foreground-positive: \{ui\.success\};\n\s*--kcs-active-view-foreground-neutral: \{ui\.warning\};\n\s*--kcs-active-view-foreground-negative: \{ui\.error\};\n\s*--kcs-active-view-background-positive: \{ui\.success\.surface\};\n\s*--kcs-active-view-background-neutral: \{ui\.warning\.surface\};\n\s*--kcs-active-view-background-negative: \{ui\.error\.surface\};/);
 mustBe("tmux", tmuxT, "copy-mode-current-match-style", "{ui.mark.text} on {ui.mark1}", /^set -g copy-mode-current-match-style "fg=\{ui\.mark\.text\},bg=\{ui\.mark1\}"$/m);
 
 for (const t of VS.tokenColors) for (const v of [t.settings.foreground, t.settings.background].filter(Boolean))
@@ -408,6 +484,10 @@ for (const ctx of ctxs) {
     const lightColors = applyOverrides("t3code", "json", JSON.parse(fill(light, t3codeT, "t3code")).colors, light);
     out(`ports/t3code/${slug}.json`, { ...t3, variants: { light: lightColors } });
   }
+  // Claude Code stores the file name as the theme's slug (custom:<slug>), so the slug is the name.
+  const cc = JSON.parse(fill(ctx, claudeCodeT, "claude-code"));
+  cc.overrides = applyOverrides("claude-code", "json", cc.overrides, ctx);
+  out(`ports/claude-code/${slug}.json`, cc);
   // Dark Reader: dark flavours only, one settings sheet each, named as its Color Scheme list names them.
   // With a custom Selection it paints selected text white under HSL lightness 0.5 and black above,
   // whatever Text is, so the selection has to stay dark enough for white in every flavour and tint.
@@ -421,7 +501,9 @@ for (const ctx of ctxs) {
   const kt = JSON.parse(fill(ctx, kateT, "kate"));
   kt["editor-colors"] = applyOverrides("kate", "json", kt["editor-colors"], ctx);
   out(`ports/kate/${slug}.theme`, kt);
-  out(`ports/chrome/${full}/manifest.json`, toRgbArrays(fill(ctx, chromeT, "chrome")));
+  const cm = JSON.parse(fill(ctx, chromeT, "chrome"));
+  cm.theme.colors = applyOverrides("chrome", "json", cm.theme.colors, ctx);
+  out(`ports/chrome/${full}/manifest.json`, toRgbArrays(JSON.stringify(cm, null, 2) + "\n"));
   const lsdOut = applyOverrides("lsd", "lines", fill(ctx, lsdT, "lsd"), ctx);
   out(`ports/lsd/${slug}.yaml`, lsdOut);
   // lsd below 1.1 rejects hex strings and then drops the whole theme without a word
@@ -459,7 +541,24 @@ for (const ctx of ctxs) {
   // Kate's window takes a KDE colour scheme and its editor a syntax theme; the port ships
   // both, so Kate is themed whole without changing the desktop's colours.
   out(`ports/kate/${full}.colors`, kdeColors);
-  out(`ports/konsole/${full}.colorscheme`, toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
+  // A Union style is a folder named by its id: metadata.json, then contents/ with the CSS
+  // and images. The id is what kdeglobals' unionStyle and UNION_STYLE_NAME take.
+  out(`ports/union/${slug}/metadata.json`, {
+    "input-type": "css", "input-version": 1, name: full, description: meta(ctx).DESCRIPTION, version: P.version,
+    license: "MIT AND BSD-2-Clause", url: P.homepage, authors: [P.author, "Arjen Hiemstra (Breeze)", "Akseli Lahtinen (Breeze)"],
+  });
+  const unionCss = scopeUnionVars(slug, { "css/darkberry.css": applyOverrides("union", "lines", fill(ctx, unionT, "union"), ctx), ...unionVendor });
+  for (const [f, data] of Object.entries(unionCss)) out(`ports/union/${slug}/contents/${f}`, data);
+  out(`ports/union/${slug}/LICENSE.Breeze`, fs.readFileSync(path.join(root, "vendor/union-breeze/LICENSE")));
+  // The edition's drawn logo, in the folder Union's docs name for a style's images. Union 6.8's
+  // metadata.json has no icon key yet, so nothing shows it; it travels with the style for when one does.
+  // SVG only: Qt reads it, and the 390 KB PNG copied into twenty styles would add 8 MB to ports/.
+  for (const ext of ["svg"]) {
+    const logo = path.join(root, `assets/logos/${P.id}-logo.${ext}`);
+    if (!fs.existsSync(logo)) errors.push(`union: assets/logos/${P.id}-logo.${ext} is missing (node tools/logo.mjs draws it)`);
+    else out(`ports/union/${slug}/contents/images/${P.id}-logo.${ext}`, fs.readFileSync(logo));
+  }
+  out(`ports/konsole/${full}.colorscheme`,toTriplets(applyOverrides("konsole", "lines", fill(ctx, konsoleT, "konsole"), ctx)));
   out(`ports/obsidian/${full}/theme.css`, applyOverrides("obsidian", "lines", fill(ctx, obsidianT, "obsidian"), ctx));
   out(`ports/obsidian/${full}/manifest.json`, JSON.parse(fill(ctx, obsidianManifestT, "obsidian")));
   const vs = JSON.parse(fill(ctx, vscodeT, "vscode"));
@@ -488,17 +587,17 @@ if (!TINT) {
   // The two formats that hold every tint in one unit: a second VS Code extension with all
   // twenty themes (each tint build adds its four under with-tints/themes/), and one GIMP
   // palette file with every tint's colours.
-  const tintNames = EDITIONS.filter((e) => e.id !== "darkberry").map((e) => e.name);
+  const tintNames = TINT_LIST.filter((e) => e.id !== "darkberry").map((e) => e.name);
   out("ports/vscode/with-tints/package.json", {
     name: `${P.id}-with-tints-theme`, displayName: `${P.name} with tints`,
-    description: `${P.name}'s four flavours in ${words(EDITIONS.length)} tints: ${EDITIONS.map((e) => e.name).slice(0, -1).join(", ")} and ${EDITIONS.at(-1).name}. ${words(EDITIONS.length * ctxs.length)[0].toUpperCase()}${words(EDITIONS.length * ctxs.length).slice(1)} themes.`, version: P.version,
+    description: `${P.name}'s four flavours in ${words(TINT_LIST.length)} tints: ${TINT_LIST.map((e) => e.name).slice(0, -1).join(", ")} and ${TINT_LIST.at(-1).name}. ${words(TINT_LIST.length * ctxs.length)[0].toUpperCase()}${words(TINT_LIST.length * ctxs.length).slice(1)} themes.`, version: P.version,
     publisher: PUBLISHER, license: "MIT", engines: { vscode: "^1.70.0" }, icon: "icon.png",
     homepage: P.homepage, repository: { type: "git", url: P.repository },
     categories: ["Themes"], keywords: ["theme", "dark", "light", "berry", "plum", "wine"],
-    contributes: { themes: EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
+    contributes: { themes: TINT_LIST.flatMap((e) => Object.entries(e.pal.flavours).map(([fid, f]) => ({ label: `${e.name} ${f.name}`, uiTheme: f.dark ? "vs-dark" : "vs", path: `./themes/${e.id}-${fid}-color-theme.json` }))) },
   });
   for (const ctx of ctxs) out(`ports/vscode/with-tints/themes/${P.id}-${ctx.id}-color-theme.json`, vsThemes[`${P.id}-${ctx.id}`]);
-  out(`ports/gpl/${P.id}-with-tints.gpl`, gpl(`${P.name} with tints`, EDITIONS.flatMap((e) => Object.entries(e.pal.flavours).flatMap(([, f]) => gplOrder.map((k) => [f.colors[k], `${e.name} ${f.name} ${label(k)}`])))));
+  out(`ports/gpl/${P.id}-with-tints.gpl`, gpl(`${P.name} with tints`, TINT_LIST.flatMap((e) => Object.entries(e.pal.flavours).flatMap(([, f]) => gplOrder.map((k) => [f.colors[k], `${e.name} ${f.name} ${label(k)}`])))));
 }
 
 // ---------- ports/<key>/README.md, assets/ and the README port list ----------
@@ -519,7 +618,7 @@ if (!TINT) {
   };
   // Palette strips per flavour and all four together, for the default and for every tint
   // (a tint's go under assets/previews/<tint>/), the fallback when a port has no screenshot.
-  for (const e of EDITIONS) {
+  for (const e of TINT_LIST) {
     const dir = e.id === "darkberry" ? "assets/previews" : `assets/previews/${e.id}`, fls = Object.entries(e.pal.flavours);
     const all = new Canvas(W, H * fls.length);
     fls.forEach(([fid, f], i) => { strip(all, f, i * H); const one = new Canvas(W, H); strip(one, f, 0); outBin(`${dir}/${fid}.png`, one.png()); });
@@ -553,7 +652,7 @@ if (!TINT) {
   // The tint bar under the badges: one coloured badge per edition, linked to where that
   // edition lives for this port; the edition the README is about is left unlinked.
   const badge = (e) => `<img src="https://img.shields.io/badge/${encodeURIComponent(e.name)}-${e.colour.slice(1)}?style=for-the-badge" alt="${e.name}"/>`;
-  const tintBar = (hrefOf) => `<p align="center">\n${EDITIONS.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${badge(e)}</a>` : `\t${badge(e)}`; }).join("\n")}\n</p>`;
+  const tintBar = (hrefOf) => `<p align="center">\n${TINT_LIST.map((e) => { const h = hrefOf(e); return h ? `\t<a href="${h}">${badge(e)}</a>` : `\t${badge(e)}`; }).join("\n")}\n</p>`;
   // Every README's Usage opens with where the port is published, or with the folder its files
   // are in when it is not published anywhere yet; the hand-install steps from src/usage/ follow.
   // A tinted edition links the listing's tints URL when that is a separate item.
@@ -593,7 +692,7 @@ if (!TINT) {
     if (!TINT) {
       writeReadme(port, "", 2, (e) => e.id === "darkberry" ? null : port.key === "vscode" ? "with-tints/" : port.key === "gpl" ? `${e.id}.gpl` : `${e.id}/`, usage);
       if (port.key === "vscode") {
-        const note = `This extension carries every tint: ${EDITIONS.map((e) => e.name).join(", ")}, four flavours each. Install it instead of the plain ${P.name} extension, not beside it, or the ${P.name} themes are listed twice. The packaged file is \`${P.id}-with-tints-theme-<version>.vsix\`.`;
+        const note = `This extension carries every tint: ${TINT_LIST.map((e) => e.name).join(", ")}, four flavours each. Install it instead of the plain ${P.name} extension, not beside it, or the ${P.name} themes are listed twice. The packaged file is \`${P.id}-with-tints-theme-<version>.vsix\`.`;
         // route() sends tint builds' themes here, so this README and package.json are the default build's
         const vsWithTints = { ...port, name: `${port.name} (with tints)` };
         writeReadme(vsWithTints, "with-tints", 3, (e) => e.id === "darkberry" ? "../" : null, `${note}\n\n${usage}`);
@@ -633,6 +732,8 @@ for (const [port, text] of [["kitty", kittyT], ["ghostty", ghosttyT], ["alacritt
 // The GTK templates are SCSS: `$name: {role};`, traced under the GTK version and variable name.
 for (const [v, t] of [[3, gtk3T], [4, gtk4T]])
   for (const line of t.split("\n")) { const m = /^\$(\w+):\s*(.*\{.*);/.exec(line); if (m) traceExpr("gtk", `gtk-${v}.0 $${m[1]}`, m[2]); }
+// The Union template is one CSS :root block: `--name: {role};`, traced under the variable name.
+for (const line of unionT.split("\n")) { const m = /^\s*(--[\w-]+):\s*(.*\{.*?);/.exec(line); if (m) traceExpr("union", m[1], m[2]); }
 // Neovim's template is Lua: H.Group = { ... } and H["@capture"] = { ... } lines, and
 // the vim.g.terminal_color_N assignments; the key is the group or capture name.
 for (const line of neovimT.split("\n")) { const m = /^(?:H\.|H\[")?([@\w.]+)(?:"\])?\s*=\s*(.*\{.*)$/.exec(line.trim()); if (m && !line.startsWith("--")) traceExpr("neovim", m[1], m[2]); }
@@ -660,16 +761,20 @@ walk("thunderbird", JSON.parse(thunderbirdT).theme.colors, "colors");
 walk("chrome", JSON.parse(chromeT).theme.colors, "colors");
 walk("nimbalyst", JSON.parse(nimbalystT.replace(/%ISDARK%/, "true")).colors, "colors");
 walk("t3code", JSON.parse(t3codeT).colors, "colors");
+walk("claude-code", JSON.parse(claudeCodeT).overrides, "overrides");
 walk("kate", JSON.parse(kateT));
 walk("vscode", VS.colors, "colors");
 walk("vscode", { tokenColors: VS.tokenColors.map((t) => ({ name: t.name, ...t.settings })) });
-for (const { key: port } of REG.ports) if (exists(`src/overrides/${port}.json`)) for (const o of readJson(`src/overrides/${port}.json`).overrides || []) traceExpr(port, `${o.key} (override)`, o.value);
+for (const { key: port } of REG.ports) for (const o of overridesOf(port)) traceExpr(port, `${o.key} (override)`, o.value);
 out("docs/trace.json", trace);
 
 // ---------- docs/studio.html (interactive editor, regenerated with current data) ----------
 {
-  const vo = readJson("src/overrides/vscode.json").overrides || [];
-  const tl = vo.find((o) => o.key === "tab.activeBorderTop" && !/\}00$/.test(o.value)) ? "top" : vo.find((o) => o.key === "tab.activeBorder" && !/\}00$/.test(o.value)) ? "bottom" : "none";
+  // The tab line the VS Code theme ends up with: the template's value, unless an override replaces it.
+  // A value ending in 00 is fully transparent, so that line is off.
+  const tab = { ...VS.colors, ...Object.fromEntries(overridesOf("vscode").map((o) => [o.key, o.value])) };
+  const lineOn = (k) => tab[k] && !/\}00$/.test(tab[k]);
+  const tl = lineOn("tab.activeBorderTop") ? "top" : lineOn("tab.activeBorder") ? "bottom" : "none";
   const data = { version: P.version, palette: P, roles: ROLES, tabLine: tl, bindings: trace.map((t) => [t.port, t.key, t.expr]) };
   const lib = read("lib/color.mjs").replace(/^export /gm, "");
   out("docs/studio.html", read("src/studio/studio.html").replace("__DATA__", () => JSON.stringify(data)).replace("__COLOR_LIB__", () => lib));
@@ -817,4 +922,4 @@ console.log(CHECK_ONLY ? `Checked ${path.basename(argPalette || "src/palette.jso
   : TINT ? `Built ${P.name} (${ctxs.length} flavours) into ports/*/${TINT}/. ${warnings.length} warning(s).`
   : `Built ${ctxs.length} flavours. ${warnings.length} warning(s). See docs/CHECKS.md, docs/ROLES.md, docs/USAGE.md, docs/specimen.html.`);
 if (!TINT && !CHECK_ONLY && !process.argv.includes("--no-tints"))
-  for (const e of EDITIONS) if (e.id !== "darkberry") execFileSync(process.execPath, [path.join(root, "build.mjs"), `src/variants/${e.id}.json`], { stdio: "inherit", cwd: root });
+  for (const e of TINT_LIST) if (e.id !== "darkberry") execFileSync(process.execPath, [path.join(root, "build.mjs"), `src/variants/${e.id}.json`], { stdio: "inherit", cwd: root });

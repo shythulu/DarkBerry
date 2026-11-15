@@ -1,0 +1,51 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+@property --darkberry-mire-color-group {
+    syntax: "<string>";
+    inherits: true;
+    initial-value: "active";
+}
+
+@property --darkberry-mire-color-set {
+    syntax: "<string>";
+    inherits: true;
+}
+
+.inactive {
+    --darkberry-mire-color-group: "inactive";
+}
+
+:disabled {
+    --darkberry-mire-color-group: "disabled";
+}
+
+[color-set="window"] {
+    --darkberry-mire-color-set: "window";
+}
+
+[color-set="button"] {
+    --darkberry-mire-color-set: "button";
+}
+
+[color-set="view"] {
+    --darkberry-mire-color-set: "view";
+}
+
+[color-set="selection"] {
+    --darkberry-mire-color-set: "selection";
+}
+
+[color-set="tooltip"] {
+    --darkberry-mire-color-set: "tooltip";
+}
+
+[color-set="complementary"] {
+    --darkberry-mire-color-set: "complementary";
+}
+
+[color-set="header"] {
+    --darkberry-mire-color-set: "header";
+}

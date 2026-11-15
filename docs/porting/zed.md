@@ -231,7 +231,7 @@ Files to add:
 |---|---|
 | `src/ports/zed.json` | One theme object: `name`, `appearance`, `style`. `%FULL%` for the name, `%SCHEME%` for the appearance, roles in braces. The header block goes in a `$comment` key inside the theme object, as `src/ports/t3code.json` does |
 | `src/ports/zed.extension.toml` | The manifest with `%VERSION%`, `%AUTHOR%`, `%DESCRIPTION%`, `%REPOSITORY%` |
-| `src/overrides/zed.json` | `{ "overrides": [] }`, override kind `json` |
+| `src/overrides/zed.json` | Only if an exception is needed, override kind `json`. No file means no overrides |
 | `src/usage/zed.md` | Install steps: the extension from `zed: extensions` once published, or copy `themes/darkberry.json` into the user themes folder |
 
 What `build.mjs` has to do that it does not do today:

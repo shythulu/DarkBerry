@@ -1,0 +1,415 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Buttons and button-like controls.
+ */
+
+:root {
+    --darkberry-wisp-button-active-text-color: var(--darkberry-wisp-kcs-active-button-foreground-text);
+    --darkberry-wisp-button-active-background-color: var(--darkberry-wisp-kcs-active-button-background-normal);
+    --darkberry-wisp-button-active-border-color: var(--darkberry-wisp-kcs-active-button-decoration-frame);
+    --darkberry-wisp-button-active-highlight-color: mix(var(--darkberry-wisp-button-active-background-color), var(--darkberry-wisp-highlight-color), 0.333);
+    --darkberry-wisp-button-active-border-highlight-color: var(--darkberry-wisp-highlight-color);
+    --darkberry-wisp-button-active-checked-color: mix(var(--darkberry-wisp-button-active-background-color), var(--darkberry-wisp-button-active-text-color), 0.125);
+    --darkberry-wisp-button-active-focus-color: modify-color(var(--darkberry-wisp-kcs-active-button-decoration-focus) set-alpha var(--darkberry-wisp-focus-outline-alpha));
+
+    --darkberry-wisp-button-active-header-border-color: var(--darkberry-wisp-kcs-active-header-decoration-frame);
+    --darkberry-wisp-button-active-header-highlight-color: mix(var(--darkberry-wisp-header-background-color), var(--darkberry-wisp-highlight-color), 0.333);
+    --darkberry-wisp-button-active-header-checked-color: mix(var(--darkberry-wisp-header-background-color), var(--darkberry-wisp-header-text-color), 0.125);
+
+    --darkberry-wisp-button-inactive-text-color: var(--darkberry-wisp-kcs-inactive-button-foreground-text);
+    --darkberry-wisp-button-inactive-background-color: var(--darkberry-wisp-kcs-inactive-button-background-normal);
+    --darkberry-wisp-button-inactive-border-color: var(--darkberry-wisp-kcs-inactive-button-decoration-frame);
+    --darkberry-wisp-button-inactive-highlight-color: mix(var(--darkberry-wisp-button-inactive-background-color), var(--darkberry-wisp-highlight-color), 0.5);
+    --darkberry-wisp-button-inactive-checked-color: mix(var(--darkberry-wisp-button-inactive-background-color), var(--darkberry-wisp-button-inactive-text-color), 0.2);
+
+    --darkberry-wisp-button-disabled-text-color: var(--darkberry-wisp-kcs-disabled-button-foreground-text);
+    --darkberry-wisp-button-disabled-background-color: var(--darkberry-wisp-kcs-disabled-button-background-normal);
+    --darkberry-wisp-button-disabled-border-color: var(--darkberry-wisp-kcs-disabled-button-decoration-frame);
+    --darkberry-wisp-button-disabled-highlight-color: mix(var(--darkberry-wisp-button-disabled-background-color), var(--darkberry-wisp-highlight-color), 0.333);
+
+    --darkberry-wisp-button-border: 1px solid var(--darkberry-wisp-button-active-border-color);
+    --darkberry-wisp-button-border-highlight: 1px solid var(--darkberry-wisp-button-active-border-highlight-color);
+    --darkberry-wisp-button-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    --darkberry-wisp-button-focus: 2px solid var(--darkberry-wisp-focus-ring-color);
+
+    /* Values derived from Breeze QStyle metrics */
+    --darkberry-wisp-button-default-size: 32px; /* 16 + 2 * 6 + 2 * 2  */
+    --darkberry-wisp-button-padding: 8px; /* 6 + 2 */
+    --darkberry-wisp-button-spacing: 4px;
+    --darkberry-wisp-toolbutton-menu-padding: 2px;
+
+    /* Match Breeze QStyle color */
+    --darkberry-wisp-combobox-popup-background-color: mix(var(--darkberry-wisp-window-background-color), var(--darkberry-wisp-view-background-color), 0.3);
+    --darkberry-wisp-combobox-popup-highlight-color: mix(var(--darkberry-wisp-combobox-popup-background-color), var(--darkberry-wisp-highlight-color), 0.333);
+    --darkberry-wisp-combobox-popup-text-color: var(--darkberry-wisp-window-text-color);
+}
+
+button,
+toolbutton,
+combobox,
+roundbutton,
+delaybutton,
+toolbutton.raised
+{
+    width: var(--darkberry-wisp-button-default-size);
+    height: var(--darkberry-wisp-button-default-size);
+    spacing: var(--darkberry-wisp-button-spacing);
+    padding: var(--darkberry-wisp-button-padding);
+    border-radius: var(--darkberry-wisp-corner-radius);
+
+    layout-alignment: content fill fill 0;
+    text-alignment-horizontal: center;
+    icon-alignment-horizontal: center;
+
+    color: var(--darkberry-wisp-button-active-text-color);
+    border: var(--darkberry-wisp-button-border);
+    background-color: var(--darkberry-wisp-button-active-background-color);
+
+    &:checked
+    {
+        border: var(--darkberry-wisp-button-border);
+        background-color: var(--darkberry-wisp-button-active-checked-color);
+    }
+
+    &:hovered
+    {
+        border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+    }
+
+    &:visual-focus
+    {
+        border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+        outline: var(--darkberry-wisp-button-focus);
+    }
+
+    &:disabled
+    {
+        color: var(--darkberry-wisp-button-disabled-text-color);
+        background-color: var(--darkberry-wisp-button-disabled-background-color);
+        border-color: var(--darkberry-wisp-button-disabled-border-color);
+        box-shadow: none;
+    }
+
+    &.with-menu > indicator {
+        visibility: visible;
+        layout-alignment: content end center 0;
+        width: var(--darkberry-wisp-icon-size-small);
+        height: var(--darkberry-wisp-icon-size-small);
+        /* half of small-spacing */
+        padding-left: var(--darkberry-wisp-toolbutton-menu-padding);
+        padding-right: var(--darkberry-wisp-toolbutton-menu-padding);
+        icon-name: "arrow-down";
+        icon-color: var(--darkberry-wisp-button-active-text-color);
+    }
+
+    &.with-inline-arrow > indicator {
+        visibility: visible;
+        layout-alignment: content end end 0;
+        width: 8px;
+        height: 8px;
+        padding: 1px;
+        icon-name: "arrow-down";
+        icon-color: var(--darkberry-wisp-button-active-text-color);
+    }
+
+    &.with-menu-button > indicator {
+        visibility: visible;
+        width: var(--darkberry-wisp-icon-size-small);
+        height: var(--darkberry-wisp-icon-size-small);
+        /* half of small-spacing */
+        padding-left: var(--darkberry-wisp-toolbutton-menu-padding);
+        padding-right: var(--darkberry-wisp-toolbutton-menu-padding);
+        layout-alignment: content end fill 0;
+        icon-name: "arrow-down";
+        icon-color: var(--darkberry-wisp-button-active-text-color);
+        border-left:  var(--darkberry-wisp-button-border);
+    }
+
+    &.menu-open {
+        border: var(--darkberry-wisp-button-border-highlight);
+        & > indicator {
+            border: var(--darkberry-wisp-button-border-highlight);
+            background-color: var(--darkberry-wisp-button-active-highlight-color);
+            border-radius: var(--darkberry-wisp-corner-radius);
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+
+    &[display="icon-only"].with-menu > indicator {
+        visibility: hidden;
+    }
+
+    &[display="text-under-icon"] {
+        text-alignment-vertical: stack-center;
+        icon-alignment-vertical: stack-center;
+    }
+}
+
+button,
+roundbutton,
+delaybutton
+{
+    box-shadow: var(--darkberry-wisp-button-shadow);
+}
+
+button:pressed,
+toolbutton:pressed,
+combobox:pressed,
+roundbutton:pressed,
+delaybutton:pressed,
+toolbutton.raised:pressed
+{
+    border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+    background-color: var(--darkberry-wisp-button-active-highlight-color);
+    box-shadow: none;
+}
+
+button:checked,
+roundbutton:checked
+{
+    box-shadow: none;
+}
+
+toolbutton,
+button.flat,
+combobox.flat,
+roundbutton.flat
+{
+    border: none;
+    background: none;
+    box-shadow: none;
+
+    &:hovered {
+        border: var(--darkberry-wisp-button-border-highlight);
+    }
+
+    &:visual-focus {
+        border: var(--darkberry-wisp-button-border-highlight);
+    }
+
+    &:pressed {
+        border: var(--darkberry-wisp-button-border-highlight);
+        background-color: var(--darkberry-wisp-button-active-highlight-color);
+    }
+
+    toolbar.header &:checked,
+    applicationheader &:checked
+    {
+        border-color: var(--darkberry-wisp-button-active-header-border-color);
+        background-color: var(--darkberry-wisp-button-active-header-checked-color);
+    }
+
+    toolbar.header &:pressed,
+    applicationheader &:pressed
+    {
+        background-color: var(--darkberry-wisp-button-active-header-highlight-color);
+    }
+
+    &:disabled {
+        border: none;
+        background: none;
+    }
+
+    &.with-menu-button > indicator {
+        border-left: none;
+        &:hovered {
+            border-left: var(--darkberry-wisp-button-border-highlight);
+        }
+    }
+
+    &.menu-open {
+        & > indicator {
+            border-left: var(--darkberry-wisp-button-border-highlight);
+        }
+    }
+
+    &[colorset="window"],
+    [colorset="window"] &
+    {
+        color: var(--darkberry-wisp-window-text-color);
+
+        &:disabled {
+            color: var(--darkberry-wisp-window-disabled-text-color);
+        }
+    }
+
+    &[colorset="view"],
+    [colorset="view"] &
+    {
+        color: var(--darkberry-wisp-view-text-color);
+
+        &:disabled {
+            color: var(--darkberry-wisp-view-disabled-text-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &
+    {
+        color: var(--darkberry-wisp-complementary-text-color);
+
+        &:disabled {
+            color: var(--darkberry-wisp-complementary-disabled-text-color);
+        }
+    }
+
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        color: var(--darkberry-wisp-header-text-color);
+
+        &:disabled {
+            color: var(--darkberry-wisp-header-disabled-text-color);
+        }
+    }
+}
+
+toolbutton
+{
+    /* Ensure default toolbuttons end up with 32px height, not 34px. */
+    icon-size: 24px;
+    padding: var(--darkberry-wisp-medium-spacing) var(--darkberry-wisp-small-spacing);
+}
+
+toolbutton.raised
+{
+    icon-size: var(--darkberry-wisp-icon-size-small);
+    padding: var(--darkberry-wisp-button-padding);
+}
+
+roundbutton
+{
+    border-radius: var(--darkberry-wisp-button-default-size);
+}
+
+combobox
+{
+    layout-alignment: content fill center 0;
+    text-alignment: content fill center 0;
+    icon-alignment: content start center 0;
+    box-shadow: var(--darkberry-wisp-button-shadow);
+    text-wrap-mode: no-wrap;
+    text-elide: right;
+
+    & > indicator {
+        layout-alignment: content end center 0;
+        width: var(--darkberry-wisp-icon-size-small);
+        height: var(--darkberry-wisp-icon-size-small);
+        icon-name: "arrow-down-symbolic";
+        icon-color: var(--darkberry-wisp-button-active-text-color);
+        visibility: visible;
+    }
+
+    &.editable,
+    &.flat.editable
+    {
+        background-color: var(--darkberry-wisp-view-background-color);
+        border: 1px solid var(--darkberry-wisp-view-border-color);
+        box-shadow: none;
+        text-elide: none;
+
+        &:hovered {
+            border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+        }
+
+        &:pressed {
+            border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+
+            & > indicator {
+                icon-color: var(--darkberry-wisp-button-active-border-highlight-color);
+            }
+        }
+
+        &:visual-focus {
+            border-color: var(--darkberry-wisp-button-active-border-highlight-color);
+        }
+
+        &:disabled {
+            background-color: var(--darkberry-wisp-view-disabled-background-color);
+            color: var(--darkberry-wisp-view-disabled-text-color);
+            border-color: var(--darkberry-wisp-view-disabled-border-color);
+        }
+    }
+}
+
+popup.combobox
+{
+    padding: 0px;
+    background-color: var(--darkberry-wisp-combobox-popup-background-color);
+    border-radius: var(--darkberry-wisp-corner-radius);
+
+    itemviewitem:highlight,
+    itemdelegate:highlight {
+        background-color: var(--darkberry-wisp-combobox-popup-highlight-color);
+        border-color: var(--darkberry-wisp-highlight-color);
+        color: var(--darkberry-wisp-combobox-popup-text-color);
+    }
+}
+
+toolseparator {
+    background-color: var(--darkberry-wisp-button-active-border-color);
+
+    &.horizontal {
+        width: var(--darkberry-wisp-large-element-size);
+        height: 1px;
+        inset: 0px var(--darkberry-wisp-small-spacing);
+    }
+
+    &.vertical {
+        width: 1px;
+        height: var(--darkberry-wisp-large-element-size);
+        inset: var(--darkberry-wisp-small-spacing) 0px;
+    }
+
+    toolbar.header &,
+    applicationheader &
+    {
+        background-color: var(--darkberry-wisp-button-active-header-border-color);
+    }
+}
+
+delaybutton {
+    & > fill {
+        border-radius: var(--darkberry-wisp-corner-radius);
+        border: var(--darkberry-wisp-button-border-highlight);
+        background-color: var(--darkberry-wisp-highlight-color);
+    }
+}
+
+tumbler {
+    width: 60px;
+    height: 200px;
+    background-color: var(--darkberry-wisp-view-background-color);
+
+    text {
+        text-alignment-horizontal: center;
+        color: mix(var(--darkberry-wisp-view-background-color), var(--darkberry-wisp-view-text-color), 0.75);
+
+        &:highlighted {
+            color: mix(var(--darkberry-wisp-highlight-color), var(--darkberry-wisp-view-text-color), 0.6);
+        }
+    }
+}
+
+button.changed,
+toolbutton.changed,
+combobox.changed,
+roundbutton.changed,
+delaybutton.changed {
+    background-color: var(--darkberry-wisp-changed-background);
+    border: 1px solid var(--darkberry-wisp-changed-foreground);
+}
+
+
+tabscrollbutton {
+    icon-alignment: content fill fill 0;
+    layout-alignment: content center center 0;
+    icon-size: 16px;
+    width: var(--darkberry-wisp-button-default-size);
+    height: var(--darkberry-wisp-button-default-size);
+}

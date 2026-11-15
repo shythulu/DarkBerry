@@ -1,0 +1,424 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Application-structural elements like windows, drawers, etc.
+ */
+
+:root {
+    --crowberry-blackwater-window-active-background-color: var(--crowberry-blackwater-kcs-active-window-background-normal);
+    --crowberry-blackwater-window-active-text-color: var(--crowberry-blackwater-kcs-active-window-foreground-text);
+    --crowberry-blackwater-window-active-border-color: var(--crowberry-blackwater-kcs-active-window-decoration-frame);
+
+    --crowberry-blackwater-window-inactive-background-color: var(--crowberry-blackwater-kcs-inactive-window-background-normal);
+    --crowberry-blackwater-window-inactive-text-color: var(--crowberry-blackwater-kcs-inactive-window-foreground-text);
+    --crowberry-blackwater-window-inactive-border-color: var(--crowberry-blackwater-kcs-inactive-window-decoration-frame);
+
+    --crowberry-blackwater-header-active-background-color: var(--crowberry-blackwater-kcs-active-header-background-normal);
+    --crowberry-blackwater-header-active-text-color: var(--crowberry-blackwater-kcs-active-header-foreground-text);
+    --crowberry-blackwater-header-active-border-color: var(--crowberry-blackwater-kcs-active-header-decoration-frame);
+
+    --crowberry-blackwater-header-inactive-background-color: var(--crowberry-blackwater-kcs-inactive-header-background-normal);
+    --crowberry-blackwater-header-inactive-text-color: var(--crowberry-blackwater-kcs-inactive-header-foreground-text);
+    --crowberry-blackwater-header-inactive-border-color: var(--crowberry-blackwater-kcs-inactive-header-decoration-frame);
+
+    --crowberry-blackwater-complementary-active-background-color: var(--crowberry-blackwater-kcs-active-header-background-normal);
+    --crowberry-blackwater-complementary-active-text-color: var(--crowberry-blackwater-kcs-active-header-foreground-text);
+    --crowberry-blackwater-complementary-active-border-color: var(--crowberry-blackwater-kcs-active-header-decoration-frame);
+
+    --crowberry-blackwater-complementary-inactive-background-color: var(--crowberry-blackwater-kcs-inactive-header-background-normal);
+    --crowberry-blackwater-complementary-inactive-text-color: var(--crowberry-blackwater-kcs-inactive-header-foreground-text);
+    --crowberry-blackwater-complementary-inactive-border-color: var(--crowberry-blackwater-kcs-inactive-header-decoration-frame);
+}
+
+applicationwindow
+{
+    background-color: var(--crowberry-blackwater-window-active-background-color);
+    color: var(--crowberry-blackwater-window-active-text-color);
+
+    &.inactive {
+        background-color: var(--crowberry-blackwater-window-inactive-background-color);
+        color: var(--crowberry-blackwater-window-inactive-text-color);
+    }
+}
+
+page
+{
+    background-color: var(--crowberry-blackwater-window-background-color);
+    color: var(--crowberry-blackwater-window-text-color);
+
+    .inactive & {
+        background-color: var(--crowberry-blackwater-window-inactive-background-color);
+        color: var(--crowberry-blackwater-window-inactive-text-color);
+    }
+}
+
+toolbar
+{
+    height: 46px; /* large-element-size + medium-spacing + large-spacing */
+    padding: var(--crowberry-blackwater-small-spacing);
+    padding-top: var(--crowberry-blackwater-medium-spacing);
+    padding-bottom: var(--crowberry-blackwater-large-spacing);
+    color: var(--crowberry-blackwater-window-active-text-color);
+    background-color: var(--crowberry-blackwater-window-active-background-color);
+
+    &.footer {
+        border-top: 1px solid var(--crowberry-blackwater-window-active-border-color);
+    }
+
+    &.header {
+        border-bottom: 1px solid var(--crowberry-blackwater-window-active-border-color);
+    }
+
+    .inactive & {
+        background-color: var(--crowberry-blackwater-window-inactive-background-color);
+        border-color: var(--crowberry-blackwater-window-inactive-border-color);
+    }
+
+    &.header,
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        background-color: var(--crowberry-blackwater-header-active-background-color);
+        border-color: var(--crowberry-blackwater-header-active-border-color);
+
+        .inactive & {
+            background-color: var(--crowberry-blackwater-header-inactive-background-color);
+            border-color: var(--crowberry-blackwater-header-inactive-border-color);
+        }
+    }
+
+    &.header[colorset="window"]
+    {
+        background-color: var(--crowberry-blackwater-window-active-background-color);
+        border-color: var(--crowberry-blackwater-window-active-border-color);
+
+        .inactive & {
+            background-color: var(--crowberry-blackwater-window-inactive-background-color);
+            border-color: var(--crowberry-blackwater-window-inactive-border-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &,
+    &.header[colorset="complementary"]
+    {
+        background-color: var(--crowberry-blackwater-complementary-active-background-color);
+        color: var(--crowberry-blackwater-complementary-active-text-color);
+        border-color: var(--crowberry-blackwater-complementary-active-border-color);
+
+        .inactive & {
+            background-color: var(--crowberry-blackwater-complementary-inactive-background-color);
+            color: var(--crowberry-blackwater-complementary-inactive-text-color);
+            border-color: var(--crowberry-blackwater-complementary-active-border-color);
+        }
+    }
+
+    & > separator {
+        width: 1px;
+        height: 1px;
+        border: none;
+        border-radius: 0px;
+        background-color: var(--crowberry-blackwater-window-border-color);
+        padding: 0px;
+    }
+
+    & > handle {
+        width: 4px;
+        height: 4px;
+        border: none;
+        border-radius: 0px;
+        border-left: 1px solid var(--crowberry-blackwater-window-border-color);
+        border-right: 1px solid var(--crowberry-blackwater-window-border-color);
+        padding: 0px;
+    }
+}
+
+drawer
+{
+    color: var(--crowberry-blackwater-view-text-color);
+    background-color: var(--crowberry-blackwater-view-background-color);
+
+    &.modal {
+        color: var(--crowberry-blackwater-window-text-color);
+        background-color: var(--crowberry-blackwater-window-active-background-color);
+
+        .inactive & {
+            background-color: var(--crowberry-blackwater-window-inactive-background-color);
+        }
+    }
+}
+
+scrollview {
+    &.vertical-scroll {
+        padding-right: var(--crowberry-blackwater-scrollbar-size);
+    }
+
+    &.horizontal-scroll {
+        padding-bottom: var(--crowberry-blackwater-scrollbar-size);
+    }
+
+    &.framed-background
+    {
+        background-color: var(--crowberry-blackwater-view-background-color);
+        border: 1px solid var(--crowberry-blackwater-view-border-color);
+        border-radius: var(--crowberry-blackwater-corner-radius);
+    }
+}
+
+splitview {
+    & handle {
+        width: 1px;
+        height: 1px;
+        background-color: var(--crowberry-blackwater-window-border-color);
+    }
+
+    &.horizontal handle {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    &.vertical handle {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
+
+pageindicator {
+    spacing: var(--crowberry-blackwater-small-spacing);
+}
+
+pageindicatordelegate {
+    background-color: var(--crowberry-blackwater-indicator-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    &:pressed {
+        background-color: var(--crowberry-blackwater-indicator-press-color);
+    }
+
+    &.current {
+        background-color: var(--crowberry-blackwater-indicator-current-color);
+    }
+}
+
+pane
+{
+    padding: var(--crowberry-blackwater-large-spacing);
+    background-color: var(--crowberry-blackwater-window-background-color);
+}
+
+frame,
+groupbox,
+framemenu,
+framewindow
+{
+    padding: var(--crowberry-blackwater-large-spacing);
+    border: 1px solid var(--crowberry-blackwater-window-border-color);
+    border-radius: var(--crowberry-blackwater-corner-radius);
+    .inactive & {
+        border-color: var(--crowberry-blackwater-window-inactive-border-color);
+    }
+}
+
+splitter {
+    width: 1px;
+    background-color: var(--crowberry-blackwater-window-border-color);
+}
+
+frame,
+listview,
+treeview,
+tableview,
+columnview,
+scrollview,
+textfield,
+textarea {
+    &:visual-focus {
+        border: 1px solid var(--crowberry-blackwater-highlight-color);
+    }
+    &[shape="no-frame"] {
+        border: none;
+    }
+    &[shape="panel"],
+    &[shape="box"] {
+        border-radius: var(--crowberry-blackwater-corner-radius);
+        border: 1px solid var(--crowberry-blackwater-window-border-color);
+        background-color: var(--crowberry-blackwater-view-background-color);
+
+        .inactive & {
+            background-color: var(--crowberry-blackwater-window-inactive-background-color);
+            border-color: var(--crowberry-blackwater-window-inactive-border-color);
+        }
+    }
+    &[shape="vertical-line"],
+    &[shape="horizontal-line"] {
+        border-radius: 0px;
+        border: none;
+        background-color: var(--crowberry-blackwater-window-border-color);
+        padding: 0px;
+        inset: 1px;
+    }
+    &[shape="vertical-line"] {
+        width: 1px;
+    }
+    &[shape="horizontal-line"] {
+        height: 1px;
+    }
+    /* Legacy hints that applications use to drive Breeze style */
+    &.dock-left,
+    &.dock-right,
+    &.dock-top,
+    &.dock-bottom,
+    &.left-edge,
+    &.right-edge,
+    &.top-edge,
+    &.bottom-edge {
+        border: none;
+        border-radius: 0px;
+    }
+    &.left-edge {
+        border-left: 1px solid var(--crowberry-blackwater-window-border-color);
+    }
+    &.right-edge {
+        border-right: 1px solid var(--crowberry-blackwater-window-border-color);
+    }
+    &.top-edge {
+        border-top: 1px solid var(--crowberry-blackwater-window-border-color);
+    }
+    &.bottom-edge {
+        border-bottom: 1px solid var(--crowberry-blackwater-window-border-color);
+    }
+}
+
+groupbox {
+    padding: var(--crowberry-blackwater-small-spacing);
+    border: 1px solid var(--crowberry-blackwater-window-border-color);
+    border-radius: var(--crowberry-blackwater-corner-radius);
+    color: var(--crowberry-blackwater-window-text-color);
+    background-color: var(--crowberry-blackwater-window-background-color);
+
+    & > header {
+        color: var(--crowberry-blackwater-window-text-color);
+    }
+    icon-alignment: content start start 0;
+    text-alignment: content center start 0;
+    spacing: var(--crowberry-blackwater-small-spacing);
+    width: 200px;
+}
+
+
+dockwidget {
+    width: var(--crowberry-blackwater-small-element-size);
+    height: var(--crowberry-blackwater-small-element-size);
+    color: var(--crowberry-blackwater-header-text-color);
+    background-color: var(--crowberry-blackwater-header-background-color);
+    icon-alignment: content center center 0;
+    text-alignment: content center center 1;
+    padding: var(--crowberry-blackwater-small-spacing);
+    &:visual-focus,
+    &:active-focus {
+        border: 1px solid var(--crowberry-blackwater-highlight-color);
+    }
+
+    floatbutton,
+    closebutton {
+        width: var(--crowberry-blackwater-small-element-size);
+        height: var(--crowberry-blackwater-small-element-size);
+    }
+
+    floatbutton {
+        layout-alignment: content start center 0;
+        icon-name: "window-restore";
+    }
+
+    closebutton {
+        layout-alignment: content end center 0;
+        icon-name: "window-close-symbolic";
+    }
+}
+
+scrollareacorner {
+    background-color: var(--crowberry-blackwater-window-background-color);
+    color: var(--crowberry-blackwater-window-text-color);
+}
+
+panel,
+groupbox {
+    &.flat {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+rubberband {
+    background-color: var(--crowberry-blackwater-highlight-hover-color);
+    border: 1px solid var(--crowberry-blackwater-highlight-color);
+    border-radius: var(--crowberry-blackwater-corner-radius);
+}
+
+titlebar {
+    width: var(--crowberry-blackwater-small-element-size);
+    height: var(--crowberry-blackwater-small-element-size);
+    color: var(--crowberry-blackwater-header-text-color);
+    background-color: var(--crowberry-blackwater-header-background-color);
+    icon-alignment: content center fill 0;
+    text-alignment: content center fill 1;
+    icon-size: var(--crowberry-blackwater-icon-size-small);
+
+    systemmenu,
+    minimizebutton,
+    maximizebutton,
+    closebutton,
+    normalbutton,
+    shadebutton,
+    helpbutton {
+        width: var(--crowberry-blackwater-small-element-size);
+        height: var(--crowberry-blackwater-small-element-size);
+    }
+
+    systemmenu {
+        layout-alignment: content start fill 0;
+        icon-name: "application-menu-symbolic";
+    }
+    minimizebutton {
+        layout-alignment: content end fill 0;
+        icon-name: "window-minimize-symbolic";
+    }
+    maximizebutton {
+        layout-alignment: content end fill 1;
+        icon-name: "window-maximize-symbolic";
+    }
+    closebutton {
+        layout-alignment: content end fill 2;
+        icon-name: "window-close-symbolic";
+    }
+    shadebutton {
+        layout-alignment: content start fill 2;
+        icon-name: "window-shade-symbolic";
+    }
+    helpbutton {
+        layout-alignment: content start fill -1;
+        icon-name: "help-contextual-symbolic";
+    }
+
+    normalbutton {
+        layout-alignment: content start fill 1;
+    }
+
+    &.maximized {
+        maximizebutton {
+            icon-name: "window-restore-symbolic";
+        }
+    }
+
+    &.minimized {
+        minimizebutton {
+            icon-name: "empty";
+        }
+    }
+
+}

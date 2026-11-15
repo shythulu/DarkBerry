@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --blueberry-wisp-minimal-spacing: 2px;
+    --blueberry-wisp-small-spacing: 4px;
+    --blueberry-wisp-medium-spacing: 6px;
+    --blueberry-wisp-large-spacing: 8px;
+    --blueberry-wisp-grid-unit: 18px;
+    --blueberry-wisp-corner-radius: 5px;
+
+    /* Icon sizes */
+    --blueberry-wisp-icon-size-small: 16px;
+    --blueberry-wisp-icon-size-smallmedium: 22px;
+    --blueberry-wisp-icon-size-medium: 32px;
+    --blueberry-wisp-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --blueberry-wisp-small-element-size: 16px;
+    --blueberry-wisp-medium-element-size: 24px;
+    --blueberry-wisp-large-element-size: 32px;
+    --blueberry-wisp-scrollbar-size: 20px;
+    --blueberry-wisp-non-interactive-scrollbar-size: 10px;
+    --blueberry-wisp-menu-item-width: 150px;
+    --blueberry-wisp-text-field-width: 200px;
+
+    /* Colors */
+    --blueberry-wisp-highlight-color: var(--blueberry-wisp-kcs-active-selection-background-normal);
+    --blueberry-wisp-highlight-text-color: var(--blueberry-wisp-kcs-active-selection-foreground-text);
+    --blueberry-wisp-highlight-hover-color: modify-color(var(--blueberry-wisp-highlight-color) set-alpha 0.3);
+
+    --blueberry-wisp-window-text-color: var(--blueberry-wisp-kcs-active-window-foreground-text);
+    --blueberry-wisp-window-background-color: var(--blueberry-wisp-kcs-active-window-background-normal);
+    --blueberry-wisp-window-background-alternate-color: var(--blueberry-wisp-kcs-active-window-background-alternate);
+    --blueberry-wisp-window-border-color: var(--blueberry-wisp-kcs-active-window-decoration-frame);
+    --blueberry-wisp-window-highlight-color: mix(var(--blueberry-wisp-window-background-color), var(--blueberry-wisp-highlight-color), 0.5);
+    --blueberry-wisp-window-border-highlight-color: var(--blueberry-wisp-highlight-color);
+
+    --blueberry-wisp-view-text-color: var(--blueberry-wisp-kcs-active-view-foreground-text);
+    --blueberry-wisp-view-background-color: var(--blueberry-wisp-kcs-active-view-background-normal);
+    --blueberry-wisp-view-background-alternate-color: var(--blueberry-wisp-kcs-active-view-background-alternate);
+    --blueberry-wisp-view-border-color: var(--blueberry-wisp-kcs-active-view-decoration-frame);
+    --blueberry-wisp-view-highlight-color: mix(var(--blueberry-wisp-view-background-color), var(--blueberry-wisp-highlight-color), 0.5);
+
+    --blueberry-wisp-header-text-color: var(--blueberry-wisp-kcs-active-header-foreground-text);
+    --blueberry-wisp-header-background-color: var(--blueberry-wisp-kcs-active-header-background-normal);
+    --blueberry-wisp-header-background-inactive-color: var(--blueberry-wisp-kcs-inactive-header-background-normal);
+    --blueberry-wisp-header-border-color: var(--blueberry-wisp-kcs-active-header-decoration-frame);
+
+    --blueberry-wisp-complementary-text-color: var(--blueberry-wisp-kcs-active-complementary-foreground-text);
+    --blueberry-wisp-complementary-background-color: var(--blueberry-wisp-kcs-active-complementary-background-normal);
+
+    --blueberry-wisp-positive-text: var(--blueberry-wisp-kcs-active-view-foreground-positive);
+    --blueberry-wisp-neutral-text: var(--blueberry-wisp-kcs-active-view-foreground-neutral);
+    --blueberry-wisp-negative-text: var(--blueberry-wisp-kcs-active-view-foreground-negative);
+    --blueberry-wisp-positive-background: var(--blueberry-wisp-kcs-active-view-background-positive);
+    --blueberry-wisp-neutral-background: var(--blueberry-wisp-kcs-active-view-background-neutral);
+    --blueberry-wisp-negative-background: var(--blueberry-wisp-kcs-active-view-background-negative);
+
+    --blueberry-wisp-changed-foreground: var(--blueberry-wisp-neutral-text);
+    --blueberry-wisp-changed-background: var(--blueberry-wisp-neutral-background);
+
+    --blueberry-wisp-card-background-color: var(--blueberry-wisp-view-background-color);
+    --blueberry-wisp-card-text-color: var(--blueberry-wisp-view-text-color);
+    --blueberry-wisp-card-border-color: var(--blueberry-wisp-view-border-color);
+    --blueberry-wisp-card-hover-color: mix(var(--blueberry-wisp-card-background-color), var(--blueberry-wisp-highlight-color), 0.1);
+    --blueberry-wisp-card-pressed-color: mix(var(--blueberry-wisp-card-background-color), var(--blueberry-wisp-highlight-color), 0.3);
+
+    --blueberry-wisp-focus-outline-alpha: 0.3;
+    --blueberry-wisp-focus-color: modify-color(var(--blueberry-wisp-kcs-active-window-decoration-focus) set-alpha var(--blueberry-wisp-focus-outline-alpha));
+
+    --blueberry-wisp-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --blueberry-wisp-window-disabled-text-color: var(--blueberry-wisp-kcs-disabled-window-foreground-text);
+    --blueberry-wisp-window-disabled-background-color: var(--blueberry-wisp-kcs-disabled-window-background-normal);
+    --blueberry-wisp-window-disabled-border-color: var(--blueberry-wisp-kcs-disabled-window-decoration-frame);
+
+    --blueberry-wisp-view-disabled-text-color: var(--blueberry-wisp-kcs-disabled-view-foreground-text);
+    --blueberry-wisp-view-disabled-background-color: var(--blueberry-wisp-kcs-disabled-view-background-normal);
+    --blueberry-wisp-view-disabled-border-color: var(--blueberry-wisp-kcs-disabled-view-decoration-frame);
+
+    --blueberry-wisp-header-disabled-text-color: var(--blueberry-wisp-kcs-disabled-header-foreground-text);
+    --blueberry-wisp-header-disabled-background-color: var(--blueberry-wisp-kcs-disabled-header-background-normal);
+    --blueberry-wisp-header-disabled-border-color: var(--blueberry-wisp-kcs-disabled-header-decoration-frame);
+
+    --blueberry-wisp-complementary-disabled-text-color: var(--blueberry-wisp-kcs-disabled-complementary-foreground-text);
+
+    --blueberry-wisp-highlight-disabled-color: mix(var(--blueberry-wisp-window-disabled-background-color), var(--blueberry-wisp-highlight-color), 0.2);
+    --blueberry-wisp-highlight-disabled-text-color: mix(var(--blueberry-wisp-window-disabled-text-color), var(--blueberry-wisp-highlight-text-color), 0.2);
+
+    --blueberry-wisp-card-disabled-background-color: var(--blueberry-wisp-view-disabled-background-color);
+    --blueberry-wisp-card-disabled-text-color: var(--blueberry-wisp-view-disabled-text-color);
+    --blueberry-wisp-card-disabled-border-color: var(--blueberry-wisp-view-disabled-border-color);
+
+    /* Standard Elements */
+    --blueberry-wisp-focus-outline: 2px solid var(--blueberry-wisp-focus-ring-color);
+    --blueberry-wisp-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --blueberry-wisp-indicator-color: modify-color(var(--blueberry-wisp-window-text-color) set-alpha 0.4);
+    --blueberry-wisp-indicator-press-color: modify-color(var(--blueberry-wisp-window-text-color) set-alpha 0.7);
+    --blueberry-wisp-indicator-current-color: modify-color(var(--blueberry-wisp-window-text-color) set-alpha 0.95);
+}
