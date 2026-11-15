@@ -1,6 +1,6 @@
 ---
 name: darkberry-port
-description: Wizard for contributing a new Darkberry port (a theme for one more app, with the tints coming for free), from the Catppuccin starting point through the template, build wiring, an install-and-look prototyping loop, consented window screenshots, a WCAG and appearance review, and the pull request. Use this whenever someone wants to theme an app with Darkberry, add a port, "make Darkberry work in X", port a Catppuccin theme, or fix, re-screenshot or review an existing port's appearance, even if they only ask where to start.
+description: Wizard for contributing a new Darkberry port (a theme for one more app, with the tints coming for free), from the Catppuccin starting point through the template, build wiring, an install-and-look prototyping loop, consented window screenshots, a review by a panel of sub-agents (WCAG and role fidelity, look and feel against the design language, frame integrity), and the pull request. Use this whenever someone wants to theme an app with Darkberry, add a port, "make Darkberry work in X", port a Catppuccin theme, or fix, re-screenshot, audit or review an existing port (accessibility, contrast, whether it matches the palette or looks like Darkberry), even if they only ask where to start.
 ---
 
 # Darkberry port wizard
@@ -16,6 +16,8 @@ The rules of the repository are in `STYLE_GUIDE.md` (colour rules, the twelve-st
 procedure under *Porting an application*) and `docs/PORT_CREATION.md` (folder layout,
 registry, tints). Read both before the first step; this skill sequences them and adds the
 prototyping, screenshot and review practice around them, it does not repeat them.
+`docs/DESIGN_LANGUAGE.md` says what a Darkberry app should look like; read it before
+prototyping (step 6), since the review panel judges the frames against it.
 
 ## The steps
 
@@ -28,7 +30,9 @@ prototyping, screenshot and review practice around them, it does not repeat them
    decision is taken at step 7, once they have seen what one set costs.
 2. **Prerequisites.** Confirm the app is installed and which version (`--version`, the
    About box), since the version floor goes into the template header. Confirm
-   `node build.mjs` passes on a clean checkout. Confirm a screenshot route exists for the
+   `node build.mjs` passes on a clean checkout (it takes no `--help`: any argument it does
+   not know still runs the full build; its arguments are `--check`, `--no-tints` and a
+   palette path). Confirm a screenshot route exists for the
    platform (see `references/capture.md`); if none does, the contributor will take the
    screenshots themselves, which is fine, say so now. Confirm ImageMagick is installed
    (`convert -version`; `brew install imagemagick`, `apt install imagemagick`, or the
@@ -75,11 +79,16 @@ prototyping, screenshot and review practice around them, it does not repeat them
    tint run. Once the four are agreed, tell the contributor how long they took and ask
    whether to go on to the tints, which cost four times that again; the tints are the
    same capture with the tint's files and go under `ports/<key>/<tint>/assets/`.
-8. **Review**, with `references/review.md`: the screenshots against the template's
-   expectations, the appearance of the port in the app, and contrast against WCAG and the
-   roles' own floors. Present the findings as a short list, worst first, and agree on each
-   with the contributor. Anything not agreed goes back to a prototyping session (step 6
-   with variations, see below) rather than being argued.
+8. **Review by a panel**, with `references/review.md`. You do not review your own port:
+   you have the same blind spots as the contributor by now. Build the evidence bundle
+   with the scripts (pixel audit per frame, CVD per flavour, contrast for host-owned
+   pairings, the build output), then spawn three independent reviewers in parallel:
+   template and accessibility (STYLE_GUIDE and `references/wcag.md`), look and feel
+   (`docs/DESIGN_LANGUAGE.md`), and frames. Re-measure every serious finding yourself
+   before it reaches the contributor, merge duplicates, check nothing went unanswered,
+   score each flavour and give a verdict. Present the findings worst first and agree on each.
+   Anything not agreed goes back to a prototyping session (step 6 with variations, see
+   below) rather than being argued. A request to review an existing port starts here.
 9. **Compose and place.** `scripts/compose.sh <dir>` turns the four frames into the
    per-flavour `.webp` files and the `preview.webp` (the four flavours in slanted slices,
    as catppuccin/catwalk composes them). They go into `ports/<key>/assets/`, or
@@ -146,5 +155,21 @@ they know git, just say what the branch and commit should contain and let them d
 - `scripts/contrast.mjs <fg> <bg> [more pairs]`: contrast ratios through
   `lib/color.mjs`, the same maths the build uses, for judging a pairing during
   prototyping.
+- `scripts/pixel-audit.mjs <frame> [flavour] [--tint <id>] [--ignore box] [--json]`: maps
+  every flat region of a frame to the nearest palette colour or role (on, near, off, with
+  its box), flags untinted greys, measures the panes, fill and per-accent shares, and
+  warns when a frame is not the flavour or tint it is named for. Useful in step 6 as well: run it on a quick capture to find
+  the surfaces the theme has not reached yet.
+- `scripts/cvd.mjs <a> <b> ...` or `--roles <flavour>`: distance between colour pairs
+  under protanopia, deuteranopia and tritanopia simulation.
+- `scripts/gallery.mjs [out.html] [--standalone]`: the pattern gallery, the gold standard
+  the panel compares with. Eighteen common UI patterns drawn from the roles in every
+  flavour and tint, with role labels, live WCAG checks and per-role colour tweaks. Open
+  it during step 4 to see what a role looks like before mapping a key to it.
 - `references/capture.md`: per-platform window capture and title checks.
-- `references/review.md`: the review checklist and the thresholds.
+- `references/review.md`: the review panel, its evidence bundle, briefs, finding format
+  and verdict.
+- `references/wcag.md`: the WCAG criteria a colour theme can affect, and how to check
+  each one.
+- `docs/DESIGN_LANGUAGE.md` (in the repo): what a Darkberry app looks like, with the
+  look-and-feel reviewer's checklist.
