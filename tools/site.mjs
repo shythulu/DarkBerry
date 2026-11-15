@@ -43,12 +43,17 @@ for (const [id, pal] of palettes) {
   data.tints[id] = t;
 }
 
-// The port registry, grouped by each port's first category in the order of src/categories.json,
-// the same grouping as the list in README.md. Screenshots and install steps stay in each port's
-// README; the Ports page lists only the name, the listing where the port is published, and the
-// folder in the repository.
+// The port registry, for the table on the Ports page. Install steps stay in each port's README.
+// shots names, per tint, the folder holding that tint's screenshots and the flavours it has;
+// the page loads them from raw.githubusercontent.com on hover, so the site carries none.
 const REG = json("src/ports.json"), CATS = json("src/categories.json");
-data.ports = CATS.map((c) => [c.name, REG.ports.filter((p) => p.categories[0] === c.key).map((p) => ({ key: p.key, name: p.name, url: p.url, listing: p.listing || null }))]).filter(([, ps]) => ps.length);
+const FLAVOURS = Object.keys(P.flavours);
+const shotsOf = (key) => Object.fromEntries(palettes.map(([tint]) => {
+  const dir = tint === "darkberry" ? `ports/${key}/assets` : `ports/${key}/${tint}/assets`;
+  return [tint, [dir, FLAVOURS.filter((f) => fs.existsSync(path.join(root, dir, `${f}.webp`)))]];
+}).filter(([, [, got]]) => got.length));
+data.categories = Object.fromEntries(CATS.map((c) => [c.key, c.name]));
+data.ports = REG.ports.map((p) => ({ key: p.key, name: p.name, url: p.url, emoji: p.emoji, categories: p.categories, platform: p.platform, listing: p.listing || null, shots: shotsOf(p.key) }));
 
 // The page's first paint, before the script runs, is Darkberry Blackwater.
 const first = data.tints.darkberry, ROOT = [
