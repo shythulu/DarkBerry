@@ -1,17 +1,85 @@
 <section id="ports"><div class="wrap">
   <h2><small>the applications</small>Ports</h2>
-  <p class="intro">Current ports were agent generated. They are being tested and pushed to any respective theme libraries as time and energy allow. Contributions welcome. Each port's page on GitHub carries its screenshots and install steps.</p>
-  <div class="pickbar">__PICKERS__</div>
-  <div class="portlist" id="portlist"></div>
+  <p class="intro">Current ports were agent generated. They are being tested and pushed to any respective theme libraries as time and energy allow. Contributions welcome. Point at a port to see it in the chosen flavour and tint; its page on GitHub carries the install steps.</p>
+  <div class="pickbar pb-7"><div class="wrap p-0">__PICKERS__</div></div>
+  <div class="filters">
+    <input type="search" id="fq" placeholder="Search ports…" aria-label="Search ports">
+    <div class="chips" id="fgroups" role="group" aria-label="Category"></div>
+    <div class="chips" id="fplats" role="group" aria-label="Platform"></div>
+    <span class="count" id="fcount" aria-live="polite"></span>
+  </div>
+  <div class="scroll"><table class="ports">
+    <thead><tr><th data-k="name" scope="col"><button>App</button></th><th data-k="cat" scope="col"><button>Category</button></th><th class="hide-s" scope="col">Platforms</th><th data-k="pub" class="hide-s" scope="col"><button>Published at</button></th><th scope="col">Files</th></tr></thead>
+    <tbody id="ports-body"></tbody>
+  </table></div>
 </div></section>
+<figure class="peek" id="peek" aria-hidden="true"><img alt=""><figcaption></figcaption></figure>
 <!--script-->
 // Where a port's files sit for the chosen tint. VS Code carries every tint in with-tints/ and
 // the GIMP palette carries them all in one folder; every other port has a folder per tint.
 const folder = (key) => tn === "darkberry" || key === "gpl" ? `ports/${key}` : key === "vscode" ? "ports/vscode/with-tints" : `ports/${key}/${tn}`;
+const PLAT = { linux: "Linux", macos: "macOS", windows: "Windows", web: "Web" };
+// The fifteen categories fold into five filters; a port files under its first category.
+const GROUPS = [
+  ["Editors & AI", ["code_editor", "syntax_highlighting", "artificial_intelligence"]],
+  ["Terminals & CLI", ["terminal", "cli", "analytics"]],
+  ["Desktop & System", ["system", "desktop_environment", "window_manager"]],
+  ["Browsers & Mail", ["browser", "browser_extension", "email_client"]],
+  ["Apps & Formats", ["photo_and_video", "note_taking", "library"]],
+];
+const F = { q: "", group: -1, plat: null }, sort = { k: "name", dir: 1 };
+const groupOf = (p) => GROUPS.findIndex(([, cats]) => cats.includes(p.categories[0]));
+const listing = (p) => p.listing && { name: p.listing.name, url: tn === "darkberry" ? p.listing.url : p.listing.tints || p.listing.url };
+// The screenshot for the chosen tint and flavour, else the Darkberry one in that flavour.
+function shot(p) {
+  for (const t of [tn, "darkberry"]) {
+    const s = p.shots[t];
+    if (s && s[1].includes(fl)) return { src: `${raw}/${s[0]}/${fl}.webp`, label: `${D.tints[t].name} ${D.flavours[fl].name}` };
+  }
+  return null;
+}
+
+$("fgroups").innerHTML = [["All"], ...GROUPS].map(([name], i) => `<button data-g="${i - 1}" aria-pressed="${i === 0}">${name}</button>`).join("");
+$("fplats").innerHTML = Object.entries(PLAT).map(([k, name]) => `<button data-p="${k}" aria-pressed="false">${name}</button>`).join("");
+$("fq").oninput = (e) => { F.q = e.target.value.toLowerCase(); ports(); };
+document.querySelectorAll("#fgroups button").forEach((b) => b.onclick = () => { F.group = +b.dataset.g; document.querySelectorAll("#fgroups button").forEach((x) => x.setAttribute("aria-pressed", x === b)); ports(); });
+document.querySelectorAll("#fplats button").forEach((b) => b.onclick = () => { F.plat = F.plat === b.dataset.p ? null : b.dataset.p; document.querySelectorAll("#fplats button").forEach((x) => x.setAttribute("aria-pressed", x.dataset.p === F.plat)); ports(); });
+document.querySelectorAll(".ports th[data-k] button").forEach((b) => b.onclick = () => { const k = b.parentElement.dataset.k; sort.dir = sort.k === k ? -sort.dir : 1; sort.k = k; ports(); });
+
+// The peek follows the pointer over a row, and sits under the row when a link in it has focus.
+const peek = $("peek");
+function showPeek(p, x, y) {
+  const s = shot(p); if (!s) return hidePeek();
+  const img = peek.querySelector("img");
+  if (img.getAttribute("src") !== s.src) img.src = s.src;
+  peek.querySelector("figcaption").textContent = `${p.name} · ${s.label}`;
+  peek.style.left = Math.max(8, Math.min(x + 24, innerWidth - peek.offsetWidth - 8)) + "px";
+  peek.style.top = (y + 16 + peek.offsetHeight > innerHeight ? y - peek.offsetHeight - 16 : y + 16) + "px";
+  peek.classList.add("on");
+}
+const hidePeek = () => peek.classList.remove("on");
+
 page.push(function ports() {
-  $("portlist").innerHTML = D.ports.map(([cat, ps]) => `<h3>${cat}</h3><ul>` + ps.map(({ key, name, url, listing }) => {
-    const l = listing && (tn === "darkberry" ? listing.url : listing.tints || listing.url);
-    const links = [l ? `<a href="${l}">${listing.name}</a>` : "", `<a href="${tree}/${folder(key)}#readme">${l ? "files on GitHub" : "on GitHub"}</a>`].filter(Boolean).join("");
-    return `<li><a class="app" href="${url}">${name}</a><span class="links">${links}</span></li>`;
-  }).join("") + "</ul>").join("");
+  const key = { name: (p) => p.name.toLowerCase(), cat: (p) => D.categories[p.categories[0]], pub: (p) => (p.listing ? 0 : 1) }[sort.k];
+  const rows = D.ports
+    .filter((p) => (!F.q || `${p.name} ${p.categories.map((c) => D.categories[c]).join(" ")}`.toLowerCase().includes(F.q)) && (F.group < 0 || groupOf(p) === F.group) && (!F.plat || p.platform.includes(F.plat)))
+    .sort((a, b) => (key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : 0) * sort.dir);
+  $("fcount").textContent = `${rows.length} of ${D.ports.length}`;
+  document.querySelectorAll(".ports th[data-k]").forEach((th) => th.dataset.k === sort.k ? th.setAttribute("aria-sort", sort.dir > 0 ? "ascending" : "descending") : th.removeAttribute("aria-sort"));
+  $("ports-body").innerHTML = rows.map((p) => {
+    const l = listing(p), plats = (p.platform.length ? p.platform.map((k) => PLAT[k]) : ["format"]).map((n) => `<span class="plat">${n}</span>`).join("");
+    return `<tr data-key="${p.key}"><td class="app"><a href="${p.url}"><span aria-hidden="true">${p.emoji}</span>${p.name}</a></td>
+      <td class="c">${p.categories.map((c) => D.categories[c]).join(", ")}</td><td class="hide-s"><span class="plats">${plats}</span></td>
+      <td class="hide-s">${l ? `<a class="badge" href="${l.url}">${l.name}</a>` : `<span class="none">not yet</span>`}</td>
+      <td><a href="${tree}/${folder(p.key)}#readme">files</a></td></tr>`;
+  }).join("") || `<tr><td colspan="5" class="none">No ports match.</td></tr>`;
+  document.querySelectorAll("#ports-body tr[data-key]").forEach((tr) => {
+    const p = D.ports.find((x) => x.key === tr.dataset.key);
+    tr.onmousemove = (e) => showPeek(p, e.clientX, e.clientY);
+    tr.onmouseleave = hidePeek;
+    tr.querySelectorAll("a").forEach((a) => { a.onfocus = () => { const r = tr.getBoundingClientRect(); showPeek(p, r.left + 160, r.bottom - 16); }; a.onblur = hidePeek; });
+  });
+  hidePeek();
 });
+addEventListener("scroll", hidePeek, { passive: true });
+addEventListener("keydown", (e) => { if (e.key === "Escape") hidePeek(); });

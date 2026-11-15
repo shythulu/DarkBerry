@@ -31,50 +31,6 @@ h1 span{color:var(--ui-accent)}
   @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   .hero .wrap>*{animation:rise .8s ease both}.hero .wrap>*:nth-child(2){animation-delay:.1s}.hero .wrap>*:nth-child(3){animation-delay:.2s}.hero .wrap>*:nth-child(4){animation-delay:.3s}
 }
-@media (max-width:860px){.hero{padding-top:48px}}
-
-/* ---------- palette ---------- */
-table.pal{width:100%;border-collapse:collapse;font-size:15px;text-align:left}
-table.pal th{text-align:left;font-family:var(--sc);font-weight:400;letter-spacing:.14em;font-size:12px;color:var(--c-overlay2);padding:10px 10px;border-bottom:1px solid var(--rule)}
-table.pal td{padding:7px 10px;border-bottom:1px solid color-mix(in srgb,var(--rule) 45%,transparent)}
-table.pal tr.grp td{font-family:var(--display);font-size:24px;padding-top:30px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
-table.pal button.sw{width:26px;height:26px;transform:rotate(45deg);border:1px solid var(--rule);outline:1px solid var(--ui-background);outline-offset:-4px;cursor:pointer;padding:0;display:block;margin:2px 4px}
-table.pal td.m{font-family:var(--mono);font-size:13px;color:var(--c-subtext1);white-space:nowrap}
-table.pal button.v{background:none;border:0;padding:2px 4px;margin:0 -4px;border-radius:2px;cursor:pointer;text-align:left}
-table.pal button.v:hover{background:var(--c-surface0);color:var(--ui-text)}
-table.pal td.name{font-family:var(--sc);letter-spacing:.06em;font-size:16px}
-table.pal td.job{color:var(--c-subtext0);font-size:14px;font-style:italic}
-table.pal tr.copied td{background:color-mix(in srgb,var(--ui-accent) 14%,transparent)}
-.scroll{overflow-x:auto}
-@media (max-width:860px){table.pal .hide-s{display:none}}
-
-/* ---------- tints: each card is drawn in its own tint's colours ---------- */
-.tintgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px;text-align:left}
-.tcard{text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;background:var(--t-base);color:var(--t-text);border:1px solid var(--t-rule);box-shadow:var(--frame)}
-.tcard:hover,.tcard[aria-pressed="true"]{box-shadow:0 0 0 5px var(--ui-background),0 0 0 6px var(--ui-accent)}
-.tcard .tabs{display:flex;background:var(--t-crust);font:12px var(--mono);color:var(--t-sub)}
-.tcard .tabs span{padding:8px 14px}
-.tcard .tabs .on{background:var(--t-base);color:var(--t-text);box-shadow:inset 0 2px 0 var(--t-tab)}
-.tcard .tbody{display:flex;flex-direction:column;gap:6px;padding:20px 22px 22px}
-.tcard .tname{font-family:var(--display);font-size:38px;line-height:1}
-.tcard .tnote{font-size:15px;font-style:italic;color:var(--t-sub);min-height:3em}
-.tcard .strip{display:flex;height:20px;margin-top:8px;border:1px solid var(--t-rule)}
-.tcard .strip span{flex:1}
-.tcard .wear{margin-top:10px;font-family:var(--sc);font-size:12px;letter-spacing:.2em;color:var(--t-tab)}
-@media (prefers-reduced-motion:no-preference){.tcard{transition:box-shadow .2s}}
-
-/* ---------- ports ---------- */
-.portlist{text-align:left}
-.portlist ul{list-style:none;margin:0;padding:0}
-.portlist li{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;padding:9px 0;border-bottom:1px solid color-mix(in srgb,var(--rule) 45%,transparent)}
-.portlist .app{font-family:var(--sc);letter-spacing:.06em;font-size:18px;color:var(--ui-text);text-decoration:none}
-.portlist .app:hover{color:var(--ui-accent);text-decoration:underline}
-
-/* ---------- wallpapers ---------- */
-.walls{text-align:left}
-.walls ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
-.walls img{display:block;width:100%;height:auto;border:1px solid var(--rule);box-shadow:var(--frame)}
-.walls .cap{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;padding:16px 6px 0}
-.walls .name{font-family:var(--sc);letter-spacing:.06em;font-size:18px}
-.walls .links span{color:var(--c-subtext0)}
-@media (max-width:600px){.walls ul{grid-template-columns:minmax(0,1fr)}}
+.intro{margin-left:auto;margin-right:auto}
+table.pal,table.ports{text-align:left}
+.pickbar{padding:0 0 32px}
