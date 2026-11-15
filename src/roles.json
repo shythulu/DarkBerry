@@ -283,6 +283,36 @@
       "carriesCode": 0.65,
       "catppuccin": "blue at 30% into base",
       "why": "The changed span inside a changed line is the same warning tint at nearly twice the strength of ui.diff.changed, without a second hue; 18% is the most it can be while every syntax role keeps 65% of its minimum on it in all five tints."
+    },
+    "diff.added.word": {
+      "value": {
+        "dark": "mix(ui.pane.tertiary,ui.success,0.12)",
+        "light": "mix(ui.background,ui.success,0.32)"
+      },
+      "carriesCode": 0.65,
+      "catppuccin": "green at 40% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port)",
+      "why": "The changed words inside an added line (Claude Code's diffAddedWord), drawn darker than the line in every flavour. ui.diff.added is already the strongest green mix into base that carries code (20% leaves comments at 97% on Fen), so no brighter word colour exists on the dark flavours; 12% into crust sits 7.6 (OKLab x100) from the line in every tint and keeps syntax at 154%. A brighter 26% into crust was 1.6 from the line on Mire, which nobody sees. Wisp has room for 32% into base, 7.1 from the line."
+    },
+    "diff.removed.word": {
+      "value": {
+        "dark": "mix(ui.pane.tertiary,syntax.diff.removed,0.12)",
+        "light": "mix(ui.background,syntax.diff.removed,0.32)"
+      },
+      "carriesCode": 0.65,
+      "catppuccin": "red at 40% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port)",
+      "why": "The removed counterpart of ui.diff.added.word, at the same strengths so the two word highlights weigh the same: 7.1 from the line in every tint, syntax at 161%."
+    },
+    "diff.added.dimmed": {
+      "value": "mix(ui.background,ui.success,0.08)",
+      "carriesCode": 0.65,
+      "catppuccin": "green at 8% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port)",
+      "why": "An added line that no longer applies (Claude Code's diff after an edit is rejected): the same green under half the strength of ui.diff.added, so it reads as faded rather than gone."
+    },
+    "diff.removed.dimmed": {
+      "value": "mix(ui.background,syntax.diff.removed,0.08)",
+      "carriesCode": 0.65,
+      "catppuccin": "red at 8% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port)",
+      "why": "The removed counterpart of ui.diff.added.dimmed, at the same 8%."
     }
   },
   "terminal": {

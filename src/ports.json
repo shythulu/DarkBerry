@@ -20,6 +20,7 @@
     { "key": "notepadpp", "name": "Notepad++", "url": "https://notepad-plus-plus.org", "emoji": "📄", "categories": ["code_editor"], "platform": ["windows"] },
     { "key": "nimbalyst", "name": "Nimbalyst", "url": "https://nimbalyst.com", "emoji": "☁️", "categories": ["code_editor", "note_taking"], "platform": ["linux", "macos", "windows"] },
     { "key": "obsidian", "name": "Obsidian", "url": "https://obsidian.md", "emoji": "💎", "categories": ["note_taking"], "platform": ["linux", "macos", "windows"] },
+    { "key": "claude-code", "name": "Claude Code", "url": "https://claude.com/claude-code", "emoji": "✳️", "categories": ["artificial_intelligence", "cli"], "platform": ["linux", "macos", "windows"] },
     { "key": "t3code", "name": "T3 Code", "url": "https://t3.codes", "emoji": "🤖", "categories": ["artificial_intelligence", "code_editor"], "platform": ["linux", "macos", "windows"] },
     { "key": "firefox", "name": "Firefox", "url": "https://www.mozilla.org/firefox/", "emoji": "🦊", "categories": ["browser"], "platform": ["web"],
       "listing": { "name": "addons.mozilla.org", "url": "https://addons.mozilla.org/firefox/user/20178967/" } },

@@ -23638,6 +23638,1052 @@
     }
   },
   {
+    "port": "claude-code",
+    "key": "overrides.claude",
+    "expr": "{tint}",
+    "roles": [],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.claudeShimmer",
+    "expr": "{mix(tint,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "tint",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#a41f60",
+      "fen": "#f7b4c8",
+      "mire": "#f8a0be",
+      "blackwater": "#f79fbd"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.text",
+    "expr": "{ui.text}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "text"
+    ],
+    "hex": {
+      "wisp": "#4f3143",
+      "fen": "#f2e6ee",
+      "mire": "#efe3eb",
+      "blackwater": "#ede1e9"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.inverseText",
+    "expr": "{ui.on.error}",
+    "roles": [
+      "ui.on.error"
+    ],
+    "palette": [
+      "crust"
+    ],
+    "hex": {
+      "wisp": "#ffffff",
+      "fen": "#35212e",
+      "mire": "#1c1119",
+      "blackwater": "#12090f"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.inactive",
+    "expr": "{ui.text.muted}",
+    "roles": [
+      "ui.text.muted"
+    ],
+    "palette": [
+      "subtext0"
+    ],
+    "hex": {
+      "wisp": "#694e5f",
+      "fen": "#ccbac5",
+      "mire": "#cbbcc5",
+      "blackwater": "#c6b7c0"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.inactiveShimmer",
+    "expr": "{mix(ui.text.muted,ui.text,0.35)}",
+    "roles": [
+      "ui.text.muted",
+      "ui.text"
+    ],
+    "palette": [
+      "subtext0",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#604455",
+      "fen": "#d9c9d3",
+      "mire": "#d8cad2",
+      "blackwater": "#d4c6ce"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.subtle",
+    "expr": "{ui.text.subtle}",
+    "roles": [
+      "ui.text.subtle"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.suggestion",
+    "expr": "{ui.emphasis}",
+    "roles": [
+      "ui.emphasis"
+    ],
+    "palette": [
+      "cherry"
+    ],
+    "hex": {
+      "wisp": "#a53f54",
+      "fen": "#e7aab5",
+      "mire": "#d3919c",
+      "blackwater": "#d3919c"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.permission",
+    "expr": "{tint}",
+    "roles": [],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.permissionShimmer",
+    "expr": "{mix(tint,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "tint",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#a41f60",
+      "fen": "#f7b4c8",
+      "mire": "#f8a0be",
+      "blackwater": "#f79fbd"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.remember",
+    "expr": "{blueberry}",
+    "roles": [],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3659ca",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.success",
+    "expr": "{ui.success}",
+    "roles": [
+      "ui.success"
+    ],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.error",
+    "expr": "{ui.error}",
+    "roles": [
+      "ui.error"
+    ],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.warning",
+    "expr": "{ui.warning}",
+    "roles": [
+      "ui.warning"
+    ],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.warningShimmer",
+    "expr": "{mix(ui.warning,ui.text,0.35)}",
+    "roles": [
+      "ui.warning",
+      "ui.text"
+    ],
+    "palette": [
+      "honey",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#704c19",
+      "fen": "#f1dcbb",
+      "mire": "#ead2ac",
+      "blackwater": "#ead1ab"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.merged",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.promptBorder",
+    "expr": "{ui.border.inactive}",
+    "roles": [
+      "ui.border.inactive"
+    ],
+    "palette": [
+      "overlay1"
+    ],
+    "hex": {
+      "wisp": "#967d8c",
+      "fen": "#a28297",
+      "mire": "#91828b",
+      "blackwater": "#887882"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.promptBorderShimmer",
+    "expr": "{mix(ui.border.inactive,ui.text,0.35)}",
+    "roles": [
+      "ui.border.inactive",
+      "ui.text"
+    ],
+    "palette": [
+      "overlay1",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#7d6272",
+      "fen": "#bea5b5",
+      "mire": "#b2a4ad",
+      "blackwater": "#ab9da6"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.planMode",
+    "expr": "{juniper}",
+    "roles": [],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#006f5f",
+      "fen": "#b0dfd9",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.autoAccept",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.bashBorder",
+    "expr": "{berry}",
+    "roles": [],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#bf0b64",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.ide",
+    "expr": "{bilberry}",
+    "roles": [],
+    "palette": [
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#1d64a4",
+      "fen": "#9cc6ea",
+      "mire": "#7fb4e0",
+      "blackwater": "#7fb4e0"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.fastMode",
+    "expr": "{apricot}",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#a24712",
+      "fen": "#f7bf9e",
+      "mire": "#f2ad8a",
+      "blackwater": "#f2ad8a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.fastModeShimmer",
+    "expr": "{mix(apricot,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "apricot",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#853f23",
+      "fen": "#f5cdba",
+      "mire": "#f1c0ac",
+      "blackwater": "#f0bfab"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.effortUltra",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.diffAdded",
+    "expr": "{ui.diff.added}",
+    "roles": [
+      "ui.diff.added",
+      "ui.background",
+      "ui.success"
+    ],
+    "palette": [
+      "base",
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#d6dcd3",
+      "fen": "#625258",
+      "mire": "#40403d",
+      "blackwater": "#353633"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.diffRemoved",
+    "expr": "{ui.diff.removed}",
+    "roles": [
+      "ui.diff.removed",
+      "ui.background",
+      "syntax.diff.removed"
+    ],
+    "palette": [
+      "base",
+      "cranberry",
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#ead4cf",
+      "fen": "#6e4652",
+      "mire": "#4e3235",
+      "blackwater": "#43282b"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.diffAddedDimmed",
+    "expr": "{ui.diff.added.dimmed}",
+    "roles": [
+      "ui.diff.added.dimmed",
+      "ui.background",
+      "ui.success"
+    ],
+    "palette": [
+      "base",
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#eae9e8",
+      "fen": "#573f4c",
+      "mire": "#342d30",
+      "blackwater": "#282225"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.diffRemovedDimmed",
+    "expr": "{ui.diff.removed.dimmed}",
+    "roles": [
+      "ui.diff.removed.dimmed",
+      "ui.background",
+      "syntax.diff.removed"
+    ],
+    "palette": [
+      "base",
+      "cranberry",
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#f4e6e6",
+      "fen": "#5d3a49",
+      "mire": "#3a272d",
+      "blackwater": "#2e1c22"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.diffAddedWord",
+    "expr": "{ui.diff.added.word}",
+    "roles": [
+      "ui.diff.added.word",
+      "ui.pane.tertiary",
+      "ui.success"
+    ],
+    "palette": [
+      "crust",
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#b9c9b7",
+      "fen": "#45393e",
+      "mire": "#2c292a",
+      "blackwater": "#232221"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.diffRemovedWord",
+    "expr": "{ui.diff.removed.word}",
+    "roles": [
+      "ui.diff.removed.word",
+      "ui.pane.tertiary",
+      "syntax.diff.removed"
+    ],
+    "palette": [
+      "crust",
+      "cranberry",
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#ddbbb0",
+      "fen": "#4d313a",
+      "mire": "#362025",
+      "blackwater": "#2d191c"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.userMessageBackground",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.userMessageBackgroundHover",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.bashMessageBackgroundColor",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.memoryBackgroundColor",
+    "expr": "{surface1}",
+    "roles": [],
+    "palette": [
+      "surface1"
+    ],
+    "hex": {
+      "wisp": "#d0bac8",
+      "fen": "#6c4c60",
+      "mire": "#3e2936",
+      "blackwater": "#34222e"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.selectionBg",
+    "expr": "{ui.selection}",
+    "roles": [
+      "ui.selection",
+      "ui.background"
+    ],
+    "palette": [
+      "base",
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#f0cadd",
+      "fen": "#6e4457",
+      "mire": "#502f3d",
+      "blackwater": "#452533"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.composerSidebarBackground",
+    "expr": "{ui.pane.secondary}",
+    "roles": [
+      "ui.pane.secondary"
+    ],
+    "palette": [
+      "mantle"
+    ],
+    "hex": {
+      "wisp": "#f3e6ef",
+      "fen": "#402838",
+      "mire": "#23161f",
+      "blackwater": "#170d13"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rate_limit_fill",
+    "expr": "{ui.accent}",
+    "roles": [
+      "ui.accent"
+    ],
+    "palette": [
+      "jam"
+    ],
+    "hex": {
+      "wisp": "#b9488b",
+      "fen": "#dc67a7",
+      "mire": "#be4c8d",
+      "blackwater": "#ba4889"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rate_limit_empty",
+    "expr": "{surface2}",
+    "roles": [],
+    "palette": [
+      "surface2"
+    ],
+    "hex": {
+      "wisp": "#c3abb9",
+      "fen": "#7b5a6e",
+      "mire": "#4f3143",
+      "blackwater": "#432c3b"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.briefLabelYou",
+    "expr": "{blueberry}",
+    "roles": [],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3659ca",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.briefLabelClaude",
+    "expr": "{tint}",
+    "roles": [],
+    "palette": [
+      "tint"
+    ],
+    "hex": {
+      "wisp": "#d21570",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.red_FOR_SUBAGENTS_ONLY",
+    "expr": "{cranberry}",
+    "roles": [],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.blue_FOR_SUBAGENTS_ONLY",
+    "expr": "{blueberry}",
+    "roles": [],
+    "palette": [
+      "blueberry"
+    ],
+    "hex": {
+      "wisp": "#3659ca",
+      "fen": "#a4c3f6",
+      "mire": "#8fb0f2",
+      "blackwater": "#8fb0f2"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.green_FOR_SUBAGENTS_ONLY",
+    "expr": "{gooseberry}",
+    "roles": [],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.yellow_FOR_SUBAGENTS_ONLY",
+    "expr": "{honey}",
+    "roles": [],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.purple_FOR_SUBAGENTS_ONLY",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.orange_FOR_SUBAGENTS_ONLY",
+    "expr": "{apricot}",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#a24712",
+      "fen": "#f7bf9e",
+      "mire": "#f2ad8a",
+      "blackwater": "#f2ad8a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.pink_FOR_SUBAGENTS_ONLY",
+    "expr": "{berry}",
+    "roles": [],
+    "palette": [
+      "berry"
+    ],
+    "hex": {
+      "wisp": "#bf0b64",
+      "fen": "#fa99b4",
+      "mire": "#fd7ca5",
+      "blackwater": "#fd7ca5"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.cyan_FOR_SUBAGENTS_ONLY",
+    "expr": "{juniper}",
+    "roles": [],
+    "palette": [
+      "juniper"
+    ],
+    "hex": {
+      "wisp": "#006f5f",
+      "fen": "#b0dfd9",
+      "mire": "#9ed0c4",
+      "blackwater": "#9ed0c4"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_red",
+    "expr": "{cranberry}",
+    "roles": [],
+    "palette": [
+      "cranberry"
+    ],
+    "hex": {
+      "wisp": "#bb262a",
+      "fen": "#ff8a8a",
+      "mire": "#f06a6a",
+      "blackwater": "#f06a6a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_orange",
+    "expr": "{apricot}",
+    "roles": [],
+    "palette": [
+      "apricot"
+    ],
+    "hex": {
+      "wisp": "#a24712",
+      "fen": "#f7bf9e",
+      "mire": "#f2ad8a",
+      "blackwater": "#f2ad8a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_yellow",
+    "expr": "{honey}",
+    "roles": [],
+    "palette": [
+      "honey"
+    ],
+    "hex": {
+      "wisp": "#815b02",
+      "fen": "#f0d6a0",
+      "mire": "#e8c98a",
+      "blackwater": "#e8c98a"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_green",
+    "expr": "{gooseberry}",
+    "roles": [],
+    "palette": [
+      "gooseberry"
+    ],
+    "hex": {
+      "wisp": "#2c6f2d",
+      "fen": "#b7e6b7",
+      "mire": "#a3daa3",
+      "blackwater": "#a3daa3"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_blue",
+    "expr": "{bilberry}",
+    "roles": [],
+    "palette": [
+      "bilberry"
+    ],
+    "hex": {
+      "wisp": "#1d64a4",
+      "fen": "#9cc6ea",
+      "mire": "#7fb4e0",
+      "blackwater": "#7fb4e0"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_indigo",
+    "expr": "{lavender}",
+    "roles": [],
+    "palette": [
+      "lavender"
+    ],
+    "hex": {
+      "wisp": "#7350a8",
+      "fen": "#c9b0e8",
+      "mire": "#baa8dc",
+      "blackwater": "#baa8dc"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_violet",
+    "expr": "{plum}",
+    "roles": [],
+    "palette": [
+      "plum"
+    ],
+    "hex": {
+      "wisp": "#8c3eb2",
+      "fen": "#ecbcfc",
+      "mire": "#ddb0ec",
+      "blackwater": "#ddb0ec"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_red_shimmer",
+    "expr": "{mix(cranberry,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "cranberry",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#952a33",
+      "fen": "#faaaad",
+      "mire": "#f09497",
+      "blackwater": "#ef9496"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_orange_shimmer",
+    "expr": "{mix(apricot,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "apricot",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#853f23",
+      "fen": "#f5cdba",
+      "mire": "#f1c0ac",
+      "blackwater": "#f0bfab"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_yellow_shimmer",
+    "expr": "{mix(honey,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "honey",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#704c19",
+      "fen": "#f1dcbb",
+      "mire": "#ead2ac",
+      "blackwater": "#ead1ab"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_green_shimmer",
+    "expr": "{mix(gooseberry,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "gooseberry",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#385935",
+      "fen": "#cce6ca",
+      "mire": "#beddbc",
+      "blackwater": "#bddcbb"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_blue_shimmer",
+    "expr": "{mix(bilberry,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "bilberry",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#2f5282",
+      "fen": "#bad1eb",
+      "mire": "#a6c4e4",
+      "blackwater": "#a6c4e3"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_indigo_shimmer",
+    "expr": "{mix(lavender,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "lavender",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#664585",
+      "fen": "#d7c3ea",
+      "mire": "#cdbde1",
+      "blackwater": "#ccbce1"
+    }
+  },
+  {
+    "port": "claude-code",
+    "key": "overrides.rainbow_violet_shimmer",
+    "expr": "{mix(plum,ui.text,0.35)}",
+    "roles": [
+      "ui.text"
+    ],
+    "palette": [
+      "plum",
+      "text"
+    ],
+    "hex": {
+      "wisp": "#77398b",
+      "fen": "#eecbf7",
+      "mire": "#e3c2ec",
+      "blackwater": "#e3c1eb"
+    }
+  },
+  {
     "port": "kate",
     "key": "text-styles.Normal.text-color",
     "expr": "{syntax.text}",
