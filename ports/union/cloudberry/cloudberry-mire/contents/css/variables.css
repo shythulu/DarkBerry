@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --cloudberry-mire-minimal-spacing: 2px;
+    --cloudberry-mire-small-spacing: 4px;
+    --cloudberry-mire-medium-spacing: 6px;
+    --cloudberry-mire-large-spacing: 8px;
+    --cloudberry-mire-grid-unit: 18px;
+    --cloudberry-mire-corner-radius: 5px;
+
+    /* Icon sizes */
+    --cloudberry-mire-icon-size-small: 16px;
+    --cloudberry-mire-icon-size-smallmedium: 22px;
+    --cloudberry-mire-icon-size-medium: 32px;
+    --cloudberry-mire-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --cloudberry-mire-small-element-size: 16px;
+    --cloudberry-mire-medium-element-size: 24px;
+    --cloudberry-mire-large-element-size: 32px;
+    --cloudberry-mire-scrollbar-size: 20px;
+    --cloudberry-mire-non-interactive-scrollbar-size: 10px;
+    --cloudberry-mire-menu-item-width: 150px;
+    --cloudberry-mire-text-field-width: 200px;
+
+    /* Colors */
+    --cloudberry-mire-highlight-color: var(--cloudberry-mire-kcs-active-selection-background-normal);
+    --cloudberry-mire-highlight-text-color: var(--cloudberry-mire-kcs-active-selection-foreground-text);
+    --cloudberry-mire-highlight-hover-color: modify-color(var(--cloudberry-mire-highlight-color) set-alpha 0.3);
+
+    --cloudberry-mire-window-text-color: var(--cloudberry-mire-kcs-active-window-foreground-text);
+    --cloudberry-mire-window-background-color: var(--cloudberry-mire-kcs-active-window-background-normal);
+    --cloudberry-mire-window-background-alternate-color: var(--cloudberry-mire-kcs-active-window-background-alternate);
+    --cloudberry-mire-window-border-color: var(--cloudberry-mire-kcs-active-window-decoration-frame);
+    --cloudberry-mire-window-highlight-color: mix(var(--cloudberry-mire-window-background-color), var(--cloudberry-mire-highlight-color), 0.5);
+    --cloudberry-mire-window-border-highlight-color: var(--cloudberry-mire-highlight-color);
+
+    --cloudberry-mire-view-text-color: var(--cloudberry-mire-kcs-active-view-foreground-text);
+    --cloudberry-mire-view-background-color: var(--cloudberry-mire-kcs-active-view-background-normal);
+    --cloudberry-mire-view-background-alternate-color: var(--cloudberry-mire-kcs-active-view-background-alternate);
+    --cloudberry-mire-view-border-color: var(--cloudberry-mire-kcs-active-view-decoration-frame);
+    --cloudberry-mire-view-highlight-color: mix(var(--cloudberry-mire-view-background-color), var(--cloudberry-mire-highlight-color), 0.5);
+
+    --cloudberry-mire-header-text-color: var(--cloudberry-mire-kcs-active-header-foreground-text);
+    --cloudberry-mire-header-background-color: var(--cloudberry-mire-kcs-active-header-background-normal);
+    --cloudberry-mire-header-background-inactive-color: var(--cloudberry-mire-kcs-inactive-header-background-normal);
+    --cloudberry-mire-header-border-color: var(--cloudberry-mire-kcs-active-header-decoration-frame);
+
+    --cloudberry-mire-complementary-text-color: var(--cloudberry-mire-kcs-active-complementary-foreground-text);
+    --cloudberry-mire-complementary-background-color: var(--cloudberry-mire-kcs-active-complementary-background-normal);
+
+    --cloudberry-mire-positive-text: var(--cloudberry-mire-kcs-active-view-foreground-positive);
+    --cloudberry-mire-neutral-text: var(--cloudberry-mire-kcs-active-view-foreground-neutral);
+    --cloudberry-mire-negative-text: var(--cloudberry-mire-kcs-active-view-foreground-negative);
+    --cloudberry-mire-positive-background: var(--cloudberry-mire-kcs-active-view-background-positive);
+    --cloudberry-mire-neutral-background: var(--cloudberry-mire-kcs-active-view-background-neutral);
+    --cloudberry-mire-negative-background: var(--cloudberry-mire-kcs-active-view-background-negative);
+
+    --cloudberry-mire-changed-foreground: var(--cloudberry-mire-neutral-text);
+    --cloudberry-mire-changed-background: var(--cloudberry-mire-neutral-background);
+
+    --cloudberry-mire-card-background-color: var(--cloudberry-mire-view-background-color);
+    --cloudberry-mire-card-text-color: var(--cloudberry-mire-view-text-color);
+    --cloudberry-mire-card-border-color: var(--cloudberry-mire-view-border-color);
+    --cloudberry-mire-card-hover-color: mix(var(--cloudberry-mire-card-background-color), var(--cloudberry-mire-highlight-color), 0.1);
+    --cloudberry-mire-card-pressed-color: mix(var(--cloudberry-mire-card-background-color), var(--cloudberry-mire-highlight-color), 0.3);
+
+    --cloudberry-mire-focus-outline-alpha: 0.3;
+    --cloudberry-mire-focus-color: modify-color(var(--cloudberry-mire-kcs-active-window-decoration-focus) set-alpha var(--cloudberry-mire-focus-outline-alpha));
+
+    --cloudberry-mire-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --cloudberry-mire-window-disabled-text-color: var(--cloudberry-mire-kcs-disabled-window-foreground-text);
+    --cloudberry-mire-window-disabled-background-color: var(--cloudberry-mire-kcs-disabled-window-background-normal);
+    --cloudberry-mire-window-disabled-border-color: var(--cloudberry-mire-kcs-disabled-window-decoration-frame);
+
+    --cloudberry-mire-view-disabled-text-color: var(--cloudberry-mire-kcs-disabled-view-foreground-text);
+    --cloudberry-mire-view-disabled-background-color: var(--cloudberry-mire-kcs-disabled-view-background-normal);
+    --cloudberry-mire-view-disabled-border-color: var(--cloudberry-mire-kcs-disabled-view-decoration-frame);
+
+    --cloudberry-mire-header-disabled-text-color: var(--cloudberry-mire-kcs-disabled-header-foreground-text);
+    --cloudberry-mire-header-disabled-background-color: var(--cloudberry-mire-kcs-disabled-header-background-normal);
+    --cloudberry-mire-header-disabled-border-color: var(--cloudberry-mire-kcs-disabled-header-decoration-frame);
+
+    --cloudberry-mire-complementary-disabled-text-color: var(--cloudberry-mire-kcs-disabled-complementary-foreground-text);
+
+    --cloudberry-mire-highlight-disabled-color: mix(var(--cloudberry-mire-window-disabled-background-color), var(--cloudberry-mire-highlight-color), 0.2);
+    --cloudberry-mire-highlight-disabled-text-color: mix(var(--cloudberry-mire-window-disabled-text-color), var(--cloudberry-mire-highlight-text-color), 0.2);
+
+    --cloudberry-mire-card-disabled-background-color: var(--cloudberry-mire-view-disabled-background-color);
+    --cloudberry-mire-card-disabled-text-color: var(--cloudberry-mire-view-disabled-text-color);
+    --cloudberry-mire-card-disabled-border-color: var(--cloudberry-mire-view-disabled-border-color);
+
+    /* Standard Elements */
+    --cloudberry-mire-focus-outline: 2px solid var(--cloudberry-mire-focus-ring-color);
+    --cloudberry-mire-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --cloudberry-mire-indicator-color: modify-color(var(--cloudberry-mire-window-text-color) set-alpha 0.4);
+    --cloudberry-mire-indicator-press-color: modify-color(var(--cloudberry-mire-window-text-color) set-alpha 0.7);
+    --cloudberry-mire-indicator-current-color: modify-color(var(--cloudberry-mire-window-text-color) set-alpha 0.95);
+}

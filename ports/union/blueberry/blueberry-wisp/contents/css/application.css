@@ -1,0 +1,424 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Application-structural elements like windows, drawers, etc.
+ */
+
+:root {
+    --blueberry-wisp-window-active-background-color: var(--blueberry-wisp-kcs-active-window-background-normal);
+    --blueberry-wisp-window-active-text-color: var(--blueberry-wisp-kcs-active-window-foreground-text);
+    --blueberry-wisp-window-active-border-color: var(--blueberry-wisp-kcs-active-window-decoration-frame);
+
+    --blueberry-wisp-window-inactive-background-color: var(--blueberry-wisp-kcs-inactive-window-background-normal);
+    --blueberry-wisp-window-inactive-text-color: var(--blueberry-wisp-kcs-inactive-window-foreground-text);
+    --blueberry-wisp-window-inactive-border-color: var(--blueberry-wisp-kcs-inactive-window-decoration-frame);
+
+    --blueberry-wisp-header-active-background-color: var(--blueberry-wisp-kcs-active-header-background-normal);
+    --blueberry-wisp-header-active-text-color: var(--blueberry-wisp-kcs-active-header-foreground-text);
+    --blueberry-wisp-header-active-border-color: var(--blueberry-wisp-kcs-active-header-decoration-frame);
+
+    --blueberry-wisp-header-inactive-background-color: var(--blueberry-wisp-kcs-inactive-header-background-normal);
+    --blueberry-wisp-header-inactive-text-color: var(--blueberry-wisp-kcs-inactive-header-foreground-text);
+    --blueberry-wisp-header-inactive-border-color: var(--blueberry-wisp-kcs-inactive-header-decoration-frame);
+
+    --blueberry-wisp-complementary-active-background-color: var(--blueberry-wisp-kcs-active-header-background-normal);
+    --blueberry-wisp-complementary-active-text-color: var(--blueberry-wisp-kcs-active-header-foreground-text);
+    --blueberry-wisp-complementary-active-border-color: var(--blueberry-wisp-kcs-active-header-decoration-frame);
+
+    --blueberry-wisp-complementary-inactive-background-color: var(--blueberry-wisp-kcs-inactive-header-background-normal);
+    --blueberry-wisp-complementary-inactive-text-color: var(--blueberry-wisp-kcs-inactive-header-foreground-text);
+    --blueberry-wisp-complementary-inactive-border-color: var(--blueberry-wisp-kcs-inactive-header-decoration-frame);
+}
+
+applicationwindow
+{
+    background-color: var(--blueberry-wisp-window-active-background-color);
+    color: var(--blueberry-wisp-window-active-text-color);
+
+    &.inactive {
+        background-color: var(--blueberry-wisp-window-inactive-background-color);
+        color: var(--blueberry-wisp-window-inactive-text-color);
+    }
+}
+
+page
+{
+    background-color: var(--blueberry-wisp-window-background-color);
+    color: var(--blueberry-wisp-window-text-color);
+
+    .inactive & {
+        background-color: var(--blueberry-wisp-window-inactive-background-color);
+        color: var(--blueberry-wisp-window-inactive-text-color);
+    }
+}
+
+toolbar
+{
+    height: 46px; /* large-element-size + medium-spacing + large-spacing */
+    padding: var(--blueberry-wisp-small-spacing);
+    padding-top: var(--blueberry-wisp-medium-spacing);
+    padding-bottom: var(--blueberry-wisp-large-spacing);
+    color: var(--blueberry-wisp-window-active-text-color);
+    background-color: var(--blueberry-wisp-window-active-background-color);
+
+    &.footer {
+        border-top: 1px solid var(--blueberry-wisp-window-active-border-color);
+    }
+
+    &.header {
+        border-bottom: 1px solid var(--blueberry-wisp-window-active-border-color);
+    }
+
+    .inactive & {
+        background-color: var(--blueberry-wisp-window-inactive-background-color);
+        border-color: var(--blueberry-wisp-window-inactive-border-color);
+    }
+
+    &.header,
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        background-color: var(--blueberry-wisp-header-active-background-color);
+        border-color: var(--blueberry-wisp-header-active-border-color);
+
+        .inactive & {
+            background-color: var(--blueberry-wisp-header-inactive-background-color);
+            border-color: var(--blueberry-wisp-header-inactive-border-color);
+        }
+    }
+
+    &.header[colorset="window"]
+    {
+        background-color: var(--blueberry-wisp-window-active-background-color);
+        border-color: var(--blueberry-wisp-window-active-border-color);
+
+        .inactive & {
+            background-color: var(--blueberry-wisp-window-inactive-background-color);
+            border-color: var(--blueberry-wisp-window-inactive-border-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &,
+    &.header[colorset="complementary"]
+    {
+        background-color: var(--blueberry-wisp-complementary-active-background-color);
+        color: var(--blueberry-wisp-complementary-active-text-color);
+        border-color: var(--blueberry-wisp-complementary-active-border-color);
+
+        .inactive & {
+            background-color: var(--blueberry-wisp-complementary-inactive-background-color);
+            color: var(--blueberry-wisp-complementary-inactive-text-color);
+            border-color: var(--blueberry-wisp-complementary-active-border-color);
+        }
+    }
+
+    & > separator {
+        width: 1px;
+        height: 1px;
+        border: none;
+        border-radius: 0px;
+        background-color: var(--blueberry-wisp-window-border-color);
+        padding: 0px;
+    }
+
+    & > handle {
+        width: 4px;
+        height: 4px;
+        border: none;
+        border-radius: 0px;
+        border-left: 1px solid var(--blueberry-wisp-window-border-color);
+        border-right: 1px solid var(--blueberry-wisp-window-border-color);
+        padding: 0px;
+    }
+}
+
+drawer
+{
+    color: var(--blueberry-wisp-view-text-color);
+    background-color: var(--blueberry-wisp-view-background-color);
+
+    &.modal {
+        color: var(--blueberry-wisp-window-text-color);
+        background-color: var(--blueberry-wisp-window-active-background-color);
+
+        .inactive & {
+            background-color: var(--blueberry-wisp-window-inactive-background-color);
+        }
+    }
+}
+
+scrollview {
+    &.vertical-scroll {
+        padding-right: var(--blueberry-wisp-scrollbar-size);
+    }
+
+    &.horizontal-scroll {
+        padding-bottom: var(--blueberry-wisp-scrollbar-size);
+    }
+
+    &.framed-background
+    {
+        background-color: var(--blueberry-wisp-view-background-color);
+        border: 1px solid var(--blueberry-wisp-view-border-color);
+        border-radius: var(--blueberry-wisp-corner-radius);
+    }
+}
+
+splitview {
+    & handle {
+        width: 1px;
+        height: 1px;
+        background-color: var(--blueberry-wisp-window-border-color);
+    }
+
+    &.horizontal handle {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    &.vertical handle {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
+
+pageindicator {
+    spacing: var(--blueberry-wisp-small-spacing);
+}
+
+pageindicatordelegate {
+    background-color: var(--blueberry-wisp-indicator-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    &:pressed {
+        background-color: var(--blueberry-wisp-indicator-press-color);
+    }
+
+    &.current {
+        background-color: var(--blueberry-wisp-indicator-current-color);
+    }
+}
+
+pane
+{
+    padding: var(--blueberry-wisp-large-spacing);
+    background-color: var(--blueberry-wisp-window-background-color);
+}
+
+frame,
+groupbox,
+framemenu,
+framewindow
+{
+    padding: var(--blueberry-wisp-large-spacing);
+    border: 1px solid var(--blueberry-wisp-window-border-color);
+    border-radius: var(--blueberry-wisp-corner-radius);
+    .inactive & {
+        border-color: var(--blueberry-wisp-window-inactive-border-color);
+    }
+}
+
+splitter {
+    width: 1px;
+    background-color: var(--blueberry-wisp-window-border-color);
+}
+
+frame,
+listview,
+treeview,
+tableview,
+columnview,
+scrollview,
+textfield,
+textarea {
+    &:visual-focus {
+        border: 1px solid var(--blueberry-wisp-highlight-color);
+    }
+    &[shape="no-frame"] {
+        border: none;
+    }
+    &[shape="panel"],
+    &[shape="box"] {
+        border-radius: var(--blueberry-wisp-corner-radius);
+        border: 1px solid var(--blueberry-wisp-window-border-color);
+        background-color: var(--blueberry-wisp-view-background-color);
+
+        .inactive & {
+            background-color: var(--blueberry-wisp-window-inactive-background-color);
+            border-color: var(--blueberry-wisp-window-inactive-border-color);
+        }
+    }
+    &[shape="vertical-line"],
+    &[shape="horizontal-line"] {
+        border-radius: 0px;
+        border: none;
+        background-color: var(--blueberry-wisp-window-border-color);
+        padding: 0px;
+        inset: 1px;
+    }
+    &[shape="vertical-line"] {
+        width: 1px;
+    }
+    &[shape="horizontal-line"] {
+        height: 1px;
+    }
+    /* Legacy hints that applications use to drive Breeze style */
+    &.dock-left,
+    &.dock-right,
+    &.dock-top,
+    &.dock-bottom,
+    &.left-edge,
+    &.right-edge,
+    &.top-edge,
+    &.bottom-edge {
+        border: none;
+        border-radius: 0px;
+    }
+    &.left-edge {
+        border-left: 1px solid var(--blueberry-wisp-window-border-color);
+    }
+    &.right-edge {
+        border-right: 1px solid var(--blueberry-wisp-window-border-color);
+    }
+    &.top-edge {
+        border-top: 1px solid var(--blueberry-wisp-window-border-color);
+    }
+    &.bottom-edge {
+        border-bottom: 1px solid var(--blueberry-wisp-window-border-color);
+    }
+}
+
+groupbox {
+    padding: var(--blueberry-wisp-small-spacing);
+    border: 1px solid var(--blueberry-wisp-window-border-color);
+    border-radius: var(--blueberry-wisp-corner-radius);
+    color: var(--blueberry-wisp-window-text-color);
+    background-color: var(--blueberry-wisp-window-background-color);
+
+    & > header {
+        color: var(--blueberry-wisp-window-text-color);
+    }
+    icon-alignment: content start start 0;
+    text-alignment: content center start 0;
+    spacing: var(--blueberry-wisp-small-spacing);
+    width: 200px;
+}
+
+
+dockwidget {
+    width: var(--blueberry-wisp-small-element-size);
+    height: var(--blueberry-wisp-small-element-size);
+    color: var(--blueberry-wisp-header-text-color);
+    background-color: var(--blueberry-wisp-header-background-color);
+    icon-alignment: content center center 0;
+    text-alignment: content center center 1;
+    padding: var(--blueberry-wisp-small-spacing);
+    &:visual-focus,
+    &:active-focus {
+        border: 1px solid var(--blueberry-wisp-highlight-color);
+    }
+
+    floatbutton,
+    closebutton {
+        width: var(--blueberry-wisp-small-element-size);
+        height: var(--blueberry-wisp-small-element-size);
+    }
+
+    floatbutton {
+        layout-alignment: content start center 0;
+        icon-name: "window-restore";
+    }
+
+    closebutton {
+        layout-alignment: content end center 0;
+        icon-name: "window-close-symbolic";
+    }
+}
+
+scrollareacorner {
+    background-color: var(--blueberry-wisp-window-background-color);
+    color: var(--blueberry-wisp-window-text-color);
+}
+
+panel,
+groupbox {
+    &.flat {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+rubberband {
+    background-color: var(--blueberry-wisp-highlight-hover-color);
+    border: 1px solid var(--blueberry-wisp-highlight-color);
+    border-radius: var(--blueberry-wisp-corner-radius);
+}
+
+titlebar {
+    width: var(--blueberry-wisp-small-element-size);
+    height: var(--blueberry-wisp-small-element-size);
+    color: var(--blueberry-wisp-header-text-color);
+    background-color: var(--blueberry-wisp-header-background-color);
+    icon-alignment: content center fill 0;
+    text-alignment: content center fill 1;
+    icon-size: var(--blueberry-wisp-icon-size-small);
+
+    systemmenu,
+    minimizebutton,
+    maximizebutton,
+    closebutton,
+    normalbutton,
+    shadebutton,
+    helpbutton {
+        width: var(--blueberry-wisp-small-element-size);
+        height: var(--blueberry-wisp-small-element-size);
+    }
+
+    systemmenu {
+        layout-alignment: content start fill 0;
+        icon-name: "application-menu-symbolic";
+    }
+    minimizebutton {
+        layout-alignment: content end fill 0;
+        icon-name: "window-minimize-symbolic";
+    }
+    maximizebutton {
+        layout-alignment: content end fill 1;
+        icon-name: "window-maximize-symbolic";
+    }
+    closebutton {
+        layout-alignment: content end fill 2;
+        icon-name: "window-close-symbolic";
+    }
+    shadebutton {
+        layout-alignment: content start fill 2;
+        icon-name: "window-shade-symbolic";
+    }
+    helpbutton {
+        layout-alignment: content start fill -1;
+        icon-name: "help-contextual-symbolic";
+    }
+
+    normalbutton {
+        layout-alignment: content start fill 1;
+    }
+
+    &.maximized {
+        maximizebutton {
+            icon-name: "window-restore-symbolic";
+        }
+    }
+
+    &.minimized {
+        minimizebutton {
+            icon-name: "empty";
+        }
+    }
+
+}

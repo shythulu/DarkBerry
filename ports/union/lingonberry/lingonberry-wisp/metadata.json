@@ -1,0 +1,14 @@
+{
+  "input-type": "css",
+  "input-version": 1,
+  "name": "Lingonberry Wisp",
+  "description": "Light. A pale page, the berries deepened to read on it. Backgrounds steeped in raspberry red.",
+  "version": "0.3.0",
+  "license": "MIT AND BSD-2-Clause",
+  "url": "https://darkberry.slacklab.ca",
+  "authors": [
+    "shythulu",
+    "Arjen Hiemstra (Breeze)",
+    "Akseli Lahtinen (Breeze)"
+  ]
+}

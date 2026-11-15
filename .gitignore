@@ -7,3 +7,6 @@ ports/*/dist/
 
 # Chrome writes this beside an unpacked theme it has loaded
 ports/chrome/**/Cached Theme.pak
+
+# Packages from older builds or downloaded releases; package.sh writes to ports/*/dist/
+/dist/

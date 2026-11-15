@@ -2,7 +2,7 @@
 
 Generated from `src/roles.json`. Every port references these names.
 
-| Role | Value | Wisp | Fen | Mire | Blackwater | Catppuccin |
+| Role | Value | Blackwater | Mire | Fen | Wisp | Catppuccin |
 |---|---|---|---|---|---|---|
 | `ui.background` | `base` | `#fbf4f8` | `#4f3143` | `#2a1e26` | `#1d121a` | same |
 | `ui.pane.secondary` | `mantle` | `#f3e6ef` | `#402838` | `#23161f` | `#170d13` | same |
@@ -21,6 +21,7 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.cursor.text` | `dark: crust, light: base` | `#fbf4f8` | `#35212e` | `#1c1119` | `#12090f` | same |
 | `ui.selection` | `mix(ui.background,berry,0.18)` | `#f0cadd` | `#6e4457` | `#502f3d` | `#452533` | overlay2 at 20-30% opacity |
 | `ui.line.current` | `mix(ui.background,surface0,0.35)` | `#f1e6ed` | `#543648` | `#2d1f28` | `#21151d` | no equivalent (editors tint the line themselves) |
+| `ui.row.alternate` | `dark: surface0, light: ui.pane.secondary` | `#f3e6ef` | `#5d3e51` | `#32222c` | `#271a23` | mantle (KDE's View BackgroundAlternate) |
 | `ui.link` | `frost` | `#026b80` | `#83d4db` | `#86c0cc` | `#86c0cc` | blue |
 | `ui.success` | `gooseberry` | `#2c6f2d` | `#b7e6b7` | `#a3daa3` | `#a3daa3` | same |
 | `ui.warning` | `honey` | `#815b02` | `#f0d6a0` | `#e8c98a` | `#e8c98a` | same |
@@ -30,6 +31,7 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.error.surface` | `dark: mix(ui.pane.secondary,ui.error,0.06), light: mix(ui.background,ui.error,0.06)` | `#f7e8ec` | `#4b2e3d` | `#2f1b24` | `#241318` | no equivalent (alerts tint the status colour themselves) |
 | `ui.warning.surface` | `dark: mix(ui.pane.secondary,ui.warning,0.06), light: mix(ui.background,ui.warning,0.06)` | `#f4ebe9` | `#4b323e` | `#2f2125` | `#24181a` | no equivalent (alerts tint the status colour themselves) |
 | `ui.info.surface` | `dark: mix(ui.pane.secondary,ui.info,0.06), light: mix(ui.background,ui.info,0.06)` | `#ececef` | `#473342` | `#2a2129` | `#1f191e` | no equivalent (alerts tint the status colour themselves) |
+| `ui.success.surface` | `dark: mix(ui.pane.secondary,ui.success,0.06), light: mix(ui.background,ui.success,0.06)` | `#efecec` | `#473340` | `#2b2227` | `#1f191c` | no equivalent (alerts tint the status colour themselves) |
 | `ui.bell` | `honey` | `#815b02` | `#f0d6a0` | `#e8c98a` | `#e8c98a` | same |
 | `ui.mark1` | `lavender` | `#7350a8` | `#c9b0e8` | `#baa8dc` | `#baa8dc` | same |
 | `ui.mark2` | `plum` | `#8c3eb2` | `#ecbcfc` | `#ddb0ec` | `#ddb0ec` | same |
@@ -47,6 +49,10 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.diff.changed` | `mix(ui.background,ui.warning,0.1)` | `#efe5df` | `#5f424c` | `#3d2f30` | `#312425` | blue at 7% into base |
 | `ui.diff.removed` | `mix(ui.background,syntax.diff.removed,0.18)` | `#ead4cf` | `#6e4652` | `#4e3235` | `#43282b` | red at 18% into base |
 | `ui.diff.text` | `mix(ui.background,ui.warning,0.18)` | `#e5d8cc` | `#6c4f54` | `#4c3d38` | `#42332e` | blue at 30% into base |
+| `ui.diff.added.word` | `dark: mix(ui.pane.tertiary,ui.success,0.12), light: mix(ui.background,ui.success,0.32)` | `#b9c9b7` | `#45393e` | `#2c292a` | `#232221` | green at 40% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) |
+| `ui.diff.removed.word` | `dark: mix(ui.pane.tertiary,syntax.diff.removed,0.12), light: mix(ui.background,syntax.diff.removed,0.32)` | `#ddbbb0` | `#4d313a` | `#362025` | `#2d191c` | red at 40% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) |
+| `ui.diff.added.dimmed` | `mix(ui.background,ui.success,0.08)` | `#eae9e8` | `#573f4c` | `#342d30` | `#282225` | green at 8% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) |
+| `ui.diff.removed.dimmed` | `mix(ui.background,syntax.diff.removed,0.08)` | `#f4e6e6` | `#5d3a49` | `#3a272d` | `#2e1c22` | red at 8% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) |
 | `terminal.color16` | `apricot` | `#a24712` | `#f7bf9e` | `#f2ad8a` | `#f2ad8a` | same |
 | `terminal.color17` | `blossom` | `#934b66` | `#eaafd6` | `#e7c5d8` | `#e7c5d8` | same |
 | `syntax.text` | `text` | `#4f3143` | `#f2e6ee` | `#efe3eb` | `#ede1e9` | same |
@@ -83,16 +89,22 @@ Generated from `src/roles.json`. Every port references these names.
 | `ui.cursor` | `petal` | rosewater | A bright rose cursor is easy to find on dark, wine-tinted backgrounds; blossom, the rosewater slot, is too dusty for that. |
 | `ui.selection` | `mix(ui.background,berry,0.18)` | overlay2 at 20-30% opacity | Selections are tinted with berry so they read as part of the theme rather than as grey. Mixed from the background rather than a surface step, so syntax colours on selected text keep most of their contrast. |
 | `ui.line.current` | `mix(ui.background,surface0,0.35)` | no equivalent (editors tint the line themselves) | The cursor line is a tint of the background rather than a surface step, so syntax colours on the highlighted row keep most of their contrast. |
+| `ui.row.alternate` | `{"dark":"surface0","light":"ui.pane.secondary"}` | mantle (KDE's View BackgroundAlternate) | Every other row of a list or table. Wisp takes mantle, as Catppuccin does; surface0 there was a heavy 1.42:1 stripe. The dark flavours keep surface0, which lifts a row off their base by 1.07 to 1.24:1, about what mantle sinks one on Wisp (1.12:1). |
 | `ui.link` | `frost` | blue | Links are teal-blue frost because blueberry already carries constants. |
 | `ui.on.error` | `{"dark":"crust","light":"onjam"}` | no equivalent | Text drawn on a full status fill: error bars in micro, Obsidian's destructive buttons, btop's banners. White on cranberry is 2.3:1 in Fen; crust reaches 6:1 on the error, warning and info fills in every dark flavour, white 5:1 on Wisp's. |
 | `ui.error.surface` | `{"dark":"mix(ui.pane.secondary,ui.error,0.06)","light":"mix(ui.background,ui.error,0.06)"}` | no equivalent (alerts tint the status colour themselves) | A faint tint of the status colour behind status-coloured text: T3 Code's alerts and Obsidian's callouts. The dark flavours tint ui.pane.secondary, the card surface, because cranberry is only 4.8 to 5.0:1 on Fen's base across the tints and a 6% tint of base drops it to 4.36 (Cloudberry); over mantle the worst case is 5.09. Wisp's mantle is darker than its base, so there the tint comes from the background, 5.16:1. |
 | `ui.warning.surface` | `{"dark":"mix(ui.pane.secondary,ui.warning,0.06)","light":"mix(ui.background,ui.warning,0.06)"}` | no equivalent (alerts tint the status colour themselves) | The warning counterpart of ui.error.surface, at the same 6% so the three status surfaces sit at one weight. |
 | `ui.info.surface` | `{"dark":"mix(ui.pane.secondary,ui.info,0.06)","light":"mix(ui.background,ui.info,0.06)"}` | no equivalent (alerts tint the status colour themselves) | The info counterpart of ui.error.surface: T3 Code's update banner, at the same 6%. |
+| `ui.success.surface` | `{"dark":"mix(ui.pane.secondary,ui.success,0.06)","light":"mix(ui.background,ui.success,0.06)"}` | no equivalent (alerts tint the status colour themselves) | The success counterpart of ui.error.surface: the Union style's positive inline messages, at the same 6%. |
 | `ui.emphasis` | `cherry` | no single colour (nvim PmenuMatch: text bold; Title: blue) | Match text in lists and titles take one secondary accent, cherry, the colour VS Code's port already gives three of its four emphasis keys; it clears 5.6:1 on every background. |
 | `ui.search.matches` | `mix(ui.background,ui.mark1,0.22)` | sky at 30% into base (nvim Search) | Every search hit but the current one is the mark colour faded 22% into the background, so the hits belong to the same family as the current match (ui.mark1); 22% is the most the tint can be while every syntax role keeps 65% of its minimum on it in all five tints (35% left comments at 81%). |
 | `ui.diff.changed` | `mix(ui.background,ui.warning,0.1)` | blue at 7% into base | A changed line follows ui.warning, the colour modified lines carry in every port, at 10% so the changed span inside it (ui.diff.text, 18%) still stands out. |
 | `ui.diff.removed` | `mix(ui.background,syntax.diff.removed,0.18)` | red at 18% into base | A removed line follows syntax.diff.removed, the warm red the removed text itself uses, so the line and its text agree and ui.error stays for errors. |
 | `ui.diff.text` | `mix(ui.background,ui.warning,0.18)` | blue at 30% into base | The changed span inside a changed line is the same warning tint at nearly twice the strength of ui.diff.changed, without a second hue; 18% is the most it can be while every syntax role keeps 65% of its minimum on it in all five tints. |
+| `ui.diff.added.word` | `{"dark":"mix(ui.pane.tertiary,ui.success,0.12)","light":"mix(ui.background,ui.success,0.32)"}` | green at 40% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) | The changed words inside an added line (Claude Code's diffAddedWord), drawn darker than the line in every flavour. ui.diff.added is already the strongest green mix into base that carries code (20% leaves comments at 97% on Fen), so no brighter word colour exists on the dark flavours; 12% into crust sits 7.6 (OKLab x100) from the line in every tint and keeps syntax at 154%. A brighter 26% into crust was 1.6 from the line on Mire, which nobody sees. Wisp has room for 32% into base, 7.1 from the line. |
+| `ui.diff.removed.word` | `{"dark":"mix(ui.pane.tertiary,syntax.diff.removed,0.12)","light":"mix(ui.background,syntax.diff.removed,0.32)"}` | red at 40% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) | The removed counterpart of ui.diff.added.word, at the same strengths so the two word highlights weigh the same: 7.1 from the line in every tint, syntax at 161%. |
+| `ui.diff.added.dimmed` | `mix(ui.background,ui.success,0.08)` | green at 8% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) | An added line that no longer applies (Claude Code's diff after an edit is rejected): the same green under half the strength of ui.diff.added, so it reads as faded rather than gone. |
+| `ui.diff.removed.dimmed` | `mix(ui.background,syntax.diff.removed,0.08)` | red at 8% into base (catppuccin-mocha in livlign/ccthemes; Catppuccin has no Claude Code port) | The removed counterpart of ui.diff.added.dimmed, at the same 8%. |
 | `syntax.keyword` | `berry` | mauve | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.function` | `petal` | blue | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |
 | `syntax.type` | `plum` | yellow | Darkberry's syntax mapping: warm berry tones carry structure (keywords, functions, types) and cooler tones carry values (constants, strings, regex). |

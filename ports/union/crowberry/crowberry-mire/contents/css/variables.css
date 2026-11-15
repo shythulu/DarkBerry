@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --crowberry-mire-minimal-spacing: 2px;
+    --crowberry-mire-small-spacing: 4px;
+    --crowberry-mire-medium-spacing: 6px;
+    --crowberry-mire-large-spacing: 8px;
+    --crowberry-mire-grid-unit: 18px;
+    --crowberry-mire-corner-radius: 5px;
+
+    /* Icon sizes */
+    --crowberry-mire-icon-size-small: 16px;
+    --crowberry-mire-icon-size-smallmedium: 22px;
+    --crowberry-mire-icon-size-medium: 32px;
+    --crowberry-mire-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --crowberry-mire-small-element-size: 16px;
+    --crowberry-mire-medium-element-size: 24px;
+    --crowberry-mire-large-element-size: 32px;
+    --crowberry-mire-scrollbar-size: 20px;
+    --crowberry-mire-non-interactive-scrollbar-size: 10px;
+    --crowberry-mire-menu-item-width: 150px;
+    --crowberry-mire-text-field-width: 200px;
+
+    /* Colors */
+    --crowberry-mire-highlight-color: var(--crowberry-mire-kcs-active-selection-background-normal);
+    --crowberry-mire-highlight-text-color: var(--crowberry-mire-kcs-active-selection-foreground-text);
+    --crowberry-mire-highlight-hover-color: modify-color(var(--crowberry-mire-highlight-color) set-alpha 0.3);
+
+    --crowberry-mire-window-text-color: var(--crowberry-mire-kcs-active-window-foreground-text);
+    --crowberry-mire-window-background-color: var(--crowberry-mire-kcs-active-window-background-normal);
+    --crowberry-mire-window-background-alternate-color: var(--crowberry-mire-kcs-active-window-background-alternate);
+    --crowberry-mire-window-border-color: var(--crowberry-mire-kcs-active-window-decoration-frame);
+    --crowberry-mire-window-highlight-color: mix(var(--crowberry-mire-window-background-color), var(--crowberry-mire-highlight-color), 0.5);
+    --crowberry-mire-window-border-highlight-color: var(--crowberry-mire-highlight-color);
+
+    --crowberry-mire-view-text-color: var(--crowberry-mire-kcs-active-view-foreground-text);
+    --crowberry-mire-view-background-color: var(--crowberry-mire-kcs-active-view-background-normal);
+    --crowberry-mire-view-background-alternate-color: var(--crowberry-mire-kcs-active-view-background-alternate);
+    --crowberry-mire-view-border-color: var(--crowberry-mire-kcs-active-view-decoration-frame);
+    --crowberry-mire-view-highlight-color: mix(var(--crowberry-mire-view-background-color), var(--crowberry-mire-highlight-color), 0.5);
+
+    --crowberry-mire-header-text-color: var(--crowberry-mire-kcs-active-header-foreground-text);
+    --crowberry-mire-header-background-color: var(--crowberry-mire-kcs-active-header-background-normal);
+    --crowberry-mire-header-background-inactive-color: var(--crowberry-mire-kcs-inactive-header-background-normal);
+    --crowberry-mire-header-border-color: var(--crowberry-mire-kcs-active-header-decoration-frame);
+
+    --crowberry-mire-complementary-text-color: var(--crowberry-mire-kcs-active-complementary-foreground-text);
+    --crowberry-mire-complementary-background-color: var(--crowberry-mire-kcs-active-complementary-background-normal);
+
+    --crowberry-mire-positive-text: var(--crowberry-mire-kcs-active-view-foreground-positive);
+    --crowberry-mire-neutral-text: var(--crowberry-mire-kcs-active-view-foreground-neutral);
+    --crowberry-mire-negative-text: var(--crowberry-mire-kcs-active-view-foreground-negative);
+    --crowberry-mire-positive-background: var(--crowberry-mire-kcs-active-view-background-positive);
+    --crowberry-mire-neutral-background: var(--crowberry-mire-kcs-active-view-background-neutral);
+    --crowberry-mire-negative-background: var(--crowberry-mire-kcs-active-view-background-negative);
+
+    --crowberry-mire-changed-foreground: var(--crowberry-mire-neutral-text);
+    --crowberry-mire-changed-background: var(--crowberry-mire-neutral-background);
+
+    --crowberry-mire-card-background-color: var(--crowberry-mire-view-background-color);
+    --crowberry-mire-card-text-color: var(--crowberry-mire-view-text-color);
+    --crowberry-mire-card-border-color: var(--crowberry-mire-view-border-color);
+    --crowberry-mire-card-hover-color: mix(var(--crowberry-mire-card-background-color), var(--crowberry-mire-highlight-color), 0.1);
+    --crowberry-mire-card-pressed-color: mix(var(--crowberry-mire-card-background-color), var(--crowberry-mire-highlight-color), 0.3);
+
+    --crowberry-mire-focus-outline-alpha: 0.3;
+    --crowberry-mire-focus-color: modify-color(var(--crowberry-mire-kcs-active-window-decoration-focus) set-alpha var(--crowberry-mire-focus-outline-alpha));
+
+    --crowberry-mire-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --crowberry-mire-window-disabled-text-color: var(--crowberry-mire-kcs-disabled-window-foreground-text);
+    --crowberry-mire-window-disabled-background-color: var(--crowberry-mire-kcs-disabled-window-background-normal);
+    --crowberry-mire-window-disabled-border-color: var(--crowberry-mire-kcs-disabled-window-decoration-frame);
+
+    --crowberry-mire-view-disabled-text-color: var(--crowberry-mire-kcs-disabled-view-foreground-text);
+    --crowberry-mire-view-disabled-background-color: var(--crowberry-mire-kcs-disabled-view-background-normal);
+    --crowberry-mire-view-disabled-border-color: var(--crowberry-mire-kcs-disabled-view-decoration-frame);
+
+    --crowberry-mire-header-disabled-text-color: var(--crowberry-mire-kcs-disabled-header-foreground-text);
+    --crowberry-mire-header-disabled-background-color: var(--crowberry-mire-kcs-disabled-header-background-normal);
+    --crowberry-mire-header-disabled-border-color: var(--crowberry-mire-kcs-disabled-header-decoration-frame);
+
+    --crowberry-mire-complementary-disabled-text-color: var(--crowberry-mire-kcs-disabled-complementary-foreground-text);
+
+    --crowberry-mire-highlight-disabled-color: mix(var(--crowberry-mire-window-disabled-background-color), var(--crowberry-mire-highlight-color), 0.2);
+    --crowberry-mire-highlight-disabled-text-color: mix(var(--crowberry-mire-window-disabled-text-color), var(--crowberry-mire-highlight-text-color), 0.2);
+
+    --crowberry-mire-card-disabled-background-color: var(--crowberry-mire-view-disabled-background-color);
+    --crowberry-mire-card-disabled-text-color: var(--crowberry-mire-view-disabled-text-color);
+    --crowberry-mire-card-disabled-border-color: var(--crowberry-mire-view-disabled-border-color);
+
+    /* Standard Elements */
+    --crowberry-mire-focus-outline: 2px solid var(--crowberry-mire-focus-ring-color);
+    --crowberry-mire-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --crowberry-mire-indicator-color: modify-color(var(--crowberry-mire-window-text-color) set-alpha 0.4);
+    --crowberry-mire-indicator-press-color: modify-color(var(--crowberry-mire-window-text-color) set-alpha 0.7);
+    --crowberry-mire-indicator-current-color: modify-color(var(--crowberry-mire-window-text-color) set-alpha 0.95);
+}

@@ -160,7 +160,7 @@ by `build.js`.
 | `--premium-tier-1-blue-for-gradients` | `$sapphire` | `bilberry` |
 | `--playstation` | `darken($blue, 10%)` | `blueberry` |
 | Rainbow thread cycle | `$red, $peach, $yellow, $green, $blue, $mauve` | `cranberry, apricot, honey, gooseberry, blueberry, plum` |
-| Code blocks | `@catppuccin/highlightjs` mixin | an `.hljs-*` block on `syntax.*` roles, the scope map from `src/vscode/template.json` |
+| Code blocks | `@catppuccin/highlightjs` mixin | an `.hljs-*` block on `syntax.*` roles, the scope map from `src/ports/vscode.json` |
 
 ### Build plan
 
@@ -169,7 +169,7 @@ What to add:
 | File | Purpose |
 |---|---|
 | `src/ports/discord.css` | The theme. Flat CSS, no Sass. Catppuccin's `lighten`, `darken` and `adjust-color` become `{mix(a,b,t)}` and alpha suffixes. |
-| `src/overrides/discord.json` | `{ "overrides": [] }`, kind `lines`, key `--text-default:` style as Obsidian. |
+| `src/overrides/discord.json` | Only if an exception is needed: kind `lines`, key `--text-default:` style as Obsidian. No file means no overrides. |
 | `src/usage/discord.md` | Install steps for BetterDiscord, Vencord local and online, Equicord, Stylus. A FAQ with the ban question, as Catppuccin's README has. |
 | `src/ports.json` entry | `{ "key": "discord", "name": "Discord", "url": "https://discord.com", "emoji": "🎮", "categories": ["social_networking"], "platform": ["linux", "macos", "windows", "web"] }`. Catppuccin files it under `social_networking`, which `src/categories.json` does not have yet. Add the category or the build fails. |
 

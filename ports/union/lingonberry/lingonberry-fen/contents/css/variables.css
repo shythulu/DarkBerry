@@ -1,0 +1,110 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Custom global variables used by all the other style rules.
+ */
+
+:root {
+    /* Standard Sizes */
+    --lingonberry-fen-minimal-spacing: 2px;
+    --lingonberry-fen-small-spacing: 4px;
+    --lingonberry-fen-medium-spacing: 6px;
+    --lingonberry-fen-large-spacing: 8px;
+    --lingonberry-fen-grid-unit: 18px;
+    --lingonberry-fen-corner-radius: 5px;
+
+    /* Icon sizes */
+    --lingonberry-fen-icon-size-small: 16px;
+    --lingonberry-fen-icon-size-smallmedium: 22px;
+    --lingonberry-fen-icon-size-medium: 32px;
+    --lingonberry-fen-icon-size-large: 48px;
+
+    /* Default item sizes */
+    --lingonberry-fen-small-element-size: 16px;
+    --lingonberry-fen-medium-element-size: 24px;
+    --lingonberry-fen-large-element-size: 32px;
+    --lingonberry-fen-scrollbar-size: 20px;
+    --lingonberry-fen-non-interactive-scrollbar-size: 10px;
+    --lingonberry-fen-menu-item-width: 150px;
+    --lingonberry-fen-text-field-width: 200px;
+
+    /* Colors */
+    --lingonberry-fen-highlight-color: var(--lingonberry-fen-kcs-active-selection-background-normal);
+    --lingonberry-fen-highlight-text-color: var(--lingonberry-fen-kcs-active-selection-foreground-text);
+    --lingonberry-fen-highlight-hover-color: modify-color(var(--lingonberry-fen-highlight-color) set-alpha 0.3);
+
+    --lingonberry-fen-window-text-color: var(--lingonberry-fen-kcs-active-window-foreground-text);
+    --lingonberry-fen-window-background-color: var(--lingonberry-fen-kcs-active-window-background-normal);
+    --lingonberry-fen-window-background-alternate-color: var(--lingonberry-fen-kcs-active-window-background-alternate);
+    --lingonberry-fen-window-border-color: var(--lingonberry-fen-kcs-active-window-decoration-frame);
+    --lingonberry-fen-window-highlight-color: mix(var(--lingonberry-fen-window-background-color), var(--lingonberry-fen-highlight-color), 0.5);
+    --lingonberry-fen-window-border-highlight-color: var(--lingonberry-fen-highlight-color);
+
+    --lingonberry-fen-view-text-color: var(--lingonberry-fen-kcs-active-view-foreground-text);
+    --lingonberry-fen-view-background-color: var(--lingonberry-fen-kcs-active-view-background-normal);
+    --lingonberry-fen-view-background-alternate-color: var(--lingonberry-fen-kcs-active-view-background-alternate);
+    --lingonberry-fen-view-border-color: var(--lingonberry-fen-kcs-active-view-decoration-frame);
+    --lingonberry-fen-view-highlight-color: mix(var(--lingonberry-fen-view-background-color), var(--lingonberry-fen-highlight-color), 0.5);
+
+    --lingonberry-fen-header-text-color: var(--lingonberry-fen-kcs-active-header-foreground-text);
+    --lingonberry-fen-header-background-color: var(--lingonberry-fen-kcs-active-header-background-normal);
+    --lingonberry-fen-header-background-inactive-color: var(--lingonberry-fen-kcs-inactive-header-background-normal);
+    --lingonberry-fen-header-border-color: var(--lingonberry-fen-kcs-active-header-decoration-frame);
+
+    --lingonberry-fen-complementary-text-color: var(--lingonberry-fen-kcs-active-complementary-foreground-text);
+    --lingonberry-fen-complementary-background-color: var(--lingonberry-fen-kcs-active-complementary-background-normal);
+
+    --lingonberry-fen-positive-text: var(--lingonberry-fen-kcs-active-view-foreground-positive);
+    --lingonberry-fen-neutral-text: var(--lingonberry-fen-kcs-active-view-foreground-neutral);
+    --lingonberry-fen-negative-text: var(--lingonberry-fen-kcs-active-view-foreground-negative);
+    --lingonberry-fen-positive-background: var(--lingonberry-fen-kcs-active-view-background-positive);
+    --lingonberry-fen-neutral-background: var(--lingonberry-fen-kcs-active-view-background-neutral);
+    --lingonberry-fen-negative-background: var(--lingonberry-fen-kcs-active-view-background-negative);
+
+    --lingonberry-fen-changed-foreground: var(--lingonberry-fen-neutral-text);
+    --lingonberry-fen-changed-background: var(--lingonberry-fen-neutral-background);
+
+    --lingonberry-fen-card-background-color: var(--lingonberry-fen-view-background-color);
+    --lingonberry-fen-card-text-color: var(--lingonberry-fen-view-text-color);
+    --lingonberry-fen-card-border-color: var(--lingonberry-fen-view-border-color);
+    --lingonberry-fen-card-hover-color: mix(var(--lingonberry-fen-card-background-color), var(--lingonberry-fen-highlight-color), 0.1);
+    --lingonberry-fen-card-pressed-color: mix(var(--lingonberry-fen-card-background-color), var(--lingonberry-fen-highlight-color), 0.3);
+
+    --lingonberry-fen-focus-outline-alpha: 0.3;
+    --lingonberry-fen-focus-color: modify-color(var(--lingonberry-fen-kcs-active-window-decoration-focus) set-alpha var(--lingonberry-fen-focus-outline-alpha));
+
+    --lingonberry-fen-shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Disabled colors */
+    --lingonberry-fen-window-disabled-text-color: var(--lingonberry-fen-kcs-disabled-window-foreground-text);
+    --lingonberry-fen-window-disabled-background-color: var(--lingonberry-fen-kcs-disabled-window-background-normal);
+    --lingonberry-fen-window-disabled-border-color: var(--lingonberry-fen-kcs-disabled-window-decoration-frame);
+
+    --lingonberry-fen-view-disabled-text-color: var(--lingonberry-fen-kcs-disabled-view-foreground-text);
+    --lingonberry-fen-view-disabled-background-color: var(--lingonberry-fen-kcs-disabled-view-background-normal);
+    --lingonberry-fen-view-disabled-border-color: var(--lingonberry-fen-kcs-disabled-view-decoration-frame);
+
+    --lingonberry-fen-header-disabled-text-color: var(--lingonberry-fen-kcs-disabled-header-foreground-text);
+    --lingonberry-fen-header-disabled-background-color: var(--lingonberry-fen-kcs-disabled-header-background-normal);
+    --lingonberry-fen-header-disabled-border-color: var(--lingonberry-fen-kcs-disabled-header-decoration-frame);
+
+    --lingonberry-fen-complementary-disabled-text-color: var(--lingonberry-fen-kcs-disabled-complementary-foreground-text);
+
+    --lingonberry-fen-highlight-disabled-color: mix(var(--lingonberry-fen-window-disabled-background-color), var(--lingonberry-fen-highlight-color), 0.2);
+    --lingonberry-fen-highlight-disabled-text-color: mix(var(--lingonberry-fen-window-disabled-text-color), var(--lingonberry-fen-highlight-text-color), 0.2);
+
+    --lingonberry-fen-card-disabled-background-color: var(--lingonberry-fen-view-disabled-background-color);
+    --lingonberry-fen-card-disabled-text-color: var(--lingonberry-fen-view-disabled-text-color);
+    --lingonberry-fen-card-disabled-border-color: var(--lingonberry-fen-view-disabled-border-color);
+
+    /* Standard Elements */
+    --lingonberry-fen-focus-outline: 2px solid var(--lingonberry-fen-focus-ring-color);
+    --lingonberry-fen-dialog-shadow: 0px 1px 32px 0px rgba(0, 0, 0, 0.3);
+
+    --lingonberry-fen-indicator-color: modify-color(var(--lingonberry-fen-window-text-color) set-alpha 0.4);
+    --lingonberry-fen-indicator-press-color: modify-color(var(--lingonberry-fen-window-text-color) set-alpha 0.7);
+    --lingonberry-fen-indicator-current-color: modify-color(var(--lingonberry-fen-window-text-color) set-alpha 0.95);
+}

@@ -2,93 +2,6 @@ GIMP Palette
 Name: Darkberry with tints
 Columns: 8
 # Darkberry 0.3.0, https://darkberry.slacklab.ca
-147  75 102	Darkberry Wisp Blossom
-168  53 112	Darkberry Wisp Petal
-191  11 100	Darkberry Wisp Berry
-140  62 178	Darkberry Wisp Plum
-187  38  42	Darkberry Wisp Cranberry
-165  63  84	Darkberry Wisp Cherry
-162  71  18	Darkberry Wisp Apricot
-129  91   2	Darkberry Wisp Honey
- 44 111  45	Darkberry Wisp Gooseberry
-  0 111  95	Darkberry Wisp Juniper
-  2 107 128	Darkberry Wisp Frost
- 29 100 164	Darkberry Wisp Bilberry
- 54  89 202	Darkberry Wisp Blueberry
-115  80 168	Darkberry Wisp Lavender
-185  72 139	Darkberry Wisp Jam
-255 255 255	Darkberry Wisp Onjam
-210  21 112	Darkberry Wisp Tint
- 79  49  67	Darkberry Wisp Text
- 90  64  80	Darkberry Wisp Subtext1
-105  78  95	Darkberry Wisp Subtext0
-116  91 106	Darkberry Wisp Overlay2
-150 125 140	Darkberry Wisp Overlay1
-172 147 162	Darkberry Wisp Overlay0
-195 171 185	Darkberry Wisp Surface2
-208 186 200	Darkberry Wisp Surface1
-223 203 216	Darkberry Wisp Surface0
-251 244 248	Darkberry Wisp Base
-243 230 239	Darkberry Wisp Mantle
-235 218 229	Darkberry Wisp Crust
-234 175 214	Darkberry Fen Blossom
-255 196 221	Darkberry Fen Petal
-250 153 180	Darkberry Fen Berry
-236 188 252	Darkberry Fen Plum
-255 138 138	Darkberry Fen Cranberry
-231 170 181	Darkberry Fen Cherry
-247 191 158	Darkberry Fen Apricot
-240 214 160	Darkberry Fen Honey
-183 230 183	Darkberry Fen Gooseberry
-176 223 217	Darkberry Fen Juniper
-131 212 219	Darkberry Fen Frost
-156 198 234	Darkberry Fen Bilberry
-164 195 246	Darkberry Fen Blueberry
-201 176 232	Darkberry Fen Lavender
-220 103 167	Darkberry Fen Jam
- 53  33  46	Darkberry Fen Onjam
-250 153 180	Darkberry Fen Tint
-242 230 238	Darkberry Fen Text
-223 206 217	Darkberry Fen Subtext1
-204 186 197	Darkberry Fen Subtext0
-189 159 177	Darkberry Fen Overlay2
-162 130 151	Darkberry Fen Overlay1
-143 110 130	Darkberry Fen Overlay0
-123  90 110	Darkberry Fen Surface2
-108  76  96	Darkberry Fen Surface1
- 93  62  81	Darkberry Fen Surface0
- 79  49  67	Darkberry Fen Base
- 64  40  56	Darkberry Fen Mantle
- 53  33  46	Darkberry Fen Crust
-231 197 216	Darkberry Mire Blossom
-254 175 212	Darkberry Mire Petal
-253 124 165	Darkberry Mire Berry
-221 176 236	Darkberry Mire Plum
-240 106 106	Darkberry Mire Cranberry
-211 145 156	Darkberry Mire Cherry
-242 173 138	Darkberry Mire Apricot
-232 201 138	Darkberry Mire Honey
-163 218 163	Darkberry Mire Gooseberry
-158 208 196	Darkberry Mire Juniper
-134 192 204	Darkberry Mire Frost
-127 180 224	Darkberry Mire Bilberry
-143 176 242	Darkberry Mire Blueberry
-186 168 220	Darkberry Mire Lavender
-190  76 141	Darkberry Mire Jam
-255 255 255	Darkberry Mire Onjam
-253 124 165	Darkberry Mire Tint
-239 227 235	Darkberry Mire Text
-221 208 217	Darkberry Mire Subtext1
-203 188 197	Darkberry Mire Subtext0
-173 141 162	Darkberry Mire Overlay2
-145 130 139	Darkberry Mire Overlay1
-125 105 118	Darkberry Mire Overlay0
- 79  49  67	Darkberry Mire Surface2
- 62  41  54	Darkberry Mire Surface1
- 50  34  44	Darkberry Mire Surface0
- 42  30  38	Darkberry Mire Base
- 35  22  31	Darkberry Mire Mantle
- 28  17  25	Darkberry Mire Crust
 231 197 216	Darkberry Blackwater Blossom
 254 175 212	Darkberry Blackwater Petal
 253 124 165	Darkberry Blackwater Berry
@@ -118,6 +31,93 @@ Columns: 8
  29  18  26	Darkberry Blackwater Base
  23  13  19	Darkberry Blackwater Mantle
  18   9  15	Darkberry Blackwater Crust
+231 197 216	Darkberry Mire Blossom
+254 175 212	Darkberry Mire Petal
+253 124 165	Darkberry Mire Berry
+221 176 236	Darkberry Mire Plum
+240 106 106	Darkberry Mire Cranberry
+211 145 156	Darkberry Mire Cherry
+242 173 138	Darkberry Mire Apricot
+232 201 138	Darkberry Mire Honey
+163 218 163	Darkberry Mire Gooseberry
+158 208 196	Darkberry Mire Juniper
+134 192 204	Darkberry Mire Frost
+127 180 224	Darkberry Mire Bilberry
+143 176 242	Darkberry Mire Blueberry
+186 168 220	Darkberry Mire Lavender
+190  76 141	Darkberry Mire Jam
+255 255 255	Darkberry Mire Onjam
+253 124 165	Darkberry Mire Tint
+239 227 235	Darkberry Mire Text
+221 208 217	Darkberry Mire Subtext1
+203 188 197	Darkberry Mire Subtext0
+173 141 162	Darkberry Mire Overlay2
+145 130 139	Darkberry Mire Overlay1
+125 105 118	Darkberry Mire Overlay0
+ 79  49  67	Darkberry Mire Surface2
+ 62  41  54	Darkberry Mire Surface1
+ 50  34  44	Darkberry Mire Surface0
+ 42  30  38	Darkberry Mire Base
+ 35  22  31	Darkberry Mire Mantle
+ 28  17  25	Darkberry Mire Crust
+234 175 214	Darkberry Fen Blossom
+255 196 221	Darkberry Fen Petal
+250 153 180	Darkberry Fen Berry
+236 188 252	Darkberry Fen Plum
+255 138 138	Darkberry Fen Cranberry
+231 170 181	Darkberry Fen Cherry
+247 191 158	Darkberry Fen Apricot
+240 214 160	Darkberry Fen Honey
+183 230 183	Darkberry Fen Gooseberry
+176 223 217	Darkberry Fen Juniper
+131 212 219	Darkberry Fen Frost
+156 198 234	Darkberry Fen Bilberry
+164 195 246	Darkberry Fen Blueberry
+201 176 232	Darkberry Fen Lavender
+220 103 167	Darkberry Fen Jam
+ 53  33  46	Darkberry Fen Onjam
+250 153 180	Darkberry Fen Tint
+242 230 238	Darkberry Fen Text
+223 206 217	Darkberry Fen Subtext1
+204 186 197	Darkberry Fen Subtext0
+189 159 177	Darkberry Fen Overlay2
+162 130 151	Darkberry Fen Overlay1
+143 110 130	Darkberry Fen Overlay0
+123  90 110	Darkberry Fen Surface2
+108  76  96	Darkberry Fen Surface1
+ 93  62  81	Darkberry Fen Surface0
+ 79  49  67	Darkberry Fen Base
+ 64  40  56	Darkberry Fen Mantle
+ 53  33  46	Darkberry Fen Crust
+147  75 102	Darkberry Wisp Blossom
+168  53 112	Darkberry Wisp Petal
+191  11 100	Darkberry Wisp Berry
+140  62 178	Darkberry Wisp Plum
+187  38  42	Darkberry Wisp Cranberry
+165  63  84	Darkberry Wisp Cherry
+162  71  18	Darkberry Wisp Apricot
+129  91   2	Darkberry Wisp Honey
+ 44 111  45	Darkberry Wisp Gooseberry
+  0 111  95	Darkberry Wisp Juniper
+  2 107 128	Darkberry Wisp Frost
+ 29 100 164	Darkberry Wisp Bilberry
+ 54  89 202	Darkberry Wisp Blueberry
+115  80 168	Darkberry Wisp Lavender
+185  72 139	Darkberry Wisp Jam
+255 255 255	Darkberry Wisp Onjam
+210  21 112	Darkberry Wisp Tint
+ 79  49  67	Darkberry Wisp Text
+ 90  64  80	Darkberry Wisp Subtext1
+105  78  95	Darkberry Wisp Subtext0
+116  91 106	Darkberry Wisp Overlay2
+150 125 140	Darkberry Wisp Overlay1
+172 147 162	Darkberry Wisp Overlay0
+195 171 185	Darkberry Wisp Surface2
+208 186 200	Darkberry Wisp Surface1
+223 203 216	Darkberry Wisp Surface0
+251 244 248	Darkberry Wisp Base
+243 230 239	Darkberry Wisp Mantle
+235 218 229	Darkberry Wisp Crust
 147  75 102	Lingonberry Wisp Blossom
 166  54 118	Lingonberry Wisp Petal
 191  11 100	Lingonberry Wisp Berry

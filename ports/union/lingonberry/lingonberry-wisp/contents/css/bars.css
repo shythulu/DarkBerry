@@ -1,0 +1,300 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ * SPDX-FileCopyrightText: 2025 Akseli Lahtinen <akselmo@akselmo.dev>
+ */
+
+/*
+ * Bar-like controls such as progress bars and sliders.
+ */
+
+:root {
+    --lingonberry-wisp-bar-active-background-color: mix(var(--lingonberry-wisp-window-background-color), var(--lingonberry-wisp-window-text-color), 0.075);
+    --lingonberry-wisp-bar-active-border-color: var(--lingonberry-wisp-window-border-color);
+    --lingonberry-wisp-bar-track-active-background-color: mix(var(--lingonberry-wisp-window-background-color), var(--lingonberry-wisp-highlight-color), 0.333);
+    --lingonberry-wisp-bar-track-active-border-color: var(--lingonberry-wisp-highlight-color);
+    --lingonberry-wisp-bar-handle-active-background-color: var(--lingonberry-wisp-button-active-background-color);
+    --lingonberry-wisp-bar-handle-active-border-color: var(--lingonberry-wisp-button-active-border-color);
+
+    --lingonberry-wisp-bar-handle-active-highlight-color: var(--lingonberry-wisp-button-active-highlight-color);
+    --lingonberry-wisp-bar-handle-active-highlight-border-color: var(--lingonberry-wisp-button-active-border-highlight-color);
+
+    --lingonberry-wisp-bar-disabled-background-color: var(--lingonberry-wisp-window-disabled-background-color);
+    --lingonberry-wisp-bar-disabled-border-color: var(--lingonberry-wisp-window-disabled-border-color);
+    --lingonberry-wisp-bar-track-disabled-background-color: mix(var(--lingonberry-wisp-window-disabled-background-color), var(--lingonberry-wisp-window-background-color), 0.75);
+    --lingonberry-wisp-bar-track-disabled-border-color: var(--lingonberry-wisp-window-disabled-border-color);
+    --lingonberry-wisp-bar-handle-disabled-background-color: var(--lingonberry-wisp-button-disabled-background-color);
+    --lingonberry-wisp-bar-handle-disabled-border-color: var(--lingonberry-wisp-button-disabled-border-color);
+
+    --lingonberry-wisp-bar-handle-size: 20px;
+    --lingonberry-wisp-bar-tickmark-thickness: 2px;
+    --lingonberry-wisp-bar-tickmark-length: 8px;
+    --lingonberry-wisp-bar-tickmark-margin: 1px;
+
+    --lingonberry-wisp-dial-inactive-background-color: mix(var(--lingonberry-wisp-button-inactive-background-color), var(--lingonberry-wisp-window-background-color), 0.5);
+    --lingonberry-wisp-dial-inactive-border-color: var(--lingonberry-wisp-button-inactive-border-color);
+    --lingonberry-wisp-dial-active-background-color: mix(var(--lingonberry-wisp-button-active-background-color), var(--lingonberry-wisp-window-background-color), 0.5);
+    --lingonberry-wisp-dial-active-border-color: var(--lingonberry-wisp-button-active-border-color);
+    --lingonberry-wisp-dial-disabled-background-color: mix(var(--lingonberry-wisp-button-disabled-background-color), var(--lingonberry-wisp-window-background-color), 0.5);
+    --lingonberry-wisp-dial-disabled-border-color: var(--lingonberry-wisp-button-disabled-border-color);
+
+    --lingonberry-wisp-dial-handle-inactive-background-color: var(--lingonberry-wisp-button-inactive-background-color);
+    --lingonberry-wisp-dial-handle-inactive-border-color: var(--lingonberry-wisp-button-inactive-border-color);
+    --lingonberry-wisp-dial-handle-active-background-color:  mix(var(--lingonberry-wisp-button-active-background-color), var(--lingonberry-wisp-highlight-color), 0.5);
+    --lingonberry-wisp-dial-handle-active-border-color: mix(var(--lingonberry-wisp-button-active-border-color), var(--lingonberry-wisp-highlight-color), 0.5);
+    --lingonberry-wisp-dial-handle-disabled-background-color: var(--lingonberry-wisp-button-disabled-background-color);
+    --lingonberry-wisp-dial-handle-disabled-border-color: var(--lingonberry-wisp-button-disabled-border-color);
+}
+
+busyindicator
+{
+    width: 36px;
+    height: 36px;
+    icon-name: "process-working-symbolic";
+}
+
+progressbar
+{
+    padding: 0px var(--lingonberry-wisp-large-spacing);
+    inset: 0px var(--lingonberry-wisp-large-spacing);
+    text-alignment: content center center 0;
+
+    background-color: var(--lingonberry-wisp-bar-active-background-color);
+    border: 1px solid var(--lingonberry-wisp-bar-active-border-color);
+    border-radius: var(--lingonberry-wisp-corner-radius);
+
+    &.horizontal
+    {
+        width: 200px;
+        height: var(--lingonberry-wisp-medium-spacing);
+    }
+
+    &.vertical
+    {
+        width: var(--lingonberry-wisp-medium-spacing);
+        height: 200px;
+    }
+
+
+    & > track,
+    & > chunk {
+        background-color: var(--lingonberry-wisp-bar-track-active-background-color);
+        border: 1px solid var(--lingonberry-wisp-bar-track-active-border-color);
+        border-radius: var(--lingonberry-wisp-corner-radius);
+    }
+
+    & > chunk {
+        width: 32px;
+    }
+
+    &:disabled {
+        background-color: var(--lingonberry-wisp-bar-disabled-background-color);
+        border-color: var(--lingonberry-wisp-bar-disabled-border-color);
+
+        & > track,
+        & > chunk {
+            background-color: var(--lingonberry-wisp-bar-track-disabled-background-color);
+            border-color: var(--lingonberry-wisp-bar-track-disabled-border-color);
+        }
+    }
+}
+
+slider,
+rangeslider,
+dial
+{
+    background-color: var(--lingonberry-wisp-bar-active-background-color);
+    border: 1px solid var(--lingonberry-wisp-bar-active-border-color);
+    border-radius: var(--lingonberry-wisp-corner-radius);
+
+    & > fill {
+        background-color: var(--lingonberry-wisp-bar-track-active-background-color);
+        border: 1px solid var(--lingonberry-wisp-bar-track-active-border-color);
+        border-radius: var(--lingonberry-wisp-corner-radius);
+    }
+
+    & > handle {
+        width: var(--lingonberry-wisp-bar-handle-size);
+        height: var(--lingonberry-wisp-bar-handle-size);
+        background-color: var(--lingonberry-wisp-bar-handle-active-background-color);
+        border: 1px solid var(--lingonberry-wisp-bar-handle-active-border-color);
+        border-radius: 10px;
+        box-shadow: var(--lingonberry-wisp-button-shadow);
+
+        &:hovered
+        {
+            border-color: var(--lingonberry-wisp-bar-handle-active-highlight-border-color);
+        }
+
+        &:pressed
+        {
+            box-shadow: none;
+        }
+    }
+
+    & > tickmark
+    {
+        background-color: var(--lingonberry-wisp-bar-active-border-color);
+
+        &.active {
+            background-color: var(--lingonberry-wisp-bar-track-active-border-color);
+        }
+    }
+
+    &.horizontal
+    {
+        width: 200px;
+        height: 6px;
+
+        & > tickmark {
+            width: var(--lingonberry-wisp-bar-tickmark-thickness);
+            height: var(--lingonberry-wisp-bar-tickmark-length);
+            margin-top: var(--lingonberry-wisp-bar-tickmark-margin);
+        }
+    }
+
+    &.vertical
+    {
+        width: 6px;
+        height: 200px;
+
+        & > tickmark {
+            width: var(--lingonberry-wisp-bar-tickmark-length);
+            height: var(--lingonberry-wisp-bar-tickmark-thickness);
+            margin-left: var(--lingonberry-wisp-bar-tickmark-margin);
+        }
+    }
+
+    &:disabled {
+        background-color: var(--lingonberry-wisp-bar-disabled-background-color);
+        border: 1px solid var(--lingonberry-wisp-bar-disabled-border-color);
+
+        & > fill {
+            background-color: var(--lingonberry-wisp-bar-track-disabled-background-color);
+            border-color: var(--lingonberry-wisp-bar-track-disabled-border-color);
+        }
+
+        & > handle {
+            background-color: var(--lingonberry-wisp-bar-handle-disabled-background-color);
+            border-color: var(--lingonberry-wisp-bar-handle-disabled-border-color);
+            box-shadow: none;
+        }
+
+        & > tickmark,
+        & > tickmark.active {
+            background-color: var(--lingonberry-wisp-bar-disabled-border-color);
+        }
+    }
+}
+
+slider:visual-focus > handle,
+rangeslider > handle:active-focus
+{
+    border-color: var(--lingonberry-wisp-bar-handle-active-highlight-border-color);
+    outline: var(--lingonberry-wisp-focus-outline);
+}
+
+slider:pressed > handle,
+rangeslider > handle:pressed
+{
+    background-color: var(--lingonberry-wisp-bar-handle-active-highlight-color);
+    border-color: var(--lingonberry-wisp-bar-handle-active-highlight-border-color);
+}
+
+scrollbar
+{
+    width: var(--lingonberry-wisp-scrollbar-size);
+    height: var(--lingonberry-wisp-scrollbar-size);
+
+    padding: var(--lingonberry-wisp-medium-spacing);
+
+    &.horizontal
+    {
+        border-top: 1px solid var(--lingonberry-wisp-bar-active-border-color);
+    }
+
+    &.vertical
+    {
+        border-left: 1px solid var(--lingonberry-wisp-bar-active-border-color);
+    }
+
+    & > handle {
+        background-color: var(--lingonberry-wisp-bar-active-background-color);
+        border: 1px solid var(--lingonberry-wisp-bar-active-border-color);
+        border-radius: var(--lingonberry-wisp-small-element-size);
+
+        &:hovered,
+        &:pressed
+        {
+            background-color: var(--lingonberry-wisp-bar-track-active-background-color);
+            border-color: var(--lingonberry-wisp-bar-track-active-border-color);
+        }
+
+        &:disabled {
+            background-color: var(--lingonberry-wisp-bar-disabled-background-color);
+            border: 1px solid var(--lingonberry-wisp-bar-disabled-border-color);
+        }
+    }
+
+    &.noninteractive {
+        width: var(--lingonberry-wisp-non-interactive-scrollbar-size);
+        border-left: none;
+        padding: var(--lingonberry-wisp-small-spacing);
+        & > handle {
+            background-color: var(--lingonberry-wisp-bar-handle-disabled-background-color);
+            border: 1px solid var(--lingonberry-wisp-bar-handle-disabled-border-color);
+        }
+    }
+}
+
+dial {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px; /* use half of width */
+    background-color: var(--lingonberry-wisp-dial-inactive-background-color);
+    border-color: var(--lingonberry-wisp-dial-inactive-border-color);
+
+    &:hovered {
+        background-color: var(--lingonberry-wisp-dial-active-background-color);
+        border-color: var(--lingonberry-wisp-dial-active-border-color);
+    }
+
+    &:pressed {
+        border-color: var(--lingonberry-wisp-highlight-color);
+    }
+
+    &:disabled {
+        background-color: var(--lingonberry-wisp-dial-disabled-background-color);
+        border-color: var(--lingonberry-wisp-dial-disabled-border-color);
+    }
+
+    & > handle {
+        background-color: var(--lingonberry-wisp-dial-handle-inactive-background-color);
+        border-color: var(--lingonberry-wisp-dial-handle-inactive-border-color);
+
+        &:hovered {
+            background-color: var(--lingonberry-wisp-dial-handle-active-background-color);
+            border-color: var(--lingonberry-wisp-dial-handle-active-border-color);
+        }
+
+        &:pressed {
+            background-color: var(--lingonberry-wisp-highlight-color);
+            border-color: var(--lingonberry-wisp-highlight-color);
+        }
+
+        &:disabled {
+            background-color: var(--lingonberry-wisp-dial-handle-disabled-background-color);
+            border-color: var(--lingonberry-wisp-dial-handle-disabled-border-color);
+        }
+    }
+}
+
+slider.changed {
+    & > fill {
+        background-color: var(--lingonberry-wisp-changed-background);
+        border: 1px solid var(--lingonberry-wisp-changed-foreground);
+    }
+    & > tickmark.active {
+        background-color: var(--lingonberry-wisp-changed-foreground);
+    }
+}

@@ -1,0 +1,424 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+/*
+ * Application-structural elements like windows, drawers, etc.
+ */
+
+:root {
+    --cloudberry-wisp-window-active-background-color: var(--cloudberry-wisp-kcs-active-window-background-normal);
+    --cloudberry-wisp-window-active-text-color: var(--cloudberry-wisp-kcs-active-window-foreground-text);
+    --cloudberry-wisp-window-active-border-color: var(--cloudberry-wisp-kcs-active-window-decoration-frame);
+
+    --cloudberry-wisp-window-inactive-background-color: var(--cloudberry-wisp-kcs-inactive-window-background-normal);
+    --cloudberry-wisp-window-inactive-text-color: var(--cloudberry-wisp-kcs-inactive-window-foreground-text);
+    --cloudberry-wisp-window-inactive-border-color: var(--cloudberry-wisp-kcs-inactive-window-decoration-frame);
+
+    --cloudberry-wisp-header-active-background-color: var(--cloudberry-wisp-kcs-active-header-background-normal);
+    --cloudberry-wisp-header-active-text-color: var(--cloudberry-wisp-kcs-active-header-foreground-text);
+    --cloudberry-wisp-header-active-border-color: var(--cloudberry-wisp-kcs-active-header-decoration-frame);
+
+    --cloudberry-wisp-header-inactive-background-color: var(--cloudberry-wisp-kcs-inactive-header-background-normal);
+    --cloudberry-wisp-header-inactive-text-color: var(--cloudberry-wisp-kcs-inactive-header-foreground-text);
+    --cloudberry-wisp-header-inactive-border-color: var(--cloudberry-wisp-kcs-inactive-header-decoration-frame);
+
+    --cloudberry-wisp-complementary-active-background-color: var(--cloudberry-wisp-kcs-active-header-background-normal);
+    --cloudberry-wisp-complementary-active-text-color: var(--cloudberry-wisp-kcs-active-header-foreground-text);
+    --cloudberry-wisp-complementary-active-border-color: var(--cloudberry-wisp-kcs-active-header-decoration-frame);
+
+    --cloudberry-wisp-complementary-inactive-background-color: var(--cloudberry-wisp-kcs-inactive-header-background-normal);
+    --cloudberry-wisp-complementary-inactive-text-color: var(--cloudberry-wisp-kcs-inactive-header-foreground-text);
+    --cloudberry-wisp-complementary-inactive-border-color: var(--cloudberry-wisp-kcs-inactive-header-decoration-frame);
+}
+
+applicationwindow
+{
+    background-color: var(--cloudberry-wisp-window-active-background-color);
+    color: var(--cloudberry-wisp-window-active-text-color);
+
+    &.inactive {
+        background-color: var(--cloudberry-wisp-window-inactive-background-color);
+        color: var(--cloudberry-wisp-window-inactive-text-color);
+    }
+}
+
+page
+{
+    background-color: var(--cloudberry-wisp-window-background-color);
+    color: var(--cloudberry-wisp-window-text-color);
+
+    .inactive & {
+        background-color: var(--cloudberry-wisp-window-inactive-background-color);
+        color: var(--cloudberry-wisp-window-inactive-text-color);
+    }
+}
+
+toolbar
+{
+    height: 46px; /* large-element-size + medium-spacing + large-spacing */
+    padding: var(--cloudberry-wisp-small-spacing);
+    padding-top: var(--cloudberry-wisp-medium-spacing);
+    padding-bottom: var(--cloudberry-wisp-large-spacing);
+    color: var(--cloudberry-wisp-window-active-text-color);
+    background-color: var(--cloudberry-wisp-window-active-background-color);
+
+    &.footer {
+        border-top: 1px solid var(--cloudberry-wisp-window-active-border-color);
+    }
+
+    &.header {
+        border-bottom: 1px solid var(--cloudberry-wisp-window-active-border-color);
+    }
+
+    .inactive & {
+        background-color: var(--cloudberry-wisp-window-inactive-background-color);
+        border-color: var(--cloudberry-wisp-window-inactive-border-color);
+    }
+
+    &.header,
+    &[colorset="header"],
+    [colorset="header"] &
+    {
+        background-color: var(--cloudberry-wisp-header-active-background-color);
+        border-color: var(--cloudberry-wisp-header-active-border-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-wisp-header-inactive-background-color);
+            border-color: var(--cloudberry-wisp-header-inactive-border-color);
+        }
+    }
+
+    &.header[colorset="window"]
+    {
+        background-color: var(--cloudberry-wisp-window-active-background-color);
+        border-color: var(--cloudberry-wisp-window-active-border-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-wisp-window-inactive-background-color);
+            border-color: var(--cloudberry-wisp-window-inactive-border-color);
+        }
+    }
+
+    &[colorset="complementary"],
+    [colorset="complementary"] &,
+    &.header[colorset="complementary"]
+    {
+        background-color: var(--cloudberry-wisp-complementary-active-background-color);
+        color: var(--cloudberry-wisp-complementary-active-text-color);
+        border-color: var(--cloudberry-wisp-complementary-active-border-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-wisp-complementary-inactive-background-color);
+            color: var(--cloudberry-wisp-complementary-inactive-text-color);
+            border-color: var(--cloudberry-wisp-complementary-active-border-color);
+        }
+    }
+
+    & > separator {
+        width: 1px;
+        height: 1px;
+        border: none;
+        border-radius: 0px;
+        background-color: var(--cloudberry-wisp-window-border-color);
+        padding: 0px;
+    }
+
+    & > handle {
+        width: 4px;
+        height: 4px;
+        border: none;
+        border-radius: 0px;
+        border-left: 1px solid var(--cloudberry-wisp-window-border-color);
+        border-right: 1px solid var(--cloudberry-wisp-window-border-color);
+        padding: 0px;
+    }
+}
+
+drawer
+{
+    color: var(--cloudberry-wisp-view-text-color);
+    background-color: var(--cloudberry-wisp-view-background-color);
+
+    &.modal {
+        color: var(--cloudberry-wisp-window-text-color);
+        background-color: var(--cloudberry-wisp-window-active-background-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-wisp-window-inactive-background-color);
+        }
+    }
+}
+
+scrollview {
+    &.vertical-scroll {
+        padding-right: var(--cloudberry-wisp-scrollbar-size);
+    }
+
+    &.horizontal-scroll {
+        padding-bottom: var(--cloudberry-wisp-scrollbar-size);
+    }
+
+    &.framed-background
+    {
+        background-color: var(--cloudberry-wisp-view-background-color);
+        border: 1px solid var(--cloudberry-wisp-view-border-color);
+        border-radius: var(--cloudberry-wisp-corner-radius);
+    }
+}
+
+splitview {
+    & handle {
+        width: 1px;
+        height: 1px;
+        background-color: var(--cloudberry-wisp-window-border-color);
+    }
+
+    &.horizontal handle {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    &.vertical handle {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+}
+
+pageindicator {
+    spacing: var(--cloudberry-wisp-small-spacing);
+}
+
+pageindicatordelegate {
+    background-color: var(--cloudberry-wisp-indicator-color);
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    &:pressed {
+        background-color: var(--cloudberry-wisp-indicator-press-color);
+    }
+
+    &.current {
+        background-color: var(--cloudberry-wisp-indicator-current-color);
+    }
+}
+
+pane
+{
+    padding: var(--cloudberry-wisp-large-spacing);
+    background-color: var(--cloudberry-wisp-window-background-color);
+}
+
+frame,
+groupbox,
+framemenu,
+framewindow
+{
+    padding: var(--cloudberry-wisp-large-spacing);
+    border: 1px solid var(--cloudberry-wisp-window-border-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+    .inactive & {
+        border-color: var(--cloudberry-wisp-window-inactive-border-color);
+    }
+}
+
+splitter {
+    width: 1px;
+    background-color: var(--cloudberry-wisp-window-border-color);
+}
+
+frame,
+listview,
+treeview,
+tableview,
+columnview,
+scrollview,
+textfield,
+textarea {
+    &:visual-focus {
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
+    }
+    &[shape="no-frame"] {
+        border: none;
+    }
+    &[shape="panel"],
+    &[shape="box"] {
+        border-radius: var(--cloudberry-wisp-corner-radius);
+        border: 1px solid var(--cloudberry-wisp-window-border-color);
+        background-color: var(--cloudberry-wisp-view-background-color);
+
+        .inactive & {
+            background-color: var(--cloudberry-wisp-window-inactive-background-color);
+            border-color: var(--cloudberry-wisp-window-inactive-border-color);
+        }
+    }
+    &[shape="vertical-line"],
+    &[shape="horizontal-line"] {
+        border-radius: 0px;
+        border: none;
+        background-color: var(--cloudberry-wisp-window-border-color);
+        padding: 0px;
+        inset: 1px;
+    }
+    &[shape="vertical-line"] {
+        width: 1px;
+    }
+    &[shape="horizontal-line"] {
+        height: 1px;
+    }
+    /* Legacy hints that applications use to drive Breeze style */
+    &.dock-left,
+    &.dock-right,
+    &.dock-top,
+    &.dock-bottom,
+    &.left-edge,
+    &.right-edge,
+    &.top-edge,
+    &.bottom-edge {
+        border: none;
+        border-radius: 0px;
+    }
+    &.left-edge {
+        border-left: 1px solid var(--cloudberry-wisp-window-border-color);
+    }
+    &.right-edge {
+        border-right: 1px solid var(--cloudberry-wisp-window-border-color);
+    }
+    &.top-edge {
+        border-top: 1px solid var(--cloudberry-wisp-window-border-color);
+    }
+    &.bottom-edge {
+        border-bottom: 1px solid var(--cloudberry-wisp-window-border-color);
+    }
+}
+
+groupbox {
+    padding: var(--cloudberry-wisp-small-spacing);
+    border: 1px solid var(--cloudberry-wisp-window-border-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+    color: var(--cloudberry-wisp-window-text-color);
+    background-color: var(--cloudberry-wisp-window-background-color);
+
+    & > header {
+        color: var(--cloudberry-wisp-window-text-color);
+    }
+    icon-alignment: content start start 0;
+    text-alignment: content center start 0;
+    spacing: var(--cloudberry-wisp-small-spacing);
+    width: 200px;
+}
+
+
+dockwidget {
+    width: var(--cloudberry-wisp-small-element-size);
+    height: var(--cloudberry-wisp-small-element-size);
+    color: var(--cloudberry-wisp-header-text-color);
+    background-color: var(--cloudberry-wisp-header-background-color);
+    icon-alignment: content center center 0;
+    text-alignment: content center center 1;
+    padding: var(--cloudberry-wisp-small-spacing);
+    &:visual-focus,
+    &:active-focus {
+        border: 1px solid var(--cloudberry-wisp-highlight-color);
+    }
+
+    floatbutton,
+    closebutton {
+        width: var(--cloudberry-wisp-small-element-size);
+        height: var(--cloudberry-wisp-small-element-size);
+    }
+
+    floatbutton {
+        layout-alignment: content start center 0;
+        icon-name: "window-restore";
+    }
+
+    closebutton {
+        layout-alignment: content end center 0;
+        icon-name: "window-close-symbolic";
+    }
+}
+
+scrollareacorner {
+    background-color: var(--cloudberry-wisp-window-background-color);
+    color: var(--cloudberry-wisp-window-text-color);
+}
+
+panel,
+groupbox {
+    &.flat {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+rubberband {
+    background-color: var(--cloudberry-wisp-highlight-hover-color);
+    border: 1px solid var(--cloudberry-wisp-highlight-color);
+    border-radius: var(--cloudberry-wisp-corner-radius);
+}
+
+titlebar {
+    width: var(--cloudberry-wisp-small-element-size);
+    height: var(--cloudberry-wisp-small-element-size);
+    color: var(--cloudberry-wisp-header-text-color);
+    background-color: var(--cloudberry-wisp-header-background-color);
+    icon-alignment: content center fill 0;
+    text-alignment: content center fill 1;
+    icon-size: var(--cloudberry-wisp-icon-size-small);
+
+    systemmenu,
+    minimizebutton,
+    maximizebutton,
+    closebutton,
+    normalbutton,
+    shadebutton,
+    helpbutton {
+        width: var(--cloudberry-wisp-small-element-size);
+        height: var(--cloudberry-wisp-small-element-size);
+    }
+
+    systemmenu {
+        layout-alignment: content start fill 0;
+        icon-name: "application-menu-symbolic";
+    }
+    minimizebutton {
+        layout-alignment: content end fill 0;
+        icon-name: "window-minimize-symbolic";
+    }
+    maximizebutton {
+        layout-alignment: content end fill 1;
+        icon-name: "window-maximize-symbolic";
+    }
+    closebutton {
+        layout-alignment: content end fill 2;
+        icon-name: "window-close-symbolic";
+    }
+    shadebutton {
+        layout-alignment: content start fill 2;
+        icon-name: "window-shade-symbolic";
+    }
+    helpbutton {
+        layout-alignment: content start fill -1;
+        icon-name: "help-contextual-symbolic";
+    }
+
+    normalbutton {
+        layout-alignment: content start fill 1;
+    }
+
+    &.maximized {
+        maximizebutton {
+            icon-name: "window-restore-symbolic";
+        }
+    }
+
+    &.minimized {
+        minimizebutton {
+            icon-name: "empty";
+        }
+    }
+
+}

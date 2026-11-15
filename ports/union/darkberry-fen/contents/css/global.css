@@ -1,0 +1,51 @@
+/*
+ * SPDX-License-Identifier: BSD-2-Clause
+ * SPDX-FileCopyrightText: 2026 Arjen Hiemstra <ahiemstra@heimr.nl>
+ */
+
+@property --darkberry-fen-color-group {
+    syntax: "<string>";
+    inherits: true;
+    initial-value: "active";
+}
+
+@property --darkberry-fen-color-set {
+    syntax: "<string>";
+    inherits: true;
+}
+
+.inactive {
+    --darkberry-fen-color-group: "inactive";
+}
+
+:disabled {
+    --darkberry-fen-color-group: "disabled";
+}
+
+[color-set="window"] {
+    --darkberry-fen-color-set: "window";
+}
+
+[color-set="button"] {
+    --darkberry-fen-color-set: "button";
+}
+
+[color-set="view"] {
+    --darkberry-fen-color-set: "view";
+}
+
+[color-set="selection"] {
+    --darkberry-fen-color-set: "selection";
+}
+
+[color-set="tooltip"] {
+    --darkberry-fen-color-set: "tooltip";
+}
+
+[color-set="complementary"] {
+    --darkberry-fen-color-set: "complementary";
+}
+
+[color-set="header"] {
+    --darkberry-fen-color-set: "header";
+}

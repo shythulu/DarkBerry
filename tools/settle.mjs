@@ -9,13 +9,14 @@ import fs from "node:fs";
 import { toOklch, fromOklch, deltaE, contrast } from "../lib/color.mjs";
 import { indexRoles, flavourContext } from "../lib/resolve.mjs";
 import { settleFill } from "../lib/derive.mjs";
+import { NON_ACCENT } from "../lib/tints.mjs";
 
 const file = process.argv[2] || "src/palette.json", floor = +(process.argv[3] || 5.2);
 const P = JSON.parse(fs.readFileSync(file, "utf8"));
 const ROLES = JSON.parse(fs.readFileSync(new URL("../src/roles.json", import.meta.url), "utf8"));
 const idx = indexRoles(ROLES);
 const syn = Object.entries(ROLES.syntax).filter(([k, r]) => !k.startsWith("$") && !(typeof r.value === "string" && r.value.startsWith("syntax.")));
-const accents = new Set(P.accentOrder.filter((k) => !["jam", "onjam", "tint"].includes(k)));
+const accents = new Set(P.accentOrder.filter((k) => !NON_ACCENT.includes(k)));
 const R2D = 180 / Math.PI;
 let report = [];
 
